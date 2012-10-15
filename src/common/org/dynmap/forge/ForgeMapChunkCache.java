@@ -911,11 +911,18 @@ public class ForgeMapChunkCache implements MapChunkCache
     public static void init() {
     	if (!init)
     	{
-    		unloadqueue = ReflectionHelper.findField(ChunkProviderServer.class, "chunksToUnload");
-			unloadqueue.setAccessible(true);
-
-			currentchunkprovider = ReflectionHelper.findField(ChunkProviderServer.class, "currentChunkProvider");
-			currentchunkprovider.setAccessible(true);
+    		Field[] f = ChunkProviderServer.class.getDeclaredFields();
+    		
+    		for(int i = 0; i < f.length; i++) {
+    			if(f[i].getType().isAssignableFrom(java.util.Set.class)) {
+    	    		unloadqueue = f[i];
+    				unloadqueue.setAccessible(true);
+    			}
+    			else if(f[i].getType().isAssignableFrom(IChunkProvider.class)) {
+    				currentchunkprovider = f[i];
+    				currentchunkprovider.setAccessible(true);
+    			}
+    		}
 
 			if ((unloadqueue == null) || (currentchunkprovider == null))
     		{

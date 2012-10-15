@@ -58,6 +58,8 @@ import org.dynmap.utils.MapChunkCache;
 
 import cpw.mods.fml.common.IPlayerTracker;
 import cpw.mods.fml.common.ITickHandler;
+import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.TickType;
 import cpw.mods.fml.common.network.IChatListener;
@@ -614,6 +616,11 @@ public class DynmapPlugin
 		public String getLabel() {
 			return "Dynmap";
 		}
+
+		@Override
+		public boolean isModLoaded(String name) {
+			return Loader.isModLoaded(name);
+		}
     }
     /**
      * Player access abstraction class
@@ -858,6 +865,10 @@ public class DynmapPlugin
         }
 
         Log.info("Enabled");
+        
+        for(ModContainer mc : Loader.instance().getActiveModList()) {
+        	Log.info("mod name=" + mc.getName() + ",id=" + mc.getModId() + ",ver=" + mc.getVersion());
+        }
     }
 
     public void onDisable()
@@ -1064,7 +1075,7 @@ public class DynmapPlugin
     private void removeWorld(ForgeWorld fw) {
     	WorldUpdateTracker wit = updateTrackers.remove(fw.getName());
     	if(wit != null) {
-    		fw.getWorld().removeWorldAccess(wit);
+    		//fw.getWorld().removeWorldAccess(wit);
     	}
     	worlds.remove(fw.getName());
     }
