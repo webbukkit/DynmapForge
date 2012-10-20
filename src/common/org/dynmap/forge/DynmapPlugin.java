@@ -128,7 +128,7 @@ public class DynmapPlugin
 
 		@Override
 		public Packet3Chat serverChat(NetHandler handler, Packet3Chat message) {
-			if(handler.isServerHandler()) {
+			if(handler.isServerHandler() && (!message.message.startsWith("/"))) {
 				ChatMessage cm = new ChatMessage();
 				cm.message = message.message;
 				cm.sender = handler.getPlayer();
@@ -784,7 +784,10 @@ public class DynmapPlugin
         @Override
         public boolean isOp()
         {
-            /*TODO*/
+        	if(sender instanceof EntityPlayer) {
+        		EntityPlayer p = (EntityPlayer)sender;
+                return server.getConfigurationManager().getOps().contains(p.username);
+        	}
             return false;
         }
     }
