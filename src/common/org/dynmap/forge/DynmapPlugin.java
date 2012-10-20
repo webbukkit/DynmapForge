@@ -81,6 +81,8 @@ public class DynmapPlugin
     private ChatHandler chathandler;
     
     private HashMap<String, ForgeWorld> worlds = new HashMap<String, ForgeWorld>();
+    private World last_world;
+    private ForgeWorld last_fworld;
     
     
     private static class TaskRecord implements Comparable
@@ -736,17 +738,11 @@ public class DynmapPlugin
         @Override
         public long getLastLoginTime()
         {
-            /*TODO
-            return offplayer.getLastPlayed();
-            */
             return 0;
         }
         @Override
         public long getFirstLoginTime()
         {
-            /*TODO
-            return offplayer.getFirstPlayed();
-            */
             return 0;
         }
     }
@@ -816,7 +812,7 @@ public class DynmapPlugin
         }
 
         /* Inject dependencies */
-        core.setPluginVersion("0.90-dev");
+        core.setPluginVersion("0.90-alpha-1");
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
         ForgeServer fserver = new ForgeServer();
@@ -841,7 +837,7 @@ public class DynmapPlugin
         mapManager = core.getMapManager();
 
         /* Initialized the currently loaded worlds */
-        for (WorldServer world : DimensionManager.getWorlds())
+        for (WorldServer world : server.worldServers)
         {
             ForgeWorld w = this.getWorld(world);
 
@@ -865,10 +861,6 @@ public class DynmapPlugin
         }
 
         Log.info("Enabled");
-        
-        for(ModContainer mc : Loader.instance().getActiveModList()) {
-        	Log.info("mod name=" + mc.getName() + ",id=" + mc.getModId() + ",ver=" + mc.getVersion());
-        }
     }
 
     public void onDisable()
@@ -1054,8 +1046,13 @@ public class DynmapPlugin
     }
     
     private ForgeWorld getWorld(World w, boolean add_if_not_found) {
+    	if(last_world == w) {
+    		return last_fworld;
+    	}
     	for(ForgeWorld fw : worlds.values()) {
     		if(fw.getWorld() == w) {
+    			last_world = w;
+    			last_fworld = fw;
     			return fw;
     		}
     	}
@@ -1069,6 +1066,8 @@ public class DynmapPlugin
     		updateTrackers.put(fw.getName(), wit);
     		w.addWorldAccess(wit);
     	}
+		last_world = w;
+		last_fworld = fw;
     	return fw;
     }
     
@@ -1078,6 +1077,10 @@ public class DynmapPlugin
     		//fw.getWorld().removeWorldAccess(wit);
     	}
     	worlds.remove(fw.getName());
+    	if(last_fworld == fw) {
+			last_world = null;
+			last_fworld = null;
+    	}
     }
 
 }
