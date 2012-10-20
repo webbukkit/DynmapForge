@@ -156,6 +156,7 @@ public class DynmapPlugin
         /* Chunk load handling */
         private Object loadlock = new Object();
         private int chunks_in_cur_tick = 0;
+        private int last_tick;
         /* Server thread scheduler */
         private Object schedlock = new Object();
         private long cur_tick;
@@ -496,12 +497,11 @@ public class DynmapPlugin
             {
                 synchronized (loadlock)
                 {
-                    long now = System.currentTimeMillis();
-
-                    if (cur_tick != (now / 50)) /* New tick? */
+                	int tick = server.getTickCounter();
+                    if (last_tick != tick) /* New tick? */
                     {
                         chunks_in_cur_tick = mapManager.getMaxChunkLoadsPerTick();
-                        cur_tick = now / 50;
+                        last_tick = tick;
                     }
                 }
 

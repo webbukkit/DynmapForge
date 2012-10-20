@@ -3,6 +3,7 @@ package org.dynmap.forge;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
+import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -21,19 +22,33 @@ public class SnapshotCache
         boolean hasrawbiome;
         boolean hasblockdata;
         boolean hashighesty;
+        String key;
+        public boolean equals(Object r) {
+        	if(this == r)
+        		return true;
+        	else if(r instanceof CacheRec) {
+        		return ((CacheRec)r).key.equals(key);
+        	}
+        	else {
+        		return false;
+        	}
+        }
+        public int hashCode() {
+        	return key.hashCode();
+        }
     }
 
     @SuppressWarnings("serial")
     public class CacheHashMap extends LinkedHashMap<String, CacheRec>
     {
         private int limit;
-        private IdentityHashMap<WeakReference<ChunkSnapshot>, String> reverselookup;
+        private HashMap<CacheRec, String> reverselookup;
 
         public CacheHashMap(int lim)
         {
             super(16, (float)0.75, true);
             limit = lim;
-            reverselookup = new IdentityHashMap<WeakReference<ChunkSnapshot>, String>();
+            reverselookup = new HashMap<CacheRec, String>();
         }
         protected boolean removeEldestEntry(Map.Entry<String, CacheRec> last)
         {
@@ -41,7 +56,7 @@ public class SnapshotCache
 
             if (remove)
             {
-                reverselookup.remove(last.getValue().ref);
+                reverselookup.remove(last.getValue());
             }
 
             return remove;
@@ -58,7 +73,7 @@ public class SnapshotCache
     }
     private String getKey(String w, int cx, int cz)
     {
-        return w + ":" + cx + ":" + cz;
+        return cx + ":" + cz + ":" + w;
     }
     /**
      * Invalidate cached snapshot, if in cache
@@ -70,7 +85,7 @@ public class SnapshotCache
 
         if (rec != null)
         {
-            snapcache.reverselookup.remove(rec.ref);
+            snapcache.reverselookup.remove(rec);
             rec.ref.clear();
         }
 
@@ -90,7 +105,7 @@ public class SnapshotCache
 
                 if (rec != null)
                 {
-                    snapcache.reverselookup.remove(rec.ref);
+                    snapcache.reverselookup.remove(rec);
                     rec.ref.clear();
                 }
             }
@@ -115,7 +130,7 @@ public class SnapshotCache
 
             if (ss == null)
             {
-                snapcache.reverselookup.remove(rec.ref);
+                snapcache.reverselookup.remove(rec);
                 snapcache.remove(key);
             }
         }
@@ -154,14 +169,15 @@ public class SnapshotCache
         rec.hasrawbiome = biomeraw;
         rec.hashighesty = highesty;
         rec.ref = new WeakReference<ChunkSnapshot>(ss, refqueue);
+        rec.key = key;
         CacheRec prevrec = snapcache.put(key, rec);
 
         if (prevrec != null)
         {
-            snapcache.reverselookup.remove(prevrec.ref);
+            snapcache.reverselookup.remove(prevrec);
         }
 
-        snapcache.reverselookup.put(rec.ref, key);
+        snapcache.reverselookup.put(rec, key);
     }
     /**
      * Process reference queue
