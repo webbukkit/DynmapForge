@@ -18,6 +18,7 @@ import net.minecraft.src.EnumCreatureType;
 import net.minecraft.src.IChunkProvider;
 import net.minecraft.src.IProgressUpdate;
 import net.minecraft.src.World;
+import net.minecraft.src.WorldServer;
 
 import org.dynmap.DynmapChunk;
 import org.dynmap.DynmapCore;
@@ -38,6 +39,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     private static boolean init = false;
     private static Field unloadqueue = null;
     private static Field currentchunkprovider = null;
+    private static Field updateEntityTick = null;
 
     private World w;
     private DynmapWorld dw;
@@ -914,13 +916,24 @@ public class ForgeMapChunkCache implements MapChunkCache
     		Field[] f = ChunkProviderServer.class.getDeclaredFields();
     		
     		for(int i = 0; i < f.length; i++) {
-    			if(f[i].getType().isAssignableFrom(java.util.Set.class)) {
+    			if((unloadqueue == null) && f[i].getType().isAssignableFrom(java.util.Set.class)) {
     	    		unloadqueue = f[i];
+    				//Log.info("Found unloadqueue - " + f[i].getName());
     				unloadqueue.setAccessible(true);
     			}
-    			else if(f[i].getType().isAssignableFrom(IChunkProvider.class)) {
+    			else if((currentchunkprovider == null) && f[i].getType().isAssignableFrom(IChunkProvider.class)) {
     				currentchunkprovider = f[i];
+    				//Log.info("Found currentchunkprovider - " + f[i].getName());
     				currentchunkprovider.setAccessible(true);
+    			}
+    		}
+    		
+    		f = WorldServer.class.getDeclaredFields();
+    		for(int i = 0; i < f.length; i++) {
+    			if((updateEntityTick == null) && f[i].getType().isAssignableFrom(int.class)) {
+    				updateEntityTick = f[i];
+    				//Log.info("Found updateEntityTick - " + f[i].getName());
+    				updateEntityTick.setAccessible(true);
     			}
     		}
 
@@ -928,6 +941,9 @@ public class ForgeMapChunkCache implements MapChunkCache
     		{
     			Log.severe("ERROR: cannot find unload queue or chunk provider field - dynmap cannot load chunks");
     		}
+			if (updateEntityTick == null) {
+				Log.severe("ERROR: cannot find updateEntityTick - dynmap cannot drive entity cleanup when no players are active");
+			}
 
     		init = true;
     	}
@@ -1245,6 +1261,14 @@ public class ForgeMapChunkCache implements MapChunkCache
                 {
                     isempty = false;
                 }
+            }
+            if(updateEntityTick != null) {
+            	try {
+            		/* Clear updateEntityTick - prevents problems due to entities not being cleaned up when no players are online */
+            		updateEntityTick.set(w, 0);
+            	} catch (Exception x) {
+            		Log.severe("Cannot update updateEntityTick on world - " + x.getMessage());
+            	}
             }
         }
 
