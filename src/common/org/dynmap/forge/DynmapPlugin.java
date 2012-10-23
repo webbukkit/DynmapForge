@@ -815,7 +815,7 @@ public class DynmapPlugin
         }
 
         /* Inject dependencies */
-        core.setPluginVersion("0.90-alpha-2");
+        core.setPluginVersion("0.90-alpha-3");
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
         ForgeServer fserver = new ForgeServer();
@@ -916,9 +916,9 @@ public class DynmapPlugin
         core.processCommand(dsender, cmd, cmd, args);
     }
 
-    private static DynmapLocation toLoc(World worldObj, double x, double y, double z)
+    private DynmapLocation toLoc(World worldObj, double x, double y, double z)
     {
-        return new DynmapLocation(DynmapWorld.normalizeWorldName(worldObj.getWorldInfo().getWorldName()), x, y, z);
+        return new DynmapLocation(DynmapPlugin.this.getWorld(worldObj).getName(), x, y, z);
     }
 
     private class PlayerTracker implements IPlayerTracker {

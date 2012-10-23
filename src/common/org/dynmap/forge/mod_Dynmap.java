@@ -15,8 +15,7 @@ import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = "Dynmap", name = "Dynmap", version = "0.90-alpha-2")
-@NetworkMod(clientSideRequired = false, serverSideRequired = true)
+@Mod(modid = "Dynmap", name = "Dynmap", version = "0.90-alpha-3")
 public class mod_Dynmap
 {
     // The instance of your mod that Forge uses.

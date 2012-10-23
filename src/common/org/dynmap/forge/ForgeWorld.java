@@ -25,10 +25,19 @@ public class ForgeWorld extends DynmapWorld
     public static String getWorldName(World w) {
     	String n = w.getWorldInfo().getWorldName();
         WorldProvider wp = w.provider;
-        if (wp instanceof net.minecraft.src.WorldProviderHell)
-        	n += "_nether";
-        else if(wp instanceof net.minecraft.src.WorldProviderEnd)
-        	n += "_the_end";
+    	switch(wp.dimensionId) {
+    		case 0:
+    			break;
+    		case -1:
+    			n += "_nether";
+    			break;
+    		case 1:
+    			n += "_the_end";
+    			break;
+			default:
+				n += "_" + wp.dimensionId;
+				break;
+    	}
         return n;
     }
     
@@ -37,9 +46,9 @@ public class ForgeWorld extends DynmapWorld
         super(getWorldName(w), w.getHeight(), 64);
         world = w;
         WorldProvider wp = w.provider;
-        skylight = (wp instanceof net.minecraft.src.WorldProviderSurface);
         isnether = (wp instanceof net.minecraft.src.WorldProviderHell);
         istheend = (wp instanceof net.minecraft.src.WorldProviderEnd);
+        skylight = !(isnether || istheend);
 
         if (isnether)
         {
