@@ -400,7 +400,7 @@ public class DynmapPlugin
         @Override
         public DynmapWorld getWorldByName(String wname)
         {
-        	return getWorldByName(wname);
+        	return DynmapPlugin.this.getWorldByName(wname);
         }
         @Override
         public DynmapPlayer getOfflinePlayer(String name)
