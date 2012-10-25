@@ -815,7 +815,7 @@ public class DynmapPlugin
         }
 
         /* Inject dependencies */
-        core.setPluginVersion("0.90-alpha-3");
+        core.setPluginVersion("1.0-alpha-1");
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
         ForgeServer fserver = new ForgeServer();
@@ -1026,6 +1026,12 @@ public class DynmapPlugin
 		@Override
 		public void destroyBlockPartially(int var1, int var2, int var3,
 				int var4, int var5) {
+		}
+		@Override
+		public void func_82746_a(int var1, int var2, int var3, int var4,
+				int var5) {
+			// TODO Find out what this is for - probably not needed for us
+			
 		}
     }
     

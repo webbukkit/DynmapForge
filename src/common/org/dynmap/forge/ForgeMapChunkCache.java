@@ -119,6 +119,9 @@ public class ForgeMapChunkCache implements MapChunkCache
 		public int getLoadedChunkCount() {
 			return 0;
 		}
+		@Override
+		public void func_82695_e(int var1, int var2) {
+		}
     }
     private static NoCreateChunkProvider noCreateProvider = new NoCreateChunkProvider();
     
