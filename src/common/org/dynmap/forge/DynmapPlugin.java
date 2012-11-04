@@ -22,6 +22,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.src.BanList;
 import net.minecraft.src.Chunk;
 import net.minecraft.src.CommandBase;
+import net.minecraft.src.CommandHandler;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.ICommand;
@@ -815,7 +816,7 @@ public class DynmapPlugin
         }
 
         /* Inject dependencies */
-        core.setPluginVersion("1.0");
+        core.setPluginVersion(mod_Dynmap.VERSION);
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
         ForgeServer fserver = new ForgeServer();
@@ -855,14 +856,12 @@ public class DynmapPlugin
         /* Register command hander */
         ICommandManager cm = server.getCommandManager();
 
-        if (cm instanceof ServerCommandManager)
-        {
-            ServerCommandManager scm = (ServerCommandManager)cm;
-            scm.registerCommand(new DynmapCommandHandler("dynmap"));
-            scm.registerCommand(new DynmapCommandHandler("dmap"));
-            scm.registerCommand(new DynmapCommandHandler("dmarker"));
+        if(cm instanceof CommandHandler) {
+        	CommandHandler scm = (CommandHandler)cm;
+        	scm.registerCommand(new DynmapCommandHandler("dynmap"));
+        	scm.registerCommand(new DynmapCommandHandler("dmap"));
+        	scm.registerCommand(new DynmapCommandHandler("dmarker"));
         }
-
         Log.info("Enabled");
     }
 
