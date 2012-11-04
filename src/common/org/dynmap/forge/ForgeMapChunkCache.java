@@ -17,6 +17,7 @@ import net.minecraft.src.ChunkProviderServer;
 import net.minecraft.src.EnumCreatureType;
 import net.minecraft.src.IChunkProvider;
 import net.minecraft.src.IProgressUpdate;
+import net.minecraft.src.ReportedException;
 import net.minecraft.src.World;
 import net.minecraft.src.WorldServer;
 
@@ -1058,6 +1059,10 @@ public class ForgeMapChunkCache implements MapChunkCache
         catch (IllegalAccessException iaxx)
         {
             c = null;
+        }
+        catch (ReportedException rx)
+        {
+        	c = null;
         }
 
         return c;
