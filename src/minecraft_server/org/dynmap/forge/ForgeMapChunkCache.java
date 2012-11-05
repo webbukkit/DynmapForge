@@ -29,8 +29,6 @@ import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.BlockStep;
 
-import cpw.mods.fml.relauncher.ReflectionHelper;
-
 /**
  * Container for managing chunks - dependent upon using chunk snapshots, since rendering is off server thread
  */
@@ -102,10 +100,6 @@ public class ForgeMapChunkCache implements MapChunkCache
 			return false;
 		}
 		@Override
-		public String makeString() {
-			return null;
-		}
-		@Override
 		public List getPossibleCreatures(EnumCreatureType var1, int var2,
 				int var3, int var4) {
 			return null;
@@ -114,10 +108,6 @@ public class ForgeMapChunkCache implements MapChunkCache
 		public ChunkPosition findClosestStructure(World var1, String var2,
 				int var3, int var4, int var5) {
 			return null;
-		}
-		@Override
-		public int getLoadedChunkCount() {
-			return 0;
 		}
     }
     private static NoCreateChunkProvider noCreateProvider = new NoCreateChunkProvider();
@@ -1229,14 +1219,14 @@ public class ForgeMapChunkCache implements MapChunkCache
 
                     if (cps != null)
                     {
-                        cps.unloadChunksIfNotNearSpawn(chunk.x,  chunk.z);
+                    	cps.dropChunk(chunk.x,  chunk.z);
                     }
                 }
                 else if (isunloadpending)   /* Else, if loaded and unload is pending */
                 {
                     if (cps != null)
                     {
-                        cps.unloadChunksIfNotNearSpawn(chunk.x,  chunk.z);
+                        cps.dropChunk(chunk.x,  chunk.z);
                     }
                 }
             }

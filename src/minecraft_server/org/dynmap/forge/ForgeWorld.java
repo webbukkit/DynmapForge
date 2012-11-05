@@ -23,9 +23,9 @@ public class ForgeWorld extends DynmapWorld
     private final String env;
 
     public static String getWorldName(World w) {
-    	String n = w.getWorldInfo().getWorldName();
-        WorldProvider wp = w.provider;
-    	switch(wp.dimensionId) {
+    	String n = "world"; // TODO: get right name
+    	int dim = w.getWorldInfo().getDimension();
+    	switch(dim) {
     		case 0:
     			break;
     		case -1:
@@ -35,7 +35,7 @@ public class ForgeWorld extends DynmapWorld
     			n += "_the_end";
     			break;
 			default:
-				n += "_" + wp.dimensionId;
+				n += "_" + dim;
 				break;
     	}
         return n;
@@ -45,7 +45,7 @@ public class ForgeWorld extends DynmapWorld
     {
         super(getWorldName(w), w.getHeight(), 64);
         world = w;
-        WorldProvider wp = w.provider;
+        WorldProvider wp = w.worldProvider;
         isnether = (wp instanceof net.minecraft.src.WorldProviderHell);
         istheend = (wp instanceof net.minecraft.src.WorldProviderEnd);
         skylight = !(isnether || istheend);
@@ -127,7 +127,7 @@ public class ForgeWorld extends DynmapWorld
     @Override
     public int getSkyLightLevel(int x, int y, int z)
     {
-        return world.getSkyBlockTypeBrightness(EnumSkyBlock.Sky, x, y, z);
+    	return world.getSavedLightValue(EnumSkyBlock.Sky, x, y, z);
     }
     /**
      * Get world environment ID (lower case - normal, the_end, nether)

@@ -82,11 +82,11 @@ public class ChunkSnapshot
         {
             ExtendedBlockStorage eb = ebs[i];
 
-            if ((eb != null) && (eb.isEmpty() == false))
+            if ((eb != null) && (eb.getIsEmpty() == false))
             {
                 this.empty[i] = false;
                 /* Copy base IDs */
-                byte[] baseids = eb.getBlockLSBArray();
+                byte[] baseids = eb.func_48590_g();
                 short blockids[] = new short[BLOCKS_PER_SECTION];
 
                 for (int j = 0; j < BLOCKS_PER_SECTION; j++)
@@ -118,7 +118,7 @@ public class ChunkSnapshot
                 this.blockids[i] = blockids;
                 /* Copy block data */
                 this.blockdata[i] = new byte[BLOCKS_PER_SECTION / 2];
-                System.arraycopy(eb.getMetadataArray().data, 0, this.blockdata[i], 0, BLOCKS_PER_SECTION / 2);
+                System.arraycopy(eb.func_48594_i().data, 0, this.blockdata[i], 0, BLOCKS_PER_SECTION / 2);
                 /* Copy block lighting data */
                 this.emitlight[i] = new byte[BLOCKS_PER_SECTION / 2];
                 System.arraycopy(eb.getBlocklightArray().data, 0, this.emitlight[i], 0, BLOCKS_PER_SECTION / 2);

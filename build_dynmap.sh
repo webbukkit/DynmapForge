@@ -27,7 +27,7 @@ rm dynmap.jar
 mkdir mods
 cp ../Dynmap-$ver2.zip mods
 echo "var dynmapversion = \"$ver2\";" > dynmap/web/version.js
-rm ../dynmap-$ver2-forge-4.2.5.zip
-zip -r ../dynmap-$ver2-forge-4.2.5.zip *
+rm ../dynmap-$ver2-forge-3.3.7.zip
+zip -r ../dynmap-$ver2-forge-3.3.7.zip *
 cd ..
  

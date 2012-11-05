@@ -19,26 +19,15 @@ import java.util.concurrent.FutureTask;
 import java.util.concurrent.atomic.AtomicLong;
 
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.BanList;
 import net.minecraft.src.Chunk;
-import net.minecraft.src.CommandBase;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
-import net.minecraft.src.ICommand;
-import net.minecraft.src.ICommandManager;
-import net.minecraft.src.ICommandSender;
+import net.minecraft.src.ICommandListener;
 import net.minecraft.src.IWorldAccess;
 import net.minecraft.src.NetHandler;
 import net.minecraft.src.Packet3Chat;
-import net.minecraft.src.ServerCommandManager;
-import net.minecraft.src.StringUtils;
 import net.minecraft.src.World;
 import net.minecraft.src.WorldServer;
-import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.ForgeSubscribe;
-import net.minecraftforge.event.world.ChunkEvent;
-import net.minecraftforge.event.world.WorldEvent;
 
 import org.dynmap.DynmapChunk;
 import org.dynmap.DynmapCore;
@@ -62,10 +51,6 @@ import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.TickType;
-import cpw.mods.fml.common.network.IChatListener;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.server.FMLServerHandler;
 
 public class DynmapPlugin
@@ -124,6 +109,7 @@ public class DynmapPlugin
     }
     private ConcurrentLinkedQueue<ChatMessage> msgqueue = new ConcurrentLinkedQueue<ChatMessage>();
     
+        
     private class ChatHandler implements IChatListener {
 
 		@Override
@@ -900,7 +886,13 @@ public class DynmapPlugin
         }
     }
 
-    private void onCommand(ICommandSender sender, String cmd, String[] args)
+    public boolean onServerCommand(String command, String sender, ICommandListener listener) {
+    	//TODO handle command
+    	
+    	return false;
+    }
+
+    private void onCommand(ICommandListener sender, String cmd, String[] args)
     {
         DynmapCommandSender dsender;
 
