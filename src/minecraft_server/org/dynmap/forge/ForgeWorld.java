@@ -24,7 +24,7 @@ public class ForgeWorld extends DynmapWorld
 
     public static String getWorldName(World w) {
     	String n = "world"; // TODO: get right name
-    	int dim = w.getWorldInfo().getDimension();
+    	int dim = w.worldProvider.worldType;
     	switch(dim) {
     		case 0:
     			break;

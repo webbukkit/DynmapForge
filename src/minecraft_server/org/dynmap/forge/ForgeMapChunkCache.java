@@ -37,7 +37,6 @@ public class ForgeMapChunkCache implements MapChunkCache
     private static boolean init = false;
     private static Field unloadqueue = null;
     private static Field currentchunkprovider = null;
-    private static Field updateEntityTick = null;
 
     private World w;
     private DynmapWorld dw;
@@ -918,22 +917,10 @@ public class ForgeMapChunkCache implements MapChunkCache
     			}
     		}
     		
-    		f = WorldServer.class.getDeclaredFields();
-    		for(int i = 0; i < f.length; i++) {
-    			if((updateEntityTick == null) && f[i].getType().isAssignableFrom(int.class)) {
-    				updateEntityTick = f[i];
-    				//Log.info("Found updateEntityTick - " + f[i].getName());
-    				updateEntityTick.setAccessible(true);
-    			}
-    		}
-
 			if ((unloadqueue == null) || (currentchunkprovider == null))
     		{
     			Log.severe("ERROR: cannot find unload queue or chunk provider field - dynmap cannot load chunks");
     		}
-			if (updateEntityTick == null) {
-				Log.severe("ERROR: cannot find updateEntityTick - dynmap cannot drive entity cleanup when no players are active");
-			}
 
     		init = true;
     	}
@@ -1251,14 +1238,6 @@ public class ForgeMapChunkCache implements MapChunkCache
                 {
                     isempty = false;
                 }
-            }
-            if(updateEntityTick != null) {
-            	try {
-            		/* Clear updateEntityTick - prevents problems due to entities not being cleaned up when no players are online */
-            		updateEntityTick.set(w, 0);
-            	} catch (Exception x) {
-            		Log.severe("Cannot update updateEntityTick on world - " + x.getMessage());
-            	}
             }
         }
 

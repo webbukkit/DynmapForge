@@ -1,5 +1,7 @@
 package org.dynmap.forge;
 
+
+
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.src.BaseMod;
 import net.minecraft.src.EntityPlayer;
@@ -24,12 +26,12 @@ public class mod_Dynmap extends BaseMod
 
 	@Override
 	public void load() {
+		plugin = new DynmapPlugin();
+		plugin.onLoad();
 	}
 
 	@Override
 	public void modsLoaded() {
-		plugin = new DynmapPlugin();
-		plugin.onEnable();
 	}
 
 	@Override
@@ -68,6 +70,9 @@ public class mod_Dynmap extends BaseMod
      */
     public void onClientLogin(EntityPlayer player)
     {
+    	if(plugin != null) {
+    		plugin.onPlayerLogin(player);
+    	}
     }
 
     /**
@@ -77,18 +82,8 @@ public class mod_Dynmap extends BaseMod
      */
     public void onClientLogout(EntityPlayer player)
     {
-
+    	if(plugin != null) {
+    		plugin.onPlayerLogout(player);
+    	}
     }
-
-    /**
-     * Ticked every game tick if you have subscribed to tick events through {@link ModLoader#setInGameHook(BaseMod, boolean, boolean)}
-     * 
-     * @param minecraftServer the server
-     * @return true to continue receiving ticks
-     */
-    public boolean onTickInGame(MinecraftServer minecraftServer)
-    {
-        return false;
-    }
-
 }
