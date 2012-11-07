@@ -29,6 +29,7 @@ import net.minecraft.src.IWorldAccess;
 import net.minecraft.src.ModLoader;
 import net.minecraft.src.NBTTagCompound;
 import net.minecraft.src.NetHandler;
+import net.minecraft.src.NetServerHandler;
 import net.minecraft.src.Packet3Chat;
 import net.minecraft.src.TileEntity;
 import net.minecraft.src.World;
@@ -642,7 +643,6 @@ public class DynmapPlugin
 
         public ForgePlayer(EntityPlayer p)
         {
-            super(p);
             player = p;
         }
         @Override
@@ -754,13 +754,27 @@ public class DynmapPlugin
         {
             return 0;
         }
+        @Override
+        public boolean hasPrivilege(String privid)
+        {
+            return server.configManager.isOp(player.getUsername());
+        }
+        @Override
+        public void sendMessage(String msg)
+        {
+        	server.configManager.sendChatMessageToPlayer(player.getUsername(), msg);
+        }
     }
     /* Handler for generic console command sender */
     public class ForgeCommandSender implements DynmapCommandSender
     {
-        private EntityPlayer sender;
+        private ICommandListener sender;
 
-        public ForgeCommandSender(EntityPlayer send)
+        protected ForgeCommandSender() {
+        	sender = null;
+        }
+
+        public ForgeCommandSender(ICommandListener send)
         {
             sender = send;
         }
@@ -768,7 +782,7 @@ public class DynmapPlugin
         @Override
         public boolean hasPrivilege(String privid)
         {
-            return !(sender instanceof EntityPlayer);
+            return true;
         }
 
         @Override
@@ -776,7 +790,7 @@ public class DynmapPlugin
         {
             if (sender != null)
             {
-                server.configManager.sendChatMessageToPlayer(sender.getUsername(), msg);
+            	sender.log(msg);
             }
         }
 
@@ -793,10 +807,7 @@ public class DynmapPlugin
         @Override
         public boolean isOp()
         {
-        	if(sender instanceof EntityPlayer) {
-                return server.configManager.isOp(sender.username);
-        	}
-            return false;
+            return true;
         }
     }
     private ForgeServer fserver = new ForgeServer();
@@ -897,13 +908,14 @@ public class DynmapPlugin
     {
         DynmapCommandSender dsender;
 
-        if (sender instanceof EntityPlayer)
+        if (sender instanceof NetServerHandler)
         {
-            dsender = new ForgePlayer((EntityPlayer)sender);
+        	NetServerHandler nsh = (NetServerHandler)sender;
+            dsender = new ForgePlayer(nsh.getPlayerEntity());
         }
         else
         {
-            dsender = new ForgeCommandSender(null);
+            dsender = new ForgeCommandSender(sender);
         }
 
         core.processCommand(dsender, cmd, cmd, args);

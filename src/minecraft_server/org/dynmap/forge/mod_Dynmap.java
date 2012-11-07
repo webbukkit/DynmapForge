@@ -8,6 +8,7 @@ import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.ICommandListener;
 import net.minecraft.src.ModLoader;
 import net.minecraft.src.Packet3Chat;
+import cpw.mods.fml.common.IConsoleHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PostInit;
@@ -56,7 +57,7 @@ public class mod_Dynmap extends BaseMod
      * @return true if you want to consume the message so it is not available for further processing
      */
     public boolean onServerCommand(String command, String sender, ICommandListener listener)
-    {
+    {    	
     	if(plugin != null) {
     		return plugin.onServerCommand(command, sender, listener);
     	}
