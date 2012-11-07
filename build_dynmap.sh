@@ -16,6 +16,7 @@ rm -r -f META-INF
 mkdir -p org/dynmap/forge
 cp ../reobf/minecraft/org/dynmap/forge/* org/dynmap/forge
 cp ../configuration.txt .
+cat ../src/common/mcmod.info | sed s/_VERSION_/$ver2/ > mcmod.info 
 rm ../Dynmap-$ver2.zip
 zip -r ../Dynmap-$ver2.zip *
 cd ..

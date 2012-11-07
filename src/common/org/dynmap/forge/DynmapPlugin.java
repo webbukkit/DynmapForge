@@ -22,6 +22,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.src.BanList;
 import net.minecraft.src.Chunk;
 import net.minecraft.src.CommandBase;
+import net.minecraft.src.CommandHandler;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.ICommand;
@@ -633,7 +634,6 @@ public class DynmapPlugin
 
         public ForgePlayer(EntityPlayer p)
         {
-            super(p);
             player = p;
         }
         @Override
@@ -745,11 +745,30 @@ public class DynmapPlugin
         {
             return 0;
         }
+        @Override
+        public boolean hasPrivilege(String privid)
+        {
+        	return server.getConfigurationManager().getOps().contains(player.username);
+        }
+        @Override
+        public boolean isOp()
+        {
+        	return server.getConfigurationManager().getOps().contains(player.username);
+    	}
+        @Override
+        public void sendMessage(String msg)
+        {
+        	player.sendChatToPlayer(msg);
+        }
     }
     /* Handler for generic console command sender */
     public class ForgeCommandSender implements DynmapCommandSender
     {
         private ICommandSender sender;
+
+        protected ForgeCommandSender() {
+        	sender = null;
+        }
 
         public ForgeCommandSender(ICommandSender send)
         {
@@ -759,36 +778,26 @@ public class DynmapPlugin
         @Override
         public boolean hasPrivilege(String privid)
         {
-            return !(sender instanceof EntityPlayer);
+        	return true;
         }
 
         @Override
         public void sendMessage(String msg)
         {
-            if (sender != null)
-            {
-                sender.sendChatToPlayer(msg);
-            }
+        	if(sender != null) {
+        		sender.sendChatToPlayer(msg);
+        	}
         }
 
         @Override
         public boolean isConnected()
         {
-            if (sender != null)
-            {
-                return true;
-            }
-
             return false;
         }
         @Override
         public boolean isOp()
         {
-        	if(sender instanceof EntityPlayer) {
-        		EntityPlayer p = (EntityPlayer)sender;
-                return server.getConfigurationManager().getOps().contains(p.username);
-        	}
-            return false;
+            return true;
         }
     }
 
@@ -855,14 +864,12 @@ public class DynmapPlugin
         /* Register command hander */
         ICommandManager cm = server.getCommandManager();
 
-        if (cm instanceof ServerCommandManager)
-        {
-            ServerCommandManager scm = (ServerCommandManager)cm;
-            scm.registerCommand(new DynmapCommandHandler("dynmap"));
-            scm.registerCommand(new DynmapCommandHandler("dmap"));
-            scm.registerCommand(new DynmapCommandHandler("dmarker"));
+        if(cm instanceof CommandHandler) {
+        	CommandHandler scm = (CommandHandler)cm;
+        	scm.registerCommand(new DynmapCommandHandler("dynmap"));
+        	scm.registerCommand(new DynmapCommandHandler("dmap"));
+        	scm.registerCommand(new DynmapCommandHandler("dmarker"));
         }
-
         Log.info("Enabled");
     }
 
