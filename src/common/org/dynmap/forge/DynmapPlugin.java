@@ -634,7 +634,6 @@ public class DynmapPlugin
 
         public ForgePlayer(EntityPlayer p)
         {
-            super(p);
             player = p;
         }
         @Override
@@ -746,11 +745,30 @@ public class DynmapPlugin
         {
             return 0;
         }
+        @Override
+        public boolean hasPrivilege(String privid)
+        {
+        	return server.getConfigurationManager().getOps().contains(player.username);
+        }
+        @Override
+        public boolean isOp()
+        {
+        	return server.getConfigurationManager().getOps().contains(player.username);
+    	}
+        @Override
+        public void sendMessage(String msg)
+        {
+        	player.sendChatToPlayer(msg);
+        }
     }
     /* Handler for generic console command sender */
     public class ForgeCommandSender implements DynmapCommandSender
     {
         private ICommandSender sender;
+
+        protected ForgeCommandSender() {
+        	sender = null;
+        }
 
         public ForgeCommandSender(ICommandSender send)
         {
@@ -760,36 +778,26 @@ public class DynmapPlugin
         @Override
         public boolean hasPrivilege(String privid)
         {
-            return !(sender instanceof EntityPlayer);
+        	return true;
         }
 
         @Override
         public void sendMessage(String msg)
         {
-            if (sender != null)
-            {
-                sender.sendChatToPlayer(msg);
-            }
+        	if(sender != null) {
+        		sender.sendChatToPlayer(msg);
+        	}
         }
 
         @Override
         public boolean isConnected()
         {
-            if (sender != null)
-            {
-                return true;
-            }
-
             return false;
         }
         @Override
         public boolean isOp()
         {
-        	if(sender instanceof EntityPlayer) {
-        		EntityPlayer p = (EntityPlayer)sender;
-                return server.getConfigurationManager().getOps().contains(p.username);
-        	}
-            return false;
+            return true;
         }
     }
 
