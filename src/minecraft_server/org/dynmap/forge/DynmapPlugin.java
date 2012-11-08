@@ -764,6 +764,11 @@ public class DynmapPlugin
         {
         	server.configManager.sendChatMessageToPlayer(player.getUsername(), msg);
         }
+        @Override
+        public boolean isOp()
+        {
+            return server.configManager.isOp(player.getUsername());
+        }
     }
     /* Handler for generic console command sender */
     public class ForgeCommandSender implements DynmapCommandSender
