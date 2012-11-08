@@ -17,6 +17,7 @@ import net.minecraft.src.ChunkProviderServer;
 import net.minecraft.src.EnumCreatureType;
 import net.minecraft.src.IChunkProvider;
 import net.minecraft.src.IProgressUpdate;
+import net.minecraft.src.LongHashMap;
 import net.minecraft.src.ReportedException;
 import net.minecraft.src.World;
 import net.minecraft.src.WorldServer;
@@ -40,6 +41,8 @@ public class ForgeMapChunkCache implements MapChunkCache
     private static boolean init = false;
     private static Field unloadqueue = null;
     private static Field currentchunkprovider = null;
+    private static Field loadedchunkhashmap = null;
+    private static Field loadedchunks = null;
     private static Field updateEntityTick = null;
 
     private World w;
@@ -81,7 +84,8 @@ public class ForgeMapChunkCache implements MapChunkCache
 		}
 		@Override
 		public Chunk provideChunk(int var1, int var2) {
-			throw new IllegalArgumentException(); // Throw exception to cancel chunk load
+			//throw new IllegalArgumentException(); // Throw exception to cancel chunk load
+			return null;
 		}
 		@Override
 		public Chunk loadChunk(int var1, int var2) {
@@ -930,6 +934,14 @@ public class ForgeMapChunkCache implements MapChunkCache
     				//Log.info("Found currentchunkprovider - " + f[i].getName());
     				currentchunkprovider.setAccessible(true);
     			}
+    			else if((loadedchunkhashmap == null) && f[i].getType().isAssignableFrom(LongHashMap.class)) {
+					loadedchunkhashmap = f[i];
+					loadedchunkhashmap.setAccessible(true);
+    			}
+    			else if((loadedchunks == null) && f[i].getType().isAssignableFrom(List.class)) {
+    				loadedchunks = f[i];
+    				loadedchunks.setAccessible(true);
+    			}
     		}
     		
     		f = WorldServer.class.getDeclaredFields();
@@ -941,7 +953,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     			}
     		}
 
-			if ((unloadqueue == null) || (currentchunkprovider == null))
+			if ((unloadqueue == null) || (currentchunkprovider == null) || (loadedchunks == null) || (loadedchunkhashmap == null))
     		{
     			Log.severe("ERROR: cannot find unload queue or chunk provider field - dynmap cannot load chunks");
     		}
@@ -1026,7 +1038,7 @@ public class ForgeMapChunkCache implements MapChunkCache
 
     private Chunk loadChunkNoGenerate(int x, int z)
     {
-        if ((cps == null) || (currentchunkprovider == null))
+        if ((cps == null) || (currentchunkprovider == null) || (loadedchunkhashmap == null) || (loadedchunks == null))
         {
             return null;
         }
@@ -1050,6 +1062,12 @@ public class ForgeMapChunkCache implements MapChunkCache
             {
                 /* And restore current chunk provider */
                 currentchunkprovider.set(cps,  cur_ccp);
+                if(c == null) {	/* Not loaded, remove from loaded fields */
+                	LongHashMap lhm = (LongHashMap)loadedchunkhashmap.get(cps);
+                	lhm.remove(ChunkCoordIntPair.chunkXZ2Int(x,z));
+                	List loadlist = (List)loadedchunks.get(cps);
+                	loadlist.remove(loadlist.size()-1);
+                }
             }
         }
         catch (IllegalArgumentException iax)
@@ -1060,7 +1078,7 @@ public class ForgeMapChunkCache implements MapChunkCache
         {
             c = null;
         }
-        catch (ReportedException rx)
+        catch (NullPointerException npx)
         {
         	c = null;
         }
