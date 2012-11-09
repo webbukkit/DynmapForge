@@ -1,6 +1,6 @@
 #!/bin/bash
 ver=1.1
-ver2=$ver-alpha-1
+ver2=$ver-alpha-2
 rm lib/DynmapCore-*.jar
 cp ~/DynmapCore/target/DynmapCore-$ver.jar lib
 cp ~/DynmapCoreAPI/target/DynmapCoreAPI-$ver.jar lib
@@ -28,7 +28,7 @@ rm dynmap.jar
 mkdir mods
 cp ../Dynmap-$ver2.zip mods
 echo "var dynmapversion = \"$ver2\";" > dynmap/web/version.js
-rm ../dynmap-$ver2-forge-6.2.1.zip
-zip -r ../dynmap-$ver2-forge-6.2.1.zip *
+rm ../dynmap-$ver2-forge-6.3.0.zip
+zip -r ../dynmap-$ver2-forge-6.3.0.zip *
 cd ..
  
