@@ -248,16 +248,7 @@ public class ForgeMapChunkCache implements MapChunkCache
                 for (int j = 0; j < z_size; j++)
                 {
                     int bb = snap.getBiome(bx, bz);
-                    BiomeMap bm;
-
-                    if ((bb < 0) || (bb >= biome_to_bmap.length))
-                    {
-                        bm = BiomeMap.NULL;
-                    }
-                    else
-                    {
-                        bm = biome_to_bmap[bb];
-                    }
+                    BiomeMap bm = BiomeMap.byBiomeID(bb);
 
                     biomemap[i][j] = bm;
                     int cnt = 0;
