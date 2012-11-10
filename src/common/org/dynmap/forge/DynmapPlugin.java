@@ -20,6 +20,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.src.BanList;
+import net.minecraft.src.BiomeGenBase;
 import net.minecraft.src.Chunk;
 import net.minecraft.src.CommandBase;
 import net.minecraft.src.CommandHandler;
@@ -801,9 +802,28 @@ public class DynmapPlugin
         }
     }
 
+    public void loadExtraBiomes() {
+    	int cnt = 0;
+    	
+        for(int i = BiomeMap.LAST_WELL_KNOWN+1; i < BiomeGenBase.biomeList.length; i++) {
+            BiomeGenBase bb = BiomeGenBase.biomeList[i];
+            if(bb != null) {
+                String id = bb.biomeName;
+                float tmp = bb.temperature, hum = bb.rainfall;
+                BiomeMap m = new BiomeMap(i, id, tmp, hum);
+                Log.verboseinfo("Add custom biome [" + m.toString() + "] (" + i + ")");
+                cnt++;
+            }
+        }
+        if(cnt > 0)
+        	Log.info("Added " + cnt + " custom biome mappings");
+    }
+
     public void onEnable()
     {
         server = MinecraftServer.getServer();
+        /* Load extra biomes */
+        loadExtraBiomes();
         /* Set up player login/quit event handler */
         registerPlayerLoginListener();
         /* Get and initialize data folder */
