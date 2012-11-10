@@ -21,6 +21,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.regex.Pattern;
 
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.src.BiomeGenBase;
 import net.minecraft.src.Chunk;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
@@ -822,9 +823,30 @@ public class DynmapPlugin
         FMLCommonHandler.instance().registerTickHandler(fserver);
     }
 
+    public void loadExtraBiomes() {
+    	int cnt = 0;
+    	
+        for(int i = BiomeMap.LAST_WELL_KNOWN+1; i < BiomeGenBase.biomeList.length; i++) {
+            BiomeGenBase bb = BiomeGenBase.biomeList[i];
+            if(bb != null) {
+                String id = bb.biomeName;
+                float tmp = bb.temperature, hum = bb.rainfall;
+                BiomeMap m = new BiomeMap(i, id, tmp, hum);
+                Log.verboseinfo("Add custom biome [" + m.toString() + "] (" + i + ")");
+                cnt++;
+            }
+        }
+        Log.info("Added " + cnt + " custom biome mappings");
+    }
+    
+    
     public void onEnable()
     {
         server = FMLServerHandler.instance().getServer();
+        
+        /* Load extra biomes */
+        loadExtraBiomes();
+        
         /* Get and initialize data folder */
         File dataDirectory = new File("dynmap");
 
