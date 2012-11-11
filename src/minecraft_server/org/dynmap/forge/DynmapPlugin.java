@@ -34,6 +34,7 @@ import net.minecraft.src.NetServerHandler;
 import net.minecraft.src.Packet3Chat;
 import net.minecraft.src.TileEntity;
 import net.minecraft.src.World;
+import net.minecraft.src.WorldProvider;
 import net.minecraft.src.WorldServer;
 import net.minecraft.src.forge.DimensionManager;
 import net.minecraft.src.forge.ForgeHooks;
@@ -69,6 +70,7 @@ import cpw.mods.fml.server.FMLServerHandler;
 public class DynmapPlugin
 {
     private DynmapCore core;
+    private boolean core_enabled;
     private String version;
     public SnapshotCache sscache;
     private boolean has_spout = false;
@@ -465,7 +467,9 @@ public class DynmapPlugin
                 boolean blockdata, boolean highesty, boolean biome, boolean rawbiome)
         {
             MapChunkCache c = w.getChunkCache(chunks);
-
+            if(c == null) {
+            	return null;
+            }
             if (w.visibility_limits != null)
             {
                 for (MapChunkCache.VisibilityLimit limit: w.visibility_limits)
@@ -556,7 +560,9 @@ public class DynmapPlugin
                     catch (InterruptedException ix) {}
                 }
             }
-
+            if(w.isLoaded() == false) {
+            	return null;
+            }
             return c;
         }
         @Override
@@ -880,21 +886,34 @@ public class DynmapPlugin
         {
             return;
         }
+        core_enabled = true;
 
         playerList = core.playerList;
         sscache = new SnapshotCache(core.getSnapShotCacheSize());
         /* Get map manager from core */
         mapManager = core.getMapManager();
 
-        /* Initialized the currently loaded worlds */
-        for (World world : DimensionManager.getWorlds())
-        {
-            ForgeWorld w = this.getWorld(world);
-
-            if (core.processWorldLoad(w))   /* Have core process load first - fire event listeners if good load after */
-            {
-                core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
-            }
+        /* Initialized the currently defined worlds */
+        Integer[] dims = DimensionManager.getIDs();
+        for(int i = 1; i < dims.length; i++) {	/* Shift main world to be first */
+        	if(dims[i].intValue() == 0) {
+    			dims[i] = dims[0];
+        		dims[0] = Integer.valueOf(0);
+        		break;
+        	}
+        }
+        for (Integer dim : dims) {
+        	World w = DimensionManager.getWorld(dim);
+        	if(w == null) {
+        		Log.info("Dimension " + dim + " not loaded");
+        		continue;
+        	}
+    		ForgeWorld fw = this.getWorld(w);
+    		if (core.processWorldLoad(fw)) {  /* Have core process load first - fire event listeners if good load after */
+    			if(fw.isLoaded()) {
+    				core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, fw);
+    			}
+    		}
         }
 
         /* Register our update trigger events */
@@ -907,7 +926,8 @@ public class DynmapPlugin
     {
         /* Disable core */
         core.disableCore();
-
+        core_enabled = false;
+        
         if (sscache != null)
         {
             sscache.cleanup();
@@ -954,11 +974,13 @@ public class DynmapPlugin
     }
 
 	public void onPlayerLogin(EntityPlayer player) {
+		if(!core_enabled) return;
         DynmapPlayer dp = new ForgePlayer(player);
         core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
 	}
 
 	public void onPlayerLogout(EntityPlayer player) {
+		if(!core_enabled) return;
         DynmapPlayer dp = new ForgePlayer(player);
         core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
 	}
@@ -966,22 +988,17 @@ public class DynmapPlugin
     public class WorldTracker implements ISaveEventHandler {
 		@Override
 		public void onWorldLoad(World world) {
-            core.updateConfigHashcode();
+			if(!core_enabled) return;
             ForgeWorld w = getWorld(world);
             if(core.processWorldLoad(w))    /* Have core process load first - fire event listeners if good load after */
                 core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
 		}
 		@Override
 		public void onWorldSave(World world) {
-//            core.updateConfigHashcode();
-//            ForgeWorld fw = getWorld(world);
-//            DynmapWorld w = core.getWorld(fw.getName());
-//            if(w != null)
-//                core.listenerManager.processWorldEvent(EventType.WORLD_UNLOAD, w);
-//            removeWorld(fw);
 		}
 		@Override
 		public void onChunkLoad(World world, Chunk c) {
+			if(!core_enabled) return;
 			if((c != null) && (c.lastSaveTime == 0)) {	// If new chunk?
 				ForgeWorld fw = getWorld(c.worldObj, false);
 				if(fw == null) {
