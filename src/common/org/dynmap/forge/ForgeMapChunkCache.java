@@ -968,18 +968,22 @@ public class ForgeMapChunkCache implements MapChunkCache
     {
         this.dw = dw;
         this.w = dw.getWorld();
-        /* Check if world's provider is ChunkProviderServer */
-        IChunkProvider cp = this.w.getChunkProvider();
+        if(dw.isLoaded()) {
+        	/* Check if world's provider is ChunkProviderServer */
+        	IChunkProvider cp = this.w.getChunkProvider();
 
-        if (cp instanceof ChunkProviderServer)
-        {
-            cps = (ChunkProviderServer)cp;
+        	if (cp instanceof ChunkProviderServer)
+        	{
+        		cps = (ChunkProviderServer)cp;
+        	}
+        	else
+        	{
+        		Log.severe("Error: world " + dw.getName() + " has unsupported chunk provider");
+        	}
         }
-        else
-        {
-            Log.severe("Error: world " + dw.getName() + " has unsupported chunk provider");
+        else {
+        	chunks = new ArrayList<DynmapChunk>();
         }
-
         nsect = dw.worldheight >> 4;
         this.chunks = chunks;
 
@@ -1080,6 +1084,11 @@ public class ForgeMapChunkCache implements MapChunkCache
     public int loadChunks(int max_to_load)
     {
         long t0 = System.nanoTime();
+        if(!dw.isLoaded()) {
+        	isempty = true;
+        	unloadChunks();
+        	return 0;
+        }
         Set queue = null;
         IChunkProvider cp = w.getChunkProvider();
 
@@ -1297,6 +1306,9 @@ public class ForgeMapChunkCache implements MapChunkCache
      */
     public boolean isDoneLoading()
     {
+    	if(!dw.isLoaded()) {
+    		return true;
+    	}
         if (iterator != null)
         {
             return !iterator.hasNext();
