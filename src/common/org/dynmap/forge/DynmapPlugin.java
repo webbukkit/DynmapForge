@@ -73,6 +73,7 @@ import cpw.mods.fml.server.FMLServerHandler;
 public class DynmapPlugin
 {
     private DynmapCore core;
+    private boolean core_enabled;
     private String version;
     public SnapshotCache sscache;
     private boolean has_spout = false;
@@ -460,7 +461,10 @@ public class DynmapPlugin
                 boolean blockdata, boolean highesty, boolean biome, boolean rawbiome)
         {
             MapChunkCache c = w.getChunkCache(chunks);
-
+            
+            if(c == null) {
+            	return null;
+            }
             if (w.visibility_limits != null)
             {
                 for (MapChunkCache.VisibilityLimit limit: w.visibility_limits)
@@ -551,7 +555,9 @@ public class DynmapPlugin
                     catch (InterruptedException ix) {}
                 }
             }
-
+            if(w.isLoaded() == false) {
+            	return null;
+            }
             return c;
         }
         @Override
@@ -860,6 +866,7 @@ public class DynmapPlugin
         {
             return;
         }
+        core_enabled = true;
         /* Register tick handler */
         TickRegistry.registerTickHandler(fserver, Side.SERVER);
 
@@ -872,10 +879,14 @@ public class DynmapPlugin
         for (WorldServer world : server.worldServers)
         {
             ForgeWorld w = this.getWorld(world);
-
+        	if(DimensionManager.getWorld(world.provider.dimensionId) == null) { /* Check if not loaded */
+        		w.setWorldUnloaded();
+        	}
             if (core.processWorldLoad(w))   /* Have core process load first - fire event listeners if good load after */
             {
-                core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
+            	if(w.isLoaded()) {
+            		core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
+            	}
             }
         }
 
@@ -897,6 +908,7 @@ public class DynmapPlugin
     {
         /* Disable core */
         core.disableCore();
+        core_enabled = false;
 
         if (sscache != null)
         {
@@ -950,12 +962,14 @@ public class DynmapPlugin
 
     private class PlayerTracker implements IPlayerTracker {
 		@Override
-		public void onPlayerLogin(EntityPlayer player) {			
+		public void onPlayerLogin(EntityPlayer player) {
+			if(!core_enabled) return;
             DynmapPlayer dp = new ForgePlayer(player);
             core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
 		}
 		@Override
 		public void onPlayerLogout(EntityPlayer player) {
+			if(!core_enabled) return;
             DynmapPlayer dp = new ForgePlayer(player);
             core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
 		}
@@ -979,22 +993,24 @@ public class DynmapPlugin
     public class WorldTracker {
     	@ForgeSubscribe
     	public void handleWorldLoad(WorldEvent.Load event) {
-            core.updateConfigHashcode();
+			if(!core_enabled) return;
             ForgeWorld w = getWorld(event.world);
             if(core.processWorldLoad(w))    /* Have core process load first - fire event listeners if good load after */
                 core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
     	}
     	@ForgeSubscribe
     	public void handleWorldUnload(WorldEvent.Unload event) {
-            core.updateConfigHashcode();
+			if(!core_enabled) return;
             ForgeWorld fw = getWorld(event.world);
-            DynmapWorld w = core.getWorld(fw.getName());
-            if(w != null)
-                core.listenerManager.processWorldEvent(EventType.WORLD_UNLOAD, w);
-            removeWorld(fw);
+            if(fw != null) {
+                core.listenerManager.processWorldEvent(EventType.WORLD_UNLOAD, fw);
+            	fw.setWorldUnloaded();
+            	core.processWorldUnload(fw);
+            }
     	}
     	@ForgeSubscribe
     	public void handleChunkLoad(ChunkEvent event) {
+			if(!core_enabled) return;
     		if(event instanceof ChunkEvent.Load) { 
     			Chunk c = event.getChunk();
     			if((c != null) && (c.lastSaveTime == 0)) {	// If new chunk?
@@ -1079,10 +1095,14 @@ public class DynmapPlugin
     	if(last_world == w) {
     		return last_fworld;
     	}
+    	String wname = ForgeWorld.getWorldName(w);
     	for(ForgeWorld fw : worlds.values()) {
-    		if(fw.getWorld() == w) {
+    		if(fw.getName().equals(wname)) {
     			last_world = w;
     			last_fworld = fw;
+    			if(fw.isLoaded() == false) {
+    				fw.setWorldLoaded(w);
+    			}
     			return fw;
     		}
     	}
