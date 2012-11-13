@@ -153,8 +153,9 @@ public class DynmapPlugin
 
     private boolean isOp(String player)
     {
+    	player = player.toLowerCase();
     	return server.getConfigurationManager().getOps().contains(player) ||
-    			(server.isSinglePlayer() && player.equals(server.getServerOwner()));
+    			(server.isSinglePlayer() && player.equalsIgnoreCase(server.getServerOwner()));
 	}
     
     /**
