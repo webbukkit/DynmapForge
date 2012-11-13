@@ -26,6 +26,7 @@ import net.minecraft.src.CommandBase;
 import net.minecraft.src.CommandHandler;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.EntityPlayerMP;
 import net.minecraft.src.ICommand;
 import net.minecraft.src.ICommandManager;
 import net.minecraft.src.ICommandSender;
@@ -38,6 +39,7 @@ import net.minecraft.src.World;
 import net.minecraft.src.WorldServer;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.CommandEvent;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.world.ChunkEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -150,6 +152,12 @@ public class DynmapPlugin
     {
         plugin = this;
     }
+
+    private boolean isOp(String player)
+    {
+    	return server.getConfigurationManager().getOps().contains(player) ||
+    			(server.isSinglePlayer() && player.equals(server.getServerOwner()));
+	}
 
     /**
      * Server access abstraction class
@@ -432,9 +440,8 @@ public class DynmapPlugin
             }
             */
             Set<String> rslt = new HashSet<String>();
-            Set ops = server.getConfigurationManager().getOps();
 
-            if (ops.contains(player))
+            if (isOp(player))
             {
                 rslt.addAll(perms);
             }
@@ -450,8 +457,7 @@ public class DynmapPlugin
                 return false;
             return permissions.hasOfflinePermission(player, perm);
             */
-            Set ops = server.getConfigurationManager().getOps();
-            return ops.contains(player);
+            return isOp(player);
         }
         /**
          * Render processor helper - used by code running on render threads to request chunk snapshot cache from server/sync thread
@@ -753,12 +759,12 @@ public class DynmapPlugin
         @Override
         public boolean hasPrivilege(String privid)
         {
-        	return server.getConfigurationManager().getOps().contains(player.username);
+        	return isOp();
         }
         @Override
         public boolean isOp()
         {
-        	return server.getConfigurationManager().getOps().contains(player.username);
+        	return DynmapPlugin.this.isOp(player.username);
     	}
         @Override
         public void sendMessage(String msg)
@@ -935,6 +941,16 @@ public class DynmapPlugin
         {
             onCommand(sender, cmd, args);
         }
+
+        public boolean canCommandSenderUseCommand(ICommandSender sender) {
+        	if(sender instanceof EntityPlayer) {
+            	return DynmapPlugin.this.isOp(sender.getCommandSenderName());
+        	}
+        	else {
+        		return true;
+        	}
+        }
+
     }
 
     private void onCommand(ICommandSender sender, String cmd, String[] args)
@@ -1021,7 +1037,6 @@ public class DynmapPlugin
     				mapManager.touchVolume(fw.getName(), x, 0, z, x+15, 128, z+16, "chunkpopulate");
     			}
     		}
-    		
     	}
     }
     
