@@ -151,6 +151,12 @@ public class DynmapPlugin
         plugin = this;
     }
 
+    private boolean isOp(String player)
+    {
+    	return server.getConfigurationManager().getOps().contains(player) ||
+    			(server.isSinglePlayer() && player.equals(server.getServerOwner()));
+	}
+    
     /**
      * Server access abstraction class
      */
@@ -432,9 +438,8 @@ public class DynmapPlugin
             }
             */
             Set<String> rslt = new HashSet<String>();
-            Set ops = server.getConfigurationManager().getOps();
 
-            if (ops.contains(player))
+            if (isOp(player))
             {
                 rslt.addAll(perms);
             }
@@ -450,8 +455,7 @@ public class DynmapPlugin
                 return false;
             return permissions.hasOfflinePermission(player, perm);
             */
-            Set ops = server.getConfigurationManager().getOps();
-            return ops.contains(player);
+        	return isOp(player);
         }
         /**
          * Render processor helper - used by code running on render threads to request chunk snapshot cache from server/sync thread
@@ -760,7 +764,7 @@ public class DynmapPlugin
         @Override
         public boolean isOp()
         {
-        	return server.getConfigurationManager().getOps().contains(player.username);
+        	return DynmapPlugin.this.isOp(player.username);
     	}
         @Override
         public void sendMessage(String msg)
@@ -936,6 +940,15 @@ public class DynmapPlugin
         public void processCommand(ICommandSender sender, String[] args)
         {
             onCommand(sender, cmd, args);
+        }
+
+        public boolean canCommandSenderUseCommand(ICommandSender sender) {
+        	if(sender instanceof EntityPlayer) {
+            	return DynmapPlugin.this.isOp(sender.getCommandSenderName());
+        	}
+        	else {
+        		return true;
+        	}
         }
     }
 
