@@ -22,7 +22,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 @Mod(modid = "Dynmap", name = "Dynmap", version = mod_Dynmap.VERSION)
 public class mod_Dynmap
 {
-	public static final String VERSION = "1.1-alpha-5";
+	public static final String VERSION = "1.1";
 	
     // The instance of your mod that Forge uses.
     @Instance("Generic")
