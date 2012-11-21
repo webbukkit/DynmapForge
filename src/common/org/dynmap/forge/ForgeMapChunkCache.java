@@ -27,6 +27,8 @@ import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
 import org.dynmap.Log;
 import org.dynmap.common.BiomeMap;
+import org.dynmap.hdmap.HDBlockModels;
+import org.dynmap.renderer.RenderPatchFactory;
 import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.BlockStep;
@@ -125,7 +127,7 @@ public class ForgeMapChunkCache implements MapChunkCache
 			return 0;
 		}
 		@Override
-		public void func_82695_e(int var1, int var2) {
+		public void recreateStructures(int var1, int var2) {
 		}
     }
     private static NoCreateChunkProvider noCreateProvider = new NoCreateChunkProvider();

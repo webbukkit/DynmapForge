@@ -1042,17 +1042,17 @@ public class DynmapPlugin
     public class WorldUpdateTracker implements IWorldAccess {
     	String worldid;
 		@Override
-		public void markBlockNeedsUpdate(int x, int y, int z) {
+		public void markBlockForUpdate(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
             mapManager.touch(worldid, x, y, z, "blockupdate");
 		}
 		@Override
-		public void markBlockNeedsUpdate2(int x, int y, int z) {
+		public void markBlockForRenderUpdate(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
             mapManager.touch(worldid, x, y, z, "blockupdate2");
 		}
 		@Override
-		public void markBlockRangeNeedsUpdate(int x1, int y1, int z1,
+		public void markBlockRangeForRenderUpdate(int x1, int y1, int z1,
 				int x2, int y2, int z2) {
             sscache.invalidateSnapshot(worldid, x1, y1, z1, x2, y2, z2);
             mapManager.touchVolume(worldid, x1, y1, z1, x2, y2, z2, "rangeupdate");
@@ -1083,12 +1083,12 @@ public class DynmapPlugin
 				int var4, int var5) {
 		}
 		@Override
-		public void func_82746_a(int var1, int var2, int var3, int var4,
-				int var5) {
-		}
-		@Override
 		public void func_85102_a(EntityPlayer var1, String var2, double var3,
 				double var5, double var7, float var9, float var10) {
+		}
+		@Override
+		public void broadcastSound(int var1, int var2, int var3, int var4,
+				int var5) {
 		}
     }
     
