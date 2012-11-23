@@ -1,0 +1,6 @@
+package org.dynmap.forge;
+
+public class Version {
+    public static final String VER = "_VERSION_";
+}
+
