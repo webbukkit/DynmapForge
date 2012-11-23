@@ -8,57 +8,42 @@ import java.util.IdentityHashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class SnapshotCache
-{
+import org.dynmap.utils.DynIntHashMap;
+
+public class SnapshotCache {
+    public static class SnapshotRec {
+        public ChunkSnapshot ss;
+        public DynIntHashMap tileData;
+    };
+
     private CacheHashMap snapcache;
-    private ReferenceQueue<ChunkSnapshot> refqueue;
+    private ReferenceQueue<SnapshotRec> refqueue;
     private long cache_attempts;
     private long cache_success;
 
-    private static class CacheRec
-    {
-        WeakReference<ChunkSnapshot> ref;
+    private static class CacheRec {
+        WeakReference<SnapshotRec> ref;
         boolean hasbiome;
         boolean hasrawbiome;
         boolean hasblockdata;
         boolean hashighesty;
-        String key;
-        public boolean equals(Object r) {
-        	if(this == r)
-        		return true;
-        	else if(r instanceof CacheRec) {
-        		return ((CacheRec)r).key.equals(key);
-        	}
-        	else {
-        		return false;
-        	}
-        }
-        public int hashCode() {
-        	return key.hashCode();
-        }
     }
-
+    
     @SuppressWarnings("serial")
-    public class CacheHashMap extends LinkedHashMap<String, CacheRec>
-    {
+    public class CacheHashMap extends LinkedHashMap<String, CacheRec> {
         private int limit;
-        private HashMap<CacheRec, String> reverselookup;
+        private IdentityHashMap<WeakReference<SnapshotRec>, String> reverselookup;
 
-        public CacheHashMap(int lim)
-        {
+        public CacheHashMap(int lim) {
             super(16, (float)0.75, true);
             limit = lim;
-            reverselookup = new HashMap<CacheRec, String>();
+            reverselookup = new IdentityHashMap<WeakReference<SnapshotRec>, String>();
         }
-        protected boolean removeEldestEntry(Map.Entry<String, CacheRec> last)
-        {
+        protected boolean removeEldestEntry(Map.Entry<String, CacheRec> last) {
             boolean remove = (size() >= limit);
-
-            if (remove)
-            {
-                reverselookup.remove(last.getValue());
+            if(remove) {
+                reverselookup.remove(last.getValue().ref);
             }
-
             return remove;
         }
     }
@@ -66,101 +51,75 @@ public class SnapshotCache
     /**
      * Create snapshot cache
      */
-    public SnapshotCache(int max_size)
-    {
+    public SnapshotCache(int max_size) {
         snapcache = new CacheHashMap(max_size);
-        refqueue = new ReferenceQueue<ChunkSnapshot>();
+        refqueue = new ReferenceQueue<SnapshotRec>();
     }
-    private String getKey(String w, int cx, int cz)
-    {
-        return cx + ":" + cz + ":" + w;
+    private String getKey(String w, int cx, int cz) {
+        return w + ":" + cx + ":" + cz;
     }
     /**
      * Invalidate cached snapshot, if in cache
      */
-    public void invalidateSnapshot(String w, int x, int y, int z)
-    {
-        String key = getKey(w, x >> 4, z >> 4);
+    public void invalidateSnapshot(String w, int x, int y, int z) {
+        String key = getKey(w, x>>4, z>>4);
         CacheRec rec = snapcache.remove(key);
-
-        if (rec != null)
-        {
-            snapcache.reverselookup.remove(rec);
+        if(rec != null) {
+            snapcache.reverselookup.remove(rec.ref);
             rec.ref.clear();
         }
-
         //processRefQueue();
     }
     /**
      * Invalidate cached snapshot, if in cache
      */
-    public void invalidateSnapshot(String w, int x0, int y0, int z0, int x1, int y1, int z1)
-    {
-        for (int xx = (x0 >> 4); xx <= (x1 >> 4); xx++)
-        {
-            for (int zz = (z0 >> 4); zz <= (z1 >> 4); zz++)
-            {
+    public void invalidateSnapshot(String w, int x0, int y0, int z0, int x1, int y1, int z1) {
+        for(int xx = (x0>>4); xx <= (x1>>4); xx++) {
+            for(int zz = (z0>>4); zz <= (z1>>4); zz++) {
                 String key = getKey(w, xx, zz);
                 CacheRec rec = snapcache.remove(key);
-
-                if (rec != null)
-                {
-                    snapcache.reverselookup.remove(rec);
+                if(rec != null) {
+                    snapcache.reverselookup.remove(rec.ref);
                     rec.ref.clear();
                 }
             }
         }
-
         //processRefQueue();
     }
     /**
      * Look for chunk snapshot in cache
      */
-    public ChunkSnapshot getSnapshot(String w, int chunkx, int chunkz,
-            boolean blockdata, boolean biome, boolean biomeraw, boolean highesty)
-    {
+    public SnapshotRec getSnapshot(String w, int chunkx, int chunkz, 
+            boolean blockdata, boolean biome, boolean biomeraw, boolean highesty) {
         String key = getKey(w, chunkx, chunkz);
         processRefQueue();
-        ChunkSnapshot ss = null;
+        SnapshotRec ss = null;
         CacheRec rec = snapcache.get(key);
-
-        if (rec != null)
-        {
+        if(rec != null) {
             ss = rec.ref.get();
-
-            if (ss == null)
-            {
-                snapcache.reverselookup.remove(rec);
+            if(ss == null) {
+                snapcache.reverselookup.remove(rec.ref);
                 snapcache.remove(key);
             }
         }
-
-        if (ss != null)
-        {
-            if ((blockdata && (!rec.hasblockdata)) ||
+        if(ss != null) {
+            if((blockdata && (!rec.hasblockdata)) ||
                     (biome && (!rec.hasbiome)) ||
                     (biomeraw && (!rec.hasrawbiome)) ||
-                    (highesty && (!rec.hashighesty)))
-            {
+                    (highesty && (!rec.hashighesty))) {
                 ss = null;
             }
         }
-
         cache_attempts++;
-
-        if (ss != null)
-        {
-            cache_success++;
-        }
+        if(ss != null) cache_success++;
 
         return ss;
     }
     /**
      * Add chunk snapshot to cache
      */
-    public void putSnapshot(String w, int chunkx, int chunkz, ChunkSnapshot ss,
-            boolean blockdata, boolean biome, boolean biomeraw, boolean highesty)
-    {
+    public void putSnapshot(String w, int chunkx, int chunkz, SnapshotRec ss, 
+            boolean blockdata, boolean biome, boolean biomeraw, boolean highesty) {
         String key = getKey(w, chunkx, chunkz);
         processRefQueue();
         CacheRec rec = new CacheRec();
@@ -168,30 +127,21 @@ public class SnapshotCache
         rec.hasbiome = biome;
         rec.hasrawbiome = biomeraw;
         rec.hashighesty = highesty;
-        rec.ref = new WeakReference<ChunkSnapshot>(ss, refqueue);
-        rec.key = key;
+        rec.ref = new WeakReference<SnapshotRec>(ss, refqueue);
         CacheRec prevrec = snapcache.put(key, rec);
-
-        if (prevrec != null)
-        {
-            snapcache.reverselookup.remove(prevrec);
+        if(prevrec != null) {
+            snapcache.reverselookup.remove(prevrec.ref);
         }
-
-        snapcache.reverselookup.put(rec, key);
+        snapcache.reverselookup.put(rec.ref, key);
     }
     /**
      * Process reference queue
      */
-    private void processRefQueue()
-    {
-        Reference <? extends ChunkSnapshot > ref;
-
-        while ((ref = refqueue.poll()) != null)
-        {
+    private void processRefQueue() {
+        Reference<? extends SnapshotRec> ref;
+        while((ref = refqueue.poll()) != null) {
             String k = snapcache.reverselookup.remove(ref);
-
-            if (k != null)
-            {
+            if(k != null) {
                 snapcache.remove(k);
             }
         }
@@ -199,29 +149,23 @@ public class SnapshotCache
     /**
      * Get hit rate (percent)
      */
-    public double getHitRate()
-    {
-        if (cache_attempts > 0)
-        {
-            return (100.0 * cache_success) / (double)cache_attempts;
+    public double getHitRate() {
+        if(cache_attempts > 0) {
+            return (100.0*cache_success)/(double)cache_attempts;
         }
-
         return 0.0;
     }
     /**
      * Reset cache stats
      */
-    public void resetStats()
-    {
+    public void resetStats() {
         cache_attempts = cache_success = 0;
     }
     /**
      * Cleanup
      */
-    public void cleanup()
-    {
-        if (snapcache != null)
-        {
+    public void cleanup() {
+        if(snapcache != null) {
             snapcache.clear();
             snapcache.reverselookup.clear();
             snapcache.reverselookup = null;

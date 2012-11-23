@@ -853,7 +853,7 @@ public class DynmapPlugin
         }
 
         /* Inject dependencies */
-        core.setPluginVersion(mod_Dynmap.VERSION);
+        core.setPluginVersion(Version.VER);
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
         ForgeServer fserver = new ForgeServer();
