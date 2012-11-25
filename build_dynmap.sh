@@ -1,9 +1,10 @@
 #!/bin/bash
 ver=1.2
-ver2=$ver-alpha-1
+ver2=$ver-alpha-2
 rm lib/DynmapCore-*.jar
 cp ~/DynmapCore/target/DynmapCore-$ver.jar lib
 cp ~/DynmapCoreAPI/target/DynmapCoreAPI-$ver.jar lib
+cat Version.java.template | sed s/_VERSION_/$ver2/ > src/minecraft_server/org/dynmap/forge/Version.java
 ./recompile.sh
 ./reobfuscate.sh
 rm -r -f zip
