@@ -1006,18 +1006,28 @@ public class DynmapPlugin
     	@ForgeSubscribe
     	public void handleWorldLoad(WorldEvent.Load event) {
 			if(!core_enabled) return;
-            ForgeWorld w = getWorld(event.world);
-            if(core.processWorldLoad(w))    /* Have core process load first - fire event listeners if good load after */
-                core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
+            final ForgeWorld w = getWorld(event.world);
+            /* This event can be called from off server thread, so push processing there */
+            core.getServer().scheduleServerTask(new Runnable() {
+            	public void run() {
+            		if(core.processWorldLoad(w))    /* Have core process load first - fire event listeners if good load after */
+            			core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
+            	}
+            }, 0);
     	}
     	@ForgeSubscribe
     	public void handleWorldUnload(WorldEvent.Unload event) {
 			if(!core_enabled) return;
-            ForgeWorld fw = getWorld(event.world);
+            final ForgeWorld fw = getWorld(event.world);
             if(fw != null) {
-            	core.listenerManager.processWorldEvent(EventType.WORLD_UNLOAD, fw);
-            	fw.setWorldUnloaded();
-            	core.processWorldUnload(fw);
+                /* This event can be called from off server thread, so push processing there */
+                core.getServer().scheduleServerTask(new Runnable() {
+                	public void run() {
+                		core.listenerManager.processWorldEvent(EventType.WORLD_UNLOAD, fw);
+                		fw.setWorldUnloaded();
+                		core.processWorldUnload(fw);
+                	}
+                }, 0);
             }
         }
     	@ForgeSubscribe
@@ -1035,7 +1045,6 @@ public class DynmapPlugin
     				mapManager.touchVolume(fw.getName(), x, 0, z, x+15, 128, z+16, "chunkpopulate");
     			}
     		}
-    		
     	}
     }
     

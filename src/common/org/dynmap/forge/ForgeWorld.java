@@ -161,7 +161,7 @@ public class ForgeWorld extends DynmapWorld
     public int getSkyLightLevel(int x, int y, int z)
     {
     	if(world != null)
-    		return world.getSkyBlockTypeBrightness(EnumSkyBlock.Sky, x, y, z);
+    		return world.getSavedLightValue(EnumSkyBlock.Sky, x, y, z);
     	else
     		return -1;
     }
