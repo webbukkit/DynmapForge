@@ -989,9 +989,14 @@ public class DynmapPlugin
 		@Override
 		public void onWorldLoad(World world) {
 			if(!core_enabled) return;
-            ForgeWorld w = getWorld(world);
-            if(core.processWorldLoad(w))    /* Have core process load first - fire event listeners if good load after */
-                core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
+            final ForgeWorld w = getWorld(world);
+            /* This event can be called from off server thread, so push processing there */
+            core.getServer().scheduleServerTask(new Runnable() {
+            	public void run() {
+            		if(core.processWorldLoad(w))    /* Have core process load first - fire event listeners if good load after */
+            			core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
+            	}
+            }, 0);
 		}
 		@Override
 		public void onWorldSave(World world) {
