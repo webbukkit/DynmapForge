@@ -151,6 +151,11 @@ public class DynmapPlugin
 		@Override
 		public String onServerCommandSay(Object listener, String username,
 				String message) {
+			ChatMessage cm = new ChatMessage();
+			cm.message = message;
+			cm.sender = null;
+			msgqueue.add(cm);
+			
 			return message;
 		}
 		@Override
@@ -386,10 +391,8 @@ public class DynmapPlugin
         @Override
         public void broadcastMessage(String msg)
         {
-        	List plist = server.configManager.playerEntities;
-        	for(Object p : plist) {
-        		server.configManager.sendChatMessageToPlayer(((EntityPlayer)p).username, msg);
-        	}
+        	server.configManager.sendPacketToAllPlayers(new Packet3Chat(msg));
+        	Log.info(this.stripChatColor(msg));
         }
         @Override
         public String[] getBiomeIDs()
@@ -619,6 +622,8 @@ public class DynmapPlugin
                     DynmapPlayer dp = null;
                     if(cm.sender != null)
                 		dp = new ForgePlayer(cm.sender);
+                    else
+                    	dp = new ForgePlayer(null);
                     core.listenerManager.processChatEvent(EventType.PLAYER_CHAT, dp, cm.message);
 				}
 			}
@@ -660,12 +665,18 @@ public class DynmapPlugin
         @Override
         public String getName()
         {
-            return player.getUsername();
+        	if(player != null)
+        		return player.getUsername();
+        	else
+        		return "[Server]";
         }
         @Override
         public String getDisplayName()
         {
-            return player.getUsername();
+        	if(player != null)
+        		return player.getUsername();
+        	else
+        		return "[Server]";
         }
         @Override
         public boolean isOnline()
