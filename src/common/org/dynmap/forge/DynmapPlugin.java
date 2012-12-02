@@ -38,6 +38,7 @@ import net.minecraft.src.World;
 import net.minecraft.src.WorldServer;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.CommandEvent;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.world.ChunkEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -131,13 +132,12 @@ public class DynmapPlugin
 
 		@Override
 		public Packet3Chat serverChat(NetHandler handler, Packet3Chat message) {
-			if(handler.isServerHandler() && (!message.message.startsWith("/"))) {
+			if(!message.message.startsWith("/")) {
 				ChatMessage cm = new ChatMessage();
 				cm.message = message.message;
 				cm.sender = handler.getPlayer();
 				msgqueue.add(cm);
 			}
-			
 			return message;
 		}
 		@Override
@@ -381,7 +381,8 @@ public class DynmapPlugin
         @Override
         public void broadcastMessage(String msg)
         {
-            server.sendChatToPlayer(msg);
+            MinecraftServer.getServer().getConfigurationManager().sendPacketToAllPlayers(new Packet3Chat(msg));
+            Log.info(StringUtils.stripControlCodes(msg));
         }
         @Override
         public String[] getBiomeIDs()
@@ -613,6 +614,9 @@ public class DynmapPlugin
                     DynmapPlayer dp = null;
                     if(cm.sender != null)
                 		dp = new ForgePlayer(cm.sender);
+                    else
+                    	dp = new ForgePlayer(null);
+                    
                     core.listenerManager.processChatEvent(EventType.PLAYER_CHAT, dp, cm.message);
 				}
 			}
@@ -654,12 +658,18 @@ public class DynmapPlugin
         @Override
         public String getName()
         {
-            return player.getEntityName();
+        	if(player != null)
+        		return player.getEntityName();
+        	else
+        		return "[Server]";
         }
         @Override
         public String getDisplayName()
         {
-            return player.getEntityName();
+        	if(player != null)
+        		return player.getEntityName();
+        	else
+        		return "[Server]";
         }
         @Override
         public boolean isOnline()
@@ -1044,6 +1054,21 @@ public class DynmapPlugin
     				int z = c.zPosition << 4;
     				mapManager.touchVolume(fw.getName(), x, 0, z, x+15, 128, z+16, "chunkpopulate");
     			}
+    		}
+    	}
+    	@ForgeSubscribe
+    	public void handleCommandEvent(CommandEvent event) {
+    		if(event.isCanceled()) return;
+    		if(event.command.getCommandName().equals("say")) {
+    			String s = "";
+    			for(String p : event.parameters) {
+    				s += p + " ";
+    			}
+    			s = s.trim();
+				ChatMessage cm = new ChatMessage();
+				cm.message = s;
+				cm.sender = null;
+				msgqueue.add(cm);
     		}
     	}
     }
