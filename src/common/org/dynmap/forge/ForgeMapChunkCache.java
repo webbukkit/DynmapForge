@@ -1,5 +1,6 @@
 package org.dynmap.forge;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -15,8 +16,10 @@ import net.minecraft.src.ChunkCoordIntPair;
 import net.minecraft.src.ChunkPosition;
 import net.minecraft.src.ChunkProviderServer;
 import net.minecraft.src.EnumCreatureType;
+import net.minecraft.src.IChunkLoader;
 import net.minecraft.src.IChunkProvider;
 import net.minecraft.src.IProgressUpdate;
+import net.minecraft.src.MinecraftException;
 import net.minecraft.src.NBTBase;
 import net.minecraft.src.NBTTagByte;
 import net.minecraft.src.NBTTagByteArray;
@@ -54,7 +57,7 @@ public class ForgeMapChunkCache implements MapChunkCache
 {
     private static boolean init = false;
     private static Field unloadqueue = null;
-    private static Field currentchunkprovider = null;
+    private static Field currentchunkloader = null;
     private static Field updateEntityTick = null;
 
     private World w;
@@ -94,54 +97,45 @@ public class ForgeMapChunkCache implements MapChunkCache
         return (cy << 8) | (cz << 4) | cx;
     }
 
-    private static class NoCreateChunkProvider implements IChunkProvider {
+    private static class NoChunkFoundThrow extends Error {
+    }
+    
+    private static class NoCreateChunkLoader implements IChunkLoader {
+    	IChunkLoader base;
+    	World ww;
+    	int xx, zz;
 		@Override
-		public boolean chunkExists(int var1, int var2) {
-			return false;
+		public Chunk loadChunk(World w, int x, int z)
+				throws IOException {
+			Chunk c = base.loadChunk(w, x, z);
+			if((c == null) && (w == ww) && (x == xx) && (z == zz)) {
+				throw new NoChunkFoundThrow();
+			}
+			return c;
 		}
 		@Override
-		public Chunk provideChunk(int var1, int var2) {
-			throw new IllegalArgumentException(); // Throw exception to cancel chunk load
+		public void saveChunk(World var1, Chunk var2)
+				throws MinecraftException, IOException {
+			base.saveChunk(var1, var2);
 		}
+
 		@Override
-		public Chunk loadChunk(int var1, int var2) {
-			return null;
+		public void saveExtraChunkData(World var1, Chunk var2) {
+			base.saveExtraChunkData(var1, var2);
 		}
+
 		@Override
-		public void populate(IChunkProvider var1, int var2, int var3) {
+		public void chunkTick() {
+			base.chunkTick();
 		}
+
 		@Override
-		public boolean saveChunks(boolean var1, IProgressUpdate var2) {
-			return false;
-		}
-		@Override
-		public boolean unload100OldestChunks() {
-			return false;
-		}
-		@Override
-		public boolean canSave() {
-			return false;
-		}
-		@Override
-		public String makeString() {
-			return null;
-		}
-		@Override
-		public List getPossibleCreatures(EnumCreatureType var1, int var2,
-				int var3, int var4) {
-			return null;
-		}
-		@Override
-		public ChunkPosition findClosestStructure(World var1, String var2,
-				int var3, int var4, int var5) {
-			return null;
-		}
-		@Override
-		public int getLoadedChunkCount() {
-			return 0;
+		public void saveExtraData() {
+			base.saveExtraData();
 		}
     }
-    private static NoCreateChunkProvider noCreateProvider = new NoCreateChunkProvider();
+    
+    private static NoCreateChunkLoader noCreateLoader = new NoCreateChunkLoader();
     
     /**
      * Iterator for traversing map chunk cache (base is for non-snapshot)
@@ -981,10 +975,10 @@ public class ForgeMapChunkCache implements MapChunkCache
     				//Log.info("Found unloadqueue - " + f[i].getName());
     				unloadqueue.setAccessible(true);
     			}
-    			else if((currentchunkprovider == null) && f[i].getType().isAssignableFrom(IChunkProvider.class)) {
-    				currentchunkprovider = f[i];
+    			else if((currentchunkloader == null) && f[i].getType().isAssignableFrom(IChunkLoader.class)) {
+    				currentchunkloader = f[i];
     				//Log.info("Found currentchunkprovider - " + f[i].getName());
-    				currentchunkprovider.setAccessible(true);
+    				currentchunkloader.setAccessible(true);
     			}
     		}
     		
@@ -997,7 +991,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     			}
     		}
 
-			if ((unloadqueue == null) || (currentchunkprovider == null))
+			if ((unloadqueue == null) || (currentchunkloader == null))
     		{
     			Log.severe("ERROR: cannot find unload queue or chunk provider field - dynmap cannot load chunks");
     		}
@@ -1089,7 +1083,7 @@ public class ForgeMapChunkCache implements MapChunkCache
 
     private Chunk loadChunkNoGenerate(int x, int z)
     {
-        if ((cps == null) || (currentchunkprovider == null))
+        if ((cps == null) || (currentchunkloader == null))
         {
             return null;
         }
@@ -1098,21 +1092,29 @@ public class ForgeMapChunkCache implements MapChunkCache
 
         try
         {
-            Object cur_ccp = null;
-            /* Get current chunk provider - save value */
-            cur_ccp = currentchunkprovider.get(cps);
-            /* Set current chunk provider to no-crete provider - prevents generate on miss */
-            currentchunkprovider.set(cps,  noCreateProvider);
-
+            IChunkLoader cur_ccl = null;
+            /* Get current chunk loader - save value */
+            cur_ccl = (IChunkLoader)currentchunkloader.get(cps);
+            /* Set current chunk loader to no-create loader - prevents generate on miss */
+            currentchunkloader.set(cps,  noCreateLoader);
+            /* Set loader to prevent create of target chunk */
+            noCreateLoader.base = cur_ccl;
+            noCreateLoader.ww = w;
+            noCreateLoader.xx = x;
+            noCreateLoader.zz = z;
+            
             try
             {
                 /* Now, try to load chunk - throws IllegalArgumentException if doesn't exist */
                 c = cps.loadChunk(x,  z);
+            } catch (NoChunkFoundThrow ncft) {
+            	c = null;
             }
             finally
             {
-                /* And restore current chunk provider */
-                currentchunkprovider.set(cps,  cur_ccp);
+                /* And restore current chunk loader */
+                currentchunkloader.set(cps,  cur_ccl);
+                noCreateLoader.ww = null;
             }
         }
         catch (IllegalArgumentException iax)
@@ -1122,6 +1124,10 @@ public class ForgeMapChunkCache implements MapChunkCache
         catch (IllegalAccessException iaxx)
         {
             c = null;
+        }
+        catch (NullPointerException npx)
+        {
+        	c = null;
         }
 
         return c;
