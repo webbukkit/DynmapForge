@@ -4,6 +4,7 @@ package org.dynmap.forge;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.SocketAddress;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -25,6 +26,7 @@ import net.minecraft.src.BiomeGenBase;
 import net.minecraft.src.Chunk;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
+import net.minecraft.src.EntityPlayerMP;
 import net.minecraft.src.ICommandListener;
 import net.minecraft.src.IWorldAccess;
 import net.minecraft.src.ModLoader;
@@ -711,10 +713,15 @@ public class DynmapPlugin
         @Override
         public InetSocketAddress getAddress()
         {
-            /*TODO
-            if(player != null)
-                return player.getAddress();
-                */
+            if((player != null) && (player instanceof EntityPlayerMP)) {
+            	NetServerHandler nsh = ((EntityPlayerMP)player).playerNetServerHandler;
+            	if((nsh != null) && (nsh.netManager != null)) {
+            		SocketAddress sa = nsh.netManager.getRemoteAddress();
+            		if(sa instanceof InetSocketAddress) {
+            			return (InetSocketAddress)sa;
+            		}
+            	}
+            }
             return null;
         }
         @Override
