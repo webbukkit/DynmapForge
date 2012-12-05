@@ -3,6 +3,7 @@ package org.dynmap.forge;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.SocketAddress;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -32,6 +33,7 @@ import net.minecraft.src.ICommandManager;
 import net.minecraft.src.ICommandSender;
 import net.minecraft.src.IWorldAccess;
 import net.minecraft.src.NetHandler;
+import net.minecraft.src.NetServerHandler;
 import net.minecraft.src.Packet3Chat;
 import net.minecraft.src.ServerCommandManager;
 import net.minecraft.src.StringUtils;
@@ -706,10 +708,15 @@ public class DynmapPlugin
         @Override
         public InetSocketAddress getAddress()
         {
-            /*TODO
-            if(player != null)
-                return player.getAddress();
-                */
+            if((player != null) && (player instanceof EntityPlayerMP)) {
+            	NetServerHandler nsh = ((EntityPlayerMP)player).playerNetServerHandler;
+            	if((nsh != null) && (nsh.netManager != null)) {
+            		SocketAddress sa = nsh.netManager.getSocketAddress();
+            		if(sa instanceof InetSocketAddress) {
+            			return (InetSocketAddress)sa;
+            		}
+            	}
+            }
             return null;
         }
         @Override
