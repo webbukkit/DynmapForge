@@ -1,6 +1,6 @@
 #!/bin/bash
 ver=1.2
-ver2=$ver-alpha-4
+ver2=$ver
 rm lib/DynmapCore-*.jar
 cp ~/DynmapCore/target/DynmapCore-$ver.jar lib
 cp ~/DynmapCoreAPI/target/DynmapCoreAPI-$ver.jar lib
