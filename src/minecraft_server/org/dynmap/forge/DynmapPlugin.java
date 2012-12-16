@@ -85,6 +85,19 @@ public class DynmapPlugin
     private HashMap<String, ForgeWorld> worlds = new HashMap<String, ForgeWorld>();
     private World last_world;
     private ForgeWorld last_fworld;
+    private Map<String, ForgePlayer> players = new HashMap<String, ForgePlayer>();
+    
+    private ForgePlayer getOrAddPlayer(EntityPlayer p) {
+    	ForgePlayer fp = players.get(p.username);
+    	if(fp != null) {
+    		fp.player = p;
+    	}
+    	else {
+    		fp = new ForgePlayer(p);
+    		players.put(p.username, fp);
+    	}
+    	return fp;
+    }
     
     private boolean enabled = false;
 
@@ -213,7 +226,7 @@ public class DynmapPlugin
             for (int i = 0; i < pcnt; i++)
             {
                 EntityPlayer p = (EntityPlayer)players.get(i);
-                dplay[i] = new ForgePlayer(p);
+                dplay[i] = getOrAddPlayer(p);
             }
 
             return dplay;
@@ -235,7 +248,7 @@ public class DynmapPlugin
 
                 if (p.username.equalsIgnoreCase(name))
                 {
-                    return new ForgePlayer(p);
+                    return getOrAddPlayer(p);
                 }
             }
 
@@ -623,7 +636,7 @@ public class DynmapPlugin
 					ChatMessage cm = msgqueue.poll();
                     DynmapPlayer dp = null;
                     if(cm.sender != null)
-                		dp = new ForgePlayer(cm.sender);
+                		dp = getOrAddPlayer(cm.sender);
                     else
                     	dp = new ForgePlayer(null);
                     core.listenerManager.processChatEvent(EventType.PLAYER_CHAT, dp, cm.message);
@@ -667,6 +680,7 @@ public class DynmapPlugin
         @Override
         public String getName()
         {
+        	validatePlayer();
         	if(player != null)
         		return player.getUsername();
         	else
@@ -675,6 +689,7 @@ public class DynmapPlugin
         @Override
         public String getDisplayName()
         {
+        	validatePlayer();
         	if(player != null)
         		return player.getUsername();
         	else
@@ -688,6 +703,7 @@ public class DynmapPlugin
         @Override
         public DynmapLocation getLocation()
         {
+        	validatePlayer();
             if (player == null)
             {
                 return null;
@@ -698,6 +714,7 @@ public class DynmapPlugin
         @Override
         public String getWorld()
         {
+        	validatePlayer();
             if (player == null)
             {
                 return null;
@@ -713,6 +730,7 @@ public class DynmapPlugin
         @Override
         public InetSocketAddress getAddress()
         {
+        	validatePlayer();
             if((player != null) && (player instanceof EntityPlayerMP)) {
             	NetServerHandler nsh = ((EntityPlayerMP)player).playerNetServerHandler;
             	if((nsh != null) && (nsh.netManager != null)) {
@@ -727,6 +745,7 @@ public class DynmapPlugin
         @Override
         public boolean isSneaking()
         {
+        	validatePlayer();
             if (player != null)
             {
                 return player.isSneaking();
@@ -737,6 +756,7 @@ public class DynmapPlugin
         @Override
         public int getHealth()
         {
+        	validatePlayer();
             if (player != null)
             {
                 return player.getHealth();
@@ -749,6 +769,7 @@ public class DynmapPlugin
         @Override
         public int getArmorPoints()
         {
+        	validatePlayer();
             if (player != null)
             {
                 return player.getTotalArmorValue();
@@ -793,6 +814,11 @@ public class DynmapPlugin
         public boolean isOp()
         {
             return server.configManager.isOp(player.getUsername());
+        }
+        private void validatePlayer() {
+        	if((player != null) && (player.isDead)) {
+        		player = server.configManager.getPlayerEntity(player.username);
+        	}
         }
     }
     /* Handler for generic console command sender */
@@ -976,7 +1002,7 @@ public class DynmapPlugin
         if (sender instanceof NetServerHandler)
         {
         	NetServerHandler nsh = (NetServerHandler)sender;
-            dsender = new ForgePlayer(nsh.getPlayerEntity());
+            dsender = getOrAddPlayer(nsh.getPlayerEntity());
         }
         else
         {
@@ -993,14 +1019,15 @@ public class DynmapPlugin
 
 	public void onPlayerLogin(EntityPlayer player) {
 		if(!core_enabled) return;
-        DynmapPlayer dp = new ForgePlayer(player);
+        DynmapPlayer dp = getOrAddPlayer(player);
         core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
 	}
 
 	public void onPlayerLogout(EntityPlayer player) {
 		if(!core_enabled) return;
-        DynmapPlayer dp = new ForgePlayer(player);
+        DynmapPlayer dp = getOrAddPlayer(player);
         core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
+        players.remove(player.username);
 	}
 
     public class WorldTracker implements ISaveEventHandler {
