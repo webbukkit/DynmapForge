@@ -90,7 +90,19 @@ public class DynmapPlugin
     private HashMap<String, ForgeWorld> worlds = new HashMap<String, ForgeWorld>();
     private World last_world;
     private ForgeWorld last_fworld;
+    private Map<String, ForgePlayer> players = new HashMap<String, ForgePlayer>();
     
+    private ForgePlayer getOrAddPlayer(EntityPlayer p) {
+    	ForgePlayer fp = players.get(p.username);
+    	if(fp != null) {
+    		fp.player = p;
+    	}
+    	else {
+    		fp = new ForgePlayer(p);
+    		players.put(p.username, fp);
+    	}
+    	return fp;
+    }
     
     private static class TaskRecord implements Comparable
     {
@@ -204,7 +216,7 @@ public class DynmapPlugin
             for (int i = 0; i < pcnt; i++)
             {
                 EntityPlayer p = (EntityPlayer)players.get(i);
-                dplay[i] = new ForgePlayer(p);
+                dplay[i] = getOrAddPlayer(p);
             }
 
             return dplay;
@@ -226,7 +238,7 @@ public class DynmapPlugin
 
                 if (p.getEntityName().equalsIgnoreCase(name))
                 {
-                    return new ForgePlayer(p);
+                    return getOrAddPlayer(p);
                 }
             }
 
@@ -619,7 +631,7 @@ public class DynmapPlugin
 					ChatMessage cm = msgqueue.poll();
                     DynmapPlayer dp = null;
                     if(cm.sender != null)
-                		dp = new ForgePlayer(cm.sender);
+                		dp = getOrAddPlayer(cm.sender);
                     else
                 		dp = new ForgePlayer(null);
                     	
@@ -978,7 +990,7 @@ public class DynmapPlugin
 
         if (sender instanceof EntityPlayer)
         {
-            dsender = new ForgePlayer((EntityPlayer)sender);
+            dsender = getOrAddPlayer((EntityPlayer)sender);
         }
         else
         {
@@ -997,20 +1009,23 @@ public class DynmapPlugin
 		@Override
 		public void onPlayerLogin(EntityPlayer player) {
 			if(!core_enabled) return;
-            DynmapPlayer dp = new ForgePlayer(player);
+            DynmapPlayer dp = getOrAddPlayer(player);
             core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
 		}
 		@Override
 		public void onPlayerLogout(EntityPlayer player) {
 			if(!core_enabled) return;
-            DynmapPlayer dp = new ForgePlayer(player);
+            DynmapPlayer dp = getOrAddPlayer(player);
             core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
+            players.remove(player.username);
 		}
 		@Override
 		public void onPlayerChangedDimension(EntityPlayer player) {
+            getOrAddPlayer(player);
 		}
 		@Override
 		public void onPlayerRespawn(EntityPlayer player) {
+            getOrAddPlayer(player);
 		}
     }
     private PlayerTracker playerTracker = null;
