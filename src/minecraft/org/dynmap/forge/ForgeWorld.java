@@ -4,10 +4,12 @@ package org.dynmap.forge;
  */
 import java.util.List;
 
-import net.minecraft.src.ChunkCoordinates;
-import net.minecraft.src.EnumSkyBlock;
-import net.minecraft.src.World;
-import net.minecraft.src.WorldProvider;
+import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.world.EnumSkyBlock;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldProvider;
+import net.minecraft.world.WorldProviderEnd;
+import net.minecraft.world.WorldProviderHell;
 
 import org.dynmap.DynmapChunk;
 import org.dynmap.DynmapLocation;
@@ -44,8 +46,8 @@ public class ForgeWorld extends DynmapWorld
     
     public ForgeWorld(World w)
     {
-        this(getWorldName(w), w.getHeight(), 64, w.provider instanceof net.minecraft.src.WorldProviderHell,
-        		w.provider instanceof net.minecraft.src.WorldProviderEnd);
+        this(getWorldName(w), w.getHeight(), 64, w.provider instanceof WorldProviderHell,
+        		w.provider instanceof WorldProviderEnd);
         setWorldLoaded(w);
     }
     public ForgeWorld(String name, int height, int sealevel, boolean nether, boolean the_end)

@@ -1,10 +1,10 @@
 package org.dynmap.forge;
 
-import net.minecraft.src.Chunk;
-import net.minecraft.src.BiomeGenBase;
-import net.minecraft.src.ExtendedBlockStorage;
-import net.minecraft.src.NibbleArray;
-import net.minecraft.src.World;
+import net.minecraft.world.chunk.Chunk;
+import net.minecraft.world.chunk.NibbleArray;
+import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
+import net.minecraft.world.biome.BiomeGenBase;
+
 /**
  * Represents a static, thread-safe snapshot of chunk of blocks
  * Purpose is to allow clean, efficient copy of a chunk data to be made, and then handed off for processing in another thread (e.g. map rendering)
