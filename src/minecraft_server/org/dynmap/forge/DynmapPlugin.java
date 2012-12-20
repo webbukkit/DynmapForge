@@ -285,7 +285,9 @@ public class DynmapPlugin
         @Override
         public String getServerName()
         {
-            return server.getHostname();
+            String sn = server.getHostname();
+        	if(sn == null) sn = "Unknown Server";
+        	return sn;
         }
         @Override
         public boolean isPlayerBanned(String pid)
