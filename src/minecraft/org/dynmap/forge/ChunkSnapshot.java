@@ -123,8 +123,13 @@ public class ChunkSnapshot
                 this.emitlight[i] = new byte[BLOCKS_PER_SECTION / 2];
                 System.arraycopy(eb.getBlocklightArray().data, 0, this.emitlight[i], 0, BLOCKS_PER_SECTION / 2);
                 /* Copy sky lighting data */
-                this.skylight[i] = new byte[BLOCKS_PER_SECTION / 2];
-                System.arraycopy(eb.getSkylightArray().data, 0, this.skylight[i], 0, BLOCKS_PER_SECTION / 2);
+                if(eb.getSkylightArray() != null) {
+                	this.skylight[i] = new byte[BLOCKS_PER_SECTION / 2];
+                	System.arraycopy(eb.getSkylightArray().data, 0, this.skylight[i], 0, BLOCKS_PER_SECTION / 2);
+                }
+                else {
+                	this.skylight[i] = this.emptyData;
+                }
             }
         }
 
