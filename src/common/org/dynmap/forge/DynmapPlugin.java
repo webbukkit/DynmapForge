@@ -1181,6 +1181,11 @@ public class DynmapPlugin
     			last_fworld = fw;
     	        if(fw.isLoaded() == false) {
     	            fw.setWorldLoaded(w);
+    	    		// Add world tracker
+    	    		WorldUpdateTracker wit = new WorldUpdateTracker();
+    	    		wit.worldid = fw.getName();
+    	    		updateTrackers.put(fw.getName(), wit);
+    	    		w.addWorldAccess(wit);
     	        }
     			return fw;
     		}
@@ -1190,6 +1195,7 @@ public class DynmapPlugin
     		/* Add to list if not found */
     		fw = new ForgeWorld(w);
     		worlds.put(fw.getName(), fw);
+    		// Add world tracker
     		WorldUpdateTracker wit = new WorldUpdateTracker();
     		wit.worldid = fw.getName();
     		updateTrackers.put(fw.getName(), wit);
