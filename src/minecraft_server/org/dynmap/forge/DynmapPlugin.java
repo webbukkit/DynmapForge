@@ -1154,6 +1154,7 @@ public class DynmapPlugin
     		/* Add to list if not found */
     		fw = new ForgeWorld(w);
     		worlds.put(fw.getName(), fw);
+    		// Add tracker
     		WorldUpdateTracker wit = new WorldUpdateTracker();
     		wit.worldid = fw.getName();
     		updateTrackers.put(fw.getName(), wit);
