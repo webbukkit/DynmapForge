@@ -60,9 +60,11 @@ import org.dynmap.common.DynmapListenerManager.EventType;
 import org.dynmap.hdmap.HDMap;
 import org.dynmap.utils.MapChunkCache;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.IPlayerTracker;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.TickType;
 import cpw.mods.fml.common.network.IChatListener;
@@ -89,7 +91,9 @@ public class DynmapPlugin
     private World last_world;
     private ForgeWorld last_fworld;
     private Map<String, ForgePlayer> players = new HashMap<String, ForgePlayer>();
-    
+    private ForgeMetrics metrics;
+    private ForgeMetricsLite metricslite;
+    private HashSet<String> modsused = new HashSet<String>();
     
     private ForgePlayer getOrAddPlayer(EntityPlayer p) {
     	ForgePlayer fp = players.get(p.username);
@@ -189,6 +193,18 @@ public class DynmapPlugin
         public ForgeServer() {
         }
         
+        @Override
+        public int getBlockIDAt(String wname, int x, int y, int z) {
+        	DynmapWorld dw = this.getWorldByName(wname);
+        	if (dw != null) {
+        		World w = ((ForgeWorld)dw).getWorld();
+        		if((w != null) && (w.getChunkProvider().chunkExists(x >> 4,  z >> 4))) {
+        			return w.getBlockId(x,  y,  z);
+        		}
+        	}
+            return -1;
+        }
+
         @Override
         public void scheduleServerTask(Runnable run, long delay)
         {
@@ -652,7 +668,11 @@ public class DynmapPlugin
 
 		@Override
 		public boolean isModLoaded(String name) {
-			return Loader.isModLoaded(name);
+			boolean loaded = Loader.isModLoaded(name);
+			if (loaded) {
+                modsused.add(name);
+			}
+			return loaded;
 		}
     }
     /**
@@ -935,11 +955,23 @@ public class DynmapPlugin
         	scm.registerCommand(new DynmapCommandHandler("dmap"));
         	scm.registerCommand(new DynmapCommandHandler("dmarker"));
         }
+        /* Submit metrics to mcstats.org */
+        initMetrics();
+
         Log.info("Enabled");
     }
 
     public void onDisable()
     {
+    	if (metrics != null) {
+    		metrics.stop();
+    		metrics = null;
+    	}
+    	if (metricslite != null) {
+    		metricslite.stop();
+    		metricslite = null;
+    	}
+
         /* Disable core */
         core.disableCore();
         core_enabled = false;
@@ -1217,4 +1249,97 @@ public class DynmapPlugin
     	}
     }
 
+    private void initMetrics() {
+        try {
+        	Mod m = mod_Dynmap.class.getAnnotation(Mod.class);
+            metrics = new ForgeMetrics(m.name(), m.version());
+            metricslite = new ForgeMetricsLite(m.name(), m.version())
+            ;
+            ForgeMetrics.Graph features = metrics.createGraph("Features Used");
+            
+            features.addPlotter(new ForgeMetrics.Plotter("Internal Web Server") {
+                @Override
+                public int getValue() {
+                    if (!core.configuration.getBoolean("disable-webserver", false))
+                        return 1;
+                    return 0;
+                }
+            });
+            features.addPlotter(new ForgeMetrics.Plotter("Spout") {
+                @Override
+                public int getValue() {
+                    if(plugin.has_spout)
+                        return 1;
+                    return 0;
+                }
+            });
+            features.addPlotter(new ForgeMetrics.Plotter("Login Security") {
+                @Override
+                public int getValue() {
+                    if(core.configuration.getBoolean("login-enabled", false))
+                        return 1;
+                    return 0;
+                }
+            });
+            features.addPlotter(new ForgeMetrics.Plotter("Player Info Protected") {
+                @Override
+                public int getValue() {
+                    if(core.player_info_protected)
+                        return 1;
+                    return 0;
+                }
+            });
+            
+            ForgeMetrics.Graph maps = metrics.createGraph("Map Data");
+            maps.addPlotter(new ForgeMetrics.Plotter("Worlds") {
+                @Override
+                public int getValue() {
+                    if(core.mapManager != null)
+                        return core.mapManager.getWorlds().size();
+                    return 0;
+                }
+            });
+            maps.addPlotter(new ForgeMetrics.Plotter("Maps") {
+                @Override
+                public int getValue() {
+                    int cnt = 0;
+                    if(core.mapManager != null) {
+                        for(DynmapWorld w :core.mapManager.getWorlds()) {
+                            cnt += w.maps.size();
+                        }
+                    }
+                    return cnt;
+                }
+            });
+            maps.addPlotter(new ForgeMetrics.Plotter("HD Maps") {
+                @Override
+                public int getValue() {
+                    int cnt = 0;
+                    if(core.mapManager != null) {
+                        for(DynmapWorld w :core.mapManager.getWorlds()) {
+                            for(MapType mt : w.maps) {
+                                if(mt instanceof HDMap) {
+                                    cnt++;
+                                }
+                            }
+                        }
+                    }
+                    return cnt;
+                }
+            });
+            for (String mod : modsused) {
+                features.addPlotter(new ForgeMetrics.Plotter(mod + " Blocks") {
+                    @Override
+                    public int getValue() {
+                        return 1;
+                    }
+                });
+            }
+            
+            metrics.start();
+            metricslite.start();
+        } catch (IOException e) {
+            // Failed to submit the stats :-(
+        }
+    }
 }

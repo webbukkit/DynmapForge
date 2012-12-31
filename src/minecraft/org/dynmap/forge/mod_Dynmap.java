@@ -1,5 +1,8 @@
 package org.dynmap.forge;
 
+import java.io.IOException;
+
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
