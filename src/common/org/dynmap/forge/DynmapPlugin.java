@@ -192,6 +192,18 @@ public class DynmapPlugin
         }
         
         @Override
+        public int getBlockIDAt(String wname, int x, int y, int z) {
+        	DynmapWorld dw = this.getWorldByName(wname);
+        	if (dw != null) {
+        		World w = ((ForgeWorld)dw).getWorld();
+        		if((w != null) && (w.getChunkProvider().chunkExists(x >> 4,  z >> 4))) {
+        			return w.getBlockId(x,  y,  z);
+        		}
+        	}
+            return -1;
+        }
+
+        @Override
         public void scheduleServerTask(Runnable run, long delay)
         {
             TaskRecord tr = new TaskRecord();
