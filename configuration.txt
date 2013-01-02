@@ -220,7 +220,15 @@ skin-url: "http://s3.amazonaws.com/MinecraftSkins/%player%.png"
 #   'newnorth' is used to rotate maps and rose (requires fullrender of any HDMap map - same as 'newrose' for FlatMap or KzedMap)
 compass-mode: newnorth
 
-render-triggers: []
+# Triggers for automatic updates : blockupdate-with-id is debug for breaking down updates by ID:meta
+# To disable, set just 'none' and comment/delete the rest
+render-triggers:
+  - blockupdate
+  #- blockupdate-with-id
+  #- lightingupdate
+  - chunkpopulate
+  - chunkgenerate
+  #- none
 
 # Title for the web page - if not specified, defaults to the server's name (unless it is the default of 'Unknown Server')
 #webpage-title: "My Awesome Server Map"
