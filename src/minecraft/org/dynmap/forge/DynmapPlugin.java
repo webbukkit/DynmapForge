@@ -29,6 +29,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.NetServerHandler;
 import net.minecraft.network.packet.NetHandler;
 import net.minecraft.network.packet.Packet3Chat;
+import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.BanList;
 import net.minecraft.util.StringUtils;
@@ -824,6 +825,13 @@ public class DynmapPlugin
         public void sendMessage(String msg)
         {
         	player.sendChatToPlayer(msg);
+        }
+        @Override
+        public boolean isInvisible() {
+        	if(player != null) {
+        		return player.isPotionActive(Potion.invisibility);
+        	}
+        	return false;
         }
     }
     /* Handler for generic console command sender */
