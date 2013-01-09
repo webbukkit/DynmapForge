@@ -19,26 +19,26 @@ import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.atomic.AtomicLong;
 
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.BanList;
-import net.minecraft.src.BiomeGenBase;
-import net.minecraft.src.Chunk;
 import net.minecraft.src.CommandBase;
 import net.minecraft.src.CommandHandler;
+import net.minecraft.src.ICommandManager;
+import net.minecraft.src.ICommandSender;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.EntityPlayerMP;
-import net.minecraft.src.ICommand;
-import net.minecraft.src.ICommandManager;
-import net.minecraft.src.ICommandSender;
-import net.minecraft.src.IWorldAccess;
-import net.minecraft.src.NetHandler;
 import net.minecraft.src.NetServerHandler;
+import net.minecraft.src.NetHandler;
 import net.minecraft.src.Packet3Chat;
-import net.minecraft.src.ServerCommandManager;
+import net.minecraft.src.Potion;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.src.BanList;
 import net.minecraft.src.StringUtils;
+import net.minecraft.src.IWorldAccess;
 import net.minecraft.src.World;
 import net.minecraft.src.WorldServer;
+import net.minecraft.src.BiomeGenBase;
+import net.minecraft.src.Chunk;
+import net.minecraft.src.ExtendedBlockStorage;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CommandEvent;
@@ -62,9 +62,11 @@ import org.dynmap.common.DynmapListenerManager.EventType;
 import org.dynmap.hdmap.HDMap;
 import org.dynmap.utils.MapChunkCache;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.IPlayerTracker;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.TickType;
@@ -91,7 +93,10 @@ public class DynmapPlugin
     private World last_world;
     private ForgeWorld last_fworld;
     private Map<String, ForgePlayer> players = new HashMap<String, ForgePlayer>();
+    private ForgeMetrics metrics;
+    private HashSet<String> modsused = new HashSet<String>();
     
+    private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkgenerate" };
     
     private ForgePlayer getOrAddPlayer(EntityPlayer p) {
     	ForgePlayer fp = players.get(p.username);
@@ -181,7 +186,6 @@ public class DynmapPlugin
         /* Chunk load handling */
         private Object loadlock = new Object();
         private int chunks_in_cur_tick = 0;
-        private int last_tick;
         /* Server thread scheduler */
         private Object schedlock = new Object();
         private long cur_tick;
@@ -269,7 +273,10 @@ public class DynmapPlugin
             return ips;
         }
         @Override
-        public <T> Future<T> callSyncMethod(Callable<T> task)
+        public <T> Future<T> callSyncMethod(Callable<T> task) {
+        	return callSyncMethod(task, 0);
+        }
+        public <T> Future<T> callSyncMethod(Callable<T> task, long delay)
         {
             TaskRecord tr = new TaskRecord();
             FutureTask<T> ft = new FutureTask<T>(task);
@@ -279,7 +286,7 @@ public class DynmapPlugin
             synchronized (schedlock)
             {
                 tr.id = next_id++;
-                tr.ticktorun = cur_tick;
+                tr.ticktorun = cur_tick + delay;
                 runqueue.add(tr);
             }
 
@@ -532,20 +539,20 @@ public class DynmapPlugin
             }
 
             final MapChunkCache cc = c;
+            long delay = 0;
+            long last_tick = cur_tick;
 
             while (!cc.isDoneLoading())
             {
                 synchronized (loadlock)
                 {
-                	int tick = server.getTickCounter();
-                    if (last_tick != tick) /* New tick? */
-                    {
-                        chunks_in_cur_tick = mapManager.getMaxChunkLoadsPerTick();
-                        last_tick = tick;
+                	if((delay > 0) || (last_tick < cur_tick)) {
+                		chunks_in_cur_tick = mapManager.getMaxChunkLoadsPerTick();
+                		last_tick = cur_tick;
                     }
                 }
 
-                Future<Boolean> f = core.getServer().callSyncMethod(new Callable<Boolean>()
+                Future<Boolean> f = this.callSyncMethod(new Callable<Boolean>()
                 {
                     public Boolean call() throws Exception
                     {
@@ -563,12 +570,12 @@ public class DynmapPlugin
 
                         return exhausted;
                     }
-                });
-                Boolean delay;
+                }, delay);
+                Boolean needdelay;
 
                 try
                 {
-                    delay = f.get();
+                    needdelay = f.get();
                 }
                 catch (CancellationException cx)
                 {
@@ -580,13 +587,12 @@ public class DynmapPlugin
                     return null;
                 }
 
-                if ((delay != null) && delay.booleanValue())
+                if ((needdelay != null) && needdelay.booleanValue())
                 {
-                    try
-                    {
-                        Thread.sleep(25);
-                    }
-                    catch (InterruptedException ix) {}
+                	delay = 1;
+                }
+                else {
+                	delay = 0;
                 }
             }
             if(w.isLoaded() == false) {
@@ -666,7 +672,11 @@ public class DynmapPlugin
 
 		@Override
 		public boolean isModLoaded(String name) {
-			return Loader.isModLoaded(name);
+			boolean loaded = Loader.isModLoaded(name);
+			if (loaded) {
+                modsused.add(name);
+			}
+			return loaded;
 		}
     }
     /**
@@ -815,6 +825,13 @@ public class DynmapPlugin
         {
         	player.sendChatToPlayer(msg);
         }
+        @Override
+        public boolean isInvisible() {
+        	if(player != null) {
+        		return player.isPotionActive(Potion.invisibility);
+        	}
+        	return false;
+        }
     }
     /* Handler for generic console command sender */
     public class ForgeCommandSender implements DynmapCommandSender
@@ -904,7 +921,8 @@ public class DynmapPlugin
         ForgeServer fserver = new ForgeServer();
         core.setServer(fserver);
         ForgeMapChunkCache.init();
-
+        core.setTriggerDefault(TRIGGER_DEFAULTS);
+        
         if(!core.initConfiguration(null))
         {
         	return;
@@ -949,11 +967,19 @@ public class DynmapPlugin
         	scm.registerCommand(new DynmapCommandHandler("dmap"));
         	scm.registerCommand(new DynmapCommandHandler("dmarker"));
         }
+        /* Submit metrics to mcstats.org */
+        initMetrics();
+
         Log.info("Enabled");
     }
 
     public void onDisable()
     {
+    	if (metrics != null) {
+    		metrics.stop();
+    		metrics = null;
+    	}
+
         /* Disable core */
         core.disableCore();
         core_enabled = false;
@@ -1076,24 +1102,36 @@ public class DynmapPlugin
                 		core.processWorldUnload(fw);
                 	}
                 }, 0);
+                /* Clean up tracker */
+                WorldUpdateTracker wut = updateTrackers.remove(fw.getName());
+                if(wut != null) wut.world = null;
             }
         }
     	@ForgeSubscribe
-    	public void handleChunkLoad(ChunkEvent event) {
+    	public void handleChunkLoad(ChunkEvent.Load event) {
 			if(!core_enabled) return;
-    		if(event instanceof ChunkEvent.Load) { 
-    			Chunk c = event.getChunk();
-    			if((c != null) && (c.lastSaveTime == 0)) {	// If new chunk?
-    				ForgeWorld fw = getWorld(event.world, false);
-    				if(fw == null) {
-    					return;
-    				}
-    				int x = c.xPosition << 4;
-    				int z = c.zPosition << 4;
-    				mapManager.touchVolume(fw.getName(), x, 0, z, x+15, 128, z+16, "chunkpopulate");
-    			}
-    		}
+			if(!onchunkgenerate) return;
+			Chunk c = event.getChunk();
+			if((c != null) && (c.lastSaveTime == 0)) {	// If new chunk?
+				ForgeWorld fw = getWorld(event.world, false);
+				if(fw == null) {
+					return;
+				}
+				int ymax = 0;
+				ExtendedBlockStorage[] sections = c.getBlockStorageArray();
+				for(int i = 0; i < sections.length; i++) {
+					if((sections[i] != null) && (sections[i].isEmpty() == false)) {
+						ymax = 16*i;
+					}
+				}
+				int x = c.xPosition << 4;
+				int z = c.zPosition << 4;
+				if(ymax > 0) {
+					mapManager.touchVolume(fw.getName(), x, 0, z, x+15, ymax, z+16, "chunkgenerate");
+				}
+			}
     	}
+
     	@ForgeSubscribe
     	public void handleCommandEvent(CommandEvent event) {
     		if(event.isCanceled()) return;
@@ -1111,23 +1149,42 @@ public class DynmapPlugin
     	}
     }
     
+    private boolean onblockchange = false;
+    private boolean onlightingchange = false;
+    private boolean onchunkgenerate = false;
+    private boolean onblockchange_with_id = false;
+    
     public class WorldUpdateTracker implements IWorldAccess {
     	String worldid;
+    	World world;
 		@Override
 		public void markBlockForUpdate(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
-            mapManager.touch(worldid, x, y, z, "blockupdate");
+            if(onblockchange) {
+        		int id = 0;
+        		int meta = 0;
+        		if(world != null) {
+        			id = world.getBlockId(x, y, z);
+        			meta = world.getBlockMetadata(x, y, z);
+        		}
+        		if(!org.dynmap.hdmap.HDBlockModels.isChangeIgnoredBlock(id,  meta)) {
+        			if(onblockchange_with_id)
+        				mapManager.touch(worldid, x, y, z, "blockchange[" + id + ":" + meta + "]");
+        			else
+        				mapManager.touch(worldid, x, y, z, "blockchange");
+            	}
+            }
 		}
 		@Override
 		public void markBlockForRenderUpdate(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
-            mapManager.touch(worldid, x, y, z, "blockupdate2");
+            if(onlightingchange) {
+            	mapManager.touch(worldid, x, y, z, "lightingchange");
+            }
 		}
 		@Override
 		public void markBlockRangeForRenderUpdate(int x1, int y1, int z1,
 				int x2, int y2, int z2) {
-            sscache.invalidateSnapshot(worldid, x1, y1, z1, x2, y2, z2);
-            mapManager.touchVolume(worldid, x1, y1, z1, x2, y2, z2, "rangeupdate");
 		}
 		@Override
 		public void playSound(String var1, double var2, double var4,
@@ -1173,6 +1230,13 @@ public class DynmapPlugin
     		worldTracker = new WorldTracker();
     		MinecraftForge.EVENT_BUS.register(worldTracker);
     	}
+        // To trigger rendering.
+        onblockchange = core.isTrigger("blockupdate");
+        onlightingchange = core.isTrigger("lightingupdate");
+        onchunkgenerate = core.isTrigger("chunkgenerate");
+        onblockchange_with_id = core.isTrigger("blockupdate-with-id");
+        if(onblockchange_with_id)
+        	onblockchange = true;
     }
 
     private ForgeWorld getWorldByName(String name) {
@@ -1194,9 +1258,10 @@ public class DynmapPlugin
 	           	last_fworld = fw;
            		if(fw.isLoaded() == false) {
        				fw.setWorldLoaded(w);
-       				// Add world tracker
+       				// Add tracker
        	    		WorldUpdateTracker wit = new WorldUpdateTracker();
        	    		wit.worldid = fw.getName();
+       	    		wit.world = w;
        	    		updateTrackers.put(fw.getName(), wit);
        	    		w.addWorldAccess(wit);
            		}
@@ -1208,9 +1273,10 @@ public class DynmapPlugin
     		/* Add to list if not found */
     		fw = new ForgeWorld(w);
     		worlds.put(fw.getName(), fw);
-			// Add world tracker
+    		// Add tracker
     		WorldUpdateTracker wit = new WorldUpdateTracker();
     		wit.worldid = fw.getName();
+    		wit.world = w;
     		updateTrackers.put(fw.getName(), wit);
     		w.addWorldAccess(wit);
     	}
@@ -1231,4 +1297,95 @@ public class DynmapPlugin
     	}
     }
 
+    private void initMetrics() {
+        try {
+        	Mod m = mod_Dynmap.class.getAnnotation(Mod.class);
+            metrics = new ForgeMetrics(m.name(), m.version());
+            ;
+            ForgeMetrics.Graph features = metrics.createGraph("Features Used");
+            
+            features.addPlotter(new ForgeMetrics.Plotter("Internal Web Server") {
+                @Override
+                public int getValue() {
+                    if (!core.configuration.getBoolean("disable-webserver", false))
+                        return 1;
+                    return 0;
+                }
+            });
+            features.addPlotter(new ForgeMetrics.Plotter("Spout") {
+                @Override
+                public int getValue() {
+                    if(plugin.has_spout)
+                        return 1;
+                    return 0;
+                }
+            });
+            features.addPlotter(new ForgeMetrics.Plotter("Login Security") {
+                @Override
+                public int getValue() {
+                    if(core.configuration.getBoolean("login-enabled", false))
+                        return 1;
+                    return 0;
+                }
+            });
+            features.addPlotter(new ForgeMetrics.Plotter("Player Info Protected") {
+                @Override
+                public int getValue() {
+                    if(core.player_info_protected)
+                        return 1;
+                    return 0;
+                }
+            });
+            
+            ForgeMetrics.Graph maps = metrics.createGraph("Map Data");
+            maps.addPlotter(new ForgeMetrics.Plotter("Worlds") {
+                @Override
+                public int getValue() {
+                    if(core.mapManager != null)
+                        return core.mapManager.getWorlds().size();
+                    return 0;
+                }
+            });
+            maps.addPlotter(new ForgeMetrics.Plotter("Maps") {
+                @Override
+                public int getValue() {
+                    int cnt = 0;
+                    if(core.mapManager != null) {
+                        for(DynmapWorld w :core.mapManager.getWorlds()) {
+                            cnt += w.maps.size();
+                        }
+                    }
+                    return cnt;
+                }
+            });
+            maps.addPlotter(new ForgeMetrics.Plotter("HD Maps") {
+                @Override
+                public int getValue() {
+                    int cnt = 0;
+                    if(core.mapManager != null) {
+                        for(DynmapWorld w :core.mapManager.getWorlds()) {
+                            for(MapType mt : w.maps) {
+                                if(mt instanceof HDMap) {
+                                    cnt++;
+                                }
+                            }
+                        }
+                    }
+                    return cnt;
+                }
+            });
+            for (String mod : modsused) {
+                features.addPlotter(new ForgeMetrics.Plotter(mod + " Blocks") {
+                    @Override
+                    public int getValue() {
+                        return 1;
+                    }
+                });
+            }
+            
+            metrics.start();
+        } catch (IOException e) {
+            // Failed to submit the stats :-(
+        }
+    }
 }
