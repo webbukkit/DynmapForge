@@ -27,6 +27,7 @@ import net.minecraft.src.Chunk;
 import net.minecraft.src.Entity;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.EntityPlayerMP;
+import net.minecraft.src.ExtendedBlockStorage;
 import net.minecraft.src.ICommandListener;
 import net.minecraft.src.IWorldAccess;
 import net.minecraft.src.ModLoader;
@@ -34,6 +35,7 @@ import net.minecraft.src.NBTTagCompound;
 import net.minecraft.src.NetHandler;
 import net.minecraft.src.NetServerHandler;
 import net.minecraft.src.Packet3Chat;
+import net.minecraft.src.Potion;
 import net.minecraft.src.TileEntity;
 import net.minecraft.src.World;
 import net.minecraft.src.WorldProvider;
@@ -86,6 +88,9 @@ public class DynmapPlugin
     private World last_world;
     private ForgeWorld last_fworld;
     private Map<String, ForgePlayer> players = new HashMap<String, ForgePlayer>();
+    private HashSet<String> modsused = new HashSet<String>();
+    
+    private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkgenerate" };
     
     private ForgePlayer getOrAddPlayer(EntityPlayer p) {
     	ForgePlayer fp = players.get(p.username);
@@ -278,7 +283,10 @@ public class DynmapPlugin
             return ips;
         }
         @Override
-        public <T> Future<T> callSyncMethod(Callable<T> task)
+        public <T> Future<T> callSyncMethod(Callable<T> task) {
+        	return callSyncMethod(task, 0);
+        }
+        public <T> Future<T> callSyncMethod(Callable<T> task, long delay)
         {
             TaskRecord tr = new TaskRecord();
             FutureTask<T> ft = new FutureTask<T>(task);
@@ -288,7 +296,7 @@ public class DynmapPlugin
             synchronized (schedlock)
             {
                 tr.id = next_id++;
-                tr.ticktorun = cur_tick;
+                tr.ticktorun = cur_tick + delay;
                 runqueue.add(tr);
             }
 
@@ -535,20 +543,20 @@ public class DynmapPlugin
             }
 
             final MapChunkCache cc = c;
+            long delay = 0;
+            long last_tick = cur_tick;
 
             while (!cc.isDoneLoading())
             {
                 synchronized (loadlock)
                 {
-                	int tick = (int)this.cur_tick;
-                    if (last_tick != tick) /* New tick? */
-                    {
-                        chunks_in_cur_tick = mapManager.getMaxChunkLoadsPerTick();
-                        last_tick = tick;
+                	if((delay > 0) || (last_tick < cur_tick)) {
+                		chunks_in_cur_tick = mapManager.getMaxChunkLoadsPerTick();
+                		last_tick = cur_tick;
                     }
                 }
 
-                Future<Boolean> f = core.getServer().callSyncMethod(new Callable<Boolean>()
+                Future<Boolean> f = this.callSyncMethod(new Callable<Boolean>()
                 {
                     public Boolean call() throws Exception
                     {
@@ -566,12 +574,12 @@ public class DynmapPlugin
 
                         return exhausted;
                     }
-                });
-                Boolean delay;
+                }, delay);
+                Boolean needdelay;
 
                 try
                 {
-                    delay = f.get();
+                    needdelay = f.get();
                 }
                 catch (CancellationException cx)
                 {
@@ -583,13 +591,12 @@ public class DynmapPlugin
                     return null;
                 }
 
-                if ((delay != null) && delay.booleanValue())
+                if ((needdelay != null) && needdelay.booleanValue())
                 {
-                    try
-                    {
-                        Thread.sleep(25);
-                    }
-                    catch (InterruptedException ix) {}
+                	delay = 1;
+                }
+                else {
+                	delay = 0;
                 }
             }
             if(w.isLoaded() == false) {
@@ -672,7 +679,11 @@ public class DynmapPlugin
 
 		@Override
 		public boolean isModLoaded(String name) {
-			return Loader.isModLoaded(name);
+			boolean loaded = Loader.isModLoaded(name);
+			if (loaded) {
+                modsused.add(name);
+			}
+			return loaded;
 		}
     }
     /**
@@ -834,6 +845,13 @@ public class DynmapPlugin
         		player = server.configManager.getPlayerEntity(player.username);
         	}
         }
+		@Override
+		public boolean isInvisible() {
+        	if(player != null) {
+        		return player.isPotionActive(Potion.invisibility);
+        	}
+        	return false;
+		}
     }
     /* Handler for generic console command sender */
     public class ForgeCommandSender implements DynmapCommandSender
@@ -934,6 +952,7 @@ public class DynmapPlugin
         core.setDataFolder(dataDirectory);
         core.setServer(fserver);
         ForgeMapChunkCache.init();
+        core.setTriggerDefault(TRIGGER_DEFAULTS);
 
         if(!core.initConfiguration(null))
         {
@@ -1063,14 +1082,24 @@ public class DynmapPlugin
 		@Override
 		public void onChunkLoad(World world, Chunk c) {
 			if(!core_enabled) return;
+			if(!onchunkgenerate) return;
 			if((c != null) && (c.lastSaveTime == 0)) {	// If new chunk?
-				ForgeWorld fw = getWorld(c.worldObj, false);
+				ForgeWorld fw = getWorld(world, false);
 				if(fw == null) {
 					return;
 				}
+				int ymax = 0;
+				ExtendedBlockStorage[] sections = c.getBlockStorageArray();
+				for(int i = 0; i < sections.length; i++) {
+					if((sections[i] != null) && (sections[i].getIsEmpty() == false)) {
+						ymax = 16*i;
+					}
+				}
 				int x = c.xPosition << 4;
 				int z = c.zPosition << 4;
-				mapManager.touchVolume(fw.getName(), x, 0, z, x+15, 128, z+16, "chunkpopulate");
+				if(ymax > 0) {
+					mapManager.touchVolume(fw.getName(), x, 0, z, x+15, ymax, z+16, "chunkgenerate");
+				}
 			}
 		}
 		@Override
@@ -1086,23 +1115,43 @@ public class DynmapPlugin
 		}
     }
     
+    private boolean onblockchange = false;
+    private boolean onlightingchange = false;
+    private boolean onchunkgenerate = false;
+    private boolean onblockchange_with_id = false;
+
     public class WorldUpdateTracker implements IWorldAccess {
     	String worldid;
+    	World world;
+
 		@Override
 		public void markBlockNeedsUpdate(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
-            mapManager.touch(worldid, x, y, z, "blockupdate");
+            if(onblockchange) {
+        		int id = 0;
+        		int meta = 0;
+        		if(world != null) {
+        			id = world.getBlockId(x, y, z);
+        			meta = world.getBlockMetadata(x, y, z);
+        		}
+        		if(!org.dynmap.hdmap.HDBlockModels.isChangeIgnoredBlock(id,  meta)) {
+        			if(onblockchange_with_id)
+        				mapManager.touch(worldid, x, y, z, "blockchange[" + id + ":" + meta + "]");
+        			else
+        				mapManager.touch(worldid, x, y, z, "blockchange");
+            	}
+            }
 		}
 		@Override
 		public void markBlockNeedsUpdate2(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
-            mapManager.touch(worldid, x, y, z, "blockupdate2");
+            if(onlightingchange) {
+            	mapManager.touch(worldid, x, y, z, "lightingchange");
+            }
 		}
 		@Override
 		public void markBlockRangeNeedsUpdate(int x1, int y1, int z1,
 				int x2, int y2, int z2) {
-            sscache.invalidateSnapshot(worldid, x1, y1, z1, x2, y2, z2);
-            mapManager.touchVolume(worldid, x1, y1, z1, x2, y2, z2, "rangeupdate");
 		}
 		@Override
 		public void playSound(String var1, double var2, double var4,
@@ -1140,6 +1189,13 @@ public class DynmapPlugin
     		worldTracker = new WorldTracker();
     		MinecraftForge.registerSaveHandler(worldTracker);
 		}
+        // To trigger rendering.
+        onblockchange = core.isTrigger("blockupdate");
+        onlightingchange = core.isTrigger("lightingupdate");
+        onchunkgenerate = core.isTrigger("chunkgenerate");
+        onblockchange_with_id = core.isTrigger("blockupdate-with-id");
+        if(onblockchange_with_id)
+        	onblockchange = true;
     }
 
     private ForgeWorld getWorldByName(String name) {
@@ -1169,6 +1225,7 @@ public class DynmapPlugin
     		// Add tracker
     		WorldUpdateTracker wit = new WorldUpdateTracker();
     		wit.worldid = fw.getName();
+    		wit.world = w;
     		updateTrackers.put(fw.getName(), wit);
     		w.addWorldAccess(wit);
     	}
@@ -1188,5 +1245,4 @@ public class DynmapPlugin
 			last_fworld = null;
     	}
     }
-
 }
