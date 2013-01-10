@@ -2,8 +2,6 @@ package org.dynmap.forge;
 
 import net.minecraft.server.MinecraftServer;
 
-import org.eclipse.jetty.util.log.Log;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
