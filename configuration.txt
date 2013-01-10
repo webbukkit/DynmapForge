@@ -42,6 +42,8 @@ components:
     hideifsneaking: false
     # If true, player positions/status is protected (login with ID with dynmap.playermarkers.seeall permission required for info other than self)
     protected-player-info: false
+    # If true, hide players with invisibility potion effects active
+    hide-if-invisiblity-potion: true
   #- class: org.dynmap.JsonFileClientUpdateComponent
   #  writeinterval: 1
   #  sendhealth: true
@@ -62,6 +64,7 @@ components:
   #  webchat-permissions: false
   #  # Limit length of single chat messages
   #  chatlengthlimit: 256
+  #  hide-if-invisiblity-potion: true
    
   - class: org.dynmap.SimpleWebChatComponent
     allowchat: true
@@ -183,6 +186,11 @@ saverestorepending: true
 # Zoom-out tile update period - how often to scan for and process tile updates into zoom-out tiles (in seconds)
 zoomoutperiod: 30
 
+# Default delay on processing of updated tiles, in seconds.  This can reduce potentially expensive re-rendering
+# of frequently updated tiles (such as due to machines, pistons, quarries or other automation).  Values can
+# also be set on individual worlds and individual maps.
+tileupdatedelay: 30
+
 # Tile hashing is used to minimize tile file updates when no changes have occurred - set to false to disable
 enabletilehash: true
 
@@ -220,7 +228,14 @@ skin-url: "http://s3.amazonaws.com/MinecraftSkins/%player%.png"
 #   'newnorth' is used to rotate maps and rose (requires fullrender of any HDMap map - same as 'newrose' for FlatMap or KzedMap)
 compass-mode: newnorth
 
-render-triggers: []
+# Triggers for automatic updates : blockupdate-with-id is debug for breaking down updates by ID:meta
+# To disable, set just 'none' and comment/delete the rest
+render-triggers:
+  - blockupdate
+  #- blockupdate-with-id
+  #- lightingupdate
+  - chunkgenerate
+  #- none
 
 # Title for the web page - if not specified, defaults to the server's name (unless it is the default of 'Unknown Server')
 #webpage-title: "My Awesome Server Map"

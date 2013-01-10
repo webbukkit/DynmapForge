@@ -8,6 +8,8 @@ import net.minecraft.src.ChunkCoordinates;
 import net.minecraft.src.EnumSkyBlock;
 import net.minecraft.src.World;
 import net.minecraft.src.WorldProvider;
+import net.minecraft.src.WorldProviderEnd;
+import net.minecraft.src.WorldProviderHell;
 
 import org.dynmap.DynmapChunk;
 import org.dynmap.DynmapLocation;
@@ -44,14 +46,16 @@ public class ForgeWorld extends DynmapWorld
     
     public ForgeWorld(World w)
     {
-        this(getWorldName(w), w.getHeight(), 64, w.provider instanceof net.minecraft.src.WorldProviderHell,
-        		w.provider instanceof net.minecraft.src.WorldProviderEnd);
+        this(getWorldName(w), w.getHeight(), 64, w.provider instanceof WorldProviderHell,
+        		w.provider instanceof WorldProviderEnd, 
+        		w.getWorldInfo().getWorldName() + "/" + w.provider.getDimensionName());
         setWorldLoaded(w);
     }
-    public ForgeWorld(String name, int height, int sealevel, boolean nether, boolean the_end)
+    public ForgeWorld(String name, int height, int sealevel, boolean nether, boolean the_end, String deftitle)
     {
         super(name, height, sealevel);
         world = null;
+        setTitle(deftitle);
         isnether = nether;
         istheend = the_end;
         skylight = !(isnether || istheend);

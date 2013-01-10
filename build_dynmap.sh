@@ -1,7 +1,8 @@
 #!/bin/bash
-ver=1.3
-ver2=$ver
+ver=1.4
+ver2=$ver-alpha-2
 rm lib/DynmapCore-*.jar
+rm lib/DynmapCoreAPI-*.jar
 cp ~/DynmapCore/target/DynmapCore-$ver.jar lib
 cp ~/DynmapCoreAPI/target/DynmapCoreAPI-$ver.jar lib
 cat Version.java.template | sed s/_VERSION_/$ver2/ > src/common/org/dynmap/forge/Version.java
