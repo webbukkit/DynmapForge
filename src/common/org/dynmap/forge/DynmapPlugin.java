@@ -15,6 +15,7 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.atomic.AtomicLong;
@@ -98,6 +99,13 @@ public class DynmapPlugin
     
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkgenerate" };
     
+    public static class BlockUpdateRec {
+    	World w;
+    	String wid;
+    	int x, y, z;
+    }
+    ConcurrentLinkedQueue<BlockUpdateRec> blockupdatequeue = new ConcurrentLinkedQueue<BlockUpdateRec>();
+
     private ForgePlayer getOrAddPlayer(EntityPlayer p) {
     	ForgePlayer fp = players.get(p.username);
     	if(fp != null) {
@@ -540,18 +548,9 @@ public class DynmapPlugin
 
             final MapChunkCache cc = c;
             long delay = 0;
-            long last_tick = cur_tick;
 
             while (!cc.isDoneLoading())
             {
-                synchronized (loadlock)
-                {
-                	if((delay > 0) || (last_tick < cur_tick)) {
-                		chunks_in_cur_tick = mapManager.getMaxChunkLoadsPerTick();
-                		last_tick = cur_tick;
-                    }
-                }
-
                 Future<Boolean> f = this.callSyncMethod(new Callable<Boolean>()
                 {
                     public Boolean call() throws Exception
@@ -579,6 +578,10 @@ public class DynmapPlugin
                 }
                 catch (CancellationException cx)
                 {
+                    return null;
+                }
+                catch (ExecutionException xx) {
+                    Log.severe("Exception while loading chunks", xx.getCause());
                     return null;
                 }
                 catch (Exception ix)
@@ -621,6 +624,22 @@ public class DynmapPlugin
 				boolean done = false;
 				TaskRecord tr = null;
 				
+				while(!blockupdatequeue.isEmpty()) {
+					BlockUpdateRec r = blockupdatequeue.remove();
+					int id = 0;
+					int meta = 0;
+					if((r.w != null) && r.w.getChunkProvider().chunkExists(r.x >> 4,  r.z >> 4)) {
+						id = r.w.getBlockId(r.x, r.y, r.z);
+						meta = r.w.getBlockMetadata(r.x, r.y, r.z);
+					}
+					if(!org.dynmap.hdmap.HDBlockModels.isChangeIgnoredBlock(id,  meta)) {
+						if(onblockchange_with_id)
+							mapManager.touch(r.wid, r.x, r.y, r.z, "blockchange[" + id + ":" + meta + "]");
+						else
+							mapManager.touch(r.wid, r.x, r.y, r.z, "blockchange");
+					}
+				}
+
 				synchronized(schedlock) {
 					cur_tick++;
 					tr = runqueue.peek();
@@ -631,6 +650,9 @@ public class DynmapPlugin
 					else {
 						tr = runqueue.poll();
 					}
+				}
+                synchronized (loadlock) {
+                	chunks_in_cur_tick = mapManager.getMaxChunkLoadsPerTick();
 				}
 				while (!done) {
 					tr.future.run();
@@ -1162,18 +1184,11 @@ public class DynmapPlugin
 		public void markBlockNeedsUpdate(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
             if(onblockchange) {
-        		int id = 0;
-        		int meta = 0;
-        		if(world != null) {
-        			id = world.getBlockId(x, y, z);
-        			meta = world.getBlockMetadata(x, y, z);
-        		}
-        		if(!org.dynmap.hdmap.HDBlockModels.isChangeIgnoredBlock(id,  meta)) {
-        			if(onblockchange_with_id)
-        				mapManager.touch(worldid, x, y, z, "blockchange[" + id + ":" + meta + "]");
-        			else
-        				mapManager.touch(worldid, x, y, z, "blockchange");
-            	}
+            	BlockUpdateRec r = new BlockUpdateRec();
+            	r.w = world;
+            	r.wid = worldid;
+            	r.x = x; r.y = y; r.z = z;
+            	blockupdatequeue.add(r);
             }
 		}
 		@Override
