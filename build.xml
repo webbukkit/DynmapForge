@@ -3,8 +3,8 @@
 
 	<!-- Properties (version) -->
 	<property name="mc.version" value="1.2.5"/>
-	<property name="forge.baseversion" value="3.3.8"/>
-	<property name="forge.build" value="170"/>
+	<property name="forge.baseversion" value="3.3.7"/>
+	<property name="forge.build" value="140"/>
 	<property name="project.version" value="1.4"/>
 	<property name="project.devversion" value="-alpha-4"/>
 	<property name="mcp.version" value="62"/>
@@ -178,7 +178,7 @@
 
 		<!-- Copy classes -->
 		<copy todir="${classes.dir}">
-			<fileset dir="${mcp.dir}/reobf/minecraft"/>
+			<fileset dir="${mcp.dir}/reobf/minecraft_server"/>
 		</copy>
 
 		<!-- Copy resources -->
@@ -189,7 +189,7 @@
 		</copy>
 
 		<!-- Reset src dir to post-forge-install state -->
-		<delete dir="${mcpsrc.dir}/minecraft/org/dynmap"/>
+		<delete dir="${mcpsrc.dir}/minecraft_server/org/dynmap"/>
 
 	</target>
 
