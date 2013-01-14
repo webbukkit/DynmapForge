@@ -234,6 +234,7 @@ render-triggers:
   - blockupdate
   #- blockupdate-with-id
   #- lightingupdate
+  - chunkpopulate
   - chunkgenerate
   #- none
 
