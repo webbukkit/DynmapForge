@@ -3,8 +3,8 @@
   "modid": "Dynmap",
   "name": "Dynmap",
   "description": "Dynamic, Google Maps style web maps for Minecraft Servers",
-  "version": "_VERSION_",
-  "mcversion": "1.4.4",
+  "version": "@VERSION@",
+  "mcversion": "1.4.5",
   "url": "http://www.minecraftforum.net/topic/1543523-dynmap-dynmap-web-maps-for-minecraft/",
   "updateUrl": "",
   "authors": [
