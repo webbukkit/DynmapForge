@@ -1,4 +1,4 @@
-<project name="dynmap" default="main" xmlns:artifact="urn:maven-artifact-ant">
+<project name="Dynmap" default="main" xmlns:artifact="urn:maven-artifact-ant">
 	<property environment="env"/>
 
 	<!-- Properties (version) -->
