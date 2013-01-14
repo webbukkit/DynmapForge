@@ -1,0 +1,232 @@
+<project name="Dynmap" default="main" xmlns:artifact="urn:maven-artifact-ant">
+	<property environment="env"/>
+
+	<!-- Properties (version) -->
+	<property name="mc.version" value="1.2.5"/>
+	<property name="forge.baseversion" value="3.3.8"/>
+	<property name="forge.build" value="170"/>
+	<property name="project.version" value="1.4"/>
+	<property name="project.devversion" value="-alpha-4"/>
+	<property name="mcp.version" value="62"/>
+
+	<!-- Properties (build control) -->
+	<property name="build.dir" value="build"/>
+	<property name="src.dir" value="."/>
+	<property name="resources.dir" value="dynmap_resources"/>
+	<property name="lib.dir" value="lib" />
+
+	<property name="download.dir" value="download"/>
+
+	<property name="classes.dir" value="${build.dir}/classes"/>
+	<property name="jar.dir" value="bin"/>
+
+	<property name="forge.dir" value="${build.dir}/forge"/>
+	<property name="mcp.dir" value="${build.dir}/"/>
+
+	<property name="mcpsrc.dir" value="${mcp.dir}/src"/>
+	
+	<property name="forge.version" value="${forge.baseversion}.${forge.build}"/>
+	<property name="project.version2" value="${project.version}${project.devversion}"/>
+	<property name="forge.name" value="minecraftforge-src-${mc.version}-${forge.version}.zip"/>
+
+	 <property name="maven.ant.tasks.jar" value="${lib.dir}${file.separator}maven-ant-tasks-2.1.3.jar"/>
+	 <property name="maven.ant.tasks.bootstrap.location" value="http://repo1.maven.org/maven2/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar"/>
+	 <available property="maven.ant.tasks.jar.exists" file="${maven.ant.tasks.jar}"/>
+
+	<!-- This will download the "latest version" of the maven-ant-tasks if needed -->
+	 <target name="bootstrap.maven.tasks" unless="maven.ant.tasks.jar.exists">
+	  <mkdir dir="${lib.dir}"/>
+	  <get src="${maven.ant.tasks.bootstrap.location}" dest="${maven.ant.tasks.jar}"/>
+	 </target>
+
+	 <!-- This will initialize all the maven ant tasks -->
+	 <target name="init.maven.tasks" depends="bootstrap.maven.tasks">
+	  <path 
+	   id="maven.ant.tasks.classpath" 
+	   path="${maven.ant.tasks.jar}" />
+	  <typedef 
+	   resource="org/apache/maven/artifact/ant/antlib.xml" 
+	   uri="urn:maven-artifact-ant" 
+	   classpathref="maven.ant.tasks.classpath" /> 
+	 </target>
+	
+	<target name="init.project.dependencies" depends="init.maven.tasks">
+		<artifact:dependencies filesetId="dependency.fileset">
+  	  		<dependency groupId="org.dynmap" artifactId="DynmapCore" version="${project.version}" type="jar" scope="compile" />
+		  	<dependency groupId="org.dynmap" artifactId="DynmapCoreAPI" version="${project.version}" type="jar" scope="compile" />
+		</artifact:dependencies>
+		<artifact:dependencies filesetId="package.dependency.fileset">
+		  	<dependency groupId="org.dynmap" artifactId="dynmap" version="${project.version}" type="zip" classifier="bin" />
+		</artifact:dependencies>
+	</target>
+
+	<available property="forge-exists" file="${download.dir}/${forge.name}"/>
+
+	<condition property="out-of-date">
+		<not>
+			<and>
+				<available file="${download.dir}/${forge.name}"/>
+				<available file="${mcpsrc.dir}"/>
+			</and>
+		</not>
+	</condition>
+
+	<mkdir dir="${download.dir}"/>
+
+	<!-- Targets -->
+
+	<!-- Clear build directory -->
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+	</target>
+
+	<!-- Set full version -->
+	<target name="initialize-version" depends="version-provided,version-not-provided">
+		<property name="project.version.full" value="${project.version}.${build.number}"/>
+	</target>
+
+	<!-- Set unknown build number -->
+	<target name="version-not-provided" unless="env.BUILD_NUMBER">
+		<property name="build.number" value="unknown"/>
+	</target>
+
+	<!-- Set build number from environment -->
+	<target name="version-provided" if="env.BUILD_NUMBER">
+		<property name="build.number" value="${env.BUILD_NUMBER}"/>
+	</target>
+
+	<!-- Download necessary files -->
+	<target name="download-files" depends="download-forge"/>
+
+	<!-- Download forge (if it doesn't exist) -->
+	<target name="download-forge" unless="forge-exists">
+		<mkdir dir="${download.dir}"/>
+		<get src="http://files.minecraftforge.net/${forge.name}" dest="${download.dir}/${forge.name}" usetimestamp="True"/>
+		<get src="http://mcp.ocean-labs.de/files/mcp${mcp.version}.zip" dest="${download.dir}/mcp${mcp.version}.zip" usetimestamp="True"/>
+		<get src="http://mikeprimm.com/dynmap/client_1_2_5.zip" dest="${download.dir}/client_1_2_5.zip" usetimestamp="True"/>
+		<get src="http://assets.minecraft.net/1_2_5/minecraft_server.jar" dest="${download.dir}/minecraft_server.jar" usetimestamp="True"/>
+		<get src="http://mikeprimm.com/dynmap/fernflower.jar" dest="${download.dir}/fernflower.jar" usetimestamp="True"/>
+	</target>
+
+	<!-- Setup mcp and forge -->
+	<target name="setup" depends="download-files" if="out-of-date">
+
+		<delete dir="${mcp.dir}" failonerror="false"/>
+
+		<unzip dest="${mcp.dir}" src="${download.dir}/mcp${mcp.version}.zip"/>
+
+		<unzip dest="${forge.dir}/.." src="${download.dir}/${forge.name}"/>
+
+		<unzip dest="${mcp.dir}/jars" src="${download.dir}/client_1_2_5.zip"/>
+
+		<copy todir="${mcp.dir}/jars" file="${download.dir}/minecraft_server.jar"/>
+
+		<copy todir="${mcp.dir}/runtime/bin" file="${download.dir}/fernflower.jar"/>
+
+		<!-- Fix executable permissions -->
+		<chmod dir="${forge.dir}" perm="ugo+rx" includes="**.sh"/>
+
+		<!-- Install forge -->
+		<exec dir="${forge.dir}" executable="cmd" osfamily="windows">
+			<arg line="/c install.cmd"/>
+		</exec>
+
+		<exec dir="${forge.dir}" executable="sh" osfamily="unix">
+			<arg value="install.sh"/>
+		</exec>
+
+	</target>
+
+	<target name="compile" depends="initialize-version,setup,init.project.dependencies">
+
+		<delete dir="${classes.dir}"/>
+		<mkdir dir="${classes.dir}"/>
+
+		<!-- Copy sources -->
+		<copy todir="${mcpsrc.dir}/minecraft_server">
+			<fileset dir="${src.dir}/common"/>
+			<filterset>
+				<filter token="VERSION" value="${project.version.full}" />
+				<filter token="BUILD_NUMBER" value="${build.number}" />
+			</filterset>
+		</copy>
+
+		<!-- Copy dependencies -->
+		<copy todir="${mcp.dir}/lib">
+		  	<fileset refid="dependency.fileset" />
+  			<!-- This mapper strips off all leading directory information -->
+  			<mapper type="flatten" />
+		</copy>
+
+		<!-- Recompile -->
+		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows">
+			<arg line="/c recompile.bat"/>
+		</exec>
+
+		<exec dir="${mcp.dir}" executable="sh" osfamily="unix">
+			<arg value="recompile.sh"/>
+		</exec>
+
+		<!-- Reobfuscate -->
+		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows">
+			<arg line="/c reobfuscate.bat"/>
+		</exec>
+
+		<exec dir="${mcp.dir}" executable="sh" osfamily="unix">
+			<arg value="reobfuscate.sh"/>
+		</exec>
+
+		<!-- Copy classes -->
+		<copy todir="${classes.dir}">
+			<fileset dir="${mcp.dir}/reobf/minecraft"/>
+		</copy>
+
+		<!-- Copy resources -->
+		<copy todir="${classes.dir}">
+			<fileset dir="${resources.dir}">
+				<exclude name="build.xml"/>
+			</fileset>
+		</copy>
+
+		<!-- Reset src dir to post-forge-install state -->
+		<delete dir="${mcpsrc.dir}/minecraft/org/dynmap"/>
+
+	</target>
+
+	<!-- Package the compiled files -->
+	<target name="package" depends="compile">
+
+		<delete dir="${jar.dir}"/>
+		<mkdir dir="${jar.dir}"/>
+		<unzip src="${mcp.dir}/lib/DynmapCore-${project.version}.jar" dest="${classes.dir}">
+			<patternset>
+				<exclude name="META-INF/*"/>
+			</patternset>
+		</unzip>
+		<unzip src="${mcp.dir}/lib/DynmapCoreAPI-${project.version}.jar" dest="${classes.dir}">
+			<patternset>
+				<exclude name="META-INF/*"/>
+			</patternset>
+		</unzip>
+		<mkdir dir="${jar.dir}/zip/mods"/>
+		<jar destfile="${jar.dir}/zip/mods/${ant.project.name}-${project.version}.jar" basedir="${classes.dir}"/>
+		<copy todir="${jar.dir}">
+		  	<fileset refid="package.dependency.fileset" />
+  			<!-- This mapper strips off all leading directory information -->
+  			<mapper type="flatten" />
+		</copy>
+		<unzip src="${jar.dir}/dynmap-${project.version}-bin.zip" dest="${jar.dir}/zip">
+			<patternset>
+				<exclude name="dynmap.jar"/>
+			</patternset>
+		</unzip>
+		<echo file="${jar.dir}/zip/dynmap/web/version.js">var dynmapversion = "${project.version.full}";
+		</echo>
+
+		<zip destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.zip" basedir="${jar.dir}/zip" /> 
+	</target>
+
+	<!-- Default target to run -->
+	<target name="main" depends="package"/>
+
+</project>
