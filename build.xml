@@ -21,7 +21,7 @@
 	<property name="jar.dir" value="bin"/>
 
 	<property name="forge.dir" value="${build.dir}/forge"/>
-	<property name="mcp.dir" value="${forge.dir}/mcp"/>
+	<property name="mcp.dir" value="${build.dir}/"/>
 
 	<property name="mcpsrc.dir" value="${mcp.dir}/src"/>
 	
@@ -100,24 +100,25 @@
 
 	<!-- Download forge (if it doesn't exist) -->
 	<target name="download-forge" unless="forge-exists">
+		<mkdir dir="${download.dir}"/>
 		<get src="http://files.minecraftforge.net/${forge.name}" dest="${download.dir}/${forge.name}" usetimestamp="True"/>
-		<get src="http://mcp.ocean-labs.de/files/mcp${mcp.version}.zip" dest="${download.dir}" usetimestamp="True"/>
-		<get src="http://mikeprimm.com/dynmap/client_1_4_2.zip" dest="${download.dir}" usetimestamp="True"/>
-		<get src="http://assets.minecraft.net/1_4_2/minecraft_server.jar" dest="${download.dir}" usetimestamp="True"/>
+		<get src="http://mcp.ocean-labs.de/files/mcp${mcp.version}.zip" dest="${download.dir}/mcp${mcp.version}.zip" usetimestamp="True"/>
+		<get src="http://mikeprimm.com/dynmap/client_1_4_2.zip" dest="${download.dir}/client_1_4_2.zip" usetimestamp="True"/>
+		<get src="http://assets.minecraft.net/1_4_2/minecraft_server.jar" dest="${download.dir}/minecraft_server.jar" usetimestamp="True"/>
 	</target>
 
 	<!-- Setup mcp and forge -->
 	<target name="setup" depends="download-files" if="out-of-date">
 
-		<delete dir="${forge.dir}" failonerror="false"/>
+		<delete dir="${mcp.dir}" failonerror="false"/>
 
-		<unzip dest="${forge.dir}/.." src="${download.dir}/mcp${mcp.version}.zip"/>
+		<unzip dest="${mcp.dir}" src="${download.dir}/mcp${mcp.version}.zip"/>
 
 		<unzip dest="${forge.dir}/.." src="${download.dir}/${forge.name}"/>
 
-		<unzip dest="${forge.dir}/../jars" src="${download.dir}/client_1_4_2.zip"/>
+		<unzip dest="${mcp.dir}/jars" src="${download.dir}/client_1_4_2.zip"/>
 
-		<copy todir="${forge.dir}/../jars" file="${download.dir}/minecraft_server.jar"/>
+		<copy todir="${mcp.dir}/jars" file="${download.dir}/minecraft_server.jar"/>
 		
 		<!-- Fix executable permissions -->
 		<chmod dir="${forge.dir}" perm="ugo+rx" includes="**.sh"/>
