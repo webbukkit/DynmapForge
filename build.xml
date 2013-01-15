@@ -209,7 +209,7 @@
 			</patternset>
 		</unzip>
 		<mkdir dir="${jar.dir}/zip/mods"/>
-		<jar destfile="${jar.dir}/zip/mods/${ant.project.name}-${project.version}.jar" basedir="${classes.dir}"/>
+		<jar destfile="${jar.dir}/zip/mods/${ant.project.name}-${project.version}.zip" basedir="${classes.dir}"/>
 		<copy todir="${jar.dir}">
 		  	<fileset refid="package.dependency.fileset" />
   			<!-- This mapper strips off all leading directory information -->
@@ -220,7 +220,6 @@
 				<exclude name="dynmap.jar"/>
 			</patternset>
 		</unzip>
-		</echo>
 
 		<zip destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.zip" basedir="${jar.dir}/zip" /> 
 	</target>
