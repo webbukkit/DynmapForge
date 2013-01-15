@@ -206,7 +206,7 @@
 			</patternset>
 		</unzip>
 		<mkdir dir="${jar.dir}/zip/mods"/>
-		<jar destfile="${jar.dir}/zip/mods/${ant.project.name}-${project.version}.jar" basedir="${classes.dir}"/>
+		<jar destfile="${jar.dir}/zip/mods/${ant.project.name}-${project.version}.zip" basedir="${classes.dir}"/>
 		<copy todir="${jar.dir}">
 		  	<fileset refid="package.dependency.fileset" />
   			<!-- This mapper strips off all leading directory information -->
