@@ -56,7 +56,7 @@
 		  	<dependency groupId="org.dynmap" artifactId="DynmapCoreAPI" version="${project.version}" type="jar" scope="compile" />
 		</artifact:dependencies>
 		<artifact:dependencies filesetId="package.dependency.fileset">
-		  	<dependency groupId="org.dynmap" artifactId="dynmap" version="${project.version}" type="zip" classifier="bin" />
+		  	<dependency groupId="org.dynmap" artifactId="DynmapCore" version="${project.version}" type="zip" classifier="bin" />
 		</artifact:dependencies>
 	</target>
 
@@ -215,11 +215,8 @@
   			<!-- This mapper strips off all leading directory information -->
   			<mapper type="flatten" />
 		</copy>
-		<unzip src="${jar.dir}/dynmap-${project.version}-bin.zip" dest="${jar.dir}/zip">
-			<patternset>
-				<exclude name="dynmap.jar"/>
-			</patternset>
-		</unzip>
+		<mkdir dir="${jar.dir}/zip/dynmap"/>
+		<unzip src="${jar.dir}/DynmapCore-${project.version}-bin.zip" dest="${jar.dir}/zip/dynmap"/>
 
 		<zip destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.zip" basedir="${jar.dir}/zip" /> 
 	</target>
