@@ -22,7 +22,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 public class mod_Dynmap
 {
     // The instance of your mod that Forge uses.
-    @Instance("Generic")
+    @Instance("Dynmap")
     public static mod_Dynmap instance;
 
     // Says where the client and server 'proxy' code is loaded.

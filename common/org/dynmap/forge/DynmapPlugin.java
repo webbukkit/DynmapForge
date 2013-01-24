@@ -4,10 +4,11 @@ import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
+import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -18,7 +19,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
-import java.util.concurrent.atomic.AtomicLong;
 
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandHandler;
@@ -33,7 +33,9 @@ import net.minecraft.network.packet.Packet3Chat;
 import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.BanList;
+import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.StringUtils;
+import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.IWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
@@ -41,6 +43,8 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.ForgeChunkManager;
+import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CommandEvent;
 import net.minecraftforge.event.ForgeSubscribe;
@@ -48,6 +52,7 @@ import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.world.ChunkEvent;
 import net.minecraftforge.event.world.WorldEvent;
 
+import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapChunk;
 import org.dynmap.DynmapCore;
 import org.dynmap.DynmapLocation;
@@ -61,36 +66,33 @@ import org.dynmap.common.DynmapCommandSender;
 import org.dynmap.common.DynmapPlayer;
 import org.dynmap.common.DynmapServerInterface;
 import org.dynmap.common.DynmapListenerManager.EventType;
+import org.dynmap.debug.Debug;
 import org.dynmap.hdmap.HDMap;
 import org.dynmap.utils.MapChunkCache;
 
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.IPlayerTracker;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.TickType;
 import cpw.mods.fml.common.network.IChatListener;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.server.FMLServerHandler;
 
 public class DynmapPlugin
 {
     private DynmapCore core;
     private boolean core_enabled;
-    private String version;
     public SnapshotCache sscache;
-    private boolean has_spout = false;
     public PlayerList playerList;
     private MapManager mapManager;
     private net.minecraft.server.MinecraftServer server;
     public static DynmapPlugin plugin;
     private ChatHandler chathandler;
-    
+    // Drop world load ticket after 30 seconds
+    private long worldIdleTimeoutNS = 30 * 1000000000L;
     private HashMap<String, ForgeWorld> worlds = new HashMap<String, ForgeWorld>();
     private World last_world;
     private ForgeWorld last_fworld;
@@ -119,7 +121,7 @@ public class DynmapPlugin
     	return fp;
     }
     
-    private static class TaskRecord implements Comparable
+    private static class TaskRecord implements Comparable<Object>
     {
         private long ticktorun;
         private long id;
@@ -174,6 +176,59 @@ public class DynmapPlugin
 		public Packet3Chat clientChat(NetHandler handler, Packet3Chat message) {
 			return message;
 		}
+    }
+    
+    public class LoadingCallback implements net.minecraftforge.common.ForgeChunkManager.LoadingCallback {
+        @Override
+        public void ticketsLoaded(List<Ticket> tickets, World world) {
+            if(tickets.size() > 0) {
+                setBusy(world, tickets.get(0));
+                for(int i = 1; i < tickets.size(); i++) {
+                    ForgeChunkManager.releaseTicket(tickets.get(i));
+                }
+            }
+        }
+    }
+    private static class WorldBusyRecord {
+        long last_ts;
+        Ticket ticket;
+    }
+    private HashMap<Integer, WorldBusyRecord> busy_worlds = new HashMap<Integer, WorldBusyRecord>();
+    
+    private void setBusy(World w) {
+        setBusy(w, null);
+    }
+    private void setBusy(World w, Ticket t) {
+        if(w == null) return;
+        WorldBusyRecord wbr = busy_worlds.get(w.getWorldInfo().getDimension());
+        if(wbr == null) {   /* Not busy, make ticket and keep spawn loaded */
+            Debug.debug("World " + w.getWorldInfo().getWorldName() + "/"+ w.provider.getDimensionName() + " is busy");
+            wbr = new WorldBusyRecord();
+            if(t != null)
+                wbr.ticket = t;
+            else
+                wbr.ticket = ForgeChunkManager.requestTicket(mod_Dynmap.instance, w, ForgeChunkManager.Type.NORMAL);
+            if(wbr.ticket != null) {
+                ChunkCoordinates cc = w.getSpawnPoint();
+                ChunkCoordIntPair ccip = new ChunkCoordIntPair(cc.posX >> 4, cc.posZ >> 4);
+                ForgeChunkManager.forceChunk(wbr.ticket, ccip);
+                busy_worlds.put(w.getWorldInfo().getDimension(), wbr);  // Add to busy list
+            }
+        }
+        wbr.last_ts = System.nanoTime();
+    }
+    
+    private void doIdleOutOfWorlds() {
+        long ts = System.nanoTime() - worldIdleTimeoutNS;
+        for(Iterator<WorldBusyRecord> itr = busy_worlds.values().iterator(); itr.hasNext();) {
+            WorldBusyRecord wbr = itr.next();
+            if(wbr.last_ts < ts) {
+                World w = wbr.ticket.world;
+                Debug.debug("World " + w.getWorldInfo().getWorldName() + "/" + wbr.ticket.world.provider.getDimensionName() + " is idle");
+                ForgeChunkManager.releaseTicket(wbr.ticket);    // Release hold on world 
+                itr.remove();
+            }
+        }
     }
     
     public DynmapPlugin()
@@ -233,7 +288,7 @@ public class DynmapPlugin
         @Override
         public DynmapPlayer[] getOnlinePlayers()
         {
-            List playlist = server.getConfigurationManager().playerEntityList;
+            List<?> playlist = server.getConfigurationManager().playerEntityList;
             int pcnt = playlist.size();
             DynmapPlayer[] dplay = new DynmapPlayer[pcnt];
 
@@ -254,7 +309,7 @@ public class DynmapPlugin
         @Override
         public DynmapPlayer getPlayer(String name)
         {
-            List players = server.getConfigurationManager().playerEntityList;
+            List<?> players = server.getConfigurationManager().playerEntityList;
 
             for (Object o : players)
             {
@@ -268,6 +323,7 @@ public class DynmapPlugin
 
             return null;
         }
+        @SuppressWarnings("unchecked")
         @Override
         public Set<String> getIPBans()
         {
@@ -546,7 +602,7 @@ public class DynmapPlugin
                 c.loadChunks(0);
                 return c;
             }
-
+            
             final MapChunkCache cc = c;
             long delay = 0;
 
@@ -562,6 +618,10 @@ public class DynmapPlugin
                         {
                             if (chunks_in_cur_tick > 0)
                             {
+                                // Update busy state on world
+                                ForgeWorld fw = (ForgeWorld)cc.getWorld();
+                                setBusy(fw.getWorld());
+                                
                             	chunks_in_cur_tick -= cc.loadChunks(chunks_in_cur_tick);
                             }
 
@@ -677,6 +737,10 @@ public class DynmapPlugin
                     	dp = new ForgePlayer(null);
                     
                     core.listenerManager.processChatEvent(EventType.PLAYER_CHAT, dp, cm.message);
+				}
+				/* Check for idle worlds */
+				if((cur_tick % 20) == 0) {
+				    doIdleOutOfWorlds();
 				}
 			}
 		}
@@ -916,6 +980,9 @@ public class DynmapPlugin
     public void onEnable()
     {
         server = MinecraftServer.getServer();
+        /* Set up for chunk loading notice from chunk manager */
+        ForgeChunkManager.setForcedChunkLoadingCallback(mod_Dynmap.instance, new LoadingCallback());
+
         /* Load extra biomes */
         loadExtraBiomes();
         /* Set up player login/quit event handler */
@@ -964,6 +1031,9 @@ public class DynmapPlugin
         /* Get map manager from core */
         mapManager = core.getMapManager();
 
+        /* Load saved world definitions */
+        loadWorlds();
+        
         /* Initialized the currently loaded worlds */
         for (WorldServer world : server.worldServers)
         {
@@ -971,11 +1041,12 @@ public class DynmapPlugin
             if(DimensionManager.getWorld(world.provider.dimensionId) == null) { /* If not loaded */
             	w.setWorldUnloaded();
     		}
-            if (core.processWorldLoad(w))   /* Have core process load first - fire event listeners if good load after */
-            {
-            	if(w.isLoaded()) {
-            		core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
-            	}
+        }
+        for(ForgeWorld w : worlds.values()) {
+            if (core.processWorldLoad(w)) {   /* Have core process load first - fire event listeners if good load after */
+                if(w.isLoaded()) {
+                    core.listenerManager.processWorldEvent(EventType.WORLD_LOAD, w);
+                }
             }
         }
 
@@ -1002,6 +1073,8 @@ public class DynmapPlugin
     		metrics.stop();
     		metrics = null;
     	}
+    	/* Save worlds */
+        saveWorlds();
 
         /* Disable core */
         core.disableCore();
@@ -1012,7 +1085,7 @@ public class DynmapPlugin
             sscache.cleanup();
             sscache = null;
         }
-
+        
         Log.info("Disabled");
     }
 
@@ -1323,7 +1396,8 @@ public class DynmapPlugin
 		last_fworld = fw;
     	return fw;
     }
-    
+
+    /*
     private void removeWorld(ForgeWorld fw) {
     	WorldUpdateTracker wit = updateTrackers.remove(fw.getName());
     	if(wit != null) {
@@ -1335,6 +1409,7 @@ public class DynmapPlugin
 			last_fworld = null;
     	}
     }
+    */
 
     private void initMetrics() {
         try {
@@ -1347,14 +1422,6 @@ public class DynmapPlugin
                 @Override
                 public int getValue() {
                     if (!core.configuration.getBoolean("disable-webserver", false))
-                        return 1;
-                    return 0;
-                }
-            });
-            features.addPlotter(new ForgeMetrics.Plotter("Spout") {
-                @Override
-                public int getValue() {
-                    if(plugin.has_spout)
                         return 1;
                     return 0;
                 }
@@ -1425,6 +1492,53 @@ public class DynmapPlugin
             metrics.start();
         } catch (IOException e) {
             // Failed to submit the stats :-(
+        }
+    }
+
+    private void saveWorlds() {
+        File f = new File(core.getDataFolder(), "forgeworlds.yml");
+        ConfigurationNode cn = new ConfigurationNode(f);
+        ArrayList<HashMap<String,Object>> lst = new ArrayList<HashMap<String,Object>>();
+        for(DynmapWorld fw : core.mapManager.getWorlds()) {
+            HashMap<String, Object> vals = new HashMap<String, Object>();
+            vals.put("name", fw.getRawName());
+            vals.put("height",  fw.worldheight);
+            vals.put("sealevel", fw.sealevel);
+            vals.put("nether",  fw.isNether());
+            vals.put("the_end",  ((ForgeWorld)fw).isTheEnd());
+            vals.put("title", fw.getTitle());
+            lst.add(vals);
+        }
+        cn.put("worlds", lst);
+        cn.save();
+    }
+    private void loadWorlds() {
+        File f = new File(core.getDataFolder(), "forgeworlds.yml");
+        if(f.canRead() == false)
+            return;
+        ConfigurationNode cn = new ConfigurationNode(f);
+        cn.load();
+        List<Map<String,Object>> lst = cn.getMapList("worlds");
+        if(lst == null) return;
+        
+        for(Map<String,Object> world : lst) {
+            try {
+                String name = (String)world.get("name");
+                int height = (Integer)world.get("height");
+                int sealevel = (Integer)world.get("sealevel");
+                boolean nether = (Boolean)world.get("nether");
+                boolean theend = (Boolean)world.get("the_end");
+                String title = (String)world.get("title");
+                if(name != null) {
+                    ForgeWorld fw = new ForgeWorld(name, height, sealevel, nether, theend, title);
+                    fw.setWorldUnloaded();
+                    core.processWorldLoad(fw);
+                    worlds.put(name,  fw);
+                }
+            } catch (Exception x) {
+                Log.warning("Unable to load saved worlds from forgeworlds.yml");
+                return;
+            }
         }
     }
 }

@@ -79,6 +79,10 @@ public class ForgeWorld extends DynmapWorld
     {
         return isnether;
     }
+    public boolean isTheEnd()
+    {
+        return istheend;
+    }
     /* Get world spawn location */
     @Override
     public DynmapLocation getSpawnLocation()
