@@ -178,27 +178,16 @@ public class DynmapPlugin
 		}
     }
     
-    public class LoadingCallback implements net.minecraftforge.common.ForgeChunkManager.LoadingCallback {
-        @Override
-        public void ticketsLoaded(List<Ticket> tickets, World world) {
-            if(tickets.size() > 0) {
-                setBusy(world, tickets.get(0));
-                for(int i = 1; i < tickets.size(); i++) {
-                    ForgeChunkManager.releaseTicket(tickets.get(i));
-                }
-            }
-        }
-    }
     private static class WorldBusyRecord {
         long last_ts;
         Ticket ticket;
     }
-    private HashMap<Integer, WorldBusyRecord> busy_worlds = new HashMap<Integer, WorldBusyRecord>();
+    private static HashMap<Integer, WorldBusyRecord> busy_worlds = new HashMap<Integer, WorldBusyRecord>();
     
     private void setBusy(World w) {
         setBusy(w, null);
     }
-    private void setBusy(World w, Ticket t) {
+    static void setBusy(World w, Ticket t) {
         if(w == null) return;
         WorldBusyRecord wbr = busy_worlds.get(w.getWorldInfo().getDimension());
         if(wbr == null) {   /* Not busy, make ticket and keep spawn loaded */
@@ -857,7 +846,9 @@ public class DynmapPlugin
         {
             if (player != null)
             {
-                return player.getHealth();
+                int h = player.getHealth();
+                if(h > 20) h = 20;
+                return h;  // Scale to 20 range
             }
             else
             {
@@ -980,8 +971,6 @@ public class DynmapPlugin
     public void onEnable()
     {
         server = MinecraftServer.getServer();
-        /* Set up for chunk loading notice from chunk manager */
-        ForgeChunkManager.setForcedChunkLoadingCallback(mod_Dynmap.instance, new LoadingCallback());
 
         /* Load extra biomes */
         loadExtraBiomes();

@@ -1,6 +1,11 @@
 package org.dynmap.forge;
 
 import java.io.IOException;
+import java.util.List;
+
+import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeChunkManager;
+import net.minecraftforge.common.ForgeChunkManager.Ticket;
 
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
@@ -31,6 +36,18 @@ public class mod_Dynmap
     
     public static DynmapPlugin plugin;
 
+    public class LoadingCallback implements net.minecraftforge.common.ForgeChunkManager.LoadingCallback {
+        @Override
+        public void ticketsLoaded(List<Ticket> tickets, World world) {
+            if(tickets.size() > 0) {
+                DynmapPlugin.setBusy(world, tickets.get(0));
+                for(int i = 1; i < tickets.size(); i++) {
+                    ForgeChunkManager.releaseTicket(tickets.get(i));
+                }
+            }
+        }
+    }
+
     @PreInit
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -39,6 +56,8 @@ public class mod_Dynmap
     @Init
     public void load(FMLInitializationEvent event)
     {
+        /* Set up for chunk loading notice from chunk manager */
+        ForgeChunkManager.setForcedChunkLoadingCallback(mod_Dynmap.instance, new LoadingCallback());
     }
 
     @PostInit
