@@ -82,12 +82,12 @@
 
 	<!-- Set full version -->
 	<target name="initialize-version" depends="version-provided,version-not-provided">
-		<property name="project.version.full" value="${project.version}.${build.number}"/>
+		<property name="project.version.full" value="${project.version}-${build.number}"/>
 	</target>
 
 	<!-- Set unknown build number -->
 	<target name="version-not-provided" unless="env.BUILD_NUMBER">
-		<property name="build.number" value="unknown"/>
+		<property name="build.number" value="Dev"/>
 	</target>
 
 	<!-- Set build number from environment -->
