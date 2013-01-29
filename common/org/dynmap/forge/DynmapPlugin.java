@@ -977,6 +977,7 @@ public class DynmapPlugin
             	}
             }
         }
+        core.updateConfigHashcode();
 
         /* Register our update trigger events */
         registerEvents();
@@ -1143,7 +1144,7 @@ public class DynmapPlugin
 				ExtendedBlockStorage[] sections = c.getBlockStorageArray();
 				for(int i = 0; i < sections.length; i++) {
 					if((sections[i] != null) && (sections[i].isEmpty() == false)) {
-						ymax = 16*i;
+						ymax = 16*(i+1);
 					}
 				}
 				int x = c.xPosition << 4;
