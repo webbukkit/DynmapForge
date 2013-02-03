@@ -1,5 +1,10 @@
 package org.dynmap.forge;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.NibbleArray;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
@@ -70,6 +75,68 @@ public class ChunkSnapshot
         this.hmap = new int[16 * 16];
     }
 
+    public ChunkSnapshot(NBTTagCompound nbt) {
+        this.x = nbt.getInteger("xPos");
+        this.z = nbt.getInteger("zPos");
+        this.captureFulltime = 0;
+        this.hmap = nbt.getIntArray("HeightMap");
+        this.sectionCnt = 16;
+        /* Allocate arrays indexed by section */
+        this.blockids = new short[this.sectionCnt][];
+        this.blockdata = new byte[this.sectionCnt][];
+        this.skylight = new byte[this.sectionCnt][];
+        this.emitlight = new byte[this.sectionCnt][];
+        this.empty = new boolean[this.sectionCnt];
+        /* Fill with empty data */
+        for (int i = 0; i < this.sectionCnt; i++) {
+            this.empty[i] = true;
+            this.blockids[i] = emptyIDs;
+            this.blockdata[i] = emptyData;
+            this.emitlight[i] = emptyData;
+            this.skylight[i] = fullData;
+        }
+        /* Get sections */
+        NBTTagList sect = nbt.getTagList("Sections");
+        for (int i = 0; i < sect.tagCount(); i++) {
+            NBTTagCompound sec = (NBTTagCompound) sect.tagAt(i);
+            byte secnum = sec.getByte("Y");
+            byte[] lsb_bytes = sec.getByteArray("Blocks");
+            short[] blkids = new short[BLOCKS_PER_SECTION];
+            this.blockids[secnum] = blkids;
+            int len = BLOCKS_PER_SECTION;
+            if(len > lsb_bytes.length) len = lsb_bytes.length;
+            for(int j = 0; j < len; j++) {
+                blkids[j] = (short)(0xFF & lsb_bytes[j]); 
+            }
+            if (sec.hasKey("Add")) {    /* If additional data, add it */
+                byte[] msb = sec.getByteArray("Add");
+                len = BLOCKS_PER_SECTION / 2;
+                if(len > msb.length) len = msb.length;
+                for (int j = 0; j < len; j++) {
+                    short b = (short)(msb[j] & 0xFF);
+                    if (b == 0) {
+                        continue;
+                    }
+                    blkids[j << 1] |= (b & 0x0F) << 8;
+                    blkids[(j << 1) + 1] |= (b & 0xF0) << 4;
+                }
+            }
+            this.blockdata[secnum] = sec.getByteArray("Data");
+            this.emitlight[secnum] = sec.getByteArray("BlockLight");
+            if (sec.hasKey("SkyLight")) {
+                this.skylight[secnum] = sec.getByteArray("SkyLight");
+            }
+            this.empty[secnum] = false;
+        }
+        /* Get biome data */
+        if (nbt.hasKey("Biomes")) {
+            this.biome = nbt.getByteArray("Biomes");
+        }
+        else {
+            this.biome = new byte[COLUMNS_PER_CHUNK];
+        }
+    }
+    
     public ChunkSnapshot(Chunk chunk)
     {
         this(chunk.worldObj.getHeight(), chunk.xPosition, chunk.zPosition, chunk.worldObj.getWorldTime());

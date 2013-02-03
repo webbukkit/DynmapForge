@@ -1,15 +1,14 @@
 package org.dynmap.forge;
 
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Set;
 
+import net.minecraft.nbt.CompressedStreamTools;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagByte;
 import net.minecraft.nbt.NBTTagByteArray;
@@ -18,6 +17,7 @@ import net.minecraft.nbt.NBTTagDouble;
 import net.minecraft.nbt.NBTTagFloat;
 import net.minecraft.nbt.NBTTagInt;
 import net.minecraft.nbt.NBTTagIntArray;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.nbt.NBTTagLong;
 import net.minecraft.nbt.NBTTagShort;
 import net.minecraft.nbt.NBTTagString;
@@ -29,7 +29,9 @@ import net.minecraft.world.WorldServer;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.chunk.storage.AnvilChunkLoader;
 import net.minecraft.world.chunk.storage.IChunkLoader;
+import net.minecraft.world.chunk.storage.RegionFileCache;
 import net.minecraft.world.gen.ChunkProviderServer;
 
 import org.dynmap.DynmapChunk;
@@ -45,8 +47,6 @@ import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.BlockStep;
 
-import cpw.mods.fml.relauncher.ReflectionHelper;
-
 /**
  * Container for managing chunks - dependent upon using chunk snapshots, since rendering is off server thread
  */
@@ -56,6 +56,13 @@ public class ForgeMapChunkCache implements MapChunkCache
     private static Field unloadqueue = null;
     private static Field currentchunkloader = null;
     private static Field updateEntityTick = null;
+    /* AnvilChunkLoader fields */
+    private static Field chunksToRemove = null; // List
+    private static Field pendingAnvilChunksCoordinates = null; // Set
+    private static Field syncLockObject = null; // Object
+    /* AnvilChunkLoaderPending fields */
+    private static Field chunkCoord = null;
+    private static Field nbtTag = null;
 
     private World w;
     private DynmapWorld dw;
@@ -77,7 +84,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     private byte[][] sameneighborbiomecnt;
     private BiomeMap[][] biomemap;
     private boolean[][] isSectionNotEmpty; /* Indexed by snapshot index, then by section index */
-
+    
     private int chunks_read;    /* Number of chunks actually loaded */
     private int chunks_attempted;   /* Number of chunks attempted to load */
     private long total_loadtime;    /* Total time loading chunks, in nanoseconds */
@@ -987,6 +994,22 @@ public class ForgeMapChunkCache implements MapChunkCache
     			}
     		}
 
+    		f = AnvilChunkLoader.class.getDeclaredFields();
+    		for(int i = 0; i < f.length; i++) {
+    		    if((chunksToRemove == null) && (f[i].getType().equals(List.class))) {
+    		        chunksToRemove = f[i];
+    		        chunksToRemove.setAccessible(true);
+    		    }
+    		    else if((pendingAnvilChunksCoordinates == null) && (f[i].getType().equals(Set.class))) {
+    		        pendingAnvilChunksCoordinates = f[i];
+    		        pendingAnvilChunksCoordinates.setAccessible(true);
+    		    }
+    		    else if((syncLockObject == null) && (f[i].getType().equals(Object.class))) {
+    		        syncLockObject = f[i];
+    		        syncLockObject.setAccessible(true);
+    		    }
+    		}
+
 			if ((unloadqueue == null) || (currentchunkloader == null))
     		{
     			Log.severe("ERROR: cannot find unload queue or chunk provider field - dynmap cannot load chunks");
@@ -1127,6 +1150,62 @@ public class ForgeMapChunkCache implements MapChunkCache
 
         return c;
     }
+    
+    public NBTTagCompound readChunk(int x, int z) {
+        if((cps == null) || (!(cps.currentChunkLoader instanceof AnvilChunkLoader)) ||
+                (chunksToRemove == null) || (pendingAnvilChunksCoordinates == null) ||
+                (syncLockObject == null)) {
+            return null;
+        }
+        try {
+            AnvilChunkLoader acl = (AnvilChunkLoader)cps.currentChunkLoader;
+            List chunkstoremove = (List)chunksToRemove.get(acl);
+            Set pendingcoords = (Set)pendingAnvilChunksCoordinates.get(acl);
+            Object synclock = syncLockObject.get(acl);
+
+            NBTTagCompound rslt = null;
+            ChunkCoordIntPair coord = new ChunkCoordIntPair(x, z);
+
+            synchronized (synclock) {
+                if (pendingcoords.contains(coord)) {
+                    for (int i = 0; i < chunkstoremove.size(); i++) {
+                        Object o = chunkstoremove.get(i);
+                        if (chunkCoord == null) {
+                            Field[] f = o.getClass().getDeclaredFields();
+                            for(Field ff : f) {
+                                if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
+                                    chunkCoord = ff;
+                                }
+                                else if((nbtTag == null) && (ff.getType().equals(NBTTagCompound.class))) {
+                                    nbtTag = ff;
+                                }
+                            }
+                        }
+                        ChunkCoordIntPair occ = (ChunkCoordIntPair)chunkCoord.get(o);
+                        
+                        if (occ.equals(coord)) {
+                            rslt = (NBTTagCompound)nbtTag.get(o);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (rslt == null) {
+                DataInputStream str = RegionFileCache.getChunkInputStream(acl.chunkSaveLocation, x, z);
+
+                if (str == null) {
+                    return null;
+                }
+                rslt = CompressedStreamTools.read(str);
+            }
+            if(rslt != null) 
+                rslt = rslt.getCompoundTag("Level");
+            return rslt;
+        } catch (Exception exc) {
+            return null;
+        }
+    }
 
     public int loadChunks(int max_to_load)
     {
@@ -1240,10 +1319,15 @@ public class ForgeMapChunkCache implements MapChunkCache
                 wasLoaded = true;
             }
 
+            NBTTagCompound nbt = null;
+            
             if (!wasLoaded)
             {
-                c = loadChunkNoGenerate(chunk.x, chunk.z);
-                didload = (c != null);
+                nbt = readChunk(chunk.x, chunk.z);
+                if(nbt == null) {
+                    c = loadChunkNoGenerate(chunk.x, chunk.z);
+                }
+                didload = (c != null) || (nbt != null);
             }
             else    /* If already was loaded, no need to load */
             {
@@ -1289,10 +1373,77 @@ public class ForgeMapChunkCache implements MapChunkCache
                 }
                 else
                 {
-                    ss = new ChunkSnapshot(c);
-
-                    if (ss != null)
-                    {
+                    if(nbt != null) {
+                        ss = new ChunkSnapshot(nbt);
+                        
+                        NBTTagList tiles = nbt.getTagList("TileEntities");
+                        if(tiles == null) tiles = new NBTTagList();
+                        /* Get tile entity data */
+                        List<Object> vals = new ArrayList<Object>();
+                        for(int tid = 0; tid < tiles.tagCount(); tid++) {
+                            NBTTagCompound tc = (NBTTagCompound)tiles.tagAt(tid);
+                            int tx = tc.getInteger("x");
+                            int ty = tc.getInteger("y");
+                            int tz = tc.getInteger("z");
+                            int cx = tx & 0xF;
+                            int cz = tz & 0xF;
+                            int blkid = ss.getBlockTypeId(cx, ty, cz);
+                            int blkdat = ss.getBlockData(cx, ty, cz);
+                            String[] te_fields = HDBlockModels.getTileEntityFieldsNeeded(blkid,  blkdat);
+                            if(te_fields != null) {
+                                vals.clear();
+                                for(String id: te_fields) {
+                                    NBTBase v = tc.getTag(id);  /* Get field */
+                                    if(v != null) {
+                                        Object val = null;
+                                        switch(v.getId()) {
+                                            case 1: // Byte
+                                                val = Byte.valueOf(((NBTTagByte)v).data);
+                                                break;
+                                            case 2: // Short
+                                                val = Short.valueOf(((NBTTagShort)v).data);
+                                                break;
+                                            case 3: // Int
+                                                val = Integer.valueOf(((NBTTagInt)v).data);
+                                                break;
+                                            case 4: // Long
+                                                val = Long.valueOf(((NBTTagLong)v).data);
+                                                break;
+                                            case 5: // Float
+                                                val = Float.valueOf(((NBTTagFloat)v).data);
+                                                break;
+                                            case 6: // Double
+                                                val = Double.valueOf(((NBTTagDouble)v).data);
+                                                break;
+                                            case 7: // Byte[]
+                                                val = ((NBTTagByteArray)v).byteArray;
+                                                break;
+                                            case 8: // String
+                                                val = ((NBTTagString)v).data;
+                                                break;
+                                            case 11: // Int[]
+                                                val = ((NBTTagIntArray)v).intArray;
+                                                break;
+                                        }
+                                        if(val != null) {
+                                            vals.add(id);
+                                            vals.add(val);
+                                        }
+                                    }
+                                }
+                                if(vals.size() > 0) {
+                                    Object[] vlist = vals.toArray(new Object[vals.size()]);
+                                    tileData.put(getIndexInChunk(cx, ty, cz), vlist);
+                                }
+                            }
+                        }
+                        ssr = new SnapshotRec();
+                        ssr.ss = ss;
+                        ssr.tileData = tileData;
+                        DynmapPlugin.plugin.sscache.putSnapshot(dw.getName(), chunk.x, chunk.z, ssr, blockdata, biome, biomeraw, highesty);
+                    }
+                    else {
+                        ss = new ChunkSnapshot(c);
                         /* Get tile entity data */
                         List<Object> vals = new ArrayList<Object>();
                         for(Object t : c.chunkTileEntityMap.values()) {
@@ -1365,7 +1516,11 @@ public class ForgeMapChunkCache implements MapChunkCache
                 snaptile[(chunk.x-x_min) + (chunk.z - z_min)*x_dim] = tileData;
 
                 /* If wasn't loaded before, we need to do unload */
-                if (!wasLoaded)
+                if (nbt != null) {
+                    /* No unload needed if we fetched NBT */
+                    chunks_read++;
+                }
+                else if (!wasLoaded)
                 {
                     chunks_read++;
 
