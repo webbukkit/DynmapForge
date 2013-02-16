@@ -96,6 +96,8 @@ public class DynmapPlugin
     private Map<String, ForgePlayer> players = new HashMap<String, ForgePlayer>();
     private ForgeMetrics metrics;
     private HashSet<String> modsused = new HashSet<String>();
+    private ForgeServer fserver = new ForgeServer();
+    private boolean tickregistered = false;
     
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkgenerate" };
     
@@ -940,7 +942,6 @@ public class DynmapPlugin
         core.setPluginVersion(Version.VER);
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
-        ForgeServer fserver = new ForgeServer();
         core.setServer(fserver);
         ForgeMapChunkCache.init();
         core.setTriggerDefault(TRIGGER_DEFAULTS);
@@ -956,8 +957,10 @@ public class DynmapPlugin
         }
         core_enabled = true;
         /* Register tick handler */
-        TickRegistry.registerTickHandler(fserver, Side.SERVER);
-
+        if(!tickregistered) {
+            TickRegistry.registerTickHandler(fserver, Side.SERVER);
+            tickregistered = true;
+        }
         playerList = core.playerList;
         sscache = new SnapshotCache(core.getSnapShotCacheSize());
         /* Get map manager from core */
@@ -1002,6 +1005,9 @@ public class DynmapPlugin
     		metrics.stop();
     		metrics = null;
     	}
+
+        /* Purge tick queue */
+        fserver.runqueue.clear();
 
         /* Disable core */
         core.disableCore();
