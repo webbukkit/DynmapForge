@@ -90,6 +90,8 @@ public class DynmapPlugin
     private ForgeWorld last_fworld;
     private Map<String, ForgePlayer> players = new HashMap<String, ForgePlayer>();
     private HashSet<String> modsused = new HashSet<String>();
+    private ForgeServer fserver = new ForgeServer();
+    private boolean tickregistered = false;
     
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkgenerate" };
     
@@ -920,7 +922,6 @@ public class DynmapPlugin
             return true;
         }
     }
-    private ForgeServer fserver = new ForgeServer();
     
     public void onLoad() {
         /* Register tick handler */
@@ -1024,6 +1025,8 @@ public class DynmapPlugin
 
     public void onDisable()
     {
+        /* Clear pending queue */
+        fserver.runqueue.clear();
         /* Disable core */
         core.disableCore();
         core_enabled = false;
