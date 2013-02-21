@@ -1191,10 +1191,11 @@ public class DynmapPlugin
                 core.getServer().scheduleServerTask(new Runnable() {
                 	public void run() {
                 		core.listenerManager.processWorldEvent(EventType.WORLD_UNLOAD, fw);
-                		fw.setWorldUnloaded();
                 		core.processWorldUnload(fw);
                 	}
                 }, 0);
+                /* Set world unloaded (needs to be immediate, since it may be invalid after event) */
+                fw.setWorldUnloaded();
                 /* Clean up tracker */
                 WorldUpdateTracker wut = updateTrackers.remove(fw.getName());
                 if(wut != null) wut.world = null;
