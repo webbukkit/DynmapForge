@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -61,6 +62,10 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.MapType;
 import org.dynmap.PlayerList;
+import org.dynmap.forge.permissions.FilePermissions;
+import org.dynmap.forge.permissions.OpPermissions;
+import org.dynmap.forge.permissions.ForgeEssentialsPermissions;
+import org.dynmap.forge.permissions.PermissionProvider;
 import org.dynmap.common.BiomeMap;
 import org.dynmap.common.DynmapCommandSender;
 import org.dynmap.common.DynmapPlayer;
@@ -84,6 +89,7 @@ import cpw.mods.fml.relauncher.Side;
 public class DynmapPlugin
 {
     private DynmapCore core;
+    private PermissionProvider permissions;
     private boolean core_enabled;
     public SnapshotCache sscache;
     public PlayerList playerList;
@@ -227,7 +233,7 @@ public class DynmapPlugin
         plugin = this;
     }
 
-    private boolean isOp(String player) {
+    public boolean isOp(String player) {
     	player = player.toLowerCase();
     	return server.getConfigurationManager().getOps().contains(player) ||
     			(server.isSinglePlayer() && player.equalsIgnoreCase(server.getServerOwner()));
@@ -519,37 +525,27 @@ public class DynmapPlugin
         @Override
         public Set<String> checkPlayerPermissions(String player, Set<String> perms)
         {
-            /*TODO
-            OfflinePlayer p = getServer().getOfflinePlayer(player);
-            if(p.isBanned())
-                return new HashSet<String>();
+            BanList bl = MinecraftServer.getServer().getConfigurationManager().getBannedPlayers();
+            if(bl.isBanned(player)) {
+                return Collections.emptySet();
+            }
             Set<String> rslt = permissions.hasOfflinePermissions(player, perms);
             if (rslt == null) {
                 rslt = new HashSet<String>();
-                if(p.isOp()) {
+                if(plugin.isOp(player)) {
                     rslt.addAll(perms);
                 }
             }
-            */
-            Set<String> rslt = new HashSet<String>();
-
-            if (isOp(player))
-            {
-                rslt.addAll(perms);
-            }
-
             return rslt;
         }
         @Override
         public boolean checkPlayerPermission(String player, String perm)
         {
-            /*TODO
-            OfflinePlayer p = getServer().getOfflinePlayer(player);
-            if(p.isBanned())
+            BanList bl = MinecraftServer.getServer().getConfigurationManager().getBannedPlayers();
+            if(bl.isBanned(player)) {
                 return false;
+            }
             return permissions.hasOfflinePermission(player, perm);
-            */
-            return isOp(player);
         }
         /**
          * Render processor helper - used by code running on render threads to request chunk snapshot cache from server/sync thread
@@ -893,7 +889,9 @@ public class DynmapPlugin
         @Override
         public boolean hasPrivilege(String privid)
         {
-        	return server.getConfigurationManager().getOps().contains(player.username);
+            if(player != null)
+                return permissions.has(player, privid);
+            return false;
         }
         @Override
         public boolean isOp()
@@ -978,6 +976,16 @@ public class DynmapPlugin
         loadExtraBiomes();
         /* Set up player login/quit event handler */
         registerPlayerLoginListener();
+        /* Initialize permissions handler */
+        permissions = FilePermissions.create();
+        if(permissions == null) {
+            try {
+                permissions = ForgeEssentialsPermissions.create("dynmap");
+            } catch (NoClassDefFoundError cnfx) {}
+        }
+        if(permissions == null) {
+            permissions = new OpPermissions(new String[] { "webchat", "marker.icons", "marker.list", "webregister", "stats", "hide.self", "show.self" });
+        }
         /* Get and initialize data folder */
         File dataDirectory = new File("dynmap");
 
@@ -1106,12 +1114,7 @@ public class DynmapPlugin
         }
         
         public boolean canCommandSenderUseCommand(ICommandSender sender) {
-    		if(sender instanceof EntityPlayer) {
-				return DynmapPlugin.this.isOp(sender.getCommandSenderName());
-    		}
-    		else {
-    			return true;
-    		}
+            return true;
         }
     }
 

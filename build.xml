@@ -101,7 +101,7 @@
 	<target name="download-forge" unless="forge-exists">
 		<get src="http://files.minecraftforge.net/${forge.name}" dest="${download.dir}/${forge.name}" usetimestamp="True"/>
 	</target>
-
+	
 	<!-- Setup mcp and forge -->
 	<target name="setup" depends="download-files" if="out-of-date">
 
@@ -143,7 +143,6 @@
   			<!-- This mapper strips off all leading directory information -->
   			<mapper type="flatten" />
 		</copy>
-
 		<!-- Recompile -->
 		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows">
 			<arg line="/c recompile.bat"/>
@@ -163,8 +162,8 @@
 		</exec>
 
 		<!-- Copy classes -->
-		<copy todir="${classes.dir}">
-			<fileset dir="${mcp.dir}/reobf/minecraft"/>
+		<copy todir="${classes.dir}/org/dynmap">
+			<fileset dir="${mcp.dir}/reobf/minecraft/org/dynmap"/>
 		</copy>
 
 		<!-- Copy resources -->
@@ -176,6 +175,7 @@
 
 		<!-- Reset src dir to post-forge-install state -->
 		<delete dir="${mcpsrc.dir}/minecraft/org/dynmap"/>
+		<delete dir="${mcpsrc.dir}/minecraft/com"/>
 
 	</target>
 
@@ -203,6 +203,7 @@
 		</copy>
 		<mkdir dir="${jar.dir}/zip/dynmap"/>
 		<unzip src="${jar.dir}/DynmapCore-${project.version}-bin.zip" dest="${jar.dir}/zip/dynmap"/>
+		<copy todir="${jar.dir}/zip/dynmap" file="${resources.dir}/permissions.yml.example"/>
 
 		<zip destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.zip" basedir="${jar.dir}/zip" /> 
 	</target>
