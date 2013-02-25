@@ -525,7 +525,6 @@ public class DynmapPlugin
                 }
 
                 c.setHiddenFillStyle(w.hiddenchunkstyle);
-                c.setAutoGenerateVisbileRanges(w.do_autogenerate);
             }
 
             if (w.hidden_limits != null)
