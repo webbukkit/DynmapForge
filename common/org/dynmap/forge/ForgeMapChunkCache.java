@@ -70,8 +70,6 @@ public class ForgeMapChunkCache implements MapChunkCache
     private HiddenChunkStyle hidestyle = HiddenChunkStyle.FILL_AIR;
     private List<VisibilityLimit> visible_limits = null;
     private List<VisibilityLimit> hidden_limits = null;
-    private boolean do_generate = false;
-    private boolean do_save = false;
     private boolean isempty = true;
     private ChunkSnapshot[] snaparray; /* Index = (x-x_min) + ((z-z_min)*x_dim) */
     private DynIntHashMap[] snaptile;
@@ -1235,15 +1233,6 @@ public class ForgeMapChunkCache implements MapChunkCache
                 didload = true;
             }
 
-            boolean didgenerate = false;
-
-            /* If we didn't load, and we're supposed to generate, do it */
-            if ((!didload) && do_generate && vis)
-            {
-                c = cp.loadChunk(chunk.x, chunk.z);
-                didgenerate = didload = (c != null);
-            }
-
             /* If it did load, make cache of it */
             if (didload)
             {
@@ -1475,20 +1464,6 @@ public class ForgeMapChunkCache implements MapChunkCache
     public void setHiddenFillStyle(HiddenChunkStyle style)
     {
         this.hidestyle = style;
-    }
-    /**
-     * Set autogenerate - must be done after at least one visible range has been set
-     */
-    public void setAutoGenerateVisbileRanges(DynmapWorld.AutoGenerateOption generateopt)
-    {
-        if ((generateopt != DynmapWorld.AutoGenerateOption.NONE) && ((visible_limits == null) || (visible_limits.size() == 0)))
-        {
-            Log.severe("Cannot setAutoGenerateVisibleRanges() without visible ranges defined");
-            return;
-        }
-
-        this.do_generate = (generateopt != DynmapWorld.AutoGenerateOption.NONE);
-        this.do_save = (generateopt == DynmapWorld.AutoGenerateOption.PERMANENT);
     }
     /**
      * Add visible area limit - can be called more than once 
