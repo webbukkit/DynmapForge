@@ -47,6 +47,7 @@ import org.dynmap.utils.DynIntHashMap;
 import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.BlockStep;
+import org.dynmap.utils.VisibilityLimit;
 
 /**
  * Container for managing chunks - dependent upon using chunk snapshots, since rendering is off server thread
@@ -1159,26 +1160,18 @@ public class ForgeMapChunkCache implements MapChunkCache
             DynmapChunk chunk = iterator.next();
             boolean vis = true;
 
-            if (visible_limits != null)
-            {
+            if(visible_limits != null) {
                 vis = false;
-
-                for (VisibilityLimit limit : visible_limits)
-                {
-                    if ((chunk.x >= limit.x0) && (chunk.x <= limit.x1) && (chunk.z >= limit.z0) && (chunk.z <= limit.z1))
-                    {
+                for(VisibilityLimit limit : visible_limits) {
+                    if (limit.doIntersectChunk(chunk.x, chunk.z)) {
                         vis = true;
                         break;
                     }
                 }
             }
-
-            if (vis && (hidden_limits != null))
-            {
-                for (VisibilityLimit limit : hidden_limits)
-                {
-                    if ((chunk.x >= limit.x0) && (chunk.x <= limit.x1) && (chunk.z >= limit.z0) && (chunk.z <= limit.z1))
-                    {
+            if(vis && (hidden_limits != null)) {
+                for(VisibilityLimit limit : hidden_limits) {
+                    if (limit.doIntersectChunk(chunk.x, chunk.z)) {
                         vis = false;
                         break;
                     }
@@ -1498,80 +1491,24 @@ public class ForgeMapChunkCache implements MapChunkCache
         this.do_save = (generateopt == DynmapWorld.AutoGenerateOption.PERMANENT);
     }
     /**
-     * Add visible area limit - can be called more than once
+     * Add visible area limit - can be called more than once 
      * Needs to be set before chunks are loaded
      * Coordinates are block coordinates
      */
-    public void setVisibleRange(VisibilityLimit lim)
-    {
-        VisibilityLimit limit = new VisibilityLimit();
-
-        if (lim.x0 > lim.x1)
-        {
-            limit.x0 = (lim.x1 >> 4);
-            limit.x1 = ((lim.x0 + 15) >> 4);
-        }
-        else
-        {
-            limit.x0 = (lim.x0 >> 4);
-            limit.x1 = ((lim.x1 + 15) >> 4);
-        }
-
-        if (lim.z0 > lim.z1)
-        {
-            limit.z0 = (lim.z1 >> 4);
-            limit.z1 = ((lim.z0 + 15) >> 4);
-        }
-        else
-        {
-            limit.z0 = (lim.z0 >> 4);
-            limit.z1 = ((lim.z1 + 15) >> 4);
-        }
-
-        if (visible_limits == null)
-        {
+    public void setVisibleRange(VisibilityLimit lim) {
+        if(visible_limits == null)
             visible_limits = new ArrayList<VisibilityLimit>();
-        }
-
-        visible_limits.add(limit);
+        visible_limits.add(lim);
     }
     /**
-     * Add hidden area limit - can be called more than once
+     * Add hidden area limit - can be called more than once 
      * Needs to be set before chunks are loaded
      * Coordinates are block coordinates
      */
-    public void setHiddenRange(VisibilityLimit lim)
-    {
-        VisibilityLimit limit = new VisibilityLimit();
-
-        if (lim.x0 > lim.x1)
-        {
-            limit.x0 = (lim.x1 >> 4);
-            limit.x1 = ((lim.x0 + 15) >> 4);
-        }
-        else
-        {
-            limit.x0 = (lim.x0 >> 4);
-            limit.x1 = ((lim.x1 + 15) >> 4);
-        }
-
-        if (lim.z0 > lim.z1)
-        {
-            limit.z0 = (lim.z1 >> 4);
-            limit.z1 = ((lim.z0 + 15) >> 4);
-        }
-        else
-        {
-            limit.z0 = (lim.z0 >> 4);
-            limit.z1 = ((lim.z1 + 15) >> 4);
-        }
-
-        if (hidden_limits == null)
-        {
+    public void setHiddenRange(VisibilityLimit lim) {
+        if(hidden_limits == null)
             hidden_limits = new ArrayList<VisibilityLimit>();
-        }
-
-        hidden_limits.add(limit);
+        hidden_limits.add(lim);
     }
     @Override
     public boolean setChunkDataTypes(boolean blockdata, boolean biome, boolean highestblocky, boolean rawbiome)
