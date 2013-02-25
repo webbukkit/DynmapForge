@@ -74,6 +74,7 @@ import org.dynmap.common.DynmapListenerManager.EventType;
 import org.dynmap.debug.Debug;
 import org.dynmap.hdmap.HDMap;
 import org.dynmap.utils.MapChunkCache;
+import org.dynmap.utils.VisibilityLimit;
 
 import cpw.mods.fml.common.IPlayerTracker;
 import cpw.mods.fml.common.ITickHandler;
@@ -560,7 +561,7 @@ public class DynmapPlugin
             }
             if (w.visibility_limits != null)
             {
-                for (MapChunkCache.VisibilityLimit limit: w.visibility_limits)
+                for (VisibilityLimit limit: w.visibility_limits)
                 {
                     c.setVisibleRange(limit);
                 }
@@ -571,7 +572,7 @@ public class DynmapPlugin
 
             if (w.hidden_limits != null)
             {
-                for (MapChunkCache.VisibilityLimit limit: w.hidden_limits)
+                for (VisibilityLimit limit: w.hidden_limits)
                 {
                     c.setHiddenRange(limit);
                 }
