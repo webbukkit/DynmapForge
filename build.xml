@@ -6,7 +6,7 @@
 	<property name="forge.baseversion" value="6.4.1"/>
 	<property name="forge.build" value="442"/>
 	<property name="project.version" value="1.5"/>
-	<property name="project.devversion" value="-alpha-3"/>
+	<property name="project.devversion" value="-alpha-4"/>
 
 	<!-- Properties (build control) -->
 	<property name="build.dir" value="build"/>
