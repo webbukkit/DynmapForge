@@ -1302,35 +1302,32 @@ public class DynmapPlugin
 		public void playSound(String var1, double var2, double var4,
 				double var6, float var8, float var9) {
 		}
+        @Override
+	    public void playSoundToNearExcept(EntityPlayer entityplayer, String s, double d0, double d1, double d2, float f, float f1) {
+        }
+
 		@Override
 		public void spawnParticle(String var1, double var2, double var4,
 				double var6, double var8, double var10, double var12) {
 		}
-		@Override
-		public void obtainEntitySkin(Entity var1) {
-		}
-		@Override
-		public void releaseEntitySkin(Entity var1) {
-		}
-		@Override
-		public void playRecord(String var1, int var2, int var3, int var4) {
-		}
-		@Override
-		public void playAuxSFX(EntityPlayer var1, int var2, int var3, int var4,
-				int var5, int var6) {			
-		}
-		@Override
-		public void destroyBlockPartially(int var1, int var2, int var3,
-				int var4, int var5) {
-		}
-		@Override
-		public void func_85102_a(EntityPlayer var1, String var2, double var3,
-				double var5, double var7, float var9, float var10) {
-		}
-		@Override
-		public void broadcastSound(int var1, int var2, int var3, int var4,
-				int var5) {
-		}
+        @Override
+	    public void onEntityCreate(Entity entity) {
+        }
+        @Override
+        public void onEntityDestroy(Entity entity) {
+        }
+        @Override
+        public void playRecord(String s, int i, int j, int k) {
+        }
+        @Override
+        public void broadcastSound(int i, int j, int k, int l, int i1) {
+        }
+        @Override
+        public void playAuxSFX(EntityPlayer entityplayer, int i, int j, int k, int l, int i1) {
+        }
+        @Override
+        public void destroyBlockPartially(int i, int j, int k, int l, int i1) {
+        }
     }
     
     private WorldTracker worldTracker = null;

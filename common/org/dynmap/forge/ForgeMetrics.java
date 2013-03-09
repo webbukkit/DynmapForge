@@ -159,7 +159,7 @@ public class ForgeMetrics {
 
         // Get values, and add some defaults, if needed
         configuration.get(Configuration.CATEGORY_GENERAL, "opt-out", false, "Set to true to disable all reporting");
-        guid = configuration.get(Configuration.CATEGORY_GENERAL, "guid", UUID.randomUUID().toString(), "Server unique ID").value;
+        guid = configuration.get(Configuration.CATEGORY_GENERAL, "guid", UUID.randomUUID().toString(), "Server unique ID").getString();
         debug = configuration.get(Configuration.CATEGORY_GENERAL, "debug", false, "Set to true for verbose debug").getBoolean(false);
         configuration.save();
     }
@@ -325,7 +325,7 @@ public class ForgeMetrics {
     public void enable() throws IOException {
     	// Check if the server owner has already set opt-out, if not, set it.
     	if (isOptOut()) {
-    		configuration.getCategory(Configuration.CATEGORY_GENERAL).set("opt-out", new Property("opt-out", "false", Property.Type.BOOLEAN));
+    		configuration.getCategory(Configuration.CATEGORY_GENERAL).put("opt-out", new Property("opt-out", "false", Property.Type.BOOLEAN));
     		configuration.save();
     	}
     	// Enable Task, if it is not running
@@ -342,7 +342,7 @@ public class ForgeMetrics {
     public void disable() throws IOException {
         // Check if the server owner has already set opt-out, if not, set it.
         if (!isOptOut()) {
-    		configuration.getCategory(Configuration.CATEGORY_GENERAL).set("opt-out", new Property("opt-out", "true", Property.Type.BOOLEAN));
+    		configuration.getCategory(Configuration.CATEGORY_GENERAL).put("opt-out", new Property("opt-out", "true", Property.Type.BOOLEAN));
     		configuration.save();
         }
     }
