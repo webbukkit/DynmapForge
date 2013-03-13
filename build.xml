@@ -4,7 +4,7 @@
 	<!-- Properties (version) -->
 	<property name="mc.version" value="1.5"/>
 	<property name="forge.baseversion" value="7.7.0"/>
-	<property name="forge.build" value="565"/>
+	<property name="forge.build" value="582"/>
 	<property name="project.version" value="1.6"/>
 	<property name="project.devversion" value="-alpha-1"/>
 
