@@ -55,6 +55,7 @@ import net.minecraftforge.event.world.WorldEvent;
 
 import org.dynmap.ConfigurationNode;
 import org.dynmap.DynmapChunk;
+import org.dynmap.DynmapCommonAPIListener;
 import org.dynmap.DynmapCore;
 import org.dynmap.DynmapLocation;
 import org.dynmap.DynmapWorld;
@@ -1066,12 +1067,16 @@ public class DynmapPlugin
         /* Submit metrics to mcstats.org */
         initMetrics();
 
+        DynmapCommonAPIListener.apiInitialized(core);
+        
         Log.info("Enabled");
     }
 
     public void onDisable()
     {
-    	if (metrics != null) {
+        DynmapCommonAPIListener.apiTerminated();
+
+        if (metrics != null) {
     		metrics.stop();
     		metrics = null;
     	}

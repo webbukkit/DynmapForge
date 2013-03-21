@@ -1,5 +1,8 @@
 package org.dynmap.forge;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.nbt.NBTTagCompound;
@@ -32,12 +35,23 @@ public class ChunkSnapshot
     private static final short[] emptyIDs = new short[BLOCKS_PER_SECTION];
     private static final byte[] emptyData = new byte[BLOCKS_PER_SECTION / 2];
     private static final byte[] fullData = new byte[BLOCKS_PER_SECTION / 2];
-
+    private static Method getvalarray = null;
+    
     static
     {
         for (int i = 0; i < fullData.length; i++)
         {
             fullData[i] = (byte)0xFF;
+        }
+        try {
+            Method[] m = NibbleArray.class.getDeclaredMethods();
+            for (Method mm : m) {
+                if (mm.getName().equals("getValueArray")) {
+                    getvalarray = mm;
+                    break;
+                }
+            }
+        } catch (Exception x) {
         }
     }
 
@@ -137,6 +151,17 @@ public class ChunkSnapshot
         }
     }
     
+    private static byte[] getValueArray(NibbleArray na) {
+        if(getvalarray != null) {
+            try {
+                return (byte[])getvalarray.invoke(na);
+            } catch (IllegalArgumentException e) {
+            } catch (IllegalAccessException e) {
+            } catch (InvocationTargetException e) {
+            }
+        }
+        return na.data;
+    }
     public ChunkSnapshot(Chunk chunk)
     {
         this(chunk.worldObj.getHeight(), chunk.xPosition, chunk.zPosition, chunk.worldObj.getWorldTime());
@@ -166,8 +191,7 @@ public class ChunkSnapshot
 
                 if (msb != null)
                 {
-                    byte[] extids = msb.data;
-
+                    byte[] extids = getValueArray(msb);
                     for (int j = 0; j < extids.length; j++)
                     {
                         short b = (short)(extids[j] & 0xFF);
@@ -185,17 +209,17 @@ public class ChunkSnapshot
                 this.blockids[i] = blockids;
                 /* Copy block data */
                 this.blockdata[i] = new byte[BLOCKS_PER_SECTION / 2];
-                System.arraycopy(eb.getMetadataArray().data, 0, this.blockdata[i], 0, BLOCKS_PER_SECTION / 2);
+                System.arraycopy(getValueArray(eb.getMetadataArray()), 0, this.blockdata[i], 0, BLOCKS_PER_SECTION / 2);
                 /* Copy block lighting data */
                 this.emitlight[i] = new byte[BLOCKS_PER_SECTION / 2];
-                System.arraycopy(eb.getBlocklightArray().data, 0, this.emitlight[i], 0, BLOCKS_PER_SECTION / 2);
+                System.arraycopy(getValueArray(eb.getBlocklightArray()), 0, this.emitlight[i], 0, BLOCKS_PER_SECTION / 2);
                 /* Copy sky lighting data */
                 if(eb.getSkylightArray() != null) {
                 	this.skylight[i] = new byte[BLOCKS_PER_SECTION / 2];
-                	System.arraycopy(eb.getSkylightArray().data, 0, this.skylight[i], 0, BLOCKS_PER_SECTION / 2);
+                	System.arraycopy(getValueArray(eb.getSkylightArray()), 0, this.skylight[i], 0, BLOCKS_PER_SECTION / 2);
                 }
                 else {
-                	this.skylight[i] = this.emptyData;
+                	this.skylight[i] = ChunkSnapshot.emptyData;
                 }
             }
         }

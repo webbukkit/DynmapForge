@@ -3,6 +3,8 @@ package org.dynmap.forge;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
@@ -55,6 +57,8 @@ public class ForgeMapChunkCache implements MapChunkCache
 {
     private static boolean init = false;
     private static Field unloadqueue = null;
+    private static Field unloadqueue_mcpc = null;
+    private static Method unloadqueue_mcpc_contains = null;
     private static Field currentchunkloader = null;
     private static Field updateEntityTick = null;
     /* AnvilChunkLoader fields */
@@ -977,6 +981,16 @@ public class ForgeMapChunkCache implements MapChunkCache
     				//Log.info("Found unloadqueue - " + f[i].getName());
     				unloadqueue.setAccessible(true);
     			}
+    			else if((unloadqueue_mcpc == null) && f[i].getType().getSimpleName().endsWith("LongHashSet")) {
+                    unloadqueue_mcpc = f[i];
+                    try {
+                        unloadqueue_mcpc_contains = f[i].getType().getDeclaredMethod("contains", new Class[] { int.class, int.class });
+                    } catch (SecurityException e) {
+                    } catch (NoSuchMethodException e) {
+                    }
+                    //Log.info("Found unloadqueue - " + f[i].getName());
+                    unloadqueue_mcpc.setAccessible(true);
+                }
     			else if((currentchunkloader == null) && f[i].getType().isAssignableFrom(IChunkLoader.class)) {
     				currentchunkloader = f[i];
     				//Log.info("Found currentchunkprovider - " + f[i].getName());
@@ -1009,7 +1023,8 @@ public class ForgeMapChunkCache implements MapChunkCache
     		    }
     		}
 
-			if ((unloadqueue == null) || (currentchunkloader == null))
+			if (((unloadqueue == null) && ((unloadqueue_mcpc == null) || (unloadqueue_mcpc_contains == null))) || 
+			        (currentchunkloader == null))
     		{
     			Log.severe("ERROR: cannot find unload queue or chunk provider field - dynmap cannot load chunks");
     		}
@@ -1215,6 +1230,7 @@ public class ForgeMapChunkCache implements MapChunkCache
         	return 0;
         }
         Set queue = null;
+        Object queue_mcpc = null;
         IChunkProvider cp = w.getChunkProvider();
 
         try
@@ -1222,6 +1238,9 @@ public class ForgeMapChunkCache implements MapChunkCache
             if ((unloadqueue != null) && (cps != null))
             {
                 queue = (Set)unloadqueue.get(cps);
+            }
+            else if ((unloadqueue_mcpc != null) && (cps != null)) {
+                queue_mcpc = unloadqueue_mcpc.get(cps);
             }
         }
         catch (IllegalArgumentException iax)
@@ -1301,7 +1320,16 @@ public class ForgeMapChunkCache implements MapChunkCache
                 long coord = ChunkCoordIntPair.chunkXZ2Int(chunk.x, chunk.z);
                 isunloadpending = queue.contains(Long.valueOf(coord));
             }
-
+            else if (queue_mcpc != null)
+            {
+                try {
+                    isunloadpending = (Boolean)unloadqueue_mcpc_contains.invoke(queue_mcpc, chunk.x, chunk.z);
+                } catch (IllegalArgumentException e) {
+                } catch (IllegalAccessException e) {
+                } catch (InvocationTargetException e) {
+                }
+            }
+            
             Chunk c = null;
 
             if (isunloadpending)    /* Workaround: can't be pending if not loaded */
