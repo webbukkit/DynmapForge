@@ -74,6 +74,7 @@ import org.dynmap.common.DynmapServerInterface;
 import org.dynmap.common.DynmapListenerManager.EventType;
 import org.dynmap.debug.Debug;
 import org.dynmap.hdmap.HDMap;
+import org.dynmap.permissions.PermissionsHandler;
 import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.VisibilityLimit;
 
@@ -240,7 +241,43 @@ public class DynmapPlugin
     	return server.getConfigurationManager().getOps().contains(player) ||
     			(server.isSinglePlayer() && player.equalsIgnoreCase(server.getServerOwner()));
     }
-    
+
+    private boolean hasPerm(ICommandSender sender, String permission) {
+        PermissionsHandler ph = PermissionsHandler.getHandler();
+        if(ph != null) {
+            if((sender instanceof EntityPlayer) && ph.hasPermission(sender.getCommandSenderName(), permission)) {
+                return true;
+            }
+        }
+        return permissions.has(sender, permission);
+    }
+    private Set<String> hasOfflinePermissions(String player, Set<String> perms) {
+        Set<String> rslt = null;
+        PermissionsHandler ph = PermissionsHandler.getHandler();
+        if(ph != null) {
+            rslt = ph.hasOfflinePermissions(player, perms);
+        }
+        Set<String> rslt2 = permissions.hasOfflinePermissions(player, perms);
+        if((rslt != null) && (rslt2 != null)) {
+            Set<String> newrslt = new HashSet<String>(rslt);
+            newrslt.addAll(rslt2);
+            rslt = newrslt;
+        }
+        else if(rslt2 != null) {
+            rslt = rslt2;
+        }
+        return rslt;
+    }
+    private boolean hasOfflinePermission(String player, String perm) {
+        PermissionsHandler ph = PermissionsHandler.getHandler();
+        if(ph != null) {
+            if(ph.hasOfflinePermission(player, perm)) {
+                return true;
+            }
+        }
+        return permissions.hasOfflinePermission(player, perm);
+    }
+
     /**
      * Server access abstraction class
      */
@@ -531,7 +568,7 @@ public class DynmapPlugin
             if(bl.isBanned(player)) {
                 return Collections.emptySet();
             }
-            Set<String> rslt = permissions.hasOfflinePermissions(player, perms);
+            Set<String> rslt = hasOfflinePermissions(player, perms);
             if (rslt == null) {
                 rslt = new HashSet<String>();
                 if(plugin.isOp(player)) {
@@ -547,7 +584,7 @@ public class DynmapPlugin
             if(bl.isBanned(player)) {
                 return false;
             }
-            return permissions.hasOfflinePermission(player, perm);
+            return hasOfflinePermission(player, perm);
         }
         /**
          * Render processor helper - used by code running on render threads to request chunk snapshot cache from server/sync thread
@@ -891,7 +928,7 @@ public class DynmapPlugin
         public boolean hasPrivilege(String privid)
         {
             if(player != null)
-                return permissions.has(player, privid);
+                return hasPerm(player, privid);
             return false;
         }
         @Override
