@@ -3,6 +3,9 @@ package org.dynmap.forge;
 import java.io.IOException;
 import java.util.List;
 
+import org.dynmap.DynmapCommonAPI; 
+import org.dynmap.DynmapCommonAPIListener;
+
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
@@ -14,12 +17,14 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.Mod.ServerStarted;
+import cpw.mods.fml.common.Mod.ServerStarting;
 import cpw.mods.fml.common.Mod.ServerStopping;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent; 
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
@@ -36,6 +41,18 @@ public class mod_Dynmap
     
     public static DynmapPlugin plugin;
 
+    public class APICallback extends DynmapCommonAPIListener {
+        @Override
+        public void apiListenerAdded() {
+            if(plugin == null) {
+                plugin = proxy.startServer();
+            }
+        }
+        @Override
+        public void apiEnabled(DynmapCommonAPI api) {
+        }
+    } 
+    
     public class LoadingCallback implements net.minecraftforge.common.ForgeChunkManager.LoadingCallback {
         @Override
         public void ticketsLoaded(List<Ticket> tickets, World world) {
@@ -63,16 +80,23 @@ public class mod_Dynmap
     @PostInit
     public void postInit(FMLPostInitializationEvent event)
     {
+        DynmapCommonAPIListener.register(new APICallback()); 
     }
 
+    @ServerStarting
+    public void serverStarting(FMLServerStartingEvent event) {
+    }
+    
     @ServerStarted
     public void serverStarted(FMLServerStartedEvent event)
     {
-    	plugin = proxy.startServer();
+        if(plugin == null)
+            plugin = proxy.startServer();
     }
     @ServerStopping
     public void serverStopping(FMLServerStoppingEvent event)
     {
     	proxy.stopServer(plugin);
+    	plugin = null;
     }
 }

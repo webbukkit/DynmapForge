@@ -324,6 +324,8 @@ public class DynmapPlugin
         @Override
         public DynmapPlayer[] getOnlinePlayers()
         {
+            if(server.getConfigurationManager() == null)
+                return new DynmapPlayer[0];
             List<?> playlist = server.getConfigurationManager().playerEntityList;
             int pcnt = playlist.size();
             DynmapPlayer[] dplay = new DynmapPlayer[pcnt];
@@ -692,12 +694,18 @@ public class DynmapPlugin
         @Override
         public int getMaxPlayers()
         {
-            return server.getMaxPlayers();
+            if(server.getConfigurationManager() != null) 
+                return server.getMaxPlayers();
+            else
+                return 0;
         }
         @Override
         public int getCurrentPlayers()
         {
-            return server.getConfigurationManager().playerEntityList.size();
+            if(server.getConfigurationManager() != null) 
+                return server.getConfigurationManager().playerEntityList.size();
+            else
+                return 0;
         }
 
 		@Override
@@ -1074,12 +1082,13 @@ public class DynmapPlugin
         loadWorlds();
         
         /* Initialized the currently loaded worlds */
-        for (WorldServer world : server.worldServers)
-        {
-            ForgeWorld w = this.getWorld(world);
-            if(DimensionManager.getWorld(world.provider.dimensionId) == null) { /* If not loaded */
-            	w.setWorldUnloaded();
-    		}
+        if(server.worldServers != null) { 
+            for (WorldServer world : server.worldServers) {
+                ForgeWorld w = this.getWorld(world);
+                if(DimensionManager.getWorld(world.provider.dimensionId) == null) { /* If not loaded */
+                    w.setWorldUnloaded();
+                }
+            }
         }
         for(ForgeWorld w : worlds.values()) {
             if (core.processWorldLoad(w)) {   /* Have core process load first - fire event listeners if good load after */
