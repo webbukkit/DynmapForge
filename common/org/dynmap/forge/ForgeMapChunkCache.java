@@ -70,8 +70,6 @@ public class ForgeMapChunkCache implements MapChunkCache
     /* AnvilChunkLoaderPending fields */
     private static Field chunkCoord = null;
     private static Field nbtTag = null;
-
-    private static int loadcnt = 0;
     
     private World w;
     private DynmapWorld dw;
@@ -1160,12 +1158,6 @@ public class ForgeMapChunkCache implements MapChunkCache
                 /* And restore current chunk loader */
                 currentchunkloader.set(cps,  cur_ccl);
                 noCreateLoader.ww = null;
-            }
-            loadcnt++;
-            if(loadcnt >= 50) {
-                cps.unload100OldestChunks();
-                System.out.println(cps.makeString());
-                loadcnt = 0;
             }
         }
         catch (IllegalArgumentException iax)
