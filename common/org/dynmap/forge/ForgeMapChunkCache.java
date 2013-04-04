@@ -6,6 +6,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Set;
@@ -64,11 +65,14 @@ public class ForgeMapChunkCache implements MapChunkCache
     /* AnvilChunkLoader fields */
     private static Field chunksToRemove = null; // List
     private static Field pendingAnvilChunksCoordinates = null; // Set
+    private static Field pendingAnvilChunksMCPC; // LinkedHashMap
     private static Field syncLockObject = null; // Object
     /* AnvilChunkLoaderPending fields */
     private static Field chunkCoord = null;
     private static Field nbtTag = null;
 
+    private static int loadcnt = 0;
+    
     private World w;
     private DynmapWorld dw;
     private ChunkProviderServer cps;
@@ -1017,12 +1021,15 @@ public class ForgeMapChunkCache implements MapChunkCache
     		        pendingAnvilChunksCoordinates = f[i];
     		        pendingAnvilChunksCoordinates.setAccessible(true);
     		    }
+    		    else if((pendingAnvilChunksMCPC == null) && (f[i].getType().equals(java.util.LinkedHashMap.class))) {
+    		        pendingAnvilChunksMCPC = f[i];
+    		        pendingAnvilChunksMCPC.setAccessible(true);
+    		    }
     		    else if((syncLockObject == null) && (f[i].getType().equals(Object.class))) {
     		        syncLockObject = f[i];
     		        syncLockObject.setAccessible(true);
     		    }
     		}
-
 			if (((unloadqueue == null) && ((unloadqueue_mcpc == null) || (unloadqueue_mcpc_contains == null))) || 
 			        (currentchunkloader == null))
     		{
@@ -1113,11 +1120,17 @@ public class ForgeMapChunkCache implements MapChunkCache
         isSectionNotEmpty = new boolean[snapcnt][];
     }
 
+    private static boolean ldchunk = false;
+    
     private Chunk loadChunkNoGenerate(int x, int z)
     {
         if ((cps == null) || (currentchunkloader == null))
         {
             return null;
+        }
+        if(!ldchunk) {
+            Log.info("Loading chunks without generating");
+            ldchunk = true;
         }
 
         Chunk c = null;
@@ -1148,6 +1161,12 @@ public class ForgeMapChunkCache implements MapChunkCache
                 currentchunkloader.set(cps,  cur_ccl);
                 noCreateLoader.ww = null;
             }
+            loadcnt++;
+            if(loadcnt >= 50) {
+                cps.unload100OldestChunks();
+                System.out.println(cps.makeString());
+                loadcnt = 0;
+            }
         }
         catch (IllegalArgumentException iax)
         {
@@ -1165,27 +1184,46 @@ public class ForgeMapChunkCache implements MapChunkCache
         return c;
     }
     
+    private static boolean rdchunk = false;
+    
+    private boolean readChunkActive = true;
+    
     public NBTTagCompound readChunk(int x, int z) {
         if((cps == null) || (!(cps.currentChunkLoader instanceof AnvilChunkLoader)) ||
-                (chunksToRemove == null) || (pendingAnvilChunksCoordinates == null) ||
+                (((chunksToRemove == null) || (pendingAnvilChunksCoordinates == null)) && (pendingAnvilChunksMCPC == null)) ||
                 (syncLockObject == null)) {
+            readChunkActive = false;
             return null;
+        }
+        readChunkActive = true;
+        if(!rdchunk) {
+            Log.info("Reading chunks without loading/activating");
+            rdchunk = true;
         }
         try {
             AnvilChunkLoader acl = (AnvilChunkLoader)cps.currentChunkLoader;
-            List chunkstoremove = (List)chunksToRemove.get(acl);
-            Set pendingcoords = (Set)pendingAnvilChunksCoordinates.get(acl);
+            List chunkstoremove = null;
+            Set pendingcoords = null;
+            LinkedHashMap pendingsavesmcpc = null;
+            
+            if (pendingAnvilChunksMCPC != null) {
+                pendingsavesmcpc = (LinkedHashMap)pendingAnvilChunksMCPC.get(acl);
+            }
+            else {
+                chunkstoremove = (List)chunksToRemove.get(acl);
+                pendingcoords = (Set)pendingAnvilChunksCoordinates.get(acl);
+            }
             Object synclock = syncLockObject.get(acl);
 
             NBTTagCompound rslt = null;
             ChunkCoordIntPair coord = new ChunkCoordIntPair(x, z);
 
             synchronized (synclock) {
-                if (pendingcoords.contains(coord)) {
-                    for (int i = 0; i < chunkstoremove.size(); i++) {
-                        Object o = chunkstoremove.get(i);
+                if (pendingAnvilChunksMCPC != null) {
+                    Object rec = pendingsavesmcpc.get(coord);
+                    if(rec != null) {
                         if (chunkCoord == null) {
-                            Field[] f = o.getClass().getDeclaredFields();
+                            Field[] f = rec.getClass().getDeclaredFields();
                             for(Field ff : f) {
                                 if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
                                     chunkCoord = ff;
@@ -1195,11 +1233,30 @@ public class ForgeMapChunkCache implements MapChunkCache
                                 }
                             }
                         }
-                        ChunkCoordIntPair occ = (ChunkCoordIntPair)chunkCoord.get(o);
-                        
-                        if (occ.equals(coord)) {
-                            rslt = (NBTTagCompound)nbtTag.get(o);
-                            break;
+                        rslt = (NBTTagCompound)nbtTag.get(rec);
+                    }
+                }
+                else {
+                    if (pendingcoords.contains(coord)) {
+                        for (int i = 0; i < chunkstoremove.size(); i++) {
+                            Object o = chunkstoremove.get(i);
+                            if (chunkCoord == null) {
+                                Field[] f = o.getClass().getDeclaredFields();
+                                for(Field ff : f) {
+                                    if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
+                                        chunkCoord = ff;
+                                    }
+                                    else if((nbtTag == null) && (ff.getType().equals(NBTTagCompound.class))) {
+                                        nbtTag = ff;
+                                    }
+                                }
+                            }
+                            ChunkCoordIntPair occ = (ChunkCoordIntPair)chunkCoord.get(o);
+
+                            if (occ.equals(coord)) {
+                                rslt = (NBTTagCompound)nbtTag.get(o);
+                                break;
+                            }
                         }
                     }
                 }
@@ -1342,7 +1399,7 @@ public class ForgeMapChunkCache implements MapChunkCache
             if (!wasLoaded)
             {
                 nbt = readChunk(chunk.x, chunk.z);
-                if(nbt == null) {
+                if((nbt == null) && (!readChunkActive)) {
                     c = loadChunkNoGenerate(chunk.x, chunk.z);
                 }
                 didload = (c != null) || (nbt != null);
