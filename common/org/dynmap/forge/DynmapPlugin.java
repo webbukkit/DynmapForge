@@ -21,6 +21,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
+import net.minecraft.block.Block;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandHandler;
 import net.minecraft.command.ICommandManager;
@@ -1013,6 +1014,28 @@ public class DynmapPlugin
         if(cnt > 0)
         	Log.info("Added " + cnt + " custom biome mappings");
     }
+    
+    private String[] getBiomeNames() {
+        String[] lst = new String[BiomeGenBase.biomeList.length];
+        for(int i = 0; i < BiomeGenBase.biomeList.length; i++) {
+            BiomeGenBase bb = BiomeGenBase.biomeList[i];
+            if (bb != null) {
+                lst[i] = bb.biomeName;
+            }
+        }
+        return lst;
+    }
+    
+    private String[] getBlockNames() {
+        String[] lst = new String[Block.blocksList.length];
+        for(int i = 0; i < Block.blocksList.length; i++) {
+            Block b = Block.blocksList[i];
+            if(b != null) {
+                lst[i] = b.getBlockName();
+            }
+        }
+        return lst;
+    }
 
     public void onEnable()
     {
@@ -1056,6 +1079,8 @@ public class DynmapPlugin
         core.setServer(fserver);
         ForgeMapChunkCache.init();
         core.setTriggerDefault(TRIGGER_DEFAULTS);
+        core.setBiomeNames(getBiomeNames());
+        core.setBlockNames(getBlockNames());
         
         if(!core.initConfiguration(null))
         {
