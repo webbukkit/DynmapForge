@@ -1031,7 +1031,10 @@ public class DynmapPlugin
         for(int i = 0; i < Block.blocksList.length; i++) {
             Block b = Block.blocksList[i];
             if(b != null) {
-                lst[i] = b.unlocalizedName;
+                lst[i] = b.getUnlocalizedName();
+                if(lst[i].startsWith("tile.")) {
+                    lst[i] = lst[i].substring(5);
+                }
             }
         }
         return lst;
