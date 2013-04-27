@@ -84,6 +84,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     private List<VisibilityLimit> visible_limits = null;
     private List<VisibilityLimit> hidden_limits = null;
     private boolean isempty = true;
+    private int snapcnt;
     private ChunkSnapshot[] snaparray; /* Index = (x-x_min) + ((z-z_min)*x_dim) */
     private DynIntHashMap[] snaptile;
     private byte[][] sameneighborbiomecnt;
@@ -184,14 +185,11 @@ public class ForgeMapChunkCache implements MapChunkCache
             this.bz = z & 0xF;
             this.off = bx + (bz << 4);
 
-            try
-            {
-                snap = snaparray[chunkindex];
-            }
-            catch (ArrayIndexOutOfBoundsException aioobx)
-            {
+            if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
                 snap = EMPTY;
-                exceptions++;
+            }
+            else {
+                snap = snaparray[chunkindex];
             }
 
             laststep = BlockStep.Y_MINUS;
@@ -269,10 +267,13 @@ public class ForgeMapChunkCache implements MapChunkCache
 
             for (int i = 0; i < x_size; i++)
             {
-                initialize(i + x_base, 64, z_base);
-
                 for (int j = 0; j < z_size; j++)
                 {
+                    if (j == 0)
+                        initialize(i + x_base, 64, z_base);
+                    else
+                        stepPosition(BlockStep.Z_PLUS);
+
                     int bb = snap.getBiome(bx, bz);
                     BiomeMap bm = BiomeMap.byBiomeID(bb);
 
@@ -307,7 +308,6 @@ public class ForgeMapChunkCache implements MapChunkCache
                     }
 
                     sameneighborbiomecnt[i][j] = (byte)cnt;
-                    stepPosition(BlockStep.Z_PLUS);
                 }
             }
         }
@@ -573,17 +573,15 @@ public class ForgeMapChunkCache implements MapChunkCache
 
                     if (bx == 16)   /* Next chunk? */
                     {
-                        try
-                        {
-                            bx = 0;
-                            off -= 16;
-                            chunkindex++;
-                            snap = snaparray[chunkindex];
-                        }
-                        catch (ArrayIndexOutOfBoundsException aioobx)
-                        {
+                        bx = 0;
+                        off -= 16;
+                        chunkindex++;
+                        snap = snaparray[chunkindex];
+                        if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
                             snap = EMPTY;
-                            exceptions++;
+                        }
+                        else {
+                            snap = snaparray[chunkindex];
                         }
                     }
 
@@ -606,17 +604,14 @@ public class ForgeMapChunkCache implements MapChunkCache
 
                     if (bz == 16)   /* Next chunk? */
                     {
-                        try
-                        {
-                            bz = 0;
-                            off -= 256;
-                            chunkindex += x_dim;
-                            snap = snaparray[chunkindex];
-                        }
-                        catch (ArrayIndexOutOfBoundsException aioobx)
-                        {
+                        bz = 0;
+                        off -= 256;
+                        chunkindex += x_dim;
+                        if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
                             snap = EMPTY;
-                            exceptions++;
+                        }
+                        else {
+                            snap = snaparray[chunkindex];
                         }
                     }
 
@@ -629,20 +624,16 @@ public class ForgeMapChunkCache implements MapChunkCache
 
                     if (bx == -1)   /* Next chunk? */
                     {
-                        try
-                        {
-                            bx = 15;
-                            off += 16;
-                            chunkindex--;
+                        bx = 15;
+                        off += 16;
+                        chunkindex--;
+                        if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
+                            snap = EMPTY;
+                        }
+                        else {
                             snap = snaparray[chunkindex];
                         }
-                        catch (ArrayIndexOutOfBoundsException aioobx)
-                        {
-                            snap = EMPTY;
-                            exceptions++;
-                        }
                     }
-
                     break;
 
                 case 4:
@@ -662,17 +653,14 @@ public class ForgeMapChunkCache implements MapChunkCache
 
                     if (bz == -1)   /* Next chunk? */
                     {
-                        try
-                        {
-                            bz = 15;
-                            off += 256;
-                            chunkindex -= x_dim;
-                            snap = snaparray[chunkindex];
-                        }
-                        catch (ArrayIndexOutOfBoundsException aioobx)
-                        {
+                        bz = 15;
+                        off += 256;
+                        chunkindex -= x_dim;
+                        if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
                             snap = EMPTY;
-                            exceptions++;
+                        }
+                        else {
+                            snap = snaparray[chunkindex];
                         }
                     }
 
@@ -1127,7 +1115,7 @@ public class ForgeMapChunkCache implements MapChunkCache
             x_dim = x_max - x_min + 1;
         }
 
-        int snapcnt = x_dim * (z_max-z_min+1);
+        snapcnt = x_dim * (z_max-z_min+1);
         snaparray = new ChunkSnapshot[snapcnt];
         snaptile = new DynIntHashMap[snapcnt];
         isSectionNotEmpty = new boolean[snapcnt][];
