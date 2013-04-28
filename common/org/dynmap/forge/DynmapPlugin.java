@@ -22,6 +22,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandHandler;
 import net.minecraft.command.ICommandManager;
@@ -1036,6 +1037,29 @@ public class DynmapPlugin
         }
         return lst;
     }
+    
+    private int[] getBlockMaterialMap() {
+        int[] map = new int[Block.blocksList.length];
+        ArrayList<Material> mats = new ArrayList<Material>();
+        for (int i = 0; i < map.length; i++) {
+            Block b = Block.blocksList[i];
+            if(b != null) {
+                Material mat = b.blockMaterial;
+                if (mat != null) {
+                    map[i] = mats.indexOf(mat);
+                    if (map[i] < 0) {
+                        map[i] = mats.size();
+                        mats.add(mat);
+                    }
+                }
+                else {
+                    map[i] = -1;
+                }
+            }
+        }
+        return map;
+    }
+
 
     public void onEnable()
     {
@@ -1081,6 +1105,7 @@ public class DynmapPlugin
         core.setTriggerDefault(TRIGGER_DEFAULTS);
         core.setBiomeNames(getBiomeNames());
         core.setBlockNames(getBlockNames());
+        core.setBlockMaterialMap(getBlockMaterialMap());
         
         if(!core.initConfiguration(null))
         {
