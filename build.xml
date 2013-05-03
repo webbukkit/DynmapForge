@@ -2,9 +2,9 @@
 	<property environment="env"/>
 
 	<!-- Properties (version) -->
-	<property name="mc.version" value="1.5.1"/>
-	<property name="forge.baseversion" value="7.7.1"/>
-	<property name="forge.build" value="624"/>
+	<property name="mc.version" value="1.5.2"/>
+	<property name="forge.baseversion" value="7.8.0"/>
+	<property name="forge.build" value="684"/>
 	<property name="project.version" value="1.7"/>
 	<property name="project.devversion" value="-alpha-2"/>
 
