@@ -90,6 +90,7 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.common.FMLLog;
 
 public class DynmapPlugin
 {
@@ -236,6 +237,7 @@ public class DynmapPlugin
     public DynmapPlugin()
     {
         plugin = this;
+        Log.setLoggerParent(FMLLog.getLogger());
     }
 
     public boolean isOp(String player) {
