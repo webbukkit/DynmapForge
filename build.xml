@@ -54,9 +54,6 @@
   	  		<dependency groupId="org.dynmap" artifactId="DynmapCore" version="${project.version}" type="jar" scope="compile" />
 		  	<dependency groupId="org.dynmap" artifactId="DynmapCoreAPI" version="${project.version}" type="jar" scope="compile" />
 		</artifact:dependencies>
-		<artifact:dependencies filesetId="package.dependency.fileset">
-		  	<dependency groupId="org.dynmap" artifactId="DynmapCore" version="${project.version}" type="zip" classifier="bin" />
-		</artifact:dependencies>
 	</target>
 
 	<available property="forge-exists" file="${download.dir}/${forge.name}"/>
@@ -194,18 +191,8 @@
 				<exclude name="META-INF/*"/>
 			</patternset>
 		</unzip>
-		<mkdir dir="${jar.dir}/zip/mods"/>
-		<jar destfile="${jar.dir}/zip/mods/${ant.project.name}-${project.version}.zip" basedir="${classes.dir}"/>
-		<copy todir="${jar.dir}">
-		  	<fileset refid="package.dependency.fileset" />
-  			<!-- This mapper strips off all leading directory information -->
-  			<mapper type="flatten" />
-		</copy>
-		<mkdir dir="${jar.dir}/zip/dynmap"/>
-		<unzip src="${jar.dir}/DynmapCore-${project.version}-bin.zip" dest="${jar.dir}/zip/dynmap"/>
-		<copy todir="${jar.dir}/zip/dynmap" file="${resources.dir}/permissions.yml.example"/>
-
-		<zip destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.zip" basedir="${jar.dir}/zip" /> 
+		<copy todir="${classes.dir}/extracted" file="${resources.dir}/permissions.yml.example"/>
+		<jar destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.jar" basedir="${classes.dir}"/>
 	</target>
 
 	<!-- Default target to run -->

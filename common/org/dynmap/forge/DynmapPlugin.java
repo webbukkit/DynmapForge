@@ -1097,6 +1097,7 @@ public class DynmapPlugin
         }
 
         /* Inject dependencies */
+        core.setPluginJarFile(mod_Dynmap.jarfile);
         core.setPluginVersion(Version.VER);
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);

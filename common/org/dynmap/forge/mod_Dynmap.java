@@ -1,5 +1,6 @@
 package org.dynmap.forge;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -40,6 +41,8 @@ public class mod_Dynmap
     public static Proxy proxy;
     
     public static DynmapPlugin plugin;
+    
+    public static File jarfile;
 
     public class APICallback extends DynmapCommonAPIListener {
         @Override
@@ -67,6 +70,7 @@ public class mod_Dynmap
     @PreInit
     public void preInit(FMLPreInitializationEvent event)
     {
+        jarfile = event.getSourceFile();
     }
 
     @Init
