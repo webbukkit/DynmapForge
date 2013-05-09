@@ -65,6 +65,7 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.MapType;
 import org.dynmap.PlayerList;
+import org.dynmap.forge.mod_Dynmap;
 import org.dynmap.forge.permissions.FilePermissions;
 import org.dynmap.forge.permissions.OpPermissions;
 import org.dynmap.forge.permissions.ForgeEssentialsPermissions;
@@ -1101,6 +1102,7 @@ public class DynmapPlugin
         }
 
         /* Inject dependencies */
+        core.setPluginJarFile(mod_Dynmap.jarfile);
         core.setPluginVersion(Version.VER);
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
