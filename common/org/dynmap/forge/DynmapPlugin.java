@@ -65,6 +65,9 @@ import org.dynmap.Log;
 import org.dynmap.MapManager;
 import org.dynmap.MapType;
 import org.dynmap.PlayerList;
+import org.dynmap.forge.DmapCommand;
+import org.dynmap.forge.DmarkerCommand;
+import org.dynmap.forge.DynmapCommand;
 import org.dynmap.forge.mod_Dynmap;
 import org.dynmap.forge.permissions.FilePermissions;
 import org.dynmap.forge.permissions.OpPermissions;
@@ -1162,9 +1165,9 @@ public class DynmapPlugin
 
         if(cm instanceof CommandHandler) {
         	CommandHandler scm = (CommandHandler)cm;
-        	scm.registerCommand(new DynmapCommandHandler("dynmap"));
-        	scm.registerCommand(new DynmapCommandHandler("dmap"));
-        	scm.registerCommand(new DynmapCommandHandler("dmarker"));
+            scm.registerCommand(new DynmapCommand(this));
+            scm.registerCommand(new DmapCommand(this));
+            scm.registerCommand(new DmarkerCommand(this));
         }
         /* Submit metrics to mcstats.org */
         initMetrics();
@@ -1201,31 +1204,7 @@ public class DynmapPlugin
         Log.info("Disabled");
     }
 
-    private class DynmapCommandHandler extends CommandBase
-    {
-        private String cmd;
-
-        public DynmapCommandHandler(String cmd)
-        {
-            this.cmd = cmd;
-        }
-
-        public String getCommandName()
-        {
-            return cmd;
-        }
-
-        public void processCommand(ICommandSender sender, String[] args)
-        {
-            onCommand(sender, cmd, args);
-        }
-        
-        public boolean canCommandSenderUseCommand(ICommandSender sender) {
-            return true;
-        }
-    }
-
-    private void onCommand(ICommandSender sender, String cmd, String[] args)
+    void onCommand(ICommandSender sender, String cmd, String[] args)
     {
         DynmapCommandSender dsender;
 
@@ -1647,3 +1626,46 @@ public class DynmapPlugin
         }
     }
 }
+
+class DynmapCommandHandler extends CommandBase
+{
+    private String cmd;
+    private DynmapPlugin plugin;
+
+    public DynmapCommandHandler(String cmd, DynmapPlugin p)
+    {
+        this.cmd = cmd;
+        this.plugin = p;
+    }
+
+    public String getCommandName()
+    {
+        return cmd;
+    }
+
+    public void processCommand(ICommandSender sender, String[] args)
+    {
+        plugin.onCommand(sender, cmd, args);
+    }
+    
+    public boolean canCommandSenderUseCommand(ICommandSender sender) {
+        return true;
+    }
+}
+
+class DynmapCommand extends DynmapCommandHandler {
+    DynmapCommand(DynmapPlugin p) {
+        super("dynmap", p);
+    }
+}
+class DmapCommand extends DynmapCommandHandler {
+    DmapCommand(DynmapPlugin p) {
+        super("dmap", p);
+    }
+}
+class DmarkerCommand extends DynmapCommandHandler {
+    DmarkerCommand(DynmapPlugin p) {
+        super("dmarker", p);
+    }
+}
+
