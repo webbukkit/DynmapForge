@@ -264,7 +264,7 @@ public class ChunkSnapshot
 
     public int getBiome(int x, int z)
     {
-        return biome[z << 4 | x];
+        return 255 & biome[z << 4 | x];
     }
 
     public final long getCaptureFullTime()
