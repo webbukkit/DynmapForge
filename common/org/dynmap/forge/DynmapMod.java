@@ -83,7 +83,8 @@ public class DynmapMod
     @PostInit
     public void postInit(FMLPostInitializationEvent event)
     {
-        DynmapCommonAPIListener.register(new APICallback());
+        if (!(proxy instanceof ClientProxy))
+            DynmapCommonAPIListener.register(new APICallback());
     }
     
     @ServerStarting
@@ -93,6 +94,8 @@ public class DynmapMod
     @ServerStarted
     public void serverStarted(FMLServerStartedEvent event)
     {
+        if (proxy instanceof ClientProxy)
+            DynmapCommonAPIListener.register(new APICallback());
         if(plugin == null)
             plugin = proxy.startServer();
     }

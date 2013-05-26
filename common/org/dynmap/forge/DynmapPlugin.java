@@ -1256,6 +1256,7 @@ public class DynmapPlugin
     	@ForgeSubscribe
     	public void handleWorldLoad(WorldEvent.Load event) {
 			if(!core_enabled) return;
+			if (!(event.world instanceof WorldServer)) return;
             final ForgeWorld w = getWorld(event.world);
             /* This event can be called from off server thread, so push processing there */
             core.getServer().scheduleServerTask(new Runnable() {
@@ -1268,6 +1269,7 @@ public class DynmapPlugin
     	@ForgeSubscribe
     	public void handleWorldUnload(WorldEvent.Unload event) {
 			if(!core_enabled) return;
+            if (!(event.world instanceof WorldServer)) return;
             final ForgeWorld fw = getWorld(event.world);
             if(fw != null) {
                 /* This event can be called from off server thread, so push processing there */
@@ -1287,6 +1289,7 @@ public class DynmapPlugin
     	@ForgeSubscribe
     	public void handleChunkLoad(ChunkEvent.Load event) {
 			if(!core_enabled) return;
+            if (!(event.world instanceof WorldServer)) return;
 			if(!onchunkgenerate) return;
 			Chunk c = event.getChunk();
 			if((c != null) && (c.lastSaveTime == 0)) {	// If new chunk?
@@ -1312,6 +1315,7 @@ public class DynmapPlugin
     	@ForgeSubscribe
     	public void handleChunkPopulate(PopulateChunkEvent.Post event) {
 			if(!core_enabled) return;
+            if (!(event.world instanceof WorldServer)) return;
 			if(!onchunkpopulate) return;
 			Chunk c = event.chunkProvider.loadChunk(event.chunkX, event.chunkZ);
 			int ymin = 0, ymax = 0;
