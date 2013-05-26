@@ -215,7 +215,7 @@ public class DynmapPlugin
             if(t != null)
                 wbr.ticket = t;
             else
-                wbr.ticket = ForgeChunkManager.requestTicket(mod_Dynmap.instance, w, ForgeChunkManager.Type.NORMAL);
+                wbr.ticket = ForgeChunkManager.requestTicket(DynmapMod.instance, w, ForgeChunkManager.Type.NORMAL);
             if(wbr.ticket != null) {
                 ChunkCoordinates cc = w.getSpawnPoint();
                 ChunkCoordIntPair ccip = new ChunkCoordIntPair(cc.posX >> 4, cc.posZ >> 4);
@@ -1106,7 +1106,7 @@ public class DynmapPlugin
         }
 
         /* Inject dependencies */
-        core.setPluginJarFile(mod_Dynmap.jarfile);
+        core.setPluginJarFile(DynmapMod.jarfile);
         core.setPluginVersion(Version.VER);
         core.setMinecraftVersion(mcver);
         core.setDataFolder(dataDirectory);
@@ -1498,7 +1498,7 @@ public class DynmapPlugin
 
     private void initMetrics() {
         try {
-        	Mod m = mod_Dynmap.class.getAnnotation(Mod.class);
+        	Mod m = DynmapMod.class.getAnnotation(Mod.class);
             metrics = new ForgeMetrics(m.name(), m.version());
             ;
             ForgeMetrics.Graph features = metrics.createGraph("Features Used");
