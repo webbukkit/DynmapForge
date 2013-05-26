@@ -1327,13 +1327,15 @@ public class DynmapPlugin
 			Chunk c = event.chunkProvider.loadChunk(event.chunkX, event.chunkZ);
 			int ymin = 0, ymax = 0;
 			if(c != null) {
+                ForgeWorld fw = getWorld(event.world, false);
+                if (fw == null) return;
+                
 				ExtendedBlockStorage[] sections = c.getBlockStorageArray();
 				for(int i = 0; i < sections.length; i++) {
 					if((sections[i] != null) && (sections[i].isEmpty() == false)) {
 						ymax = 16*(i+1);
 					}
 				}
-	            ForgeWorld fw = getWorld(event.world);
 				int x = c.xPosition << 4;
 				int z = c.zPosition << 4;
 				if(ymax > 0)
