@@ -30,11 +30,11 @@ import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 @Mod(modid = "Dynmap", name = "Dynmap", version = Version.VER)
-public class mod_Dynmap
+public class DynmapMod
 {
     // The instance of your mod that Forge uses.
     @Instance("Dynmap")
-    public static mod_Dynmap instance;
+    public static DynmapMod instance;
 
     // Says where the client and server 'proxy' code is loaded.
     @SidedProxy(clientSide = "org.dynmap.forge.ClientProxy", serverSide = "org.dynmap.forge.Proxy")
@@ -77,7 +77,7 @@ public class mod_Dynmap
     public void load(FMLInitializationEvent event)
     {
         /* Set up for chunk loading notice from chunk manager */
-        ForgeChunkManager.setForcedChunkLoadingCallback(mod_Dynmap.instance, new LoadingCallback());
+        ForgeChunkManager.setForcedChunkLoadingCallback(DynmapMod.instance, new LoadingCallback());
     }
 
     @PostInit
