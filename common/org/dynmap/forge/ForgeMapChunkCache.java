@@ -42,6 +42,8 @@ import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
 import org.dynmap.Log;
 import org.dynmap.common.BiomeMap;
+import org.dynmap.forge.HashMap;
+import org.dynmap.forge.String;
 import org.dynmap.forge.SnapshotCache.SnapshotRec;
 import org.dynmap.hdmap.HDBlockModels;
 import org.dynmap.renderer.RenderPatchFactory;
@@ -1120,7 +1122,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     }
 
     private static boolean ldchunk = false;
-    
+
     private Chunk loadChunkNoGenerate(int x, int z)
     {
         if ((cps == null) || (currentchunkloader == null))
@@ -1269,6 +1271,58 @@ public class ForgeMapChunkCache implements MapChunkCache
         } catch (Exception exc) {
             return null;
         }
+    }
+
+    private Object getNBTValue(NBTBase v) {
+        Object val = null;
+        switch(v.getId()) {
+            case 1: // Byte
+                val = Byte.valueOf(((NBTTagByte)v).data);
+                break;
+            case 2: // Short
+                val = Short.valueOf(((NBTTagShort)v).data);
+                break;
+            case 3: // Int
+                val = Integer.valueOf(((NBTTagInt)v).data);
+                break;
+            case 4: // Long
+                val = Long.valueOf(((NBTTagLong)v).data);
+                break;
+            case 5: // Float
+                val = Float.valueOf(((NBTTagFloat)v).data);
+                break;
+            case 6: // Double
+                val = Double.valueOf(((NBTTagDouble)v).data);
+                break;
+            case 7: // Byte[]
+                val = ((NBTTagByteArray)v).byteArray;
+                break;
+            case 8: // String
+                val = ((NBTTagString)v).data;
+                break;
+            case 9: // List
+                NBTTagList tl = (NBTTagList) v;
+                ArrayList<Object> vlist = new ArrayList<Object>();
+                for (int i = 0; i < tl.tagCount(); i++) {
+                    NBTBase tg = tl.tagAt(i);
+                    vlist.add(getNBTValue(tg));
+                }
+                val = vlist;
+                break;
+            case 10: // Map
+                NBTTagCompound tc = (NBTTagCompound) v;
+                HashMap<String, Object> vmap = new HashMap<String, Object>();
+                for (Object t : tc.getTags()) {
+                    NBTBase tg = (NBTBase) t;
+                    vmap.put(tg.getName(), getNBTValue(tg));
+                }
+                val = vmap;
+                break;
+            case 11: // Int[]
+                val = ((NBTTagIntArray)v).intArray;
+                break;
+        }
+        return val;
     }
 
     public int loadChunks(int max_to_load)
@@ -1454,36 +1508,7 @@ public class ForgeMapChunkCache implements MapChunkCache
                                 for(String id: te_fields) {
                                     NBTBase v = tc.getTag(id);  /* Get field */
                                     if(v != null) {
-                                        Object val = null;
-                                        switch(v.getId()) {
-                                            case 1: // Byte
-                                                val = Byte.valueOf(((NBTTagByte)v).data);
-                                                break;
-                                            case 2: // Short
-                                                val = Short.valueOf(((NBTTagShort)v).data);
-                                                break;
-                                            case 3: // Int
-                                                val = Integer.valueOf(((NBTTagInt)v).data);
-                                                break;
-                                            case 4: // Long
-                                                val = Long.valueOf(((NBTTagLong)v).data);
-                                                break;
-                                            case 5: // Float
-                                                val = Float.valueOf(((NBTTagFloat)v).data);
-                                                break;
-                                            case 6: // Double
-                                                val = Double.valueOf(((NBTTagDouble)v).data);
-                                                break;
-                                            case 7: // Byte[]
-                                                val = ((NBTTagByteArray)v).byteArray;
-                                                break;
-                                            case 8: // String
-                                                val = ((NBTTagString)v).data;
-                                                break;
-                                            case 11: // Int[]
-                                                val = ((NBTTagIntArray)v).intArray;
-                                                break;
-                                        }
+                                        Object val = getNBTValue(v);
                                         if(val != null) {
                                             vals.add(id);
                                             vals.add(val);
@@ -1522,36 +1547,7 @@ public class ForgeMapChunkCache implements MapChunkCache
                                 for(String id: te_fields) {
                                     NBTBase v = tc.getTag(id);  /* Get field */
                                     if(v != null) {
-                                        Object val = null;
-                                        switch(v.getId()) {
-                                            case 1: // Byte
-                                                val = Byte.valueOf(((NBTTagByte)v).data);
-                                                break;
-                                            case 2: // Short
-                                                val = Short.valueOf(((NBTTagShort)v).data);
-                                                break;
-                                            case 3: // Int
-                                                val = Integer.valueOf(((NBTTagInt)v).data);
-                                                break;
-                                            case 4: // Long
-                                                val = Long.valueOf(((NBTTagLong)v).data);
-                                                break;
-                                            case 5: // Float
-                                                val = Float.valueOf(((NBTTagFloat)v).data);
-                                                break;
-                                            case 6: // Double
-                                                val = Double.valueOf(((NBTTagDouble)v).data);
-                                                break;
-                                            case 7: // Byte[]
-                                                val = ((NBTTagByteArray)v).byteArray;
-                                                break;
-                                            case 8: // String
-                                                val = ((NBTTagString)v).data;
-                                                break;
-                                            case 11: // Int[]
-                                                val = ((NBTTagIntArray)v).intArray;
-                                                break;
-                                        }
+                                        Object val = getNBTValue(v);
                                         if(val != null) {
                                             vals.add(id);
                                             vals.add(val);
