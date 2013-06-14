@@ -10,6 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Set;
+import java.util.HashMap;
 
 import net.minecraft.nbt.CompressedStreamTools;
 import net.minecraft.nbt.NBTBase;
@@ -42,8 +43,6 @@ import org.dynmap.DynmapCore;
 import org.dynmap.DynmapWorld;
 import org.dynmap.Log;
 import org.dynmap.common.BiomeMap;
-import org.dynmap.forge.HashMap;
-import org.dynmap.forge.String;
 import org.dynmap.forge.SnapshotCache.SnapshotRec;
 import org.dynmap.hdmap.HDBlockModels;
 import org.dynmap.renderer.RenderPatchFactory;
