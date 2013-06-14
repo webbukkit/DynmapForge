@@ -102,6 +102,8 @@ public class DynmapPlugin
     private net.minecraft.server.MinecraftServer server;
     public static DynmapPlugin plugin;
     private ChatHandler chathandler;
+    private HashMap<String, Integer> sortWeights = new HashMap<String, Integer>();
+
     // Drop world load ticket after 30 seconds
     private long worldIdleTimeoutNS = 30 * 1000000000L;
     private HashMap<String, ForgeWorld> worlds = new HashMap<String, ForgeWorld>();
@@ -252,6 +254,15 @@ public class DynmapPlugin
             }
         }
         return permissions.has(sender, permission);
+    }
+    private boolean hasPermNode(ICommandSender sender, String permission) {
+        PermissionsHandler ph = PermissionsHandler.getHandler();
+        if(ph != null) {
+            if((sender instanceof EntityPlayer) && ph.hasPermissionNode(sender.getCommandSenderName(), permission)) {
+                return true;
+            }
+        }
+        return permissions.hasPermissionNode(sender, permission);
     }
     private Set<String> hasOfflinePermissions(String player, Set<String> perms) {
         Set<String> rslt = null;
@@ -958,6 +969,29 @@ public class DynmapPlugin
         	}
         	return false;
         }
+        @Override
+        public int getSortWeight() {
+            Integer wt = sortWeights.get(getName());
+            if (wt != null)
+                return wt;
+            return 0;
+        }
+        @Override
+        public void setSortWeight(int wt) {
+            if (wt == 0) {
+                sortWeights.remove(getName());
+            }
+            else {
+                sortWeights.put(getName(), wt);
+            }
+        }
+        @Override
+        public boolean hasPermissionNode(String node) {
+            if(player != null)
+                return hasPermNode(player, node);
+            return false;
+        }
+
     }
     /* Handler for generic console command sender */
     public class ForgeCommandSender implements DynmapCommandSender
@@ -995,6 +1029,10 @@ public class DynmapPlugin
         @Override
         public boolean isOp()
         {
+            return true;
+        }
+        @Override
+        public boolean hasPermissionNode(String node) {
             return true;
         }
     }

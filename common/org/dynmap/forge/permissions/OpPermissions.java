@@ -42,4 +42,11 @@ public class OpPermissions implements PermissionProvider {
         }
         return true;
     }
+    @Override
+    public boolean hasPermissionNode(ICommandSender sender, String permission) {
+        if(sender instanceof EntityPlayer) {
+            return DynmapPlugin.plugin.isOp(sender.getCommandSenderName());
+        }
+        return true;
+    }
 }
