@@ -71,4 +71,10 @@ public class ForgeEssentialsPermissions implements PermissionProvider {
                     : true;
         return rslt;
     }
+    @Override
+    public boolean hasPermissionNode(ICommandSender sender, String permission) {
+        EntityPlayer player = sender instanceof EntityPlayer ? (EntityPlayer) sender : null;
+        return (player != null) ? PermissionsAPI.checkPermAllowed(new PermQueryPlayer(player, permission)) : true;
+    } 
+
 }
