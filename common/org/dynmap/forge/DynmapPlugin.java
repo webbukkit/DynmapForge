@@ -118,7 +118,13 @@ public class DynmapPlugin
     private HashSet<String> modsused = new HashSet<String>();
     private ForgeServer fserver = new ForgeServer();
     private boolean tickregistered = false;
-    
+    // TPS calculator
+    private double tps;
+    private long lasttick;
+    private long avgticklen;
+    // Per tick limit, in nsec
+    private long perTickLimit = (50000000); // 50 ms
+
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkpopulate", "chunkgenerate" };
     
     public static class BlockUpdateRec {
@@ -310,6 +316,7 @@ public class DynmapPlugin
         private Object schedlock = new Object();
         private long cur_tick;
         private long next_id;
+        private long cur_tick_starttime;
         private PriorityQueue<TaskRecord> runqueue = new PriorityQueue<TaskRecord>();
 
         public ForgeServer() {
@@ -659,7 +666,7 @@ public class DynmapPlugin
                 {
                     public Boolean call() throws Exception
                     {
-                        boolean exhausted;
+                        boolean exhausted = true;
 
                         synchronized (loadlock)
                         {
@@ -668,11 +675,15 @@ public class DynmapPlugin
                                 // Update busy state on world
                                 ForgeWorld fw = (ForgeWorld)cc.getWorld();
                                 setBusy(fw.getWorld());
-                                
-                            	chunks_in_cur_tick -= cc.loadChunks(chunks_in_cur_tick);
+                                boolean done = false;
+                                while (!done) {
+                                    int cnt = chunks_in_cur_tick;
+                                    if (cnt > 5) cnt = 5;
+                                    chunks_in_cur_tick -= cc.loadChunks(cnt);
+                                    exhausted = (chunks_in_cur_tick == 0) || ((System.nanoTime() - cur_tick_starttime) > perTickLimit);
+                                    done = exhausted || cc.isDoneLoading();
+                                }
                             }
-
-                            exhausted = (chunks_in_cur_tick == 0);
                         }
 
                         return exhausted;
@@ -735,8 +746,18 @@ public class DynmapPlugin
 		@Override
 		public void tickEnd(EnumSet<TickType> type, Object... tickData) {
 			if (type.contains(TickType.SERVER)) {
-				boolean done = false;
-				TaskRecord tr = null;
+                cur_tick_starttime = System.nanoTime();
+                long elapsed = cur_tick_starttime - lasttick;
+                lasttick = cur_tick_starttime;
+                avgticklen = ((avgticklen * 99) / 100) + (elapsed / 100);
+                tps = (double)1E9 / (double)avgticklen;
+                // Tick core
+                if (core != null) {
+                    core.serverTick(tps);
+                }
+
+                boolean done = false;
+                TaskRecord tr = null;
 
 				while(!blockupdatequeue.isEmpty()) {
 					BlockUpdateRec r = blockupdatequeue.remove();
@@ -754,11 +775,14 @@ public class DynmapPlugin
 					}
 				}
 
+                long now;
+                
 				synchronized(schedlock) {
 					cur_tick++;
+                    now = System.nanoTime();
 					tr = runqueue.peek();
 					/* Nothing due to run */
-					if((tr == null) || (tr.ticktorun > cur_tick)) {
+                    if((tr == null) || (tr.ticktorun > cur_tick) || ((now - cur_tick_starttime) > perTickLimit)) {
 						done = true;
 					}
 					else {
@@ -770,15 +794,17 @@ public class DynmapPlugin
 				}
 				while (!done) {
 					tr.future.run();
-					synchronized(schedlock) {
-						tr = runqueue.peek();
-						/* Nothing due to run */
-						if((tr == null) || (tr.ticktorun > cur_tick)) {
-							done = true;
-						}
-						else {
-							tr = runqueue.poll();
-						}
+
+                    synchronized(schedlock) {
+                        tr = runqueue.peek();
+                        now = System.nanoTime();
+                        /* Nothing due to run */
+                        if((tr == null) || (tr.ticktorun > cur_tick) || ((now - cur_tick_starttime) > perTickLimit)) {
+                            done = true;
+                        }
+                        else {
+                            tr = runqueue.poll();
+                        }
 					}
 				}
 				while(!msgqueue.isEmpty()) {
@@ -818,6 +844,11 @@ public class DynmapPlugin
 			}
 			return loaded;
 		}
+
+        @Override
+        public double getServerTPS() {
+            return tps;
+        }
     }
     /**
      * Player access abstraction class
@@ -1164,6 +1195,12 @@ public class DynmapPlugin
             return;
         }
         core_enabled = true;
+        // Get per tick time limit
+        perTickLimit = core.getMaxTickUseMS() * 1000000;
+        // Prep TPS
+        lasttick = System.nanoTime();
+        tps = 20.0;
+        
         /* Register tick handler */
         if(!tickregistered) {
             TickRegistry.registerTickHandler(fserver, Side.SERVER);
