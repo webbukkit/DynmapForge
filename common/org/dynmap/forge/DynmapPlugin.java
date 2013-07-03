@@ -549,7 +549,7 @@ public class DynmapPlugin
         @Override
         public void broadcastMessage(String msg)
         {
-            MinecraftServer.getServer().getConfigurationManager().sendPacketToAllPlayers(new Packet3Chat(msg));
+            MinecraftServer.getServer().getConfigurationManager().sendPacketToAllPlayers(new Packet3Chat(ChatMessageComponent.func_111066_d(msg)));
             Log.info(StringUtils.stripControlCodes(msg));
         }
         @Override
@@ -999,8 +999,7 @@ public class DynmapPlugin
         @Override
         public void sendMessage(String msg)
         {
-            //TODO: figure out how to send to client without crashing it
-            //player.func_110122_a(ChatMessageComponent.func_111078_c(msg));
+            player.addChatMessage(msg);
         }
         @Override
         public boolean isInvisible() {
