@@ -999,7 +999,8 @@ public class DynmapPlugin
         @Override
         public void sendMessage(String msg)
         {
-        	player.addChatMessage(msg);
+            //TODO: figure out how to send to client without crashing it
+            //player.func_110122_a(ChatMessageComponent.func_111078_c(msg));
         }
         @Override
         public boolean isInvisible() {
