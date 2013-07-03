@@ -36,6 +36,7 @@ import net.minecraft.network.packet.Packet3Chat;
 import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.BanList;
+import net.minecraft.util.ChatMessageComponent;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.StringUtils;
 import net.minecraft.world.ChunkCoordIntPair;
@@ -941,7 +942,7 @@ public class DynmapPlugin
         {
             if (player != null)
             {
-                int h = player.getHealth();
+                int h = (int)player.func_110143_aJ();
                 if(h > 20) h = 20;
                 return h;  // Scale to 20 range
             }
@@ -998,7 +999,7 @@ public class DynmapPlugin
         @Override
         public void sendMessage(String msg)
         {
-        	player.sendChatToPlayer(msg);
+        	player.addChatMessage(msg);
         }
         @Override
         public boolean isInvisible() {
@@ -1054,7 +1055,7 @@ public class DynmapPlugin
         public void sendMessage(String msg)
         {
         	if(sender != null) {
-        		sender.sendChatToPlayer(msg);
+        	    sender.func_110122_a(ChatMessageComponent.func_111077_e(msg));
         	}
         }
 
@@ -1731,6 +1732,11 @@ class DynmapCommandHandler extends CommandBase
     
     public boolean canCommandSenderUseCommand(ICommandSender sender) {
         return true;
+    }
+
+    @Override
+    public String getCommandUsage(ICommandSender icommandsender) {
+        return "Run /" + cmd + " help for details on using command";
     }
 }
 
