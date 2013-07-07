@@ -1055,7 +1055,7 @@ public class DynmapPlugin
         public void sendMessage(String msg)
         {
         	if(sender != null) {
-        	    sender.func_110122_a(ChatMessageComponent.func_111077_e(msg));
+        	    sender.sendChatToPlayer(ChatMessageComponent.func_111077_e(msg));
         	}
         }
 
