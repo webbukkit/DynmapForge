@@ -215,7 +215,7 @@ public class DynmapPlugin
     }
     static void setBusy(World w, Ticket t) {
         if(w == null) return;
-        WorldBusyRecord wbr = busy_worlds.get(w.getWorldInfo().getVanillaDimension());
+        WorldBusyRecord wbr = busy_worlds.get(w.provider.dimensionId);
         if(wbr == null) {   /* Not busy, make ticket and keep spawn loaded */
             Debug.debug("World " + w.getWorldInfo().getWorldName() + "/"+ w.provider.getDimensionName() + " is busy");
             wbr = new WorldBusyRecord();
@@ -227,7 +227,7 @@ public class DynmapPlugin
                 ChunkCoordinates cc = w.getSpawnPoint();
                 ChunkCoordIntPair ccip = new ChunkCoordIntPair(cc.posX >> 4, cc.posZ >> 4);
                 ForgeChunkManager.forceChunk(wbr.ticket, ccip);
-                busy_worlds.put(w.getWorldInfo().getVanillaDimension(), wbr);  // Add to busy list
+                busy_worlds.put(w.provider.dimensionId, wbr);  // Add to busy list
             }
         }
         wbr.last_ts = System.nanoTime();
