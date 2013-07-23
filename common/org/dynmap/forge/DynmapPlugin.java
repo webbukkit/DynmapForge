@@ -1484,13 +1484,13 @@ public class DynmapPlugin
 				int var4, int var5) {
 		}
 		@Override
-		public void func_85102_a(EntityPlayer var1, String var2, double var3,
-				double var5, double var7, float var9, float var10) {
-		}
-		@Override
 		public void broadcastSound(int var1, int var2, int var3, int var4,
 				int var5) {
 		}
+        @Override
+        public void playSoundToNearExcept(EntityPlayer var1, String var2,
+                double var3, double var5, double var7, float var9, float var10) {
+        }
     }
     
     private WorldTracker worldTracker = null;
