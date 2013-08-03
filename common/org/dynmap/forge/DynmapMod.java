@@ -1,6 +1,5 @@
 package org.dynmap.forge;
 
-import java.io.IOException;
 import java.io.File;
 import java.util.List;
 
@@ -11,15 +10,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
-import cpw.mods.fml.common.Mod.ServerStarted;
-import cpw.mods.fml.common.Mod.ServerStarting;
-import cpw.mods.fml.common.Mod.ServerStopping;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -27,7 +20,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent; 
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 
 @Mod(modid = "Dynmap", name = "Dynmap", version = Version.VER)
 public class DynmapMod
@@ -67,39 +59,40 @@ public class DynmapMod
         }
     }
 
-    @PreInit
+    @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         jarfile = event.getSourceFile();
     }
 
-    @Init
+    @EventHandler
     public void load(FMLInitializationEvent event)
     {
         /* Set up for chunk loading notice from chunk manager */
         ForgeChunkManager.setForcedChunkLoadingCallback(DynmapMod.instance, new LoadingCallback());
     }
 
-    @PostInit
+    @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
         if (!(proxy instanceof ClientProxy))
             DynmapCommonAPIListener.register(new APICallback()); 
     }
 
-    @ServerStarting
+    @EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
     }
     
-    @ServerStarted
+    @EventHandler
     public void serverStarted(FMLServerStartedEvent event)
     {
         if (proxy instanceof ClientProxy)
             DynmapCommonAPIListener.register(new APICallback()); 
         if(plugin == null)
             plugin = proxy.startServer();
+        plugin.serverStarted();
     }
-    @ServerStopping
+    @EventHandler
     public void serverStopping(FMLServerStoppingEvent event)
     {
     	proxy.stopServer(plugin);
