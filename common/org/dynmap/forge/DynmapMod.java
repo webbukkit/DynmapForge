@@ -98,6 +98,7 @@ public class DynmapMod
             DynmapCommonAPIListener.register(new APICallback()); 
         if(plugin == null)
             plugin = proxy.startServer();
+        plugin.serverStarted();
     }
     @ServerStopping
     public void serverStopping(FMLServerStoppingEvent event)
