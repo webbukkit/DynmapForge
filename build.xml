@@ -193,6 +193,7 @@
 		</unzip>
 		<copy todir="${classes.dir}/extracted" file="${resources.dir}/permissions.yml.example"/>
 		<copy todir="${classes.dir}" file="${mcpsrc.dir}/minecraft/mcmod.info"/>
+		<copy todir="${classes.dir}" file="${mcpsrc.dir}/minecraft/pack.mcmeta"/>
 		<jar destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.jar" basedir="${classes.dir}"/>
 	</target>
 
