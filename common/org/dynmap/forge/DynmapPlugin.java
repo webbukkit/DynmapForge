@@ -36,6 +36,7 @@ import net.minecraft.network.packet.Packet3Chat;
 import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.BanList;
+import net.minecraft.server.management.ServerConfigurationManager;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.StringUtils;
 import net.minecraft.world.ChunkCoordIntPair;
@@ -586,7 +587,10 @@ public class DynmapPlugin
         @Override
         public Set<String> checkPlayerPermissions(String player, Set<String> perms)
         {
-            BanList bl = MinecraftServer.getServer().getConfigurationManager().getBannedPlayers();
+            ServerConfigurationManager scm = MinecraftServer.getServer().getConfigurationManager();
+            if (scm == null) return Collections.emptySet();
+            BanList bl = scm.getBannedPlayers();
+            if (bl == null) return Collections.emptySet();
             if(bl.isBanned(player)) {
                 return Collections.emptySet();
             }
@@ -602,7 +606,10 @@ public class DynmapPlugin
         @Override
         public boolean checkPlayerPermission(String player, String perm)
         {
-            BanList bl = MinecraftServer.getServer().getConfigurationManager().getBannedPlayers();
+            ServerConfigurationManager scm = MinecraftServer.getServer().getConfigurationManager();
+            if (scm == null) return false;
+            BanList bl = scm.getBannedPlayers();
+            if (bl == null) return false;
             if(bl.isBanned(player)) {
                 return false;
             }
@@ -1700,6 +1707,12 @@ public class DynmapPlugin
                 Log.warning("Unable to load saved worlds from forgeworlds.yml");
                 return;
             }
+        }
+    }
+    
+    public void serverStarted() {
+        if (core != null) {
+            core.serverStarted();
         }
     }
 }
