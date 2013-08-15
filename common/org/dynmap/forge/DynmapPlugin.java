@@ -215,6 +215,8 @@ public class DynmapPlugin
     }
     static void setBusy(World w, Ticket t) {
         if(w == null) return;
+        if (!DynmapMod.useforcedchunks) return;
+        
         WorldBusyRecord wbr = busy_worlds.get(w.getWorldInfo().getDimension());
         if(wbr == null) {   /* Not busy, make ticket and keep spawn loaded */
             Debug.debug("World " + w.getWorldInfo().getWorldName() + "/"+ w.provider.getDimensionName() + " is busy");
@@ -234,6 +236,8 @@ public class DynmapPlugin
     }
     
     private void doIdleOutOfWorlds() {
+        if (!DynmapMod.useforcedchunks) return;
+        
         long ts = System.nanoTime() - worldIdleTimeoutNS;
         for(Iterator<WorldBusyRecord> itr = busy_worlds.values().iterator(); itr.hasNext();) {
             WorldBusyRecord wbr = itr.next();
