@@ -76,8 +76,6 @@ public class DynmapMod
     @Init
     public void load(FMLInitializationEvent event)
     {
-        /* Set up for chunk loading notice from chunk manager */
-        ForgeChunkManager.setForcedChunkLoadingCallback(DynmapMod.instance, new LoadingCallback());
     }
 
     @PostInit
@@ -85,6 +83,8 @@ public class DynmapMod
     {
         if (!(proxy instanceof ClientProxy))
             DynmapCommonAPIListener.register(new APICallback()); 
+        /* Set up for chunk loading notice from chunk manager */
+        ForgeChunkManager.setForcedChunkLoadingCallback(DynmapMod.instance, new LoadingCallback());
     }
 
     @ServerStarting
