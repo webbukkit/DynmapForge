@@ -8,6 +8,7 @@ import org.dynmap.DynmapCommonAPI;
 import org.dynmap.DynmapCommonAPIListener;
 
 import net.minecraft.world.World;
+import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 
@@ -42,6 +43,8 @@ public class DynmapMod
     
     public static DynmapPlugin plugin;
     
+    public static boolean useforcedchunks;
+    
     public static File jarfile;
 
     public class APICallback extends DynmapCommonAPIListener {
@@ -71,11 +74,30 @@ public class DynmapMod
     public void preInit(FMLPreInitializationEvent event)
     {
         jarfile = event.getSourceFile();
+        // Load configuration file - use suggested (config/WesterosBlocks.cfg)
+        Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
+        try {
+            cfg.load();
+            
+            useforcedchunks = cfg.get("Settings",  "UseForcedChunks", true).getBoolean(true);
+        }
+        finally
+        {
+            cfg.save();
+        }
+
     }
 
     @Init
     public void load(FMLInitializationEvent event)
     {
+        /* Set up for chunk loading notice from chunk manager */
+        if(useforcedchunks) {
+            ForgeChunkManager.setForcedChunkLoadingCallback(DynmapMod.instance, new LoadingCallback());
+        }
+        else {
+            System.out.println("[Dynmap] World loading using forced chunks is disabled");
+        }
     }
 
     @PostInit
@@ -83,8 +105,6 @@ public class DynmapMod
     {
         if (!(proxy instanceof ClientProxy))
             DynmapCommonAPIListener.register(new APICallback());
-        /* Set up for chunk loading notice from chunk manager */
-        ForgeChunkManager.setForcedChunkLoadingCallback(DynmapMod.instance, new LoadingCallback());
     }
     
     @ServerStarting
