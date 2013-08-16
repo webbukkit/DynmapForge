@@ -89,6 +89,7 @@ import cpw.mods.fml.common.IPlayerTracker;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.ModContainer;
 import cpw.mods.fml.common.TickType;
 import cpw.mods.fml.common.network.IChatListener;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -859,6 +860,13 @@ public class DynmapPlugin
 			}
 			return loaded;
 		}
+
+		@Override
+        public String getModVersion(String name) {
+	        ModContainer mod = Loader.instance().getIndexedModList().get(name);
+	        if (mod == null) return null;
+            return mod.getVersion();
+        }
 
         @Override
         public double getServerTPS() {
