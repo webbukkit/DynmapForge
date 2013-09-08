@@ -866,6 +866,11 @@ public class DynmapPlugin
         public double getServerTPS() {
             return tps;
         }
+        
+        @Override
+        public String getServerIP() {
+            return server.getServerHostname();
+        }
     }
     /**
      * Player access abstraction class
