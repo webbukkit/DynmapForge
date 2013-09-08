@@ -52,6 +52,7 @@
 	<target name="init.project.dependencies" depends="init.maven.tasks">
 		<artifact:dependencies filesetId="dependency.fileset">
   	  		<dependency groupId="org.dynmap" artifactId="DynmapCore" version="${project.version}" type="jar" scope="compile" />
+  	  		<dependency groupId="org.dynmap" artifactId="DynmapCore" version="${project.version}" classifier="modsupport-pre15" type="jar" scope="compile" />
   	  		<dependency groupId="org.dynmap" artifactId="DynmapCore" version="${project.version}" classifier="modsupport" type="jar" scope="compile" />
 		  	<dependency groupId="org.dynmap" artifactId="DynmapCoreAPI" version="${project.version}" type="jar" scope="compile" />
 		</artifact:dependencies>
@@ -183,6 +184,11 @@
 		<delete dir="${jar.dir}"/>
 		<mkdir dir="${jar.dir}"/>
 		<unzip src="${mcp.dir}/lib/DynmapCore-${project.version}.jar" dest="${classes.dir}">
+			<patternset>
+				<exclude name="META-INF/*"/>
+			</patternset>
+		</unzip>
+		<unzip src="${mcp.dir}/lib/DynmapCore-${project.version}-modsupport-pre15.jar" dest="${classes.dir}">
 			<patternset>
 				<exclude name="META-INF/*"/>
 			</patternset>
