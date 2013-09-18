@@ -865,6 +865,12 @@ public class DynmapPlugin
             return server.getServerHostname();
         }
 
+        @Override
+        public File getModContainerFile(String name) {
+            ModContainer mod = Loader.instance().getIndexedModList().get(name);
+            if (mod == null) return null;
+            return mod.getSource();
+        }
     }
     /**
      * Player access abstraction class
