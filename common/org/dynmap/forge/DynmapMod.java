@@ -61,6 +61,10 @@ public class DynmapMod
         }
     }
 
+    public DynmapMod() {
+        org.dynmap.modsupport.ModSupportImpl.init();
+    }
+    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
