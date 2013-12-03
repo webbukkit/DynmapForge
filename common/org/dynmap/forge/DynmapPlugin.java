@@ -1565,7 +1565,7 @@ public class DynmapPlugin
     	}
     	String wname = ForgeWorld.getWorldName(w);
     	for(ForgeWorld fw : worlds.values()) {
-			if(fw.getName().equals(wname)) {
+			if(fw.getRawName().equals(wname)) {
 				last_world = w;
 	           	last_fworld = fw;
            		if(fw.isLoaded() == false) {
@@ -1733,7 +1733,7 @@ public class DynmapPlugin
                     ForgeWorld fw = new ForgeWorld(name, height, sealevel, nether, theend, title);
                     fw.setWorldUnloaded();
                     core.processWorldLoad(fw);
-                    worlds.put(name,  fw);
+                    worlds.put(fw.getName(),  fw);
                 }
             } catch (Exception x) {
                 Log.warning("Unable to load saved worlds from forgeworlds.yml");
