@@ -127,6 +127,8 @@ public class DynmapPlugin
     private long avgticklen;
     // Per tick limit, in nsec
     private long perTickLimit = (50000000); // 50 ms
+    private boolean isMCPC = false;
+    private boolean useSaveFolder = true;
 
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkpopulate", "chunkgenerate" };
     
@@ -254,6 +256,13 @@ public class DynmapPlugin
     {
         plugin = this;
         Log.setLoggerParent(FMLLog.getLogger());
+        
+        try {   // Detect MCPC+
+            Class<?> c = Class.forName("za.co.mcportcentral.MCPCConfig");
+            isMCPC = true;
+        } catch (ClassNotFoundException cnfx) {
+            isMCPC = false;
+        }
     }
 
     public boolean isOp(String player) {
@@ -1706,16 +1715,37 @@ public class DynmapPlugin
             lst.add(vals);
         }
         cn.put("worlds", lst);
+        cn.put("isMCPC", isMCPC);
+        cn.put("useSaveFolderAsName", useSaveFolder);
+
         cn.save();
     }
     private void loadWorlds() {
         File f = new File(core.getDataFolder(), "forgeworlds.yml");
-        if(f.canRead() == false)
+        if(f.canRead() == false) {
+            ForgeWorld.setMCPCMapping();
             return;
+        }
         ConfigurationNode cn = new ConfigurationNode(f);
         cn.load();
+        // If existing, only switch to save folder if MCPC+
+        useSaveFolder = isMCPC;
+        // If setting defined, use it 
+        if (cn.containsKey("useSaveFolderAsName")) {
+            useSaveFolder = cn.getBoolean("useSaveFolderAsName", useSaveFolder);
+        }
+        if (useSaveFolder) {
+            ForgeWorld.setMCPCMapping();
+        }
+        // If inconsistent between MCPC and non-MCPC
+        if (isMCPC != cn.getBoolean("isMCPC", false)) {
+            return;
+        }
         List<Map<String,Object>> lst = cn.getMapList("worlds");
-        if(lst == null) return;
+        if(lst == null) {
+            Log.warning("Discarding bad forgeworlds.yml");
+            return;
+        }
         
         for(Map<String,Object> world : lst) {
             try {
