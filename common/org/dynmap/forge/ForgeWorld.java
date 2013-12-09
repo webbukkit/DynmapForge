@@ -24,31 +24,39 @@ public class ForgeWorld extends DynmapWorld
     private final boolean istheend;
     private final String env;
     private DynmapLocation spawnloc = new DynmapLocation();
+    private static boolean doMCPCMapping = false;
+    
+    public static void setMCPCMapping() {
+        doMCPCMapping = true;
+    }
 
     public static String getWorldName(World w) {
-    	String n = w.getWorldInfo().getWorldName();
-        WorldProvider wp = w.provider;
-    	switch(wp.dimensionId) {
-    		case 0:
-    			break;
-    		case -1:
-    			n += "_nether";
-    			break;
-    		case 1:
-    			n += "_the_end";
-    			break;
-			default:
-				n += "_" + wp.dimensionId;
-				break;
-    	}
+        String n = w.getWorldInfo().getWorldName();
+        if (!doMCPCMapping) {
+            n = w.getWorldInfo().getWorldName();
+            WorldProvider wp = w.provider;
+            switch(wp.dimensionId) {
+                case 0:
+                    break;
+                case -1:
+                    n += "_nether";
+                    break;
+                case 1:
+                    n += "_the_end";
+                    break;
+                default:
+                    n += "_" + wp.dimensionId;
+                    break;
+            }
+        }
         return n;
     }
-    
+
     public ForgeWorld(World w)
     {
         this(getWorldName(w), w.getHeight(), 64, w.provider instanceof WorldProviderHell,
         		w.provider instanceof WorldProviderEnd, 
-        		w.getWorldInfo().getWorldName() + "/" + w.provider.getDimensionName());
+                w.getWorldInfo().getWorldName() + "/" + w.provider.getDimensionName());
         setWorldLoaded(w);
     }
     public ForgeWorld(String name, int height, int sealevel, boolean nether, boolean the_end, String deftitle)
