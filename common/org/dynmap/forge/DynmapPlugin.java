@@ -880,6 +880,10 @@ public class DynmapPlugin
             if (mod == null) return null;
             return mod.getSource();
         }
+        @Override
+        public List<String> getModList() {
+            return new ArrayList<String>(Loader.instance().getIndexedModList().keySet());
+        }
     }
     /**
      * Player access abstraction class
