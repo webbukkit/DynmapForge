@@ -98,6 +98,7 @@
 	<!-- Download forge (if it doesn't exist) -->
 	<target name="download-forge" unless="forge-exists">
 		<get src="http://files.minecraftforge.net/${forge.name}" dest="${download.dir}/${forge.name}" usetimestamp="True"/>
+		<get src="http://files.minecraftforge.net/fmllibs/fml_libs_dev15.zip" dest="${download.dir}/fml_libs_dev15.zip" usetimestamp="True"/>
 	</target>
 	
 	<!-- Setup mcp and forge -->
@@ -106,6 +107,8 @@
 		<delete dir="${forge.dir}" failonerror="false"/>
 
 		<unzip dest="${forge.dir}/.." src="${download.dir}/${forge.name}"/>
+
+		<copy todir="${forge.dir}/fml" file="${src.dir}/fml.py"/>
 
 		<!-- Fix executable permissions -->
 		<chmod dir="${forge.dir}" perm="ugo+rx" includes="**.sh"/>
@@ -118,6 +121,8 @@
 		<exec dir="${forge.dir}" executable="sh" osfamily="unix">
 			<arg value="install.sh"/>
 		</exec>
+
+		<unzip dest="${forge.dir}/mcp/lib" src="${download.dir}/fml_libs_dev15.zip"/>
 
 	</target>
 
