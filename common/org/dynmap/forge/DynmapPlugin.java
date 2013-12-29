@@ -562,7 +562,7 @@ public class DynmapPlugin
         @Override
         public void broadcastMessage(String msg)
         {
-            MinecraftServer.getServer().getConfigurationManager().sendPacketToAllPlayers(new Packet3Chat(ChatMessageComponent.func_111066_d(msg)));
+            MinecraftServer.getServer().getConfigurationManager().sendPacketToAllPlayers(new Packet3Chat(ChatMessageComponent.createFromText(msg)));
             Log.info(StringUtils.stripControlCodes(msg));
         }
         @Override
@@ -982,7 +982,7 @@ public class DynmapPlugin
         {
             if (player != null)
             {
-                int h = (int)player.func_110143_aJ();
+                int h = (int)player.getHealth();
                 if(h > 20) h = 20;
                 return h;  // Scale to 20 range
             }
@@ -1095,7 +1095,7 @@ public class DynmapPlugin
         public void sendMessage(String msg)
         {
         	if(sender != null) {
-        	    sender.sendChatToPlayer(ChatMessageComponent.func_111077_e(msg));
+        	    sender.sendChatToPlayer(ChatMessageComponent.createFromText(msg));
         	}
         }
 
