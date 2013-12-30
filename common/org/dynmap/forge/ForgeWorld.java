@@ -25,14 +25,30 @@ public class ForgeWorld extends DynmapWorld
     private final String env;
     private DynmapLocation spawnloc = new DynmapLocation();
     private static boolean doMCPCMapping = false;
+    private static boolean doSaveFolderMapping = false;
     
     public static void setMCPCMapping() {
         doMCPCMapping = true;
     }
+    public static void setSaveFolderMapping() {
+        doSaveFolderMapping = true;
+    }
 
     public static String getWorldName(World w) {
-        String n = w.getWorldInfo().getWorldName();
-        if (!doMCPCMapping) {
+        String n;
+        if (doMCPCMapping) {    // MCPC+ - use world name (matches bukkit)
+            n = w.getWorldInfo().getWorldName();
+        }
+        else if (doSaveFolderMapping) { // new Forge - save folder (consistent with MCPC+)
+            if (w.provider.dimensionId == 0) {
+                n = w.getWorldInfo().getWorldName();
+            }
+            else {
+                n = "DIM" + w.provider.dimensionId;
+            }
+        }
+        else {  // Legacy mapping
+            n = w.getWorldInfo().getWorldName();
             WorldProvider wp = w.provider;
             switch(wp.dimensionId) {
                 case 0:

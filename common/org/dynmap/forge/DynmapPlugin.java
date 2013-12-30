@@ -251,13 +251,6 @@ public class DynmapPlugin
     public DynmapPlugin()
     {
         plugin = this;
-        
-        try {   // Detect MCPC+
-            Class<?> c = Class.forName("za.co.mcportcentral.MCPCConfig");
-            isMCPC = true;
-        } catch (ClassNotFoundException cnfx) {
-            isMCPC = false;
-        }
     }
 
     public boolean isOp(String player) {
@@ -1719,9 +1712,16 @@ public class DynmapPlugin
         cn.save();
     }
     private void loadWorlds() {
+        isMCPC = MinecraftServer.getServer().getServerModName().contains("mcpc");
         File f = new File(core.getDataFolder(), "forgeworlds.yml");
         if(f.canRead() == false) {
-            ForgeWorld.setMCPCMapping();
+            useSaveFolder = true;
+            if (isMCPC) {
+                ForgeWorld.setMCPCMapping();
+            }
+            else {
+                ForgeWorld.setSaveFolderMapping();
+            }
             return;
         }
         ConfigurationNode cn = new ConfigurationNode(f);
@@ -1732,8 +1732,11 @@ public class DynmapPlugin
         if (cn.containsKey("useSaveFolderAsName")) {
             useSaveFolder = cn.getBoolean("useSaveFolderAsName", useSaveFolder);
         }
-        if (useSaveFolder) {
+        if (isMCPC) {
             ForgeWorld.setMCPCMapping();
+        }
+        else if (useSaveFolder) {
+            ForgeWorld.setSaveFolderMapping();
         }
         // If inconsistent between MCPC and non-MCPC
         if (isMCPC != cn.getBoolean("isMCPC", false)) {
