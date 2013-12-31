@@ -121,9 +121,6 @@
 		<exec dir="${forge.dir}" executable="sh" osfamily="unix">
 			<arg value="install.sh"/>
 		</exec>
-
-		<unzip dest="${forge.dir}/mcp/lib" src="${download.dir}/fml_libs_dev15.zip"/>
-
 	</target>
 
 	<target name="compile" depends="initialize-version,setup,init.project.dependencies">
