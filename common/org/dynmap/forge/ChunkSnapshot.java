@@ -168,7 +168,7 @@ public class ChunkSnapshot
         /* Copy sections */
         for (int i = 0; i < this.sectionCnt; i++)
         {
-            ExtendedBlockStorage eb = ebs[i];
+            ExtendedBlockStorage eb = (i < ebs.length) ? ebs[i] : null;
 
             if ((eb != null) && (eb.isEmpty() == false))
             {
