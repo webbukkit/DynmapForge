@@ -2,6 +2,7 @@ package org.dynmap.forge;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.util.ArrayList;
@@ -129,6 +130,7 @@ public class DynmapPlugin
     private long perTickLimit = (50000000); // 50 ms
     private boolean isMCPC = false;
     private boolean useSaveFolder = true;
+    private Field displayName = null; // MCPC+ display name
 
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkpopulate", "chunkgenerate" };
     
@@ -255,7 +257,14 @@ public class DynmapPlugin
     public DynmapPlugin()
     {
         plugin = this;
-        Log.setLoggerParent(FMLLog.getLogger());        
+        Log.setLoggerParent(FMLLog.getLogger());      
+        
+        displayName = null;
+        try {
+            displayName = EntityPlayerMP.class.getField("displayName");
+        } catch (SecurityException e) {
+        } catch (NoSuchFieldException e) {
+        }
     }
 
     public boolean isOp(String player) {
@@ -911,8 +920,16 @@ public class DynmapPlugin
         @Override
         public String getDisplayName()
         {
-        	if(player != null)
-        		return player.getEntityName();
+        	if(player != null) {
+        	    if (displayName != null) {
+        	        try {
+                        return (String) displayName.get(player);
+                    } catch (IllegalArgumentException e) {
+                    } catch (IllegalAccessException e) {
+                    }
+        	    }
+        		return player.getDisplayName();
+        	}
         	else
         		return "[Server]";
         }
