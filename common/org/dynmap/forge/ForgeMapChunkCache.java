@@ -1486,7 +1486,7 @@ public class ForgeMapChunkCache implements MapChunkCache
                 else
                 {
                     if(nbt != null) {
-                        ss = new ChunkSnapshot(nbt);
+                        ss = new ChunkSnapshot(nbt, dw.worldheight);
                         
                         NBTTagList tiles = nbt.getTagList("TileEntities");
                         if(tiles == null) tiles = new NBTTagList();
@@ -1526,7 +1526,7 @@ public class ForgeMapChunkCache implements MapChunkCache
                         DynmapPlugin.plugin.sscache.putSnapshot(dw.getName(), chunk.x, chunk.z, ssr, blockdata, biome, biomeraw, highesty);
                     }
                     else {
-                        ss = new ChunkSnapshot(c);
+                        ss = new ChunkSnapshot(c, dw.worldheight);
                         /* Get tile entity data */
                         List<Object> vals = new ArrayList<Object>();
                         for(Object t : c.chunkTileEntityMap.values()) {

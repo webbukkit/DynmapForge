@@ -26,12 +26,19 @@ public class ForgeWorld extends DynmapWorld
     private DynmapLocation spawnloc = new DynmapLocation();
     private static boolean doMCPCMapping = false;
     private static boolean doSaveFolderMapping = false;
+    private static int maxWorldHeight = 256;    // Maximum allows world height
     
     public static void setMCPCMapping() {
         doMCPCMapping = true;
     }
     public static void setSaveFolderMapping() {
         doSaveFolderMapping = true;
+    }
+    public static int getMaxWorldHeight() {
+        return maxWorldHeight;
+    }
+    public static void setMaxWorldHeight(int h) {
+        maxWorldHeight = h;
     }
 
     public static String getWorldName(World w) {
@@ -76,7 +83,7 @@ public class ForgeWorld extends DynmapWorld
     }
     public ForgeWorld(String name, int height, int sealevel, boolean nether, boolean the_end, String deftitle)
     {
-        super(name, height, sealevel);
+        super(name, (height > maxWorldHeight)?maxWorldHeight:height, sealevel);
         world = null;
         setTitle(deftitle);
         isnether = nether;
