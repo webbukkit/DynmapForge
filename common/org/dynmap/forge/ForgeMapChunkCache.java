@@ -109,6 +109,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     }
 
     private static class NoChunkFoundThrow extends Error {
+        private static final long serialVersionUID = 207122916585582193L;
     }
     
     private static class NoCreateChunkLoader implements IChunkLoader {
@@ -153,7 +154,7 @@ public class ForgeMapChunkCache implements MapChunkCache
      */
     public class OurMapIterator implements MapIterator
     {
-        private int x, y, z, chunkindex, bx, bz, off;
+        private int x, y, z, chunkindex, bx, bz;
         private ChunkSnapshot snap;
         private BlockStep laststep;
         private int typeid = -1;
@@ -184,7 +185,6 @@ public class ForgeMapChunkCache implements MapChunkCache
             this.chunkindex = ((x >> 4) - x_min) + (((z >> 4) - z_min) * x_dim);
             this.bx = x & 0xF;
             this.bz = z & 0xF;
-            this.off = bx + (bz << 4);
 
             if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
                 snap = EMPTY;
@@ -570,12 +570,10 @@ public class ForgeMapChunkCache implements MapChunkCache
                 case 0:
                     x++;
                     bx++;
-                    off++;
 
                     if (bx == 16)   /* Next chunk? */
                     {
                         bx = 0;
-                        off -= 16;
                         chunkindex++;
                         snap = snaparray[chunkindex];
                         if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
@@ -601,12 +599,10 @@ public class ForgeMapChunkCache implements MapChunkCache
                 case 2:
                     z++;
                     bz++;
-                    off += 16;
 
                     if (bz == 16)   /* Next chunk? */
                     {
                         bz = 0;
-                        off -= 256;
                         chunkindex += x_dim;
                         if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
                             snap = EMPTY;
@@ -621,12 +617,10 @@ public class ForgeMapChunkCache implements MapChunkCache
                 case 3:
                     x--;
                     bx--;
-                    off--;
 
                     if (bx == -1)   /* Next chunk? */
                     {
                         bx = 15;
-                        off += 16;
                         chunkindex--;
                         if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
                             snap = EMPTY;
@@ -650,12 +644,10 @@ public class ForgeMapChunkCache implements MapChunkCache
                 case 5:
                     z--;
                     bz--;
-                    off -= 16;
 
                     if (bz == -1)   /* Next chunk? */
                     {
                         bz = 15;
-                        off += 256;
                         chunkindex -= x_dim;
                         if ((chunkindex >= snapcnt) || (chunkindex < 0)) {
                             snap = EMPTY;
@@ -1198,16 +1190,16 @@ public class ForgeMapChunkCache implements MapChunkCache
         }
         try {
             AnvilChunkLoader acl = (AnvilChunkLoader)cps.currentChunkLoader;
-            List chunkstoremove = null;
-            Set pendingcoords = null;
-            LinkedHashMap pendingsavesmcpc = null;
+            List<?> chunkstoremove = null;
+            Set<?> pendingcoords = null;
+            LinkedHashMap<?,?> pendingsavesmcpc = null;
             
             if (pendingAnvilChunksMCPC != null) {
-                pendingsavesmcpc = (LinkedHashMap)pendingAnvilChunksMCPC.get(acl);
+                pendingsavesmcpc = (LinkedHashMap<?,?>)pendingAnvilChunksMCPC.get(acl);
             }
             else {
-                chunkstoremove = (List)chunksToRemove.get(acl);
-                pendingcoords = (Set)pendingAnvilChunksCoordinates.get(acl);
+                chunkstoremove = (List<?>)chunksToRemove.get(acl);
+                pendingcoords = (Set<?>)pendingAnvilChunksCoordinates.get(acl);
             }
             Object synclock = syncLockObject.get(acl);
 
@@ -1334,7 +1326,7 @@ public class ForgeMapChunkCache implements MapChunkCache
         	unloadChunks();
         	return 0;
         }
-        Set queue = null;
+        Set<?> queue = null;
         Object queue_mcpc = null;
         IChunkProvider cp = w.getChunkProvider();
 
@@ -1342,7 +1334,7 @@ public class ForgeMapChunkCache implements MapChunkCache
         {
             if ((unloadqueue != null) && (cps != null))
             {
-                queue = (Set)unloadqueue.get(cps);
+                queue = (Set<?>)unloadqueue.get(cps);
             }
             else if ((unloadqueue_mcpc != null) && (cps != null)) {
                 queue_mcpc = unloadqueue_mcpc.get(cps);
@@ -1488,7 +1480,7 @@ public class ForgeMapChunkCache implements MapChunkCache
                 else
                 {
                     if(nbt != null) {
-                        ss = new ChunkSnapshot(nbt);
+                        ss = new ChunkSnapshot(nbt, dw.worldheight);
                         
                         NBTTagList tiles = nbt.getTagList("TileEntities");
                         if(tiles == null) tiles = new NBTTagList();
@@ -1528,7 +1520,7 @@ public class ForgeMapChunkCache implements MapChunkCache
                         DynmapPlugin.plugin.sscache.putSnapshot(dw.getName(), chunk.x, chunk.z, ssr, blockdata, biome, biomeraw, highesty);
                     }
                     else {
-                        ss = new ChunkSnapshot(c);
+                        ss = new ChunkSnapshot(c, dw.worldheight);
                         /* Get tile entity data */
                         List<Object> vals = new ArrayList<Object>();
                         for(Object t : c.chunkTileEntityMap.values()) {

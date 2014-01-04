@@ -1726,6 +1726,8 @@ public class DynmapPlugin
         cn.put("worlds", lst);
         cn.put("isMCPC", isMCPC);
         cn.put("useSaveFolderAsName", useSaveFolder);
+        cn.put("maxWorldHeight", ForgeWorld.getMaxWorldHeight());
+        
         cn.save();
     }
     private void loadWorlds() {
@@ -1743,6 +1745,8 @@ public class DynmapPlugin
         }
         ConfigurationNode cn = new ConfigurationNode(f);
         cn.load();
+        // If defined, use maxWorldHeight
+        ForgeWorld.setMaxWorldHeight(cn.getInteger("maxWorldHeight", 256));
         // If existing, only switch to save folder if MCPC+
         useSaveFolder = isMCPC;
         // If setting defined, use it 
