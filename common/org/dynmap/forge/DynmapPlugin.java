@@ -1730,6 +1730,7 @@ public class DynmapPlugin
         cn.put("worlds", lst);
         cn.put("isMCPC", isMCPC);
         cn.put("useSaveFolderAsName", useSaveFolder);
+        cn.put("maxWorldHeight", ForgeWorld.getMaxWorldHeight());
 
         cn.save();
     }
