@@ -169,6 +169,11 @@ public class ForgeWorld extends DynmapWorld
     /* Set world to loaded */
     public void setWorldLoaded(World w) {
     	world = w;
+        // Update lighting table
+        float[] lt = w.provider.lightBrightnessTable;
+        for (int i = 0; i < 16; i++) {
+            this.setBrightnessTableEntry(i, lt[i]);
+        }
     }
     /* Get light level of block */
     @Override
