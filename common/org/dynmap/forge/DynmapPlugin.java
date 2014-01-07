@@ -898,6 +898,18 @@ public class DynmapPlugin
         public List<String> getModList() {
             return new ArrayList<String>(Loader.instance().getIndexedModList().keySet());
         }
+
+        @Override
+        public Map<Integer, String> getBlockIDMap() {
+            Map<Integer, String> map = new HashMap<Integer, String>();
+            for (int i = 0; i < Block.blocksList.length; i++) {
+                Block b = Block.blocksList[i];
+                if (b == null) continue;
+                String n = b.getUnlocalizedName();
+                map.put(i, (n == null)?"":n);
+            }
+            return map;
+        }
     }
     /**
      * Player access abstraction class
