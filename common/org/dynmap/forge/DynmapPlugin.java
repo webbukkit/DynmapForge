@@ -96,6 +96,7 @@ import cpw.mods.fml.common.TickType;
 import cpw.mods.fml.common.network.IChatListener;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.GameRegistry.UniqueIdentifier;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.common.FMLLog;
@@ -892,6 +893,21 @@ public class DynmapPlugin
         public List<String> getModList() {
             return new ArrayList<String>(Loader.instance().getIndexedModList().keySet());
         }
+
+        @Override
+        public Map<Integer, String> getBlockIDMap() {
+            Map<Integer, String> map = new HashMap<Integer, String>();
+            for (int i = 0; i < Block.blocksList.length; i++) {
+                Block b = Block.blocksList[i];
+                if (b == null) continue;
+                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(b);
+                if (ui != null) {
+                    map.put(i, ui.modId + ":" + ui.name);
+                }
+            }
+            return map;
+        }
+
     }
     /**
      * Player access abstraction class
