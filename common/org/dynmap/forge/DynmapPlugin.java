@@ -2,6 +2,7 @@ package org.dynmap.forge;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
@@ -906,6 +907,30 @@ public class DynmapPlugin
                 }
             }
             return map;
+        }
+
+        @Override
+        public InputStream openResource(String modid, String rname) {
+            if (modid != null) {
+                ModContainer mc = Loader.instance().getIndexedModList().get(modid);
+                Object mod = mc.getMod();
+                if (mod != null) {
+                    InputStream is = mod.getClass().getClassLoader().getResourceAsStream(rname);
+                    if (is != null) {
+                        return is;
+                    }
+                }
+            }
+            List<ModContainer> mcl = Loader.instance().getModList();
+            for (ModContainer mc : mcl) {
+                Object mod = mc.getMod();
+                if (mod == null) continue;
+                InputStream is = mod.getClass().getClassLoader().getResourceAsStream(rname);
+                if (is != null) {
+                    return is;
+                }
+            }
+            return null;
         }
 
     }
