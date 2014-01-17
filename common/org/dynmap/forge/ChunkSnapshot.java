@@ -25,6 +25,7 @@ public class ChunkSnapshot
     private final byte[] biome;
     private final long captureFulltime;
     private final int sectionCnt;
+    private final long inhabitedTicks;
 
     private static final int BLOCKS_PER_SECTION = 16 * 16 * 16;
     private static final int COLUMNS_PER_CHUNK = 16 * 16;
@@ -57,7 +58,7 @@ public class ChunkSnapshot
      * @param x
      * @param z
      */
-    public ChunkSnapshot(int height, int x, int z, long captime)
+    public ChunkSnapshot(int height, int x, int z, long captime, long inhabitedTime)
     {
         this.x = x;
         this.z = z;
@@ -83,6 +84,8 @@ public class ChunkSnapshot
 
         /* Create empty height map */
         this.hmap = new int[16 * 16];
+        
+        this.inhabitedTicks = inhabitedTime;
     }
 
     public ChunkSnapshot(NBTTagCompound nbt) {
@@ -90,6 +93,12 @@ public class ChunkSnapshot
         this.z = nbt.getInteger("zPos");
         this.captureFulltime = 0;
         this.hmap = nbt.getIntArray("HeightMap");
+        if (nbt.hasKey("InhabitedTime")) {
+            this.inhabitedTicks = nbt.getLong("InhabitedTime");
+        }
+        else {
+            this.inhabitedTicks = 0;
+        }
         this.sectionCnt = 16;
         /* Allocate arrays indexed by section */
         this.blockids = new short[this.sectionCnt][];
@@ -160,7 +169,7 @@ public class ChunkSnapshot
     }
     public ChunkSnapshot(Chunk chunk)
     {
-        this(chunk.worldObj.getHeight(), chunk.xPosition, chunk.zPosition, chunk.worldObj.getWorldTime());
+        this(chunk.worldObj.getHeight(), chunk.xPosition, chunk.zPosition, chunk.worldObj.getWorldTime(), chunk.inhabitedTime);
         /* Copy biome data */
         System.arraycopy(chunk.getBiomeArray(), 0, biome, 0, COLUMNS_PER_CHUNK);
         ExtendedBlockStorage[] ebs = chunk.getBlockStorageArray();
@@ -276,5 +285,9 @@ public class ChunkSnapshot
     public boolean isSectionEmpty(int sy)
     {
         return empty[sy];
+    }
+    
+    public long getInhabitedTicks() {
+        return inhabitedTicks;
     }
 }

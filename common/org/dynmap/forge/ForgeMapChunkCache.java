@@ -828,6 +828,10 @@ public class ForgeMapChunkCache implements MapChunkCache
                 int yoff, int zoff) {
             return null;
         }
+        @Override
+        public long getInhabitedTicks() {
+            return snap.getInhabitedTicks();
+        }
     }
 
     private class OurEndMapIterator extends OurMapIterator
