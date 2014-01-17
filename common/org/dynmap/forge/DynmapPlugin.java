@@ -2,6 +2,8 @@ package org.dynmap.forge;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.util.ArrayList;
@@ -95,6 +97,7 @@ import cpw.mods.fml.common.TickType;
 import cpw.mods.fml.common.network.IChatListener;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.GameRegistry.UniqueIdentifier;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.common.FMLLog;
@@ -127,6 +130,9 @@ public class DynmapPlugin
     private long avgticklen;
     // Per tick limit, in nsec
     private long perTickLimit = (50000000); // 50 ms
+    private boolean isMCPC = false;
+    private boolean useSaveFolder = true;
+    private Field displayName = null; // MCPC+ display name
 
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkpopulate", "chunkgenerate" };
     
@@ -253,7 +259,14 @@ public class DynmapPlugin
     public DynmapPlugin()
     {
         plugin = this;
-        Log.setLoggerParent(FMLLog.getLogger());
+        Log.setLoggerParent(FMLLog.getLogger());      
+        
+        displayName = null;
+        try {
+            displayName = EntityPlayerMP.class.getField("displayName");
+        } catch (SecurityException e) {
+        } catch (NoSuchFieldException e) {
+        }
     }
 
     public boolean isOp(String player) {
@@ -553,7 +566,7 @@ public class DynmapPlugin
         @Override
         public void broadcastMessage(String msg)
         {
-            MinecraftServer.getServer().getConfigurationManager().sendPacketToAllPlayers(new Packet3Chat(ChatMessageComponent.func_111066_d(msg)));
+            MinecraftServer.getServer().getConfigurationManager().sendPacketToAllPlayers(new Packet3Chat(ChatMessageComponent.createFromText(msg)));
             Log.info(StringUtils.stripControlCodes(msg));
         }
         @Override
@@ -877,6 +890,48 @@ public class DynmapPlugin
             if (mod == null) return null;
             return mod.getSource();
         }
+        @Override
+        public List<String> getModList() {
+            return new ArrayList<String>(Loader.instance().getIndexedModList().keySet());
+        }
+
+        @Override
+        public Map<Integer, String> getBlockIDMap() {
+            Map<Integer, String> map = new HashMap<Integer, String>();
+            for (int i = 0; i < Block.blocksList.length; i++) {
+                Block b = Block.blocksList[i];
+                if (b == null) continue;
+                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(b);
+                if (ui != null) {
+                    map.put(i, ui.modId + ":" + ui.name);
+                }
+            }
+            return map;
+        }
+
+        @Override
+        public InputStream openResource(String modid, String rname) {
+            if (modid != null) {
+                ModContainer mc = Loader.instance().getIndexedModList().get(modid);
+                Object mod = mc.getMod();
+                if (mod != null) {
+                    InputStream is = mod.getClass().getClassLoader().getResourceAsStream(rname);
+                    if (is != null) {
+                        return is;
+                    }
+                }
+            }
+            List<ModContainer> mcl = Loader.instance().getModList();
+            for (ModContainer mc : mcl) {
+                Object mod = mc.getMod();
+                if (mod == null) continue;
+                InputStream is = mod.getClass().getClassLoader().getResourceAsStream(rname);
+                if (is != null) {
+                    return is;
+                }
+            }
+            return null;
+        }
 
     }
     /**
@@ -906,8 +961,16 @@ public class DynmapPlugin
         @Override
         public String getDisplayName()
         {
-        	if(player != null)
-        		return player.getEntityName();
+        	if(player != null) {
+        	    if (displayName != null) {
+        	        try {
+                        return (String) displayName.get(player);
+                    } catch (IllegalArgumentException e) {
+                    } catch (IllegalAccessException e) {
+                    }
+        	    }
+        		return player.getDisplayName();
+        	}
         	else
         		return "[Server]";
         }
@@ -970,7 +1033,7 @@ public class DynmapPlugin
         {
             if (player != null)
             {
-                int h = (int)player.func_110143_aJ();
+                int h = (int)player.getHealth();
                 if(h > 20) h = 20;
                 return h;  // Scale to 20 range
             }
@@ -1083,7 +1146,7 @@ public class DynmapPlugin
         public void sendMessage(String msg)
         {
         	if(sender != null) {
-        	    sender.sendChatToPlayer(ChatMessageComponent.func_111077_e(msg));
+        	    sender.sendChatToPlayer(ChatMessageComponent.createFromText(msg));
         	}
         }
 
@@ -1224,6 +1287,7 @@ public class DynmapPlugin
             return;
         }
         core_enabled = true;
+        VersionCheck.runCheck(core);
         // Get per tick time limit
         perTickLimit = core.getMaxTickUseMS() * 1000000;
         // Prep TPS
@@ -1705,16 +1769,51 @@ public class DynmapPlugin
             lst.add(vals);
         }
         cn.put("worlds", lst);
+        cn.put("isMCPC", isMCPC);
+        cn.put("useSaveFolderAsName", useSaveFolder);
+        cn.put("maxWorldHeight", ForgeWorld.getMaxWorldHeight());
+
         cn.save();
     }
     private void loadWorlds() {
+        isMCPC = MinecraftServer.getServer().getServerModName().contains("mcpc");
         File f = new File(core.getDataFolder(), "forgeworlds.yml");
-        if(f.canRead() == false)
+        if(f.canRead() == false) {
+            useSaveFolder = true;
+            if (isMCPC) {
+                ForgeWorld.setMCPCMapping();
+            }
+            else {
+                ForgeWorld.setSaveFolderMapping();
+            }
             return;
+        }
         ConfigurationNode cn = new ConfigurationNode(f);
         cn.load();
+        // If defined, use maxWorldHeight
+        ForgeWorld.setMaxWorldHeight(cn.getInteger("maxWorldHeight", 256));
+        
+        // If existing, only switch to save folder if MCPC+
+        useSaveFolder = isMCPC;
+        // If setting defined, use it 
+        if (cn.containsKey("useSaveFolderAsName")) {
+            useSaveFolder = cn.getBoolean("useSaveFolderAsName", useSaveFolder);
+        }
+        if (isMCPC) {
+            ForgeWorld.setMCPCMapping();
+        }
+        else if (useSaveFolder) {
+            ForgeWorld.setSaveFolderMapping();
+        }
+        // If inconsistent between MCPC and non-MCPC
+        if (isMCPC != cn.getBoolean("isMCPC", false)) {
+            return;
+        }
         List<Map<String,Object>> lst = cn.getMapList("worlds");
-        if(lst == null) return;
+        if(lst == null) {
+            Log.warning("Discarding bad forgeworlds.yml");
+            return;
+        }
         
         for(Map<String,Object> world : lst) {
             try {

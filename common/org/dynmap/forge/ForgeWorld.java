@@ -24,26 +24,56 @@ public class ForgeWorld extends DynmapWorld
     private final boolean istheend;
     private final String env;
     private DynmapLocation spawnloc = new DynmapLocation();
+    private static boolean doMCPCMapping = false;
+    private static boolean doSaveFolderMapping = false;
+    private static int maxWorldHeight = 256;    // Maximum allows world height
+    
+    public static void setMCPCMapping() {
+        doMCPCMapping = true;
+    }
+    public static void setSaveFolderMapping() {
+        doSaveFolderMapping = true;
+    }
+    public static int getMaxWorldHeight() {
+        return maxWorldHeight;
+    }
+    public static void setMaxWorldHeight(int h) {
+        maxWorldHeight = h;
+    }
 
     public static String getWorldName(World w) {
-    	String n = w.getWorldInfo().getWorldName();
-        WorldProvider wp = w.provider;
-    	switch(wp.dimensionId) {
-    		case 0:
-    			break;
-    		case -1:
-    			n += "_nether";
-    			break;
-    		case 1:
-    			n += "_the_end";
-    			break;
-			default:
-				n += "_" + wp.dimensionId;
-				break;
-    	}
+        String n;
+        if (doMCPCMapping) {    // MCPC+ mapping
+            n = w.getWorldInfo().getWorldName();
+        }
+        else if (doSaveFolderMapping) { // New vanilla Forge mapping (consistent with MCPC+)
+            if (w.provider.dimensionId == 0) {
+                n = w.getWorldInfo().getWorldName();
+            }
+            else {
+                n = "DIM" + w.provider.dimensionId;
+            }
+        }
+        else {  // Legacy mapping
+            n = w.getWorldInfo().getWorldName();
+            WorldProvider wp = w.provider;
+            switch(wp.dimensionId) {
+                case 0:
+                    break;
+                case -1:
+                    n += "_nether";
+                    break;
+                case 1:
+                    n += "_the_end";
+                    break;
+                default:
+                    n += "_" + wp.dimensionId;
+                    break;
+            }
+        }
         return n;
     }
-    
+
     public ForgeWorld(World w)
     {
         this(getWorldName(w), w.getHeight(), 64, w.provider instanceof WorldProviderHell,
@@ -53,7 +83,7 @@ public class ForgeWorld extends DynmapWorld
     }
     public ForgeWorld(String name, int height, int sealevel, boolean nether, boolean the_end, String deftitle)
     {
-        super(name, height, sealevel);
+        super(name, (height > maxWorldHeight)?maxWorldHeight:height, sealevel);
         world = null;
         setTitle(deftitle);
         isnether = nether;
@@ -72,6 +102,7 @@ public class ForgeWorld extends DynmapWorld
         {
             env = "normal";
         }
+        
     }
     /* Test if world is nether */
     @Override
@@ -139,6 +170,11 @@ public class ForgeWorld extends DynmapWorld
     /* Set world to loaded */
     public void setWorldLoaded(World w) {
     	world = w;
+    	// Update lighting table
+    	float[] lt = w.provider.lightBrightnessTable;
+    	for (int i = 0; i < 16; i++) {
+    	    this.setBrightnessTableEntry(i, lt[i]);
+    	}
     }
     /* Get light level of block */
     @Override

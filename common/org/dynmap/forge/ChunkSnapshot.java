@@ -3,6 +3,8 @@ package org.dynmap.forge;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import org.dynmap.Log;
+
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.chunk.Chunk;
@@ -58,13 +60,13 @@ public class ChunkSnapshot
      * @param x
      * @param z
      */
-    public ChunkSnapshot(int height, int x, int z, long captime, long inhabitedTime)
+    public ChunkSnapshot(int worldheight, int x, int z, long captime, long inhabitedTime)
     {
         this.x = x;
         this.z = z;
         this.captureFulltime = captime;
         this.biome = new byte[COLUMNS_PER_CHUNK];
-        this.sectionCnt = height / 16;
+        this.sectionCnt = worldheight / 16;
         /* Allocate arrays indexed by section */
         this.blockids = new short[this.sectionCnt][];
         this.blockdata = new byte[this.sectionCnt][];
@@ -88,7 +90,7 @@ public class ChunkSnapshot
         this.inhabitedTicks = inhabitedTime;
     }
 
-    public ChunkSnapshot(NBTTagCompound nbt) {
+    public ChunkSnapshot(NBTTagCompound nbt, int worldheight) {
         this.x = nbt.getInteger("xPos");
         this.z = nbt.getInteger("zPos");
         this.captureFulltime = 0;
@@ -99,7 +101,7 @@ public class ChunkSnapshot
         else {
             this.inhabitedTicks = 0;
         }
-        this.sectionCnt = 16;
+        this.sectionCnt = worldheight / 16;
         /* Allocate arrays indexed by section */
         this.blockids = new short[this.sectionCnt][];
         this.blockdata = new byte[this.sectionCnt][];
@@ -119,6 +121,10 @@ public class ChunkSnapshot
         for (int i = 0; i < sect.tagCount(); i++) {
             NBTTagCompound sec = (NBTTagCompound) sect.tagAt(i);
             byte secnum = sec.getByte("Y");
+            if (secnum >= this.sectionCnt) {
+                Log.info("Section " + (int) secnum + " above world height " + worldheight);
+                continue;
+            }
             byte[] lsb_bytes = sec.getByteArray("Blocks");
             short[] blkids = new short[BLOCKS_PER_SECTION];
             this.blockids[secnum] = blkids;
@@ -167,9 +173,9 @@ public class ChunkSnapshot
         }
         return na.data;
     }
-    public ChunkSnapshot(Chunk chunk)
+    public ChunkSnapshot(Chunk chunk, int worldheight)
     {
-        this(chunk.worldObj.getHeight(), chunk.xPosition, chunk.zPosition, chunk.worldObj.getWorldTime(), chunk.inhabitedTime);
+        this(worldheight, chunk.xPosition, chunk.zPosition, chunk.worldObj.getWorldTime(), chunk.inhabitedTime);
         /* Copy biome data */
         System.arraycopy(chunk.getBiomeArray(), 0, biome, 0, COLUMNS_PER_CHUNK);
         ExtendedBlockStorage[] ebs = chunk.getBlockStorageArray();
@@ -177,7 +183,7 @@ public class ChunkSnapshot
         /* Copy sections */
         for (int i = 0; i < this.sectionCnt; i++)
         {
-            ExtendedBlockStorage eb = ebs[i];
+            ExtendedBlockStorage eb = (i < ebs.length) ? ebs[i] : null;
 
             if ((eb != null) && (eb.isEmpty() == false))
             {

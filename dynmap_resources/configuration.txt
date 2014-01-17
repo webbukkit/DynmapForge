@@ -193,6 +193,9 @@ usenormalthreadpriority: true
 # Save and restore pending tile renders - prevents their loss on server shutdown or /reload
 saverestorepending: true
 
+# Save period for pending jobs (in seconds): periodic saving for crash recovery of jobs
+save-pending-period: 900
+
 # Zoom-out tile update period - how often to scan for and process tile updates into zoom-out tiles (in seconds)
 zoomoutperiod: 30
 
@@ -215,6 +218,10 @@ enabletilehash: true
 
 # Optional - enable smooth lighting by default on all maps supporting it (can be set per map as lighting option)
 smooth-lighting: true
+
+# Optional - use world provider lighting table (good for custom worlds with custom lighting curves, like nether)
+#   false=classic Dynmap lighting curve
+use-brightness-table: true
 
 # Optional - render specific block IDs using the texures and models of another block ID: can be used to hide/disguise specific
 #  blocks (e.g. make ores look like stone, hide chests) or to provide simple support for rendering unsupported custom blocks
@@ -414,3 +421,5 @@ verbose: false
 # Enables debugging.
 #debuggers:
 #  - class: org.dynmap.debug.LogDebugger
+# Debug: dump blocks missing render data
+dump-missing-blocks: false
