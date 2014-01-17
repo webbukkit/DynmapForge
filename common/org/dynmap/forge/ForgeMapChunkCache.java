@@ -820,6 +820,10 @@ public class ForgeMapChunkCache implements MapChunkCache
                 int yoff, int zoff) {
             return null;
         }
+        @Override
+        public long getInhabitedTicks() {
+            return 0;
+        }
     }
 
     private class OurEndMapIterator extends OurMapIterator
