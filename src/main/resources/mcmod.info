@@ -1,16 +1,22 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "Dynmap",
+  "name": "Dynmap",
+  "description": "Dynamic, Google Maps style web maps for Minecraft Servers",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "http://www.minecraftforum.net/topic/1543523-dynmap-dynmap-web-maps-for-minecraft/",
   "updateUrl": "",
-  "authors": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authors": [
+    "mikeprimm"
+  ],
+  "credits": "Authored by mikeprimm",
   "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
+  "screenshots": [ ],
+  "parent":"",
+
+  "dependencies": [
+     "mod_MinecraftForge"
+  ]
 }
 ]

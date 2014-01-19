@@ -31,14 +31,15 @@ group= "org.dynmap.forge" // http://maven.apache.org/guides/mini/guide-naming-co
 archivesBaseName = "Dynmap"
 targetCompatibility = '1.6'
 sourceCompatibility = '1.6'
+ext.buildNumber = System.getenv().BUILD_NUMBER ?: "Dev"
 
 minecraft {
     version = config.minecraft_version + "-" + config.forge_version
     assetDir = "run/assets"
 
 	replaceIn "Version.java"
-    	replace "@VERSION@", config.Dynmap_version + config.Dynmap_extversion
-    	replace "@BUILD_NUMBER@", "${System.getenv().BUILD_NUMBER}"
+    	replace "@VERSION@", config.Dynmap_version + config.Dynmap_extversion + '-' + project.ext.buildNumber
+    	replace "@BUILD_NUMBER@", project.ext.buildNumber
 }
 
 repositories {
@@ -63,7 +64,7 @@ processResources
         include 'mcmod.info'
                 
         // replace version and mcversion
-        expand 'version':project.version, 'mcversion':config.minecraft_version
+        expand 'version':config.Dynmap_version + config.Dynmap_extversion + '-' + project.ext.buildNumber, 'mcversion':config.minecraft_version
     }
         
     // copy everything else, thats not the mcmod.info
