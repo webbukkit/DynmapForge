@@ -1,0 +1,10 @@
+/bin
+/build
+/lib
+Dynmap-*.jar
+.classpath
+/eclipse
+/.gradle
+.project
+/.settings
+

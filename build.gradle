@@ -17,12 +17,28 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.9.2"
+// define the properties file
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
+version = "${config.Dynmap_version}${config.Dynmap_extversion}"
 group= "org.dynmap.forge" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Dynmap"
+targetCompatibility = '1.6'
+sourceCompatibility = '1.6'
 
 minecraft {
-    version = "1.7.2-10.12.0.1007"
+    version = config.minecraft_version + "-" + config.forge_version
+    assetDir = "run/assets"
+
+	replaceIn "Version.java"
+    	replace "@VERSION@", config.Dynmap_version + config.Dynmap_extversion
+    	replace "@BUILD_NUMBER@", "${System.getenv().BUILD_NUMBER}"
 }
 
 repositories {
@@ -35,9 +51,9 @@ configurations {
 }
 
 dependencies {
-    dynmap group: 'org.dynmap', name: 'DynmapCore', version: "${project.version}", ext: 'jar'
-    dynmap group: 'org.dynmap', name: 'DynmapCore', version: "${project.version}", classifier: 'modsupport', ext: 'jar'
-    dynmap group: 'org.dynmap', name:'DynmapCoreAPI', version: "${project.version}", ext: 'jar'
+    dynmap group: 'org.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}", ext: 'jar'
+    dynmap group: 'org.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}", classifier: 'modsupport', ext: 'jar'
+    dynmap group: 'org.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}", ext: 'jar'
 }
 
 processResources
@@ -47,7 +63,7 @@ processResources
         include 'mcmod.info'
                 
         // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+        expand 'version':project.version, 'mcversion':config.minecraft_version
     }
         
     // copy everything else, thats not the mcmod.info
@@ -57,5 +73,7 @@ processResources
 }
 
 jar {
+   classifier = "forge-10.12.0"
+   destinationDir = project.projectDir
    from { configurations.dynmap.collect { it.isDirectory() ? it : zipTree(it) } }
 }
