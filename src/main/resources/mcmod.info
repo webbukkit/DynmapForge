@@ -13,10 +13,6 @@
   "credits": "Authored by mikeprimm",
   "logoFile": "",
   "screenshots": [ ],
-  "parent":"",
-
-  "dependencies": [
-     "mod_MinecraftForge"
-  ]
+  "dependencies": []
 }
 ]
