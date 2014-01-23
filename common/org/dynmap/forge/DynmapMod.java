@@ -6,12 +6,12 @@ import java.util.List;
 
 import org.dynmap.DynmapCommonAPI;
 import org.dynmap.DynmapCommonAPIListener;
+import org.dynmap.Log;
 
 import net.minecraft.world.World;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
-
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -71,6 +71,7 @@ public class DynmapMod
     }
 
     public DynmapMod() {
+        Log.setLoggerParent(FMLLog.getLogger());
         org.dynmap.modsupport.ModSupportImpl.init();
     }
 
