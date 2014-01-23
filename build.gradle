@@ -53,7 +53,6 @@ configurations {
 
 dependencies {
     dynmap group: 'org.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}", ext: 'jar'
-    dynmap group: 'org.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}", classifier: 'modsupport', ext: 'jar'
     dynmap group: 'org.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}", ext: 'jar'
 }
 
