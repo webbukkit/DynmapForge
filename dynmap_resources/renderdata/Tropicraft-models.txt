@@ -150,22 +150,7 @@ rotate:id=bambooChest,data=8,rot=90
 customblock:id=bambooFence,data=*,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=bambooFenceGate
 
 # Bamboo fence gate
-block:id=bambooFenceGate,data=0,scale=16
-rotate:id=107,data=0,rot=0
-block:id=bambooFenceGate,data=1,scale=16
-rotate:id=107,data=1,rot=0
-block:id=bambooFenceGate,data=2,scale=16
-rotate:id=107,data=2,rot=0
-block:id=bambooFenceGate,data=3,scale=16
-rotate:id=107,data=3,rot=0
-block:id=bambooFenceGate,data=4,scale=16
-rotate:id=107,data=4,rot=0
-block:id=bambooFenceGate,data=5,scale=16
-rotate:id=107,data=5,rot=0
-block:id=bambooFenceGate,data=6,scale=16
-rotate:id=107,data=6,rot=0
-block:id=bambooFenceGate,data=7,scale=16
-rotate:id=107,data=7,rot=0
+cusotmblock:id=bambooFenceGate,data=*,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer
 
 # bambooStair
 # thatchStairs

@@ -47,7 +47,7 @@ block:id=palmPlanks,allsides=80,topbottom=6080,txtid=blk0
 block:id=bambooFence,patch0-2=23,transparency=TRANSPARENT,txtid=blk0
 
 # bambooFenceGate
-block:id=bambooFenceGate,allsides=23,topbottom=6023,txtid=blk0,transparency=TRANSPARENT
+block:id=bambooFenceGate,patch0-2=23,txtid=blk0,transparency=TRANSPARENT
 
 # bambooStair
 block:id=bambooStair,data=*,patch0-2=23,txtid=blk0,transparency=SEMITRANSPARENT
