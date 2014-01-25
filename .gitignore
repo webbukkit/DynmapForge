@@ -7,4 +7,4 @@ Dynmap-*.jar
 /.gradle
 .project
 /.settings
-
+/run
