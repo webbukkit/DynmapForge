@@ -9,18 +9,25 @@ cfgfile:config/buildcraft/main.conf
 
 texturepath:assets/buildcraft/textures/blocks/
 texture:id=buildcraft/engineWoodBottom,filename=assets/buildcraft/textures/blocks/engineWoodBottom.png
+texture:id=buildcraft/engineWoodSide,filename=assets/buildcraft/textures/blocks/engineWoodSide.png
+texture:id=buildcraft/engineWoodTop,filename=assets/buildcraft/textures/blocks/engineWoodTop.png
 texture:id=buildcraft/fuel_flow,filename=assets/buildcraft/textures/blocks/fuel_flow.png
 texture:id=buildcraft/engineStoneBottom,filename=assets/buildcraft/textures/blocks/engineStoneBottom.png
+texture:id=buildcraft/engineStoneSide,filename=assets/buildcraft/textures/blocks/engineStoneSide.png
+texture:id=buildcraft/engineStoneTop,filename=assets/buildcraft/textures/blocks/engineStoneTop.png
 texture:id=buildcraft/oil_flow,filename=assets/buildcraft/textures/blocks/oil_flow.png
 texture:id=buildcraft/oil_still,filename=assets/buildcraft/textures/blocks/oil_still.png
 texture:id=buildcraft/engineIronBottom,filename=assets/buildcraft/textures/blocks/engineIronBottom.png
+texture:id=buildcraft/engineIronSide,filename=assets/buildcraft/textures/blocks/engineIronSide.png
+texture:id=buildcraft/engineIronTop,filename=assets/buildcraft/textures/blocks/engineIronTop.png
 texture:id=buildcraft/fuel_still,filename=assets/buildcraft/textures/blocks/fuel_still.png
+texture:id=buildcraft/trunk_green,filename=assets/buildcraft/textures/blocks/trunk_green.png
 
 
 # engine.id:* (engineBlock), render=133(CUSTOM), opaque=false,cls=buildcraft.energy.BlockEngine
-block:id=engine.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/engineWoodBottom
-block:id=engine.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/engineStoneBottom
-block:id=engine.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/engineIronBottom
+block:id=engine.id,data=0,patch0=0:buildcraft/engineWoodBottom,patch1=0:buildcraft/engineWoodTop,patch2-9=0:buildcraft/engineWoodSide,patch10-14=0:buildcraft/trunk_green,transparency=TRANSPARENT
+block:id=engine.id,data=1,patch0=0:buildcraft/engineStoneBottom,patch1=0:buildcraft/engineStoneTop,patch2-9=0:buildcraft/engineStoneSide,patch10-14=0:buildcraft/trunk_green,transparency=TRANSPARENT
+block:id=engine.id,data=2,patch0=0:buildcraft/engineIronBottom,patch1=0:buildcraft/engineIronTop,patch2-9=0:buildcraft/engineIronSide,patch10-14=0:buildcraft/trunk_green,transparency=TRANSPARENT
 # oil.id:* (blockOil), render=40(CUSTOM), opaque=false,cls=buildcraft.energy.BlockBuildcraftFluid
 block:id=oil.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:buildcraft/oil_still,face2-5=0:buildcraft/oil_flow
 # fuel.id:* (blockFuel), render=40(CUSTOM), opaque=false,cls=buildcraft.energy.BlockBuildcraftFluid
