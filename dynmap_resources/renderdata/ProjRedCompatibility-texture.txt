@@ -1,0 +1,20 @@
+# ProjRed|Compatibility 1.0
+version:1.6
+modname:ProjRed|Compatibility
+
+var:block_redconductiveliquidID=0,block_redstoneliquidID=0
+
+cfgfile:config/ProjectRed.cfg
+
+
+texturepath:assets/projred|compatibility/textures/blocks/
+texture:id=projectred/compat/liqredstone_flow,filename=assets/projectred/textures/blocks/compat/liqredstone_flow.png
+texture:id=projectred/compat/liqcondredmetal,filename=assets/projectred/textures/blocks/compat/liqcondredmetal.png
+texture:id=projectred/compat/liqcondredmetal_flow,filename=assets/projectred/textures/blocks/compat/liqcondredmetal_flow.png
+texture:id=projectred/compat/liqredstone,filename=assets/projectred/textures/blocks/compat/liqredstone.png
+
+
+# block_redstoneliquidID:* (projectred.compatibility.liqredstone), render=40(CUSTOM), opaque=false,cls=mrtjp.projectred.compatibility.LiquidFiniteSubstance
+block:id=block_redstoneliquidID,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:projectred/compat/liqredstone,face2-5=0:projectred/compat/liqredstone_flow
+# block_redconductiveliquidID:* (projectred.compatibility.liqcondredmetal), render=40(CUSTOM), opaque=false,cls=mrtjp.projectred.compatibility.LiquidFiniteSubstance
+block:id=block_redconductiveliquidID,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:projectred/compat/liqcondredmetal,face2-5=0:projectred/compat/liqcondredmetal_flow

@@ -1,0 +1,17 @@
+# AppliedEnergistics rv14.finale2
+version:1.6
+modname:AppliedEnergistics
+
+var:appeng.TinyTNT=0
+
+cfgfile:config/AppliedEnergistics.cfg
+
+
+texturepath:assets/appliedenergistics/textures/blocks/
+texture:id=minecraft/tnt_top,filename=assets/minecraft/textures/blocks/tnt_top.png
+texture:id=minecraft/tnt_bottom,filename=assets/minecraft/textures/blocks/tnt_bottom.png
+texture:id=minecraft/tnt_side,filename=assets/minecraft/textures/blocks/tnt_side.png
+
+
+# appeng.TinyTNT:* (TinyTNT), render=0(STANDARD), opaque=false,cls=appeng.compatabilty.tnt.BlockTinyTNT
+block:id=appeng.TinyTNT,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/tnt_bottom,face1=0:minecraft/tnt_top,face2-5=0:minecraft/tnt_side

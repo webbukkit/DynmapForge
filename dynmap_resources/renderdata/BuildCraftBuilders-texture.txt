@@ -1,0 +1,48 @@
+# BuildCraft|Builders 4.1.2
+version:1.6
+modname:BuildCraft|Builders
+
+var:pathMarker.id=0,marker.id=0,builder.id=0,filler.id=0,blueprintLibrary.id=0,architect.id=0
+
+cfgfile:config/buildcraft/main.conf
+
+
+texturepath:assets/buildcraft/textures/blocks/
+texture:id=buildcraft/library_side,filename=assets/buildcraft/textures/blocks/library_side.png
+texture:id=buildcraft/builder_front,filename=assets/buildcraft/textures/blocks/builder_front.png
+texture:id=buildcraft/blockMarker,filename=assets/buildcraft/textures/blocks/blockMarker.png
+texture:id=buildcraft/builder_side,filename=assets/buildcraft/textures/blocks/builder_side.png
+texture:id=buildcraft/blockFillerTopOn,filename=assets/buildcraft/textures/blocks/blockFillerTopOn.png
+texture:id=buildcraft/library_topbottom,filename=assets/buildcraft/textures/blocks/library_topbottom.png
+texture:id=buildcraft/blockFillerSides,filename=assets/buildcraft/textures/blocks/blockFillerSides.png
+texture:id=buildcraft/architect_sides,filename=assets/buildcraft/textures/blocks/architect_sides.png
+texture:id=buildcraft/architect_top,filename=assets/buildcraft/textures/blocks/architect_top.png
+texture:id=buildcraft/architect_front,filename=assets/buildcraft/textures/blocks/architect_front.png
+texture:id=buildcraft/builder_top,filename=assets/buildcraft/textures/blocks/builder_top.png
+texture:id=buildcraft/blockPathMarker,filename=assets/buildcraft/textures/blocks/blockPathMarker.png
+
+
+# marker.id:* (markerBlock), render=135(CUSTOM), opaque=false,cls=buildcraft.builders.BlockMarker
+block:id=marker.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/blockMarker
+# filler.id:* (fillerBlock), render=0(STANDARD), opaque=true,cls=buildcraft.builders.BlockFiller
+block:id=filler.id,data=*,stdrot=true,face0-1=0:buildcraft/blockFillerTopOn,face2-5=0:buildcraft/blockFillerSides
+# builder.id:* (builderBlock), render=0(STANDARD), opaque=true,cls=buildcraft.builders.BlockBuilder
+block:id=builder.id,data=0,stdrot=true,face0=0:buildcraft/builder_front,face1=0:buildcraft/builder_top,face2=0:buildcraft/builder_side,face3=0:buildcraft/builder_front,face4-5=0:buildcraft/builder_side
+block:id=builder.id,data=1,stdrot=true,face0=0:buildcraft/builder_side,face1=0:buildcraft/builder_front,face2-5=0:buildcraft/builder_side
+block:id=builder.id,data=2,stdrot=true,face0=0:buildcraft/builder_side,face1=0:buildcraft/builder_top,face2=0:buildcraft/builder_front,face3-5=0:buildcraft/builder_side
+block:id=builder.id,data=3,stdrot=true,face0=0:buildcraft/builder_side,face1=0:buildcraft/builder_top,face2=0:buildcraft/builder_side,face3=0:buildcraft/builder_front,face4-5=0:buildcraft/builder_side
+block:id=builder.id,data=4,stdrot=true,face0=0:buildcraft/builder_side,face1=0:buildcraft/builder_top,face2-3=0:buildcraft/builder_side,face4=0:buildcraft/builder_front,face5=0:buildcraft/builder_side
+block:id=builder.id,data=5,stdrot=true,face0=0:buildcraft/builder_side,face1=0:buildcraft/builder_top,face2-4=0:buildcraft/builder_side,face5=0:buildcraft/builder_front
+block:id=builder.id,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:buildcraft/builder_side,face1=0:buildcraft/builder_top,face2-5=0:buildcraft/builder_side
+# architect.id:* (architectBlock), render=0(STANDARD), opaque=true,cls=buildcraft.builders.BlockArchitect
+block:id=architect.id,data=0,stdrot=true,face0=0:buildcraft/architect_front,face1=0:buildcraft/architect_top,face2=0:buildcraft/architect_sides,face3=0:buildcraft/architect_front,face4-5=0:buildcraft/architect_sides
+block:id=architect.id,data=1,stdrot=true,face0=0:buildcraft/architect_sides,face1=0:buildcraft/architect_top,face2-5=0:buildcraft/architect_sides
+block:id=architect.id,data=2,stdrot=true,face0=0:buildcraft/architect_sides,face1=0:buildcraft/architect_top,face2=0:buildcraft/architect_front,face3-5=0:buildcraft/architect_sides
+block:id=architect.id,data=3,stdrot=true,face0=0:buildcraft/architect_sides,face1=0:buildcraft/architect_top,face2=0:buildcraft/architect_sides,face3=0:buildcraft/architect_front,face4-5=0:buildcraft/architect_sides
+block:id=architect.id,data=4,stdrot=true,face0=0:buildcraft/architect_sides,face1=0:buildcraft/architect_top,face2-3=0:buildcraft/architect_sides,face4=0:buildcraft/architect_front,face5=0:buildcraft/architect_sides
+block:id=architect.id,data=5,stdrot=true,face0=0:buildcraft/architect_sides,face1=0:buildcraft/architect_top,face2-4=0:buildcraft/architect_sides,face5=0:buildcraft/architect_front
+block:id=architect.id,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:buildcraft/architect_sides,face1=0:buildcraft/architect_top,face2-5=0:buildcraft/architect_sides
+# blueprintLibrary.id:* (libraryBlock), render=0(STANDARD), opaque=true,cls=buildcraft.builders.BlockBlueprintLibrary
+block:id=blueprintLibrary.id,data=*,stdrot=true,face0-1=0:buildcraft/library_topbottom,face2-5=0:buildcraft/library_side
+# pathMarker.id:* (pathMarkerBlock), render=135(CUSTOM), opaque=false,cls=buildcraft.builders.BlockPathMarker
+block:id=pathMarker.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/blockPathMarker

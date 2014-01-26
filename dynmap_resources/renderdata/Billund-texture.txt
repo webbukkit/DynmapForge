@@ -1,0 +1,15 @@
+# Billund 1.01
+version:1.6
+modname:Billund
+
+var:billundBlockID=0
+
+cfgfile:config/Billund.cfg
+
+
+texturepath:assets/billund/textures/blocks/
+texture:id=billund/transparent,filename=assets/billund/textures/blocks/transparent.png
+
+
+# billundBlockID:* (Billund), render=186(CUSTOM), opaque=false,cls=dan200.billund.shared.BlockBillund
+block:id=billundBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:billund/transparent

@@ -1,4 +1,125 @@
-modname:GalacticraftMars[2.0.6-]
+# GalacticraftMars 2.0.7
+version:1.6
+modname:GalacticraftMars
 
-# All in GalacticraftCore - all the textures are in that mod, not GalacticraftMars, for some reason....
+var:idBlockMachine=0,idBlockVine=0,idBlockTintedGlassPane=0,idBlockCreeperEgg=0,idBlockTreasureChestT2=0,idBlockBacterialSludge=0,idBlockRock=0,idBlockMars=0
 
+cfgfile:config/Galacticraft/mars.conf
+
+
+texturepath:assets/galacticraftmars/textures/blocks/
+texture:id=galacticraftcore/blank,filename=assets/galacticraftcore/textures/blocks/blank.png
+texture:id=galacticraftcore/machine_blank,filename=assets/galacticraftcore/textures/blocks/machine_blank.png
+texture:id=galacticraftcore/machine_input,filename=assets/galacticraftcore/textures/blocks/machine_input.png
+texture:id=galacticraftcore/treasure_front_single,filename=assets/galacticraftcore/textures/blocks/treasureChest.png
+texture:id=galacticraftmars/blueEgg_0,filename=assets/galacticraftmars/textures/blocks/blueEgg_0.png
+texture:id=galacticraftmars/blueEgg_1,filename=assets/galacticraftmars/textures/blocks/blueEgg_1.png
+texture:id=galacticraftmars/bottom,filename=assets/galacticraftmars/textures/blocks/bottom.png
+texture:id=galacticraftmars/brick,filename=assets/galacticraftmars/textures/blocks/brick.png
+texture:id=galacticraftmars/cobblestone,filename=assets/galacticraftmars/textures/blocks/cobblestone.png
+texture:id=galacticraftmars/copper,filename=assets/galacticraftmars/textures/blocks/copper.png
+texture:id=galacticraftmars/creeperEgg,filename=assets/galacticraftmars/textures/blocks/creeperEgg.png
+texture:id=galacticraftmars/cryoDummy,filename=assets/galacticraftmars/textures/blocks/cryoDummy.png
+texture:id=galacticraftmars/decoration_desh,filename=assets/galacticraftmars/textures/blocks/decoration_desh.png
+texture:id=galacticraftmars/desh,filename=assets/galacticraftmars/textures/blocks/desh.png
+texture:id=galacticraftmars/iron,filename=assets/galacticraftmars/textures/blocks/iron.png
+texture:id=galacticraftmars/launchController,filename=assets/galacticraftmars/textures/blocks/launchController.png
+texture:id=galacticraftmars/middle,filename=assets/galacticraftmars/textures/blocks/middle.png
+texture:id=galacticraftmars/redEgg_0,filename=assets/galacticraftmars/textures/blocks/redEgg_0.png
+texture:id=galacticraftmars/redEgg_1,filename=assets/galacticraftmars/textures/blocks/redEgg_1.png
+texture:id=galacticraftmars/sludge,filename=assets/galacticraftmars/textures/blocks/sludge.png
+texture:id=galacticraftmars/sludge_flow,filename=assets/galacticraftmars/textures/blocks/sludge_flow.png
+texture:id=galacticraftmars/terraformer_0,filename=assets/galacticraftmars/textures/blocks/terraformer_0.png
+texture:id=galacticraftmars/tin,filename=assets/galacticraftmars/textures/blocks/tin.png
+texture:id=galacticraftmars/tintedGlassPane_black,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_black.png
+texture:id=galacticraftmars/tintedGlassPane_blue,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_blue.png
+texture:id=galacticraftmars/tintedGlassPane_brown,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_brown.png
+texture:id=galacticraftmars/tintedGlassPane_cyan,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_cyan.png
+texture:id=galacticraftmars/tintedGlassPane_gray,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_gray.png
+texture:id=galacticraftmars/tintedGlassPane_green,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_green.png
+texture:id=galacticraftmars/tintedGlassPane_light_blue,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_light_blue.png
+texture:id=galacticraftmars/tintedGlassPane_lime,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_lime.png
+texture:id=galacticraftmars/tintedGlassPane_magenta,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_magenta.png
+texture:id=galacticraftmars/tintedGlassPane_orange,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_orange.png
+texture:id=galacticraftmars/tintedGlassPane_pink,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_pink.png
+texture:id=galacticraftmars/tintedGlassPane_purple,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_purple.png
+texture:id=galacticraftmars/tintedGlassPane_red,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_red.png
+texture:id=galacticraftmars/tintedGlassPane_silver,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_silver.png
+texture:id=galacticraftmars/tintedGlassPane_white,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_white.png
+texture:id=galacticraftmars/tintedGlassPane_yellow,filename=assets/galacticraftmars/textures/blocks/tintedGlassPane_yellow.png
+texture:id=galacticraftmars/top,filename=assets/galacticraftmars/textures/blocks/top.png
+texture:id=galacticraftmars/vine_0,filename=assets/galacticraftmars/textures/blocks/vine_0.png
+texture:id=galacticraftmars/vine_1,filename=assets/galacticraftmars/textures/blocks/vine_1.png
+texture:id=galacticraftmars/vine_2,filename=assets/galacticraftmars/textures/blocks/vine_2.png
+texture:id=galacticraftmars/yellowEgg_0,filename=assets/galacticraftmars/textures/blocks/yellowEgg_0.png
+texture:id=galacticraftmars/yellowEgg_1,filename=assets/galacticraftmars/textures/blocks/yellowEgg_1.png
+
+
+# idBlockMars:* (tile.mars), render=0(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlock
+block:id=idBlockMars,data=0,stdrot=true,face0-5=0:galacticraftmars/copper
+block:id=idBlockMars,data=1,stdrot=true,face0-5=0:galacticraftmars/tin
+block:id=idBlockMars,data=2,stdrot=true,face0-5=0:galacticraftmars/desh
+block:id=idBlockMars,data=3,stdrot=true,face0-5=0:galacticraftmars/iron
+block:id=idBlockMars,data=4,stdrot=true,face0-5=0:galacticraftmars/cobblestone
+block:id=idBlockMars,data=5,stdrot=true,face0-5=0:galacticraftmars/top
+block:id=idBlockMars,data=6,stdrot=true,face0-5=0:galacticraftmars/middle
+block:id=idBlockMars,data=7,stdrot=true,face0-5=0:galacticraftmars/brick
+block:id=idBlockMars,data=8,stdrot=true,face0-5=0:galacticraftmars/decoration_desh
+block:id=idBlockMars,data=9,stdrot=true,face0-5=0:galacticraftmars/bottom
+block:id=idBlockMars,data=10,stdrot=true,face0-5=0:galacticraftcore/blank
+block:id=idBlockMars,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftmars/decoration_desh
+# idBlockBacterialSludge:* (tile.sludge), render=40(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSludge
+block:id=idBlockBacterialSludge,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftmars/sludge,face1-5=0:galacticraftmars/sludge_flow
+# idBlockVine:* (tile.cavernVines), render=72(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockVine
+block:id=idBlockVine,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_0
+block:id=idBlockVine,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_1
+block:id=idBlockVine,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_2
+# idBlockRock:* (tile.slimelingEgg), render=73(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSlimelingEgg
+block:id=idBlockRock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
+block:id=idBlockRock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
+block:id=idBlockRock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=idBlockRock,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
+block:id=idBlockRock,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_1
+block:id=idBlockRock,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_1
+block:id=idBlockRock,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
+block:id=idBlockRock,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
+block:id=idBlockRock,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=idBlockRock,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
+block:id=idBlockRock,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_1
+block:id=idBlockRock,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_1
+block:id=idBlockRock,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
+block:id=idBlockRock,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
+block:id=idBlockRock,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=idBlockRock,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
+# idBlockTreasureChestT2:* (tile.treasureT2), render=74(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockT2TreasureChest
+block:id=idBlockTreasureChestT2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/treasure_front_single
+# idBlockMachine:* (tile.marsMachine), render=75(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockMachine
+block:id=idBlockMachine,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/terraformer_0
+block:id=idBlockMachine,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/terraformer_0,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/terraformer_0
+block:id=idBlockMachine,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/terraformer_0,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/terraformer_0
+block:id=idBlockMachine,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/terraformer_0,face5=0:galacticraftcore/machine_input
+block:id=idBlockMachine,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/cryoDummy
+block:id=idBlockMachine,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/launchController
+block:id=idBlockMachine,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/launchController,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/launchController
+block:id=idBlockMachine,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/launchController,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/launchController
+block:id=idBlockMachine,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/launchController,face5=0:galacticraftcore/machine_input
+block:id=idBlockMachine,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/launchController
+# idBlockCreeperEgg:* (tile.creeperEgg), render=27(DRAGONEGG), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockCreeperEgg
+block:id=idBlockCreeperEgg,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/creeperEgg
+# idBlockTintedGlassPane:* (tile.tintedGlassPane), render=76(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockTintedGlassPane
+block:id=idBlockTintedGlassPane,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_white
+block:id=idBlockTintedGlassPane,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_orange
+block:id=idBlockTintedGlassPane,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_magenta
+block:id=idBlockTintedGlassPane,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_light_blue
+block:id=idBlockTintedGlassPane,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_yellow
+block:id=idBlockTintedGlassPane,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_lime
+block:id=idBlockTintedGlassPane,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_pink
+block:id=idBlockTintedGlassPane,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_gray
+block:id=idBlockTintedGlassPane,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_silver
+block:id=idBlockTintedGlassPane,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_cyan
+block:id=idBlockTintedGlassPane,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_purple
+block:id=idBlockTintedGlassPane,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_blue
+block:id=idBlockTintedGlassPane,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_brown
+block:id=idBlockTintedGlassPane,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_green
+block:id=idBlockTintedGlassPane,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_red
+block:id=idBlockTintedGlassPane,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_black

@@ -1,38 +1,38 @@
-# Thermal Expansion models
-version:1.5.1-
+# ThermalExpansion 3.0.0.2
+version:1.6
 modname:ThermalExpansion
 
-# Configuration file
+var:FluidPyrotheum=0,Machine=0,Device=0,Dynamo=0,Tesseract=0,Glass=0,FluidCryotheum=0,Lamp=0,Conduit=0,FluidGlowstone=0
+var:Storage=0,Ore=0,Tank=0,FluidCoal=0,EnergyCell=0,FluidRedstone=0,Strongbox=0,FluidEnder=0,Rockwool=0
+
 cfgfile:config/cofh/ThermalExpansion.cfg
 
-# Engine (lifted from bc-models.txt)
-patch:id=EngineBottom,Ox=0.0,Oy=0.0,Oz=0.0,Ux=1.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=0.0,Vz=1.0,visibility=top
-patch:id=EngineTop,Ox=0.0,Oy=0.25,Oz=1.0,Ux=1.0,Uy=0.25,Uz=1.0,Vx=0.0,Vy=0.25,Vz=0.0,visibility=top
-patch:id=EngineSide,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=0.0,Vy=1.0,Vz=0.0,Vmin=0.0,Vmax=0.25,visibility=top
-patch:id=EngineTop2,Ox=0.0,Oy=0.5,Oz=1.0,Ux=1.0,Uy=0.5,Uz=1.0,Vx=0.0,Vy=0.5,Vz=0.0,visibility=top
-patch:id=EngineSide2,Ox=0.0625,Oy=0.25,Oz=0.0,Ux=0.0625,Uy=0.25,Uz=1.0,Vx=0.0625,Vy=1.25,Vz=0.0,Vmin=0.0,Vmax=0.25,visibility=top
-patch:id=EngineSide3,Ox=0.25,Oy=0.0,Oz=0.0,Ux=0.25,Uy=0.0,Uz=1.0,Vx=0.25,Vy=1.0,Vz=0.0,Umin=0.25,Umax=0.75,visibility=top
-patch:id=EngineTop3,Ox=0.0,Oy=1.0,Oz=1.0,Ux=1.0,Uy=1.0,Uz=1.0,Vx=0.0,Vy=1.0,Vz=0.0,Umin=0.25,Umax=0.75,Vmin=0.25,Vmax=0.75,visibility=top
-customblock:id=Engine,data=0,data=1,class=org.dynmap.hdmap.renderer.RotatedPatchRenderer,patch0=EngineBottom,patch1=EngineTop,patch2=EngineSide,patch3=EngineSide@90,patch4=EngineSide@180,patch5=EngineSide@270,patch6=EngineSide2,patch7=EngineSide2@90,patch8=EngineSide2@180,patch9=EngineSide2@270,patch10=EngineSide3,patch11=EngineSide3@90,patch12=EngineSide3@180,patch13=EngineSide3@270,patch14=EngineTop3,patch15=EngineTop2,index=side.facing,rot0=180/0/0,rot2=90/0/0,rot3=90/180/0,rot4=90/270/0,rot5=90/90/0
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# Machines (lifted from MineFactoryReloaded-models.txt but didn't work)
-#customblock:id=Machine,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=rotation,index0=0,map0=S012345,index1=1,map1=S012345,index2=4,map2=S012345,index3=5,map3=S013254,index4=3,map4=S014532,index5=2,map5=S015423
-
-# Liquids
-boxblock:id=LiquidRedstone,data=6,ymax=0.875
-boxblock:id=LiquidRedstone,data=5,ymax=0.75
-boxblock:id=LiquidRedstone,data=4,ymax=0.625
-boxblock:id=LiquidRedstone,data=3,ymax=0.5
-boxblock:id=LiquidRedstone,data=2,ymax=0.375
-boxblock:id=LiquidRedstone,data=1,ymax=0.25
-boxblock:id=LiquidRedstone,data=0,ymax=0.125
-
-boxblock:id=LiquidGlowstone,data=0,ymin=0.833
-boxblock:id=LiquidGlowstone,data=1,ymin=0.666
-boxblock:id=LiquidGlowstone,data=2,ymin=0.5
-boxblock:id=LiquidGlowstone,data=3,ymin=0.333
-boxblock:id=LiquidGlowstone,data=4,ymin=0.166
-
-boxblock:id=LiquidEnder,data=2,ymax=0.75
-boxblock:id=LiquidEnder,data=1,ymax=0.5
-boxblock:id=LiquidEnder,data=0,ymax=0.25
+# Dynamo:* (Dynamo), render=241(CUSTOM), opaque=false,cls=thermalexpansion.block.dynamo.BlockDynamo
+# EnergyCell:* (EnergyCell), render=235(CUSTOM), opaque=false,cls=thermalexpansion.block.energycell.BlockEnergyCell
+# Tank:* (Tank), render=242(CUSTOM), opaque=false,cls=thermalexpansion.block.tank.BlockTank
+# Strongbox:* (Strongbox), render=-1(CUSTOM), opaque=false,cls=thermalexpansion.block.strongbox.BlockStrongbox
+# Conduit:* (Conduit), render=237(CUSTOM), opaque=false,cls=thermalexpansion.block.conduit.BlockConduit
+# Tesseract:* (Tesseract), render=236(CUSTOM), opaque=false,cls=thermalexpansion.block.tesseract.BlockTesseract
+# Lamp:* (Lamp), render=244(CUSTOM), opaque=false,cls=thermalexpansion.block.lamp.BlockLamp
+# FluidRedstone:* (FluidRedstone), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidRedstone
+# FluidGlowstone:* (FluidGlowstone), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidGlowstone
+# FluidEnder:* (FluidEnder), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidEnder
+# FluidPyrotheum:* (FluidPyrotheum), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidPyrotheum
+# FluidCryotheum:* (FluidCryotheum), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidCryotheum
+# FluidCoal:* (FluidCoal), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidCoal

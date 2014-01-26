@@ -1,0 +1,51 @@
+# BiblioCraft 1.5.3
+version:1.6
+modname:BiblioCraft
+
+var:PrintingPress=0,PotionShelf=0,TypeMachine=0,MapFrame=0,WeaponRack=0,MoreStuffs=0,WoodenLabel=0,ArmorStand=0,Seat=0,WeaponCase=0
+var:Bookcase=0,GenericShelf=0,Table=0,WritingDesk=0,Lantern=0,Lamp=0
+
+cfgfile:config/BiblioCraft.cfg
+
+
+texturepath:assets/bibliocraft/textures/blocks/
+texture:id=minecraft/anvil_base,filename=assets/minecraft/textures/blocks/anvil_base.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+texture:id=minecraft/glass,filename=assets/minecraft/textures/blocks/glass.png
+texture:id=minecraft/gold_block,filename=assets/minecraft/textures/blocks/gold_block.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+# MoreStuffs:* (BiblioStuffs), render=103(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockStuff
+block:id=MoreStuffs,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/glass
+# Lantern:* (BiblioLantern), render=101(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockLantern
+block:id=Lantern,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/gold_block
+# Lamp:* (BiblioLamp), render=102(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockLamp
+block:id=Lamp,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/gold_block
+# Table:* (BiblioTable), render=100(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockTable
+block:id=Table,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# TypeMachine:* (Typesetting Machine), render=98(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockTypeMachine
+block:id=TypeMachine,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# PrintingPress:* (Printing Press), render=99(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPrintPress
+block:id=PrintingPress,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/anvil_base
+# WritingDesk:* (BiblioDesk), render=97(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockWritingDesk
+block:id=WritingDesk,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# ArmorStand:* (Armor Stand), render=91(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockArmorStand
+block:id=ArmorStand,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+# Bookcase:* (Bibliotheca), render=90(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBookcase
+block:id=Bookcase,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# WoodenLabel:* (BiblioLabel), render=96(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockLabel
+block:id=WoodenLabel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# PotionShelf:* (BiblioPotionShelf), render=92(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPotionShelf
+block:id=PotionShelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# WeaponRack:* (BiblioRack), render=93(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockWeaponRack
+block:id=WeaponRack,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# GenericShelf:* (BiblioShelf), render=94(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockGenericShelf
+block:id=GenericShelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# WeaponCase:* (BiblioCase), render=95(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockWeaponCase
+block:id=WeaponCase,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# MapFrame:* (BiblioMapFrames), render=104(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockMapFrame
+block:id=MapFrame,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Seat:* (BiblioSeats), render=105(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockSeat
+block:id=Seat,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce

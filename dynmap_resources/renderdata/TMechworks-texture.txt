@@ -1,0 +1,38 @@
+# TMechworks DEV.21b1027
+version:1.6
+modname:TMechworks
+
+var:logicblock/SignalTerminal=0,logicblock/SignalBus=0,machines/Redstone=0,machines/Dynamo=0
+
+cfgfile:config/TMechworks.cfg
+
+
+texturepath:assets/tmechworks/textures/blocks/
+texture:id=tinker/compressed_alubrass,filename=assets/tinker/textures/blocks/compressed_alubrass.png
+texture:id=tmechworks/signalbus,filename=assets/tmechworks/textures/blocks/signalbus.png
+texture:id=tmechworks/machines/drawbridge_side_advanced,filename=assets/tmechworks/textures/blocks/machines/drawbridge_side_advanced.png
+texture:id=tmechworks/machines/drawbridge_side_extended,filename=assets/tmechworks/textures/blocks/machines/drawbridge_side_extended.png
+texture:id=tmechworks/machines/drawbridge_bottom,filename=assets/tmechworks/textures/blocks/machines/drawbridge_bottom.png
+texture:id=tmechworks/machines/drawbridge_side,filename=assets/tmechworks/textures/blocks/machines/drawbridge_side.png
+texture:id=tmechworks/machines/firestarter_side,filename=assets/tmechworks/textures/blocks/machines/firestarter_side.png
+texture:id=tmechworks/machines/firestarter_bottom,filename=assets/tmechworks/textures/blocks/machines/firestarter_bottom.png
+texture:id=tmechworks/machines/drawbridge_top_face_extended,filename=assets/tmechworks/textures/blocks/machines/drawbridge_top_face_extended.png
+texture:id=tmechworks/machines/drawbridge_top_extended,filename=assets/tmechworks/textures/blocks/machines/drawbridge_top_extended.png
+texture:id=tmechworks/machines/drawbridge_top,filename=assets/tmechworks/textures/blocks/machines/drawbridge_top.png
+texture:id=tmechworks/machines/firestarter_top,filename=assets/tmechworks/textures/blocks/machines/firestarter_top.png
+texture:id=tmechworks/machines/drawbridge_bottom_extended,filename=assets/tmechworks/textures/blocks/machines/drawbridge_bottom_extended.png
+texture:id=tmechworks/machines/drawbridge_bottom_face,filename=assets/tmechworks/textures/blocks/machines/drawbridge_bottom_face.png
+
+
+# logicblock/SignalBus:* (SignalBus), render=87(CUSTOM), opaque=false,cls=tmechworks.blocks.SignalBus
+block:id=logicblock/SignalBus,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:tmechworks/signalbus
+# logicblock/SignalTerminal:* (SignalTerminal), render=88(CUSTOM), opaque=false,cls=tmechworks.blocks.SignalTerminal
+block:id=logicblock/SignalTerminal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:tmechworks/signalbus
+# machines/Dynamo:* (TMechworks:Dynamo), render=-1(CUSTOM), opaque=false,cls=tmechworks.blocks.DynamoBlock
+block:id=machines/Dynamo,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/compressed_alubrass
+# machines/Redstone:* (RedstoneMachine), render=86(CUSTOM), opaque=true,cls=tmechworks.blocks.RedstoneMachine
+block:id=machines/Redstone,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:tmechworks/machines/drawbridge_bottom,face1=0:tmechworks/machines/drawbridge_top,face2-4=0:tmechworks/machines/drawbridge_side,face5=0:tmechworks/machines/drawbridge_bottom_face
+block:id=machines/Redstone,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:tmechworks/machines/firestarter_bottom,face1=0:tmechworks/machines/firestarter_top,face2-5=0:tmechworks/machines/firestarter_side
+block:id=machines/Redstone,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:tmechworks/machines/drawbridge_bottom,face1=0:tmechworks/machines/drawbridge_top,face2-4=0:tmechworks/machines/drawbridge_side_advanced,face5=0:tmechworks/machines/drawbridge_bottom_face
+block:id=machines/Redstone,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:tmechworks/machines/drawbridge_bottom_extended,face1=0:tmechworks/machines/drawbridge_top_extended,face2-4=0:tmechworks/machines/drawbridge_side_extended,face5=0:tmechworks/machines/drawbridge_top_face_extended
+block:id=machines/Redstone,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:tmechworks/machines/drawbridge_top

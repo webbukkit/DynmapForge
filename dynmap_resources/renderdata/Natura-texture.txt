@@ -1,657 +1,819 @@
-# Natura Block mapping
-version:1.5.2-
+# Natura 2.1.14
+version:1.6
 modname:Natura
 
-# configuration file
+var:Amaranth_Fence_Gate=0,Powered_Blaze_Rail=0,Hopseed_Stairs=0,Netherrack_Furnace=0,Sakura_Fence_Gate=0,Ghostwood_Fence_Gate=0,Crops=0,Sakura_Pressure_Plate=0,Fusewood_Trapdoor=0,Planks_Block=0
+var:Hopseed_Button=0,Silverbell_Button=0,Willow_Log=0,Respawn_Obelisk=0,Darkwood_Pressure_Plate=0,Netherrack_Pressure_Plate=0,Ghostwood_Pressure_Plate=0,Bloodwood_Trapdoor=0,Maple_Trapdoor=0,Flora_Leaves=0
+var:Berry_Bush=0,Fusewood_Pressure_Plate=0,Bloodwood_Button=0,Bloodwood_Pressure_Plate=0,Eucalyptus_Door=0,Darkwood_Stairs=0,Detector_Blaze_Rail=0,Rare_Log=0,Willow_Pressure_Plate=0,Redwood_Trapdoor=0
+var:Redwood_Fence_Gate=0,Bloodwood_Door=0,Hopseed_Trapdoor=0,Plank_Slab_One=0,Eucalyputus_Pressure_Plate=0,Amaranth_Pressure_Plate=0,Eucalyputus_Stairs=0,Maple_Fence_Gate=0,Tigerwood_Trapdoor=0,Darkwood_Button=0
+var:Glowing_Mushroom=0,terrain/Tainted_Soil=0,Thornvines=0,Tigerwood_Button=0,Redwood_Door=0,Amaranth_Stairs=0,Willow_Stairs=0,Bloodwood_Block=0,Plank_Slab_Two=0,Nether_Lever=0
+var:Blaze_Rail=0,Purple_Glowshroom=0,Maple_Button=0,Amaranth_Trapdoor=0,Hopseed_Fence_Gate=0,Fence=0,Redwood_Pressure_Plate=0,Redwood_Button=0,Sakura_Door=0,Amaranth_Button=0
+var:Silverbell_Pressure_Plate=0,Willow_Button=0,Tigerwood_Fence_Gate=0,Green_Glowshroom=0,Eucalyputus_Button=0,Fusewood_Button=0,Redwood_Bark_Door=0,Wood_Block=0,Maple_Stairs=0,Ghostwood_Trapdoor=0
+var:Topiary_Grass_Slab=0,Ghostwood_Door=0,Maple_Pressure_Plate=0,Activator_Blaze_Rail=0,Sakura_Trapdoor=0,Sapling=0,Cloud_Block=0,Silverbell_Trapdoor=0,Fusewood_Fence_Gate=0,Hopseed_Door=0
+var:Saguaro_Cactus=0,Tigerwood_Pressure_Plate=0,Darkwood_Fence_Gate=0,terrain/Heat_Sand=0,Tigerwood_Stairs=0,Netherrack_Button=0,Sakura_Leaves=0,Bloodwood_Stairs=0,Bloodwood_Fence_Gate=0,Willow_Trapdoor=0
+var:Flower=0,Rare_Sapling=0,Fusewood_Stairs=0,Silverbell_Fence_Gate=0,Hopseed_Pressure_Plate=0,Bookshelf=0,Darkwood_Leaves=0,Eucalyputus_Trapdoor=0,Rare_Leaves=0,Redwood_Block=0
+var:Darkwood_Log=0,Sakura_Button=0,Ghostwood_Button=0,Topiary_Grass_Block=0,Blue_Glowshroom=0,Ghostwood_Stairs=0,Silverbell_Stairs=0,Darkwood_Trapdoor=0,Blaze_Hopper=0,Sakura_Stairs=0
+var:Nether_Berry_Bush=0,Crafting_Table=0,Redwood_Stairs=0,Eucalyputus_Fence_Gate=0,Nether_Glass=0,Willow_Fence_Gate=0
+
 cfgfile:config/Natura.txt
 
-[-1.5.2]texturepath:mods/natura/textures/blocks
-[1.6.0-]texturepath:assets/natura/textures/blocks
-texture:id=air_sulfur
-texture:id=apple_bark
-texture:id=apple_bookshelf
-texture:id=apple_heart
-texture:id=apple_ladder
-texture:id=apple_leaves_fancy
-texture:id=apple_leaves_flowering_fancy
-texture:id=apple_leaves_fruit_fancy
-texture:id=apple_leaves_gold_fancy
-texture:id=apple_planks
-texture:id=apple_sapling
-texture:id=apple_trapdoor
-texture:id=barley_1
-texture:id=barley_2
-texture:id=barley_3
-texture:id=barley_4
-texture:id=birch_door_bottom
-texture:id=birch_door_top
-texture:id=blackberry_fancy
-texture:id=blackberry_ripe_fancy
-texture:id=blightberry_fancy
-texture:id=blightberry_ripe_fancy
-texture:id=bloodwood_bark
-texture:id=bloodwood_bookshelf
-texture:id=bloodwood_door_bottom
-texture:id=bloodwood_door_top
-texture:id=bloodwood_heart_small
-texture:id=bloodwood_ladder
-texture:id=bloodwood_leaves_fancy
-texture:id=bloodwood_lower_left
-texture:id=bloodwood_lower_right
-texture:id=bloodwood_planks
-texture:id=bloodwood_sapling
-texture:id=bloodwood_side_left
-texture:id=bloodwood_side_right
-texture:id=bloodwood_trapdoor
-texture:id=bloodwood_upper_left
-texture:id=bloodwood_upper_right
-texture:id=bloodwood_workbench_face
-texture:id=bloodwood_workbench_side
-texture:id=bloodwood_workbench_top
-texture:id=blueberry_fancy
-texture:id=blueberry_ripe_fancy
-texture:id=cloud_dark
-texture:id=cloud_gray
-texture:id=cloud_sulfur
-texture:id=cloud_white
-texture:id=corrupt_brick_amber
-texture:id=corrupt_brick_blue
-texture:id=corrupt_brick_green
-texture:id=corrupt_brick_magenta
-texture:id=corrupt_brick_purple
-texture:id=corrupt_brick_red
-texture:id=corrupt_brick_silver
-texture:id=corrupt_brick_yellow
-texture:id=corrupt_stone_amber
-texture:id=corrupt_stone_blue
-texture:id=corrupt_stone_green
-texture:id=corrupt_stone_magenta
-texture:id=corrupt_stone_purple
-texture:id=corrupt_stone_red
-texture:id=corrupt_stone_silver
-texture:id=corrupt_stone_yellow
-texture:id=corruptor_amber
-texture:id=corruptor_blue
-texture:id=corruptor_grass_side_amber
-texture:id=corruptor_grass_side_blue
-texture:id=corruptor_grass_side_green
-texture:id=corruptor_grass_side_magenta
-texture:id=corruptor_grass_side_purple
-texture:id=corruptor_grass_side_red
-texture:id=corruptor_grass_side_silver
-texture:id=corruptor_grass_side_yellow
-texture:id=corruptor_grass_top_amber
-texture:id=corruptor_grass_top_blue
-texture:id=corruptor_grass_top_green
-texture:id=corruptor_grass_top_magenta
-texture:id=corruptor_grass_top_purple
-texture:id=corruptor_grass_top_red
-texture:id=corruptor_grass_top_silver
-texture:id=corruptor_grass_top_yellow
-texture:id=corruptor_green
-texture:id=corruptor_magenta
-texture:id=corruptor_purple
-texture:id=corruptor_red
-texture:id=corruptor_silver
-texture:id=corruptor_yellow
-texture:id=cotton_1
-texture:id=cotton_2
-texture:id=cotton_3
-texture:id=cotton_4
-texture:id=cotton_5
-texture:id=darkwood_bark
-texture:id=darkwood_bookshelf
-texture:id=darkwood_door_bottom
-texture:id=darkwood_door_item
-texture:id=darkwood_door_top
-texture:id=darkwood_flowering_leaves_fancy
-texture:id=darkwood_fruit_leaves_fancy
-texture:id=darkwood_heart
-texture:id=darkwood_ladder
-texture:id=darkwood_leaves_fancy
-texture:id=darkwood_planks
-texture:id=darkwood_sapling
-texture:id=darkwood_trapdoor
-texture:id=darkwood_workbench_face
-texture:id=darkwood_workbench_side
-texture:id=darkwood_workbench_top
-texture:id=duskberry_fancy
-texture:id=duskberry_ripe_fancy
-texture:id=eucalyptus_bark
-texture:id=eucalyptus_bookshelf
-texture:id=eucalyptus_door_bottom
-texture:id=eucalyptus_door_top
-texture:id=eucalyptus_heart
-texture:id=eucalyptus_ladder
-texture:id=eucalyptus_leaves_fancy
-texture:id=eucalyptus_planks
-texture:id=eucalyptus_sapling
-texture:id=eucalyptus_trapdoor
-texture:id=eucalyptus_workbench_face
-texture:id=eucalyptus_workbench_side
-texture:id=eucalyptus_workbench_top
-texture:id=flower_bluebells
-texture:id=fusewood_bark
-texture:id=fusewood_bookshelf
-texture:id=fusewood_door_bottom
-texture:id=fusewood_door_top
-texture:id=fusewood_heart
-texture:id=fusewood_leaves_fancy
-texture:id=fusewood_planks
-texture:id=fusewood_sapling
-texture:id=fusewood_window
-texture:id=fusewood_workbench_face
-texture:id=fusewood_workbench_side
-texture:id=fusewood_workbench_top
-texture:id=geoberry_fancy
-texture:id=geoberry_ripe_fancy
-texture:id=ghostwood_bark
-texture:id=ghostwood_bookshelf
-texture:id=ghostwood_door_bottom
-texture:id=ghostwood_door_top
-texture:id=ghostwood_heart
-texture:id=ghostwood_ladder
-texture:id=ghostwood_leaves_fancy
-texture:id=ghostwood_planks
-texture:id=ghostwood_sapling
-texture:id=ghostwood_trapdoor
-texture:id=ghostwood_workbench_face
-texture:id=ghostwood_workbench_side
-texture:id=ghostwood_workbench_top
-texture:id=heatsand
-texture:id=hopseed_bark
-texture:id=hopseed_bookshelf
-texture:id=hopseed_door_bottom
-texture:id=hopseed_door_top
-texture:id=hopseed_heart
-texture:id=hopseed_ladder
-texture:id=hopseed_leaves_fancy
-texture:id=hopseed_planks
-texture:id=hopseed_sapling
-texture:id=hopseed_trapdoor
-texture:id=hopseed_workbench_face
-texture:id=hopseed_workbench_side
-texture:id=hopseed_workbench_top
-texture:id=infernal_stone
-texture:id=infernal_stone2
-texture:id=maple_bark
-texture:id=maple_bookshelf
-texture:id=maple_door_bottom
-texture:id=maple_door_top
-texture:id=maple_heart
-texture:id=maple_leaves_fancy
-texture:id=maple_planks
-texture:id=maple_sapling
-texture:id=maple_window
-texture:id=maple_workbench_face
-texture:id=maple_workbench_side
-texture:id=maple_workbench_top
-texture:id=mushroom_amber
-texture:id=mushroom_blue
-texture:id=mushroom_green
-texture:id=mushroom_inside_blue
-texture:id=mushroom_inside_green
-texture:id=mushroom_inside_purple
-texture:id=mushroom_purple
-texture:id=mushroom_skin_blue
-texture:id=mushroom_skin_green
-texture:id=mushroom_skin_purple
-texture:id=mushroom_stem_blue
-texture:id=mushroom_stem_green
-texture:id=mushroom_stem_purple
-texture:id=oak_window
-texture:id=pine_door_bottom
-texture:id=pine_door_top
-texture:id=pine_window
-texture:id=purpleheart_bark
-texture:id=purpleheart_bookshelf
-texture:id=purpleheart_door_bottom
-texture:id=purpleheart_door_top
-texture:id=purpleheart_heart
-texture:id=purpleheart_leaves_fancy
-texture:id=purpleheart_planks_dark
-texture:id=purpleheart_planks_light
-texture:id=purpleheart_planks
-texture:id=purpleheart_sapling
-texture:id=purpleheart_window
-texture:id=purpleheart_workbench_face
-texture:id=purpleheart_workbench_side
-texture:id=purpleheart_workbench_top
-texture:id=raspberry_fancy
-texture:id=raspberry_ripe_fancy
-texture:id=redwood_bark
-texture:id=redwood_bookshelf
-texture:id=redwood_door_bottom
-texture:id=redwood_door_top
-texture:id=redwood_heart
-texture:id=redwood_ladder
-texture:id=redwood_leaves_fancy
-texture:id=redwood_planks
-texture:id=redwood_root
-texture:id=redwood_sapling
-texture:id=redwood_trapdoor
-texture:id=redwood_workbench_face
-texture:id=redwood_workbench_side
-texture:id=redwood_workbench_top
-texture:id=redwoodbark_door_bottom
-texture:id=redwoodbark_door_top
-texture:id=saguaro_bottom
-texture:id=saguaro_fruit
-texture:id=saguaro_side
-texture:id=saguaro_top
-texture:id=sakura_bark
-texture:id=sakura_bookshelf
-texture:id=sakura_door_bottom
-texture:id=sakura_door_top
-texture:id=sakura_heart
-texture:id=sakura_ladder
-texture:id=sakura_leaves_fancy
-texture:id=sakura_planks
-texture:id=sakura_sapling
-texture:id=sakura_trapdoor
-texture:id=sakura_workbench_face
-texture:id=sakura_workbench_side
-texture:id=sakura_workbench_top
-texture:id=silt_1
-texture:id=silt_2
-texture:id=silt_3
-texture:id=silt_4
-texture:id=silt_5
-texture:id=silt_6
-texture:id=silt_7
-texture:id=silt_8
-texture:id=silverbell_bark
-texture:id=silverbell_bookshelf
-texture:id=silverbell_door_bottom
-texture:id=silverbell_door_top
-texture:id=silverbell_heart
-texture:id=silverbell_leaves_fancy
-texture:id=silverbell_planks
-texture:id=silverbell_sapling
-texture:id=silverbell_window
-texture:id=silverbell_workbench_face
-texture:id=silverbell_workbench_side
-texture:id=silverbell_workbench_top
-texture:id=skyberry_fancy
-texture:id=skyberry_ripe_fancy
-texture:id=spruce_window
-texture:id=stingberry_fancy
-texture:id=stingberry_ripe_fancy
-texture:id=tainted_farmland_dry
-texture:id=tainted_farmland_heated
-texture:id=tainted_soil
-texture:id=thornvine
-texture:id=tiger_bark
-texture:id=tiger_bookshelf
-texture:id=tiger_door_bottom
-texture:id=tiger_door_top
-texture:id=tiger_heart
-texture:id=tiger_leaves_fancy
-texture:id=tiger_planks
-texture:id=tiger_sapling
-texture:id=tiger_window
-texture:id=tiger_workbench_face
-texture:id=tiger_workbench_side
-texture:id=tiger_workbench_top
-texture:id=willow_bark
-texture:id=willow_bookshelf
-texture:id=willow_door_bottom
-texture:id=willow_door_top
-texture:id=willow_heart
-texture:id=willow_leaves_fancy
-texture:id=willow_planks
-texture:id=willow_sapling
-texture:id=willow_window
-texture:id=willow_workbench_face
-texture:id=willow_workbench_side
-texture:id=willow_workbench_top
 
-# Blocks
-#  terrain/Tainted_Soil
-block:id=terrain/Tainted_Soil,data=0,allfaces=0:tainted_soil,stdrot=true
-block:id=terrain/Tainted_Soil,data=1,allfaces=0:tainted_farmland_dry,stdrot=true
-block:id=terrain/Tainted_Soil,data=2,allfaces=0:tainted_farmland_heated,stdrot=true
-#  terrain/Heat_Sand
-block:id=terrain/Heat_Sand,data=*,allfaces=0:heatsand,stdrot=true
+texturepath:assets/natura/textures/blocks/
+texture:id=natura/maple_workbench_top,filename=assets/natura/textures/blocks/maple_workbench_top.png
+texture:id=natura/geoberry_ripe_fast,filename=assets/natura/textures/blocks/geoberry_ripe_fast.png
+texture:id=natura/mushroom_stem_purple,filename=assets/natura/textures/blocks/mushroom_stem_purple.png
+texture:id=natura/tiger_bookshelf,filename=assets/natura/textures/blocks/tiger_bookshelf.png
+texture:id=natura/sakura_door_bottom,filename=assets/natura/textures/blocks/sakura_door_bottom.png
+texture:id=natura/bloodwood_lower_right,filename=assets/natura/textures/blocks/bloodwood_lower_right.png
+texture:id=natura/willow_workbench_side,filename=assets/natura/textures/blocks/willow_workbench_side.png
+texture:id=natura/bloodwood_door_top,filename=assets/natura/textures/blocks/bloodwood_door_top.png
+texture:id=natura/fusewood_workbench_side,filename=assets/natura/textures/blocks/fusewood_workbench_side.png
+texture:id=natura/bloodwood_bookshelf,filename=assets/natura/textures/blocks/bloodwood_bookshelf.png
+texture:id=natura/tiger_sapling,filename=assets/natura/textures/blocks/tiger_sapling.png
+texture:id=natura/purpleheart_workbench_side,filename=assets/natura/textures/blocks/purpleheart_workbench_side.png
+texture:id=natura/tiger_workbench_top,filename=assets/natura/textures/blocks/tiger_workbench_top.png
+texture:id=natura/fusewood_heart,filename=assets/natura/textures/blocks/fusewood_heart.png
+texture:id=natura/maple_workbench_side,filename=assets/natura/textures/blocks/maple_workbench_side.png
+texture:id=natura/tiger_heart,filename=assets/natura/textures/blocks/tiger_heart.png
+texture:id=natura/nfurnace_top,filename=assets/natura/textures/blocks/nfurnace_top.png
+texture:id=natura/darkwood_trapdoor,filename=assets/natura/textures/blocks/darkwood_trapdoor.png
+texture:id=natura/ghostwood_trapdoor,filename=assets/natura/textures/blocks/ghostwood_trapdoor.png
+texture:id=natura/silverbell_bark,filename=assets/natura/textures/blocks/silverbell_bark.png
+texture:id=natura/sakura_leaves_fast,filename=assets/natura/textures/blocks/sakura_leaves_fast.png
+texture:id=natura/maple_planks,filename=assets/natura/textures/blocks/maple_planks.png
+texture:id=natura/darkwood_heart,filename=assets/natura/textures/blocks/darkwood_heart.png
+texture:id=natura/hopseed_workbench_face,filename=assets/natura/textures/blocks/hopseed_workbench_face.png
+texture:id=natura/mushroom_skin_green,filename=assets/natura/textures/blocks/mushroom_skin_green.png
+texture:id=natura/cloud_dark,filename=assets/natura/textures/blocks/cloud_dark.png
+texture:id=natura/ghostwood_planks,filename=assets/natura/textures/blocks/ghostwood_planks.png
+texture:id=natura/ghostwood_leaves_fast,filename=assets/natura/textures/blocks/ghostwood_leaves_fast.png
+texture:id=natura/geoberry_fast,filename=assets/natura/textures/blocks/geoberry_fast.png
+texture:id=natura/darkwood_workbench_side,filename=assets/natura/textures/blocks/darkwood_workbench_side.png
+texture:id=natura/cloud_white,filename=assets/natura/textures/blocks/cloud_white.png
+texture:id=natura/bloodwood_workbench_top,filename=assets/natura/textures/blocks/bloodwood_workbench_top.png
+texture:id=natura/tiger_workbench_side,filename=assets/natura/textures/blocks/tiger_workbench_side.png
+texture:id=natura/brail_detector,filename=assets/natura/textures/blocks/brail_detector.png
+texture:id=natura/ghostwood_sapling,filename=assets/natura/textures/blocks/ghostwood_sapling.png
+texture:id=natura/tiger_leaves_fast,filename=assets/natura/textures/blocks/tiger_leaves_fast.png
+texture:id=natura/cotton_1,filename=assets/natura/textures/blocks/cotton_1.png
+texture:id=natura/willow_workbench_face,filename=assets/natura/textures/blocks/willow_workbench_face.png
+texture:id=natura/cotton_2,filename=assets/natura/textures/blocks/cotton_2.png
+texture:id=natura/cotton_3,filename=assets/natura/textures/blocks/cotton_3.png
+texture:id=natura/redwood_leaves_fast,filename=assets/natura/textures/blocks/redwood_leaves_fast.png
+texture:id=natura/cotton_4,filename=assets/natura/textures/blocks/cotton_4.png
+texture:id=natura/cotton_5,filename=assets/natura/textures/blocks/cotton_5.png
+texture:id=natura/willow_workbench_top,filename=assets/natura/textures/blocks/willow_workbench_top.png
+texture:id=natura/darkwood_bookshelf,filename=assets/natura/textures/blocks/darkwood_bookshelf.png
+texture:id=natura/eucalyptus_door_bottom,filename=assets/natura/textures/blocks/eucalyptus_door_bottom.png
+texture:id=natura/purpleheart_workbench_top,filename=assets/natura/textures/blocks/purpleheart_workbench_top.png
+texture:id=natura/brail_golden,filename=assets/natura/textures/blocks/brail_golden.png
+texture:id=natura/bloodwood_upper_left,filename=assets/natura/textures/blocks/bloodwood_upper_left.png
+texture:id=natura/tainted_soil,filename=assets/natura/textures/blocks/tainted_soil.png
+texture:id=natura/eucalyptus_workbench_top,filename=assets/natura/textures/blocks/eucalyptus_workbench_top.png
+texture:id=natura/eucalyptus_workbench_side,filename=assets/natura/textures/blocks/eucalyptus_workbench_side.png
+texture:id=natura/blueberry_fast,filename=assets/natura/textures/blocks/blueberry_fast.png
+texture:id=natura/stingberry_ripe_fast,filename=assets/natura/textures/blocks/stingberry_ripe_fast.png
+texture:id=natura/raspberry_fast,filename=assets/natura/textures/blocks/raspberry_fast.png
+texture:id=natura/brail_activator_powered,filename=assets/natura/textures/blocks/brail_activator_powered.png
+texture:id=natura/skyberry_ripe_fast,filename=assets/natura/textures/blocks/skyberry_ripe_fast.png
+texture:id=natura/bloodwood_trapdoor,filename=assets/natura/textures/blocks/bloodwood_trapdoor.png
+texture:id=natura/sakura_trapdoor,filename=assets/natura/textures/blocks/sakura_trapdoor.png
+texture:id=natura/willow_bark,filename=assets/natura/textures/blocks/willow_bark.png
+texture:id=natura/brail_activator,filename=assets/natura/textures/blocks/brail_activator.png
+texture:id=natura/brail_normal_turned,filename=assets/natura/textures/blocks/brail_normal_turned.png
+texture:id=natura/redwood_bark,filename=assets/natura/textures/blocks/redwood_bark.png
+texture:id=natura/bloodwood_workbench_face,filename=assets/natura/textures/blocks/bloodwood_workbench_face.png
+texture:id=natura/blightberry_ripe_fast,filename=assets/natura/textures/blocks/blightberry_ripe_fast.png
+texture:id=natura/mushroom_stem_blue,filename=assets/natura/textures/blocks/mushroom_stem_blue.png
+texture:id=natura/silverbell_planks,filename=assets/natura/textures/blocks/silverbell_planks.png
+texture:id=natura/heatsand,filename=assets/natura/textures/blocks/heatsand.png
+texture:id=natura/redwoodbark_door_bottom,filename=assets/natura/textures/blocks/redwoodbark_door_bottom.png
+texture:id=natura/mushroom_inside_green,filename=assets/natura/textures/blocks/mushroom_inside_green.png
+texture:id=natura/stingberry_fast,filename=assets/natura/textures/blocks/stingberry_fast.png
+texture:id=natura/fusewood_workbench_face,filename=assets/natura/textures/blocks/fusewood_workbench_face.png
+texture:id=natura/hopseed_door_bottom,filename=assets/natura/textures/blocks/hopseed_door_bottom.png
+texture:id=natura/ghostwood_door_top,filename=assets/natura/textures/blocks/ghostwood_door_top.png
+texture:id=natura/hopseed_workbench_side,filename=assets/natura/textures/blocks/hopseed_workbench_side.png
+texture:id=natura/tiger_planks,filename=assets/natura/textures/blocks/tiger_planks.png
+texture:id=natura/hopseed_door_top,filename=assets/natura/textures/blocks/hopseed_door_top.png
+texture:id=natura/redwoodbark_door_top,filename=assets/natura/textures/blocks/redwoodbark_door_top.png
+texture:id=natura/bloodwood_leaves_fast,filename=assets/natura/textures/blocks/bloodwood_leaves_fast.png
+texture:id=natura/ghostwood_workbench_side,filename=assets/natura/textures/blocks/ghostwood_workbench_side.png
+texture:id=natura/purpleheart_trapdoor,filename=assets/natura/textures/blocks/purpleheart_trapdoor.png
+texture:id=natura/willow_trapdoor,filename=assets/natura/textures/blocks/willow_trapdoor.png
+texture:id=natura/silverbell_heart,filename=assets/natura/textures/blocks/silverbell_heart.png
+texture:id=natura/fusewood_sapling,filename=assets/natura/textures/blocks/fusewood_sapling.png
+texture:id=natura/darkwood_sapling,filename=assets/natura/textures/blocks/darkwood_sapling.png
+texture:id=natura/silverbell_trapdoor,filename=assets/natura/textures/blocks/silverbell_trapdoor.png
+texture:id=natura/sakura_door_top,filename=assets/natura/textures/blocks/sakura_door_top.png
+texture:id=natura/silverbell_workbench_face,filename=assets/natura/textures/blocks/silverbell_workbench_face.png
+texture:id=natura/mushroom_skin_purple,filename=assets/natura/textures/blocks/mushroom_skin_purple.png
+texture:id=natura/ghostwood_bark,filename=assets/natura/textures/blocks/ghostwood_bark.png
+texture:id=natura/darkwood_workbench_face,filename=assets/natura/textures/blocks/darkwood_workbench_face.png
+texture:id=natura/redwood_door_bottom,filename=assets/natura/textures/blocks/redwood_door_bottom.png
+texture:id=natura/sakura_sapling,filename=assets/natura/textures/blocks/sakura_sapling.png
+texture:id=natura/nhopper_top,filename=assets/natura/textures/blocks/nhopper_top.png
+texture:id=natura/eucalyptus_bookshelf,filename=assets/natura/textures/blocks/eucalyptus_bookshelf.png
+texture:id=natura/hopseed_sapling,filename=assets/natura/textures/blocks/hopseed_sapling.png
+texture:id=natura/fusewood_leaves_fast,filename=assets/natura/textures/blocks/fusewood_leaves_fast.png
+texture:id=natura/blightberry_fast,filename=assets/natura/textures/blocks/blightberry_fast.png
+texture:id=minecraft/lava_still,filename=assets/minecraft/textures/blocks/lava_still.png
+texture:id=natura/glass_heat_item,filename=assets/natura/textures/blocks/glass_heat_item.png
+texture:id=natura/purpleheart_planks,filename=assets/natura/textures/blocks/purpleheart_planks.png
+texture:id=natura/purpleheart_leaves_fast,filename=assets/natura/textures/blocks/purpleheart_leaves_fast.png
+texture:id=natura/maple_sapling,filename=assets/natura/textures/blocks/maple_sapling.png
+texture:id=natura/obelisk,filename=assets/natura/textures/blocks/obelisk.png
+texture:id=natura/hopseed_bark,filename=assets/natura/textures/blocks/hopseed_bark.png
+texture:id=natura/obelisk_active,filename=assets/natura/textures/blocks/obelisk_active.png
+texture:id=natura/cloud_sulfur,filename=assets/natura/textures/blocks/cloud_sulfur.png
+texture:id=natura/bloodwood_bark,filename=assets/natura/textures/blocks/bloodwood_bark.png
+texture:id=natura/brail_detector_powered,filename=assets/natura/textures/blocks/brail_detector_powered.png
+texture:id=natura/willow_sapling,filename=assets/natura/textures/blocks/willow_sapling.png
+texture:id=natura/saguaro_side,filename=assets/natura/textures/blocks/saguaro_side.png
+texture:id=natura/silverbell_leaves_fast,filename=assets/natura/textures/blocks/silverbell_leaves_fast.png
+texture:id=natura/sakura_workbench_side,filename=assets/natura/textures/blocks/sakura_workbench_side.png
+texture:id=natura/redwood_door_top,filename=assets/natura/textures/blocks/redwood_door_top.png
+texture:id=natura/fusewood_bark,filename=assets/natura/textures/blocks/fusewood_bark.png
+texture:id=natura/fusewood_trapdoor,filename=assets/natura/textures/blocks/fusewood_trapdoor.png
+texture:id=natura/hopseed_bookshelf,filename=assets/natura/textures/blocks/hopseed_bookshelf.png
+texture:id=natura/sakura_bark,filename=assets/natura/textures/blocks/sakura_bark.png
+texture:id=natura/ghostwood_workbench_top,filename=assets/natura/textures/blocks/ghostwood_workbench_top.png
+texture:id=natura/barley_1,filename=assets/natura/textures/blocks/barley_1.png
+texture:id=natura/maple_workbench_face,filename=assets/natura/textures/blocks/maple_workbench_face.png
+texture:id=natura/barley_4,filename=assets/natura/textures/blocks/barley_4.png
+texture:id=natura/barley_3,filename=assets/natura/textures/blocks/barley_3.png
+texture:id=natura/nhopper_outside,filename=assets/natura/textures/blocks/nhopper_outside.png
+texture:id=natura/barley_2,filename=assets/natura/textures/blocks/barley_2.png
+texture:id=natura/duskberry_ripe_fast,filename=assets/natura/textures/blocks/duskberry_ripe_fast.png
+texture:id=natura/redwood_workbench_side,filename=assets/natura/textures/blocks/redwood_workbench_side.png
+texture:id=natura/brail_golden_powered,filename=assets/natura/textures/blocks/brail_golden_powered.png
+texture:id=natura/silverbell_sapling,filename=assets/natura/textures/blocks/silverbell_sapling.png
+texture:id=natura/sakura_heart,filename=assets/natura/textures/blocks/sakura_heart.png
+texture:id=natura/redwood_planks,filename=assets/natura/textures/blocks/redwood_planks.png
+texture:id=natura/purpleheart_heart,filename=assets/natura/textures/blocks/purpleheart_heart.png
+texture:id=natura/grass_top,filename=assets/natura/textures/blocks/grass_top.png
+texture:id=natura/redwood_heart,filename=assets/natura/textures/blocks/redwood_heart.png
+texture:id=natura/mushroom_inside_blue,filename=assets/natura/textures/blocks/mushroom_inside_blue.png
+texture:id=natura/sakura_bookshelf,filename=assets/natura/textures/blocks/sakura_bookshelf.png
+texture:id=natura/bloodwood_door_bottom,filename=assets/natura/textures/blocks/bloodwood_door_bottom.png
+texture:id=natura/sakura_workbench_top,filename=assets/natura/textures/blocks/sakura_workbench_top.png
+texture:id=natura/nfurnace_side,filename=assets/natura/textures/blocks/nfurnace_side.png
+texture:id=natura/willow_leaves_fast,filename=assets/natura/textures/blocks/willow_leaves_fast.png
+texture:id=natura/nfurnace_off,filename=assets/natura/textures/blocks/nfurnace_off.png
+texture:id=natura/fusewood_planks,filename=assets/natura/textures/blocks/fusewood_planks.png
+texture:id=natura/tiger_bark,filename=assets/natura/textures/blocks/tiger_bark.png
+texture:id=natura/silverbell_workbench_top,filename=assets/natura/textures/blocks/silverbell_workbench_top.png
+texture:id=natura/redwood_bookshelf,filename=assets/natura/textures/blocks/redwood_bookshelf.png
+texture:id=natura/maple_leaves_fast,filename=assets/natura/textures/blocks/maple_leaves_fast.png
+texture:id=natura/eucalyptus_trapdoor,filename=assets/natura/textures/blocks/eucalyptus_trapdoor.png
+texture:id=natura/fusewood_workbench_top,filename=assets/natura/textures/blocks/fusewood_workbench_top.png
+texture:id=natura/willow_planks,filename=assets/natura/textures/blocks/willow_planks.png
+texture:id=natura/eucalyptus_door_top,filename=assets/natura/textures/blocks/eucalyptus_door_top.png
+texture:id=natura/flower_bluebells,filename=assets/natura/textures/blocks/flower_bluebells.png
+texture:id=natura/blackberry_ripe_fast,filename=assets/natura/textures/blocks/blackberry_ripe_fast.png
+texture:id=natura/skyberry_fast,filename=assets/natura/textures/blocks/skyberry_fast.png
+texture:id=natura/willow_bookshelf,filename=assets/natura/textures/blocks/willow_bookshelf.png
+texture:id=natura/raspberry_ripe_fast,filename=assets/natura/textures/blocks/raspberry_ripe_fast.png
+texture:id=natura/maple_trapdoor,filename=assets/natura/textures/blocks/maple_trapdoor.png
+texture:id=natura/hopseed_leaves_fast,filename=assets/natura/textures/blocks/hopseed_leaves_fast.png
+texture:id=natura/redwood_root,filename=assets/natura/textures/blocks/redwood_root.png
+texture:id=natura/sakura_planks,filename=assets/natura/textures/blocks/sakura_planks.png
+texture:id=natura/glass_soul_item,filename=assets/natura/textures/blocks/glass_soul_item.png
+texture:id=natura/tiger_trapdoor,filename=assets/natura/textures/blocks/tiger_trapdoor.png
+texture:id=natura/saguaro_top,filename=assets/natura/textures/blocks/saguaro_top.png
+texture:id=natura/purpleheart_workbench_face,filename=assets/natura/textures/blocks/purpleheart_workbench_face.png
+texture:id=natura/eucalyptus_workbench_face,filename=assets/natura/textures/blocks/eucalyptus_workbench_face.png
+texture:id=natura/fusewood_bookshelf,filename=assets/natura/textures/blocks/fusewood_bookshelf.png
+texture:id=natura/bloodwood_planks,filename=assets/natura/textures/blocks/bloodwood_planks.png
+texture:id=natura/nlever,filename=assets/natura/textures/blocks/nlever.png
+texture:id=natura/mushroom_inside_purple,filename=assets/natura/textures/blocks/mushroom_inside_purple.png
+texture:id=natura/ghostwood_heart,filename=assets/natura/textures/blocks/ghostwood_heart.png
+texture:id=natura/maple_bark,filename=assets/natura/textures/blocks/maple_bark.png
+texture:id=natura/bloodwood_upper_right,filename=assets/natura/textures/blocks/bloodwood_upper_right.png
+texture:id=natura/mushroom_blue,filename=assets/natura/textures/blocks/mushroom_blue.png
+texture:id=natura/willow_heart,filename=assets/natura/textures/blocks/willow_heart.png
+texture:id=natura/hopseed_heart,filename=assets/natura/textures/blocks/hopseed_heart.png
+texture:id=natura/darkwood_planks,filename=assets/natura/textures/blocks/darkwood_planks.png
+texture:id=natura/bloodwood_workbench_side,filename=assets/natura/textures/blocks/bloodwood_workbench_side.png
+texture:id=natura/darkwood_fruit_leaves_fast,filename=assets/natura/textures/blocks/darkwood_fruit_leaves_fast.png
+texture:id=natura/tiger_workbench_face,filename=assets/natura/textures/blocks/tiger_workbench_face.png
+texture:id=natura/duskberry_fast,filename=assets/natura/textures/blocks/duskberry_fast.png
+texture:id=natura/ghostwood_bookshelf,filename=assets/natura/textures/blocks/ghostwood_bookshelf.png
+texture:id=natura/eucalyptus_sapling,filename=assets/natura/textures/blocks/eucalyptus_sapling.png
+texture:id=natura/hopseed_trapdoor,filename=assets/natura/textures/blocks/hopseed_trapdoor.png
+texture:id=natura/redwood_sapling,filename=assets/natura/textures/blocks/redwood_sapling.png
+texture:id=natura/thornvine,filename=assets/natura/textures/blocks/thornvine.png
+texture:id=natura/bloodwood_lower_left,filename=assets/natura/textures/blocks/bloodwood_lower_left.png
+texture:id=natura/darkwood_bark,filename=assets/natura/textures/blocks/darkwood_bark.png
+texture:id=natura/hopseed_workbench_top,filename=assets/natura/textures/blocks/hopseed_workbench_top.png
+texture:id=natura/eucalyptus_planks,filename=assets/natura/textures/blocks/eucalyptus_planks.png
+texture:id=natura/blackberry_fast,filename=assets/natura/textures/blocks/blackberry_fast.png
+texture:id=natura/darkwood_workbench_top,filename=assets/natura/textures/blocks/darkwood_workbench_top.png
+texture:id=natura/mushroom_stem_green,filename=assets/natura/textures/blocks/mushroom_stem_green.png
+texture:id=minecraft/netherrack,filename=assets/minecraft/textures/blocks/netherrack.png
+texture:id=natura/purpleheart_sapling,filename=assets/natura/textures/blocks/purpleheart_sapling.png
+texture:id=natura/eucalyptus_heart,filename=assets/natura/textures/blocks/eucalyptus_heart.png
+texture:id=natura/sakura_workbench_face,filename=assets/natura/textures/blocks/sakura_workbench_face.png
+texture:id=natura/ghostwood_workbench_face,filename=assets/natura/textures/blocks/ghostwood_workbench_face.png
+texture:id=natura/maple_bookshelf,filename=assets/natura/textures/blocks/maple_bookshelf.png
+texture:id=natura/saguaro_bottom,filename=assets/natura/textures/blocks/saguaro_bottom.png
+texture:id=natura/brail_normal,filename=assets/natura/textures/blocks/brail_normal.png
+texture:id=natura/redwood_workbench_top,filename=assets/natura/textures/blocks/redwood_workbench_top.png
+texture:id=natura/blueberry_ripe_fast,filename=assets/natura/textures/blocks/blueberry_ripe_fast.png
+texture:id=natura/redwood_workbench_face,filename=assets/natura/textures/blocks/redwood_workbench_face.png
+texture:id=natura/ghostwood_door_bottom,filename=assets/natura/textures/blocks/ghostwood_door_bottom.png
+texture:id=natura/eucalyptus_leaves_fast,filename=assets/natura/textures/blocks/eucalyptus_leaves_fast.png
+texture:id=natura/tainted_farmland_dry,filename=assets/natura/textures/blocks/tainted_farmland_dry.png
+texture:id=natura/mushroom_green,filename=assets/natura/textures/blocks/mushroom_green.png
+texture:id=natura/darkwood_flowering_leaves_fast,filename=assets/natura/textures/blocks/darkwood_flowering_leaves_fast.png
+texture:id=natura/maple_heart,filename=assets/natura/textures/blocks/maple_heart.png
+texture:id=natura/eucalyptus_bark,filename=assets/natura/textures/blocks/eucalyptus_bark.png
+texture:id=natura/cloud_gray,filename=assets/natura/textures/blocks/cloud_gray.png
+texture:id=natura/darkwood_leaves_fast,filename=assets/natura/textures/blocks/darkwood_leaves_fast.png
+texture:id=natura/bloodwood_side_left,filename=assets/natura/textures/blocks/bloodwood_side_left.png
+texture:id=natura/mushroom_skin_blue,filename=assets/natura/textures/blocks/mushroom_skin_blue.png
+texture:id=natura/tainted_farmland_heated,filename=assets/natura/textures/blocks/tainted_farmland_heated.png
+texture:id=natura/purpleheart_bookshelf,filename=assets/natura/textures/blocks/purpleheart_bookshelf.png
+texture:id=natura/mushroom_purple,filename=assets/natura/textures/blocks/mushroom_purple.png
+texture:id=natura/purpleheart_bark,filename=assets/natura/textures/blocks/purpleheart_bark.png
+texture:id=natura/bloodwood_sapling,filename=assets/natura/textures/blocks/bloodwood_sapling.png
+texture:id=natura/silverbell_workbench_side,filename=assets/natura/textures/blocks/silverbell_workbench_side.png
+texture:id=natura/saguaro_fruit,filename=assets/natura/textures/blocks/saguaro_fruit.png
+texture:id=natura/bloodwood_side_right,filename=assets/natura/textures/blocks/bloodwood_side_right.png
+texture:id=natura/hopseed_planks,filename=assets/natura/textures/blocks/hopseed_planks.png
+texture:id=natura/silverbell_bookshelf,filename=assets/natura/textures/blocks/silverbell_bookshelf.png
+texture:id=natura/redwood_trapdoor,filename=assets/natura/textures/blocks/redwood_trapdoor.png
 
-#  Berry_Bush
-block:id=Berry_Bush,data=0,data=4,data=8,allfaces=0:raspberry_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Berry_Bush,data=1,data=5,data=9,allfaces=0:blueberry_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Berry_Bush,data=2,data=6,data=10,allfaces=0:blackberry_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Berry_Bush,data=3,data=7,data=11,allfaces=0:geoberry_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Berry_Bush,data=12,allfaces=0:raspberry_ripe_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Berry_Bush,data=13,allfaces=0:blueberry_ripe_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Berry_Bush,data=14,allfaces=0:blackberry_ripe_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Berry_Bush,data=15,allfaces=0:geoberry_ripe_fancy,stdrot=true,transparency=TRANSPARENT
 
-# "Bloodwood Block"
-block:id=Bloodwood_Block,data=0,face0=0:bloodwood_upper_left,face1=0:bloodwood_upper_left,face2=0:bloodwood_bark,face3=0:bloodwood_side_left,face4=0:bloodwood_bark,face5=0:bloodwood_side_right,stdrot=true
-block:id=Bloodwood_Block,data=1,face0=0:bloodwood_upper_right,face1=0:bloodwood_upper_right,face2=0:bloodwood_bark,face3=0:bloodwood_side_right,face4=0:bloodwood_side_left,face5=0:bloodwood_bark,stdrot=true
-block:id=Bloodwood_Block,data=2,face0=0:bloodwood_lower_left,face1=0:bloodwood_lower_left,face2=0:bloodwood_side_right,face3=0:bloodwood_bark,face4=0:bloodwood_bark,face5=0:bloodwood_side_left,stdrot=true
-block:id=Bloodwood_Block,data=3,face0=0:bloodwood_lower_right,face1=0:bloodwood_lower_right,face2=0:bloodwood_side_right,face3=0:bloodwood_bark,face4=0:bloodwood_side_left,face5=0:bloodwood_bark,stdrot=true
-block:id=Bloodwood_Block,data=4,face0=0:bloodwood_side_left,face1=0:bloodwood_bark,face2=0:bloodwood_side_right,face3=0:bloodwood_bark,face4=0:bloodwood_upper_right,face5=0:bloodwood_upper_left,stdrot=true
-block:id=Bloodwood_Block,data=5,face0=0:bloodwood_side_right,face1=0:bloodwood_bark,face2=0:bloodwood_bark,face3=0:bloodwood_side_left,face4=0:bloodwood_upper_left,face5=0:bloodwood_upper_right,stdrot=true
-block:id=Bloodwood_Block,data=6,face0=0:bloodwood_bark,face1=0:bloodwood_side_right,face2=0:bloodwood_side_left,face3=0:bloodwood_bark,face4=0:bloodwood_lower_right,face5=0:bloodwood_lower_left,stdrot=true
-block:id=Bloodwood_Block,data=7,face0=0:bloodwood_bark,face1=0:bloodwood_side_right,face2=0:bloodwood_bark,face3=0:bloodwood_side_right,face4=0:bloodwood_lower_left,face5=0:bloodwood_lower_right,stdrot=true
-block:id=Bloodwood_Block,data=8,face0=0:bloodwood_side_left,face1=0:bloodwood_bark,face2=0:bloodwood_upper_right,face3=0:bloodwood_upper_left,face4=0:bloodwood_bark,face5=0:bloodwood_side_right,stdrot=true
-block:id=Bloodwood_Block,data=9,face0=0:bloodwood_side_right,face1=0:bloodwood_bark,face2=0:bloodwood_upper_left,face3=0:bloodwood_upper_right,face4=0:bloodwood_side_left,face5=0:bloodwood_bark,stdrot=true
-block:id=Bloodwood_Block,data=10,face0=0:bloodwood_bark,face1=0:bloodwood_side_left,face2=0:bloodwood_lower_right,face3=0:bloodwood_lower_left,face4=0:bloodwood_bark,face5=0:bloodwood_side_left,stdrot=true
-block:id=Bloodwood_Block,data=11,face0=0:bloodwood_bark,face1=0:bloodwood_side_right,face2=0:bloodwood_lower_left,face3=0:bloodwood_lower_right,face4=0:bloodwood_side_right,face5=0:bloodwood_bark,stdrot=true
-block:id=Bloodwood_Block,data=12,data=13,data=14,allfaces=0:bloodwood_bark,stdrot=true
-block:id=Bloodwood_Block,data=15,allfaces=0:bloodwood_bark,stdrot=true
- 
-# "Bloodwood Door"
-block:id=Bloodwood_Door,data=0,data=1,patch0=0:bloodwood_door_bottom,patch1=7000:bloodwood_door_bottom,patch2=7000:bloodwood_door_bottom,patch3=0:bloodwood_door_bottom,patch4=4000:bloodwood_door_bottom,patch5=4000:bloodwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Bloodwood_Door,data=2,data=3,patch0=7000:bloodwood_door_bottom,patch1=0:bloodwood_door_bottom,patch2=7000:bloodwood_door_bottom,patch3=0:bloodwood_door_bottom,patch4=4000:bloodwood_door_bottom,patch5=4000:bloodwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Bloodwood_Door,data=4,data=5,patch0=7000:bloodwood_door_bottom,patch1=0:bloodwood_door_bottom,patch2=7000:bloodwood_door_bottom,patch3=0:bloodwood_door_bottom,patch4=4000:bloodwood_door_bottom,patch5=4000:bloodwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Bloodwood_Door,data=6,data=7,patch0=0:bloodwood_door_bottom,patch1=7000:bloodwood_door_bottom,patch2=7000:bloodwood_door_bottom,patch3=0:bloodwood_door_bottom,patch4=4000:bloodwood_door_bottom,patch5=4000:bloodwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Bloodwood_Door,data=8,data=9,patch0=0:bloodwood_door_top,patch1=7000:bloodwood_door_top,patch2=7000:bloodwood_door_top,patch3=0:bloodwood_door_top,patch4=4000:bloodwood_door_top,patch5=4000:bloodwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Bloodwood_Door,data=10,data=11,patch0=7000:bloodwood_door_top,patch1=0:bloodwood_door_top,patch2=7000:bloodwood_door_top,patch3=0:bloodwood_door_top,patch4=4000:bloodwood_door_top,patch5=4000:bloodwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Bloodwood_Door,data=12,data=13,patch0=7000:bloodwood_door_top,patch1=0:bloodwood_door_top,patch2=7000:bloodwood_door_top,patch3=0:bloodwood_door_top,patch4=4000:bloodwood_door_top,patch5=4000:bloodwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Bloodwood_Door,data=14,data=15,patch0=0:bloodwood_door_top,patch1=7000:bloodwood_door_top,patch2=7000:bloodwood_door_top,patch3=0:bloodwood_door_top,patch4=4000:bloodwood_door_top,patch5=4000:bloodwood_door_top,transparency=TRANSPARENT,userenderdata=true
-
-# "Blue Glowshroom"
-block:id=Blue_Glowshroom,data=0,allfaces=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=1,top=0:mushroom_skin_blue,north=0:mushroom_skin_blue,east=0:mushroom_skin_blue,south=0:mushroom_inside_blue,west=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=2,top=0:mushroom_skin_blue,east=0:mushroom_skin_blue,north=0:mushroom_inside_blue,south=0:mushroom_inside_blue,west=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=3,top=0:mushroom_skin_blue,south=0:mushroom_skin_blue,east=0:mushroom_skin_blue,north=0:mushroom_inside_blue,west=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=4,top=0:mushroom_skin_blue,north=0:mushroom_skin_blue,east=0:mushroom_inside_blue,south=0:mushroom_inside_blue,west=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=5,top=0:mushroom_skin_blue,north=0:mushroom_inside_blue,east=0:mushroom_inside_blue,south=0:mushroom_inside_blue,west=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=6,top=0:mushroom_skin_blue,south=0:mushroom_skin_blue,north=0:mushroom_inside_blue,east=0:mushroom_inside_blue,west=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=7,top=0:mushroom_skin_blue,north=0:mushroom_skin_blue,west=0:mushroom_skin_blue,south=0:mushroom_inside_blue,east=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=8,top=0:mushroom_skin_blue,west=0:mushroom_skin_blue,north=0:mushroom_inside_blue,east=0:mushroom_inside_blue,south=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=9,top=0:mushroom_skin_blue,west=0:mushroom_skin_blue,south=0:mushroom_skin_blue,north=0:mushroom_inside_blue,east=0:mushroom_inside_blue,bottom=0:mushroom_inside_blue,stdrot=true
-block:id=Blue_Glowshroom,data=10,topbottom=0:mushroom_inside_blue,allsides=0:mushroom_stem_blue,stdrot=true
-block:id=Blue_Glowshroom,data=14,topbottom=0:mushroom_skin_blue,allsides=0:mushroom_skin_blue,stdrot=true
-block:id=Blue_Glowshroom,data=15,topbottom=0:mushroom_stem_blue,allsides=0:mushroom_stem_blue,stdrot=true
-
-# Bookshelf
-block:id=Bookshelf,data=0,topbottom=0:eucalyptus_planks,allsides=0:eucalyptus_bookshelf,stdrot=true
-block:id=Bookshelf,data=1,topbottom=0:sakura_planks,allsides=0:sakura_bookshelf,stdrot=true
-block:id=Bookshelf,data=2,topbottom=0:ghostwood_planks,allsides=0:ghostwood_bookshelf,stdrot=true
-block:id=Bookshelf,data=3,topbottom=0:redwood_planks,allsides=0:redwood_bookshelf,stdrot=true
-block:id=Bookshelf,data=4,topbottom=0:bloodwood_planks,allsides=0:bloodwood_bookshelf,stdrot=true
-block:id=Bookshelf,data=5,topbottom=0:hopseed_planks,allsides=0:hopseed_bookshelf,stdrot=true
-block:id=Bookshelf,data=6,topbottom=0:maple_planks,allsides=0:maple_bookshelf,stdrot=true
-block:id=Bookshelf,data=7,topbottom=0:silverbell_planks,allsides=0:silverbell_bookshelf,stdrot=true
-block:id=Bookshelf,data=8,topbottom=0:purpleheart_planks,allsides=0:purpleheart_bookshelf,stdrot=true
-block:id=Bookshelf,data=9,topbottom=0:tiger_planks,allsides=0:tiger_bookshelf,stdrot=true
-block:id=Bookshelf,data=10,topbottom=0:willow_planks,allsides=0:willow_bookshelf,stdrot=true
-block:id=Bookshelf,data=11,topbottom=0:darkwood_planks,allsides=0:darkwood_bookshelf,stdrot=true
-block:id=Bookshelf,data=12,topbottom=0:fusewood_planks,allsides=0:fusewood_bookshelf,stdrot=true
-
-# "Cloud Block"
-block:id=Cloud_Block,data=0,allfaces=12000:cloud_white,stdrot=true
-block:id=Cloud_Block,data=1,allfaces=12000:cloud_gray,stdrot=true
-block:id=Cloud_Block,data=2,allfaces=12000:cloud_dark,stdrot=true
-block:id=Cloud_Block,data=3,allfaces=12000:cloud_sulfur,stdrot=true
-
-# "Crafting Table"
-block:id=Crafting_Table,data=0,face0=0:eucalyptus_planks,face1=0:eucalyptus_workbench_top,face2=0:eucalyptus_workbench_face,face3=0:eucalyptus_workbench_side,face4=0:eucalyptus_workbench_face,face5=0:eucalyptus_workbench_side,stdrot=true
-block:id=Crafting_Table,data=1,face0=0:sakura_planks,face1=0:sakura_workbench_top,face2=0:sakura_workbench_face,face3=0:sakura_workbench_side,face4=0:sakura_workbench_face,face5=0:sakura_workbench_side,stdrot=true
-block:id=Crafting_Table,data=2,face0=0:ghostwood_planks,face1=0:ghostwood_workbench_top,face2=0:ghostwood_workbench_face,face3=0:ghostwood_workbench_side,face4=0:ghostwood_workbench_face,face5=0:ghostwood_workbench_side,stdrot=true
-block:id=Crafting_Table,data=3,face0=0:redwood_planks,face1=0:redwood_workbench_top,face2=0:redwood_workbench_face,face3=0:redwood_workbench_side,face4=0:redwood_workbench_face,face5=0:redwood_workbench_side,stdrot=true
-block:id=Crafting_Table,data=4,face0=0:bloodwood_planks,face1=0:bloodwood_workbench_top,face2=0:bloodwood_workbench_face,face3=0:bloodwood_workbench_side,face4=0:bloodwood_workbench_face,face5=0:bloodwood_workbench_side,stdrot=true
-block:id=Crafting_Table,data=5,face0=0:hopseed_planks,face1=0:hopseed_workbench_top,face2=0:hopseed_workbench_face,face3=0:hopseed_workbench_side,face4=0:hopseed_workbench_face,face5=0:hopseed_workbench_side,stdrot=true
-block:id=Crafting_Table,data=6,face0=0:maple_planks,face1=0:maple_workbench_top,face2=0:maple_workbench_face,face3=0:maple_workbench_side,face4=0:maple_workbench_face,face5=0:maple_workbench_side,stdrot=true
-block:id=Crafting_Table,data=7,face0=0:silverbell_planks,face1=0:silverbell_workbench_top,face2=0:silverbell_workbench_face,face3=0:silverbell_workbench_side,face4=0:silverbell_workbench_face,face5=0:silverbell_workbench_side,stdrot=true
-block:id=Crafting_Table,data=8,face0=0:purpleheart_planks,face1=0:purpleheart_workbench_top,face2=0:purpleheart_workbench_face,face3=0:purpleheart_workbench_side,face4=0:purpleheart_workbench_face,face5=0:purpleheart_workbench_side,stdrot=true
-block:id=Crafting_Table,data=9,face0=0:tiger_planks,face1=0:tiger_workbench_top,face2=0:tiger_workbench_face,face3=0:tiger_workbench_side,face4=0:tiger_workbench_face,face5=0:tiger_workbench_side,stdrot=true
-block:id=Crafting_Table,data=10,face0=0:willow_planks,face1=0:willow_workbench_top,face2=0:willow_workbench_face,face3=0:willow_workbench_side,face4=0:willow_workbench_face,face5=0:willow_workbench_side,stdrot=true
-block:id=Crafting_Table,data=11,face0=0:darkwood_planks,face1=0:darkwood_workbench_top,face2=0:darkwood_workbench_face,face3=0:darkwood_workbench_side,face4=0:darkwood_workbench_face,face5=0:darkwood_workbench_side,stdrot=true
-block:id=Crafting_Table,data=12,face0=0:fusewood_planks,face1=0:fusewood_workbench_top,face2=0:fusewood_workbench_face,face3=0:fusewood_workbench_side,face4=0:fusewood_workbench_face,face5=0:fusewood_workbench_side,stdrot=true
-
-# Crops
-block:id=Crops,data=0,patch0-3=0:barley_1,transparency=TRANSPARENT
-block:id=Crops,data=1,patch0-3=0:barley_2,transparency=TRANSPARENT
-block:id=Crops,data=2,patch0-3=0:barley_3,transparency=TRANSPARENT
-block:id=Crops,data=3,patch0-3=0:barley_4,transparency=TRANSPARENT
-block:id=Crops,data=4,patch0-3=0:cotton_1,transparency=TRANSPARENT
-block:id=Crops,data=5,patch0-3=0:cotton_2,transparency=TRANSPARENT
-block:id=Crops,data=6,patch0-3=0:cotton_3,transparency=TRANSPARENT
-block:id=Crops,data=7,patch0-3=0:cotton_4,transparency=TRANSPARENT
-block:id=Crops,data=8,patch0-3=0:cotton_5,transparency=TRANSPARENT
-
-# "Darkwood Leaves"
-block:id=Darkwood_Leaves,data=0,data=4,data=8,data=12,allfaces=0:darkwood_leaves_fancy,stdrot=true
-block:id=Darkwood_Leaves,data=1,data=5,data=9,data=13,allfaces=0:darkwood_flowering_leaves_fancy,stdrot=true
-block:id=Darkwood_Leaves,data=2,data=6,data=10,data=14,allfaces=0:darkwood_fruit_leaves_fancy,stdrot=true
-block:id=Darkwood_Leaves,data=3,data=7,data=11,data=15,allfaces=0:fusewood_leaves_fancy,stdrot=true
-
-# "Darkwood Log"
-block:id=Darkwood_Log,data=0,allsides=0:darkwood_bark,topbottom=0:darkwood_heart,stdrot=true
-block:id=Darkwood_Log,data=4,north=0:darkwood_heart,south=0:darkwood_heart,east=4000:darkwood_bark,west=4000:darkwood_bark,top=0:darkwood_bark,bottom=0:darkwood_bark
-block:id=Darkwood_Log,data=8,north=4000:darkwood_bark,south=4000:darkwood_bark,east=0:darkwood_heart,west=0:darkwood_heart,top=4000:darkwood_bark,bottom=4000:darkwood_bark
-block:id=Darkwood_Log,data=12,allfaces=0:darkwood_bark,stdrot=true
-block:id=Darkwood_Log,data=1,allsides=0:fusewood_bark,topbottom=0:fusewood_heart,stdrot=true
-block:id=Darkwood_Log,data=5,north=0:fusewood_heart,south=0:fusewood_heart,east=4000:fusewood_bark,west=4000:fusewood_bark,top=0:fusewood_bark,bottom=0:fusewood_bark
-block:id=Darkwood_Log,data=9,north=4000:fusewood_bark,south=4000:fusewood_bark,east=0:fusewood_heart,west=0:fusewood_heart,top=4000:fusewood_bark,bottom=4000:fusewood_bark
-block:id=Darkwood_Log,data=13,allfaces=0:fusewood_bark,stdrot=true
-
-# "Eucalyptus Door"
-block:id=Eucalyptus_Door,data=0,data=1,patch0=0:eucalyptus_door_bottom,patch1=7000:eucalyptus_door_bottom,patch2=7000:eucalyptus_door_bottom,patch3=0:eucalyptus_door_bottom,patch4=4000:eucalyptus_door_bottom,patch5=4000:eucalyptus_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Eucalyptus_Door,data=2,data=3,patch0=7000:eucalyptus_door_bottom,patch1=0:eucalyptus_door_bottom,patch2=7000:eucalyptus_door_bottom,patch3=0:eucalyptus_door_bottom,patch4=4000:eucalyptus_door_bottom,patch5=4000:eucalyptus_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Eucalyptus_Door,data=4,data=5,patch0=7000:eucalyptus_door_bottom,patch1=0:eucalyptus_door_bottom,patch2=7000:eucalyptus_door_bottom,patch3=0:eucalyptus_door_bottom,patch4=4000:eucalyptus_door_bottom,patch5=4000:eucalyptus_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Eucalyptus_Door,data=6,data=7,patch0=0:eucalyptus_door_bottom,patch1=7000:eucalyptus_door_bottom,patch2=7000:eucalyptus_door_bottom,patch3=0:eucalyptus_door_bottom,patch4=4000:eucalyptus_door_bottom,patch5=4000:eucalyptus_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Eucalyptus_Door,data=8,data=9,patch0=0:eucalyptus_door_top,patch1=7000:eucalyptus_door_top,patch2=7000:eucalyptus_door_top,patch3=0:eucalyptus_door_top,patch4=4000:eucalyptus_door_top,patch5=4000:eucalyptus_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Eucalyptus_Door,data=10,data=11,patch0=7000:eucalyptus_door_top,patch1=0:eucalyptus_door_top,patch2=7000:eucalyptus_door_top,patch3=0:eucalyptus_door_top,patch4=4000:eucalyptus_door_top,patch5=4000:eucalyptus_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Eucalyptus_Door,data=12,data=13,patch0=7000:eucalyptus_door_top,patch1=0:eucalyptus_door_top,patch2=7000:eucalyptus_door_top,patch3=0:eucalyptus_door_top,patch4=4000:eucalyptus_door_top,patch5=4000:eucalyptus_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Eucalyptus_Door,data=14,data=15,patch0=0:eucalyptus_door_top,patch1=7000:eucalyptus_door_top,patch2=7000:eucalyptus_door_top,patch3=0:eucalyptus_door_top,patch4=4000:eucalyptus_door_top,patch5=4000:eucalyptus_door_top,transparency=TRANSPARENT,userenderdata=true
-
-# Fence
-block:id=Fence,data=0,patch0-2=0:eucalyptus_planks,transparency=TRANSPARENT
-block:id=Fence,data=1,patch0-2=0:sakura_planks,transparency=TRANSPARENT
-block:id=Fence,data=2,patch0-2=0:ghostwood_planks,transparency=TRANSPARENT
-block:id=Fence,data=3,patch0-2=0:redwood_planks,transparency=TRANSPARENT
-block:id=Fence,data=4,patch0-2=0:bloodwood_planks,transparency=TRANSPARENT
-block:id=Fence,data=5,patch0-2=0:hopseed_planks,transparency=TRANSPARENT
-block:id=Fence,data=6,patch0-2=0:maple_planks,transparency=TRANSPARENT
-block:id=Fence,data=7,patch0-2=0:silverbell_planks,transparency=TRANSPARENT
-block:id=Fence,data=8,patch0-2=0:purpleheart_planks,transparency=TRANSPARENT
-block:id=Fence,data=9,patch0-2=0:tiger_planks,transparency=TRANSPARENT
-block:id=Fence,data=10,patch0-2=0:willow_planks,transparency=TRANSPARENT
-block:id=Fence,data=11,patch0-2=0:darkwood_planks,transparency=TRANSPARENT
-block:id=Fence,data=12,patch0-2=0:fusewood_planks,transparency=TRANSPARENT
-
-# "Flora Leaves"
-block:id=Flora_Leaves,data=0,data=3,data=4,data=7,data=8,data=11,data=12,data=15,allfaces=2000:redwood_leaves_fancy,stdrot=true
-block:id=Flora_Leaves,data=1,data=5,data=9,data=13,allfaces=2000:eucalyptus_leaves_fancy,stdrot=true
-block:id=Flora_Leaves,data=2,data=6,data=10,data=14,allfaces=2000:hopseed_leaves_fancy,stdrot=true
-
-# Flower
-block:id=Flower,data=0,patch0-1=0:flower_bluebells,transparency=TRANSPARENT
-
-# "Ghostwood Door"
-block:id=Ghostwood_Door,data=0,data=1,patch0=0:ghostwood_door_bottom,patch1=7000:ghostwood_door_bottom,patch2=7000:ghostwood_door_bottom,patch3=0:ghostwood_door_bottom,patch4=4000:ghostwood_door_bottom,patch5=4000:ghostwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Ghostwood_Door,data=2,data=3,patch0=7000:ghostwood_door_bottom,patch1=0:ghostwood_door_bottom,patch2=7000:ghostwood_door_bottom,patch3=0:ghostwood_door_bottom,patch4=4000:ghostwood_door_bottom,patch5=4000:ghostwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Ghostwood_Door,data=4,data=5,patch0=7000:ghostwood_door_bottom,patch1=0:ghostwood_door_bottom,patch2=7000:ghostwood_door_bottom,patch3=0:ghostwood_door_bottom,patch4=4000:ghostwood_door_bottom,patch5=4000:ghostwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Ghostwood_Door,data=6,data=7,patch0=0:ghostwood_door_bottom,patch1=7000:ghostwood_door_bottom,patch2=7000:ghostwood_door_bottom,patch3=0:ghostwood_door_bottom,patch4=4000:ghostwood_door_bottom,patch5=4000:ghostwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Ghostwood_Door,data=8,data=9,patch0=0:ghostwood_door_top,patch1=7000:ghostwood_door_top,patch2=7000:ghostwood_door_top,patch3=0:ghostwood_door_top,patch4=4000:ghostwood_door_top,patch5=4000:ghostwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Ghostwood_Door,data=10,data=11,patch0=7000:ghostwood_door_top,patch1=0:ghostwood_door_top,patch2=7000:ghostwood_door_top,patch3=0:ghostwood_door_top,patch4=4000:ghostwood_door_top,patch5=4000:ghostwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Ghostwood_Door,data=12,data=13,patch0=7000:ghostwood_door_top,patch1=0:ghostwood_door_top,patch2=7000:ghostwood_door_top,patch3=0:ghostwood_door_top,patch4=4000:ghostwood_door_top,patch5=4000:ghostwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Ghostwood_Door,data=14,data=15,patch0=0:ghostwood_door_top,patch1=7000:ghostwood_door_top,patch2=7000:ghostwood_door_top,patch3=0:ghostwood_door_top,patch4=4000:ghostwood_door_top,patch5=4000:ghostwood_door_top,transparency=TRANSPARENT,userenderdata=true
-
-# "Glowing Mushroom"
-block:id=Glowing_Mushroom,data=0,patch0-1=0:mushroom_green,transparency=TRANSPARENT
-block:id=Glowing_Mushroom,data=1,patch0-1=0:mushroom_purple,transparency=TRANSPARENT
-block:id=Glowing_Mushroom,data=2,patch0-1=0:mushroom_blue,transparency=TRANSPARENT
-
-# "Green Glowshroom"
-block:id=Green_Glowshroom,data=0,allfaces=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=1,top=0:mushroom_skin_green,north=0:mushroom_skin_green,east=0:mushroom_skin_green,south=0:mushroom_inside_green,west=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=2,top=0:mushroom_skin_green,east=0:mushroom_skin_green,north=0:mushroom_inside_green,south=0:mushroom_inside_green,west=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=3,top=0:mushroom_skin_green,south=0:mushroom_skin_green,east=0:mushroom_skin_green,north=0:mushroom_inside_green,west=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=4,top=0:mushroom_skin_green,north=0:mushroom_skin_green,east=0:mushroom_inside_green,south=0:mushroom_inside_green,west=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=5,top=0:mushroom_skin_green,north=0:mushroom_inside_green,east=0:mushroom_inside_green,south=0:mushroom_inside_green,west=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=6,top=0:mushroom_skin_green,south=0:mushroom_skin_green,north=0:mushroom_inside_green,east=0:mushroom_inside_green,west=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=7,top=0:mushroom_skin_green,north=0:mushroom_skin_green,west=0:mushroom_skin_green,south=0:mushroom_inside_green,east=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=8,top=0:mushroom_skin_green,west=0:mushroom_skin_green,north=0:mushroom_inside_green,east=0:mushroom_inside_green,south=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=9,top=0:mushroom_skin_green,west=0:mushroom_skin_green,south=0:mushroom_skin_green,north=0:mushroom_inside_green,east=0:mushroom_inside_green,bottom=0:mushroom_inside_green,stdrot=true
-block:id=Green_Glowshroom,data=10,topbottom=0:mushroom_inside_green,allsides=0:mushroom_stem_green,stdrot=true
-block:id=Green_Glowshroom,data=14,topbottom=0:mushroom_skin_green,allsides=0:mushroom_skin_green,stdrot=true
-block:id=Green_Glowshroom,data=15,topbottom=0:mushroom_stem_green,allsides=0:mushroom_stem_green,stdrot=true
-
-# "Hopseed Door"
-block:id=Hopseed_Door,data=0,data=1,patch0=0:hopseed_door_bottom,patch1=7000:hopseed_door_bottom,patch2=7000:hopseed_door_bottom,patch3=0:hopseed_door_bottom,patch4=4000:hopseed_door_bottom,patch5=4000:hopseed_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Hopseed_Door,data=2,data=3,patch0=7000:hopseed_door_bottom,patch1=0:hopseed_door_bottom,patch2=7000:hopseed_door_bottom,patch3=0:hopseed_door_bottom,patch4=4000:hopseed_door_bottom,patch5=4000:hopseed_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Hopseed_Door,data=4,data=5,patch0=7000:hopseed_door_bottom,patch1=0:hopseed_door_bottom,patch2=7000:hopseed_door_bottom,patch3=0:hopseed_door_bottom,patch4=4000:hopseed_door_bottom,patch5=4000:hopseed_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Hopseed_Door,data=6,data=7,patch0=0:hopseed_door_bottom,patch1=7000:hopseed_door_bottom,patch2=7000:hopseed_door_bottom,patch3=0:hopseed_door_bottom,patch4=4000:hopseed_door_bottom,patch5=4000:hopseed_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Hopseed_Door,data=8,data=9,patch0=0:hopseed_door_top,patch1=7000:hopseed_door_top,patch2=7000:hopseed_door_top,patch3=0:hopseed_door_top,patch4=4000:hopseed_door_top,patch5=4000:hopseed_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Hopseed_Door,data=10,data=11,patch0=7000:hopseed_door_top,patch1=0:hopseed_door_top,patch2=7000:hopseed_door_top,patch3=0:hopseed_door_top,patch4=4000:hopseed_door_top,patch5=4000:hopseed_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Hopseed_Door,data=12,data=13,patch0=7000:hopseed_door_top,patch1=0:hopseed_door_top,patch2=7000:hopseed_door_top,patch3=0:hopseed_door_top,patch4=4000:hopseed_door_top,patch5=4000:hopseed_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Hopseed_Door,data=14,data=15,patch0=0:hopseed_door_top,patch1=7000:hopseed_door_top,patch2=7000:hopseed_door_top,patch3=0:hopseed_door_top,patch4=4000:hopseed_door_top,patch5=4000:hopseed_door_top,transparency=TRANSPARENT,userenderdata=true
-
-# "Nether Berry Bush"
-block:id=Nether_Berry_Bush,data=0,data=4,data=8,allfaces=0:blightberry_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Nether_Berry_Bush,data=1,data=5,data=9,allfaces=0:duskberry_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Nether_Berry_Bush,data=2,data=6,data=10,allfaces=0:skyberry_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Nether_Berry_Bush,data=3,data=7,data=11,allfaces=0:stingberry_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Nether_Berry_Bush,data=12,allfaces=0:blightberry_ripe_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Nether_Berry_Bush,data=13,allfaces=0:duskberry_ripe_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Nether_Berry_Bush,data=14,allfaces=0:skyberry_ripe_fancy,stdrot=true,transparency=TRANSPARENT
-block:id=Nether_Berry_Bush,data=15,allfaces=0:stingberry_ripe_fancy,stdrot=true,transparency=TRANSPARENT
-
-# "Planks Block"
-block:id=Planks_Block,data=0,allfaces=0:eucalyptus_planks,stdrot=true
-block:id=Planks_Block,data=1,allfaces=0:sakura_planks,stdrot=true
-block:id=Planks_Block,data=2,allfaces=0:ghostwood_planks,stdrot=true
-block:id=Planks_Block,data=3,allfaces=0:redwood_planks,stdrot=true
-block:id=Planks_Block,data=4,allfaces=0:bloodwood_planks,stdrot=true
-block:id=Planks_Block,data=5,allfaces=0:hopseed_planks,stdrot=true
-block:id=Planks_Block,data=6,allfaces=0:maple_planks,stdrot=true
-block:id=Planks_Block,data=7,allfaces=0:silverbell_planks,stdrot=true
-block:id=Planks_Block,data=8,allfaces=0:purpleheart_planks,stdrot=true
-block:id=Planks_Block,data=9,allfaces=0:tiger_planks,stdrot=true
-block:id=Planks_Block,data=10,allfaces=0:willow_planks,stdrot=true
-block:id=Planks_Block,data=11,allfaces=0:darkwood_planks,stdrot=true
-block:id=Planks_Block,data=12,allfaces=0:fusewood_planks,stdrot=true
-
-# "Purple Glowshroom"
-block:id=Purple_Glowshroom,data=0,allfaces=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=1,top=0:mushroom_skin_purple,north=0:mushroom_skin_purple,east=0:mushroom_skin_purple,south=0:mushroom_inside_purple,west=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=2,top=0:mushroom_skin_purple,east=0:mushroom_skin_purple,north=0:mushroom_inside_purple,south=0:mushroom_inside_purple,west=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=3,top=0:mushroom_skin_purple,south=0:mushroom_skin_purple,east=0:mushroom_skin_purple,north=0:mushroom_inside_purple,west=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=4,top=0:mushroom_skin_purple,north=0:mushroom_skin_purple,east=0:mushroom_inside_purple,south=0:mushroom_inside_purple,west=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=5,top=0:mushroom_skin_purple,north=0:mushroom_inside_purple,east=0:mushroom_inside_purple,south=0:mushroom_inside_purple,west=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=6,top=0:mushroom_skin_purple,south=0:mushroom_skin_purple,north=0:mushroom_inside_purple,east=0:mushroom_inside_purple,west=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=7,top=0:mushroom_skin_purple,north=0:mushroom_skin_purple,west=0:mushroom_skin_purple,south=0:mushroom_inside_purple,east=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=8,top=0:mushroom_skin_purple,west=0:mushroom_skin_purple,north=0:mushroom_inside_purple,east=0:mushroom_inside_purple,south=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=9,top=0:mushroom_skin_purple,west=0:mushroom_skin_purple,south=0:mushroom_skin_purple,north=0:mushroom_inside_purple,east=0:mushroom_inside_purple,bottom=0:mushroom_inside_purple,stdrot=true
-block:id=Purple_Glowshroom,data=10,topbottom=0:mushroom_inside_purple,allsides=0:mushroom_stem_purple,stdrot=true
-block:id=Purple_Glowshroom,data=14,topbottom=0:mushroom_skin_purple,allsides=0:mushroom_skin_purple,stdrot=true
-block:id=Purple_Glowshroom,data=15,topbottom=0:mushroom_stem_purple,allsides=0:mushroom_stem_purple,stdrot=true
-
-# "Rare Leaves"
-block:id=Rare_Leaves,data=0,data=4,data=8,data=12,allfaces=17000:maple_leaves_fancy,stdrot=true,colorMult=CC5718
-block:id=Rare_Leaves,data=1,data=5,data=9,data=13,allfaces=0:silverbell_leaves_fancy,stdrot=true
-block:id=Rare_Leaves,data=2,data=6,data=10,data=14,allfaces=2000:purpleheart_leaves_fancy,stdrot=true,
-block:id=Rare_Leaves,data=3,data=7,data=11,data=15,allfaces=0:tiger_leaves_fancy,stdrot=true
-
-# "Rare Log"
-block:id=Rare_Log,data=0,allsides=0:maple_bark,topbottom=0:maple_heart,stdrot=true
-block:id=Rare_Log,data=4,north=0:maple_heart,south=0:maple_heart,east=4000:maple_bark,west=4000:maple_bark,top=0:maple_bark,bottom=0:maple_bark
-block:id=Rare_Log,data=8,north=4000:maple_bark,south=4000:maple_bark,east=0:maple_heart,west=0:maple_heart,top=4000:maple_bark,bottom=4000:maple_bark
-block:id=Rare_Log,data=12,allfaces=0:maple_bark,stdrot=true
-block:id=Rare_Log,data=1,allsides=0:silverbell_bark,topbottom=0:silverbell_heart,stdrot=true
-block:id=Rare_Log,data=5,north=0:silverbell_heart,south=0:silverbell_heart,east=4000:silverbell_bark,west=4000:silverbell_bark,top=0:silverbell_bark,bottom=0:silverbell_bark
-block:id=Rare_Log,data=9,north=4000:silverbell_bark,south=4000:silverbell_bark,east=0:silverbell_heart,west=0:silverbell_heart,top=4000:silverbell_bark,bottom=4000:silverbell_bark
-block:id=Rare_Log,data=13,allfaces=0:silverbell_bark,stdrot=true
-block:id=Rare_Log,data=2,allsides=0:purpleheart_bark,topbottom=0:purpleheart_heart,stdrot=true
-block:id=Rare_Log,data=6,north=0:purpleheart_heart,south=0:purpleheart_heart,east=4000:purpleheart_bark,west=4000:purpleheart_bark,top=0:purpleheart_bark,bottom=0:purpleheart_bark
-block:id=Rare_Log,data=10,north=4000:purpleheart_bark,south=4000:purpleheart_bark,east=0:purpleheart_heart,west=0:purpleheart_heart,top=4000:purpleheart_bark,bottom=4000:purpleheart_bark
-block:id=Rare_Log,data=14,allfaces=0:purpleheart_bark,stdrot=true
-block:id=Rare_Log,data=3,allsides=0:tiger_bark,topbottom=0:tiger_heart,stdrot=true
-block:id=Rare_Log,data=7,north=0:tiger_heart,south=0:tiger_heart,east=4000:tiger_bark,west=4000:tiger_bark,top=0:tiger_bark,bottom=0:tiger_bark
-block:id=Rare_Log,data=11,north=4000:tiger_bark,south=4000:tiger_bark,east=0:tiger_heart,west=0:tiger_heart,top=4000:tiger_bark,bottom=4000:tiger_bark
-block:id=Rare_Log,data=15,allfaces=0:tiger_bark,stdrot=true
-
-# "Rare Sapling"
-block:id=Rare_Sapling,data=0,data=8,patch0-1=0:maple_sapling,transparency=TRANSPARENT
-block:id=Rare_Sapling,data=1,data=9,patch0-1=0:silverbell_sapling,transparency=TRANSPARENT
-block:id=Rare_Sapling,data=2,data=10,patch0-1=0:purpleheart_sapling,transparency=TRANSPARENT
-block:id=Rare_Sapling,data=3,data=11,patch0-1=0:tiger_sapling,transparency=TRANSPARENT
-block:id=Rare_Sapling,data=4,data=12,patch0-1=0:willow_sapling,transparency=TRANSPARENT
-
-# "Redwood Bark Door"
-block:id=Redwood_Bark_Door,data=0,data=1,patch0=0:redwoodbark_door_bottom,patch1=7000:redwoodbark_door_bottom,patch2=7000:redwoodbark_door_bottom,patch3=0:redwoodbark_door_bottom,patch4=4000:redwoodbark_door_bottom,patch5=4000:redwoodbark_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Bark_Door,data=2,data=3,patch0=7000:redwoodbark_door_bottom,patch1=0:redwoodbark_door_bottom,patch2=7000:redwoodbark_door_bottom,patch3=0:redwoodbark_door_bottom,patch4=4000:redwoodbark_door_bottom,patch5=4000:redwoodbark_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Bark_Door,data=4,data=5,patch0=7000:redwoodbark_door_bottom,patch1=0:redwoodbark_door_bottom,patch2=7000:redwoodbark_door_bottom,patch3=0:redwoodbark_door_bottom,patch4=4000:redwoodbark_door_bottom,patch5=4000:redwoodbark_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Bark_Door,data=6,data=7,patch0=0:redwoodbark_door_bottom,patch1=7000:redwoodbark_door_bottom,patch2=7000:redwoodbark_door_bottom,patch3=0:redwoodbark_door_bottom,patch4=4000:redwoodbark_door_bottom,patch5=4000:redwoodbark_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Bark_Door,data=8,data=9,patch0=0:redwoodbark_door_top,patch1=7000:redwoodbark_door_top,patch2=7000:redwoodbark_door_top,patch3=0:redwoodbark_door_top,patch4=4000:redwoodbark_door_top,patch5=4000:redwoodbark_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Bark_Door,data=10,data=11,patch0=7000:redwoodbark_door_top,patch1=0:redwoodbark_door_top,patch2=7000:redwoodbark_door_top,patch3=0:redwoodbark_door_top,patch4=4000:redwoodbark_door_top,patch5=4000:redwoodbark_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Bark_Door,data=12,data=13,patch0=7000:redwoodbark_door_top,patch1=0:redwoodbark_door_top,patch2=7000:redwoodbark_door_top,patch3=0:redwoodbark_door_top,patch4=4000:redwoodbark_door_top,patch5=4000:redwoodbark_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Bark_Door,data=14,data=15,patch0=0:redwoodbark_door_top,patch1=7000:redwoodbark_door_top,patch2=7000:redwoodbark_door_top,patch3=0:redwoodbark_door_top,patch4=4000:redwoodbark_door_top,patch5=4000:redwoodbark_door_top,transparency=TRANSPARENT,userenderdata=true
-
-# "Redwood Block"
-block:id=Redwood_Block,data=0,allfaces=0:redwood_bark,stdrot=true
-block:id=Redwood_Block,data=1,allfaces=0:redwood_heart,stdrot=true
-block:id=Redwood_Block,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,allfaces=0:redwood_root,stdrot=true
-
-# "Redwood Door"
-block:id=Redwood_Door,data=0,data=1,patch0=0:redwood_door_bottom,patch1=7000:redwood_door_bottom,patch2=7000:redwood_door_bottom,patch3=0:redwood_door_bottom,patch4=4000:redwood_door_bottom,patch5=4000:redwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Door,data=2,data=3,patch0=7000:redwood_door_bottom,patch1=0:redwood_door_bottom,patch2=7000:redwood_door_bottom,patch3=0:redwood_door_bottom,patch4=4000:redwood_door_bottom,patch5=4000:redwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Door,data=4,data=5,patch0=7000:redwood_door_bottom,patch1=0:redwood_door_bottom,patch2=7000:redwood_door_bottom,patch3=0:redwood_door_bottom,patch4=4000:redwood_door_bottom,patch5=4000:redwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Door,data=6,data=7,patch0=0:redwood_door_bottom,patch1=7000:redwood_door_bottom,patch2=7000:redwood_door_bottom,patch3=0:redwood_door_bottom,patch4=4000:redwood_door_bottom,patch5=4000:redwood_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Door,data=8,data=9,patch0=0:redwood_door_top,patch1=7000:redwood_door_top,patch2=7000:redwood_door_top,patch3=0:redwood_door_top,patch4=4000:redwood_door_top,patch5=4000:redwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Door,data=10,data=11,patch0=7000:redwood_door_top,patch1=0:redwood_door_top,patch2=7000:redwood_door_top,patch3=0:redwood_door_top,patch4=4000:redwood_door_top,patch5=4000:redwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Door,data=12,data=13,patch0=7000:redwood_door_top,patch1=0:redwood_door_top,patch2=7000:redwood_door_top,patch3=0:redwood_door_top,patch4=4000:redwood_door_top,patch5=4000:redwood_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Redwood_Door,data=14,data=15,patch0=0:redwood_door_top,patch1=7000:redwood_door_top,patch2=7000:redwood_door_top,patch3=0:redwood_door_top,patch4=4000:redwood_door_top,patch5=4000:redwood_door_top,transparency=TRANSPARENT,userenderdata=true
-
-# "Saguaro Cactus"
-block:id=Saguaro_Cactus,data=0,face0=0:saguaro_bottom,face1=0:saguaro_top,allsides=0:saguaro_side,stdrot=true,transparency=TRANSPARENT
-block:id=Saguaro_Cactus,data=1,data=2,allfaces=0:saguaro_top,stdrot=true,transparency=TRANSPARENT
-block:id=Saguaro_Cactus,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,,allfaces=0:saguaro_fruit,stdrot=true,transparency=TRANSPARENT
-
-# "Sakura Door"
-block:id=Sakura_Door,data=0,data=1,patch0=0:sakura_door_bottom,patch1=7000:sakura_door_bottom,patch2=7000:sakura_door_bottom,patch3=0:sakura_door_bottom,patch4=4000:sakura_door_bottom,patch5=4000:sakura_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Sakura_Door,data=2,data=3,patch0=7000:sakura_door_bottom,patch1=0:sakura_door_bottom,patch2=7000:sakura_door_bottom,patch3=0:sakura_door_bottom,patch4=4000:sakura_door_bottom,patch5=4000:sakura_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Sakura_Door,data=4,data=5,patch0=7000:sakura_door_bottom,patch1=0:sakura_door_bottom,patch2=7000:sakura_door_bottom,patch3=0:sakura_door_bottom,patch4=4000:sakura_door_bottom,patch5=4000:sakura_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Sakura_Door,data=6,data=7,patch0=0:sakura_door_bottom,patch1=7000:sakura_door_bottom,patch2=7000:sakura_door_bottom,patch3=0:sakura_door_bottom,patch4=4000:sakura_door_bottom,patch5=4000:sakura_door_bottom,transparency=TRANSPARENT,userenderdata=true
-block:id=Sakura_Door,data=8,data=9,patch0=0:sakura_door_top,patch1=7000:sakura_door_top,patch2=7000:sakura_door_top,patch3=0:sakura_door_top,patch4=4000:sakura_door_top,patch5=4000:sakura_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Sakura_Door,data=10,data=11,patch0=7000:sakura_door_top,patch1=0:sakura_door_top,patch2=7000:sakura_door_top,patch3=0:sakura_door_top,patch4=4000:sakura_door_top,patch5=4000:sakura_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Sakura_Door,data=12,data=13,patch0=7000:sakura_door_top,patch1=0:sakura_door_top,patch2=7000:sakura_door_top,patch3=0:sakura_door_top,patch4=4000:sakura_door_top,patch5=4000:sakura_door_top,transparency=TRANSPARENT,userenderdata=true
-block:id=Sakura_Door,data=14,data=15,patch0=0:sakura_door_top,patch1=7000:sakura_door_top,patch2=7000:sakura_door_top,patch3=0:sakura_door_top,patch4=4000:sakura_door_top,patch5=4000:sakura_door_top,transparency=TRANSPARENT,userenderdata=true
-
-# "Sakura Leaves"
-block:id=Sakura_Leaves,data=0,data=4,data=8,data=12,allfaces=0:sakura_leaves_fancy,stdrot=true
-block:id=Sakura_Leaves,data=1,data=5,data=9,data=13,allfaces=0:ghostwood_leaves_fancy,stdrot=true
-block:id=Sakura_Leaves,data=2,data=6,data=10,data=14,allfaces=0:bloodwood_leaves_fancy,stdrot=true
-block:id=Sakura_Leaves,data=3,data=7,data=11,data=15,allfaces=0:willow_leaves_fancy,stdrot=true
-
-# Sapling
-block:id=Sapling,data=0,data=8,patch0-1=0:redwood_sapling,transparency=TRANSPARENT
-block:id=Sapling,data=1,data=9,patch0-1=0:eucalyptus_sapling,transparency=TRANSPARENT
-block:id=Sapling,data=2,data=10,patch0-1=0:hopseed_sapling,transparency=TRANSPARENT
-block:id=Sapling,data=3,data=11,patch0-1=0:sakura_sapling,transparency=TRANSPARENT
-block:id=Sapling,data=4,data=12,patch0-1=0:ghostwood_sapling,transparency=TRANSPARENT
-block:id=Sapling,data=5,data=13,patch0-1=0:bloodwood_sapling,transparency=TRANSPARENT
-block:id=Sapling,data=6,data=14,patch0-1=0:darkwood_sapling,transparency=TRANSPARENT
-block:id=Sapling,data=7,data=15,patch0-1=0:fusewood_sapling,transparency=TRANSPARENT
- 
-# Thornvines
-block:id=Thornvines,patch0-4=0:thornvine,transparency=TRANSPARENT
-
-# "Willow Log"
-block:id=Willow_Log,data=0,allsides=0:willow_bark,topbottom=0:willow_heart,stdrot=true
-block:id=Willow_Log,data=4,north=0:willow_heart,south=0:willow_heart,east=4000:willow_bark,west=4000:willow_bark,top=0:willow_bark,bottom=0:willow_bark
-block:id=Willow_Log,data=8,north=4000:willow_bark,south=4000:willow_bark,east=0:willow_heart,west=0:willow_heart,top=4000:willow_bark,bottom=4000:willow_bark
-block:id=Willow_Log,data=12,allfaces=0:willow_bark,stdrot=true
-
-# "Wood Block"
-block:id=Wood_Block,data=0,allsides=0:eucalyptus_bark,topbottom=0:eucalyptus_heart,stdrot=true
-block:id=Wood_Block,data=4,north=0:eucalyptus_heart,south=0:eucalyptus_heart,east=4000:eucalyptus_bark,west=4000:eucalyptus_bark,top=0:eucalyptus_bark,bottom=0:eucalyptus_bark
-block:id=Wood_Block,data=8,north=4000:eucalyptus_bark,south=4000:eucalyptus_bark,east=0:eucalyptus_heart,west=0:eucalyptus_heart,top=4000:eucalyptus_bark,bottom=4000:eucalyptus_bark
-block:id=Wood_Block,data=12,allfaces=0:eucalyptus_bark,stdrot=true
-block:id=Wood_Block,data=1,allsides=0:sakura_bark,topbottom=0:sakura_heart,stdrot=true
-block:id=Wood_Block,data=5,north=0:sakura_heart,south=0:sakura_heart,east=4000:sakura_bark,west=4000:sakura_bark,top=0:sakura_bark,bottom=0:sakura_bark
-block:id=Wood_Block,data=9,north=4000:sakura_bark,south=4000:sakura_bark,east=0:sakura_heart,west=0:sakura_heart,top=4000:sakura_bark,bottom=4000:sakura_bark
-block:id=Wood_Block,data=13,allfaces=0:sakura_bark,stdrot=true
-block:id=Wood_Block,data=2,allsides=0:ghostwood_bark,topbottom=0:ghostwood_heart,stdrot=true
-block:id=Wood_Block,data=6,north=0:ghostwood_heart,south=0:ghostwood_heart,east=4000:ghostwood_bark,west=4000:ghostwood_bark,top=0:ghostwood_bark,bottom=0:ghostwood_bark
-block:id=Wood_Block,data=10,north=4000:ghostwood_bark,south=4000:ghostwood_bark,east=0:ghostwood_heart,west=0:ghostwood_heart,top=4000:ghostwood_bark,bottom=4000:ghostwood_bark
-block:id=Wood_Block,data=14,allfaces=0:ghostwood_bark,stdrot=true
-block:id=Wood_Block,data=3,allsides=0:hopseed_bark,topbottom=0:hopseed_heart,stdrot=true
-block:id=Wood_Block,data=7,north=0:hopseed_heart,south=0:hopseed_heart,east=4000:hopseed_bark,west=4000:hopseed_bark,top=0:hopseed_bark,bottom=0:hopseed_bark
-block:id=Wood_Block,data=11,north=4000:hopseed_bark,south=4000:hopseed_bark,east=0:hopseed_heart,west=0:hopseed_heart,top=4000:hopseed_bark,bottom=4000:hopseed_bark
-block:id=Wood_Block,data=15,allfaces=0:hopseed_bark,stdrot=true
-
+# terrain/Heat_Sand:* (heatsand), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.nether.HeatSand
+block:id=terrain/Heat_Sand,data=*,stdrot=true,face0-5=0:natura/heatsand
+# terrain/Tainted_Soil:* (soil.tainted), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.nether.TaintedSoil
+block:id=terrain/Tainted_Soil,data=0,stdrot=true,face0-5=0:natura/tainted_soil
+block:id=terrain/Tainted_Soil,data=1,stdrot=true,face0-5=0:natura/tainted_farmland_dry
+block:id=terrain/Tainted_Soil,data=2,stdrot=true,face0-5=0:natura/tainted_farmland_heated
+# Tigerwood_Stairs:* (stair.tiger), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Tigerwood_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/tiger_planks
+# Wood_Block:* (tree), render=31(LOG), opaque=true,cls=mods.natura.blocks.trees.TreeBlock
+block:id=Wood_Block,data=0,stdrot=true,face0-1=0:natura/eucalyptus_heart,face2-5=0:natura/eucalyptus_bark
+block:id=Wood_Block,data=1,stdrot=true,face0-1=0:natura/sakura_heart,face2-5=0:natura/sakura_bark
+block:id=Wood_Block,data=2,stdrot=true,face0-1=0:natura/ghostwood_heart,face2-5=0:natura/ghostwood_bark
+block:id=Wood_Block,data=3,stdrot=true,face0-1=0:natura/hopseed_heart,face2-5=0:natura/hopseed_bark
+block:id=Wood_Block,data=4,face0-1=0:natura/eucalyptus_bark,face2-3=4000:natura/eucalyptus_bark,face4-5=0:natura/eucalyptus_heart
+block:id=Wood_Block,data=5,face0-1=0:natura/sakura_bark,face2-3=4000:natura/sakura_bark,face4-5=0:natura/sakura_heart
+block:id=Wood_Block,data=6,face0-1=0:natura/ghostwood_bark,face2-3=4000:natura/ghostwood_bark,face4-5=0:natura/ghostwood_heart
+block:id=Wood_Block,data=7,face0-1=0:natura/hopseed_bark,face2-3=4000:natura/hopseed_bark,face4-5=0:natura/hopseed_heart
+block:id=Wood_Block,data=8,face0-1=4000:natura/eucalyptus_bark,face2-3=0:natura/eucalyptus_heart,face4-5=4000:natura/eucalyptus_bark
+block:id=Wood_Block,data=9,face0-1=4000:natura/sakura_bark,face2-3=0:natura/sakura_heart,face4-5=4000:natura/sakura_bark
+block:id=Wood_Block,data=10,face0-1=4000:natura/ghostwood_bark,face2-3=0:natura/ghostwood_heart,face4-5=4000:natura/ghostwood_bark
+block:id=Wood_Block,data=11,face0-1=4000:natura/hopseed_bark,face2-3=0:natura/hopseed_heart,face4-5=4000:natura/hopseed_bark
+block:id=Wood_Block,data=12,stdrot=true,face0-5=0:natura/eucalyptus_bark
+block:id=Wood_Block,data=13,stdrot=true,face0-5=0:natura/sakura_bark
+block:id=Wood_Block,data=14,stdrot=true,face0-5=0:natura/ghostwood_bark
+block:id=Wood_Block,data=15,stdrot=true,face0-5=0:natura/hopseed_bark
+# Redwood_Door:* (door.redwood), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+block:id=Redwood_Door,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/redwood_door_top,patch1=0:natura/redwood_door_bottom
+# Cloud_Block:* (Cloud), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.CloudBlock
+block:id=Cloud_Block,data=0,stdrot=true,face0-5=12000:natura/cloud_white
+block:id=Cloud_Block,data=1,stdrot=true,face0-5=12000:natura/cloud_gray
+block:id=Cloud_Block,data=2,stdrot=true,face0-5=12000:natura/cloud_dark
+block:id=Cloud_Block,data=3,stdrot=true,face0-5=12000:natura/cloud_sulfur
+# Saguaro_Cactus:* (Saguaro), render=107(CUSTOM), opaque=false,cls=mods.natura.blocks.trees.SaguaroBlock
+block:id=Saguaro_Cactus,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:natura/saguaro_bottom,face1=0:natura/saguaro_top,face2-5=0:natura/saguaro_side
+block:id=Saguaro_Cactus,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/saguaro_top
+block:id=Saguaro_Cactus,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/saguaro_fruit
+# Nether_Berry_Bush:* (NetherBerryBush), render=106(CUSTOM), opaque=false,cls=mods.natura.blocks.crops.NetherBerryBush
+block:id=Nether_Berry_Bush,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blightberry_fast
+block:id=Nether_Berry_Bush,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/duskberry_fast
+block:id=Nether_Berry_Bush,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/skyberry_fast
+block:id=Nether_Berry_Bush,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/stingberry_fast
+block:id=Nether_Berry_Bush,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blightberry_fast
+block:id=Nether_Berry_Bush,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/duskberry_fast
+block:id=Nether_Berry_Bush,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/skyberry_fast
+block:id=Nether_Berry_Bush,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/stingberry_fast
+block:id=Nether_Berry_Bush,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blightberry_fast
+block:id=Nether_Berry_Bush,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/duskberry_fast
+block:id=Nether_Berry_Bush,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/skyberry_fast
+block:id=Nether_Berry_Bush,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/stingberry_fast
+block:id=Nether_Berry_Bush,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blightberry_ripe_fast
+block:id=Nether_Berry_Bush,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/duskberry_ripe_fast
+block:id=Nether_Berry_Bush,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/skyberry_ripe_fast
+block:id=Nether_Berry_Bush,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/stingberry_ripe_fast
+# Sapling:* (florasapling), render=1(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.trees.NSaplingBlock
+block:id=Sapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/redwood_sapling
+block:id=Sapling,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/eucalyptus_sapling
+block:id=Sapling,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/hopseed_sapling
+block:id=Sapling,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/sakura_sapling
+block:id=Sapling,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/ghostwood_sapling
+block:id=Sapling,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/bloodwood_sapling
+block:id=Sapling,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/darkwood_sapling
+block:id=Sapling,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/fusewood_sapling
+block:id=Sapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/redwood_sapling
+block:id=Sapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/eucalyptus_sapling
+block:id=Sapling,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/hopseed_sapling
+block:id=Sapling,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/sakura_sapling
+block:id=Sapling,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/ghostwood_sapling
+block:id=Sapling,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/bloodwood_sapling
+block:id=Sapling,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/darkwood_sapling
+block:id=Sapling,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/fusewood_sapling
+# Berry_Bush:* (BerryBush), render=106(CUSTOM), opaque=false,cls=mods.natura.blocks.crops.BerryBush
+block:id=Berry_Bush,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/raspberry_fast
+block:id=Berry_Bush,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blueberry_fast
+block:id=Berry_Bush,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blackberry_fast
+block:id=Berry_Bush,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/geoberry_fast
+block:id=Berry_Bush,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/raspberry_fast
+block:id=Berry_Bush,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blueberry_fast
+block:id=Berry_Bush,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blackberry_fast
+block:id=Berry_Bush,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/geoberry_fast
+block:id=Berry_Bush,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/raspberry_fast
+block:id=Berry_Bush,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blueberry_fast
+block:id=Berry_Bush,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blackberry_fast
+block:id=Berry_Bush,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/geoberry_fast
+block:id=Berry_Bush,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/raspberry_ripe_fast
+block:id=Berry_Bush,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blueberry_ripe_fast
+block:id=Berry_Bush,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/blackberry_ripe_fast
+block:id=Berry_Bush,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/geoberry_ripe_fast
+# Sakura_Leaves:* (floraleavesnocolor), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.trees.NLeavesNocolor
+block:id=Sakura_Leaves,data=0,stdrot=true,face0-5=0:natura/sakura_leaves_fast
+block:id=Sakura_Leaves,data=1,stdrot=true,face0-5=0:natura/ghostwood_leaves_fast
+block:id=Sakura_Leaves,data=2,stdrot=true,face0-5=0:natura/bloodwood_leaves_fast
+block:id=Sakura_Leaves,data=3,stdrot=true,face0-5=0:natura/willow_leaves_fast
+block:id=Sakura_Leaves,data=4,stdrot=true,face0-5=0:natura/sakura_leaves_fast
+block:id=Sakura_Leaves,data=5,stdrot=true,face0-5=0:natura/ghostwood_leaves_fast
+block:id=Sakura_Leaves,data=6,stdrot=true,face0-5=0:natura/bloodwood_leaves_fast
+block:id=Sakura_Leaves,data=7,stdrot=true,face0-5=0:natura/willow_leaves_fast
+block:id=Sakura_Leaves,data=8,stdrot=true,face0-5=0:natura/sakura_leaves_fast
+block:id=Sakura_Leaves,data=9,stdrot=true,face0-5=0:natura/ghostwood_leaves_fast
+block:id=Sakura_Leaves,data=10,stdrot=true,face0-5=0:natura/bloodwood_leaves_fast
+block:id=Sakura_Leaves,data=11,stdrot=true,face0-5=0:natura/willow_leaves_fast
+block:id=Sakura_Leaves,data=12,stdrot=true,face0-5=0:natura/sakura_leaves_fast
+block:id=Sakura_Leaves,data=13,stdrot=true,face0-5=0:natura/ghostwood_leaves_fast
+block:id=Sakura_Leaves,data=14,stdrot=true,face0-5=0:natura/bloodwood_leaves_fast
+block:id=Sakura_Leaves,data=15,stdrot=true,face0-5=0:natura/willow_leaves_fast
+# Flora_Leaves:* (floraleaves), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.trees.NLeaves
+block:id=Flora_Leaves,data=0,stdrot=true,face0-5=2000:natura/redwood_leaves_fast
+block:id=Flora_Leaves,data=1,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fast
+block:id=Flora_Leaves,data=2,stdrot=true,face0-5=2000:natura/hopseed_leaves_fast
+block:id=Flora_Leaves,data=3,data=4,stdrot=true,face0-5=2000:natura/redwood_leaves_fast
+block:id=Flora_Leaves,data=5,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fast
+block:id=Flora_Leaves,data=6,stdrot=true,face0-5=2000:natura/hopseed_leaves_fast
+block:id=Flora_Leaves,data=8,stdrot=true,face0-5=2000:natura/redwood_leaves_fast
+block:id=Flora_Leaves,data=9,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fast
+block:id=Flora_Leaves,data=10,stdrot=true,face0-5=2000:natura/hopseed_leaves_fast
+block:id=Flora_Leaves,data=12,stdrot=true,face0-5=2000:natura/redwood_leaves_fast
+block:id=Flora_Leaves,data=13,stdrot=true,face0-5=2000:natura/eucalyptus_leaves_fast
+block:id=Flora_Leaves,data=14,stdrot=true,face0-5=2000:natura/hopseed_leaves_fast
+# Crops:* (N Crops), render=108(CUSTOM), opaque=false,cls=mods.natura.blocks.crops.CropBlock
+block:id=Crops,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/barley_1
+block:id=Crops,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/barley_2
+block:id=Crops,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/barley_3
+block:id=Crops,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/barley_4
+block:id=Crops,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/cotton_1
+block:id=Crops,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/cotton_2
+block:id=Crops,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/cotton_3
+block:id=Crops,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/cotton_4
+block:id=Crops,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/cotton_5
+# Redwood_Block:* (redwood), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.trees.SimpleLog
+block:id=Redwood_Block,data=0,stdrot=true,face0-5=0:natura/redwood_bark
+block:id=Redwood_Block,data=1,stdrot=true,face0-5=0:natura/redwood_heart
+block:id=Redwood_Block,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:natura/redwood_root
+# Planks_Block:* (planks), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.trees.Planks
+block:id=Planks_Block,data=0,stdrot=true,face0-5=0:natura/eucalyptus_planks
+block:id=Planks_Block,data=1,stdrot=true,face0-5=0:natura/sakura_planks
+block:id=Planks_Block,data=2,stdrot=true,face0-5=0:natura/ghostwood_planks
+block:id=Planks_Block,data=3,stdrot=true,face0-5=0:natura/redwood_planks
+block:id=Planks_Block,data=4,stdrot=true,face0-5=0:natura/bloodwood_planks
+block:id=Planks_Block,data=5,stdrot=true,face0-5=0:natura/hopseed_planks
+block:id=Planks_Block,data=6,stdrot=true,face0-5=0:natura/maple_planks
+block:id=Planks_Block,data=7,stdrot=true,face0-5=0:natura/silverbell_planks
+block:id=Planks_Block,data=8,stdrot=true,face0-5=0:natura/purpleheart_planks
+block:id=Planks_Block,data=9,stdrot=true,face0-5=0:natura/tiger_planks
+block:id=Planks_Block,data=10,stdrot=true,face0-5=0:natura/willow_planks
+block:id=Planks_Block,data=11,stdrot=true,face0-5=0:natura/darkwood_planks
+block:id=Planks_Block,data=12,stdrot=true,face0-5=0:natura/fusewood_planks
+block:id=Planks_Block,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/lava_still
+# Bloodwood_Block:* (bloodwood), render=31(LOG), opaque=true,cls=mods.natura.blocks.trees.LogTwoxTwo
+block:id=Bloodwood_Block,data=0,stdrot=true,face0-1=0:natura/bloodwood_upper_left,face2=0:natura/bloodwood_bark,face3=0:natura/bloodwood_side_left,face4=0:natura/bloodwood_bark,face5=0:natura/bloodwood_side_right
+block:id=Bloodwood_Block,data=1,stdrot=true,face0-1=0:natura/bloodwood_upper_right,face2=0:natura/bloodwood_bark,face3=0:natura/bloodwood_side_right,face4=0:natura/bloodwood_side_left,face5=0:natura/bloodwood_bark
+block:id=Bloodwood_Block,data=2,stdrot=true,face0-1=0:natura/bloodwood_lower_left,face2=0:natura/bloodwood_side_right,face3-4=0:natura/bloodwood_bark,face5=0:natura/bloodwood_side_left
+block:id=Bloodwood_Block,data=3,stdrot=true,face0-1=0:natura/bloodwood_lower_right,face2=0:natura/bloodwood_side_left,face3=0:natura/bloodwood_bark,face4=0:natura/bloodwood_side_right,face5=0:natura/bloodwood_bark
+block:id=Bloodwood_Block,data=4,face0=0:natura/bloodwood_side_left,face1=0:natura/bloodwood_bark,face2=4000:natura/bloodwood_side_right,face3=4000:natura/bloodwood_bark,face4=0:natura/bloodwood_upper_right,face5=0:natura/bloodwood_upper_left
+block:id=Bloodwood_Block,data=5,face0=0:natura/bloodwood_side_right,face1=0:natura/bloodwood_bark,face2=4000:natura/bloodwood_bark,face3=4000:natura/bloodwood_side_left,face4=0:natura/bloodwood_upper_left,face5=0:natura/bloodwood_upper_right
+block:id=Bloodwood_Block,data=6,face0=0:natura/bloodwood_bark,face1=0:natura/bloodwood_side_right,face2=4000:natura/bloodwood_side_left,face3=4000:natura/bloodwood_bark,face4=0:natura/bloodwood_lower_right,face5=0:natura/bloodwood_lower_left
+block:id=Bloodwood_Block,data=7,face0=0:natura/bloodwood_bark,face1=0:natura/bloodwood_side_left,face2=4000:natura/bloodwood_bark,face3=4000:natura/bloodwood_side_right,face4=0:natura/bloodwood_lower_left,face5=0:natura/bloodwood_lower_right
+block:id=Bloodwood_Block,data=8,face0=4000:natura/bloodwood_side_left,face1=4000:natura/bloodwood_bark,face2=0:natura/bloodwood_upper_right,face3=0:natura/bloodwood_upper_left,face4=4000:natura/bloodwood_bark,face5=4000:natura/bloodwood_side_right
+block:id=Bloodwood_Block,data=9,face0=4000:natura/bloodwood_side_right,face1=4000:natura/bloodwood_bark,face2=0:natura/bloodwood_upper_left,face3=0:natura/bloodwood_upper_right,face4=4000:natura/bloodwood_side_left,face5=4000:natura/bloodwood_bark
+block:id=Bloodwood_Block,data=10,face0=4000:natura/bloodwood_bark,face1=4000:natura/bloodwood_side_left,face2=0:natura/bloodwood_lower_right,face3=0:natura/bloodwood_lower_left,face4=4000:natura/bloodwood_bark,face5=4000:natura/bloodwood_side_left
+block:id=Bloodwood_Block,data=11,face0=4000:natura/bloodwood_bark,face1=4000:natura/bloodwood_side_right,face2=0:natura/bloodwood_lower_left,face3=0:natura/bloodwood_lower_right,face4=4000:natura/bloodwood_side_right,face5=4000:natura/bloodwood_bark
+block:id=Bloodwood_Block,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:natura/bloodwood_bark
+# Eucalyptus_Door:* (door.eucalyptus), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+block:id=Eucalyptus_Door,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/eucalyptus_door_top,patch1=0:natura/eucalyptus_door_bottom
+# Hopseed_Door:* (door.hopseed), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+block:id=Hopseed_Door,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/hopseed_door_top,patch1=0:natura/hopseed_door_bottom
+# Sakura_Door:* (door.sakura), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+block:id=Sakura_Door,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/sakura_door_top,patch1=0:natura/sakura_door_bottom
+# Ghostwood_Door:* (door.ghostwood), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+block:id=Ghostwood_Door,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/ghostwood_door_top,patch1=0:natura/ghostwood_door_bottom
+# Bloodwood_Door:* (door.bloodwood), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+block:id=Bloodwood_Door,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/bloodwood_door_top,patch1=0:natura/bloodwood_door_bottom
+# Redwood_Bark_Door:* (door.redwoodbark), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+block:id=Redwood_Bark_Door,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/redwoodbark_door_top,patch1=0:natura/redwoodbark_door_bottom
+# Glowing_Mushroom:* (Glowshroom), render=1(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.Glowshroom
+block:id=Glowing_Mushroom,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_green
+block:id=Glowing_Mushroom,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_purple
+block:id=Glowing_Mushroom,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_blue
+block:id=Glowing_Mushroom,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_green
+block:id=Glowing_Mushroom,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_purple
+block:id=Glowing_Mushroom,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_blue
+block:id=Glowing_Mushroom,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_green
+block:id=Glowing_Mushroom,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_purple
+block:id=Glowing_Mushroom,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_blue
+block:id=Glowing_Mushroom,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_green
+block:id=Glowing_Mushroom,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_purple
+block:id=Glowing_Mushroom,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_blue
+block:id=Glowing_Mushroom,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_green
+block:id=Glowing_Mushroom,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_purple
+block:id=Glowing_Mushroom,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_blue
+block:id=Glowing_Mushroom,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/mushroom_green
+# Darkwood_Log:* (Dark Tree), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.trees.DarkTreeBlock
+block:id=Darkwood_Log,data=0,stdrot=true,face0-1=0:natura/darkwood_heart,face2-5=0:natura/darkwood_bark
+block:id=Darkwood_Log,data=1,stdrot=true,face0-1=0:natura/fusewood_heart,face2-5=0:natura/fusewood_bark
+block:id=Darkwood_Log,data=4,stdrot=true,face0-3=0:natura/darkwood_bark,face4-5=0:natura/darkwood_heart
+block:id=Darkwood_Log,data=5,stdrot=true,face0-3=0:natura/fusewood_bark,face4-5=0:natura/fusewood_heart
+block:id=Darkwood_Log,data=8,stdrot=true,face0-1=0:natura/darkwood_bark,face2-3=0:natura/darkwood_heart,face4-5=0:natura/darkwood_bark
+block:id=Darkwood_Log,data=9,stdrot=true,face0-1=0:natura/fusewood_bark,face2-3=0:natura/fusewood_heart,face4-5=0:natura/fusewood_bark
+block:id=Darkwood_Log,data=12,stdrot=true,face0-5=0:natura/darkwood_bark
+block:id=Darkwood_Log,data=13,stdrot=true,face0-5=0:natura/fusewood_bark
+# Darkwood_Leaves:* (Dark Leaves), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.trees.NLeavesDark
+block:id=Darkwood_Leaves,data=0,stdrot=true,face0-5=0:natura/darkwood_leaves_fast
+block:id=Darkwood_Leaves,data=1,stdrot=true,face0-5=0:natura/darkwood_flowering_leaves_fast
+block:id=Darkwood_Leaves,data=2,stdrot=true,face0-5=0:natura/darkwood_fruit_leaves_fast
+block:id=Darkwood_Leaves,data=3,stdrot=true,face0-5=0:natura/fusewood_leaves_fast
+block:id=Darkwood_Leaves,data=4,stdrot=true,face0-5=0:natura/darkwood_leaves_fast
+block:id=Darkwood_Leaves,data=5,stdrot=true,face0-5=0:natura/darkwood_flowering_leaves_fast
+block:id=Darkwood_Leaves,data=6,stdrot=true,face0-5=0:natura/darkwood_fruit_leaves_fast
+block:id=Darkwood_Leaves,data=7,stdrot=true,face0-5=0:natura/fusewood_leaves_fast
+block:id=Darkwood_Leaves,data=8,stdrot=true,face0-5=0:natura/darkwood_leaves_fast
+block:id=Darkwood_Leaves,data=9,stdrot=true,face0-5=0:natura/darkwood_flowering_leaves_fast
+block:id=Darkwood_Leaves,data=10,stdrot=true,face0-5=0:natura/darkwood_fruit_leaves_fast
+block:id=Darkwood_Leaves,data=11,stdrot=true,face0-5=0:natura/fusewood_leaves_fast
+block:id=Darkwood_Leaves,data=12,stdrot=true,face0-5=0:natura/darkwood_leaves_fast
+block:id=Darkwood_Leaves,data=13,stdrot=true,face0-5=0:natura/darkwood_flowering_leaves_fast
+block:id=Darkwood_Leaves,data=14,stdrot=true,face0-5=0:natura/darkwood_fruit_leaves_fast
+block:id=Darkwood_Leaves,data=15,stdrot=true,face0-5=0:natura/fusewood_leaves_fast
+# Blue_Glowshroom:* (blueGlowshroom), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
+block:id=Blue_Glowshroom,data=0,stdrot=true,face0-5=12000:natura/mushroom_inside_blue
+block:id=Blue_Glowshroom,data=1,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1-2=12000:natura/mushroom_skin_blue,face3=12000:natura/mushroom_inside_blue,face4=12000:natura/mushroom_skin_blue,face5=12000:natura/mushroom_inside_blue
+block:id=Blue_Glowshroom,data=2,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1-2=12000:natura/mushroom_skin_blue,face3-5=12000:natura/mushroom_inside_blue
+block:id=Blue_Glowshroom,data=3,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1-2=12000:natura/mushroom_skin_blue,face3-4=12000:natura/mushroom_inside_blue,face5=12000:natura/mushroom_skin_blue
+block:id=Blue_Glowshroom,data=4,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1=12000:natura/mushroom_skin_blue,face2-3=12000:natura/mushroom_inside_blue,face4=12000:natura/mushroom_skin_blue,face5=12000:natura/mushroom_inside_blue
+block:id=Blue_Glowshroom,data=5,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1=12000:natura/mushroom_skin_blue,face2-5=12000:natura/mushroom_inside_blue
+block:id=Blue_Glowshroom,data=6,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1=12000:natura/mushroom_skin_blue,face2-4=12000:natura/mushroom_inside_blue,face5=12000:natura/mushroom_skin_blue
+block:id=Blue_Glowshroom,data=7,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1=12000:natura/mushroom_skin_blue,face2=12000:natura/mushroom_inside_blue,face3-4=12000:natura/mushroom_skin_blue,face5=12000:natura/mushroom_inside_blue
+block:id=Blue_Glowshroom,data=8,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1=12000:natura/mushroom_skin_blue,face2=12000:natura/mushroom_inside_blue,face3=12000:natura/mushroom_skin_blue,face4-5=12000:natura/mushroom_inside_blue
+block:id=Blue_Glowshroom,data=9,stdrot=true,face0=12000:natura/mushroom_inside_blue,face1=12000:natura/mushroom_skin_blue,face2=12000:natura/mushroom_inside_blue,face3=12000:natura/mushroom_skin_blue,face4=12000:natura/mushroom_inside_blue,face5=12000:natura/mushroom_skin_blue
+block:id=Blue_Glowshroom,data=10,stdrot=true,face0-1=12000:natura/mushroom_inside_blue,face2-5=12000:natura/mushroom_stem_blue
+block:id=Blue_Glowshroom,data=11,data=12,data=13,stdrot=true,face0-5=12000:natura/mushroom_inside_blue
+block:id=Blue_Glowshroom,data=14,stdrot=true,face0-5=12000:natura/mushroom_skin_blue
+block:id=Blue_Glowshroom,data=15,stdrot=true,face0-5=12000:natura/mushroom_stem_blue
+# Green_Glowshroom:* (greenGlowshroom), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
+block:id=Green_Glowshroom,data=0,stdrot=true,face0-5=12000:natura/mushroom_inside_green
+block:id=Green_Glowshroom,data=1,stdrot=true,face0=12000:natura/mushroom_inside_green,face1-2=12000:natura/mushroom_skin_green,face3=12000:natura/mushroom_inside_green,face4=12000:natura/mushroom_skin_green,face5=12000:natura/mushroom_inside_green
+block:id=Green_Glowshroom,data=2,stdrot=true,face0=12000:natura/mushroom_inside_green,face1-2=12000:natura/mushroom_skin_green,face3-5=12000:natura/mushroom_inside_green
+block:id=Green_Glowshroom,data=3,stdrot=true,face0=12000:natura/mushroom_inside_green,face1-2=12000:natura/mushroom_skin_green,face3-4=12000:natura/mushroom_inside_green,face5=12000:natura/mushroom_skin_green
+block:id=Green_Glowshroom,data=4,stdrot=true,face0=12000:natura/mushroom_inside_green,face1=12000:natura/mushroom_skin_green,face2-3=12000:natura/mushroom_inside_green,face4=12000:natura/mushroom_skin_green,face5=12000:natura/mushroom_inside_green
+block:id=Green_Glowshroom,data=5,stdrot=true,face0=12000:natura/mushroom_inside_green,face1=12000:natura/mushroom_skin_green,face2-5=12000:natura/mushroom_inside_green
+block:id=Green_Glowshroom,data=6,stdrot=true,face0=12000:natura/mushroom_inside_green,face1=12000:natura/mushroom_skin_green,face2-4=12000:natura/mushroom_inside_green,face5=12000:natura/mushroom_skin_green
+block:id=Green_Glowshroom,data=7,stdrot=true,face0=12000:natura/mushroom_inside_green,face1=12000:natura/mushroom_skin_green,face2=12000:natura/mushroom_inside_green,face3-4=12000:natura/mushroom_skin_green,face5=12000:natura/mushroom_inside_green
+block:id=Green_Glowshroom,data=8,stdrot=true,face0=12000:natura/mushroom_inside_green,face1=12000:natura/mushroom_skin_green,face2=12000:natura/mushroom_inside_green,face3=12000:natura/mushroom_skin_green,face4-5=12000:natura/mushroom_inside_green
+block:id=Green_Glowshroom,data=9,stdrot=true,face0=12000:natura/mushroom_inside_green,face1=12000:natura/mushroom_skin_green,face2=12000:natura/mushroom_inside_green,face3=12000:natura/mushroom_skin_green,face4=12000:natura/mushroom_inside_green,face5=12000:natura/mushroom_skin_green
+block:id=Green_Glowshroom,data=10,stdrot=true,face0-1=12000:natura/mushroom_inside_green,face2-5=12000:natura/mushroom_stem_green
+block:id=Green_Glowshroom,data=11,data=12,data=13,stdrot=true,face0-5=12000:natura/mushroom_inside_green
+block:id=Green_Glowshroom,data=14,stdrot=true,face0-5=12000:natura/mushroom_skin_green
+block:id=Green_Glowshroom,data=15,stdrot=true,face0-5=12000:natura/mushroom_stem_green
+# Purple_Glowshroom:* (purpleGlowshroom), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.crops.LargeGlowshroom
+block:id=Purple_Glowshroom,data=0,stdrot=true,face0-5=12000:natura/mushroom_inside_purple
+block:id=Purple_Glowshroom,data=1,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1-2=12000:natura/mushroom_skin_purple,face3=12000:natura/mushroom_inside_purple,face4=12000:natura/mushroom_skin_purple,face5=12000:natura/mushroom_inside_purple
+block:id=Purple_Glowshroom,data=2,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1-2=12000:natura/mushroom_skin_purple,face3-5=12000:natura/mushroom_inside_purple
+block:id=Purple_Glowshroom,data=3,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1-2=12000:natura/mushroom_skin_purple,face3-4=12000:natura/mushroom_inside_purple,face5=12000:natura/mushroom_skin_purple
+block:id=Purple_Glowshroom,data=4,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1=12000:natura/mushroom_skin_purple,face2-3=12000:natura/mushroom_inside_purple,face4=12000:natura/mushroom_skin_purple,face5=12000:natura/mushroom_inside_purple
+block:id=Purple_Glowshroom,data=5,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1=12000:natura/mushroom_skin_purple,face2-5=12000:natura/mushroom_inside_purple
+block:id=Purple_Glowshroom,data=6,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1=12000:natura/mushroom_skin_purple,face2-4=12000:natura/mushroom_inside_purple,face5=12000:natura/mushroom_skin_purple
+block:id=Purple_Glowshroom,data=7,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1=12000:natura/mushroom_skin_purple,face2=12000:natura/mushroom_inside_purple,face3-4=12000:natura/mushroom_skin_purple,face5=12000:natura/mushroom_inside_purple
+block:id=Purple_Glowshroom,data=8,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1=12000:natura/mushroom_skin_purple,face2=12000:natura/mushroom_inside_purple,face3=12000:natura/mushroom_skin_purple,face4-5=12000:natura/mushroom_inside_purple
+block:id=Purple_Glowshroom,data=9,stdrot=true,face0=12000:natura/mushroom_inside_purple,face1=12000:natura/mushroom_skin_purple,face2=12000:natura/mushroom_inside_purple,face3=12000:natura/mushroom_skin_purple,face4=12000:natura/mushroom_inside_purple,face5=12000:natura/mushroom_skin_purple
+block:id=Purple_Glowshroom,data=10,stdrot=true,face0-1=12000:natura/mushroom_inside_purple,face2-5=12000:natura/mushroom_stem_purple
+block:id=Purple_Glowshroom,data=11,data=12,data=13,stdrot=true,face0-5=12000:natura/mushroom_inside_purple
+block:id=Purple_Glowshroom,data=14,stdrot=true,face0-5=12000:natura/mushroom_skin_purple
+block:id=Purple_Glowshroom,data=15,stdrot=true,face0-5=12000:natura/mushroom_stem_purple
+# Rare_Log:* (Rare Tree), render=31(LOG), opaque=true,cls=mods.natura.blocks.trees.OverworldTreeBlock
+block:id=Rare_Log,data=0,stdrot=true,face0-1=0:natura/maple_heart,face2-5=0:natura/maple_bark
+block:id=Rare_Log,data=1,stdrot=true,face0-1=0:natura/silverbell_heart,face2-5=0:natura/silverbell_bark
+block:id=Rare_Log,data=2,stdrot=true,face0-1=0:natura/purpleheart_heart,face2-5=0:natura/purpleheart_bark
+block:id=Rare_Log,data=3,stdrot=true,face0-1=0:natura/tiger_heart,face2-5=0:natura/tiger_bark
+block:id=Rare_Log,data=4,face0-1=0:natura/maple_bark,face2-3=4000:natura/maple_bark,face4-5=0:natura/maple_heart
+block:id=Rare_Log,data=5,face0-1=0:natura/silverbell_bark,face2-3=4000:natura/silverbell_bark,face4-5=0:natura/silverbell_heart
+block:id=Rare_Log,data=6,face0-1=0:natura/purpleheart_bark,face2-3=4000:natura/purpleheart_bark,face4-5=0:natura/purpleheart_heart
+block:id=Rare_Log,data=7,face0-1=0:natura/tiger_bark,face2-3=4000:natura/tiger_bark,face4-5=0:natura/tiger_heart
+block:id=Rare_Log,data=8,face0-1=4000:natura/maple_bark,face2-3=0:natura/maple_heart,face4-5=4000:natura/maple_bark
+block:id=Rare_Log,data=9,face0-1=4000:natura/silverbell_bark,face2-3=0:natura/silverbell_heart,face4-5=4000:natura/silverbell_bark
+block:id=Rare_Log,data=10,face0-1=4000:natura/purpleheart_bark,face2-3=0:natura/purpleheart_heart,face4-5=4000:natura/purpleheart_bark
+block:id=Rare_Log,data=11,face0-1=4000:natura/tiger_bark,face2-3=0:natura/tiger_heart,face4-5=4000:natura/tiger_bark
+block:id=Rare_Log,data=12,stdrot=true,face0-5=0:natura/maple_bark
+block:id=Rare_Log,data=13,stdrot=true,face0-5=0:natura/silverbell_bark
+block:id=Rare_Log,data=14,stdrot=true,face0-5=0:natura/purpleheart_bark
+block:id=Rare_Log,data=15,stdrot=true,face0-5=0:natura/tiger_bark
+# Rare_Leaves:* (Rare Leaves), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.trees.OverworldLeaves
+block:id=Rare_Leaves,data=0,stdrot=true,face0-5=2000:natura/maple_leaves_fast
+block:id=Rare_Leaves,data=1,stdrot=true,face0-5=2000:natura/silverbell_leaves_fast
+block:id=Rare_Leaves,data=2,stdrot=true,face0-5=2000:natura/purpleheart_leaves_fast
+block:id=Rare_Leaves,data=3,stdrot=true,face0-5=2000:natura/tiger_leaves_fast
+block:id=Rare_Leaves,data=4,stdrot=true,face0-5=2000:natura/maple_leaves_fast
+block:id=Rare_Leaves,data=5,stdrot=true,face0-5=2000:natura/silverbell_leaves_fast
+block:id=Rare_Leaves,data=6,stdrot=true,face0-5=2000:natura/purpleheart_leaves_fast
+block:id=Rare_Leaves,data=7,stdrot=true,face0-5=2000:natura/tiger_leaves_fast
+block:id=Rare_Leaves,data=8,stdrot=true,face0-5=2000:natura/maple_leaves_fast
+block:id=Rare_Leaves,data=9,stdrot=true,face0-5=2000:natura/silverbell_leaves_fast
+block:id=Rare_Leaves,data=10,stdrot=true,face0-5=2000:natura/purpleheart_leaves_fast
+block:id=Rare_Leaves,data=11,stdrot=true,face0-5=2000:natura/tiger_leaves_fast
+block:id=Rare_Leaves,data=12,stdrot=true,face0-5=2000:natura/maple_leaves_fast
+block:id=Rare_Leaves,data=13,stdrot=true,face0-5=2000:natura/silverbell_leaves_fast
+block:id=Rare_Leaves,data=14,stdrot=true,face0-5=2000:natura/purpleheart_leaves_fast
+block:id=Rare_Leaves,data=15,stdrot=true,face0-5=2000:natura/tiger_leaves_fast
+# Rare_Sapling:* (Rare Sapling), render=1(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.trees.OverworldSapling
+block:id=Rare_Sapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/maple_sapling
+block:id=Rare_Sapling,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/silverbell_sapling
+block:id=Rare_Sapling,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/purpleheart_sapling
+block:id=Rare_Sapling,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/tiger_sapling
+block:id=Rare_Sapling,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/willow_sapling
+block:id=Rare_Sapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/maple_sapling
+block:id=Rare_Sapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/silverbell_sapling
+block:id=Rare_Sapling,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/purpleheart_sapling
+block:id=Rare_Sapling,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/tiger_sapling
+block:id=Rare_Sapling,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/willow_sapling
+# Willow_Log:* (willow), render=31(LOG), opaque=true,cls=mods.natura.blocks.trees.WillowBlock
+block:id=Willow_Log,data=0,stdrot=true,face0-1=0:natura/willow_heart,face2-5=0:natura/willow_bark
+block:id=Willow_Log,data=4,face0-1=0:natura/willow_bark,face2-3=4000:natura/willow_bark,face4-5=0:natura/willow_heart
+block:id=Willow_Log,data=8,face0-1=4000:natura/willow_bark,face2-3=0:natura/willow_heart,face4-5=4000:natura/willow_bark
+block:id=Willow_Log,data=12,stdrot=true,face0-5=0:natura/willow_bark
+# Flower:* (Bluebells), render=1(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.FlowerBlock
+block:id=Flower,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/flower_bluebells
+# Thornvines:* (Thornvines), render=20(VINE), opaque=false,cls=mods.natura.blocks.crops.ThornVines
+block:id=Thornvines,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/thornvine
+# Crafting_Table:* (Natura.workbench), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.overrides.AlternateWorkbench
+block:id=Crafting_Table,data=0,stdrot=true,face0=0:natura/eucalyptus_planks,face1=0:natura/eucalyptus_workbench_top,face2=0:natura/eucalyptus_workbench_face,face3=0:natura/eucalyptus_workbench_side,face4=0:natura/eucalyptus_workbench_face,face5=0:natura/eucalyptus_workbench_side
+block:id=Crafting_Table,data=1,stdrot=true,face0=0:natura/sakura_planks,face1=0:natura/sakura_workbench_top,face2=0:natura/sakura_workbench_face,face3=0:natura/sakura_workbench_side,face4=0:natura/sakura_workbench_face,face5=0:natura/sakura_workbench_side
+block:id=Crafting_Table,data=2,stdrot=true,face0=0:natura/ghostwood_planks,face1=0:natura/ghostwood_workbench_top,face2=0:natura/ghostwood_workbench_face,face3=0:natura/ghostwood_workbench_side,face4=0:natura/ghostwood_workbench_face,face5=0:natura/ghostwood_workbench_side
+block:id=Crafting_Table,data=3,stdrot=true,face0=0:natura/redwood_planks,face1=0:natura/redwood_workbench_top,face2=0:natura/redwood_workbench_face,face3=0:natura/redwood_workbench_side,face4=0:natura/redwood_workbench_face,face5=0:natura/redwood_workbench_side
+block:id=Crafting_Table,data=4,stdrot=true,face0=0:natura/bloodwood_planks,face1=0:natura/bloodwood_workbench_top,face2=0:natura/bloodwood_workbench_face,face3=0:natura/bloodwood_workbench_side,face4=0:natura/bloodwood_workbench_face,face5=0:natura/bloodwood_workbench_side
+block:id=Crafting_Table,data=5,stdrot=true,face0=0:natura/hopseed_planks,face1=0:natura/hopseed_workbench_top,face2=0:natura/hopseed_workbench_face,face3=0:natura/hopseed_workbench_side,face4=0:natura/hopseed_workbench_face,face5=0:natura/hopseed_workbench_side
+block:id=Crafting_Table,data=6,stdrot=true,face0=0:natura/maple_planks,face1=0:natura/maple_workbench_top,face2=0:natura/maple_workbench_face,face3=0:natura/maple_workbench_side,face4=0:natura/maple_workbench_face,face5=0:natura/maple_workbench_side
+block:id=Crafting_Table,data=7,stdrot=true,face0=0:natura/silverbell_planks,face1=0:natura/silverbell_workbench_top,face2=0:natura/silverbell_workbench_face,face3=0:natura/silverbell_workbench_side,face4=0:natura/silverbell_workbench_face,face5=0:natura/silverbell_workbench_side
+block:id=Crafting_Table,data=8,stdrot=true,face0=0:natura/purpleheart_planks,face1=0:natura/purpleheart_workbench_top,face2=0:natura/purpleheart_workbench_face,face3=0:natura/purpleheart_workbench_side,face4=0:natura/purpleheart_workbench_face,face5=0:natura/purpleheart_workbench_side
+block:id=Crafting_Table,data=9,stdrot=true,face0=0:natura/tiger_planks,face1=0:natura/tiger_workbench_top,face2=0:natura/tiger_workbench_face,face3=0:natura/tiger_workbench_side,face4=0:natura/tiger_workbench_face,face5=0:natura/tiger_workbench_side
+block:id=Crafting_Table,data=10,stdrot=true,face0=0:natura/willow_planks,face1=0:natura/willow_workbench_top,face2=0:natura/willow_workbench_face,face3=0:natura/willow_workbench_side,face4=0:natura/willow_workbench_face,face5=0:natura/willow_workbench_side
+block:id=Crafting_Table,data=11,stdrot=true,face0=0:natura/darkwood_planks,face1=0:natura/darkwood_workbench_top,face2=0:natura/darkwood_workbench_face,face3=0:natura/darkwood_workbench_side,face4=0:natura/darkwood_workbench_face,face5=0:natura/darkwood_workbench_side
+block:id=Crafting_Table,data=12,stdrot=true,face0=0:natura/fusewood_planks,face1=0:natura/fusewood_workbench_top,face2=0:natura/fusewood_workbench_face,face3=0:natura/fusewood_workbench_side,face4=0:natura/fusewood_workbench_face,face5=0:natura/fusewood_workbench_side
+block:id=Crafting_Table,data=13,data=14,data=15,stdrot=true,face0=0:minecraft/lava_still
+# Bookshelf:* (Natura.bookshelf), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.overrides.AlternateBookshelf
+block:id=Bookshelf,data=0,stdrot=true,face0-1=0:natura/eucalyptus_planks,face2-5=0:natura/eucalyptus_bookshelf
+block:id=Bookshelf,data=1,stdrot=true,face0-1=0:natura/sakura_planks,face2-5=0:natura/sakura_bookshelf
+block:id=Bookshelf,data=2,stdrot=true,face0-1=0:natura/ghostwood_planks,face2-5=0:natura/ghostwood_bookshelf
+block:id=Bookshelf,data=3,stdrot=true,face0-1=0:natura/redwood_planks,face2-5=0:natura/redwood_bookshelf
+block:id=Bookshelf,data=4,stdrot=true,face0-1=0:natura/bloodwood_planks,face2-5=0:natura/bloodwood_bookshelf
+block:id=Bookshelf,data=5,stdrot=true,face0-1=0:natura/hopseed_planks,face2-5=0:natura/hopseed_bookshelf
+block:id=Bookshelf,data=6,stdrot=true,face0-1=0:natura/maple_planks,face2-5=0:natura/maple_bookshelf
+block:id=Bookshelf,data=7,stdrot=true,face0-1=0:natura/silverbell_planks,face2-5=0:natura/silverbell_bookshelf
+block:id=Bookshelf,data=8,stdrot=true,face0-1=0:natura/purpleheart_planks,face2-5=0:natura/purpleheart_bookshelf
+block:id=Bookshelf,data=9,stdrot=true,face0-1=0:natura/tiger_planks,face2-5=0:natura/tiger_bookshelf
+block:id=Bookshelf,data=10,stdrot=true,face0-1=0:natura/willow_planks,face2-5=0:natura/willow_bookshelf
+block:id=Bookshelf,data=11,stdrot=true,face0-1=0:natura/darkwood_planks,face2-5=0:natura/darkwood_bookshelf
+block:id=Bookshelf,data=12,stdrot=true,face0-1=0:natura/fusewood_planks,face2-5=0:natura/fusewood_bookshelf
+block:id=Bookshelf,data=13,data=14,data=15,stdrot=true,face0-1=0:minecraft/lava_still
+# Fence:* (Natura.fence), render=109(CUSTOM), opaque=false,cls=mods.natura.blocks.overrides.AlternateFence
+block:id=Fence,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
+block:id=Fence,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
+block:id=Fence,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
+block:id=Fence,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
+block:id=Fence,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
+block:id=Fence,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
+block:id=Fence,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
+block:id=Fence,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
+block:id=Fence,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
+block:id=Fence,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
+block:id=Fence,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
+block:id=Fence,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
+block:id=Fence,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
+block:id=Fence,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/lava_still
+# Topiary_Grass_Block:* (GrassBlock), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.GrassBlock
+block:id=Topiary_Grass_Block,data=0,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
+block:id=Topiary_Grass_Block,data=1,stdrot=true,colorMult=FF00F3F6,face0-5=17000:natura/grass_top
+block:id=Topiary_Grass_Block,data=2,stdrot=true,colorMult=FFC92B00,face0-5=17000:natura/grass_top
+block:id=Topiary_Grass_Block,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
+# Topiary_Grass_Slab:* (GrassSlab), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.GrassSlab
+block:id=Topiary_Grass_Slab,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
+block:id=Topiary_Grass_Slab,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FF00F3F6,face0-5=17000:natura/grass_top
+block:id=Topiary_Grass_Slab,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FFC92B00,face0-5=17000:natura/grass_top
+block:id=Topiary_Grass_Slab,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:natura/grass_top
+# Plank_Slab_One:* (plankSlab1), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
+block:id=Plank_Slab_One,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
+block:id=Plank_Slab_One,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
+block:id=Plank_Slab_One,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
+block:id=Plank_Slab_One,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
+block:id=Plank_Slab_One,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
+block:id=Plank_Slab_One,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
+block:id=Plank_Slab_One,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
+block:id=Plank_Slab_One,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
+block:id=Plank_Slab_One,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
+block:id=Plank_Slab_One,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
+block:id=Plank_Slab_One,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
+block:id=Plank_Slab_One,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
+block:id=Plank_Slab_One,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
+block:id=Plank_Slab_One,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
+block:id=Plank_Slab_One,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
+block:id=Plank_Slab_One,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
+# Plank_Slab_Two:* (plankSlab2), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
+block:id=Plank_Slab_Two,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
+block:id=Plank_Slab_Two,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
+block:id=Plank_Slab_Two,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
+block:id=Plank_Slab_Two,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
+block:id=Plank_Slab_Two,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
+block:id=Plank_Slab_Two,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/lava_still
+block:id=Plank_Slab_Two,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
+block:id=Plank_Slab_Two,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
+block:id=Plank_Slab_Two,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
+block:id=Plank_Slab_Two,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
+block:id=Plank_Slab_Two,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
+block:id=Plank_Slab_Two,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/lava_still
+# Eucalyputus_Stairs:* (stair.eucalyptus), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Eucalyputus_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/eucalyptus_planks
+# Sakura_Stairs:* (stair.sakura), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Sakura_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/sakura_planks
+# Ghostwood_Stairs:* (stair.ghostwood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Ghostwood_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/ghostwood_planks
+# Redwood_Stairs:* (stair.redwood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Redwood_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/redwood_planks
+# Bloodwood_Stairs:* (stair.bloodwood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Bloodwood_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/bloodwood_planks
+# Hopseed_Stairs:* (stair.hopseed), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Hopseed_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/hopseed_planks
+# Maple_Stairs:* (stair.maple), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Maple_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/maple_planks
+# Amaranth_Stairs:* (stair.amaranth), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Amaranth_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/purpleheart_planks
+# Silverbell_Stairs:* (stair.silverbell), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Silverbell_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/silverbell_planks
+# Willow_Stairs:* (stair.willow), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Willow_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/willow_planks
+# Darkwood_Stairs:* (stair.darkwood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Darkwood_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/darkwood_planks
+# Fusewood_Stairs:* (stair.fusewood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+block:id=Fusewood_Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:natura/fusewood_planks
+# Eucalyputus_Pressure_Plate:* (pressureplate.eucalyptus), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Eucalyputus_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
+# Sakura_Pressure_Plate:* (pressureplate.sakura), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Sakura_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
+# Ghostwood_Pressure_Plate:* (pressureplate.ghostwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Ghostwood_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
+# Redwood_Pressure_Plate:* (pressureplate.redwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Redwood_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
+# Bloodwood_Pressure_Plate:* (pressureplate.bloodwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Bloodwood_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
+# Hopseed_Pressure_Plate:* (pressureplate.hopseed), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Hopseed_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
+# Maple_Pressure_Plate:* (pressureplate.maple), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Maple_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
+# Amaranth_Pressure_Plate:* (pressureplate.amaranth), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Amaranth_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
+# Silverbell_Pressure_Plate:* (pressureplate.silverbell), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Silverbell_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
+# Tigerwood_Pressure_Plate:* (pressureplate.tiger), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Tigerwood_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
+# Willow_Pressure_Plate:* (pressureplate.willow), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Willow_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
+# Darkwood_Pressure_Plate:* (pressureplate.darkwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Darkwood_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
+# Fusewood_Pressure_Plate:* (pressureplate.fusewood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+block:id=Fusewood_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
+# Eucalyputus_Trapdoor:* (trapdoor.eucalyptus), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Eucalyputus_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_trapdoor
+# Sakura_Trapdoor:* (trapdoor.sakura), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Sakura_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_trapdoor
+# Ghostwood_Trapdoor:* (trapdoor.ghostwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Ghostwood_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_trapdoor
+# Redwood_Trapdoor:* (trapdoor.redwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Redwood_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_trapdoor
+# Bloodwood_Trapdoor:* (trapdoor.bloodwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Bloodwood_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_trapdoor
+# Hopseed_Trapdoor:* (trapdoor.hopseed), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Hopseed_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_trapdoor
+# Maple_Trapdoor:* (trapdoor.maple), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Maple_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_trapdoor
+# Amaranth_Trapdoor:* (trapdoor.amaranth), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Amaranth_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_trapdoor
+# Silverbell_Trapdoor:* (trapdoor.silverbell), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Silverbell_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_trapdoor
+# Tigerwood_Trapdoor:* (trapdoor.tiger), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Tigerwood_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_trapdoor
+# Willow_Trapdoor:* (trapdoor.willow), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Willow_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_trapdoor
+# Darkwood_Trapdoor:* (trapdoor.darkwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Darkwood_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_trapdoor
+# Fusewood_Trapdoor:* (trapdoor.fusewood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+block:id=Fusewood_Trapdoor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_trapdoor
+# Eucalyputus_Button:* (button.eucalyptus), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Eucalyputus_Button,data=0,stdrot=true,face0-5=0:natura/eucalyptus_planks
+block:id=Eucalyputus_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/eucalyptus_planks
+# Sakura_Button:* (button.sakura), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Sakura_Button,data=0,stdrot=true,face0-5=0:natura/sakura_planks
+block:id=Sakura_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/sakura_planks
+# Ghostwood_Button:* (button.ghostwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Ghostwood_Button,data=0,stdrot=true,face0-5=0:natura/ghostwood_planks
+block:id=Ghostwood_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/ghostwood_planks
+# Redwood_Button:* (button.redwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Redwood_Button,data=0,stdrot=true,face0-5=0:natura/redwood_planks
+block:id=Redwood_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/redwood_planks
+# Bloodwood_Button:* (button.bloodwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Bloodwood_Button,data=0,stdrot=true,face0-5=0:natura/bloodwood_planks
+block:id=Bloodwood_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/bloodwood_planks
+# Hopseed_Button:* (button.hopseed), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Hopseed_Button,data=0,stdrot=true,face0-5=0:natura/hopseed_planks
+block:id=Hopseed_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/hopseed_planks
+# Maple_Button:* (button.maple), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Maple_Button,data=0,stdrot=true,face0-5=0:natura/maple_planks
+block:id=Maple_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/maple_planks
+# Silverbell_Button:* (button.silverbell), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Silverbell_Button,data=0,stdrot=true,face0-5=0:natura/silverbell_planks
+block:id=Silverbell_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/silverbell_planks
+# Amaranth_Button:* (button.amaranth), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Amaranth_Button,data=0,stdrot=true,face0-5=0:natura/purpleheart_planks
+block:id=Amaranth_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/purpleheart_planks
+# Tigerwood_Button:* (button.tiger), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Tigerwood_Button,data=0,stdrot=true,face0-5=0:natura/tiger_planks
+block:id=Tigerwood_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/tiger_planks
+# Willow_Button:* (button.willow), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Willow_Button,data=0,stdrot=true,face0-5=0:natura/willow_planks
+block:id=Willow_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/willow_planks
+# Darkwood_Button:* (button.darkwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Darkwood_Button,data=0,stdrot=true,face0-5=0:natura/darkwood_planks
+block:id=Darkwood_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/darkwood_planks
+# Fusewood_Button:* (button.fusewood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+block:id=Fusewood_Button,data=0,stdrot=true,face0-5=0:natura/fusewood_planks
+block:id=Fusewood_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/fusewood_planks
+# Eucalyputus_Fence_Gate:* (fenceGate.eucalyptus), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Eucalyputus_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/eucalyptus_planks
+# Sakura_Fence_Gate:* (fenceGate.sakura), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Sakura_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/sakura_planks
+# Ghostwood_Fence_Gate:* (fenceGate.ghostwood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Ghostwood_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/ghostwood_planks
+# Redwood_Fence_Gate:* (fenceGate.redwood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Redwood_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/redwood_planks
+# Bloodwood_Fence_Gate:* (fenceGate.bloodwood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Bloodwood_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/bloodwood_planks
+# Hopseed_Fence_Gate:* (fenceGate.hopseed), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Hopseed_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/hopseed_planks
+# Maple_Fence_Gate:* (fenceGate.maple), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Maple_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/maple_planks
+# Silverbell_Fence_Gate:* (fenceGate.silverbell), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Silverbell_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/silverbell_planks
+# Amaranth_Fence_Gate:* (fenceGate.amaranth), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Amaranth_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/purpleheart_planks
+# Tigerwood_Fence_Gate:* (fenceGate.tiger), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Tigerwood_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/tiger_planks
+# Willow_Fence_Gate:* (fenceGate.willow), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Willow_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/willow_planks
+# Darkwood_Fence_Gate:* (fenceGate.darkwood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Darkwood_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/darkwood_planks
+# Fusewood_Fence_Gate:* (fenceGate.fusewood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+block:id=Fusewood_Fence_Gate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:natura/fusewood_planks
+# Blaze_Rail:* (Blazerail), render=9(MINECARTTRACK), opaque=false,cls=mods.natura.blocks.tech.BlazeRail
+block:id=Blaze_Rail,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/brail_normal
+block:id=Blaze_Rail,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/brail_normal_turned
+# Powered_Blaze_Rail:* (BrailPowered), render=9(MINECARTTRACK), opaque=false,cls=mods.natura.blocks.tech.BlazeRailPowered
+block:id=Powered_Blaze_Rail,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/brail_golden
+block:id=Powered_Blaze_Rail,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/brail_golden_powered
+# Detector_Blaze_Rail:* (BrailDetector), render=9(MINECARTTRACK), opaque=false,cls=mods.natura.blocks.tech.BlazeRailDetector
+block:id=Detector_Blaze_Rail,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/brail_detector
+block:id=Detector_Blaze_Rail,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/brail_detector_powered
+# Activator_Blaze_Rail:* (BrailActivator), render=9(MINECARTTRACK), opaque=false,cls=mods.natura.blocks.tech.BlazeRailPowered
+block:id=Activator_Blaze_Rail,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/brail_activator
+block:id=Activator_Blaze_Rail,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/brail_activator_powered
+# Netherrack_Furnace:* (NetherFurnace), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.tech.NetherrackFurnaceBlock
+block:id=Netherrack_Furnace,data=0,stdrot=true,face0-1=0:natura/nfurnace_top,face2=0:natura/nfurnace_side,face3=0:natura/nfurnace_off,face4-5=0:natura/nfurnace_side
+block:id=Netherrack_Furnace,data=1,stdrot=true,face3=0:natura/nfurnace_top
+block:id=Netherrack_Furnace,data=8,stdrot=true,face0-1=0:natura/nfurnace_top,face2=0:natura/nfurnace_side,face3=0:natura/nfurnace_off,face4-5=0:natura/nfurnace_side
+block:id=Netherrack_Furnace,data=9,stdrot=true,face3=0:natura/nfurnace_top
+# Respawn_Obelisk:* (Obelisk), render=0(STANDARD), opaque=true,cls=mods.natura.blocks.tech.RespawnObelisk
+block:id=Respawn_Obelisk,data=0,stdrot=true,face0-5=0:natura/obelisk
+block:id=Respawn_Obelisk,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:natura/obelisk_active
+# Nether_Glass:* (NetherGlass), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.nether.NetherGlass
+block:id=Nether_Glass,data=0,stdrot=true,face0-5=12000:natura/glass_soul_item
+block:id=Nether_Glass,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=12000:natura/glass_heat_item
+# Blaze_Hopper:* (NetherHopper), render=110(CUSTOM), opaque=false,cls=mods.natura.blocks.tech.BlazeHopper
+block:id=Blaze_Hopper,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:natura/nhopper_outside,face1=0:natura/nhopper_top,face2-5=0:natura/nhopper_outside
+# Netherrack_Pressure_Plate:* (NetherPressurePlate), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.AlternatePressurePlate
+block:id=Netherrack_Pressure_Plate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/netherrack
+# Netherrack_Button:* (NetherButton), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.NetherrackButton
+block:id=Netherrack_Button,data=0,stdrot=true,face0-5=0:minecraft/netherrack
+block:id=Netherrack_Button,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/netherrack
+# Nether_Lever:* (NetherLever), render=111(CUSTOM), opaque=false,cls=mods.natura.blocks.overrides.NetherLever
+block:id=Nether_Lever,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:natura/nlever

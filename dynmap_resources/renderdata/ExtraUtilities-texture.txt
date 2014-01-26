@@ -1,0 +1,276 @@
+# ExtraUtilities 1.0.1
+version:1.6
+modname:ExtraUtilities
+
+var:timerBlockId=0,chandelierId=0,transferPipeId=0,transferNodeRemoteId=0,curtainId=0,enderLilyId=0,coloredWoodId=0,cobblestoneComprId=0,BUDBlockId=0,soundMufflerId=0
+var:trashCan=0,conveyorId=0,angelBlock=0,cursedEarth=0,portal=0,transferNodeId=0,tradingPost=0,colorBlockBrickId=0,decorative_2Id=0,magnumTorchId=0
+var:spikeId=0,drumId=0,peacefultableId=0,greenScreen=0,enderThermicPumpId=0,filingCabinetId=0,etherealBlockId=0,decorative_1Id=0
+
+cfgfile:config/ExtraUtilities.cfg
+
+
+texturepath:assets/extrautilities/textures/blocks/
+texture:id=extrautils/glassQuadrants,filename=assets/extrautils/textures/blocks/glassQuadrants.png
+texture:id=extrautils/filingcabinet_back_diamond,filename=assets/extrautils/textures/blocks/filingcabinet_back_diamond.png
+texture:id=extrautils/sandedGlass,filename=assets/extrautils/textures/blocks/sandedGlass.png
+texture:id=extrautils/timer,filename=assets/extrautils/textures/blocks/timer.png
+texture:id=extrautils/spike_side,filename=assets/extrautils/textures/blocks/spike_side.png
+texture:id=extrautils/etherealglass,filename=assets/extrautils/textures/blocks/etherealglass.png
+texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=extrautils/ConnectedTextures/darkglass_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/darkglass_corners.png
+texture:id=extrautils/extractor_extract,filename=assets/extrautils/textures/blocks/extractor_extract.png
+texture:id=extrautils/gravel_compressed_1,filename=assets/minecraft/textures/blocks/gravel.png
+texture:id=extrautils/advbudoff,filename=assets/extrautils/textures/blocks/advbudoff.png
+texture:id=extrautils/gravel_compressed_2,filename=assets/minecraft/textures/blocks/gravel.png
+texture:id=extrautils/chandelier,filename=assets/extrautils/textures/blocks/chandelier.png
+texture:id=extrautils/ConnectedTextures/uingot_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/uingot_corners.png
+texture:id=extrautils/dirt_compressed_1,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=extrautils/ConnectedTextures/icystone_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/icystone_corners.png
+texture:id=extrautils/dirt_compressed_3,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=extrautils/dirt_compressed_2,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=extrautils/trading_post_side,filename=assets/extrautils/textures/blocks/trading_post_side.png
+texture:id=extrautils/extractor_liquid_remote,filename=assets/extrautils/textures/blocks/extractor_liquid_remote.png
+texture:id=extrautils/greenscreen,filename=assets/extrautils/textures/blocks/greenscreen.png
+texture:id=extrautils/conveyor_side,filename=assets/extrautils/textures/blocks/conveyor_side.png
+texture:id=extrautils/ConnectedTextures/magic_wood_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/magic_wood_corners.png
+texture:id=extrautils/filingcabinet_side_diamond,filename=assets/extrautils/textures/blocks/filingcabinet_side_diamond.png
+texture:id=extrautils/pipes,filename=assets/extrautils/textures/blocks/pipes.png
+texture:id=extrautils/trashcan,filename=assets/extrautils/textures/blocks/trashcan.png
+texture:id=extrautils/ConnectedTextures/glass4_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass4_corners.png
+texture:id=extrautils/ConnectedTextures/carved_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/carved_corners.png
+texture:id=extrautils/extractor_base,filename=assets/extrautils/textures/blocks/extractor_base.png
+texture:id=extrautils/rain_muffler,filename=assets/extrautils/textures/blocks/rain_muffler.png
+texture:id=extrautils/magnumTorchTop,filename=assets/extrautils/textures/blocks/magnumTorchTop.png
+texture:id=extrautils/filingcabinet_side,filename=assets/extrautils/textures/blocks/filingcabinet_side.png
+texture:id=extrautils/ConnectedTextures/singlestonebrick_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/singlestonebrick_corners.png
+texture:id=extrautils/trashcan_bottom,filename=assets/extrautils/textures/blocks/trashcan_bottom.png
+texture:id=extrautils/ConnectedTextures/glass6_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass6_corners.png
+texture:id=extrautils/ConnectedTextures/test_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/test_corners.png
+texture:id=extrautils/sand_compressed_2,filename=assets/minecraft/textures/blocks/sand.png
+texture:id=extrautils/sand_compressed_1,filename=assets/minecraft/textures/blocks/sand.png
+texture:id=extrautils/angelBlock,filename=assets/extrautils/textures/blocks/angelBlock.png
+texture:id=extrautils/bw_(stonebrick),filename=assets/minecraft/textures/blocks/stonebrick.png
+texture:id=extrautils/cursedearthtop,filename=assets/extrautils/textures/blocks/cursedearthtop.png
+texture:id=extrautils/spike_base,filename=assets/extrautils/textures/blocks/spike_base.png
+texture:id=extrautils/extractor_extract_remote,filename=assets/extrautils/textures/blocks/extractor_extract_remote.png
+texture:id=extrautils/trading_post_top,filename=assets/extrautils/textures/blocks/trading_post_top.png
+texture:id=extrautils/ConnectedTextures/glass8_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass8_corners.png
+texture:id=extrautils/trashcan_top,filename=assets/extrautils/textures/blocks/trashcan_top.png
+texture:id=extrautils/peaceful_table_top,filename=assets/extrautils/textures/blocks/peaceful_table_top.png
+texture:id=extrautils/cobblestone_compressed_1,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=extrautils/cobblestone_compressed_2,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=extrautils/ConnectedTextures/glass9_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass9_corners.png
+texture:id=extrautils/cobblestone_compressed_3,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=extrautils/cobblestone_compressed_4,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=extrautils/cobblestone_compressed_5,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=extrautils/cobblestone_compressed_6,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=extrautils/cobblestone_compressed_7,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=extrautils/ConnectedTextures/glass2_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass2_corners.png
+texture:id=extrautils/cobblestone_compressed_8,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=extrautils/magnumTorchBase,filename=assets/extrautils/textures/blocks/magnumTorchBase.png
+texture:id=extrautils/curtains,filename=assets/extrautils/textures/blocks/curtains.png
+texture:id=extrautils/drum_top,filename=assets/extrautils/textures/blocks/drum_top.png
+texture:id=extrautils/budoff,filename=assets/extrautils/textures/blocks/budoff.png
+texture:id=extrautils/enderThermicPump_side,filename=assets/extrautils/textures/blocks/enderThermicPump_side.png
+texture:id=extrautils/extractor_energy,filename=assets/extrautils/textures/blocks/extractor_energy.png
+texture:id=extrautils/ConnectedTextures/glass7_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass7_corners.png
+texture:id=extrautils/magnumTorch,filename=assets/extrautils/textures/blocks/magnumTorch.png
+texture:id=extrautils/drum_side,filename=assets/extrautils/textures/blocks/drum_side.png
+texture:id=extrautils/enderThermicPump_top,filename=assets/extrautils/textures/blocks/enderThermicPump_top.png
+texture:id=extrautils/ConnectedTextures/gravel_road_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/gravel_road_corners.png
+texture:id=extrautils/conveyor_top,filename=assets/extrautils/textures/blocks/conveyor_top.png
+texture:id=extrautils/ConnectedTextures/endsidian_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/endsidian_corners.png
+texture:id=extrautils/ConnectedTextures/dark_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/dark_corners.png
+texture:id=minecraft/planks,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=extrautils/peaceful_table_bottom,filename=assets/extrautils/textures/blocks/peaceful_table_bottom.png
+texture:id=extrautils/ConnectedTextures/glass3_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass3_corners.png
+texture:id=extrautils/dark_portal,filename=assets/extrautils/textures/blocks/dark_portal.png
+texture:id=extrautils/dirt_compressed_4,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=extrautils/peaceful_table_side,filename=assets/extrautils/textures/blocks/peaceful_table_side.png
+texture:id=extrautils/ConnectedTextures/glass1_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass1_corners.png
+texture:id=extrautils/filingcabinet_diamond,filename=assets/extrautils/textures/blocks/filingcabinet_diamond.png
+texture:id=extrautils/ConnectedTextures/gravel_brick,filename=assets/extrautils/textures/blocks/ConnectedTextures/gravel_brick.png
+texture:id=extrautils/bw_(planks_oak),filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=extrautils/filingcabinet,filename=assets/extrautils/textures/blocks/filingcabinet.png
+texture:id=extrautils/sound_muffler,filename=assets/extrautils/textures/blocks/sound_muffler.png
+texture:id=extrautils/cursedearthside,filename=assets/extrautils/textures/blocks/cursedearthside.png
+texture:id=extrautils/plant/ender_lilly_stage_7,filename=assets/extrautils/textures/blocks/plant/ender_lilly_stage_7.png
+texture:id=extrautils/plant/ender_lilly_stage_6,filename=assets/extrautils/textures/blocks/plant/ender_lilly_stage_6.png
+texture:id=extrautils/plant/ender_lilly_stage_5,filename=assets/extrautils/textures/blocks/plant/ender_lilly_stage_5.png
+texture:id=extrautils/plant/ender_lilly_stage_4,filename=assets/extrautils/textures/blocks/plant/ender_lilly_stage_4.png
+texture:id=extrautils/plant/ender_lilly_stage_3,filename=assets/extrautils/textures/blocks/plant/ender_lilly_stage_3.png
+texture:id=extrautils/plant/ender_lilly_stage_2,filename=assets/extrautils/textures/blocks/plant/ender_lilly_stage_2.png
+texture:id=extrautils/extractor_liquid,filename=assets/extrautils/textures/blocks/extractor_liquid.png
+texture:id=extrautils/ConnectedTextures/glass5_corners,filename=assets/extrautils/textures/blocks/ConnectedTextures/glass5_corners.png
+texture:id=extrautils/plant/ender_lilly_stage_1,filename=assets/extrautils/textures/blocks/plant/ender_lilly_stage_1.png
+texture:id=extrautils/plant/ender_lilly_stage_0,filename=assets/extrautils/textures/blocks/plant/ender_lilly_stage_0.png
+texture:id=extrautils/enderThermicPump,filename=assets/extrautils/textures/blocks/enderThermicPump.png
+texture:id=extrautils/filingcabinet_back,filename=assets/extrautils/textures/blocks/filingcabinet_back.png
+
+
+# angelBlock:* (angelBlock), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockAngelBlock
+block:id=angelBlock,data=*,stdrot=true,face0-5=0:extrautils/angelBlock
+# BUDBlockId:* (BUD), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockBUD
+block:id=BUDBlockId,data=0,data=1,data=2,stdrot=true,face0-5=0:extrautils/budoff
+block:id=BUDBlockId,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrautils/advbudoff
+# chandelierId:* (chandelier), render=1(CROSSEDSQUARES), opaque=false,cls=extrautils.block.BlockChandelier
+block:id=chandelierId,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/chandelier
+# colorBlockBrickId:* (colourBrick), render=193(CUSTOM), opaque=true,cls=extrautils.block.BlockColor
+block:id=colorBlockBrickId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/bw_(stonebrick)
+# cobblestoneComprId:* (comprCobblestone), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockCobblestoneCompressed
+block:id=cobblestoneComprId,data=0,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_1
+block:id=cobblestoneComprId,data=1,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_2
+block:id=cobblestoneComprId,data=2,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_3
+block:id=cobblestoneComprId,data=3,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_4
+block:id=cobblestoneComprId,data=4,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_5
+block:id=cobblestoneComprId,data=5,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_6
+block:id=cobblestoneComprId,data=6,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_7
+block:id=cobblestoneComprId,data=7,stdrot=true,face0-5=0:extrautils/cobblestone_compressed_8
+block:id=cobblestoneComprId,data=8,stdrot=true,face0-5=0:extrautils/dirt_compressed_1
+block:id=cobblestoneComprId,data=9,stdrot=true,face0-5=0:extrautils/dirt_compressed_2
+block:id=cobblestoneComprId,data=10,stdrot=true,face0-5=0:extrautils/dirt_compressed_3
+block:id=cobblestoneComprId,data=11,stdrot=true,face0-5=0:extrautils/dirt_compressed_4
+block:id=cobblestoneComprId,data=12,stdrot=true,face0-5=0:extrautils/gravel_compressed_1
+block:id=cobblestoneComprId,data=13,stdrot=true,face0-5=0:extrautils/gravel_compressed_2
+block:id=cobblestoneComprId,data=14,stdrot=true,face0-5=0:extrautils/sand_compressed_1
+block:id=cobblestoneComprId,data=15,stdrot=true,face0-5=0:extrautils/sand_compressed_2
+# conveyorId:* (conveyor), render=195(CUSTOM), opaque=true,cls=extrautils.block.BlockConveyor
+block:id=conveyorId,data=0,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
+block:id=conveyorId,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
+block:id=conveyorId,data=2,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
+block:id=conveyorId,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
+block:id=conveyorId,data=4,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
+block:id=conveyorId,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
+block:id=conveyorId,data=6,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
+block:id=conveyorId,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
+block:id=conveyorId,data=8,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
+block:id=conveyorId,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
+block:id=conveyorId,data=10,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
+block:id=conveyorId,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
+block:id=conveyorId,data=12,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
+block:id=conveyorId,data=13,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
+block:id=conveyorId,data=14,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/conveyor_top,face4-5=0:extrautils/conveyor_side
+block:id=conveyorId,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/conveyor_top,face2-3=0:extrautils/conveyor_side,face4-5=0:extrautils/conveyor_top
+# greenScreen:* (greenScreen), render=194(CUSTOM), opaque=true,cls=extrautils.block.BlockGreenScreen
+block:id=greenScreen,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/greenscreen
+# peacefultableId:* (peacefultable), render=195(CUSTOM), opaque=false,cls=extrautils.block.BlockPeacefulTable
+block:id=peacefultableId,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/peaceful_table_bottom,face1=0:extrautils/peaceful_table_top,face2-5=0:extrautils/peaceful_table_side
+# soundMufflerId:* (soundMuffler), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockSoundMuffler
+block:id=soundMufflerId,data=0,stdrot=true,face0-5=0:extrautils/sound_muffler
+block:id=soundMufflerId,data=1,stdrot=true,face0-5=0:extrautils/rain_muffler
+block:id=soundMufflerId,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrautils/sound_muffler
+# tradingPost:* (tradingPost), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockTradingPost
+block:id=tradingPost,data=*,stdrot=true,face0=0:minecraft/planks,face1=0:extrautils/trading_post_top,face2-5=0:extrautils/trading_post_side
+# transferPipeId:* (transferPipe), render=195(CUSTOM), opaque=false,cls=extrautils.tileentity.transfernodes.BlockTransferPipe
+block:id=transferPipeId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/pipes
+# transferNodeId:* (transferNode), render=195(CUSTOM), opaque=false,cls=extrautils.tileentity.transfernodes.BlockTransferNode
+block:id=transferNodeId,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/extractor_base,face1-5=0:extrautils/extractor_extract
+block:id=transferNodeId,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/extractor_extract,face1=0:extrautils/extractor_base,face2-5=0:extrautils/extractor_extract
+block:id=transferNodeId,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/extractor_extract,face2=0:extrautils/extractor_base,face3-5=0:extrautils/extractor_extract
+block:id=transferNodeId,data=3,stdrot=true,transparency=TRANSPARENT,face0-2=0:extrautils/extractor_extract,face3=0:extrautils/extractor_base,face4-5=0:extrautils/extractor_extract
+block:id=transferNodeId,data=4,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/extractor_extract,face4=0:extrautils/extractor_base,face5=0:extrautils/extractor_extract
+block:id=transferNodeId,data=5,stdrot=true,transparency=TRANSPARENT,face0-4=0:extrautils/extractor_extract,face5=0:extrautils/extractor_base
+block:id=transferNodeId,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/extractor_base,face1-5=0:extrautils/extractor_liquid
+block:id=transferNodeId,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/extractor_liquid,face1=0:extrautils/extractor_base,face2-5=0:extrautils/extractor_liquid
+block:id=transferNodeId,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/extractor_liquid,face2=0:extrautils/extractor_base,face3-5=0:extrautils/extractor_liquid
+block:id=transferNodeId,data=9,stdrot=true,transparency=TRANSPARENT,face0-2=0:extrautils/extractor_liquid,face3=0:extrautils/extractor_base,face4-5=0:extrautils/extractor_liquid
+block:id=transferNodeId,data=10,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/extractor_liquid,face4=0:extrautils/extractor_base,face5=0:extrautils/extractor_liquid
+block:id=transferNodeId,data=11,stdrot=true,transparency=TRANSPARENT,face0-4=0:extrautils/extractor_liquid,face5=0:extrautils/extractor_base
+block:id=transferNodeId,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/extractor_energy
+# curtainId:* (curtain), render=195(CUSTOM), opaque=false,cls=extrautils.block.BlockCurtain
+block:id=curtainId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/curtains
+# cursedEarth:* (cursedEarth), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockCursedEarth
+block:id=cursedEarth,data=*,stdrot=true,face0=0:minecraft/dirt,face1=0:extrautils/cursedearthtop,face2-5=0:extrautils/cursedearthside
+# trashCan:* (trashCan), render=195(CUSTOM), opaque=false,cls=extrautils.block.BlockTrashCan
+block:id=trashCan,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/trashcan_bottom,face1=0:extrautils/trashcan_top,face2-5=0:extrautils/trashcan
+# spikeId:* (spike), render=196(CUSTOM), opaque=false,cls=extrautils.block.BlockSpike
+block:id=spikeId,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/spike_side,face1=0:extrautils/spike_base,face2-5=0:extrautils/spike_side
+block:id=spikeId,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/spike_base,face1-5=0:extrautils/spike_side
+block:id=spikeId,data=2,stdrot=true,transparency=TRANSPARENT,face0-2=0:extrautils/spike_side,face3=0:extrautils/spike_base,face4-5=0:extrautils/spike_side
+block:id=spikeId,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/spike_side,face2=0:extrautils/spike_base,face3-5=0:extrautils/spike_side
+block:id=spikeId,data=4,stdrot=true,transparency=TRANSPARENT,face0-4=0:extrautils/spike_side,face5=0:extrautils/spike_base
+block:id=spikeId,data=5,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/spike_side,face4=0:extrautils/spike_base,face5=0:extrautils/spike_side
+block:id=spikeId,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/spike_side,face1=0:extrautils/spike_base,face2-5=0:extrautils/spike_side
+block:id=spikeId,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/spike_base,face1-5=0:extrautils/spike_side
+block:id=spikeId,data=8,stdrot=true,transparency=TRANSPARENT,face0-2=0:extrautils/spike_side,face3=0:extrautils/spike_base,face4-5=0:extrautils/spike_side
+block:id=spikeId,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/spike_side,face2=0:extrautils/spike_base,face3-5=0:extrautils/spike_side
+block:id=spikeId,data=10,stdrot=true,transparency=TRANSPARENT,face0-4=0:extrautils/spike_side,face5=0:extrautils/spike_base
+block:id=spikeId,data=11,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/spike_side,face4=0:extrautils/spike_base,face5=0:extrautils/spike_side
+block:id=spikeId,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/spike_side,face1=0:extrautils/spike_base,face2-5=0:extrautils/spike_side
+block:id=spikeId,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/spike_base,face1-5=0:extrautils/spike_side
+block:id=spikeId,data=14,stdrot=true,transparency=TRANSPARENT,face0-2=0:extrautils/spike_side,face3=0:extrautils/spike_base,face4-5=0:extrautils/spike_side
+block:id=spikeId,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/spike_side,face2=0:extrautils/spike_base,face3-5=0:extrautils/spike_side
+# etherealBlockId:* (etherealGlass), render=195(CUSTOM), opaque=false,cls=extrautils.block.BlockEtherealStone
+block:id=etherealBlockId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/etherealglass
+# coloredWoodId:* (colourWood), render=193(CUSTOM), opaque=true,cls=extrautils.block.BlockColor
+block:id=coloredWoodId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/bw_(planks_oak)
+# enderThermicPumpId:* (enderThermicPump), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockEnderthermicPump
+block:id=enderThermicPumpId,data=*,stdrot=true,face0=0:extrautils/enderThermicPump,face1=0:extrautils/enderThermicPump_top,face2-5=0:extrautils/enderThermicPump_side
+# timerBlockId:* (redstoneClock), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockTimer
+block:id=timerBlockId,data=*,stdrot=true,face0-5=0:extrautils/timer
+# magnumTorchId:* (magnumTorch), render=0(STANDARD), opaque=false,cls=extrautils.block.BlockMagnumTorch
+block:id=magnumTorchId,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/magnumTorchBase,face1=0:extrautils/magnumTorchTop,face2-5=0:extrautils/magnumTorch
+# decorative_1Id:* (extrautils:decor), render=198(CUSTOM), opaque=true,cls=extrautils.block.BlockDecoration
+block:id=decorative_1Id,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/test_corners
+block:id=decorative_1Id,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/endsidian_corners
+block:id=decorative_1Id,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/dark_corners
+block:id=decorative_1Id,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/icystone_corners
+block:id=decorative_1Id,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/carved_corners
+block:id=decorative_1Id,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/uingot_corners
+block:id=decorative_1Id,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/gravel_brick
+block:id=decorative_1Id,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/singlestonebrick_corners
+block:id=decorative_1Id,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/magic_wood_corners
+block:id=decorative_1Id,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/sandedGlass
+block:id=decorative_1Id,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/gravel_road_corners
+# filingCabinetId:* (filingCabinet), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockFilingCabinet
+block:id=filingCabinetId,data=0,stdrot=true,face0-3=0:extrautils/filingcabinet_side,face4=0:extrautils/filingcabinet,face5=0:extrautils/filingcabinet_back
+block:id=filingCabinetId,data=1,stdrot=true,face0-3=0:extrautils/filingcabinet_side_diamond,face4=0:extrautils/filingcabinet_diamond,face5=0:extrautils/filingcabinet_back_diamond
+block:id=filingCabinetId,data=2,stdrot=true,face0-1=0:extrautils/filingcabinet_side,face2=0:extrautils/filingcabinet,face3=0:extrautils/filingcabinet_back,face4-5=0:extrautils/filingcabinet_side
+block:id=filingCabinetId,data=3,stdrot=true,face0-1=0:extrautils/filingcabinet_side,face2=0:extrautils/filingcabinet_back,face3=0:extrautils/filingcabinet,face4-5=0:extrautils/filingcabinet_side
+block:id=filingCabinetId,data=4,stdrot=true,face0-3=0:extrautils/filingcabinet_side,face4=0:extrautils/filingcabinet,face5=0:extrautils/filingcabinet_back
+block:id=filingCabinetId,data=5,stdrot=true,face0-3=0:extrautils/filingcabinet_side,face4=0:extrautils/filingcabinet_back,face5=0:extrautils/filingcabinet
+block:id=filingCabinetId,data=6,stdrot=true,face0=0:extrautils/filingcabinet_diamond,face1=0:extrautils/filingcabinet_back_diamond,face2-5=0:extrautils/filingcabinet_side_diamond
+block:id=filingCabinetId,data=7,stdrot=true,face0=0:extrautils/filingcabinet_back_diamond,face1=0:extrautils/filingcabinet_diamond,face2-5=0:extrautils/filingcabinet_side_diamond
+block:id=filingCabinetId,data=8,stdrot=true,face0-1=0:extrautils/filingcabinet_side_diamond,face2=0:extrautils/filingcabinet_diamond,face3=0:extrautils/filingcabinet_back_diamond,face4-5=0:extrautils/filingcabinet_side_diamond
+block:id=filingCabinetId,data=9,stdrot=true,face0-1=0:extrautils/filingcabinet_side_diamond,face2=0:extrautils/filingcabinet_back_diamond,face3=0:extrautils/filingcabinet_diamond,face4-5=0:extrautils/filingcabinet_side_diamond
+block:id=filingCabinetId,data=10,stdrot=true,face0-3=0:extrautils/filingcabinet_side_diamond,face4=0:extrautils/filingcabinet_diamond,face5=0:extrautils/filingcabinet_back_diamond
+block:id=filingCabinetId,data=11,stdrot=true,face0-3=0:extrautils/filingcabinet_side_diamond,face4=0:extrautils/filingcabinet_back_diamond,face5=0:extrautils/filingcabinet_diamond
+# enderLilyId:* (enderLily), render=1(CROSSEDSQUARES), opaque=false,cls=extrautils.block.BlockEnderLily
+block:id=enderLilyId,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/plant/ender_lilly_stage_0
+block:id=enderLilyId,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/plant/ender_lilly_stage_1
+block:id=enderLilyId,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/plant/ender_lilly_stage_2
+block:id=enderLilyId,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/plant/ender_lilly_stage_3
+block:id=enderLilyId,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/plant/ender_lilly_stage_4
+block:id=enderLilyId,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/plant/ender_lilly_stage_5
+block:id=enderLilyId,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/plant/ender_lilly_stage_6
+block:id=enderLilyId,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:extrautils/plant/ender_lilly_stage_7
+# portal:* (portal), render=0(STANDARD), opaque=true,cls=extrautils.block.BlockPortal
+block:id=portal,data=*,stdrot=true,face0-5=0:extrautils/dark_portal
+# drumId:* (drum), render=197(CUSTOM), opaque=false,cls=extrautils.block.BlockDrum
+block:id=drumId,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/drum_top,face2-5=0:extrautils/drum_side
+# transferNodeRemoteId:* (transferNodeRemote), render=195(CUSTOM), opaque=false,cls=extrautils.tileentity.transfernodes.BlockRetrievalNode
+block:id=transferNodeRemoteId,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/extractor_base,face1-5=0:extrautils/extractor_extract_remote
+block:id=transferNodeRemoteId,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/extractor_extract_remote,face1=0:extrautils/extractor_base,face2-5=0:extrautils/extractor_extract_remote
+block:id=transferNodeRemoteId,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/extractor_extract_remote,face2=0:extrautils/extractor_base,face3-5=0:extrautils/extractor_extract_remote
+block:id=transferNodeRemoteId,data=3,stdrot=true,transparency=TRANSPARENT,face0-2=0:extrautils/extractor_extract_remote,face3=0:extrautils/extractor_base,face4-5=0:extrautils/extractor_extract_remote
+block:id=transferNodeRemoteId,data=4,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/extractor_extract_remote,face4=0:extrautils/extractor_base,face5=0:extrautils/extractor_extract_remote
+block:id=transferNodeRemoteId,data=5,stdrot=true,transparency=TRANSPARENT,face0-4=0:extrautils/extractor_extract_remote,face5=0:extrautils/extractor_base
+block:id=transferNodeRemoteId,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/extractor_base,face1-5=0:extrautils/extractor_liquid_remote
+block:id=transferNodeRemoteId,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrautils/extractor_liquid_remote,face1=0:extrautils/extractor_base,face2-5=0:extrautils/extractor_liquid_remote
+block:id=transferNodeRemoteId,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrautils/extractor_liquid_remote,face2=0:extrautils/extractor_base,face3-5=0:extrautils/extractor_liquid_remote
+block:id=transferNodeRemoteId,data=9,stdrot=true,transparency=TRANSPARENT,face0-2=0:extrautils/extractor_liquid_remote,face3=0:extrautils/extractor_base,face4-5=0:extrautils/extractor_liquid_remote
+block:id=transferNodeRemoteId,data=10,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrautils/extractor_liquid_remote,face4=0:extrautils/extractor_base,face5=0:extrautils/extractor_liquid_remote
+block:id=transferNodeRemoteId,data=11,stdrot=true,transparency=TRANSPARENT,face0-4=0:extrautils/extractor_liquid_remote,face5=0:extrautils/extractor_base
+block:id=transferNodeRemoteId,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/extractor_energy
+# decorative_2Id:* (extrautils:decor2), render=198(CUSTOM), opaque=false,cls=extrautils.block.BlockDecoration
+block:id=decorative_2Id,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass1_corners
+block:id=decorative_2Id,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass2_corners
+block:id=decorative_2Id,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass3_corners
+block:id=decorative_2Id,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass4_corners
+block:id=decorative_2Id,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass5_corners
+block:id=decorative_2Id,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass6_corners
+block:id=decorative_2Id,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass7_corners
+block:id=decorative_2Id,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass8_corners
+block:id=decorative_2Id,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/glass9_corners
+block:id=decorative_2Id,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/glassQuadrants
+block:id=decorative_2Id,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrautils/ConnectedTextures/darkglass_corners

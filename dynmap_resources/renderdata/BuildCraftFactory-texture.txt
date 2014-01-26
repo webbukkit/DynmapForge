@@ -1,0 +1,65 @@
+# BuildCraft|Factory 4.1.2
+version:1.6
+modname:BuildCraft|Factory
+
+var:refinery.id=0,quarry.id=0,miningWell.id=0,tank.id=0,floodGate.id=0,frame.id=0,drill.id=0,autoWorkbench.id=0,pump.id=0,hopper.id=0
+
+cfgfile:config/buildcraft/main.conf
+
+
+texturepath:assets/buildcraft/textures/blocks/
+texture:id=buildcraft/pump_bottom,filename=assets/buildcraft/textures/blocks/pump_bottom.png
+texture:id=buildcraft/refineryBack,filename=assets/buildcraft/textures/blocks/refineryBack.png
+texture:id=buildcraft/blockPlainPipe,filename=assets/buildcraft/textures/blocks/blockPlainPipe.png
+texture:id=buildcraft/autoWorkbench_top,filename=assets/buildcraft/textures/blocks/autoWorkbench_top.png
+texture:id=buildcraft/floodgate_top,filename=assets/buildcraft/textures/blocks/floodgate_top.png
+texture:id=buildcraft/blockFrame,filename=assets/buildcraft/textures/blocks/blockFrame.png
+texture:id=buildcraft/miningwell_front,filename=assets/buildcraft/textures/blocks/miningwell_front.png
+texture:id=buildcraft/tank_bottom_side,filename=assets/buildcraft/textures/blocks/tank_bottom_side.png
+texture:id=buildcraft/floodgate_side,filename=assets/buildcraft/textures/blocks/floodgate_side.png
+texture:id=buildcraft/quarry_side,filename=assets/buildcraft/textures/blocks/quarry_side.png
+texture:id=buildcraft/pump_top,filename=assets/buildcraft/textures/blocks/pump_top.png
+texture:id=buildcraft/miningwell_side,filename=assets/buildcraft/textures/blocks/miningwell_side.png
+texture:id=buildcraft/quarry_front,filename=assets/buildcraft/textures/blocks/quarry_front.png
+texture:id=buildcraft/hopperBottom,filename=assets/buildcraft/textures/blocks/hopperBottom.png
+texture:id=buildcraft/floodgate_bottom,filename=assets/buildcraft/textures/blocks/floodgate_bottom.png
+texture:id=buildcraft/autoWorkbench_side,filename=assets/buildcraft/textures/blocks/autoWorkbench_side.png
+texture:id=buildcraft/quarry_top,filename=assets/buildcraft/textures/blocks/quarry_top.png
+texture:id=buildcraft/pump_side,filename=assets/buildcraft/textures/blocks/pump_side.png
+texture:id=buildcraft/tank_top,filename=assets/buildcraft/textures/blocks/tank_top.png
+texture:id=buildcraft/miningwell_back,filename=assets/buildcraft/textures/blocks/miningwell_back.png
+texture:id=buildcraft/miningwell_top,filename=assets/buildcraft/textures/blocks/miningwell_top.png
+
+
+# miningWell.id:* (miningWellBlock), render=0(STANDARD), opaque=true,cls=buildcraft.factory.BlockMiningWell
+block:id=miningWell.id,data=0,stdrot=true,face0=0:buildcraft/miningwell_back,face1=0:buildcraft/miningwell_top,face2=0:buildcraft/miningwell_side,face3=0:buildcraft/miningwell_front,face4-5=0:buildcraft/miningwell_side
+block:id=miningWell.id,data=1,stdrot=true,face0=0:buildcraft/miningwell_back,face1=0:buildcraft/miningwell_top,face2-5=0:buildcraft/miningwell_side
+block:id=miningWell.id,data=2,stdrot=true,face0=0:buildcraft/miningwell_back,face1=0:buildcraft/miningwell_top,face2=0:buildcraft/miningwell_front,face3=0:buildcraft/miningwell_back,face4-5=0:buildcraft/miningwell_side
+block:id=miningWell.id,data=3,stdrot=true,face0=0:buildcraft/miningwell_back,face1=0:buildcraft/miningwell_top,face2=0:buildcraft/miningwell_back,face3=0:buildcraft/miningwell_front,face4-5=0:buildcraft/miningwell_side
+block:id=miningWell.id,data=4,stdrot=true,face0=0:buildcraft/miningwell_back,face1=0:buildcraft/miningwell_top,face2-3=0:buildcraft/miningwell_side,face4=0:buildcraft/miningwell_front,face5=0:buildcraft/miningwell_back
+block:id=miningWell.id,data=5,stdrot=true,face0=0:buildcraft/miningwell_back,face1=0:buildcraft/miningwell_top,face2-3=0:buildcraft/miningwell_side,face4=0:buildcraft/miningwell_back,face5=0:buildcraft/miningwell_front
+block:id=miningWell.id,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:buildcraft/miningwell_back,face1=0:buildcraft/miningwell_top,face2-5=0:buildcraft/miningwell_side
+# drill.id:* (plainPipeBlock), render=0(STANDARD), opaque=false,cls=buildcraft.factory.BlockPlainPipe
+block:id=drill.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/blockPlainPipe
+# autoWorkbench.id:* (autoWorkbenchBlock), render=0(STANDARD), opaque=true,cls=buildcraft.factory.BlockAutoWorkbench
+block:id=autoWorkbench.id,data=*,stdrot=true,face0-1=0:buildcraft/autoWorkbench_top,face2-5=0:buildcraft/autoWorkbench_side
+# quarry.id:* (machineBlock), render=0(STANDARD), opaque=true,cls=buildcraft.factory.BlockQuarry
+block:id=quarry.id,data=0,stdrot=true,face0=0:buildcraft/quarry_side,face1=0:buildcraft/quarry_top,face2=0:buildcraft/quarry_side,face3=0:buildcraft/quarry_front,face4-5=0:buildcraft/quarry_side
+block:id=quarry.id,data=1,stdrot=true,face0=0:buildcraft/quarry_side,face1=0:buildcraft/quarry_top,face2-5=0:buildcraft/quarry_side
+block:id=quarry.id,data=2,stdrot=true,face0=0:buildcraft/quarry_side,face1=0:buildcraft/quarry_top,face2=0:buildcraft/quarry_front,face3-5=0:buildcraft/quarry_side
+block:id=quarry.id,data=3,stdrot=true,face0=0:buildcraft/quarry_side,face1=0:buildcraft/quarry_top,face2=0:buildcraft/quarry_side,face3=0:buildcraft/quarry_front,face4-5=0:buildcraft/quarry_side
+block:id=quarry.id,data=4,stdrot=true,face0=0:buildcraft/quarry_side,face1=0:buildcraft/quarry_top,face2-3=0:buildcraft/quarry_side,face4=0:buildcraft/quarry_front,face5=0:buildcraft/quarry_side
+block:id=quarry.id,data=5,stdrot=true,face0=0:buildcraft/quarry_side,face1=0:buildcraft/quarry_top,face2-4=0:buildcraft/quarry_side,face5=0:buildcraft/quarry_front
+block:id=quarry.id,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:buildcraft/quarry_side,face1=0:buildcraft/quarry_top,face2-5=0:buildcraft/quarry_side
+# frame.id:* (frameBlock), render=134(CUSTOM), opaque=false,cls=buildcraft.factory.BlockFrame
+block:id=frame.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/blockFrame
+# pump.id:* (pumpBlock), render=0(STANDARD), opaque=true,cls=buildcraft.factory.BlockPump
+block:id=pump.id,data=*,stdrot=true,face0=0:buildcraft/pump_bottom,face1=0:buildcraft/pump_top,face2-5=0:buildcraft/pump_side
+# tank.id:* (tankBlock), render=0(STANDARD), opaque=false,cls=buildcraft.factory.BlockTank
+block:id=tank.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:buildcraft/tank_top,face2-5=0:buildcraft/tank_bottom_side
+# refinery.id:* (refineryBlock), render=133(CUSTOM), opaque=false,cls=buildcraft.factory.BlockRefinery
+block:id=refinery.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/refineryBack
+# hopper.id:* (blockHopper), render=133(CUSTOM), opaque=false,cls=buildcraft.factory.BlockHopper
+block:id=hopper.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/hopperBottom
+# floodGate.id:* (floodGateBlock), render=0(STANDARD), opaque=true,cls=buildcraft.factory.BlockFloodGate
+block:id=floodGate.id,data=*,stdrot=true,face0=0:buildcraft/floodgate_bottom,face1=0:buildcraft/floodgate_top,face2-5=0:buildcraft/floodgate_side

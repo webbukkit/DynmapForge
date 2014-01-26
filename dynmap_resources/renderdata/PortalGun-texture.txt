@@ -1,0 +1,26 @@
+# PortalGun 2.0.2
+version:1.6
+modname:PortalGun
+
+var:ids/idPortal=0,ids/idMulti=0
+
+cfgfile:config/PortalGun.cfg
+
+
+texturepath:assets/portalgun/textures/blocks/
+texture:id=portalgun/afpBottom,filename=assets/portalgun/textures/blocks/afpBottom.png
+texture:id=portalgun/fizzlerStill,filename=assets/portalgun/textures/blocks/fizzlerStill.png
+texture:id=portalgun/portalSpawner,filename=assets/portalgun/textures/blocks/portalSpawner.png
+texture:id=portalgun/ventSideOff,filename=assets/portalgun/textures/blocks/ventSideOff.png
+texture:id=portalgun/eeiOff,filename=assets/portalgun/textures/blocks/eeiOff.png
+texture:id=portalgun/hepCatcherBottomInactive,filename=assets/portalgun/textures/blocks/hepCatcherBottomInactive.png
+
+
+# ids/idPortal:* (Portal_BlockPortal), render=-1(CUSTOM), opaque=false,cls=portalgun.common.block.BlockPortalMod
+block:id=ids/idPortal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:portalgun/portalSpawner
+# ids/idMulti:* (Portal_BlockMulti), render=230(CUSTOM), opaque=false,cls=portalgun.common.block.BlockMulti
+block:id=ids/idMulti,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:portalgun/fizzlerStill
+block:id=ids/idMulti,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:portalgun/eeiOff
+block:id=ids/idMulti,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:portalgun/hepCatcherBottomInactive
+block:id=ids/idMulti,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:portalgun/ventSideOff
+block:id=ids/idMulti,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:portalgun/afpBottom

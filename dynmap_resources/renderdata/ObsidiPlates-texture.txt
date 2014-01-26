@@ -1,7 +1,24 @@
-# ObsidiPlates Texture mapping
+# ObsidiPlates 2.0.0
+version:1.6
 modname:ObsidiPlates
-# configuration file
+
+var:obsidianPlate=0
+
 cfgfile:config/ObsidiPlates.cfg
 
-# Blocks
-block:id=obsidianPlate,data=*,allfaces=37,stdrot=true,transparency=TRANSPARENT
+
+texturepath:assets/obsidiplates/textures/blocks/
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+texture:id=minecraft/cobblestone_mossy,filename=assets/minecraft/textures/blocks/cobblestone_mossy.png
+texture:id=minecraft/wool_colored_white,filename=assets/minecraft/textures/blocks/wool_colored_white.png
+
+
+# obsidianPlate:* (ObsidianPressurePlate), render=227(CUSTOM), opaque=false,cls=myrathi.obsidiplates.block.BlockMultiPressurePlate
+block:id=obsidianPlate,data=0,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/obsidian
+block:id=obsidianPlate,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/wool_colored_white,face1=0:minecraft/obsidian,face2-5=0:minecraft/wool_colored_white
+block:id=obsidianPlate,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/cobblestone_mossy
+block:id=obsidianPlate,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/wool_colored_white,face1=0:minecraft/cobblestone_mossy,face2-5=0:minecraft/wool_colored_white
+block:id=obsidianPlate,data=8,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/obsidian
+block:id=obsidianPlate,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/wool_colored_white,face1=0:minecraft/obsidian,face2-5=0:minecraft/wool_colored_white
+block:id=obsidianPlate,data=12,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/cobblestone_mossy
+block:id=obsidianPlate,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/wool_colored_white,face1=0:minecraft/cobblestone_mossy,face2-5=0:minecraft/wool_colored_white

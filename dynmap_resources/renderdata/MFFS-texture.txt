@@ -1,0 +1,30 @@
+# MFFS 3.6.0
+version:1.6
+modname:MFFS
+
+var:projector=0,fortronCapacitor=0,coercionDeriver=0,interdictionMatrix=0,forceField=0,biometricIdentifier=0,manipulator=0
+
+cfgfile:config/Modular Force Field System.cfg
+
+
+texturepath:assets/mffs/textures/blocks/
+texture:id=mffs/biometricIdentifier,filename=assets/mffs/textures/blocks/biometricIdentifier.png
+texture:id=mffs/interdictionMatrix,filename=assets/mffs/textures/blocks/interdictionMatrix.png
+texture:id=mffs/forceField,filename=assets/mffs/textures/blocks/forceField.png
+texture:id=mffs/machine,filename=assets/mffs/textures/blocks/machine.png
+
+
+# manipulator:* (tile.mffs:manipulator), render=238(CUSTOM), opaque=false,cls=mffs.block.BlockForceManipulator
+block:id=manipulator,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/machine
+# interdictionMatrix:* (tile.mffs:interdictionMatrix), render=0(STANDARD), opaque=true,cls=mffs.block.BlockInterdictionMatrix
+block:id=interdictionMatrix,data=*,stdrot=true,face0-5=0:mffs/interdictionMatrix
+# biometricIdentifier:* (tile.mffs:biometricIdentifier), render=0(STANDARD), opaque=true,cls=mffs.block.BlockBiometricIdentifier
+block:id=biometricIdentifier,data=*,stdrot=true,face0-5=0:mffs/biometricIdentifier
+# projector:* (tile.mffs:projector), render=238(CUSTOM), opaque=false,cls=mffs.block.BlockForceFieldProjector
+block:id=projector,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/machine
+# fortronCapacitor:* (tile.mffs:fortronCapacitor), render=238(CUSTOM), opaque=false,cls=mffs.block.BlockFortronCapacitor
+block:id=fortronCapacitor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/machine
+# coercionDeriver:* (tile.mffs:coercionDeriver), render=238(CUSTOM), opaque=false,cls=mffs.block.BlockCoercionDeriver
+block:id=coercionDeriver,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/machine
+# forceField:* (tile.mffs:forceField), render=239(CUSTOM), opaque=false,cls=mffs.block.BlockForceField
+block:id=forceField,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/forceField

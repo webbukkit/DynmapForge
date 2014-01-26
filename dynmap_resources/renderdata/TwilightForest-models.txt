@@ -1,69 +1,41 @@
-# Twilight Forest Block mapping
+# TwilightForest 1.20.2
+version:1.6
 modname:TwilightForest
 
-# Defaults
-var:MagicLog=0,MagicLeaves=0,MagicLogSpecial=0,TowerDevice=0,TowerAntenna=0,TowerWood=0
+var:UncraftingTable=0,UnderBrick=0,Plant=0,TowerWood=0,Portal=0,Leaves=0,BossSpawner=0,Roots=0,Sapling=0,TrophyPedestal=0
+var:Mazestone=0,Cicada=0,AuroraBrick=0,Shield=0,Log=0,TowerDevice=0,Hedge=0,FireJet=0,MagicLogSpecial=0,TowerTranslucent=0
+var:FireflyJar=0,MagicLog=0,Trophy=0,MagicLeaves=0,Nagastone=0,Moonworm=0,Critter=0
 
-# configuration file
 cfgfile:config/TwilightForest.cfg
 
-# Horizontal patch - Y+ facing at Y=1.0
-patch:id=HorizY100,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
-# Vertical patch at xz=0.0/0.0 to 1.0/0.0, facing inward
-patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
-# Horizontal patch - Y+ facing at Y=0.5
-patch:id=HorizY050,Ox=0.0,Oy=0.5,Oz=0.0,Ux=1.0,Uy=0.5,Uz=0.0,Vx=0.0,Vy=0.5,Vz=1.0
-# Vertical patch, 45 degrees from xz=1.0/0.0 to xz=0.0/1.0
 patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# Blocks
-
-# Cicada
-# Critter (Firefly)
-# Moonworm
-patchblock:id=Critter,id=Cicada,id=Moonworm,data=1,patch0=VertX0In
-patchblock:id=Critter,id=Cicada,id=Moonworm,data=3,patch0=VertX0In@90
-patchblock:id=Critter,id=Cicada,id=Moonworm,data=2,patch0=VertX0In@180
-patchblock:id=Critter,id=Cicada,id=Moonworm,data=4,patch0=VertX0In@270
-patchblock:id=Critter,id=Cicada,id=Moonworm,data=6,patch0=HorizY100
-patchblock:id=Critter,id=Cicada,id=Moonworm,data=5,patch0=HorizY100@180/0/0
-ignore-updates:id=Critter,id=Cicada,id=Moonworm,data=*
-
-# Leaves
-ignore-updates:id=Leaves,data=*
-
-# FireflyJar
-patch:id=JarSide,Ox=0.1875,Oy=0.0,Oz=0.0,Ux=0.1875,Uy=0.0,Uz=1.0,Vx=0.1875,Vy=1.0,Vz=0.0,Umin=0.1875,Umax=0.8125,Vmin=0.0,Vmax=0.875,visibility=top
-patch:id=JarBottom,Ox=0.0,Oy=0.0,Oz=0.0,Ux=1.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=0.0,Vz=1.0,Umin=0.1875,Umax=0.8125,Vmin=0.1875,Vmax=0.8125,visibility=top
-patch:id=JarTop,Ox=0.0,Oy=0.875,Oz=0.0,Ux=1.0,Uy=0.875,Uz=0.0,Vx=0.0,Vy=0.875,Vz=1.0,Umin=0.1875,Umax=0.8125,Vmin=0.1875,Vmax=0.8125,visibility=bottom
-patch:id=JarLidSide,Ox=0.25,Oy=0.0,Oz=0.0,Ux=0.25,Uy=0.0,Uz=1.0,Vx=0.25,Vy=1.0,Vz=0.0,Umin=0.25,Umax=0.75,Vmin=0.75,Vmax=1.0,visibility=top
-patch:id=JarLidTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,Umin=0.25,Umax=0.75,Vmin=0.25,Vmax=0.75,visibility=bottom
-patchblock:id=FireflyJar,data=*,patch0=JarLidTop,patch1=JarBottom,patch2=JarTop,patch3=JarSide,patch4=JarSide@90,patch5=JarSide@180,patch6=JarSide@270,patch7=JarLidSide,patch8=JarLidSide@90,patch9=JarLidSide@180,patch10=JarLidSide@270
-
-# Hedge
-block:id=Hedge,data=1,scale=16
-layer:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-
-# Plant
-# Sapling
-patchblock:id=Plant,id=Sapling,data=*,patch0=VertX1Z0ToX0Z1,patch1=VertX1Z0ToX0Z1@90
-
-# Portal
-patchblock:id=Portal,data=*,patch0=HorizY050
-
+# Critter:* (tile.TFFirefly), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFirefly
+# Portal:* (tile.TFPortal), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFPortal
+boxblock:id=Portal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
+# FireflyJar:* (tile.TFFireflyJar), render=219(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFireflyJar
+# Plant:* (tile.TFPlant), render=220(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFPlant
+# MagicLeaves:* (tile.TFMagicLeaves), render=223(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMagicLeaves
+# Moonworm:* (tile.TFMoonworm), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMoonworm
+# TowerTranslucent:* (tile.TFTowerTranslucent), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
+boxblock:id=TowerTranslucent,xmin=0.14929203689098358,xmax=0.7641385793685913,ymin=0.038753509521484375,ymax=0.9891966581344604,zmin=0.39010390639305115,zmax=0.7767026424407959,data=5
+# Trophy:* (tile.TFTrophy), render=-1(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophy
+# TrophyPedestal:* (tile.TFTrophyPedestal), render=224(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophyPedestal
+# Sapling:* (tile.TFSapling), render=1(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFSapling
+patchblock:id=Sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9
+# Nagastone:* (tile.TFNagastone), render=222(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone
+# Cicada:* (tile.TFCicada), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFCicada

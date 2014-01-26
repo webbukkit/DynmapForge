@@ -1,0 +1,234 @@
+# arsmagica2 1.1.1c
+version:1.6
+modname:arsmagica2
+
+var:wakebloom_ID=0,seer_stone_ID=0,witchwood_slab_double_ID=0,magic_wall_ID=0,essence_conduit_ID=0,astral_barrier_ID=0,light_nexus_ID=0,inlay_iron_ID=0,desert_nova_ID=0,crystal_pillar_ID=0
+var:invisibleUtility_ID=0,inlay_redstone_ID=0,arcane_reconstructor_ID=0,keystone_recepticle_ID=0,caster_rune_ID=0,essence_refiner_ID=0,witchwood_stairs_ID=0,ores_ID=0,keystone_door_ID=0,inscription_table_ID=0
+var:witchwood_log_ID=0,keystone_trapdoor_ID=0,vinteum_torch_ID=0,dark_nexus_ID=0,deco_block_ID=0,illusion_block_ID=0,liquidEssence_ID=0,witchwood_sapling_ID=0,lectern_ID=0,summoner_ID=0
+var:block_caster_ID=0,crafting_altar_ID=0,magic_sigil_ID=0,essence_nexus_ID=0,magicians_workbench_ID=0,everstone_ID=0,blue_orchid_ID=0,witchwood_slab_single_ID=0,occulus_ID=0,calefactor_ID=0
+var:spell_rune_ID=0,tarma_root_ID=0,witchwood_planks_ID=0,aum_ID=0,mana_battery_ID=0,keystone_chest_ID=0,thorns_ID=0,witchwood_leaves_ID=0,inlay_gold_ID=0
+
+cfgfile:config/AM2/AM2.cfg
+
+
+texturepath:assets/arsmagica2/textures/blocks/
+#texture:id=MISSING_ICON_TILE_759_arsmagica2/keystoneTrapdoor,filename=assets/missing_icon_tile_759_arsmagica2/textures/blocks/keystoneTrapdoor.png
+texture:id=arsmagica2/oresunstone,filename=assets/arsmagica2/textures/blocks/oresunstone.png
+texture:id=arsmagica2/essence_refiner_front_active,filename=assets/arsmagica2/textures/blocks/essence_refiner_front_active.png
+#texture:id=arsmagica2/keystoneDoor_upper,filename=assets/arsmagica2/textures/blocks/keystoneDoor_upper.png
+texture:id=arsmagica2/vinteumTorch,filename=assets/arsmagica2/textures/blocks/vinteumTorch.png
+#texture:id=arsmagica2/blockthorns_top,filename=assets/arsmagica2/textures/blocks/blockthorns_top.png
+texture:id=arsmagica2/rune_affinity_ice,filename=assets/arsmagica2/textures/blocks/rune_affinity_ice.png
+texture:id=arsmagica2/essence_refiner_front_idle,filename=assets/arsmagica2/textures/blocks/essence_refiner_front_idle.png
+texture:id=arsmagica2/mana_battery,filename=assets/arsmagica2/textures/blocks/mana_battery.png
+texture:id=arsmagica2/orechimerite,filename=assets/arsmagica2/textures/blocks/orechimerite.png
+texture:id=arsmagica2/oreblockmoonstone,filename=assets/arsmagica2/textures/blocks/oreblockmoonstone.png
+texture:id=arsmagica2/essence_refiner_top,filename=assets/arsmagica2/textures/blocks/essence_refiner_top.png
+texture:id=arsmagica2/Inlay_Straight_Iron,filename=assets/arsmagica2/textures/blocks/Inlay_Straight_Iron.png
+texture:id=arsmagica2/liquidEssenceStill,filename=assets/arsmagica2/textures/blocks/liquidEssenceStill.png
+texture:id=arsmagica2/WitchwoodTop,filename=assets/arsmagica2/textures/blocks/WitchwoodTop.png
+#texture:id=arsmagica2/blockthorns_side,filename=assets/arsmagica2/textures/blocks/blockthorns_side.png
+texture:id=arsmagica2/rune_affinity_magma,filename=assets/arsmagica2/textures/blocks/rune_affinity_magma.png
+texture:id=arsmagica2/witchwoodSapling,filename=assets/arsmagica2/textures/blocks/witchwoodSapling.png
+texture:id=arsmagica2/Inlay_Corner_Iron,filename=assets/arsmagica2/textures/blocks/Inlay_Corner_Iron.png
+texture:id=arsmagica2/oreblockvinteum,filename=assets/arsmagica2/textures/blocks/oreblockvinteum.png
+texture:id=arsmagica2/orebluetopaz,filename=assets/arsmagica2/textures/blocks/orebluetopaz.png
+texture:id=arsmagica2/CasterRune,filename=assets/arsmagica2/textures/blocks/CasterRune.png
+texture:id=arsmagica2/WitchwoodLeaves,filename=assets/arsmagica2/textures/blocks/WitchwoodLeaves.png
+texture:id=arsmagica2/rune_affinity_plant,filename=assets/arsmagica2/textures/blocks/rune_affinity_plant.png
+texture:id=arsmagica2/plankWitchwood,filename=assets/arsmagica2/textures/blocks/plankWitchwood.png
+texture:id=arsmagica2/Witchwood,filename=assets/arsmagica2/textures/blocks/Witchwood.png
+texture:id=arsmagica2/essence_refiner_side,filename=assets/arsmagica2/textures/blocks/essence_refiner_side.png
+texture:id=arsmagica2/rune_affinity_none,filename=assets/arsmagica2/textures/blocks/rune_affinity_none.png
+texture:id=arsmagica2/CasterRuneSide,filename=assets/arsmagica2/textures/blocks/CasterRuneSide.png
+#texture:id=arsmagica2/arcanereconstructor,filename=assets/arsmagica2/textures/blocks/arcanereconstructor.png
+texture:id=arsmagica2/orevinteum,filename=assets/arsmagica2/textures/blocks/orevinteum.png
+texture:id=arsmagica2/magicWall,filename=assets/arsmagica2/textures/blocks/magicWall.png
+#texture:id=arsmagica2/lightnexus,filename=assets/arsmagica2/textures/blocks/lightnexus.png
+texture:id=arsmagica2/rune_affinity_fire,filename=assets/arsmagica2/textures/blocks/rune_affinity_fire.png
+texture:id=arsmagica2/liquidEssenceFlowing,filename=assets/arsmagica2/textures/blocks/liquidEssenceFlowing.png
+texture:id=arsmagica2/Inlay_Straight_Redstone,filename=assets/arsmagica2/textures/blocks/Inlay_Straight_Redstone.png
+texture:id=arsmagica2/Inlay_Corner_Gold,filename=assets/arsmagica2/textures/blocks/Inlay_Corner_Gold.png
+texture:id=arsmagica2/blue_orchid,filename=assets/arsmagica2/textures/blocks/blue_orchid.png
+#texture:id=arsmagica2/blockthorns_bottom,filename=assets/arsmagica2/textures/blocks/blockthorns_bottom.png
+texture:id=arsmagica2/rune_affinity_arcane,filename=assets/arsmagica2/textures/blocks/rune_affinity_arcane.png
+texture:id=arsmagica2/rune_affinity_lightning,filename=assets/arsmagica2/textures/blocks/rune_affinity_lightning.png
+texture:id=arsmagica2/blockastralbarrier,filename=assets/arsmagica2/textures/blocks/blockastralbarrier.png
+#texture:id=arsmagica2/essencenexus,filename=assets/arsmagica2/textures/blocks/essencenexus.png
+texture:id=arsmagica2/rune_affinity_life,filename=assets/arsmagica2/textures/blocks/rune_affinity_life.png
+texture:id=arsmagica2/rune_affinity_ender,filename=assets/arsmagica2/textures/blocks/rune_affinity_ender.png
+texture:id=arsmagica2/tarmaroot,filename=assets/arsmagica2/textures/blocks/tarmaroot.png
+texture:id=arsmagica2/rune_affinity_water,filename=assets/arsmagica2/textures/blocks/rune_affinity_water.png
+texture:id=arsmagica2/everstone,filename=assets/arsmagica2/textures/blocks/everstone.png
+texture:id=arsmagica2/desert_nova,filename=assets/arsmagica2/textures/blocks/desert_nova.png
+#texture:id=arsmagica2/darknexus,filename=assets/arsmagica2/textures/blocks/darknexus.png
+#texture:id=arsmagica2/keystonechest,filename=assets/arsmagica2/textures/blocks/keystonechest.png
+texture:id=arsmagica2/aum,filename=assets/arsmagica2/textures/blocks/aum.png
+texture:id=arsmagica2/oreblockbluetopaz,filename=assets/arsmagica2/textures/blocks/oreblockbluetopaz.png
+texture:id=arsmagica2/Inlay_Straight_Gold,filename=assets/arsmagica2/textures/blocks/Inlay_Straight_Gold.png
+texture:id=arsmagica2/wakebloom,filename=assets/arsmagica2/textures/blocks/wakebloom.png
+texture:id=arsmagica2/oreblocksunstone,filename=assets/arsmagica2/textures/blocks/oreblocksunstone.png
+texture:id=arsmagica2/rune_affinity_earth,filename=assets/arsmagica2/textures/blocks/rune_affinity_earth.png
+texture:id=arsmagica2/Inlay_Corner_Redstone,filename=assets/arsmagica2/textures/blocks/Inlay_Corner_Redstone.png
+texture:id=arsmagica2/mana_battery_frame,filename=assets/arsmagica2/textures/blocks/mana_battery_frame.png
+texture:id=arsmagica2/rune_affinity_air,filename=assets/arsmagica2/textures/blocks/rune_affinity_air.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+#texture:id=arsmagica2/invisibleUtility,filename=assets/arsmagica2/textures/blocks/invisibleUtility.png
+texture:id=arsmagica2/oremoonstone,filename=assets/arsmagica2/textures/blocks/oremoonstone.png
+texture:id=arsmagica2/custom/KeystoneReceptacle,filename=assets/arsmagica2/textures/blocks/custom/KeystoneReceptacle.png
+texture:id=arsmagica2/illusionBlockRevealed,filename=assets/arsmagica2/textures/blocks/illusionBlockRevealed.png
+texture:id=arsmagica2/oreblockchimerite,filename=assets/arsmagica2/textures/blocks/oreblockchimerite.png
+#texture:id=arsmagica2/arcane_empowerment_table_side,filename=assets/arsmagica2/textures/blocks/arcane_empowerment_table_side.png
+texture:id=arsmagica2/decoBlockFrame,filename=assets/arsmagica2/textures/blocks/decoBlockFrame.png
+texture:id=arsmagica2/RuneStone,filename=assets/arsmagica2/textures/blocks/RuneStone.png
+
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+
+# essence_refiner_ID:* (essenceRefiner), render=0(STANDARD), opaque=true,cls=am2.blocks.BlockEssenceRefiner
+block:id=essence_refiner_ID,data=0,data=1,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2-5=0:arsmagica2/essence_refiner_side
+block:id=essence_refiner_ID,data=2,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2=0:arsmagica2/essence_refiner_front_idle,face3-5=0:arsmagica2/essence_refiner_side
+block:id=essence_refiner_ID,data=3,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2=0:arsmagica2/essence_refiner_side,face3=0:arsmagica2/essence_refiner_front_idle,face4-5=0:arsmagica2/essence_refiner_side
+block:id=essence_refiner_ID,data=4,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2-3=0:arsmagica2/essence_refiner_side,face4=0:arsmagica2/essence_refiner_front_idle,face5=0:arsmagica2/essence_refiner_side
+block:id=essence_refiner_ID,data=5,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2-4=0:arsmagica2/essence_refiner_side,face5=0:arsmagica2/essence_refiner_front_idle
+block:id=essence_refiner_ID,data=6,data=7,data=8,data=9,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2-5=0:arsmagica2/essence_refiner_side
+block:id=essence_refiner_ID,data=10,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2=0:arsmagica2/essence_refiner_front_active,face3-5=0:arsmagica2/essence_refiner_side
+block:id=essence_refiner_ID,data=11,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2=0:arsmagica2/essence_refiner_side,face3=0:arsmagica2/essence_refiner_front_active,face4-5=0:arsmagica2/essence_refiner_side
+block:id=essence_refiner_ID,data=12,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2-3=0:arsmagica2/essence_refiner_side,face4=0:arsmagica2/essence_refiner_front_active,face5=0:arsmagica2/essence_refiner_side
+block:id=essence_refiner_ID,data=13,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2-4=0:arsmagica2/essence_refiner_side,face5=0:arsmagica2/essence_refiner_front_active
+block:id=essence_refiner_ID,data=14,data=15,stdrot=true,face0=0:arsmagica2/essence_refiner_side,face1=0:arsmagica2/essence_refiner_top,face2-5=0:arsmagica2/essence_refiner_side
+# illusion_block_ID:* (tile.arsmagica2:illusionBlock), render=0(STANDARD), opaque=false,cls=am2.blocks.IllusionBlock
+block:id=illusion_block_ID,data=*,stdrot=true,face0-5=12000:arsmagica2/illusionBlockRevealed
+# keystone_door_ID:* (keystoneDoor), render=7(DOOR), opaque=false,cls=am2.blocks.BlockKeystoneDoor
+#block:id=keystone_door_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:arsmagica2/keystoneDoor_upper
+block:id=keystone_door_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0-1=0:minecraft/planks_oak
+# keystone_trapdoor_ID:* (keystoneTrapDoor), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockKeystoneTrapdoor
+#block:id=keystone_trapdoor_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:MISSING_ICON_TILE_759_arsmagica2/keystoneTrapdoor
+#block:id=keystone_trapdoor_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# essence_conduit_ID:* (essenceConduit), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockEssenceConduit
+block:id=essence_conduit_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/CasterRuneSide
+# essence_nexus_ID:* (essenceNexus), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockEssenceNexus
+#block:id=essence_nexus_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/essencenexus
+block:id=essence_nexus_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# block_caster_ID:* (blockCaster), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockCaster
+block:id=block_caster_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/CasterRuneSide
+# crystal_pillar_ID:* (crystalPillar), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockCrystalPillar
+block:id=crystal_pillar_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/CasterRuneSide
+# calefactor_ID:* (calefactor), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockCalefactor
+block:id=calefactor_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/CasterRuneSide
+# keystone_recepticle_ID:* (keystoneReceptacle), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockKeystoneReceptacle
+block:id=keystone_recepticle_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/custom/KeystoneReceptacle
+# astral_barrier_ID:* (astralBarrier), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockAstralBarrier
+block:id=astral_barrier_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/blockastralbarrier
+# dark_nexus_ID:* (darkNexus), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockEssenceNexus
+#block:id=dark_nexus_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/darknexus
+block:id=dark_nexus_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# thorns_ID:* (thorns), render=13(CACTUS), opaque=false,cls=am2.blocks.BlockThorns
+#block:id=thorns_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,patch0-3=0:arsmagica2/blockthorns_side,patch4=0:arsmagica2/blockthorns_top,patch5=0:arsmagica2/blockthorns_bottom
+block:id=thorns_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,patch0-3=0:minecraft/planks_oak,patch4=0:minecraft/planks_oak,patch5=0:minecraft/planks_oak
+# seer_stone_ID:* (seerStone), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockSeerStone
+block:id=seer_stone_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/CasterRuneSide
+# light_nexus_ID:* (tile.arsmagica2:lightnexus), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockEssenceNexus
+#block:id=light_nexus_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/lightnexus
+block:id=light_nexus_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# ores_ID:* (vinteumOre), render=0(STANDARD), opaque=true,cls=am2.blocks.BlockAMOre
+block:id=ores_ID,data=0,stdrot=true,face0-5=0:arsmagica2/orevinteum
+block:id=ores_ID,data=1,stdrot=true,face0-5=0:arsmagica2/orechimerite
+block:id=ores_ID,data=2,stdrot=true,face0-5=0:arsmagica2/orebluetopaz
+block:id=ores_ID,data=3,stdrot=true,face0-5=0:arsmagica2/oremoonstone
+block:id=ores_ID,data=4,stdrot=true,face0-5=0:arsmagica2/oresunstone
+block:id=ores_ID,data=5,stdrot=true,face0-5=0:arsmagica2/oreblockmoonstone
+block:id=ores_ID,data=6,stdrot=true,face0-5=0:arsmagica2/oreblockvinteum
+block:id=ores_ID,data=7,stdrot=true,face0-5=0:arsmagica2/oreblockbluetopaz
+block:id=ores_ID,data=8,stdrot=true,face0-5=0:arsmagica2/oreblocksunstone
+block:id=ores_ID,data=9,stdrot=true,face0-5=0:arsmagica2/oreblockchimerite
+# blue_orchid_ID:* (blueOrchid), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.AMFlower
+block:id=blue_orchid_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:arsmagica2/blue_orchid
+# desert_nova_ID:* (desertNova), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.BlockDesertNova
+block:id=desert_nova_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:arsmagica2/desert_nova
+# keystone_chest_ID:* (keystoneChest), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockKeystoneChest
+#block:id=keystone_chest_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/keystonechest
+block:id=keystone_chest_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# lectern_ID:* (blockLectern), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockLectern
+block:id=lectern_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/Witchwood
+# arcane_reconstructor_ID:* (blockArcaneReconstructor), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockArcaneReconstructor
+#block:id=arcane_reconstructor_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/arcanereconstructor
+block:id=arcane_reconstructor_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# mana_battery_ID:* (manaBattery), render=49(CUSTOM), opaque=true,cls=am2.blocks.BlockManaBattery
+block:id=mana_battery_ID,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/mana_battery
+block:id=mana_battery_ID,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/mana_battery_frame
+# magic_wall_ID:* (magicWall), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockMagicWall
+block:id=magic_wall_ID,data=*,stdrot=true,face0-5=12000:arsmagica2/magicWall
+# occulus_ID:* (occulus), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockOcculus
+#block:id=occulus_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/arcane_empowerment_table_side
+block:id=occulus_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# crafting_altar_ID:* (CraftingAltar), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockCraftingAltar
+block:id=crafting_altar_ID,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/CasterRuneSide
+block:id=crafting_altar_ID,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/RuneStone
+block:id=crafting_altar_ID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/CasterRuneSide
+# spell_rune_ID:* (SpellRune), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockGroundRuneSpell
+block:id=spell_rune_ID,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_none
+block:id=spell_rune_ID,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_arcane
+block:id=spell_rune_ID,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_water
+block:id=spell_rune_ID,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_fire
+block:id=spell_rune_ID,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_earth
+block:id=spell_rune_ID,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_air
+block:id=spell_rune_ID,data=6,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_magma
+block:id=spell_rune_ID,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_lightning
+block:id=spell_rune_ID,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_ice
+block:id=spell_rune_ID,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_plant
+block:id=spell_rune_ID,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_life
+block:id=spell_rune_ID,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/rune_affinity_ender
+# deco_block_ID:* (ParticleEmitter), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockParticleEmitter
+block:id=deco_block_ID,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,stdrot=true,face0-5=0:arsmagica2/decoBlockFrame
+block:id=deco_block_ID,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/decoBlockFrame
+# vinteum_torch_ID:* (VinteumTorch), render=2(TORCH), opaque=false,cls=am2.blocks.VinteumTorch
+block:id=vinteum_torch_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:arsmagica2/vinteumTorch
+# caster_rune_ID:* (CasterRune), render=0(STANDARD), opaque=true,cls=am2.blocks.BlockCasterRune
+block:id=caster_rune_ID,data=*,stdrot=true,face0=0:arsmagica2/CasterRuneSide,face1=0:arsmagica2/CasterRune,face2-5=0:arsmagica2/CasterRuneSide
+# inscription_table_ID:* (InscriptionTable), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockInscriptionTable
+block:id=inscription_table_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/Witchwood
+# aum_ID:* (Aum), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.AMFlower
+block:id=aum_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:arsmagica2/aum
+# wakebloom_ID:* (WakeBloom), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.BlockWakebloom
+block:id=wakebloom_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:arsmagica2/wakebloom
+# tarma_root_ID:* (TarmaRoot), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.BlockTarmaRoot
+block:id=tarma_root_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:arsmagica2/tarmaroot
+# witchwood_log_ID:* (WitchwoodLog), render=31(LOG), opaque=true,cls=am2.blocks.BlockWitchwoodLog
+block:id=witchwood_log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:arsmagica2/WitchwoodTop,face2-5=0:arsmagica2/Witchwood
+block:id=witchwood_log_ID,data=4,data=5,data=6,data=7,face0-1=0:arsmagica2/Witchwood,face2-3=4000:arsmagica2/Witchwood,face4-5=0:arsmagica2/WitchwoodTop
+block:id=witchwood_log_ID,data=8,data=9,data=10,data=11,face0-1=4000:arsmagica2/Witchwood,face2-3=0:arsmagica2/WitchwoodTop,face4-5=4000:arsmagica2/Witchwood
+block:id=witchwood_log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:arsmagica2/Witchwood
+# witchwood_leaves_ID:* (WitchwoodLeaves), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockWitchwoodLeaves
+block:id=witchwood_leaves_ID,data=*,stdrot=true,face0-5=0:arsmagica2/WitchwoodLeaves
+# summoner_ID:* (Summoner), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockSummoner
+block:id=summoner_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/essence_refiner_side
+# liquidEssence_ID:* (liquidEssence), render=40(CUSTOM), opaque=false,cls=am2.blocks.liquid.BlockLiquidEssence
+block:id=liquidEssence_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/liquidEssenceStill,face2-5=0:arsmagica2/liquidEssenceFlowing
+# inlay_redstone_ID:* (redstoneInlay), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockInlay
+block:id=inlay_redstone_ID,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/Inlay_Straight_Redstone
+block:id=inlay_redstone_ID,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/Inlay_Corner_Redstone
+# inlay_iron_ID:* (ironInlay), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockInlay
+block:id=inlay_iron_ID,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/Inlay_Straight_Iron
+block:id=inlay_iron_ID,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/Inlay_Corner_Iron
+# inlay_gold_ID:* (goldInlay), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockInlay
+block:id=inlay_gold_ID,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/Inlay_Straight_Gold
+block:id=inlay_gold_ID,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:arsmagica2/Inlay_Corner_Gold
+# witchwood_planks_ID:* (planksWitchwood), render=0(STANDARD), opaque=true,cls=am2.blocks.WitchwoodPlanks
+block:id=witchwood_planks_ID,data=*,stdrot=true,face0-5=0:arsmagica2/plankWitchwood
+# witchwood_slab_single_ID:* (tile.arsmagica2:witchwoodSingleSlab), render=0(STANDARD), opaque=false,cls=am2.blocks.WitchwoodSlabs
+block:id=witchwood_slab_single_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:arsmagica2/plankWitchwood
+# witchwood_slab_double_ID:* (tile.arsmagica2:witchwoodDoubleSlab), render=0(STANDARD), opaque=true,cls=am2.blocks.WitchwoodSlabs
+block:id=witchwood_slab_double_ID,data=*,stdrot=true,face0-5=0:arsmagica2/plankWitchwood
+# witchwood_stairs_ID:* (stairsWitchwood), render=10(STAIRS), opaque=false,cls=am2.blocks.WitchwoodStairs
+block:id=witchwood_stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:arsmagica2/plankWitchwood
+# witchwood_sapling_ID:* (saplingWitchwood), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.WitchwoodSapling
+block:id=witchwood_sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:arsmagica2/witchwoodSapling
+# everstone_ID:* (everstone), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockEverstone
+block:id=everstone_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/everstone
+# invisibleUtility_ID:* (invisibleUtility), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockInvisibleUtility
+#block:id=invisibleUtility_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/invisibleUtility
+block:id=invisibleUtility_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# magic_sigil_ID:* (magic_sigil), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockMagicSigil
+block:id=magic_sigil_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+# magicians_workbench_ID:* (magiciansWorkbench), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockMagiciansWorkbench
+block:id=magicians_workbench_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:arsmagica2/plankWitchwood

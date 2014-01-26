@@ -1,0 +1,1048 @@
+# BiomesOPlenty 1.2.1
+version:1.6
+modname:BiomesOPlenty[0.5.9-]
+
+var:Fruit_Leaf_Block_2_ID=0,terrain_block_ids_-_must_be_below_255/Long_Grass_ID=0,Colourized_Sapling_ID=0,Coral_ID=0,Crystal_ID=0,terrain_block_ids_-_must_be_below_255/Ash_Stone_ID=0,terrain_block_ids_-_must_be_below_255/Hard_Sand_ID=0,Wooden_Double_Slab_1_ID=0,Foliage_ID=0,Hell_Bark_Stairs_ID=0
+var:Cloud_ID=0,Puddle_ID=0,terrain_block_ids_-_must_be_below_255/Red_Rock_ID=0,Hive_ID=0,Willow_Stairs_ID=0,terrain_block_ids_-_must_be_below_255/Ash_Block_ID=0,liquid_ids/Honey_Still_ID_(ID_before_this_must_be_free!)=0,terrain_block_ids_-_must_be_below_255/Dried_Dirt_ID=0,Planks_ID=0,Dark_Stairs_ID=0
+var:liquid_ids/Liquid_Poison_Still_ID_(ID_before_this_must_be_free!)=0,terrain_block_ids_-_must_be_below_255/Crag_Rock_ID=0,Tree_Moss_ID=0,Promised_Land_Portal_ID=0,Flower_ID=0,terrain_block_ids_-_must_be_below_255/Origin_Grass_ID=0,Mushroom_ID=0,Fruit_Leaf_Block_ID=0,Skystone_Cobble_Stairs_ID=0,Mud_Brick_Stairs_ID=0
+var:Jacaranda_ID=0,Acacia_Stairs_ID=0,Mud_Bricks_ID=0,Colourized_Leaves_1_ID=0,terrain_block_ids_-_must_be_below_255/Hard_Dirt_ID=0,Sapling_ID=0,Fir_Stairs_ID=0,terrain_block_ids_-_must_be_below_255/Holy_Dirt_ID=0,Moss_ID=0,Colourized_Leaves_2_ID=0
+var:Red_Cobble_Stairs_ID=0,Bamboo_ID=0,Stone_Single_Slab_ID=0,Red_Brick_Stairs_ID=0,Stone_Double_Slab_ID=0,Amethyst_Ore_ID=0,Palm_Stairs_ID=0,terrain_block_ids_-_must_be_below_255/Flesh_ID=0,Petal_ID=0,Cherry_Stairs_ID=0
+var:Honey_Block_ID=0,Willow_ID=0,terrain_block_ids_-_must_be_below_255/Holy_Grass_ID=0,Flower_2_ID=0,Bones_ID=0,Overgrown_Netherrack_ID=0,Wooden_Single_Slab_1_ID=0,Leaf_Block_ID_2=0,Leaf_Block_ID_1=0,Grave_ID=0
+var:Leaf_Block_ID_4=0,Leaf_Block_ID_3=0,Log_Block_ID_1=0,Wooden_Single_Slab_2_ID=0,terrain_block_ids_-_must_be_below_255/Mud_ID=0,Log_Block_ID_2=0,Wooden_Double_Slab_2_ID=0,Magic_Stairs_ID=0,Log_Block_ID_3=0,Log_Block_ID_4=0
+var:Redwood_Stairs_ID=0,Skystone_Brick_Stairs_ID=0,terrain_block_ids_-_must_be_below_255/Skystone_ID=0,Pine_Stairs_ID=0,liquid_ids/Spring_Water_Still_ID_(ID_before_this_must_be_free!)=0,Holy_Stairs_ID=0,Turnip_Crop_ID=0,Plant_ID=0,Mangrove_Stairs_ID=0,Ivy_ID=0
+var:Stone_Formations_ID=0,terrain_block_ids_-_must_be_below_255/Hard_Ice_ID=0
+
+var:biome_ids/Thinned_Mystic_Grove_(Sub-Biome)_ID=0,biome_ids/Sublime_Shrubland_(Promised_Land)_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Bloody_Heap_(Nether)_ID=0,biome_ids/Overgrown_Greens_ID=0,biome_ids/Forest_Hills_(Sub-Biome)_ID=0,biome_ids/Tropics_Mountain_(Sub-Biome)_ID=0,biome_ids/Autumn_Hills_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Savanna_Plateau_(Sub-Biome)_ID=0
+var:biome_ids/Taiga_Hills_(Sub-Biome)_ID=0,biome_ids/Jungle_Hills_(Sub-Biome)_ID=0,biome_ids/Alps_Forest_(Sub-Biome)_ID=0,biome_ids/Alps_Mountainside_(Sub-Biome)_ID=0,biome_ids/Forested_Field_(Sub-Biome)_ID=0,biome_ids/Seasonal_Spruce_Forest_(Sub-Biome)_ID=0,biome_ids/Pasture_Meadow_(Sub-Biome)_ID=0,biome_ids/Thick_Ominous_Woods_(Sub-Biome)_ID=0,biome_ids/Thinned_Timber_(Sub-Biome)_ID=0,biome_ids/Thinned_Pasture_(Sub-Biome)_ID=0
+var:biome_ids/Meadow_Forest_(Sub-Biome)_ID=0,biome_ids/Canyon_Ravine_(Sub-Biome)_ID=0,biome_ids/Thick_Shrubland_(Sub-Biome)_ID=0,biome_ids/Kelp_Forest_(Ocean)_ID=0,biome_ids/Coral_Reef_(Ocean)_ID=0,biome_ids/Oceanic_Abyss_(Ocean)_ID=0,biome_ids/Majestic_Meadow_(Promised_Land)_ID=0,biome_ids/Wonderous_Woods_(Promised_Land)_ID=0,biome_ids/Overgrown_Beach_ID=0,biome_ids/Gravel_Beach_ID=0
+var:biome_ids/Phantasmagoric_Inferno_(Nether)_ID=0,biome_ids/Boneyard_(Nether)_ID=0,biome_ids/Blessed_Bog_(Promised_Land)_ID=0,biome_ids/Nether_Base_(Nether)_ID=0,biome_ids/Undergarden_(Nether)_ID=0,biome_ids/Corrupted_Sands_(Nether)_ID=0,biome_ids/Arctic_ID=0,biome_ids/Alps_ID=0,biome_ids/Birch_Forest_ID=0,biome_ids/Bayou_ID=0
+var:biome_ids/Bamboo_Forest_ID=0,biome_ids/Badlands_ID=0,biome_ids/Dead_Forest_(Snow)_ID=0,biome_ids/Dead_Swamp_ID=0,biome_ids/Crag_ID=0,biome_ids/Dead_Forest_ID=0,biome_ids/Dunes_ID=0,biome_ids/Fen_ID=0,biome_ids/Deadlands_ID=0,biome_ids/Deciduous_Forest_ID=0
+var:biome_ids/Brushland_ID=0,biome_ids/Canyon_ID=0,biome_ids/Bog_ID=0,biome_ids/Boreal_Forest_ID=0,biome_ids/Coniferous_Forest_ID=0,biome_ids/Coniferous_Forest_(Snow)_ID=0,biome_ids/Chaparral_ID=0,biome_ids/Cherry_Blossom_Grove_ID=0,biome_ids/Lush_Swamp_ID=0,biome_ids/Lush_Desert_ID=0
+var:biome_ids/Mangrove_ID=0,biome_ids/Hot_Springs_ID=0,biome_ids/Highland_ID=0,biome_ids/Jade_Cliffs_ID=0,biome_ids/Icy_Hills_ID=0,biome_ids/Grassland_ID=0,biome_ids/Glacier_ID=0,biome_ids/Heathland_ID=0,biome_ids/Grove_ID=0,biome_ids/Frost_Forest_ID=0
+var:biome_ids/Field_ID=0,biome_ids/Garden_ID=0,biome_ids/Fungi_Forest_ID=0,biome_ids/Origin_Valley_ID=0,biome_ids/Outback_ID=0,biome_ids/Pasture_ID=0,biome_ids/Polar_ID=0,biome_ids/Mystic_Grove_ID=0,biome_ids/Oasis_ID=0,biome_ids/Ominous_Woods_ID=0
+var:biome_ids/Orchard_ID=0,biome_ids/Meadow_ID=0,biome_ids/Mesa_ID=0,biome_ids/Moor_ID=0,biome_ids/Mountain_ID=0,biome_ids/Maple_Woods_ID=0,biome_ids/Marsh_ID=0,biome_ids/Thicket_ID=0,biome_ids/Temperate_Rainforest_ID=0,biome_ids/Steppe_ID=0
+var:biome_ids/Spruce_Woods_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Shore_ID=0,biome_ids/Shield_ID=0,biome_ids/Seasonal_Forest_ID=0,biome_ids/Scrubland_ID=0,biome_ids/Savanna_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Redwood_Forest_ID=0
+var:biome_ids/Rainforest_ID=0,biome_ids/Quagmire_ID=0,biome_ids/Prairie_ID=0,biome_ids/Jungle_(New)_ID=0,biome_ids/Swampland_(New)_ID=0,biome_ids/Extreme_Hills_(New)_ID=0,biome_ids/Forest_(New)_ID=0,biome_ids/Taiga_(New)_ID=0,biome_ids/Plains_(New)_ID=0,biome_ids/Desert_(New)_ID=0
+var:biome_ids/Wetland_ID=0,biome_ids/Woodland_ID=0,biome_ids/Volcano_ID=0,biome_ids/Wasteland_ID=0,biome_ids/Tropics_ID=0,biome_ids/Tundra_ID=0,biome_ids/Timber_ID=0,biome_ids/Tropical_Rainforest_ID=0
+
+cfgfile:config/biomesoplenty/ids.cfg
+
+texturepath:assets/biomesoplenty/textures/blocks/
+texture:id=biomesoplenty/sapling_magic,filename=assets/biomesoplenty/textures/blocks/sapling_magic.png
+texture:id=biomesoplenty/root,filename=assets/biomesoplenty/textures/blocks/root.png
+texture:id=biomesoplenty/log_pine_side,filename=assets/biomesoplenty/textures/blocks/log_pine_side.png
+texture:id=biomesoplenty/bamboo,filename=assets/biomesoplenty/textures/blocks/bamboo.png
+texture:id=biomesoplenty/hardice,filename=assets/biomesoplenty/textures/blocks/hardice.png
+texture:id=biomesoplenty/leaves_yellowautumn_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_yellowautumn_fancy.png
+texture:id=biomesoplenty/plank_palm,filename=assets/biomesoplenty/textures/blocks/plank_palm.png
+texture:id=biomesoplenty/cattailbottom,filename=assets/biomesoplenty/textures/blocks/cattailbottom.png
+texture:id=biomesoplenty/sapling_origin,filename=assets/biomesoplenty/textures/blocks/sapling_origin.png
+texture:id=biomesoplenty/goldenrod,filename=assets/biomesoplenty/textures/blocks/goldenrod.png
+texture:id=biomesoplenty/log_pine_heart,filename=assets/biomesoplenty/textures/blocks/log_pine_heart.png
+texture:id=biomesoplenty/log_dead_side,filename=assets/biomesoplenty/textures/blocks/log_dead_side.png
+texture:id=biomesoplenty/highgrassbottom,filename=assets/biomesoplenty/textures/blocks/highgrassbottom.png
+texture:id=biomesoplenty/cattailtop,filename=assets/biomesoplenty/textures/blocks/cattailtop.png
+texture:id=biomesoplenty/log_redwood_heart,filename=assets/biomesoplenty/textures/blocks/log_redwood_heart.png
+texture:id=biomesoplenty/smolderinggrass_top,filename=assets/biomesoplenty/textures/blocks/smolderinggrass_top.png
+texture:id=biomesoplenty/leaves_apple0_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_apple0_fancy.png
+texture:id=biomesoplenty/plank_dark,filename=assets/biomesoplenty/textures/blocks/plank_dark.png
+texture:id=biomesoplenty/ashstone,filename=assets/biomesoplenty/textures/blocks/ashstone.png
+texture:id=biomesoplenty/shrub,filename=assets/biomesoplenty/textures/blocks/shrub.png
+texture:id=biomesoplenty/sapling_jacaranda,filename=assets/biomesoplenty/textures/blocks/sapling_jacaranda.png
+texture:id=biomesoplenty/log_willow_side,filename=assets/biomesoplenty/textures/blocks/log_willow_side.png
+texture:id=biomesoplenty/flesh,filename=assets/biomesoplenty/textures/blocks/flesh.png
+texture:id=biomesoplenty/bluebells,filename=assets/biomesoplenty/textures/blocks/bluebells.png
+texture:id=biomesoplenty/holystone,filename=assets/biomesoplenty/textures/blocks/holystone.png
+texture:id=biomesoplenty/portobello,filename=assets/biomesoplenty/textures/blocks/portobello.png
+texture:id=biomesoplenty/smolderinggrass_side,filename=assets/biomesoplenty/textures/blocks/smolderinggrass_side.png
+texture:id=biomesoplenty/redrock,filename=assets/biomesoplenty/textures/blocks/redrock.png
+texture:id=biomesoplenty/bones_small,filename=assets/biomesoplenty/textures/blocks/bones_small.png
+texture:id=biomesoplenty/sapling_redwood,filename=assets/biomesoplenty/textures/blocks/sapling_redwood.png
+texture:id=biomesoplenty/origingrass1,filename=assets/biomesoplenty/textures/blocks/origingrass1.png
+texture:id=biomesoplenty/desertgrass,filename=assets/biomesoplenty/textures/blocks/desertgrass.png
+texture:id=biomesoplenty/leaves_jacaranda_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_jacaranda_fancy.png
+texture:id=biomesoplenty/origingrass2,filename=assets/biomesoplenty/textures/blocks/origingrass2.png
+texture:id=biomesoplenty/bluecoral,filename=assets/biomesoplenty/textures/blocks/bluecoral.png
+texture:id=biomesoplenty/thorn,filename=assets/biomesoplenty/textures/blocks/thorn.png
+texture:id=biomesoplenty/origingrass3,filename=assets/biomesoplenty/textures/blocks/origingrass3.png
+texture:id=biomesoplenty/lilyflower,filename=assets/biomesoplenty/textures/blocks/lilyflower.png
+texture:id=biomesoplenty/highgrasstop,filename=assets/biomesoplenty/textures/blocks/highgrasstop.png
+texture:id=biomesoplenty/honeycomb,filename=assets/biomesoplenty/textures/blocks/honeycomb.png
+texture:id=biomesoplenty/bigfloweryellow,filename=assets/biomesoplenty/textures/blocks/bigfloweryellow.png
+texture:id=biomesoplenty/portal,filename=assets/biomesoplenty/textures/blocks/portal.png
+texture:id=biomesoplenty/ivy,filename=assets/biomesoplenty/textures/blocks/ivy.png
+texture:id=biomesoplenty/log_dark_heart,filename=assets/biomesoplenty/textures/blocks/log_dark_heart.png
+texture:id=biomesoplenty/rivercane,filename=assets/biomesoplenty/textures/blocks/rivercane.png
+texture:id=biomesoplenty/witherwart,filename=assets/biomesoplenty/textures/blocks/witherwart.png
+texture:id=biomesoplenty/plank_cherry,filename=assets/biomesoplenty/textures/blocks/plank_cherry.png
+texture:id=biomesoplenty/honey_flowing,filename=assets/biomesoplenty/textures/blocks/honey_flowing.png
+texture:id=biomesoplenty/malachiteblock,filename=assets/biomesoplenty/textures/blocks/malachiteblock.png
+texture:id=biomesoplenty/bamboothatching,filename=assets/biomesoplenty/textures/blocks/bamboothatching.png
+texture:id=biomesoplenty/desertsprouts,filename=assets/biomesoplenty/textures/blocks/desertsprouts.png
+texture:id=biomesoplenty/anemone,filename=assets/biomesoplenty/textures/blocks/anemone.png
+texture:id=biomesoplenty/leaves_magic_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_magic_fancy.png
+texture:id=biomesoplenty/sapphireore,filename=assets/biomesoplenty/textures/blocks/sapphireore.png
+texture:id=biomesoplenty/leaves_persimmon2_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_persimmon2_fancy.png
+texture:id=biomesoplenty/holybrick,filename=assets/biomesoplenty/textures/blocks/holybrick.png
+texture:id=biomesoplenty/hardsand,filename=assets/biomesoplenty/textures/blocks/hardsand.png
+texture:id=biomesoplenty/plank_acacia,filename=assets/biomesoplenty/textures/blocks/plank_acacia.png
+texture:id=biomesoplenty/honeycombfilled,filename=assets/biomesoplenty/textures/blocks/honeycombfilled.png
+texture:id=biomesoplenty/plank_willow,filename=assets/biomesoplenty/textures/blocks/plank_willow.png
+texture:id=biomesoplenty/glowcoral,filename=assets/biomesoplenty/textures/blocks/glowcoral.png
+texture:id=biomesoplenty/log_palm_side,filename=assets/biomesoplenty/textures/blocks/log_palm_side.png
+texture:id=biomesoplenty/leaves_bamboo_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_bamboo_fancy.png
+texture:id=biomesoplenty/spring_water_flowing,filename=assets/biomesoplenty/textures/blocks/spring_water_flowing.png
+texture:id=biomesoplenty/log_dead_heart,filename=assets/biomesoplenty/textures/blocks/log_dead_heart.png
+texture:id=biomesoplenty/sunflowerbottom,filename=assets/biomesoplenty/textures/blocks/sunflowerbottom.png
+texture:id=biomesoplenty/dandelion,filename=assets/biomesoplenty/textures/blocks/dandelion.png
+texture:id=biomesoplenty/topazore,filename=assets/biomesoplenty/textures/blocks/topazore.png
+texture:id=biomesoplenty/dunegrass,filename=assets/biomesoplenty/textures/blocks/dunegrass.png
+texture:id=biomesoplenty/grave,filename=assets/biomesoplenty/textures/blocks/grave.png
+texture:id=biomesoplenty/log_fir_side,filename=assets/biomesoplenty/textures/blocks/log_fir_side.png
+texture:id=biomesoplenty/sapling_pine,filename=assets/biomesoplenty/textures/blocks/sapling_pine.png
+texture:id=biomesoplenty/leaves_apple1_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_apple1_fancy.png
+texture:id=biomesoplenty/dampgrass,filename=assets/biomesoplenty/textures/blocks/dampgrass.png
+texture:id=biomesoplenty/clover,filename=assets/biomesoplenty/textures/blocks/clover.png
+texture:id=biomesoplenty/holycobble,filename=assets/biomesoplenty/textures/blocks/holycobble.png
+texture:id=biomesoplenty/kelpsingle,filename=assets/biomesoplenty/textures/blocks/kelpsingle.png
+texture:id=biomesoplenty/sapling_persimmon,filename=assets/biomesoplenty/textures/blocks/sapling_persimmon.png
+texture:id=biomesoplenty/ashblock,filename=assets/biomesoplenty/textures/blocks/ashblock.png
+texture:id=biomesoplenty/leaves_willow_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_willow_fancy.png
+texture:id=biomesoplenty/log_acacia_side,filename=assets/biomesoplenty/textures/blocks/log_acacia_side.png
+texture:id=biomesoplenty/barley,filename=assets/biomesoplenty/textures/blocks/barley.png
+texture:id=biomesoplenty/kelpbottom,filename=assets/biomesoplenty/textures/blocks/kelpbottom.png
+texture:id=biomesoplenty/lavender,filename=assets/biomesoplenty/textures/blocks/lavender.png
+texture:id=biomesoplenty/log_palm_heart,filename=assets/biomesoplenty/textures/blocks/log_palm_heart.png
+texture:id=biomesoplenty/hibiscus,filename=assets/biomesoplenty/textures/blocks/hibiscus.png
+texture:id=biomesoplenty/log_hellbark_side,filename=assets/biomesoplenty/textures/blocks/log_hellbark_side.png
+texture:id=biomesoplenty/hydrangea,filename=assets/biomesoplenty/textures/blocks/hydrangea.png
+texture:id=biomesoplenty/log_fir_heart,filename=assets/biomesoplenty/textures/blocks/log_fir_heart.png
+texture:id=biomesoplenty/orangecoral,filename=assets/biomesoplenty/textures/blocks/orangecoral.png
+texture:id=biomesoplenty/bush,filename=assets/biomesoplenty/textures/blocks/bush.png
+texture:id=biomesoplenty/mudbrick,filename=assets/biomesoplenty/textures/blocks/mudbrick.png
+texture:id=biomesoplenty/log_mangrove_heart,filename=assets/biomesoplenty/textures/blocks/log_mangrove_heart.png
+texture:id=biomesoplenty/sapling_apple,filename=assets/biomesoplenty/textures/blocks/sapling_apple.png
+texture:id=biomesoplenty/cloud,filename=assets/biomesoplenty/textures/blocks/cloud.png
+texture:id=biomesoplenty/algae,filename=assets/biomesoplenty/textures/blocks/algae.png
+texture:id=biomesoplenty/bluemilk,filename=assets/biomesoplenty/textures/blocks/bluemilk.png
+texture:id=biomesoplenty/daffodil,filename=assets/biomesoplenty/textures/blocks/daffodil.png
+texture:id=biomesoplenty/sapling_maple,filename=assets/biomesoplenty/textures/blocks/sapling_maple.png
+texture:id=biomesoplenty/bromeliad,filename=assets/biomesoplenty/textures/blocks/bromeliad.png
+texture:id=biomesoplenty/sapling_dark,filename=assets/biomesoplenty/textures/blocks/sapling_dark.png
+texture:id=biomesoplenty/plank_pine,filename=assets/biomesoplenty/textures/blocks/plank_pine.png
+texture:id=biomesoplenty/rubyore,filename=assets/biomesoplenty/textures/blocks/rubyore.png
+texture:id=biomesoplenty/log_willow_heart,filename=assets/biomesoplenty/textures/blocks/log_willow_heart.png
+texture:id=biomesoplenty/leaves_acacia_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_acacia_fancy.png
+texture:id=biomesoplenty/log_holy_heart,filename=assets/biomesoplenty/textures/blocks/log_holy_heart.png
+texture:id=biomesoplenty/bones_large,filename=assets/biomesoplenty/textures/blocks/bones_large.png
+texture:id=biomesoplenty/peridotblock,filename=assets/biomesoplenty/textures/blocks/peridotblock.png
+texture:id=biomesoplenty/plank_holy,filename=assets/biomesoplenty/textures/blocks/plank_holy.png
+texture:id=biomesoplenty/liquid_poison_still,filename=assets/biomesoplenty/textures/blocks/liquid_poison_still.png
+texture:id=biomesoplenty/leaves_apple3_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_apple3_fancy.png
+texture:id=biomesoplenty/leaves_pine_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_pine_fancy.png
+texture:id=biomesoplenty/berrybush,filename=assets/biomesoplenty/textures/blocks/berrybush.png
+texture:id=biomesoplenty/shortgrass,filename=assets/biomesoplenty/textures/blocks/shortgrass.png
+texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=biomesoplenty/leaves_orangeautumn_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_orangeautumn_fancy.png
+texture:id=biomesoplenty/log_holy_side,filename=assets/biomesoplenty/textures/blocks/log_holy_side.png
+texture:id=biomesoplenty/cragrock,filename=assets/biomesoplenty/textures/blocks/cragrock.png
+texture:id=biomesoplenty/leaves_maple_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_maple_fancy.png
+texture:id=biomesoplenty/plank_fir,filename=assets/biomesoplenty/textures/blocks/plank_fir.png
+texture:id=biomesoplenty/sapling_holy,filename=assets/biomesoplenty/textures/blocks/sapling_holy.png
+texture:id=biomesoplenty/amethystblock,filename=assets/biomesoplenty/textures/blocks/amethystblock.png
+texture:id=biomesoplenty/turnip_stage_3,filename=assets/biomesoplenty/textures/blocks/turnip_stage_3.png
+texture:id=biomesoplenty/holydirt,filename=assets/biomesoplenty/textures/blocks/holydirt.png
+texture:id=biomesoplenty/kelpmiddle,filename=assets/biomesoplenty/textures/blocks/kelpmiddle.png
+texture:id=biomesoplenty/lilyofthevalley,filename=assets/biomesoplenty/textures/blocks/lilyofthevalley.png
+texture:id=biomesoplenty/plank_redwood,filename=assets/biomesoplenty/textures/blocks/plank_redwood.png
+texture:id=biomesoplenty/crystal,filename=assets/biomesoplenty/textures/blocks/crystal.png
+texture:id=biomesoplenty/pinkcoral,filename=assets/biomesoplenty/textures/blocks/pinkcoral.png
+texture:id=biomesoplenty/sapling_whitecherry,filename=assets/biomesoplenty/textures/blocks/sapling_whitecherry.png
+texture:id=biomesoplenty/honeycombempty,filename=assets/biomesoplenty/textures/blocks/honeycombempty.png
+texture:id=biomesoplenty/log_magic_heart,filename=assets/biomesoplenty/textures/blocks/log_magic_heart.png
+texture:id=biomesoplenty/log_mangrove_side,filename=assets/biomesoplenty/textures/blocks/log_mangrove_side.png
+texture:id=biomesoplenty/swampflower,filename=assets/biomesoplenty/textures/blocks/swampflower.png
+texture:id=biomesoplenty/log_jacaranda_heart,filename=assets/biomesoplenty/textures/blocks/log_jacaranda_heart.png
+texture:id=biomesoplenty/hive,filename=assets/biomesoplenty/textures/blocks/hive.png
+texture:id=biomesoplenty/kelptop,filename=assets/biomesoplenty/textures/blocks/kelptop.png
+texture:id=biomesoplenty/flatmushroom,filename=assets/biomesoplenty/textures/blocks/flatmushroom.png
+texture:id=biomesoplenty/leaves_apple2_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_apple2_fancy.png
+texture:id=biomesoplenty/tanzaniteblock,filename=assets/biomesoplenty/textures/blocks/tanzaniteblock.png
+texture:id=biomesoplenty/turnip_stage_2,filename=assets/biomesoplenty/textures/blocks/turnip_stage_2.png
+texture:id=biomesoplenty/turnip_stage_1,filename=assets/biomesoplenty/textures/blocks/turnip_stage_1.png
+texture:id=biomesoplenty/moss,filename=assets/biomesoplenty/textures/blocks/moss.png
+texture:id=biomesoplenty/turnip_stage_0,filename=assets/biomesoplenty/textures/blocks/turnip_stage_0.png
+texture:id=biomesoplenty/sapling_fir,filename=assets/biomesoplenty/textures/blocks/sapling_fir.png
+texture:id=biomesoplenty/violet,filename=assets/biomesoplenty/textures/blocks/violet.png
+texture:id=biomesoplenty/sapling_acacia,filename=assets/biomesoplenty/textures/blocks/sapling_acacia.png
+texture:id=biomesoplenty/glowshroom,filename=assets/biomesoplenty/textures/blocks/glowshroom.png
+texture:id=biomesoplenty/plank_jacaranda,filename=assets/biomesoplenty/textures/blocks/plank_jacaranda.png
+texture:id=biomesoplenty/sapling_pinkcherry,filename=assets/biomesoplenty/textures/blocks/sapling_pinkcherry.png
+texture:id=biomesoplenty/wildcarrot,filename=assets/biomesoplenty/textures/blocks/wildcarrot.png
+texture:id=biomesoplenty/drieddirt,filename=assets/biomesoplenty/textures/blocks/drieddirt.png
+texture:id=biomesoplenty/mediumgrass,filename=assets/biomesoplenty/textures/blocks/mediumgrass.png
+texture:id=biomesoplenty/leaves_redwood_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_redwood_fancy.png
+texture:id=biomesoplenty/cosmos,filename=assets/biomesoplenty/textures/blocks/cosmos.png
+texture:id=biomesoplenty/minersdelight,filename=assets/biomesoplenty/textures/blocks/minersdelight.png
+texture:id=biomesoplenty/log_hellbark_heart,filename=assets/biomesoplenty/textures/blocks/log_hellbark_heart.png
+texture:id=biomesoplenty/leaves_pinkcherry_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_pinkcherry_fancy.png
+texture:id=biomesoplenty/leaves_whitecherry_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_whitecherry_fancy.png
+texture:id=biomesoplenty/longgrass1,filename=assets/biomesoplenty/textures/blocks/longgrass1.png
+texture:id=biomesoplenty/overgrownnetherrack3,filename=assets/biomesoplenty/textures/blocks/overgrownnetherrack3.png
+texture:id=biomesoplenty/longgrass2,filename=assets/biomesoplenty/textures/blocks/longgrass2.png
+texture:id=biomesoplenty/longgrass3,filename=assets/biomesoplenty/textures/blocks/longgrass3.png
+texture:id=biomesoplenty/overgrownnetherrack1,filename=assets/biomesoplenty/textures/blocks/overgrownnetherrack1.png
+texture:id=biomesoplenty/overgrownnetherrack2,filename=assets/biomesoplenty/textures/blocks/overgrownnetherrack2.png
+texture:id=biomesoplenty/leaves_origin_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_origin_fancy.png
+texture:id=biomesoplenty/sapling_bamboo,filename=assets/biomesoplenty/textures/blocks/sapling_bamboo.png
+texture:id=biomesoplenty/tanzaniteore,filename=assets/biomesoplenty/textures/blocks/tanzaniteore.png
+texture:id=biomesoplenty/redcobble,filename=assets/biomesoplenty/textures/blocks/redcobble.png
+texture:id=biomesoplenty/treemoss,filename=assets/biomesoplenty/textures/blocks/treemoss.png
+texture:id=biomesoplenty/sprout,filename=assets/biomesoplenty/textures/blocks/sprout.png
+texture:id=biomesoplenty/holygrass_top,filename=assets/biomesoplenty/textures/blocks/holygrass_top.png
+texture:id=biomesoplenty/holytallgrass,filename=assets/biomesoplenty/textures/blocks/holytallgrass.png
+texture:id=biomesoplenty/leaves_persimmon3_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_persimmon3_fancy.png
+texture:id=biomesoplenty/sapling_palm,filename=assets/biomesoplenty/textures/blocks/sapling_palm.png
+texture:id=biomesoplenty/plank_hell_bark,filename=assets/biomesoplenty/textures/blocks/plank_hell_bark.png
+texture:id=biomesoplenty/rubyblock,filename=assets/biomesoplenty/textures/blocks/rubyblock.png
+texture:id=biomesoplenty/icyiris,filename=assets/biomesoplenty/textures/blocks/icyiris.png
+texture:id=biomesoplenty/poisonivy,filename=assets/biomesoplenty/textures/blocks/poisonivy.png
+texture:id=biomesoplenty/leaves_mangrove_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_mangrove_fancy.png
+texture:id=biomesoplenty/leaves_dark_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_dark_fancy.png
+texture:id=biomesoplenty/redbrick,filename=assets/biomesoplenty/textures/blocks/redbrick.png
+texture:id=biomesoplenty/leaves_fir_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_fir_fancy.png
+texture:id=biomesoplenty/leaves_persimmon0_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_persimmon0_fancy.png
+texture:id=biomesoplenty/harddirt,filename=assets/biomesoplenty/textures/blocks/harddirt.png
+texture:id=biomesoplenty/honeyblock,filename=assets/biomesoplenty/textures/blocks/honeyblock.png
+texture:id=biomesoplenty/sapling_yellowautumn,filename=assets/biomesoplenty/textures/blocks/sapling_yellowautumn.png
+texture:id=biomesoplenty/sapling_willow,filename=assets/biomesoplenty/textures/blocks/sapling_willow.png
+texture:id=biomesoplenty/cactus,filename=assets/biomesoplenty/textures/blocks/cactus.png
+texture:id=biomesoplenty/plank_mangrove,filename=assets/biomesoplenty/textures/blocks/plank_mangrove.png
+texture:id=biomesoplenty/koru,filename=assets/biomesoplenty/textures/blocks/koru.png
+texture:id=biomesoplenty/sapling_orangeautumn,filename=assets/biomesoplenty/textures/blocks/sapling_orangeautumn.png
+texture:id=biomesoplenty/leaves_palm_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_palm_fancy.png
+texture:id=biomesoplenty/sapling_mangrove,filename=assets/biomesoplenty/textures/blocks/sapling_mangrove.png
+texture:id=biomesoplenty/plank_magic,filename=assets/biomesoplenty/textures/blocks/plank_magic.png
+texture:id=biomesoplenty/liquid_poison_flowing,filename=assets/biomesoplenty/textures/blocks/liquid_poison_flowing.png
+texture:id=biomesoplenty/sapling_sacredoak,filename=assets/biomesoplenty/textures/blocks/sapling_sacredoak.png
+texture:id=biomesoplenty/burningblossom,filename=assets/biomesoplenty/textures/blocks/burningblossom.png
+texture:id=biomesoplenty/bigflowerstem_side,filename=assets/biomesoplenty/textures/blocks/bigflowerstem_side.png
+texture:id=biomesoplenty/leaves_holy_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_holy_fancy.png
+texture:id=biomesoplenty/holygrass_side,filename=assets/biomesoplenty/textures/blocks/holygrass_side.png
+texture:id=biomesoplenty/rainbowflower,filename=assets/biomesoplenty/textures/blocks/rainbowflower.png
+texture:id=biomesoplenty/willow,filename=assets/biomesoplenty/textures/blocks/willow.png
+texture:id=biomesoplenty/deadgrass,filename=assets/biomesoplenty/textures/blocks/deadgrass.png
+texture:id=biomesoplenty/mud,filename=assets/biomesoplenty/textures/blocks/mud.png
+texture:id=biomesoplenty/peridotore,filename=assets/biomesoplenty/textures/blocks/peridotore.png
+texture:id=biomesoplenty/wildflower,filename=assets/biomesoplenty/textures/blocks/wildflower.png
+texture:id=biomesoplenty/stalactite,filename=assets/biomesoplenty/textures/blocks/stalactite.png
+texture:id=biomesoplenty/sapling_dead,filename=assets/biomesoplenty/textures/blocks/sapling_dead.png
+texture:id=biomesoplenty/deadbloom,filename=assets/biomesoplenty/textures/blocks/deadbloom.png
+texture:id=biomesoplenty/leaves_dead_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_dead_fancy.png
+texture:id=biomesoplenty/sunflowertop,filename=assets/biomesoplenty/textures/blocks/sunflowertop.png
+texture:id=biomesoplenty/reed,filename=assets/biomesoplenty/textures/blocks/reed.png
+texture:id=biomesoplenty/holystonemossy,filename=assets/biomesoplenty/textures/blocks/holystonemossy.png
+texture:id=biomesoplenty/log_redwood_side,filename=assets/biomesoplenty/textures/blocks/log_redwood_side.png
+texture:id=biomesoplenty/wheatgrass,filename=assets/biomesoplenty/textures/blocks/wheatgrass.png
+texture:id=biomesoplenty/bones_medium,filename=assets/biomesoplenty/textures/blocks/bones_medium.png
+texture:id=biomesoplenty/leaves_persimmon1_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_persimmon1_fancy.png
+texture:id=biomesoplenty/bambootop,filename=assets/biomesoplenty/textures/blocks/bambootop.png
+texture:id=biomesoplenty/log_cherry_side,filename=assets/biomesoplenty/textures/blocks/log_cherry_side.png
+texture:id=biomesoplenty/log_jacaranda_side,filename=assets/biomesoplenty/textures/blocks/log_jacaranda_side.png
+texture:id=biomesoplenty/leaves_hellbark_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_hellbark_fancy.png
+texture:id=biomesoplenty/log_cherry_heart,filename=assets/biomesoplenty/textures/blocks/log_cherry_heart.png
+texture:id=biomesoplenty/glowflower,filename=assets/biomesoplenty/textures/blocks/glowflower.png
+texture:id=biomesoplenty/amethystore,filename=assets/biomesoplenty/textures/blocks/amethystore.png
+texture:id=biomesoplenty/topazblock,filename=assets/biomesoplenty/textures/blocks/topazblock.png
+texture:id=biomesoplenty/log_magic_side,filename=assets/biomesoplenty/textures/blocks/log_magic_side.png
+texture:id=biomesoplenty/spring_water_still,filename=assets/biomesoplenty/textures/blocks/spring_water_still.png
+texture:id=biomesoplenty/cattail,filename=assets/biomesoplenty/textures/blocks/cattail.png
+texture:id=biomesoplenty/cloverpatch,filename=assets/biomesoplenty/textures/blocks/cloverpatch.png
+texture:id=biomesoplenty/stalagmite,filename=assets/biomesoplenty/textures/blocks/stalagmite.png
+texture:id=biomesoplenty/log_acacia_heart,filename=assets/biomesoplenty/textures/blocks/log_acacia_heart.png
+texture:id=biomesoplenty/quicksand,filename=assets/biomesoplenty/textures/blocks/quicksand.png
+texture:id=biomesoplenty/bigflowerred,filename=assets/biomesoplenty/textures/blocks/bigflowerred.png
+texture:id=biomesoplenty/sapling_hellbark,filename=assets/biomesoplenty/textures/blocks/sapling_hellbark.png
+texture:id=biomesoplenty/sapphireblock,filename=assets/biomesoplenty/textures/blocks/sapphireblock.png
+texture:id=biomesoplenty/honey_still,filename=assets/biomesoplenty/textures/blocks/honey_still.png
+texture:id=biomesoplenty/smolderinggrass_bottom,filename=assets/biomesoplenty/textures/blocks/smolderinggrass_bottom.png
+texture:id=biomesoplenty/log_dark_side,filename=assets/biomesoplenty/textures/blocks/log_dark_side.png
+texture:id=biomesoplenty/bigflowerstem_heart,filename=assets/biomesoplenty/textures/blocks/bigflowerstem_heart.png
+texture:id=biomesoplenty/malachiteore,filename=assets/biomesoplenty/textures/blocks/malachiteore.png
+texture:id=biomesoplenty/toadstool,filename=assets/biomesoplenty/textures/blocks/toadstool.png
+
+# biome_ids/Sublime_Shrubland_(Promised_Land)_ID
+biome:id=biome_ids/Sublime_Shrubland_(Promised_Land)_ID,grassColorMult=178ED85,foliageColorMult=178ED85,waterColorMult=FFFFFF
+# biome_ids/Thinned_Mystic_Grove_(Sub-Biome)_ID
+biome:id=biome_ids/Thinned_Mystic_Grove_(Sub-Biome)_ID,grassColorMult=169CFDB,foliageColorMult=170E099,waterColorMult=FF107A
+# biome_ids/Bloody_Heap_(Nether)_ID
+biome:id=biome_ids/Bloody_Heap_(Nether)_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Lavender_Fields_ID
+biome:id=biome_ids/Lavender_Fields_ID,grassColorMult=1A1C36D,foliageColorMult=1A1C36D,waterColorMult=FFFFFF
+# biome_ids/Tropics_Mountain_(Sub-Biome)_ID
+biome:id=biome_ids/Tropics_Mountain_(Sub-Biome)_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
+# biome_ids/Autumn_Hills_ID
+biome:id=biome_ids/Autumn_Hills_ID,grassColorMult=1BAA960,foliageColorMult=1C4CC55,waterColorMult=FFFFFF
+# biome_ids/Overgrown_Greens_ID
+biome:id=biome_ids/Overgrown_Greens_ID,grassColorMult=1B6FF5E,foliageColorMult=18BFF56,waterColorMult=FFFFFF
+# biome_ids/Forest_Hills_(Sub-Biome)_ID
+biome:id=biome_ids/Forest_Hills_(Sub-Biome)_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
+# biome_ids/Taiga_Hills_(Sub-Biome)_ID
+biome:id=biome_ids/Taiga_Hills_(Sub-Biome)_ID,grassColorMult=182B593,foliageColorMult=163A277,waterColorMult=FFFFFF
+# biome_ids/Jungle_Hills_(Sub-Biome)_ID
+biome:id=biome_ids/Jungle_Hills_(Sub-Biome)_ID,grassColorMult=162A03B,foliageColorMult=16BBC3C,waterColorMult=4FFF3F
+# biome_ids/Silkglades_ID
+biome:id=biome_ids/Silkglades_ID,grassColorMult=1CCC9AD,foliageColorMult=1D7DBB6,waterColorMult=FFFF77
+# biome_ids/Savanna_Plateau_(Sub-Biome)_ID
+biome:id=biome_ids/Savanna_Plateau_(Sub-Biome)_ID,grassColorMult=1B2B952,foliageColorMult=19FA726,waterColorMult=FFFFFF
+# biome_ids/Forested_Field_(Sub-Biome)_ID
+biome:id=biome_ids/Forested_Field_(Sub-Biome)_ID,grassColorMult=183BD65,foliageColorMult=165AB3E,waterColorMult=FFFFFF
+# biome_ids/Seasonal_Spruce_Forest_(Sub-Biome)_ID
+biome:id=biome_ids/Seasonal_Spruce_Forest_(Sub-Biome)_ID,grassColorMult=1BEC44C,foliageColorMult=1B3C442,waterColorMult=FFFFFF
+# biome_ids/Alps_Forest_(Sub-Biome)_ID
+biome:id=biome_ids/Alps_Forest_(Sub-Biome)_ID,grassColorMult=191B971,foliageColorMult=176A64E,waterColorMult=FFFFFF
+# biome_ids/Alps_Mountainside_(Sub-Biome)_ID
+biome:id=biome_ids/Alps_Mountainside_(Sub-Biome)_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Thinned_Timber_(Sub-Biome)_ID
+biome:id=biome_ids/Thinned_Timber_(Sub-Biome)_ID,grassColorMult=1A6AD66,foliageColorMult=1A89B59,waterColorMult=FFFFFF
+# biome_ids/Thinned_Pasture_(Sub-Biome)_ID
+biome:id=biome_ids/Thinned_Pasture_(Sub-Biome)_ID,grassColorMult=1C8E84A,foliageColorMult=1C8E84A,waterColorMult=FFFFFF
+# biome_ids/Pasture_Meadow_(Sub-Biome)_ID
+biome:id=biome_ids/Pasture_Meadow_(Sub-Biome)_ID,grassColorMult=1C8E84A,foliageColorMult=1C8E84A,waterColorMult=FFFFFF
+# biome_ids/Thick_Ominous_Woods_(Sub-Biome)_ID
+biome:id=biome_ids/Thick_Ominous_Woods_(Sub-Biome)_ID,grassColorMult=13F4151,foliageColorMult=13F4151,waterColorMult=1E1B26
+# biome_ids/Thick_Shrubland_(Sub-Biome)_ID
+biome:id=biome_ids/Thick_Shrubland_(Sub-Biome)_ID,grassColorMult=1A4B76E,foliageColorMult=18CA44A,waterColorMult=FFFFFF
+# biome_ids/Canyon_Ravine_(Sub-Biome)_ID
+biome:id=biome_ids/Canyon_Ravine_(Sub-Biome)_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
+# biome_ids/Meadow_Forest_(Sub-Biome)_ID
+biome:id=biome_ids/Meadow_Forest_(Sub-Biome)_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
+# biome_ids/Oceanic_Abyss_(Ocean)_ID
+biome:id=biome_ids/Oceanic_Abyss_(Ocean)_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Coral_Reef_(Ocean)_ID
+biome:id=biome_ids/Coral_Reef_(Ocean)_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Kelp_Forest_(Ocean)_ID
+biome:id=biome_ids/Kelp_Forest_(Ocean)_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Gravel_Beach_ID
+biome:id=biome_ids/Gravel_Beach_ID,grassColorMult=186B688,foliageColorMult=167A369,waterColorMult=FFFFFF
+# biome_ids/Overgrown_Beach_ID
+biome:id=biome_ids/Overgrown_Beach_ID,grassColorMult=18ABF57,foliageColorMult=16DAE2C,waterColorMult=FFFFFF
+# biome_ids/Wonderous_Woods_(Promised_Land)_ID
+biome:id=biome_ids/Wonderous_Woods_(Promised_Land)_ID,grassColorMult=178ED85,foliageColorMult=178ED85,waterColorMult=FFFFFF
+# biome_ids/Majestic_Meadow_(Promised_Land)_ID
+biome:id=biome_ids/Majestic_Meadow_(Promised_Land)_ID,grassColorMult=178ED85,foliageColorMult=178ED85,waterColorMult=FFFFFF
+# biome_ids/Blessed_Bog_(Promised_Land)_ID
+biome:id=biome_ids/Blessed_Bog_(Promised_Land)_ID,grassColorMult=178ED85,foliageColorMult=178ED85,waterColorMult=FFFFFF
+# biome_ids/Nether_Base_(Nether)_ID
+biome:id=biome_ids/Nether_Base_(Nether)_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Undergarden_(Nether)_ID
+biome:id=biome_ids/Undergarden_(Nether)_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Corrupted_Sands_(Nether)_ID
+biome:id=biome_ids/Corrupted_Sands_(Nether)_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Phantasmagoric_Inferno_(Nether)_ID
+biome:id=biome_ids/Phantasmagoric_Inferno_(Nether)_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Boneyard_(Nether)_ID
+biome:id=biome_ids/Boneyard_(Nether)_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Alps_ID
+biome:id=biome_ids/Alps_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Arctic_ID
+biome:id=biome_ids/Arctic_ID,grassColorMult=1AA8A4E,foliageColorMult=1B5A353,waterColorMult=FFFFFF
+# biome_ids/Badlands_ID
+biome:id=biome_ids/Badlands_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Bamboo_Forest_ID
+biome:id=biome_ids/Bamboo_Forest_ID,grassColorMult=1A3E053,foliageColorMult=1A3E053,waterColorMult=FFFFFF
+# biome_ids/Bayou_ID
+biome:id=biome_ids/Bayou_ID,grassColorMult=18BAF6B,foliageColorMult=1B0E088,waterColorMult=FFD932
+# biome_ids/Birch_Forest_ID
+biome:id=biome_ids/Birch_Forest_ID,grassColorMult=192B77A,foliageColorMult=177A458,waterColorMult=FFFFFF
+# biome_ids/Bog_ID
+biome:id=biome_ids/Bog_ID,grassColorMult=1D8935F,foliageColorMult=1DAE579,waterColorMult=FFFFFF
+# biome_ids/Boreal_Forest_ID
+biome:id=biome_ids/Boreal_Forest_ID,grassColorMult=19FB771,foliageColorMult=1C9CE65,waterColorMult=FFFFFF
+# biome_ids/Brushland_ID
+biome:id=biome_ids/Brushland_ID,grassColorMult=1C9C17F,foliageColorMult=1B2C67F,waterColorMult=FFFFFF
+# biome_ids/Canyon_ID
+biome:id=biome_ids/Canyon_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
+# biome_ids/Chaparral_ID
+biome:id=biome_ids/Chaparral_ID,grassColorMult=1C0D85D,foliageColorMult=177AB2F,waterColorMult=FFFFFF
+# biome_ids/Cherry_Blossom_Grove_ID
+biome:id=biome_ids/Cherry_Blossom_Grove_ID,grassColorMult=1A3FFAA,foliageColorMult=1A3FFAA,waterColorMult=FFFFFF
+# biome_ids/Coniferous_Forest_ID
+biome:id=biome_ids/Coniferous_Forest_ID,grassColorMult=191B971,foliageColorMult=176A64E,waterColorMult=FFFFFF
+# biome_ids/Coniferous_Forest_(Snow)_ID
+biome:id=biome_ids/Coniferous_Forest_(Snow)_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Crag_ID
+biome:id=biome_ids/Crag_ID,grassColorMult=194B77A,foliageColorMult=179A359,waterColorMult=0E6A35
+# biome_ids/Dead_Forest_ID
+biome:id=biome_ids/Dead_Forest_ID,grassColorMult=1BCA165,foliageColorMult=1BCA165,waterColorMult=FFFFFF
+# biome_ids/Dead_Forest_(Snow)_ID
+biome:id=biome_ids/Dead_Forest_(Snow)_ID,grassColorMult=1AA8A4E,foliageColorMult=1B5A353,waterColorMult=FFFFFF
+# biome_ids/Dead_Swamp_ID
+biome:id=biome_ids/Dead_Swamp_ID,grassColorMult=166704C,foliageColorMult=166704C,waterColorMult=A2AD51
+# biome_ids/Deadlands_ID
+biome:id=biome_ids/Deadlands_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FF0000
+# biome_ids/Deciduous_Forest_ID
+biome:id=biome_ids/Deciduous_Forest_ID,grassColorMult=1C1B749,foliageColorMult=1C4C93A,waterColorMult=FFFFFF
+# biome_ids/Dunes_ID
+biome:id=biome_ids/Dunes_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Fen_ID
+biome:id=biome_ids/Fen_ID,grassColorMult=1BAC481,foliageColorMult=1CEB979,waterColorMult=FFFFFF
+# biome_ids/Field_ID
+biome:id=biome_ids/Field_ID,grassColorMult=183BD65,foliageColorMult=165AB3E,waterColorMult=FFFFFF
+# biome_ids/Frost_Forest_ID
+biome:id=biome_ids/Frost_Forest_ID,grassColorMult=1ABD6BC,foliageColorMult=1ABD6BC,waterColorMult=FFFFFF
+# biome_ids/Fungi_Forest_ID
+biome:id=biome_ids/Fungi_Forest_ID,grassColorMult=1F0F970,foliageColorMult=1A9FB6A,waterColorMult=00FF2E
+# biome_ids/Garden_ID
+biome:id=biome_ids/Garden_ID,grassColorMult=174D374,foliageColorMult=166E266,waterColorMult=FFFFFF
+# biome_ids/Glacier_ID
+biome:id=biome_ids/Glacier_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Grassland_ID
+biome:id=biome_ids/Grassland_ID,grassColorMult=17FDB7D,foliageColorMult=17FDB7D,waterColorMult=FFFFFF
+# biome_ids/Grove_ID
+biome:id=biome_ids/Grove_ID,grassColorMult=1517F51,foliageColorMult=1619961,waterColorMult=FFFFFF
+# biome_ids/Heathland_ID
+biome:id=biome_ids/Heathland_ID,grassColorMult=1CEC577,foliageColorMult=1AEC681,waterColorMult=FFFFFF
+# biome_ids/Highland_ID
+biome:id=biome_ids/Highland_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
+# biome_ids/Hot_Springs_ID
+biome:id=biome_ids/Hot_Springs_ID,grassColorMult=186BB6F,foliageColorMult=168A94A,waterColorMult=FFFFFF
+# biome_ids/Icy_Hills_ID
+biome:id=biome_ids/Icy_Hills_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Jade_Cliffs_ID
+biome:id=biome_ids/Jade_Cliffs_ID,grassColorMult=17CA568,foliageColorMult=18ACC6A,waterColorMult=FFFFFF
+# biome_ids/Lush_Desert_ID
+biome:id=biome_ids/Lush_Desert_ID,grassColorMult=1A2BA5D,foliageColorMult=18BA835,waterColorMult=FFFFFF
+# biome_ids/Lush_Swamp_ID
+biome:id=biome_ids/Lush_Swamp_ID,grassColorMult=16DC257,foliageColorMult=148B22C,waterColorMult=FFFFFF
+# biome_ids/Mangrove_ID
+biome:id=biome_ids/Mangrove_ID,grassColorMult=16AC44E,foliageColorMult=145B421,waterColorMult=FFFFFF
+# biome_ids/Maple_Woods_ID
+biome:id=biome_ids/Maple_Woods_ID,grassColorMult=186B688,foliageColorMult=167A369,waterColorMult=FFFFFF
+# biome_ids/Marsh_ID
+biome:id=biome_ids/Marsh_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Meadow_ID
+biome:id=biome_ids/Meadow_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
+# biome_ids/Mesa_ID
+biome:id=biome_ids/Mesa_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Moor_ID
+biome:id=biome_ids/Moor_ID,grassColorMult=1619365,foliageColorMult=1619365,waterColorMult=588276
+# biome_ids/Mountain_ID
+biome:id=biome_ids/Mountain_ID,grassColorMult=19CB774,foliageColorMult=183A352,waterColorMult=FFFFFF
+# biome_ids/Mystic_Grove_ID
+biome:id=biome_ids/Mystic_Grove_ID,grassColorMult=169CFDB,foliageColorMult=170E099,waterColorMult=FF107A
+# biome_ids/Oasis_ID
+biome:id=biome_ids/Oasis_ID,grassColorMult=173C447,foliageColorMult=150B41A,waterColorMult=FFFFFF
+# biome_ids/Ominous_Woods_ID
+biome:id=biome_ids/Ominous_Woods_ID,grassColorMult=13F4151,foliageColorMult=13F4151,waterColorMult=1E1B26
+# biome_ids/Orchard_ID
+biome:id=biome_ids/Orchard_ID,grassColorMult=1D5FF6D,foliageColorMult=1D5FF6D,waterColorMult=FFFFFF
+# biome_ids/Origin_Valley_ID
+biome:id=biome_ids/Origin_Valley_ID,grassColorMult=1A2FF5F,foliageColorMult=13AFF00,waterColorMult=FFFFFF
+# biome_ids/Outback_ID
+biome:id=biome_ids/Outback_ID,grassColorMult=1ADB861,foliageColorMult=19AA539,waterColorMult=FFFFFF
+# biome_ids/Pasture_ID
+biome:id=biome_ids/Pasture_ID,grassColorMult=1C8E84A,foliageColorMult=1C8E84A,waterColorMult=FFFFFF
+# biome_ids/Polar_ID
+biome:id=biome_ids/Polar_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=383D6B
+# biome_ids/Prairie_ID
+biome:id=biome_ids/Prairie_ID,grassColorMult=1C8E580,foliageColorMult=1ADE07B,waterColorMult=FFFFFF
+# biome_ids/Quagmire_ID
+biome:id=biome_ids/Quagmire_ID,grassColorMult=19E8B69,foliageColorMult=19E8B69,waterColorMult=CC5100
+# biome_ids/Rainforest_ID
+biome:id=biome_ids/Rainforest_ID,grassColorMult=11AD86C,foliageColorMult=114E26F,waterColorMult=FFFFFF
+# biome_ids/Redwood_Forest_ID
+biome:id=biome_ids/Redwood_Forest_ID,grassColorMult=191BD59,foliageColorMult=177AB2F,waterColorMult=FFFFFF
+# biome_ids/Sacred_Springs_ID
+biome:id=biome_ids/Sacred_Springs_ID,grassColorMult=100995B,foliageColorMult=100995B,waterColorMult=FFFFFF
+# biome_ids/Savanna_ID
+biome:id=biome_ids/Savanna_ID,grassColorMult=1B2B952,foliageColorMult=19FA726,waterColorMult=FFFFFF
+# biome_ids/Scrubland_ID
+biome:id=biome_ids/Scrubland_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Seasonal_Forest_ID
+biome:id=biome_ids/Seasonal_Forest_ID,grassColorMult=1BEC44C,foliageColorMult=1B3C442,waterColorMult=FFFFFF
+# biome_ids/Shield_ID
+biome:id=biome_ids/Shield_ID,grassColorMult=1647F38,foliageColorMult=1789643,waterColorMult=FFFFFF
+# biome_ids/Shore_ID
+biome:id=biome_ids/Shore_ID,grassColorMult=191BD59,foliageColorMult=177AB2F,waterColorMult=FFFFFF
+# biome_ids/Shrubland_ID
+biome:id=biome_ids/Shrubland_ID,grassColorMult=1A4B76E,foliageColorMult=18CA44A,waterColorMult=FFFFFF
+# biome_ids/Sludgepit_ID
+biome:id=biome_ids/Sludgepit_ID,grassColorMult=1746429,foliageColorMult=1919134,waterColorMult=AF9200
+# biome_ids/Spruce_Woods_ID
+biome:id=biome_ids/Spruce_Woods_ID,grassColorMult=183BD65,foliageColorMult=165AB3E,waterColorMult=FFFFFF
+# biome_ids/Steppe_ID
+biome:id=biome_ids/Steppe_ID,grassColorMult=1CCAB5F,foliageColorMult=1CCAB5F,waterColorMult=FFFFFF
+# biome_ids/Temperate_Rainforest_ID
+biome:id=biome_ids/Temperate_Rainforest_ID,grassColorMult=1B6D367,foliageColorMult=1BBDD63,waterColorMult=FFFFFF
+# biome_ids/Thicket_ID
+biome:id=biome_ids/Thicket_ID,grassColorMult=19CB96D,foliageColorMult=184A648,waterColorMult=FFFFFF
+# biome_ids/Timber_ID
+biome:id=biome_ids/Timber_ID,grassColorMult=1A6AD66,foliageColorMult=1A89B59,waterColorMult=FFFFFF
+# biome_ids/Tropical_Rainforest_ID
+biome:id=biome_ids/Tropical_Rainforest_ID,grassColorMult=1A7E140,foliageColorMult=188E140,waterColorMult=5DFF00
+# biome_ids/Tropics_ID
+biome:id=biome_ids/Tropics_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
+# biome_ids/Tundra_ID
+biome:id=biome_ids/Tundra_ID,grassColorMult=1AD8456,foliageColorMult=1BF664E,waterColorMult=FFFFFF
+# biome_ids/Volcano_ID
+biome:id=biome_ids/Volcano_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Wasteland_ID
+biome:id=biome_ids/Wasteland_ID,grassColorMult=19DA078,foliageColorMult=1999E55,waterColorMult=E5FF00
+# biome_ids/Wetland_ID
+biome:id=biome_ids/Wetland_ID,grassColorMult=15A935F,foliageColorMult=14F9657,waterColorMult=636084
+# biome_ids/Woodland_ID
+biome:id=biome_ids/Woodland_ID,grassColorMult=1A6BB4E,foliageColorMult=191A922,waterColorMult=FFFFFF
+# biome_ids/Plains_(New)_ID
+biome:id=biome_ids/Plains_(New)_ID,grassColorMult=191BD59,foliageColorMult=177AB2F,waterColorMult=FFFFFF
+# biome_ids/Desert_(New)_ID
+biome:id=biome_ids/Desert_(New)_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Forest_(New)_ID
+biome:id=biome_ids/Forest_(New)_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
+# biome_ids/Taiga_(New)_ID
+biome:id=biome_ids/Taiga_(New)_ID,grassColorMult=182B593,foliageColorMult=163A277,waterColorMult=FFFFFF
+# biome_ids/Swampland_(New)_ID
+biome:id=biome_ids/Swampland_(New)_ID,grassColorMult=15C694E,foliageColorMult=1496137,waterColorMult=E0FF70
+# biome_ids/Extreme_Hills_(New)_ID
+biome:id=biome_ids/Extreme_Hills_(New)_ID,grassColorMult=18AB689,foliageColorMult=16DA36B,waterColorMult=FFFFFF
+# biome_ids/Jungle_(New)_ID
+biome:id=biome_ids/Jungle_(New)_ID,grassColorMult=162A03B,foliageColorMult=16BBC3C,waterColorMult=4FFF3F
+
+# terrain_block_ids_-_must_be_below_255/Mud_ID:* (bop.mud), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockMud
+block:id=terrain_block_ids_-_must_be_below_255/Mud_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/mud
+block:id=terrain_block_ids_-_must_be_below_255/Mud_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/quicksand
+block:id=terrain_block_ids_-_must_be_below_255/Mud_ID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/mud
+# terrain_block_ids_-_must_be_below_255/Dried_Dirt_ID:* (bop.generic.dried_dirt), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=terrain_block_ids_-_must_be_below_255/Dried_Dirt_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/drieddirt
+# terrain_block_ids_-_must_be_below_255/Red_Rock_ID:* (bop.redRocks), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPRedRock
+block:id=terrain_block_ids_-_must_be_below_255/Red_Rock_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/redrock
+block:id=terrain_block_ids_-_must_be_below_255/Red_Rock_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/redcobble
+block:id=terrain_block_ids_-_must_be_below_255/Red_Rock_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/redbrick
+block:id=terrain_block_ids_-_must_be_below_255/Red_Rock_ID,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/redrock
+# terrain_block_ids_-_must_be_below_255/Ash_Block_ID:* (bop.ash), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockAsh
+block:id=terrain_block_ids_-_must_be_below_255/Ash_Block_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/ashblock
+# terrain_block_ids_-_must_be_below_255/Ash_Stone_ID:* (bop.generic.ash_stone), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=terrain_block_ids_-_must_be_below_255/Ash_Stone_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/ashstone
+# terrain_block_ids_-_must_be_below_255/Hard_Ice_ID:* (bop.generic.hard_ice), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=terrain_block_ids_-_must_be_below_255/Hard_Ice_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/hardice
+# terrain_block_ids_-_must_be_below_255/Origin_Grass_ID:* (bop.originGrass), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockOriginGrass
+block:id=terrain_block_ids_-_must_be_below_255/Origin_Grass_ID,data=*,stdrot=true,face0=0:biomesoplenty/origingrass3,face1=0:biomesoplenty/origingrass1,face2-5=0:biomesoplenty/origingrass2
+# terrain_block_ids_-_must_be_below_255/Hard_Sand_ID:* (bop.generic.hard_sand), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=terrain_block_ids_-_must_be_below_255/Hard_Sand_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/hardsand
+# terrain_block_ids_-_must_be_below_255/Hard_Dirt_ID:* (bop.generic.hard_dirt), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=terrain_block_ids_-_must_be_below_255/Hard_Dirt_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/harddirt
+# terrain_block_ids_-_must_be_below_255/Holy_Grass_ID:* (bop.holyGrass), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGrass
+block:id=terrain_block_ids_-_must_be_below_255/Holy_Grass_ID,data=0,stdrot=true,face0=0:biomesoplenty/holydirt,face1=0:biomesoplenty/holygrass_top,face2-5=0:biomesoplenty/holygrass_side
+block:id=terrain_block_ids_-_must_be_below_255/Holy_Grass_ID,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:biomesoplenty/smolderinggrass_bottom,face1=0:biomesoplenty/smolderinggrass_top,face2-5=0:biomesoplenty/smolderinggrass_side
+# terrain_block_ids_-_must_be_below_255/Flesh_ID:* (bop.flesh), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockFlesh
+block:id=terrain_block_ids_-_must_be_below_255/Flesh_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/flesh
+# terrain_block_ids_-_must_be_below_255/Long_Grass_ID:* (bop.longGrass), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockLongGrass
+block:id=terrain_block_ids_-_must_be_below_255/Long_Grass_ID,data=*,stdrot=true,face0=0:biomesoplenty/longgrass3,face1=0:biomesoplenty/longgrass1,face2-5=0:biomesoplenty/longgrass2
+# terrain_block_ids_-_must_be_below_255/Crag_Rock_ID:* (bop.generic.crag_rock), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=terrain_block_ids_-_must_be_below_255/Crag_Rock_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/cragrock
+# terrain_block_ids_-_must_be_below_255/Skystone_ID:* (bop.holyStone), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPSkystone
+block:id=terrain_block_ids_-_must_be_below_255/Skystone_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/holystone
+block:id=terrain_block_ids_-_must_be_below_255/Skystone_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/holycobble
+block:id=terrain_block_ids_-_must_be_below_255/Skystone_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/holybrick
+block:id=terrain_block_ids_-_must_be_below_255/Skystone_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/holystonemossy
+block:id=terrain_block_ids_-_must_be_below_255/Skystone_ID,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/holystone
+# terrain_block_ids_-_must_be_below_255/Holy_Dirt_ID:* (bop.generic.holy_dirt), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=terrain_block_ids_-_must_be_below_255/Holy_Dirt_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/holydirt
+# Overgrown_Netherrack_ID:* (bop.overgrownNetherrack), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockOvergrownNetherrack
+block:id=Overgrown_Netherrack_ID,data=*,stdrot=true,face0=0:biomesoplenty/overgrownnetherrack3,face1=0:biomesoplenty/overgrownnetherrack1,face2-5=0:biomesoplenty/overgrownnetherrack2
+# Turnip_Crop_ID:* (bop.turnip), render=6(CROPS), opaque=false,cls=biomesoplenty.blocks.BlockTurnip
+block:id=Turnip_Crop_ID,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/turnip_stage_0
+block:id=Turnip_Crop_ID,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/turnip_stage_1
+block:id=Turnip_Crop_ID,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/turnip_stage_2
+block:id=Turnip_Crop_ID,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/turnip_stage_3
+# Plant_ID:* (bop.plants), render=113(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPPlant
+block:id=Plant_ID,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/deadgrass
+block:id=Plant_ID,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/desertgrass
+block:id=Plant_ID,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/desertsprouts
+block:id=Plant_ID,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/dunegrass
+block:id=Plant_ID,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/holytallgrass
+block:id=Plant_ID,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/thorn
+block:id=Plant_ID,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/barley
+block:id=Plant_ID,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/cattail
+block:id=Plant_ID,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/rivercane
+block:id=Plant_ID,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/cattailtop
+block:id=Plant_ID,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/cattailbottom
+block:id=Plant_ID,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/wildcarrot
+block:id=Plant_ID,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/cactus
+block:id=Plant_ID,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/witherwart
+block:id=Plant_ID,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/reed
+block:id=Plant_ID,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/root
+# Flower_ID:* (bop.flowers), render=112(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPFlower
+block:id=Flower_ID,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/clover
+block:id=Flower_ID,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/swampflower
+block:id=Flower_ID,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/deadbloom
+block:id=Flower_ID,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/glowflower
+block:id=Flower_ID,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/hydrangea
+block:id=Flower_ID,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/cosmos
+block:id=Flower_ID,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/daffodil
+block:id=Flower_ID,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/wildflower
+block:id=Flower_ID,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/violet
+block:id=Flower_ID,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/anemone
+block:id=Flower_ID,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/lilyflower
+block:id=Flower_ID,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/rainbowflower
+block:id=Flower_ID,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bromeliad
+block:id=Flower_ID,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/sunflowerbottom
+block:id=Flower_ID,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/sunflowertop
+block:id=Flower_ID,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/dandelion
+# Willow_ID:* (bop.willow), render=20(VINE), opaque=false,cls=biomesoplenty.blocks.BlockWillow
+block:id=Willow_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=2000:biomesoplenty/willow
+# Leaf_Block_ID_1:* (bop.leaves1), render=119(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPLeaves
+block:id=Leaf_Block_ID_1,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
+block:id=Leaf_Block_ID_1,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_bamboo_fancy
+block:id=Leaf_Block_ID_1,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_magic_fancy
+block:id=Leaf_Block_ID_1,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_dark_fancy
+block:id=Leaf_Block_ID_1,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
+block:id=Leaf_Block_ID_1,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_bamboo_fancy
+block:id=Leaf_Block_ID_1,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_magic_fancy
+block:id=Leaf_Block_ID_1,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_dark_fancy
+block:id=Leaf_Block_ID_1,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
+block:id=Leaf_Block_ID_1,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_bamboo_fancy
+block:id=Leaf_Block_ID_1,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_magic_fancy
+block:id=Leaf_Block_ID_1,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_dark_fancy
+block:id=Leaf_Block_ID_1,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
+block:id=Leaf_Block_ID_1,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_bamboo_fancy
+block:id=Leaf_Block_ID_1,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_magic_fancy
+block:id=Leaf_Block_ID_1,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_dark_fancy
+# Leaf_Block_ID_2:* (bop.leaves2), render=119(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPLeaves
+block:id=Leaf_Block_ID_2,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_dead_fancy
+block:id=Leaf_Block_ID_2,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_fir_fancy
+block:id=Leaf_Block_ID_2,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_holy_fancy
+block:id=Leaf_Block_ID_2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_orangeautumn_fancy
+block:id=Leaf_Block_ID_2,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_dead_fancy
+block:id=Leaf_Block_ID_2,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_fir_fancy
+block:id=Leaf_Block_ID_2,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_holy_fancy
+block:id=Leaf_Block_ID_2,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_orangeautumn_fancy
+block:id=Leaf_Block_ID_2,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_dead_fancy
+block:id=Leaf_Block_ID_2,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_fir_fancy
+block:id=Leaf_Block_ID_2,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_holy_fancy
+block:id=Leaf_Block_ID_2,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_orangeautumn_fancy
+block:id=Leaf_Block_ID_2,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_dead_fancy
+block:id=Leaf_Block_ID_2,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_fir_fancy
+block:id=Leaf_Block_ID_2,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_holy_fancy
+block:id=Leaf_Block_ID_2,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_orangeautumn_fancy
+# Foliage_ID:* (bop.foliage), render=112(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPFoliage
+block:id=Foliage_ID,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/algae
+block:id=Foliage_ID,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/shortgrass
+block:id=Foliage_ID,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/mediumgrass
+block:id=Foliage_ID,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/highgrassbottom
+block:id=Foliage_ID,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/bush
+block:id=Foliage_ID,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/sprout
+block:id=Foliage_ID,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/highgrasstop
+block:id=Foliage_ID,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/poisonivy
+block:id=Foliage_ID,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/berrybush
+block:id=Foliage_ID,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/shrub
+block:id=Foliage_ID,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/wheatgrass
+block:id=Foliage_ID,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/dampgrass
+block:id=Foliage_ID,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/koru
+block:id=Foliage_ID,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/cloverpatch
+block:id=Foliage_ID,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/algae
+# Fruit_Leaf_Block_ID:* (bop.leavesFruit), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockBOPAppleLeaves
+block:id=Fruit_Leaf_Block_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_apple0_fancy
+block:id=Fruit_Leaf_Block_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_apple1_fancy
+block:id=Fruit_Leaf_Block_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_apple2_fancy
+block:id=Fruit_Leaf_Block_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/leaves_apple3_fancy
+block:id=Fruit_Leaf_Block_ID,data=4,stdrot=true,face0-5=0:biomesoplenty/leaves_apple0_fancy
+block:id=Fruit_Leaf_Block_ID,data=5,stdrot=true,face0-5=0:biomesoplenty/leaves_apple1_fancy
+block:id=Fruit_Leaf_Block_ID,data=6,stdrot=true,face0-5=0:biomesoplenty/leaves_apple2_fancy
+block:id=Fruit_Leaf_Block_ID,data=7,stdrot=true,face0-5=0:biomesoplenty/leaves_apple3_fancy
+block:id=Fruit_Leaf_Block_ID,data=8,stdrot=true,face0-5=0:biomesoplenty/leaves_apple0_fancy
+block:id=Fruit_Leaf_Block_ID,data=9,stdrot=true,face0-5=0:biomesoplenty/leaves_apple1_fancy
+block:id=Fruit_Leaf_Block_ID,data=10,stdrot=true,face0-5=0:biomesoplenty/leaves_apple2_fancy
+block:id=Fruit_Leaf_Block_ID,data=11,stdrot=true,face0-5=0:biomesoplenty/leaves_apple3_fancy
+block:id=Fruit_Leaf_Block_ID,data=12,stdrot=true,face0-5=0:biomesoplenty/leaves_apple0_fancy
+block:id=Fruit_Leaf_Block_ID,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_apple1_fancy
+block:id=Fruit_Leaf_Block_ID,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_apple2_fancy
+block:id=Fruit_Leaf_Block_ID,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_apple3_fancy
+# Bamboo_ID:* (bop.bamboo), render=117(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBamboo
+block:id=Bamboo_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:biomesoplenty/bambootop,face2-5=0:biomesoplenty/bamboo
+# Mud_Bricks_ID:* (bop.generic.mud_brick), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=Mud_Bricks_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/mudbrick
+# Mud_Brick_Stairs_ID:* (bop.mudBricksStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Mud_Brick_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/mudbrick
+# Stone_Double_Slab_ID:* (bop.stoneDoubleSlab), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPSlab
+block:id=Stone_Double_Slab_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/redcobble
+block:id=Stone_Double_Slab_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/redbrick
+block:id=Stone_Double_Slab_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/mudbrick
+block:id=Stone_Double_Slab_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/holycobble
+block:id=Stone_Double_Slab_ID,data=4,stdrot=true,face0-5=0:biomesoplenty/holybrick
+block:id=Stone_Double_Slab_ID,data=8,stdrot=true,face0-5=0:biomesoplenty/redcobble
+block:id=Stone_Double_Slab_ID,data=9,stdrot=true,face0-5=0:biomesoplenty/redbrick
+block:id=Stone_Double_Slab_ID,data=10,stdrot=true,face0-5=0:biomesoplenty/mudbrick
+block:id=Stone_Double_Slab_ID,data=11,stdrot=true,face0-5=0:biomesoplenty/holycobble
+block:id=Stone_Double_Slab_ID,data=12,stdrot=true,face0-5=0:biomesoplenty/holybrick
+# Stone_Single_Slab_ID:* (bop.stoneSingleSlab), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockBOPSlab
+block:id=Stone_Single_Slab_ID,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/redcobble
+block:id=Stone_Single_Slab_ID,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/redbrick
+block:id=Stone_Single_Slab_ID,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/mudbrick
+block:id=Stone_Single_Slab_ID,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/holycobble
+block:id=Stone_Single_Slab_ID,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/holybrick
+block:id=Stone_Single_Slab_ID,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/redcobble
+block:id=Stone_Single_Slab_ID,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/redbrick
+block:id=Stone_Single_Slab_ID,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/mudbrick
+block:id=Stone_Single_Slab_ID,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/holycobble
+block:id=Stone_Single_Slab_ID,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/holybrick
+# Tree_Moss_ID:* (bop.treeMoss), render=20(VINE), opaque=false,cls=biomesoplenty.blocks.BlockTreeMoss
+block:id=Tree_Moss_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/treemoss
+# Log_Block_ID_1:* (bop.wood1), render=31(LOG), opaque=true,cls=biomesoplenty.blocks.BlockBOPLog
+block:id=Log_Block_ID_1,data=0,stdrot=true,face0-1=0:biomesoplenty/log_acacia_heart,face2-5=0:biomesoplenty/log_acacia_side
+block:id=Log_Block_ID_1,data=1,stdrot=true,face0-1=0:biomesoplenty/log_cherry_heart,face2-5=0:biomesoplenty/log_cherry_side
+block:id=Log_Block_ID_1,data=2,stdrot=true,face0-1=0:biomesoplenty/log_dark_heart,face2-5=0:biomesoplenty/log_dark_side
+block:id=Log_Block_ID_1,data=3,stdrot=true,face0-1=0:biomesoplenty/log_fir_heart,face2-5=0:biomesoplenty/log_fir_side
+block:id=Log_Block_ID_1,data=4,face0-1=0:biomesoplenty/log_acacia_side,face2-3=4000:biomesoplenty/log_acacia_side,face4-5=0:biomesoplenty/log_acacia_heart
+block:id=Log_Block_ID_1,data=5,face0-1=0:biomesoplenty/log_cherry_side,face2-3=4000:biomesoplenty/log_cherry_side,face4-5=0:biomesoplenty/log_cherry_heart
+block:id=Log_Block_ID_1,data=6,face0-1=0:biomesoplenty/log_dark_side,face2-3=4000:biomesoplenty/log_dark_side,face4-5=0:biomesoplenty/log_dark_heart
+block:id=Log_Block_ID_1,data=7,face0-1=0:biomesoplenty/log_fir_side,face2-3=4000:biomesoplenty/log_fir_side,face4-5=0:biomesoplenty/log_fir_heart
+block:id=Log_Block_ID_1,data=8,face0-1=4000:biomesoplenty/log_acacia_side,face2-3=0:biomesoplenty/log_acacia_heart,face4-5=4000:biomesoplenty/log_acacia_side
+block:id=Log_Block_ID_1,data=9,face0-1=4000:biomesoplenty/log_cherry_side,face2-3=0:biomesoplenty/log_cherry_heart,face4-5=4000:biomesoplenty/log_cherry_side
+block:id=Log_Block_ID_1,data=10,face0-1=4000:biomesoplenty/log_dark_side,face2-3=0:biomesoplenty/log_dark_heart,face4-5=4000:biomesoplenty/log_dark_side
+block:id=Log_Block_ID_1,data=11,face0-1=4000:biomesoplenty/log_fir_side,face2-3=0:biomesoplenty/log_fir_heart,face4-5=4000:biomesoplenty/log_fir_side
+block:id=Log_Block_ID_1,data=12,stdrot=true,face0-5=0:biomesoplenty/log_acacia_side
+block:id=Log_Block_ID_1,data=13,stdrot=true,face0-5=0:biomesoplenty/log_cherry_side
+block:id=Log_Block_ID_1,data=14,stdrot=true,face0-5=0:biomesoplenty/log_dark_side
+block:id=Log_Block_ID_1,data=15,stdrot=true,face0-5=0:biomesoplenty/log_fir_side
+# Log_Block_ID_2:* (bop.wood2), render=31(LOG), opaque=true,cls=biomesoplenty.blocks.BlockBOPLog
+block:id=Log_Block_ID_2,data=0,stdrot=true,face0-1=0:biomesoplenty/log_holy_heart,face2-5=0:biomesoplenty/log_holy_side
+block:id=Log_Block_ID_2,data=1,stdrot=true,face0-1=0:biomesoplenty/log_magic_heart,face2-5=0:biomesoplenty/log_magic_side
+block:id=Log_Block_ID_2,data=2,stdrot=true,face0-1=0:biomesoplenty/log_mangrove_heart,face2-5=0:biomesoplenty/log_mangrove_side
+block:id=Log_Block_ID_2,data=3,stdrot=true,face0-1=0:biomesoplenty/log_palm_heart,face2-5=0:biomesoplenty/log_palm_side
+block:id=Log_Block_ID_2,data=4,face0-1=0:biomesoplenty/log_holy_side,face2-3=4000:biomesoplenty/log_holy_side,face4-5=0:biomesoplenty/log_holy_heart
+block:id=Log_Block_ID_2,data=5,face0-1=0:biomesoplenty/log_magic_side,face2-3=4000:biomesoplenty/log_magic_side,face4-5=0:biomesoplenty/log_magic_heart
+block:id=Log_Block_ID_2,data=6,face0-1=0:biomesoplenty/log_mangrove_side,face2-3=4000:biomesoplenty/log_mangrove_side,face4-5=0:biomesoplenty/log_mangrove_heart
+block:id=Log_Block_ID_2,data=7,face0-1=0:biomesoplenty/log_palm_side,face2-3=4000:biomesoplenty/log_palm_side,face4-5=0:biomesoplenty/log_palm_heart
+block:id=Log_Block_ID_2,data=8,face0-1=4000:biomesoplenty/log_holy_side,face2-3=0:biomesoplenty/log_holy_heart,face4-5=4000:biomesoplenty/log_holy_side
+block:id=Log_Block_ID_2,data=9,face0-1=4000:biomesoplenty/log_magic_side,face2-3=0:biomesoplenty/log_magic_heart,face4-5=4000:biomesoplenty/log_magic_side
+block:id=Log_Block_ID_2,data=10,face0-1=4000:biomesoplenty/log_mangrove_side,face2-3=0:biomesoplenty/log_mangrove_heart,face4-5=4000:biomesoplenty/log_mangrove_side
+block:id=Log_Block_ID_2,data=11,face0-1=4000:biomesoplenty/log_palm_side,face2-3=0:biomesoplenty/log_palm_heart,face4-5=4000:biomesoplenty/log_palm_side
+block:id=Log_Block_ID_2,data=12,stdrot=true,face0-5=0:biomesoplenty/log_holy_side
+block:id=Log_Block_ID_2,data=13,stdrot=true,face0-5=0:biomesoplenty/log_magic_side
+block:id=Log_Block_ID_2,data=14,stdrot=true,face0-5=0:biomesoplenty/log_mangrove_side
+block:id=Log_Block_ID_2,data=15,stdrot=true,face0-5=0:biomesoplenty/log_palm_side
+# Log_Block_ID_3:* (bop.wood3), render=31(LOG), opaque=true,cls=biomesoplenty.blocks.BlockBOPLog
+block:id=Log_Block_ID_3,data=0,stdrot=true,face0-1=0:biomesoplenty/log_redwood_heart,face2-5=0:biomesoplenty/log_redwood_side
+block:id=Log_Block_ID_3,data=1,stdrot=true,face0-1=0:biomesoplenty/log_willow_heart,face2-5=0:biomesoplenty/log_willow_side
+block:id=Log_Block_ID_3,data=2,stdrot=true,face0-1=0:biomesoplenty/log_dead_heart,face2-5=0:biomesoplenty/log_dead_side
+block:id=Log_Block_ID_3,data=3,stdrot=true,face0-1=0:biomesoplenty/bigflowerstem_heart,face2-5=0:biomesoplenty/bigflowerstem_side
+block:id=Log_Block_ID_3,data=4,face0-1=0:biomesoplenty/log_redwood_side,face2-3=4000:biomesoplenty/log_redwood_side,face4-5=0:biomesoplenty/log_redwood_heart
+block:id=Log_Block_ID_3,data=5,face0-1=0:biomesoplenty/log_willow_side,face2-3=4000:biomesoplenty/log_willow_side,face4-5=0:biomesoplenty/log_willow_heart
+block:id=Log_Block_ID_3,data=6,face0-1=0:biomesoplenty/log_dead_side,face2-3=4000:biomesoplenty/log_dead_side,face4-5=0:biomesoplenty/log_dead_heart
+block:id=Log_Block_ID_3,data=7,face0-1=0:biomesoplenty/bigflowerstem_side,face2-3=4000:biomesoplenty/bigflowerstem_side,face4-5=0:biomesoplenty/bigflowerstem_heart
+block:id=Log_Block_ID_3,data=8,face0-1=4000:biomesoplenty/log_redwood_side,face2-3=0:biomesoplenty/log_redwood_heart,face4-5=4000:biomesoplenty/log_redwood_side
+block:id=Log_Block_ID_3,data=9,face0-1=4000:biomesoplenty/log_willow_side,face2-3=0:biomesoplenty/log_willow_heart,face4-5=4000:biomesoplenty/log_willow_side
+block:id=Log_Block_ID_3,data=10,face0-1=4000:biomesoplenty/log_dead_side,face2-3=0:biomesoplenty/log_dead_heart,face4-5=4000:biomesoplenty/log_dead_side
+block:id=Log_Block_ID_3,data=11,face0-1=4000:biomesoplenty/bigflowerstem_side,face2-3=0:biomesoplenty/bigflowerstem_heart,face4-5=4000:biomesoplenty/bigflowerstem_side
+block:id=Log_Block_ID_3,data=12,stdrot=true,face0-5=0:biomesoplenty/log_redwood_side
+block:id=Log_Block_ID_3,data=13,stdrot=true,face0-5=0:biomesoplenty/log_willow_side
+block:id=Log_Block_ID_3,data=14,stdrot=true,face0-5=0:biomesoplenty/log_dead_side
+block:id=Log_Block_ID_3,data=15,stdrot=true,face0-5=0:biomesoplenty/bigflowerstem_side
+# Petal_ID:* (bop.petals), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockBOPPetals
+block:id=Petal_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/bigflowerred
+block:id=Petal_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/bigfloweryellow
+block:id=Petal_ID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/bigflowerred
+# Sapling_ID:* (bop.saplings), render=1(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.blocks.BlockBOPSapling
+block:id=Sapling_ID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_apple
+block:id=Sapling_ID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_yellowautumn
+block:id=Sapling_ID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_bamboo
+block:id=Sapling_ID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_magic
+block:id=Sapling_ID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_dark
+block:id=Sapling_ID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_dead
+block:id=Sapling_ID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_fir
+block:id=Sapling_ID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_holy
+block:id=Sapling_ID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_orangeautumn
+block:id=Sapling_ID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_origin
+block:id=Sapling_ID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_pinkcherry
+block:id=Sapling_ID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_maple
+block:id=Sapling_ID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_whitecherry
+block:id=Sapling_ID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_hellbark
+block:id=Sapling_ID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_jacaranda
+block:id=Sapling_ID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_persimmon
+# Colourized_Sapling_ID:* (bop.colorizedSaplings), render=1(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.blocks.BlockBOPColorizedSapling
+block:id=Colourized_Sapling_ID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_acacia
+block:id=Colourized_Sapling_ID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_mangrove
+block:id=Colourized_Sapling_ID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_palm
+block:id=Colourized_Sapling_ID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_redwood
+block:id=Colourized_Sapling_ID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_willow
+block:id=Colourized_Sapling_ID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_pine
+block:id=Colourized_Sapling_ID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_sacredoak
+block:id=Colourized_Sapling_ID,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_acacia
+# Red_Cobble_Stairs_ID:* (bop.redCobbleStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Red_Cobble_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/redcobble
+# Red_Brick_Stairs_ID:* (bop.redBricksStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Red_Brick_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/redbrick
+# Promised_Land_Portal_ID:* (bop.promisedPortal), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockPromisedPortal
+block:id=Promised_Land_Portal_ID,data=*,stdrot=true,face0-5=12000:biomesoplenty/portal
+# Amethyst_Ore_ID:* (bop.amethystOre), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPAmethyst
+block:id=Amethyst_Ore_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/amethystore
+block:id=Amethyst_Ore_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/amethystblock
+block:id=Amethyst_Ore_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/rubyore
+block:id=Amethyst_Ore_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/rubyblock
+block:id=Amethyst_Ore_ID,data=4,stdrot=true,face0-5=0:biomesoplenty/peridotore
+block:id=Amethyst_Ore_ID,data=5,stdrot=true,face0-5=0:biomesoplenty/peridotblock
+block:id=Amethyst_Ore_ID,data=6,stdrot=true,face0-5=0:biomesoplenty/topazore
+block:id=Amethyst_Ore_ID,data=7,stdrot=true,face0-5=0:biomesoplenty/topazblock
+block:id=Amethyst_Ore_ID,data=8,stdrot=true,face0-5=0:biomesoplenty/tanzaniteore
+block:id=Amethyst_Ore_ID,data=9,stdrot=true,face0-5=0:biomesoplenty/tanzaniteblock
+block:id=Amethyst_Ore_ID,data=10,stdrot=true,face0-5=0:biomesoplenty/malachiteore
+block:id=Amethyst_Ore_ID,data=11,stdrot=true,face0-5=0:biomesoplenty/malachiteblock
+block:id=Amethyst_Ore_ID,data=12,stdrot=true,face0-5=0:biomesoplenty/sapphireore
+block:id=Amethyst_Ore_ID,data=13,stdrot=true,face0-5=0:biomesoplenty/sapphireblock
+block:id=Amethyst_Ore_ID,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/amethystore
+# Ivy_ID:* (bop.ivy), render=20(VINE), opaque=false,cls=biomesoplenty.blocks.BlockIvy
+block:id=Ivy_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=2000:biomesoplenty/ivy
+# Moss_ID:* (bop.moss), render=20(VINE), opaque=false,cls=biomesoplenty.blocks.BlockMoss
+block:id=Moss_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=2000:biomesoplenty/moss
+# Leaf_Block_ID_3:* (bop.leaves3), render=119(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPLeaves
+block:id=Leaf_Block_ID_3,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_origin_fancy
+block:id=Leaf_Block_ID_3,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_pinkcherry_fancy
+block:id=Leaf_Block_ID_3,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_maple_fancy
+block:id=Leaf_Block_ID_3,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_whitecherry_fancy
+block:id=Leaf_Block_ID_3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_origin_fancy
+block:id=Leaf_Block_ID_3,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_pinkcherry_fancy
+block:id=Leaf_Block_ID_3,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_maple_fancy
+block:id=Leaf_Block_ID_3,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_whitecherry_fancy
+block:id=Leaf_Block_ID_3,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_origin_fancy
+block:id=Leaf_Block_ID_3,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_pinkcherry_fancy
+block:id=Leaf_Block_ID_3,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_maple_fancy
+block:id=Leaf_Block_ID_3,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_whitecherry_fancy
+block:id=Leaf_Block_ID_3,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_origin_fancy
+block:id=Leaf_Block_ID_3,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_pinkcherry_fancy
+block:id=Leaf_Block_ID_3,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_maple_fancy
+block:id=Leaf_Block_ID_3,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_whitecherry_fancy
+# Leaf_Block_ID_4:* (bop.leaves4), render=119(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPLeaves
+block:id=Leaf_Block_ID_4,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_hellbark_fancy
+block:id=Leaf_Block_ID_4,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_jacaranda_fancy
+block:id=Leaf_Block_ID_4,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
+block:id=Leaf_Block_ID_4,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_hellbark_fancy
+block:id=Leaf_Block_ID_4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_jacaranda_fancy
+block:id=Leaf_Block_ID_4,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
+block:id=Leaf_Block_ID_4,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_hellbark_fancy
+block:id=Leaf_Block_ID_4,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_jacaranda_fancy
+block:id=Leaf_Block_ID_4,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
+block:id=Leaf_Block_ID_4,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_hellbark_fancy
+block:id=Leaf_Block_ID_4,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_jacaranda_fancy
+block:id=Leaf_Block_ID_4,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/leaves_yellowautumn_fancy
+# Planks_ID:* (bop.planks), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPPlank
+block:id=Planks_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_acacia
+block:id=Planks_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_cherry
+block:id=Planks_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_dark
+block:id=Planks_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/plank_fir
+block:id=Planks_ID,data=4,stdrot=true,face0-5=0:biomesoplenty/plank_holy
+block:id=Planks_ID,data=5,stdrot=true,face0-5=0:biomesoplenty/plank_magic
+block:id=Planks_ID,data=6,stdrot=true,face0-5=0:biomesoplenty/plank_mangrove
+block:id=Planks_ID,data=7,stdrot=true,face0-5=0:biomesoplenty/plank_palm
+block:id=Planks_ID,data=8,stdrot=true,face0-5=0:biomesoplenty/plank_redwood
+block:id=Planks_ID,data=9,stdrot=true,face0-5=0:biomesoplenty/plank_willow
+block:id=Planks_ID,data=10,stdrot=true,face0-5=0:biomesoplenty/bamboothatching
+block:id=Planks_ID,data=11,stdrot=true,face0-5=0:biomesoplenty/plank_pine
+block:id=Planks_ID,data=12,stdrot=true,face0-5=0:biomesoplenty/plank_hell_bark
+block:id=Planks_ID,data=13,stdrot=true,face0-5=0:biomesoplenty/plank_jacaranda
+block:id=Planks_ID,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/plank_acacia
+# Wooden_Double_Slab_1_ID:* (bop.woodenDoubleSlab1), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPSlab
+block:id=Wooden_Double_Slab_1_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_acacia
+block:id=Wooden_Double_Slab_1_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_cherry
+block:id=Wooden_Double_Slab_1_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_dark
+block:id=Wooden_Double_Slab_1_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/plank_fir
+block:id=Wooden_Double_Slab_1_ID,data=4,stdrot=true,face0-5=0:biomesoplenty/plank_holy
+block:id=Wooden_Double_Slab_1_ID,data=5,stdrot=true,face0-5=0:biomesoplenty/plank_magic
+block:id=Wooden_Double_Slab_1_ID,data=6,stdrot=true,face0-5=0:biomesoplenty/plank_mangrove
+block:id=Wooden_Double_Slab_1_ID,data=7,stdrot=true,face0-5=0:biomesoplenty/plank_palm
+block:id=Wooden_Double_Slab_1_ID,data=8,stdrot=true,face0-5=0:biomesoplenty/plank_acacia
+block:id=Wooden_Double_Slab_1_ID,data=9,stdrot=true,face0-5=0:biomesoplenty/plank_cherry
+block:id=Wooden_Double_Slab_1_ID,data=10,stdrot=true,face0-5=0:biomesoplenty/plank_dark
+block:id=Wooden_Double_Slab_1_ID,data=11,stdrot=true,face0-5=0:biomesoplenty/plank_fir
+block:id=Wooden_Double_Slab_1_ID,data=12,stdrot=true,face0-5=0:biomesoplenty/plank_holy
+block:id=Wooden_Double_Slab_1_ID,data=13,stdrot=true,face0-5=0:biomesoplenty/plank_magic
+block:id=Wooden_Double_Slab_1_ID,data=14,stdrot=true,face0-5=0:biomesoplenty/plank_mangrove
+block:id=Wooden_Double_Slab_1_ID,data=15,stdrot=true,face0-5=0:biomesoplenty/plank_palm
+# Wooden_Single_Slab_1_ID:* (bop.woodenSingleSlab1), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockBOPSlab
+block:id=Wooden_Single_Slab_1_ID,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_acacia
+block:id=Wooden_Single_Slab_1_ID,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_cherry
+block:id=Wooden_Single_Slab_1_ID,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_dark
+block:id=Wooden_Single_Slab_1_ID,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_fir
+block:id=Wooden_Single_Slab_1_ID,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_holy
+block:id=Wooden_Single_Slab_1_ID,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_magic
+block:id=Wooden_Single_Slab_1_ID,data=6,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_mangrove
+block:id=Wooden_Single_Slab_1_ID,data=7,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_palm
+block:id=Wooden_Single_Slab_1_ID,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_acacia
+block:id=Wooden_Single_Slab_1_ID,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_cherry
+block:id=Wooden_Single_Slab_1_ID,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_dark
+block:id=Wooden_Single_Slab_1_ID,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_fir
+block:id=Wooden_Single_Slab_1_ID,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_holy
+block:id=Wooden_Single_Slab_1_ID,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_magic
+block:id=Wooden_Single_Slab_1_ID,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_mangrove
+block:id=Wooden_Single_Slab_1_ID,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_palm
+# Wooden_Double_Slab_2_ID:* (bop.woodenDoubleSlab2), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPSlab
+block:id=Wooden_Double_Slab_2_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/plank_redwood
+block:id=Wooden_Double_Slab_2_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/plank_willow
+block:id=Wooden_Double_Slab_2_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/plank_pine
+block:id=Wooden_Double_Slab_2_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/plank_hell_bark
+block:id=Wooden_Double_Slab_2_ID,data=4,stdrot=true,face0-5=0:biomesoplenty/plank_jacaranda
+block:id=Wooden_Double_Slab_2_ID,data=8,stdrot=true,face0-5=0:biomesoplenty/plank_redwood
+block:id=Wooden_Double_Slab_2_ID,data=9,stdrot=true,face0-5=0:biomesoplenty/plank_willow
+block:id=Wooden_Double_Slab_2_ID,data=10,stdrot=true,face0-5=0:biomesoplenty/plank_pine
+block:id=Wooden_Double_Slab_2_ID,data=11,stdrot=true,face0-5=0:biomesoplenty/plank_hell_bark
+block:id=Wooden_Double_Slab_2_ID,data=12,stdrot=true,face0-5=0:biomesoplenty/plank_jacaranda
+# Wooden_Single_Slab_2_ID:* (bop.woodenSingleSlab2), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockBOPSlab
+block:id=Wooden_Single_Slab_2_ID,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_redwood
+block:id=Wooden_Single_Slab_2_ID,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_willow
+block:id=Wooden_Single_Slab_2_ID,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_pine
+block:id=Wooden_Single_Slab_2_ID,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_hell_bark
+block:id=Wooden_Single_Slab_2_ID,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_jacaranda
+block:id=Wooden_Single_Slab_2_ID,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_redwood
+block:id=Wooden_Single_Slab_2_ID,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_willow
+block:id=Wooden_Single_Slab_2_ID,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_pine
+block:id=Wooden_Single_Slab_2_ID,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_hell_bark
+block:id=Wooden_Single_Slab_2_ID,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_jacaranda
+# Acacia_Stairs_ID:* (bop.acaciaStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Acacia_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_acacia
+# Cherry_Stairs_ID:* (bop.cherryStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Cherry_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_cherry
+# Dark_Stairs_ID:* (bop.darkStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Dark_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_dark
+# Fir_Stairs_ID:* (bop.firStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Fir_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_fir
+# Holy_Stairs_ID:* (bop.holyStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Holy_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_holy
+# Magic_Stairs_ID:* (bop.magicStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Magic_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_magic
+# Mangrove_Stairs_ID:* (bop.mangroveStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Mangrove_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_mangrove
+# Palm_Stairs_ID:* (bop.palmStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Palm_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_palm
+# Redwood_Stairs_ID:* (bop.redwoodStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Redwood_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_redwood
+# Willow_Stairs_ID:* (bop.willowStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Willow_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_willow
+# Crystal_ID:* (bop.generic.crystal), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockBOPGeneric
+block:id=Crystal_ID,data=*,stdrot=true,face0-5=0:biomesoplenty/crystal
+# Cloud_ID:* (bop.cloud), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockCloud
+block:id=Cloud_ID,data=*,stdrot=true,face0-5=12000:biomesoplenty/cloud
+# Skystone_Cobble_Stairs_ID:* (bop.holyCobbleStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Skystone_Cobble_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/holycobble
+# Skystone_Brick_Stairs_ID:* (bop.holyBricksStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Skystone_Brick_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/holybrick
+# Mushroom_ID:* (bop.mushrooms), render=1(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.blocks.BlockBOPMushroom
+block:id=Mushroom_ID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/toadstool
+block:id=Mushroom_ID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/portobello
+block:id=Mushroom_ID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/bluemilk
+block:id=Mushroom_ID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/glowshroom
+block:id=Mushroom_ID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/flatmushroom
+block:id=Mushroom_ID,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/toadstool
+# Bones_ID:* (bop.bones), render=115(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBones
+block:id=Bones_ID,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_small
+block:id=Bones_ID,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_medium
+block:id=Bones_ID,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_large
+block:id=Bones_ID,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_small
+# Coral_ID:* (bop.coral), render=1(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.blocks.BlockBOPCoral
+block:id=Coral_ID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/kelpbottom
+block:id=Coral_ID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/kelpmiddle
+block:id=Coral_ID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/kelptop
+block:id=Coral_ID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/kelpsingle
+block:id=Coral_ID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/pinkcoral
+block:id=Coral_ID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/orangecoral
+block:id=Coral_ID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/bluecoral
+block:id=Coral_ID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/glowcoral
+block:id=Coral_ID,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/kelpbottom
+# Colourized_Leaves_1_ID:* (bop.leavesColorized1), render=118(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPColorizedLeaves
+block:id=Colourized_Leaves_1_ID,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=14000:biomesoplenty/leaves_acacia_fancy
+block:id=Colourized_Leaves_1_ID,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_mangrove_fancy
+block:id=Colourized_Leaves_1_ID,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_palm_fancy
+block:id=Colourized_Leaves_1_ID,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=13000:biomesoplenty/leaves_redwood_fancy
+block:id=Colourized_Leaves_1_ID,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_acacia_fancy
+block:id=Colourized_Leaves_1_ID,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_mangrove_fancy
+block:id=Colourized_Leaves_1_ID,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_palm_fancy
+block:id=Colourized_Leaves_1_ID,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_redwood_fancy
+block:id=Colourized_Leaves_1_ID,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_acacia_fancy
+block:id=Colourized_Leaves_1_ID,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_mangrove_fancy
+block:id=Colourized_Leaves_1_ID,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_palm_fancy
+block:id=Colourized_Leaves_1_ID,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_redwood_fancy
+block:id=Colourized_Leaves_1_ID,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_acacia_fancy
+block:id=Colourized_Leaves_1_ID,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_mangrove_fancy
+block:id=Colourized_Leaves_1_ID,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_palm_fancy
+block:id=Colourized_Leaves_1_ID,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_redwood_fancy
+# Colourized_Leaves_2_ID:* (bop.leavesColorized2), render=118(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockBOPColorizedLeaves
+block:id=Colourized_Leaves_2_ID,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=14000:biomesoplenty/leaves_willow_fancy
+block:id=Colourized_Leaves_2_ID,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_pine_fancy
+block:id=Colourized_Leaves_2_ID,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_acacia_fancy
+block:id=Colourized_Leaves_2_ID,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=13000:biomesoplenty/leaves_acacia_fancy
+block:id=Colourized_Leaves_2_ID,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_willow_fancy
+block:id=Colourized_Leaves_2_ID,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_pine_fancy
+block:id=Colourized_Leaves_2_ID,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_acacia_fancy
+block:id=Colourized_Leaves_2_ID,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_willow_fancy
+block:id=Colourized_Leaves_2_ID,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_pine_fancy
+block:id=Colourized_Leaves_2_ID,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_acacia_fancy
+block:id=Colourized_Leaves_2_ID,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_willow_fancy
+block:id=Colourized_Leaves_2_ID,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_pine_fancy
+block:id=Colourized_Leaves_2_ID,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:biomesoplenty/leaves_acacia_fancy
+# Log_Block_ID_4:* (bop.wood4), render=31(LOG), opaque=true,cls=biomesoplenty.blocks.BlockBOPLog
+block:id=Log_Block_ID_4,data=0,stdrot=true,face0-1=0:biomesoplenty/log_pine_heart,face2-5=0:biomesoplenty/log_pine_side
+block:id=Log_Block_ID_4,data=1,stdrot=true,face0-1=0:biomesoplenty/log_hellbark_heart,face2-5=0:biomesoplenty/log_hellbark_side
+block:id=Log_Block_ID_4,data=2,stdrot=true,face0-1=0:biomesoplenty/log_jacaranda_heart,face2-5=0:biomesoplenty/log_jacaranda_side
+block:id=Log_Block_ID_4,data=4,face0-1=0:biomesoplenty/log_pine_side,face2-3=4000:biomesoplenty/log_pine_side,face4-5=0:biomesoplenty/log_pine_heart
+block:id=Log_Block_ID_4,data=5,face0-1=0:biomesoplenty/log_hellbark_side,face2-3=4000:biomesoplenty/log_hellbark_side,face4-5=0:biomesoplenty/log_hellbark_heart
+block:id=Log_Block_ID_4,data=6,face0-1=0:biomesoplenty/log_jacaranda_side,face2-3=4000:biomesoplenty/log_jacaranda_side,face4-5=0:biomesoplenty/log_jacaranda_heart
+block:id=Log_Block_ID_4,data=8,face0-1=4000:biomesoplenty/log_pine_side,face2-3=0:biomesoplenty/log_pine_heart,face4-5=4000:biomesoplenty/log_pine_side
+block:id=Log_Block_ID_4,data=9,face0-1=4000:biomesoplenty/log_hellbark_side,face2-3=0:biomesoplenty/log_hellbark_heart,face4-5=4000:biomesoplenty/log_hellbark_side
+block:id=Log_Block_ID_4,data=10,face0-1=4000:biomesoplenty/log_jacaranda_side,face2-3=0:biomesoplenty/log_jacaranda_heart,face4-5=4000:biomesoplenty/log_jacaranda_side
+block:id=Log_Block_ID_4,data=12,stdrot=true,face0-5=0:biomesoplenty/log_pine_side
+block:id=Log_Block_ID_4,data=13,stdrot=true,face0-5=0:biomesoplenty/log_hellbark_side
+block:id=Log_Block_ID_4,data=14,stdrot=true,face0-5=0:biomesoplenty/log_jacaranda_side
+# Pine_Stairs_ID:* (bop.pineStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Pine_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_pine
+# Hell_Bark_Stairs_ID:* (bop.hellBarkStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Hell_Bark_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_hell_bark
+# Jacaranda_ID:* (bop.jacarandaStairs), render=10(STAIRS), opaque=false,cls=biomesoplenty.blocks.BlockBOPStairs
+block:id=Jacaranda_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/plank_jacaranda
+# Puddle_ID:* (bop.puddle), render=114(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockPuddle
+block:id=Puddle_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/dirt
+# Grave_ID:* (bop.grave), render=116(CUSTOM), opaque=false,cls=biomesoplenty.blocks.BlockGrave
+block:id=Grave_ID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/grave
+# Fruit_Leaf_Block_2_ID:* (bop.leavesFruit2), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockBOPPersimmonLeaves
+block:id=Fruit_Leaf_Block_2_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon0_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon1_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon2_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon3_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=4,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon0_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=5,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon1_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=6,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon2_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=7,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon3_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=8,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon0_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=9,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon1_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=10,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon2_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=11,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon3_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=12,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon0_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=13,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon1_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=14,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon2_fancy
+block:id=Fruit_Leaf_Block_2_ID,data=15,stdrot=true,face0-5=0:biomesoplenty/leaves_persimmon3_fancy
+# Flower_2_ID:* (bop.flowers2), render=1(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.blocks.BlockBOPFlower2
+block:id=Flower_2_ID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/hibiscus
+block:id=Flower_2_ID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/lilyofthevalley
+block:id=Flower_2_ID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/burningblossom
+block:id=Flower_2_ID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/lavender
+block:id=Flower_2_ID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/goldenrod
+block:id=Flower_2_ID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/bluebells
+block:id=Flower_2_ID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/minersdelight
+block:id=Flower_2_ID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/icyiris
+block:id=Flower_2_ID,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/hibiscus
+# Hive_ID:* (bop.hive), render=0(STANDARD), opaque=true,cls=biomesoplenty.blocks.BlockHive
+block:id=Hive_ID,data=0,stdrot=true,face0-5=0:biomesoplenty/honeycomb
+block:id=Hive_ID,data=1,stdrot=true,face0-5=0:biomesoplenty/hive
+block:id=Hive_ID,data=2,stdrot=true,face0-5=0:biomesoplenty/honeycombempty
+block:id=Hive_ID,data=3,stdrot=true,face0-5=0:biomesoplenty/honeycombfilled
+block:id=Hive_ID,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/honeycomb
+# liquid_ids/Spring_Water_Still_ID_(ID_before_this_must_be_free!):* (bop.springWater), render=40(CUSTOM), opaque=false,cls=biomesoplenty.fluids.BlockFluidSpringWater
+block:id=liquid_ids/Spring_Water_Still_ID_(ID_before_this_must_be_free!),data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:biomesoplenty/spring_water_still,face2-5=0:biomesoplenty/spring_water_flowing
+# liquid_ids/Liquid_Poison_Still_ID_(ID_before_this_must_be_free!):* (bop.liquidPoison), render=40(CUSTOM), opaque=false,cls=biomesoplenty.fluids.BlockFluidLiquidPoison
+block:id=liquid_ids/Liquid_Poison_Still_ID_(ID_before_this_must_be_free!),data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:biomesoplenty/liquid_poison_still,face2-5=0:biomesoplenty/liquid_poison_flowing
+# liquid_ids/Honey_Still_ID_(ID_before_this_must_be_free!):* (bop.honey), render=40(CUSTOM), opaque=false,cls=biomesoplenty.fluids.BlockFluidHoney
+block:id=liquid_ids/Honey_Still_ID_(ID_before_this_must_be_free!),data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:biomesoplenty/honey_still,face2-5=0:biomesoplenty/honey_flowing
+# Honey_Block_ID:* (bop.honeyBlock), render=0(STANDARD), opaque=false,cls=biomesoplenty.blocks.BlockHoney
+block:id=Honey_Block_ID,data=*,stdrot=true,face0-5=12000:biomesoplenty/honeyblock
+# Stone_Formations_ID:* (bop.stoneFormations), render=1(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.blocks.BlockStoneFormations
+block:id=Stone_Formations_ID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/stalagmite
+block:id=Stone_Formations_ID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/stalactite
+block:id=Stone_Formations_ID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/stalagmite

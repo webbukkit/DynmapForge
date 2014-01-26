@@ -1,0 +1,63 @@
+# BiblioWoodsForestry 1.3
+version:1.6
+modname:BiblioWoodsForestry
+
+var:Shelf=0,MapFrame=0,Seat2=0,Bookcase2=0,MapFrame2=0,DisplayCaseSet0=0,ToolRack=0,DisplayCaseSet1=0,Desk2=0,DisplayCaseSet2=0
+var:Table=0,DisplayCaseSet3=0,DisplayCaseSet4=0,DisplayCaseSet5=0,Shelf2=0,PotionShelf=0,PotionShelf2=0,Seat=0,Desk=0,Label2=0
+var:Bookcase=0,Label=0,Table2=0,ToolRack2=0
+
+cfgfile:config/BiblioWoodsForestry.cfg
+
+
+texturepath:assets/bibliowoodsforestry/textures/blocks/
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+
+
+# Bookcase:* (BiblioWoodFstBookcase), render=149(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomBookcase
+block:id=Bookcase,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Bookcase2:* (BiblioWoodFstBookcase2), render=162(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomBookcase2
+block:id=Bookcase2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Desk:* (BiblioWoodFstdesk), render=160(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomDesk
+block:id=Desk,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Desk2:* (BiblioWoodFstdesk2), render=167(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomDesk2
+block:id=Desk2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet0:* (BiblioWoodFstcase0), render=153(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase0
+block:id=DisplayCaseSet0,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet1:* (BiblioWoodFstcase1), render=154(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase1
+block:id=DisplayCaseSet1,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet2:* (BiblioWoodFstcase2), render=155(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase2
+block:id=DisplayCaseSet2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet3:* (BiblioWoodFstcase3), render=156(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase3
+block:id=DisplayCaseSet3,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet4:* (BiblioWoodFstcase4), render=157(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase4
+block:id=DisplayCaseSet4,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet5:* (BiblioWoodFstcase5), render=158(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase5
+block:id=DisplayCaseSet5,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# PotionShelf:* (BiblioWoodFstpotshelf), render=159(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomPotionShelf
+block:id=PotionShelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# PotionShelf2:* (BiblioWoodFstpotshelf2), render=166(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomPotionShelf2
+block:id=PotionShelf2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Shelf:* (BiblioWoodFstshelf), render=152(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomShelf
+block:id=Shelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Shelf2:* (BiblioWoodFstshelf2), render=165(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomShelf2
+block:id=Shelf2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Table:* (BiblioWoodFsttable), render=161(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomTable
+block:id=Table,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Table2:* (BiblioWoodFsttable2), render=168(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomTable2
+block:id=Table2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# ToolRack:* (BiblioWoodFstrack), render=151(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomToolrack
+block:id=ToolRack,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# ToolRack2:* (BiblioWoodFstrack2), render=164(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomToolrack2
+block:id=ToolRack2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Label:* (BiblioWoodFstlabel), render=159(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomLabel
+block:id=Label,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Label2:* (BiblioWoodFstlabel2), render=166(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomLabel2
+block:id=Label2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Seat:* (BiblioWoodSeat), render=169(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomSeat
+block:id=Seat,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Seat2:* (BiblioWoodSeat2), render=171(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomSeat2
+block:id=Seat2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# MapFrame:* (BiblioWoodMapFrame), render=170(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomMapFrame
+block:id=MapFrame,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# MapFrame2:* (BiblioWoodMapFrame2), render=172(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomMapFrame2
+block:id=MapFrame2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce

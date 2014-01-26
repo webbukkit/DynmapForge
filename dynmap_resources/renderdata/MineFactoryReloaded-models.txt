@@ -1,79 +1,113 @@
-# MineFactory Reloaded Block mapping (v1.5+)
-version:1.5.1-
+# MineFactoryReloaded 1.6.2R2.7.4
+version:1.6
 modname:MineFactoryReloaded
-# variables
-var:ID.MachineBlock2=0,ID.MushroomSoup.Still=0,ID.ChocolateMilk.Still=0
-# configuration file
+
+var:ID.RubberLeaves=0,ID.DetCord=0,ID.MachineBlock1=0,ID.MachineBlock2=0,ID.PassengerRailDropoffBlock=0,ID.MachineBlock=0,ID.PinkSlime.Still=0,ID.RedNet.Panel=0,ID.RubberWood=0,ID.StainedGlass=0
+var:ID.Sludge.Still=0,ID.RedNet.Logic=0,ID.CargoRailPickupBlock=0,ID.RubberSapling=0,ID.CargoRailDropoffBlock=0,ID.MushroomSoup.Still=0,ID.StainedGlassPane=0,ID.PassengerRailPickupBlock=0,ID.Stone=0,ID.Sewage.Still=0
+var:ID.RedNet.Cable=0,ID.ConveyorBlock=0,ID.VineScaffold=0,ID.Meat.Still=0,ID.BioFuel.Still=0,ID.MobEssence.Still=0,ID.Milk.Still=0,ID.Bricks=0,ID.Road=0,ID.ChocolateMilk.Still=0
+
 cfgfile:config/powercrystals/minefactoryreloaded/common.cfg
 
-# Vertical patch, 45 degrees from xz=1.0/0.0 to xz=0.0/1.0
 patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
-# Vertical patch, X+ facing side from xz=0.5,1.0 to 0.5/0.0
-patch:id=VertX05,Ox=0.5,Oy=0.0,Oz=1.0,Ux=0.5,Uy=0.0,Uz=0.0,Vx=0.5,Vy=1.0,Vz=1.0
-# Vertical patch, X+ facing side from xz=0.5,1.0 to 0.5/0.0 (left half)
-patch:id=VertX05Left,Ox=0.5,Oy=0.0,Oz=1.0,Ux=0.5,Uy=0.0,Uz=0.0,Vx=0.5,Vy=1.0,Vz=1.0,Umax=0.5
-# Vertical patch, X+ facing side from xz=0.5,1.0 to 0.5/0.0 (right half)
-patch:id=VertX05Right,Ox=0.5,Oy=0.0,Oz=1.0,Ux=0.5,Uy=0.0,Uz=0.0,Vx=0.5,Vy=1.0,Vz=1.0,Umin=0.5
-# Vertical patch, X+ facing side from xz=0.5,1.0 to 0.5/0.0 (strip - 0.4375 to 0.5625)
-patch:id=VertX05Strip,Ox=0.5,Oy=0.0,Oz=1.0,Ux=0.5,Uy=0.0,Uz=0.0,Vx=0.5,Vy=1.0,Vz=1.0,Umin=0.4375,Umax=0.5625
-# Horizontal patch - Y+ facing at Y=1.0, top of texture at +Z, vertical strip (0.4375 to 0.5625)
-patch:id=HorizY100ZTopStrip,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,Umin=0.4375,Umax=0.5625
-# Horizontal patch - Y+ facing at Y=1.0, top of texture at +Z, vertical strip (0.4375 to 0.5625), Top half (V>= 0.5)
-patch:id=HorizY100ZTopStripTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,Umin=0.4375,Umax=0.5625,Vmin=0.5
-# Horizontal patch - Y+ facing at Y=1.0, top of texture at +Z, vertical strip (0.4375 to 0.5625), Bottom half (V < 0.5)
-patch:id=HorizY100ZTopStripBottom,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1,0,Vz=1.0,Umin=0.4375,Umax=0.5625,Vmax=0.5
-# Horizontal patch - Y+ facing at Y=0.01, top of texture at +Z
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
 patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
-# Sloped patch - up to X+, top of texture at Z+
 patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# Block
-
-# MachineBlock
-customblock:id=ID.MachineBlock,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=rotation,index0=0,map0=S012345,index1=1,map1=S012345,index2=4,map2=S012345,index3=5,map3=S013254,index4=3,map4=S014532,index5=2,map5=S015423
-# MachineBlock1
-customblock:id=ID.MachineBlock1,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=rotation,index0=0,map0=S012345,index1=1,map1=S012345,index2=4,map2=S012345,index3=5,map3=S013254,index4=3,map4=S014532,index5=2,map5=S015423
-# MachineBlock2
-customblock:id=ID.MachineBlock2,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=rotation,index0=0,map0=S012345,index1=1,map1=S012345,index2=4,map2=S012345,index3=5,map3=S013254,index4=3,map4=S014532,index5=2,map5=S015423
-
-# ID.CargoRailDropoffBlock
-# ID.CargoRailPickupBlock
-# ID.PassengerRailDropoffBlock
-# ID.PassengerRailPickupBlock
-patchblock:id=ID.CargoRailDropoffBlock,id=ID.CargoRailPickupBlock,id=ID.PassengerRailDropoffBlock,id=ID.PassengerRailPickupBlock,data=0,patch0=HorizY001ZTop
-patchblock:id=ID.CargoRailDropoffBlock,id=ID.CargoRailPickupBlock,id=ID.PassengerRailDropoffBlock,id=ID.PassengerRailPickupBlock,data=8,patch0=HorizY001ZTop
-patchblock:id=ID.CargoRailDropoffBlock,id=ID.CargoRailPickupBlock,id=ID.PassengerRailDropoffBlock,id=ID.PassengerRailPickupBlock,data=1,patch0=HorizY001ZTop@90
-patchblock:id=ID.CargoRailDropoffBlock,id=ID.CargoRailPickupBlock,id=ID.PassengerRailDropoffBlock,id=ID.PassengerRailPickupBlock,data=9,patch0=HorizY001ZTop@90
-patchblock:id=ID.CargoRailDropoffBlock,id=ID.CargoRailPickupBlock,id=ID.PassengerRailDropoffBlock,id=ID.PassengerRailPickupBlock,data=2,data=10,patch0=SlopeXUpZTop
-patchblock:id=ID.CargoRailDropoffBlock,id=ID.CargoRailPickupBlock,id=ID.PassengerRailDropoffBlock,id=ID.PassengerRailPickupBlock,data=3,data=11,patch0=SlopeXUpZTop@180
-patchblock:id=ID.CargoRailDropoffBlock,id=ID.CargoRailPickupBlock,id=ID.PassengerRailDropoffBlock,id=ID.PassengerRailPickupBlock,data=4,data=12,patch0=SlopeXUpZTop@270
-patchblock:id=ID.CargoRailDropoffBlock,id=ID.CargoRailPickupBlock,id=ID.PassengerRailDropoffBlock,id=ID.PassengerRailPickupBlock,data=5,data=13,patch0=SlopeXUpZTop@90
-
-# ID.ConveyorBlock
-patchblock:id=ID.ConveyorBlock,data=0,patch0=HorizY001ZTop@90
-patchblock:id=ID.ConveyorBlock,data=1,patch0=HorizY001ZTop@180
-patchblock:id=ID.ConveyorBlock,data=2,patch0=HorizY001ZTop@270
-patchblock:id=ID.ConveyorBlock,data=3,patch0=HorizY001ZTop
-
-# ID.RubberSapling
-patchblock:id=ID.RubberSapling,data=*,patch0=VertX1Z0ToX0Z1,patch1=VertX1Z0ToX0Z1@90
-
-# ID.StainedGlassPane
-customblock:id=ID.StainedGlassPane,data=*,class=org.dynmap.hdmap.renderer.PaneRenderer
-
-# ID.BioFuel.Still
-# ID.ChocolateMilk.Still
-# ID.Meat.Still
-# ID.Milk.Still
-# ID.MobEssence.Still
-# ID.MushroomSoup.Still
-# ID.PinkSlime.Still
-# ID.Sewage.Still
-# ID.Sludge.Still
-boxblock:id=ID.MobEssence.Still,id=ID.MushroomSoup.Still,id=ID.BioFuel.Still,id=ID.ChocolateMilk.Still,id=ID.Meat.Still,id=ID.Milk.Still,id=ID.PinkSlime.Still,id=ID.Sewage.Still,id=ID.Sludge.Still,data=6,ymax=0.875
-boxblock:id=ID.MobEssence.Still,id=ID.MushroomSoup.Still,id=ID.BioFuel.Still,id=ID.ChocolateMilk.Still,id=ID.Meat.Still,id=ID.Milk.Still,id=ID.PinkSlime.Still,id=ID.Sewage.Still,id=ID.Sludge.Still,data=5,ymax=0.75
-boxblock:id=ID.MobEssence.Still,id=ID.MushroomSoup.Still,id=ID.BioFuel.Still,id=ID.ChocolateMilk.Still,id=ID.Meat.Still,id=ID.Milk.Still,id=ID.PinkSlime.Still,id=ID.Sewage.Still,id=ID.Sludge.Still,data=4,ymax=0.625
-boxblock:id=ID.MobEssence.Still,id=ID.MushroomSoup.Still,id=ID.BioFuel.Still,id=ID.ChocolateMilk.Still,id=ID.Meat.Still,id=ID.Milk.Still,id=ID.PinkSlime.Still,id=ID.Sewage.Still,id=ID.Sludge.Still,data=3,ymax=0.5
-boxblock:id=ID.MobEssence.Still,id=ID.MushroomSoup.Still,id=ID.BioFuel.Still,id=ID.ChocolateMilk.Still,id=ID.Meat.Still,id=ID.Milk.Still,id=ID.PinkSlime.Still,id=ID.Sewage.Still,id=ID.Sludge.Still,data=2,ymax=0.375
-boxblock:id=ID.MobEssence.Still,id=ID.MushroomSoup.Still,id=ID.BioFuel.Still,id=ID.ChocolateMilk.Still,id=ID.Meat.Still,id=ID.Milk.Still,id=ID.PinkSlime.Still,id=ID.Sewage.Still,id=ID.Sludge.Still,data=1,ymax=0.25
-boxblock:id=ID.MobEssence.Still,id=ID.MushroomSoup.Still,id=ID.BioFuel.Still,id=ID.ChocolateMilk.Still,id=ID.Meat.Still,id=ID.Milk.Still,id=ID.PinkSlime.Still,id=ID.Sewage.Still,id=ID.Sludge.Still,data=0,ymax=0.125
+# ID.ConveyorBlock:* (tile.mfr.conveyor), render=138(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockConveyor
+# ID.RubberSapling:* (tile.mfr.rubberwood.sapling), render=1(CROSSEDSQUARES), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRubberSapling
+patchblock:id=ID.RubberSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# ID.CargoRailDropoffBlock:* (tile.mfr.rail.cargo.dropoff), render=9(MINECARTTRACK), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRailCargoDropoff
+patchblock:id=ID.CargoRailDropoffBlock,patch0=HorizY001ZTop,data=0
+patchblock:id=ID.CargoRailDropoffBlock,patch0=HorizY001ZTop@90,data=1
+patchblock:id=ID.CargoRailDropoffBlock,patch0=SlopeXUpZTop,data=2
+patchblock:id=ID.CargoRailDropoffBlock,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=ID.CargoRailDropoffBlock,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=ID.CargoRailDropoffBlock,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=ID.CargoRailDropoffBlock,patch0=HorizY001ZTop@90,data=6
+patchblock:id=ID.CargoRailDropoffBlock,patch0=HorizY001ZTop@180,data=7
+patchblock:id=ID.CargoRailDropoffBlock,patch0=HorizY001ZTop,data=8
+patchblock:id=ID.CargoRailDropoffBlock,patch0=HorizY001ZTop@90,data=9
+patchblock:id=ID.CargoRailDropoffBlock,patch0=SlopeXUpZTop,data=10
+patchblock:id=ID.CargoRailDropoffBlock,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=ID.CargoRailDropoffBlock,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=ID.CargoRailDropoffBlock,patch0=SlopeXUpZTop@90,data=13
+patchblock:id=ID.CargoRailDropoffBlock,patch0=HorizY001ZTop@90,data=14
+patchblock:id=ID.CargoRailDropoffBlock,patch0=HorizY001ZTop@180,data=15
+# ID.CargoRailPickupBlock:* (tile.mfr.rail.cargo.pickup), render=9(MINECARTTRACK), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRailCargoPickup
+patchblock:id=ID.CargoRailPickupBlock,patch0=HorizY001ZTop,data=0
+patchblock:id=ID.CargoRailPickupBlock,patch0=HorizY001ZTop@90,data=1
+patchblock:id=ID.CargoRailPickupBlock,patch0=SlopeXUpZTop,data=2
+patchblock:id=ID.CargoRailPickupBlock,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=ID.CargoRailPickupBlock,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=ID.CargoRailPickupBlock,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=ID.CargoRailPickupBlock,patch0=HorizY001ZTop@90,data=6
+patchblock:id=ID.CargoRailPickupBlock,patch0=HorizY001ZTop@180,data=7
+patchblock:id=ID.CargoRailPickupBlock,patch0=HorizY001ZTop,data=8
+patchblock:id=ID.CargoRailPickupBlock,patch0=HorizY001ZTop@90,data=9
+patchblock:id=ID.CargoRailPickupBlock,patch0=SlopeXUpZTop,data=10
+patchblock:id=ID.CargoRailPickupBlock,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=ID.CargoRailPickupBlock,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=ID.CargoRailPickupBlock,patch0=SlopeXUpZTop@90,data=13
+patchblock:id=ID.CargoRailPickupBlock,patch0=HorizY001ZTop@90,data=14
+patchblock:id=ID.CargoRailPickupBlock,patch0=HorizY001ZTop@180,data=15
+# ID.PassengerRailDropoffBlock:* (tile.mfr.rail.passenger.dropoff), render=9(MINECARTTRACK), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRailPassengerDropoff
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=HorizY001ZTop,data=0
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=HorizY001ZTop@90,data=1
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=SlopeXUpZTop,data=2
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=HorizY001ZTop@90,data=6
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=HorizY001ZTop@180,data=7
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=HorizY001ZTop,data=8
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=HorizY001ZTop@90,data=9
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=SlopeXUpZTop,data=10
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=SlopeXUpZTop@90,data=13
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=HorizY001ZTop@90,data=14
+patchblock:id=ID.PassengerRailDropoffBlock,patch0=HorizY001ZTop@180,data=15
+# ID.PassengerRailPickupBlock:* (tile.mfr.rail.passenger.pickup), render=9(MINECARTTRACK), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRailPassengerPickup
+patchblock:id=ID.PassengerRailPickupBlock,patch0=HorizY001ZTop,data=0
+patchblock:id=ID.PassengerRailPickupBlock,patch0=HorizY001ZTop@90,data=1
+patchblock:id=ID.PassengerRailPickupBlock,patch0=SlopeXUpZTop,data=2
+patchblock:id=ID.PassengerRailPickupBlock,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=ID.PassengerRailPickupBlock,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=ID.PassengerRailPickupBlock,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=ID.PassengerRailPickupBlock,patch0=HorizY001ZTop@90,data=6
+patchblock:id=ID.PassengerRailPickupBlock,patch0=HorizY001ZTop@180,data=7
+patchblock:id=ID.PassengerRailPickupBlock,patch0=HorizY001ZTop,data=8
+patchblock:id=ID.PassengerRailPickupBlock,patch0=HorizY001ZTop@90,data=9
+patchblock:id=ID.PassengerRailPickupBlock,patch0=SlopeXUpZTop,data=10
+patchblock:id=ID.PassengerRailPickupBlock,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=ID.PassengerRailPickupBlock,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=ID.PassengerRailPickupBlock,patch0=SlopeXUpZTop@90,data=13
+patchblock:id=ID.PassengerRailPickupBlock,patch0=HorizY001ZTop@90,data=14
+patchblock:id=ID.PassengerRailPickupBlock,patch0=HorizY001ZTop@180,data=15
+# ID.StainedGlass:* (tile.mfr.stainedglass.block), render=144(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryGlass
+# ID.StainedGlassPane:* (tile.mfr.stainedglass.pane), render=139(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryGlassPane
+# ID.Milk.Still:* (fluid.mfr.liquid.milk.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryFluid
+# ID.Meat.Still:* (fluid.mfr.liquid.meat.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryFluid
+# ID.Sludge.Still:* (fluid.mfr.liquid.sludge.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryFluid
+# ID.PinkSlime.Still:* (fluid.mfr.liquid.pinkslime.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockPinkSlimeFluid
+# ID.Sewage.Still:* (fluid.mfr.liquid.sewage.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryFluid
+# ID.ChocolateMilk.Still:* (fluid.mfr.liquid.chocolatemilk.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryFluid
+# ID.MobEssence.Still:* (fluid.mfr.liquid.mobessence.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryFluid
+# ID.MushroomSoup.Still:* (fluid.mfr.liquid.mushroomsoup.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryFluid
+# ID.BioFuel.Still:* (fluid.mfr.liquid.biofuel.still), render=40(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockFactoryFluid
+# ID.RedNet.Cable:* (tile.mfr.cable.redstone), render=140(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRedNetCable
+# ID.RedNet.Logic:* (tile.mfr.rednet.logic), render=142(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRedNetLogic
+# ID.VineScaffold:* (tile.mfr.vinescaffold), render=143(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockVineScaffold
+# ID.RedNet.Panel:* (tile.mfr.rednet.panel), render=1006(CUSTOM), opaque=false,cls=powercrystals.minefactoryreloaded.block.BlockRedNetPanel
+# ID.DetCord:* (tile.mfr.detcord), render=145(CUSTOM), opaque=true,cls=powercrystals.minefactoryreloaded.block.BlockDetCord

@@ -1,488 +1,131 @@
-# Tinkers' Construct:1.5.2_1.4.3d4
+# TConstruct 1.6.X_1.5.2.1
+version:1.6
 modname:TConstruct
 
-var:Congealed_Slime=0,Seared_Slab=0,Crafting_Slab=0,Essence_Extractor=0,Crafting_Station=0,Wool_Slab_1=0,Wool_Slab_2=0,Meat_Block=0,Slime_Tall_Grass=0,Slime_Grass=0
-var:Slime_Tree_Sapling=0,Slime_Grass_Leaves=0
+var:Congealed_Slime=0,Molten_Platinum=0,Ores_Gravel=0,Seared_Table=0,Crafting_Station=0,Molten_Nickel=0,Casting_Channel=0,Furnace_Slab=0,Liquid_Cow=0,Clear_Glass=0
+var:Crafting_Slab=0,Birch_Barricade=0,Seared_Slab=0,Ore_Berry_One=0,Special_Soil=0,Molten_Copper=0,Spruce_Barricade=0,Slime_Grass=0,Glue_Fluid_Block=0,Molten_Stone=0
+var:Molten_Aluminum=0,Landmine=0,Stone_Ladder=0,Speed_Slab=0,Molten_Bronze=0,Meat_Block=0,SDX=0,Nether_Smeltery=0,Molten_Silver=0,Molten_Electrum=0
+var:Jungle_Barricade=0,Wood_Tool_Station=0,Slime_Pad=0,Punji=0,Oak_Barricade=0,Slime_Tall_Grass=0,Slime_Grass_Leaves=0,Lava_Tank=0,Ore_Berry_Two=0,Molten_Ender=0
+var:Held_Item_Block=0,Ores_Slag=0,Slime_Channel=0,Clear_Stained_Glass_Pane=0,Glue_Block=0,Molten_Emerald=0,Speed_Block=0,Metal_Storage=0,Nether_Lava_Tank=0,Molten_Iron=0
+var:Molten_Cobalt=0,Glass_Pane=0,Molten_Alumite=0,Wool_Slab_2=0,Liquid_Blue_Slime=0,Molten_Glass=0,Nether_Seared_Block=0,Wool_Slab_1=0,Wooden_Rail=0,Slime_Tree_Sapling=0
+var:Blood_Channel=0,Clear_Stained_Glass=0,Multi_Brick=0,Smeltery=0,Molten_Invar=0,Multi_Brick_Fancy=0,Molten_Lead=0,Molten_Ardite=0,Molten_Tin=0,Drying_Rack=0
+var:Molten_Aluminum_Brass=0,Molten_Manyullyn=0,Stone_Torch=0,Molten_Gold=0,Molten_Obsidian=0,Molten_Steel=0,Tool_Forge=0
 
-#configuration file
 cfgfile:config/TinkersWorkshop.txt
 
-boxblock:id=Crafting_Slab,data=*,ymax=0.5
-boxblock:id=Essence_Extractor,data=0,ymax=0.75
-boxblock:id=Seared_Slab,data=*,ymax=0.5
-boxblock:id=Speed_Slab,data=*,ymax=0.5
-boxblock:id=Wood_Tool_Station,data=5,ymax=0.875
-boxblock:id=Wool_Slab_1,data=*,ymax=0.5
-boxblock:id=Wool_Slab_2,data=*,ymax=0.5
-
 patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
-patchblock:id=Slime_Tall_Grass,id=Slime_Tree_Sapling,data=*,patch0=VertX1Z0ToX0Z1,patch1=VertX1Z0ToX0Z1@90
-
-customblock:id=Smeltery,data=0,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=Direction,index0=0,map0=S012345,index1=1,map1=S012345,index2=4,map2=S012345,index3=5,map3=S013254,index4=3,map4=S014532,index5=2,map5=S015423
-customblock:id=Smeltery,data=1,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=Direction,index0=0,map0=S012345,index1=1,map1=S012345,index2=4,map2=S012345,index3=5,map3=S013254,index4=3,map4=S014532,index5=2,map5=S015423
-
-block:id=Crafting_Station,data=0,scale=16
-layer:0,1,2,3,4,5,6,7,8,9,10,11
-****--------****
-****--------****
-****--------****
-****--------****
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-****--------****
-****--------****
-****--------****
-****--------****
-layer:12,13,14,15
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-
-# Landmine
-block:id=Landmine,data=*,scale=16
-layer:0
-----------------
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
-----------------
-layer:1,2,3,4,5,6,7,8,9,10,11
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-
-# Seared_Table
-block:id=Seared_Table,data=0,scale=16
-layer:0,1,2,3,4,5,6,7,8,9
-*****------*****
-*****------*****
-*****------*****
-*****------*****
-*****------*****
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-*****------*****
-*****------*****
-*****------*****
-*****------*****
-*****------*****
-layer:10,11,12,13,14
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-layer:15
-****************
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-*--------------*
-****************
-block:id=Seared_Table,data=2,scale=16
-layer:0,1
-*****------*****
-*****------*****
-*****------*****
-*****------*****
-*****------*****
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-*****------*****
-*****------*****
-*****------*****
-*****------*****
-*****------*****
-layer:2,3
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-layer:4
-****************
-****************
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-****************
-****************
-layer:5,6,7,8,9,10,11,12
-*******--*******
-*******--*******
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-----------------
-----------------
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-*******--*******
-*******--*******
-layer:13,14,15
-****************
-****************
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-**------------**
-****************
-****************
-
-# Stone_Torch
-patchblock:id=Stone_Torch,data=0,data=5
-patchrotate:id=50,data=0,rot=0
-patchblock:id=Stone_Torch,data=1
-patchrotate:id=50,data=1,rot=0
-patchblock:id=Stone_Torch,data=2
-patchrotate:id=50,data=2,rot=0
-patchblock:id=Stone_Torch,data=3
-patchrotate:id=50,data=3,rot=0
-
-# Tool_Forge
-block:id=Tool_Forge,data=0,scale=16
-layer:0,1,2,3,4,5,6,7,8,9,10,11
-****--------****
-****--------****
-****--------****
-****--------****
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-****--------****
-****--------****
-****--------****
-****--------****
-layer:12,13,14,15
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-
-#Wood_Tool_Station
-block:id=Wood_Tool_Station,data=0,data=1,data=10,scale=16
-layer:0,1,2,3,4,5,6,7,8,9,10,11
-****--------****
-****--------****
-****--------****
-****--------****
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-****--------****
-****--------****
-****--------****
-****--------****
-layer:12,13,14,15
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-****************
-
-block:id=Ore_Berry_One,data=0,data=1,data=2,data=3,scale=16
-layer:0,1,2,3,4,5,6,7
-----------------
-----------------
-----------------
-----------------
-----********----
-----********----
-----********----
-----********----
-----********----
-----********----
-----********----
-----********----
-----------------
-----------------
-----------------
-----------------
-layer:8,9,10,11,12,13,14,15
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-block:id=Ore_Berry_One,data=4,data=5,data=6,data=7,scale=16
-layer:0,1,2,3,4,5,6,7,8,9,10,11
-----------------
-----------------
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
-----------------
-----------------
-layer:12,13,14,15
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-
-block:id=Ore_Berry_Two,data=0,data=1,scale=16
-layer:0,1,2,3,4,5,6,7
-----------------
-----------------
-----------------
-----------------
-----********----
-----********----
-----********----
-----********----
-----********----
-----********----
-----********----
-----********----
-----------------
-----------------
-----------------
-----------------
-layer:8,9,10,11,12,13,14,15
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-block:id=Ore_Berry_Two,data=4,data=5,scale=16
-layer:0,1,2,3,4,5,6,7,8,9,10,11
-----------------
-----------------
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
---************--
-----------------
-----------------
-layer:12,13,14,15
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-----------------
-
-
-# Vertical patch, 45 degrees from xz=1.0/0.0 to xz=0.0/1.0
-patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
-# Vertical patch, X+ facing side from xz=0.5,1.0 to 0.5/0.0
-patch:id=VertX05,Ox=0.5,Oy=0.0,Oz=1.0,Ux=0.5,Uy=0.0,Uz=0.0,Vx=0.5,Vy=1.0,Vz=1.0
-# Vertical patch, X+ facing side from xz=0.5,1.0 to 0.5/0.0 (left half)
-patch:id=VertX05Left,Ox=0.5,Oy=0.0,Oz=1.0,Ux=0.5,Uy=0.0,Uz=0.0,Vx=0.5,Vy=1.0,Vz=1.0,Umax=0.5
-# Vertical patch, X+ facing side from xz=0.5,1.0 to 0.5/0.0 (right half)
-patch:id=VertX05Right,Ox=0.5,Oy=0.0,Oz=1.0,Ux=0.5,Uy=0.0,Uz=0.0,Vx=0.5,Vy=1.0,Vz=1.0,Umin=0.5
-# Vertical patch, X+ facing side from xz=0.5,1.0 to 0.5/0.0 (strip - 0.4375 to 0.5625)
-patch:id=VertX05Strip,Ox=0.5,Oy=0.0,Oz=1.0,Ux=0.5,Uy=0.0,Uz=0.0,Vx=0.5,Vy=1.0,Vz=1.0,Umin=0.4375,Umax=0.5625
-# Horizontal patch - Y+ facing at Y=1.0, top of texture at +Z, vertical strip (0.4375 to 0.5625)
-patch:id=HorizY100ZTopStrip,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,Umin=0.4375,Umax=0.5625
-# Horizontal patch - Y+ facing at Y=1.0, top of texture at +Z, vertical strip (0.4375 to 0.5625), Top half (V>= 0.5)
-patch:id=HorizY100ZTopStripTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,Umin=0.4375,Umax=0.5625,Vmin=0.5
-# Horizontal patch - Y+ facing at Y=1.0, top of texture at +Z, vertical strip (0.4375 to 0.5625), Bottom half (V < 0.5)
-patch:id=HorizY100ZTopStripBottom,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1,0,Vz=1.0,Umin=0.4375,Umax=0.5625,Vmax=0.5
-# Horizontal patch - Y+ facing at Y=0.01, top of texture at +Z
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
 patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
-# Sloped patch - up to X+, top of texture at Z+
 patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-customblock:id=Glass_Pane,id=Clear_Stained_Glass_Pane,data=*,class=org.dynmap.hdmap.renderer.PaneRenderer
-
-# Redstone_Machines
-customblock:id=Redstone_Machines,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=Direction,index0=0,map0=S012345,index1=1,map1=S012345,index2=4,map2=S012345,index3=5,map3=S013254,index4=3,map4=S014532,index5=2,map5=S015423
+# Tool_Forge:* (ToolForgeBlock), render=70(CUSTOM), opaque=false,cls=tconstruct.blocks.ToolForgeBlock
+# Oak_Barricade:* (trap.barricade.oak), render=76(CUSTOM), opaque=false,cls=tconstruct.blocks.traps.BarricadeBlock
+# Landmine:* (Redstone.Landmine), render=80(CUSTOM), opaque=false,cls=tconstruct.blocks.BlockLandmine
+# Wood_Tool_Station:* (ToolStationBlock), render=69(CUSTOM), opaque=false,cls=tconstruct.blocks.ToolStationBlock
+# Held_Item_Block:* (HeldItemBlock), render=71(CUSTOM), opaque=false,cls=tconstruct.blocks.EquipBlock
+# Lava_Tank:* (LavaTank), render=72(CUSTOM), opaque=false,cls=tconstruct.blocks.LavaTankBlock
+# Smeltery:* (Smeltery), render=85(CUSTOM), opaque=true,cls=tconstruct.blocks.SmelteryBlock
+# Seared_Table:* (SearedBlock), render=74(CUSTOM), opaque=false,cls=tconstruct.blocks.SearedBlock
+# Stone_Ladder:* (decoration.stoneladder), render=8(LADDER), opaque=false,cls=tconstruct.blocks.StoneLadder
+patchblock:id=Stone_Ladder,patch0=VertX0In@270,data=2
+patchblock:id=Stone_Ladder,patch0=VertX0In@90,data=3
+patchblock:id=Stone_Ladder,patch0=VertX0In@180,data=4
+patchblock:id=Stone_Ladder,patch0=VertX0In,data=5
+# Spruce_Barricade:* (trap.barricade.spruce), render=76(CUSTOM), opaque=false,cls=tconstruct.blocks.traps.BarricadeBlock
+# Birch_Barricade:* (trap.barricade.birch), render=76(CUSTOM), opaque=false,cls=tconstruct.blocks.traps.BarricadeBlock
+# Stone_Torch:* (decoration.stonetorch), render=2(TORCH), opaque=false,cls=tconstruct.blocks.StoneTorch
+patchblock:id=Stone_Torch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=Stone_Torch,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=Stone_Torch,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=Stone_Torch,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=Stone_Torch,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=Stone_Torch,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Ore_Berry_One:* (ore.berries.one), render=75(CUSTOM), opaque=false,cls=tconstruct.blocks.OreberryBush
+# Ore_Berry_Two:* (ore.berries.two), render=75(CUSTOM), opaque=false,cls=tconstruct.blocks.OreberryBushEssence
+# Jungle_Barricade:* (trap.barricade.jungle), render=76(CUSTOM), opaque=false,cls=tconstruct.blocks.traps.BarricadeBlock
+# Nether_Lava_Tank:* (LavaTankNether), render=72(CUSTOM), opaque=false,cls=tconstruct.blocks.LavaTankBlock
+# Nether_Smeltery:* (SmelteryNether), render=85(CUSTOM), opaque=true,cls=tconstruct.blocks.SmelteryBlock
+# Nether_Seared_Block:* (SearedBlockNether), render=74(CUSTOM), opaque=false,cls=tconstruct.blocks.SearedBlock
+# Blood_Channel:* (blood.channel), render=83(CUSTOM), opaque=false,cls=tconstruct.blocks.ConveyorBase
+# Slime_Channel:* (slime.channel), render=83(CUSTOM), opaque=false,cls=tconstruct.blocks.ConveyorBase
+# Slime_Pad:* (slime.pad), render=84(CUSTOM), opaque=false,cls=tconstruct.blocks.SlimePad
+# Furnace_Slab:* (FurnaceSlab), render=0(STANDARD), opaque=false,cls=tconstruct.blocks.FurnaceSlab
+boxblock:id=Furnace_Slab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1
+boxblock:id=Furnace_Slab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9
+# Molten_Silver:* (metal.molten.silver), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Lead:* (metal.molten.lead), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Nickel:* (metal.molten.nickel), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Platinum:* (metal.molten.shiny), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Invar:* (metal.molten.invar), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Electrum:* (metal.molten.electrum), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Iron:* (metal.molten.iron), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Gold:* (metal.molten.gold), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Copper:* (metal.molten.copper), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Tin:* (metal.molten.tin), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Aluminum:* (metal.molten.aluminum), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Cobalt:* (metal.molten.cobalt), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Ardite:* (metal.molten.ardite), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Bronze:* (metal.molten.bronze), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Aluminum_Brass:* (metal.molten.alubrass), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Manyullyn:* (metal.molten.manyullyn), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Alumite:* (metal.molten.alumite), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Obsidian:* (metal.molten.obsidian), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Steel:* (metal.molten.steel), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Glass:* (metal.molten.glass), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Stone:* (molten.stone), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Molten_Emerald:* (molten.emerald), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Liquid_Cow:* (liquid.blood), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.BloodBlock
+# Molten_Ender:* (fluid.ender), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.TConstructFluid
+# Glue_Fluid_Block:* (liquid.glue), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.GlueFluid
+# Drying_Rack:* (Armor.DryingRack), render=77(CUSTOM), opaque=false,cls=tconstruct.blocks.DryingRack
+# Glass_Pane:* (GlassPane), render=79(CUSTOM), opaque=false,cls=tconstruct.blocks.GlassPaneConnected
+# Clear_Stained_Glass_Pane:* (GlassPaneClearStained), render=78(CUSTOM), opaque=false,cls=tconstruct.blocks.GlassPaneStained
+# Seared_Slab:* (SearedSlab), render=0(STANDARD), opaque=false,cls=tconstruct.blocks.SearedSlab
+boxblock:id=Seared_Slab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Seared_Slab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Speed_Slab:* (SpeedSlab), render=0(STANDARD), opaque=false,cls=tconstruct.blocks.SpeedSlab
+boxblock:id=Speed_Slab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Speed_Slab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Punji:* (trap.punji), render=81(CUSTOM), opaque=false,cls=tconstruct.blocks.traps.Punji
+# Crafting_Station:* (CraftingStation), render=69(CUSTOM), opaque=false,cls=tconstruct.blocks.CraftingStationBlock
+# Liquid_Blue_Slime:* (liquid.slime), render=40(CUSTOM), opaque=false,cls=tconstruct.blocks.slime.SlimeFluid
+# Slime_Tall_Grass:* (slime.grass.tall), render=1(CROSSEDSQUARES), opaque=false,cls=tconstruct.blocks.slime.SlimeTallGrass
+patchblock:id=Slime_Tall_Grass,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0
+# Slime_Tree_Sapling:* (slime.sapling), render=1(CROSSEDSQUARES), opaque=false,cls=tconstruct.blocks.slime.SlimeSapling
+patchblock:id=Slime_Tree_Sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0
+patchblock:id=Slime_Tree_Sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=8
+# Crafting_Slab:* (CraftingSlab), render=0(STANDARD), opaque=false,cls=tconstruct.blocks.CraftingSlab
+boxblock:id=Crafting_Slab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5
+boxblock:id=Crafting_Slab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13
+# Wool_Slab_1:* (WoolSlab1), render=0(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
+boxblock:id=Wool_Slab_1,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Wool_Slab_1,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Wool_Slab_2:* (WoolSlab2), render=0(STANDARD), opaque=false,cls=tconstruct.blocks.SlabBase
+boxblock:id=Wool_Slab_2,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Wool_Slab_2,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Casting_Channel:* (CastingChannel), render=82(CUSTOM), opaque=false,cls=tconstruct.blocks.CastingChannelBlock
+# Wooden_Rail:* (rail.wood), render=9(MINECARTTRACK), opaque=false,cls=tconstruct.blocks.WoodRail
+patchblock:id=Wooden_Rail,patch0=HorizY001ZTop,data=0
+patchblock:id=Wooden_Rail,patch0=HorizY001ZTop@90,data=1
+patchblock:id=Wooden_Rail,patch0=SlopeXUpZTop,data=2
+patchblock:id=Wooden_Rail,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=Wooden_Rail,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=Wooden_Rail,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=Wooden_Rail,patch0=HorizY001ZTop@90,data=6
+patchblock:id=Wooden_Rail,patch0=HorizY001ZTop@180,data=7
+patchblock:id=Wooden_Rail,patch0=HorizY001ZTop@270,data=8,data=9
+patchblock:id=Wooden_Rail,patch0=SlopeXUpZTop,data=10
+patchblock:id=Wooden_Rail,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=Wooden_Rail,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=Wooden_Rail,patch0=SlopeXUpZTop@90,data=13

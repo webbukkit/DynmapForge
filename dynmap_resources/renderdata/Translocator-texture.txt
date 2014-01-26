@@ -1,0 +1,18 @@
+# Translocator 1.1.0.13
+version:1.6
+modname:Translocator
+
+var:translocator.id=0,crafting_grid.id=0
+
+cfgfile:config/Translocator.cfg
+
+
+texturepath:assets/translocator/textures/blocks/
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+
+
+# crafting_grid.id:* (craftingGrid), render=-1(CUSTOM), opaque=false,cls=codechicken.translocator.BlockCraftingGrid
+block:id=crafting_grid.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# translocator.id:* (translocator), render=-1(CUSTOM), opaque=false,cls=codechicken.translocator.BlockTranslocator
+block:id=translocator.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/obsidian

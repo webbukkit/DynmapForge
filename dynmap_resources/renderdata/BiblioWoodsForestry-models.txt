@@ -1,0 +1,50 @@
+# BiblioWoodsForestry 1.3
+version:1.6
+modname:BiblioWoodsForestry
+
+var:Shelf=0,MapFrame=0,Seat2=0,Bookcase2=0,MapFrame2=0,DisplayCaseSet0=0,ToolRack=0,DisplayCaseSet1=0,Desk2=0,DisplayCaseSet2=0
+var:Table=0,DisplayCaseSet3=0,DisplayCaseSet4=0,DisplayCaseSet5=0,Shelf2=0,PotionShelf=0,PotionShelf2=0,Seat=0,Desk=0,Label2=0
+var:Bookcase=0,Label=0,Table2=0,ToolRack2=0
+
+cfgfile:config/BiblioWoodsForestry.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+# Bookcase:* (BiblioWoodFstBookcase), render=149(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomBookcase
+# Bookcase2:* (BiblioWoodFstBookcase2), render=162(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomBookcase2
+# Desk:* (BiblioWoodFstdesk), render=160(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomDesk
+# Desk2:* (BiblioWoodFstdesk2), render=167(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomDesk2
+# DisplayCaseSet0:* (BiblioWoodFstcase0), render=153(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase0
+# DisplayCaseSet1:* (BiblioWoodFstcase1), render=154(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase1
+# DisplayCaseSet2:* (BiblioWoodFstcase2), render=155(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase2
+# DisplayCaseSet3:* (BiblioWoodFstcase3), render=156(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase3
+# DisplayCaseSet4:* (BiblioWoodFstcase4), render=157(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase4
+# DisplayCaseSet5:* (BiblioWoodFstcase5), render=158(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomCase5
+# PotionShelf:* (BiblioWoodFstpotshelf), render=159(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomPotionShelf
+# PotionShelf2:* (BiblioWoodFstpotshelf2), render=166(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomPotionShelf2
+# Shelf:* (BiblioWoodFstshelf), render=152(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomShelf
+# Shelf2:* (BiblioWoodFstshelf2), render=165(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomShelf2
+# Table:* (BiblioWoodFsttable), render=161(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomTable
+# Table2:* (BiblioWoodFsttable2), render=168(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomTable2
+# ToolRack:* (BiblioWoodFstrack), render=151(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomToolrack
+# ToolRack2:* (BiblioWoodFstrack2), render=164(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomToolrack2
+# Label:* (BiblioWoodFstlabel), render=159(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomLabel
+# Label2:* (BiblioWoodFstlabel2), render=166(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomLabel2
+# Seat:* (BiblioWoodSeat), render=169(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomSeat
+# Seat2:* (BiblioWoodSeat2), render=171(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomSeat2
+# MapFrame:* (BiblioWoodMapFrame), render=170(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomMapFrame
+# MapFrame2:* (BiblioWoodMapFrame2), render=172(CUSTOM), opaque=false,cls=jds.bibliocraft.forestrywood.blocks.BlockCustomMapFrame2

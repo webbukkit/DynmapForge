@@ -1,0 +1,27 @@
+# BuildCraft|Energy 4.1.2
+version:1.6
+modname:BuildCraft|Energy
+
+var:engine.id=0,fuel.id=0,oil.id=0
+
+cfgfile:config/buildcraft/main.conf
+
+
+texturepath:assets/buildcraft/textures/blocks/
+texture:id=buildcraft/engineWoodBottom,filename=assets/buildcraft/textures/blocks/engineWoodBottom.png
+texture:id=buildcraft/fuel_flow,filename=assets/buildcraft/textures/blocks/fuel_flow.png
+texture:id=buildcraft/engineStoneBottom,filename=assets/buildcraft/textures/blocks/engineStoneBottom.png
+texture:id=buildcraft/oil_flow,filename=assets/buildcraft/textures/blocks/oil_flow.png
+texture:id=buildcraft/oil_still,filename=assets/buildcraft/textures/blocks/oil_still.png
+texture:id=buildcraft/engineIronBottom,filename=assets/buildcraft/textures/blocks/engineIronBottom.png
+texture:id=buildcraft/fuel_still,filename=assets/buildcraft/textures/blocks/fuel_still.png
+
+
+# engine.id:* (engineBlock), render=133(CUSTOM), opaque=false,cls=buildcraft.energy.BlockEngine
+block:id=engine.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/engineWoodBottom
+block:id=engine.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/engineStoneBottom
+block:id=engine.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:buildcraft/engineIronBottom
+# oil.id:* (blockOil), render=40(CUSTOM), opaque=false,cls=buildcraft.energy.BlockBuildcraftFluid
+block:id=oil.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:buildcraft/oil_still,face2-5=0:buildcraft/oil_flow
+# fuel.id:* (blockFuel), render=40(CUSTOM), opaque=false,cls=buildcraft.energy.BlockBuildcraftFluid
+block:id=fuel.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:buildcraft/fuel_still,face2-5=0:buildcraft/fuel_flow

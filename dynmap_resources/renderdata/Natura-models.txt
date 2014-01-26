@@ -1,117 +1,532 @@
-# Natura Block mapping
-version:1.5.2-
+# Natura 2.1.14
+version:1.6
 modname:Natura
 
-# configuration file
+var:Amaranth_Fence_Gate=0,Powered_Blaze_Rail=0,Hopseed_Stairs=0,Netherrack_Furnace=0,Sakura_Fence_Gate=0,Ghostwood_Fence_Gate=0,Crops=0,Sakura_Pressure_Plate=0,Fusewood_Trapdoor=0,Planks_Block=0
+var:Hopseed_Button=0,Silverbell_Button=0,Willow_Log=0,Respawn_Obelisk=0,Darkwood_Pressure_Plate=0,Netherrack_Pressure_Plate=0,Ghostwood_Pressure_Plate=0,Bloodwood_Trapdoor=0,Maple_Trapdoor=0,Flora_Leaves=0
+var:Berry_Bush=0,Fusewood_Pressure_Plate=0,Bloodwood_Button=0,Bloodwood_Pressure_Plate=0,Eucalyptus_Door=0,Darkwood_Stairs=0,Detector_Blaze_Rail=0,Rare_Log=0,Willow_Pressure_Plate=0,Redwood_Trapdoor=0
+var:Redwood_Fence_Gate=0,Bloodwood_Door=0,Hopseed_Trapdoor=0,Plank_Slab_One=0,Eucalyputus_Pressure_Plate=0,Amaranth_Pressure_Plate=0,Eucalyputus_Stairs=0,Maple_Fence_Gate=0,Tigerwood_Trapdoor=0,Darkwood_Button=0
+var:Glowing_Mushroom=0,terrain/Tainted_Soil=0,Thornvines=0,Tigerwood_Button=0,Redwood_Door=0,Amaranth_Stairs=0,Willow_Stairs=0,Bloodwood_Block=0,Plank_Slab_Two=0,Nether_Lever=0
+var:Blaze_Rail=0,Purple_Glowshroom=0,Maple_Button=0,Amaranth_Trapdoor=0,Hopseed_Fence_Gate=0,Fence=0,Redwood_Pressure_Plate=0,Redwood_Button=0,Sakura_Door=0,Amaranth_Button=0
+var:Silverbell_Pressure_Plate=0,Willow_Button=0,Tigerwood_Fence_Gate=0,Green_Glowshroom=0,Eucalyputus_Button=0,Fusewood_Button=0,Redwood_Bark_Door=0,Wood_Block=0,Maple_Stairs=0,Ghostwood_Trapdoor=0
+var:Topiary_Grass_Slab=0,Ghostwood_Door=0,Maple_Pressure_Plate=0,Activator_Blaze_Rail=0,Sakura_Trapdoor=0,Sapling=0,Cloud_Block=0,Silverbell_Trapdoor=0,Fusewood_Fence_Gate=0,Hopseed_Door=0
+var:Saguaro_Cactus=0,Tigerwood_Pressure_Plate=0,Darkwood_Fence_Gate=0,terrain/Heat_Sand=0,Tigerwood_Stairs=0,Netherrack_Button=0,Sakura_Leaves=0,Bloodwood_Stairs=0,Bloodwood_Fence_Gate=0,Willow_Trapdoor=0
+var:Flower=0,Rare_Sapling=0,Fusewood_Stairs=0,Silverbell_Fence_Gate=0,Hopseed_Pressure_Plate=0,Bookshelf=0,Darkwood_Leaves=0,Eucalyputus_Trapdoor=0,Rare_Leaves=0,Redwood_Block=0
+var:Darkwood_Log=0,Sakura_Button=0,Ghostwood_Button=0,Topiary_Grass_Block=0,Blue_Glowshroom=0,Ghostwood_Stairs=0,Silverbell_Stairs=0,Darkwood_Trapdoor=0,Blaze_Hopper=0,Sakura_Stairs=0
+var:Nether_Berry_Bush=0,Crafting_Table=0,Redwood_Stairs=0,Eucalyputus_Fence_Gate=0,Nether_Glass=0,Willow_Fence_Gate=0
+
 cfgfile:config/Natura.txt
 
-# Door patches
-patch:id=DoorFront,Ox=0.0,Oy=0.0,Oz=0.0,Ux=1.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=0.0,visibility=bottom
-patch:id=DoorBack,Ox=0.0,Oy=0.0,Oz=0.1875,Ux=1.0,Uy=0.0,Uz=0.1875,Vx=0.0,Vy=1.0,Vz=0.1875,visibility=top
-patch:id=DoorLeft,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=0.0,Vy=1.0,Vz=0.0,Umin=0.0,Umax=0.1875,visibility=top
-patch:id=DoorRight,Ox=1.0,Oy=0.0,Oz=-0.8125,Ux=1.0,Uy=0.0,Uz=0.1875,Vx=1.0,Vy=1.0,Vz=-0.8125,Umin=0.8125,Umax=1.0,visibility=bottom
-patch:id=DoorTop,Ox=0.0,Oy=1.0,Oz=-0.8125,Ux=1.0,Uy=1.0,Uz=-0.8125,Vx=0.0,Vy=1.0,Vz=0.1875,Vmin=0.8125,Vmax=1.0,visibility=bottom
-patch:id=DoorBottom,Ox=0.0,Oy=0.0,Oz=0.0,Ux=1.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=0.0,Vz=1.0,Vmin=0.0,Vmax=0.1875,visibility=top
-# Vertical patch, 45 degrees from xz=1.0/0.0 to xz=0.0/1.0
 patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
-# Vertical patch at xz=0.0/0.0 to 1.0/0.0, facing inward
-patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
-# Vertical patch, X+ facing side from xz=0.25,1.0 to 0.25/0.0
 patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
-# Vertical patch, X+ facing side from xz=0.75,1.0 to 0.75/0.0
 patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# Blocks
-#  terrain/Tainted_Soil
-
-#  terrain/Heat_Sand
-boxblock:id=terrain/Heat_Sand,data=*,ymax=0.875
-
-#  Berry_Bush
-# "Nether Berry Bush"
-boxblock:id=Berry_Bush,id=Nether_Berry_Bush,data=0,data=1,data=2,data=3,xmin=0.25,xmax=0.75,ymax=0.5,zmin=0.25,xmax=0.75
-boxblock:id=Berry_Bush,id=Nether_Berry_Bush,data=4,data=5,data=6,data=7,xmin=0.125,xmax=0.875,ymax=0.75,zmin=0.125,xmax=0.875
-
-# "Bloodwood Block"
- 
-# "Bloodwood Door"
-# "Eucalyptus Door"
-# "Ghostwood Door"
-# "Hopseed Door"
-# "Redwood Bark Door"
-# "Redwood Door"
-# "Sakura Door"
-linkmap:id=Bloodwood_Door,id=Eucalyptus_Door,id=Ghostwood_Door,id=Hopseed_Door,id=Redwood_Bark_Door,id=Redwood_Door,id=Sakura_Door,linkalg=6
-patchblock:id=Bloodwood_Door,id=Eucalyptus_Door,id=Ghostwood_Door,id=Hopseed_Door,id=Redwood_Bark_Door,id=Redwood_Door,id=Sakura_Door,data=0,data=4,data=8,data=12,patch0=DoorFront@270,patch1=DoorBack@270,patch2=DoorLeft@270,patch3=DoorRight@270,patch4=DoorTop@270,patch5=DoorBottom@270
-patchblock:id=Bloodwood_Door,id=Eucalyptus_Door,id=Ghostwood_Door,id=Hopseed_Door,id=Redwood_Bark_Door,id=Redwood_Door,id=Sakura_Door,data=1,data=5,data=9,data=13,patch0=DoorFront,patch1=DoorBack,patch2=DoorLeft,patch3=DoorRight,patch4=DoorTop,patch5=DoorBottom
-patchblock:id=Bloodwood_Door,id=Eucalyptus_Door,id=Ghostwood_Door,id=Hopseed_Door,id=Redwood_Bark_Door,id=Redwood_Door,id=Sakura_Door,data=2,data=6,data=10,data=14,patch0=DoorFront@90,patch1=DoorBack@90,patch2=DoorLeft@90,patch3=DoorRight@90,patch4=DoorTop@90,patch5=DoorBottom@90
-patchblock:id=Bloodwood_Door,id=Eucalyptus_Door,id=Ghostwood_Door,id=Hopseed_Door,id=Redwood_Bark_Door,id=Redwood_Door,id=Sakura_Door,data=3,data=7,data=11,data=15,patch0=DoorFront@180,patch1=DoorBack@180,patch2=DoorLeft@180,patch3=DoorRight@180,patch4=DoorTop@180,patch5=DoorBottom@180
-
-# Bookshelf
-
-# "Cloud Block"
-
-# "Crafting Table"
-
-# Crops
-patchblock:id=Crops,data=*,patch0=VertX075,patch1=VertX075@90,patch2=VertX025,patch3=VertX025@90
-
-# "Darkwood Leaves"
-
-# "Darkwood Log"
-
-# Fence
-customblock:id=Fence,data=*,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107
-
-# "Flora Leaves"
-
-
-
-# "Planks Block"
-
-# "Rare Leaves"
-
-# "Rare Log"
-
-# Flower
-# Sapling
-# "Rare Sapling"
-# "Glowing Mushroom"
-patchblock:id=Flower,id=Sapling,id=Rare_Sapling,id=Glowing_Mushroom,data=*,patch0=VertX1Z0ToX0Z1,patch1=VertX1Z0ToX0Z1@90
-
-# "Blue Glowshroom"
-# "Green Glowshroom"
-# "Purple Glowshroom"
-
-# "Redwood Block"
-
-# "Saguaro Cactus"
-boxblock:id=Saguaro_Cactus,data=0,xmin=0.125,xmax=0.875,ymax=0.875,zmin=0.125,zmax=0.875
-boxblock:id=Saguaro_Cactus,data=1,data=2,xmin=0.325,xmax=0.675,ymax=0.675,zmin=0.325,zmax=0.675
-boxblock:id=Saguaro_Cactus,data=3,xmin=0.625,ymin=0.1875,ymax=0.75,zmin=0.25,zmax=0.75
-boxblock:id=Saguaro_Cactus,data=4,xmin=0.25,xmax=0.75,ymin=0.1875,ymax=0.75,zmin=0.625
-boxblock:id=Saguaro_Cactus,data=5,xmax=0.375,ymin=0.1875,ymax=0.75,zmin=0.25,zmax=0.75
-boxblock:id=Saguaro_Cactus,data=6,xmin=0.25,xmax=0.75,ymin=0.1875,ymax=0.75,zmax=0.375
-
-# "Sakura Leaves"
-
-# Thornvines
-patchblock:id=Thornvines,data=2,patch0=VertX0In
-patchblock:id=Thornvines,data=4,patch0=VertX0In@90
-patchblock:id=Thornvines,data=8,patch0=VertX0In@180
-patchblock:id=Thornvines,data=1,patch0=VertX0In@270
-patchblock:id=Thornvines,data=6,patch0=VertX0In,patch1=VertX0In@90
-patchblock:id=Thornvines,data=12,patch0=VertX0In@90,patch1=VertX0In@180
-patchblock:id=Thornvines,data=9,patch0=VertX0In@180,patch1=VertX0In@270
-patchblock:id=Thornvines,data=3,patch0=VertX0In@270,patch1=VertX0In
-patchblock:id=Thornvines,data=10,patch0=VertX0In,patch1=VertX0In@180
-patchblock:id=Thornvines,data=5,patch0=VertX0In@90,patch1=VertX0In@270
-patchblock:id=Thornvines,data=7,patch0=VertX0In@90,patch1=VertX0In@270,patch2=VertX0In
-patchblock:id=Thornvines,data=14,patch0=VertX0In@180,patch1=VertX0In,patch2=VertX0In@90
-patchblock:id=Thornvines,data=13,patch0=VertX0In@270,patch1=VertX0In@90,patch2=VertX0In@180
-patchblock:id=Thornvines,data=11,patch0=VertX0In,patch1=VertX0In@180,patch2=VertX0In@270
-patchblock:id=Thornvines,data=15,patch0=VertX0In@270,patch1=VertX0In@90,patch2=VertX0In@180,patch3=VertX0In
-
-# "Willow Log"
-
-# "Wood Block"
+# Tigerwood_Stairs:* (stair.tiger), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Tigerwood_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Redwood_Door:* (door.redwood), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+customblock:id=Redwood_Door,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# Saguaro_Cactus:* (Saguaro), render=107(CUSTOM), opaque=false,cls=mods.natura.blocks.trees.SaguaroBlock
+# Nether_Berry_Bush:* (NetherBerryBush), render=106(CUSTOM), opaque=false,cls=mods.natura.blocks.crops.NetherBerryBush
+# Sapling:* (florasapling), render=1(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.trees.NSaplingBlock
+patchblock:id=Sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# Berry_Bush:* (BerryBush), render=106(CUSTOM), opaque=false,cls=mods.natura.blocks.crops.BerryBush
+# Crops:* (N Crops), render=108(CUSTOM), opaque=false,cls=mods.natura.blocks.crops.CropBlock
+# Eucalyptus_Door:* (door.eucalyptus), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+customblock:id=Eucalyptus_Door,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# Hopseed_Door:* (door.hopseed), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+customblock:id=Hopseed_Door,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# Sakura_Door:* (door.sakura), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+customblock:id=Sakura_Door,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# Ghostwood_Door:* (door.ghostwood), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+customblock:id=Ghostwood_Door,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# Bloodwood_Door:* (door.bloodwood), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+customblock:id=Bloodwood_Door,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# Redwood_Bark_Door:* (door.redwoodbark), render=7(DOOR), opaque=false,cls=mods.natura.blocks.trees.NDoor
+customblock:id=Redwood_Bark_Door,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# Glowing_Mushroom:* (Glowshroom), render=1(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.Glowshroom
+patchblock:id=Glowing_Mushroom,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# Rare_Sapling:* (Rare Sapling), render=1(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.trees.OverworldSapling
+patchblock:id=Rare_Sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1,data=2,data=3,data=4
+patchblock:id=Rare_Sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=8,data=9,data=10,data=11,data=12
+# Flower:* (Bluebells), render=1(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.FlowerBlock
+patchblock:id=Flower,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# Thornvines:* (Thornvines), render=20(VINE), opaque=false,cls=mods.natura.blocks.crops.ThornVines
+patchblock:id=Thornvines,patch0=VertX0In@270#0,data=1
+patchblock:id=Thornvines,patch0=VertX0In#0,data=2
+patchblock:id=Thornvines,patch0=VertX0In@270#0,patch1=VertX0In#0,data=3
+patchblock:id=Thornvines,patch0=VertX0In@90#0,data=4
+patchblock:id=Thornvines,patch0=VertX0In@90#0,patch1=VertX0In@270#0,data=5
+patchblock:id=Thornvines,patch0=VertX0In#0,patch1=VertX0In@90#0,data=6
+patchblock:id=Thornvines,patch0=VertX0In@90#0,patch1=VertX0In@270#0,patch2=VertX0In#0,data=7
+patchblock:id=Thornvines,patch0=VertX0In@180#0,data=8
+patchblock:id=Thornvines,patch0=VertX0In@180#0,patch1=VertX0In@270#0,data=9
+patchblock:id=Thornvines,patch0=VertX0In#0,patch1=VertX0In@180#0,data=10
+patchblock:id=Thornvines,patch0=VertX0In#0,patch1=VertX0In@180#0,patch2=VertX0In@270#0,data=11
+patchblock:id=Thornvines,patch0=VertX0In@90#0,patch1=VertX0In@180#0,data=12
+patchblock:id=Thornvines,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,data=13
+patchblock:id=Thornvines,patch0=VertX0In@180#0,patch1=VertX0In#0,patch2=VertX0In@90#0,data=14
+patchblock:id=Thornvines,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,patch3=VertX0In#0,data=15
+# Fence:* (Natura.fence), render=109(CUSTOM), opaque=false,cls=mods.natura.blocks.overrides.AlternateFence
+# Topiary_Grass_Slab:* (GrassSlab), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.GrassSlab
+boxblock:id=Topiary_Grass_Slab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Topiary_Grass_Slab,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Plank_Slab_One:* (plankSlab1), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
+boxblock:id=Plank_Slab_One,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Plank_Slab_One,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Plank_Slab_Two:* (plankSlab2), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NSlabBase
+boxblock:id=Plank_Slab_Two,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Plank_Slab_Two,xmin=0.0,xmax=1.0,ymin=0.5,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Eucalyputus_Stairs:* (stair.eucalyptus), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Eucalyputus_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Sakura_Stairs:* (stair.sakura), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Sakura_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Ghostwood_Stairs:* (stair.ghostwood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Ghostwood_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Redwood_Stairs:* (stair.redwood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Redwood_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Bloodwood_Stairs:* (stair.bloodwood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Bloodwood_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Hopseed_Stairs:* (stair.hopseed), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Hopseed_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Maple_Stairs:* (stair.maple), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Maple_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Amaranth_Stairs:* (stair.amaranth), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Amaranth_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Silverbell_Stairs:* (stair.silverbell), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Silverbell_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Willow_Stairs:* (stair.willow), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Willow_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Darkwood_Stairs:* (stair.darkwood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Darkwood_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Fusewood_Stairs:* (stair.fusewood), render=10(STAIRS), opaque=false,cls=mods.natura.blocks.NStairs
+customblock:id=Fusewood_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# Eucalyputus_Pressure_Plate:* (pressureplate.eucalyptus), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Eucalyputus_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Eucalyputus_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Eucalyputus_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Sakura_Pressure_Plate:* (pressureplate.sakura), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Sakura_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Sakura_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Sakura_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Ghostwood_Pressure_Plate:* (pressureplate.ghostwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Ghostwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Ghostwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Ghostwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Redwood_Pressure_Plate:* (pressureplate.redwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Redwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Redwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Redwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Bloodwood_Pressure_Plate:* (pressureplate.bloodwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Bloodwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Bloodwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Bloodwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Hopseed_Pressure_Plate:* (pressureplate.hopseed), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Hopseed_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Hopseed_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Hopseed_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Maple_Pressure_Plate:* (pressureplate.maple), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Maple_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Maple_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Maple_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Amaranth_Pressure_Plate:* (pressureplate.amaranth), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Amaranth_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Amaranth_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Amaranth_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Silverbell_Pressure_Plate:* (pressureplate.silverbell), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Silverbell_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Silverbell_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Silverbell_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Tigerwood_Pressure_Plate:* (pressureplate.tiger), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Tigerwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Tigerwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Tigerwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Willow_Pressure_Plate:* (pressureplate.willow), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Willow_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Willow_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Willow_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Darkwood_Pressure_Plate:* (pressureplate.darkwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Darkwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Darkwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Darkwood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Fusewood_Pressure_Plate:* (pressureplate.fusewood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NPressurePlate
+boxblock:id=Fusewood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Fusewood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Fusewood_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Eucalyputus_Trapdoor:* (trapdoor.eucalyptus), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Eucalyputus_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Sakura_Trapdoor:* (trapdoor.sakura), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Sakura_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Sakura_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Sakura_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Sakura_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Sakura_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Sakura_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Sakura_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Sakura_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Sakura_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Sakura_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Ghostwood_Trapdoor:* (trapdoor.ghostwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Ghostwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Ghostwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Ghostwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Ghostwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Ghostwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Ghostwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Ghostwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Ghostwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Ghostwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Ghostwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Redwood_Trapdoor:* (trapdoor.redwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Redwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Redwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Redwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Redwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Redwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Redwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Redwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Redwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Redwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Redwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Bloodwood_Trapdoor:* (trapdoor.bloodwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Bloodwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Bloodwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Bloodwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Bloodwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Bloodwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Bloodwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Bloodwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Bloodwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Bloodwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Bloodwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Hopseed_Trapdoor:* (trapdoor.hopseed), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Hopseed_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Hopseed_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Hopseed_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Hopseed_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Hopseed_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Hopseed_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Hopseed_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Hopseed_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Hopseed_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Hopseed_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Maple_Trapdoor:* (trapdoor.maple), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Maple_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Maple_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Maple_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Maple_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Maple_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Maple_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Maple_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Maple_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Maple_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Maple_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Amaranth_Trapdoor:* (trapdoor.amaranth), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Amaranth_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Amaranth_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Amaranth_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Amaranth_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Amaranth_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Amaranth_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Amaranth_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Amaranth_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Amaranth_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Amaranth_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Silverbell_Trapdoor:* (trapdoor.silverbell), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Silverbell_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Silverbell_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Silverbell_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Silverbell_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Silverbell_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Silverbell_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Silverbell_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Silverbell_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Silverbell_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Silverbell_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Tigerwood_Trapdoor:* (trapdoor.tiger), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Tigerwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Tigerwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Tigerwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Tigerwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Tigerwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Tigerwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Tigerwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Tigerwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Tigerwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Tigerwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Willow_Trapdoor:* (trapdoor.willow), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Willow_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Willow_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Willow_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Willow_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Willow_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Willow_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Willow_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Willow_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Willow_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Willow_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Darkwood_Trapdoor:* (trapdoor.darkwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Darkwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Darkwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Darkwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Darkwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Darkwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Darkwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Darkwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Darkwood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Darkwood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Darkwood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Fusewood_Trapdoor:* (trapdoor.fusewood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NTrapdoor
+boxblock:id=Fusewood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=Fusewood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=Fusewood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=Fusewood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=Fusewood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Fusewood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=Fusewood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=Fusewood_Trapdoor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=Fusewood_Trapdoor,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=Fusewood_Trapdoor,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# Eucalyputus_Button:* (button.eucalyptus), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Eucalyputus_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Eucalyputus_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Eucalyputus_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Eucalyputus_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Eucalyputus_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Eucalyputus_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Eucalyputus_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Eucalyputus_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Sakura_Button:* (button.sakura), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Sakura_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Sakura_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Sakura_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Sakura_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Sakura_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Sakura_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Sakura_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Sakura_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Ghostwood_Button:* (button.ghostwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Ghostwood_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Ghostwood_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Ghostwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Ghostwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Ghostwood_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Ghostwood_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Ghostwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Ghostwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Redwood_Button:* (button.redwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Redwood_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Redwood_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Redwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Redwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Redwood_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Redwood_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Redwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Redwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Bloodwood_Button:* (button.bloodwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Bloodwood_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Bloodwood_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Bloodwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Bloodwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Bloodwood_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Bloodwood_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Bloodwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Bloodwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Hopseed_Button:* (button.hopseed), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Hopseed_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Hopseed_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Hopseed_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Hopseed_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Hopseed_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Hopseed_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Hopseed_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Hopseed_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Maple_Button:* (button.maple), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Maple_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Maple_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Maple_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Maple_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Maple_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Maple_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Maple_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Maple_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Silverbell_Button:* (button.silverbell), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Silverbell_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Silverbell_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Silverbell_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Silverbell_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Silverbell_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Silverbell_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Silverbell_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Silverbell_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Amaranth_Button:* (button.amaranth), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Amaranth_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Amaranth_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Amaranth_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Amaranth_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Amaranth_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Amaranth_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Amaranth_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Amaranth_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Tigerwood_Button:* (button.tiger), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Tigerwood_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Tigerwood_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Tigerwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Tigerwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Tigerwood_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Tigerwood_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Tigerwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Tigerwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Willow_Button:* (button.willow), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Willow_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Willow_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Willow_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Willow_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Willow_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Willow_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Willow_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Willow_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Darkwood_Button:* (button.darkwood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Darkwood_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Darkwood_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Darkwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Darkwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Darkwood_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Darkwood_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Darkwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Darkwood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Fusewood_Button:* (button.fusewood), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.NButton
+boxblock:id=Fusewood_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Fusewood_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Fusewood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Fusewood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Fusewood_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Fusewood_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Fusewood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Fusewood_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Eucalyputus_Fence_Gate:* (fenceGate.eucalyptus), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Eucalyputus_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Sakura_Fence_Gate:* (fenceGate.sakura), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Sakura_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Ghostwood_Fence_Gate:* (fenceGate.ghostwood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Ghostwood_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Redwood_Fence_Gate:* (fenceGate.redwood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Redwood_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Bloodwood_Fence_Gate:* (fenceGate.bloodwood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Bloodwood_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Hopseed_Fence_Gate:* (fenceGate.hopseed), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Hopseed_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Maple_Fence_Gate:* (fenceGate.maple), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Maple_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Silverbell_Fence_Gate:* (fenceGate.silverbell), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Silverbell_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Amaranth_Fence_Gate:* (fenceGate.amaranth), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Amaranth_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Tigerwood_Fence_Gate:* (fenceGate.tiger), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Tigerwood_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Willow_Fence_Gate:* (fenceGate.willow), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Willow_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Darkwood_Fence_Gate:* (fenceGate.darkwood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Darkwood_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Fusewood_Fence_Gate:* (fenceGate.fusewood), render=21(FENCEGATE), opaque=false,cls=mods.natura.blocks.NFenceGate
+customblock:id=Fusewood_Fence_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+# Blaze_Rail:* (Blazerail), render=9(MINECARTTRACK), opaque=false,cls=mods.natura.blocks.tech.BlazeRail
+patchblock:id=Blaze_Rail,patch0=HorizY001ZTop,data=0
+patchblock:id=Blaze_Rail,patch0=HorizY001ZTop@90,data=1
+patchblock:id=Blaze_Rail,patch0=SlopeXUpZTop,data=2
+patchblock:id=Blaze_Rail,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=Blaze_Rail,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=Blaze_Rail,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=Blaze_Rail,patch0=HorizY001ZTop@90,data=6
+patchblock:id=Blaze_Rail,patch0=HorizY001ZTop@180,data=7
+patchblock:id=Blaze_Rail,patch0=HorizY001ZTop@270,data=8,data=9
+patchblock:id=Blaze_Rail,patch0=SlopeXUpZTop,data=10
+patchblock:id=Blaze_Rail,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=Blaze_Rail,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=Blaze_Rail,patch0=SlopeXUpZTop@90,data=13
+# Powered_Blaze_Rail:* (BrailPowered), render=9(MINECARTTRACK), opaque=false,cls=mods.natura.blocks.tech.BlazeRailPowered
+patchblock:id=Powered_Blaze_Rail,patch0=HorizY001ZTop,data=0
+patchblock:id=Powered_Blaze_Rail,patch0=HorizY001ZTop@90,data=1
+patchblock:id=Powered_Blaze_Rail,patch0=SlopeXUpZTop,data=2
+patchblock:id=Powered_Blaze_Rail,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=Powered_Blaze_Rail,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=Powered_Blaze_Rail,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=Powered_Blaze_Rail,patch0=HorizY001ZTop@90,data=6
+patchblock:id=Powered_Blaze_Rail,patch0=HorizY001ZTop@180,data=7
+patchblock:id=Powered_Blaze_Rail,patch0=HorizY001ZTop,data=8
+patchblock:id=Powered_Blaze_Rail,patch0=HorizY001ZTop@90,data=9
+patchblock:id=Powered_Blaze_Rail,patch0=SlopeXUpZTop,data=10
+patchblock:id=Powered_Blaze_Rail,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=Powered_Blaze_Rail,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=Powered_Blaze_Rail,patch0=SlopeXUpZTop@90,data=13
+patchblock:id=Powered_Blaze_Rail,patch0=HorizY001ZTop@90,data=14
+patchblock:id=Powered_Blaze_Rail,patch0=HorizY001ZTop@180,data=15
+# Detector_Blaze_Rail:* (BrailDetector), render=9(MINECARTTRACK), opaque=false,cls=mods.natura.blocks.tech.BlazeRailDetector
+patchblock:id=Detector_Blaze_Rail,patch0=HorizY001ZTop,data=0
+patchblock:id=Detector_Blaze_Rail,patch0=HorizY001ZTop@90,data=1
+patchblock:id=Detector_Blaze_Rail,patch0=SlopeXUpZTop,data=2
+patchblock:id=Detector_Blaze_Rail,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=Detector_Blaze_Rail,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=Detector_Blaze_Rail,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=Detector_Blaze_Rail,patch0=HorizY001ZTop@90,data=6
+patchblock:id=Detector_Blaze_Rail,patch0=HorizY001ZTop@180,data=7
+patchblock:id=Detector_Blaze_Rail,patch0=HorizY001ZTop,data=8
+patchblock:id=Detector_Blaze_Rail,patch0=HorizY001ZTop@90,data=9
+patchblock:id=Detector_Blaze_Rail,patch0=SlopeXUpZTop,data=10
+patchblock:id=Detector_Blaze_Rail,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=Detector_Blaze_Rail,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=Detector_Blaze_Rail,patch0=SlopeXUpZTop@90,data=13
+patchblock:id=Detector_Blaze_Rail,patch0=HorizY001ZTop@90,data=14
+patchblock:id=Detector_Blaze_Rail,patch0=HorizY001ZTop@180,data=15
+# Activator_Blaze_Rail:* (BrailActivator), render=9(MINECARTTRACK), opaque=false,cls=mods.natura.blocks.tech.BlazeRailPowered
+patchblock:id=Activator_Blaze_Rail,patch0=HorizY001ZTop,data=0
+patchblock:id=Activator_Blaze_Rail,patch0=HorizY001ZTop@90,data=1
+patchblock:id=Activator_Blaze_Rail,patch0=SlopeXUpZTop,data=2
+patchblock:id=Activator_Blaze_Rail,patch0=SlopeXUpZTop@180,data=3
+patchblock:id=Activator_Blaze_Rail,patch0=SlopeXUpZTop@270,data=4
+patchblock:id=Activator_Blaze_Rail,patch0=SlopeXUpZTop@90,data=5
+patchblock:id=Activator_Blaze_Rail,patch0=HorizY001ZTop@90,data=6
+patchblock:id=Activator_Blaze_Rail,patch0=HorizY001ZTop@180,data=7
+patchblock:id=Activator_Blaze_Rail,patch0=HorizY001ZTop,data=8
+patchblock:id=Activator_Blaze_Rail,patch0=HorizY001ZTop@90,data=9
+patchblock:id=Activator_Blaze_Rail,patch0=SlopeXUpZTop,data=10
+patchblock:id=Activator_Blaze_Rail,patch0=SlopeXUpZTop@180,data=11
+patchblock:id=Activator_Blaze_Rail,patch0=SlopeXUpZTop@270,data=12
+patchblock:id=Activator_Blaze_Rail,patch0=SlopeXUpZTop@90,data=13
+patchblock:id=Activator_Blaze_Rail,patch0=HorizY001ZTop@90,data=14
+patchblock:id=Activator_Blaze_Rail,patch0=HorizY001ZTop@180,data=15
+# Blaze_Hopper:* (NetherHopper), render=110(CUSTOM), opaque=false,cls=mods.natura.blocks.tech.BlazeHopper
+# Netherrack_Pressure_Plate:* (NetherPressurePlate), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.AlternatePressurePlate
+boxblock:id=Netherrack_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=Netherrack_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=Netherrack_Pressure_Plate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# Netherrack_Button:* (NetherButton), render=0(STANDARD), opaque=false,cls=mods.natura.blocks.overrides.NetherrackButton
+boxblock:id=Netherrack_Button,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=Netherrack_Button,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=Netherrack_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=Netherrack_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=Netherrack_Button,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=Netherrack_Button,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=Netherrack_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=Netherrack_Button,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+# Nether_Lever:* (NetherLever), render=111(CUSTOM), opaque=false,cls=mods.natura.blocks.overrides.NetherLever

@@ -1,0 +1,19 @@
+# CCTurtle 1.57
+version:1.6
+modname:CCTurtle
+
+var:turtleUpgradedBlockID=0,turtleAdvancedBlockID=0,turtleBlockID=0
+
+cfgfile:config/CCTurtle.cfg
+
+
+texturepath:assets/ccturtle/textures/blocks/
+texture:id=computercraft/turtle,filename=assets/computercraft/textures/blocks/turtle.png
+
+
+# turtleBlockID:* (CC-Turtle), render=192(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleMFR
+block:id=turtleBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/turtle
+# turtleUpgradedBlockID:* (CC-TurtleExpanded), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleExpandedMFR
+block:id=turtleUpgradedBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/turtle
+# turtleAdvancedBlockID:* (CC-TurtleAdvanced), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleAdvancedMFR
+block:id=turtleAdvancedBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/turtle

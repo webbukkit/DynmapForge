@@ -1,0 +1,40 @@
+# BiblioWoodsNatura 1.1
+version:1.6
+modname:BiblioWoodsNatura
+
+var:PotionShelf=0,Shelf=0,MapFrame=0,Seat=0,Desk=0,DisplayCaseSet0=0,ToolRack=0,DisplayCaseSet1=0,Bookcase=0,Label=0
+var:DisplayCaseSet2=0,Table=0,DisplayCaseSet3=0
+
+cfgfile:config/BiblioWoodsNatura.cfg
+
+
+texturepath:assets/bibliowoodsnatura/textures/blocks/
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+
+
+# Bookcase:* (BiblioWoodBookcase), render=173(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomBookcase
+block:id=Bookcase,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Desk:* (BiblioWooddesk), render=182(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomDesk
+block:id=Desk,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet0:* (BiblioWoodcase0), render=177(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomCase0
+block:id=DisplayCaseSet0,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet1:* (BiblioWoodcase1), render=178(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomCase1
+block:id=DisplayCaseSet1,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet2:* (BiblioWoodcase2), render=179(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomCase2
+block:id=DisplayCaseSet2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# DisplayCaseSet3:* (BiblioWoodcase3), render=180(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomCase3
+block:id=DisplayCaseSet3,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# PotionShelf:* (BiblioWoodpotshelf), render=181(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomPotionShelf
+block:id=PotionShelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Shelf:* (BiblioWoodshelf), render=176(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomShelf
+block:id=Shelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Table:* (BiblioWoodtable), render=183(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomTable
+block:id=Table,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# ToolRack:* (BiblioWoodrack), render=175(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomToolrack
+block:id=ToolRack,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Label:* (BiblioWoodlabel), render=181(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomLabel
+block:id=Label,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# Seat:* (BiblioWoodSeat), render=184(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomSeat
+block:id=Seat,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# MapFrame:* (BiblioWoodMapFrame), render=185(CUSTOM), opaque=false,cls=jds.bibliocraft.naturawood.blocks.BlockCustomMapFrame
+block:id=MapFrame,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce

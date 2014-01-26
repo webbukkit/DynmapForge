@@ -1,0 +1,25 @@
+# QuantumCraft 1.02_mc164
+version:1.6
+modname:QuantumCraft
+
+var:quantumComputerBlockID=0,qBlockBlockID=0,quantumOreGlowingBlockID=0,quantumOreBlockID=0
+
+cfgfile:config/QuantumCraft.cfg
+
+
+texturepath:assets/quantumcraft/textures/blocks/
+texture:id=quantumcraft/quantum_computer_top,filename=assets/quantumcraft/textures/blocks/quantum_computer_top.png
+texture:id=quantumcraft/quantum_computer_side,filename=assets/quantumcraft/textures/blocks/quantum_computer_side.png
+texture:id=quantumcraft/quantum_computer,filename=assets/quantumcraft/textures/blocks/quantum_computer.png
+texture:id=quantumcraft/qblock_unobserved,filename=assets/quantumcraft/textures/blocks/qblock_unobserved.png
+texture:id=quantumcraft/quantum_ore,filename=assets/quantumcraft/textures/blocks/quantum_ore.png
+
+
+# quantumComputerBlockID:* (quantumcomputer), render=0(STANDARD), opaque=false,cls=dan200.quantum.shared.BlockQuantumComputer
+block:id=quantumComputerBlockID,data=*,stdrot=true,face0-1=0:quantumcraft/quantum_computer_top,face2-3=0:quantumcraft/quantum_computer_side,face4=0:quantumcraft/quantum_computer,face5=0:quantumcraft/quantum_computer_side
+# quantumOreBlockID:* (quantumore), render=0(STANDARD), opaque=true,cls=dan200.quantum.shared.BlockQuantumOre
+block:id=quantumOreBlockID,data=*,stdrot=true,face0-5=0:quantumcraft/quantum_ore
+# quantumOreGlowingBlockID:* (quantumoreglowing), render=0(STANDARD), opaque=true,cls=dan200.quantum.shared.BlockQuantumOre
+block:id=quantumOreGlowingBlockID,data=*,stdrot=true,face0-5=0:quantumcraft/quantum_ore
+# qBlockBlockID:* (qblock), render=232(CUSTOM), opaque=false,cls=dan200.quantum.shared.BlockQBlock
+block:id=qBlockBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:quantumcraft/qblock_unobserved

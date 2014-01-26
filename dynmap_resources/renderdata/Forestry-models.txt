@@ -1,0 +1,54 @@
+# Forestry 2.3.1.0
+version:1.6
+modname:Forestry
+
+var:resources=0,planks2=0,fences=0,leaves=0,alveary=0,stained=0,candle=0,mill=0,stairs=0,slabs3=0
+var:slabs2=0,slabs1=0,apiculture=0,lepidopterology=0,planks=0,saplingGE=0,mail=0,stump=0,beehives=0,engine=0
+var:fences2=0,log3=0,log2=0,log1=0,arboriculture=0,machine=0,log6=0,log7=0,log4=0,log5=0
+var:pods=0,core=0,soil=0
+
+cfgfile:config/forestry/base.conf
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+# candle:* (tile.candle), render=147(CUSTOM), opaque=false,cls=forestry.apiculture.gadgets.BlockCandle
+# stump:* (tile.stump), render=2(TORCH), opaque=false,cls=forestry.apiculture.gadgets.BlockStump
+patchblock:id=stump,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=stump,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=stump,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=stump,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=stump,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=stump,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# slabs1:* (tile.for.slabs1), render=0(STANDARD), opaque=false,cls=forestry.arboriculture.gadgets.BlockSlab
+boxblock:id=slabs1,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=slabs1,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# slabs2:* (tile.for.slabs2), render=0(STANDARD), opaque=false,cls=forestry.arboriculture.gadgets.BlockSlab
+boxblock:id=slabs2,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=slabs2,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# saplingGE:* (tile.saplingGE), render=50(CUSTOM), opaque=false,cls=forestry.arboriculture.gadgets.BlockSapling
+# leaves:* (tile.leaves), render=51(CUSTOM), opaque=false,cls=forestry.arboriculture.gadgets.BlockLeaves
+# fences:* (tile.for.fences), render=52(CUSTOM), opaque=false,cls=forestry.arboriculture.gadgets.BlockArbFence
+# stairs:* (tile.for.stairs), render=10(STAIRS), opaque=false,cls=forestry.arboriculture.gadgets.BlockArbStairs
+customblock:id=stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# engine:* (tile.for.engine), render=146(CUSTOM), opaque=false,cls=forestry.core.gadgets.BlockBase
+# machine:* (tile.for.factory), render=146(CUSTOM), opaque=false,cls=forestry.core.gadgets.BlockBase
+# core:* (tile.for.core), render=146(CUSTOM), opaque=false,cls=forestry.core.gadgets.BlockBase
+# pods:* (tile.for.pods), render=53(CUSTOM), opaque=false,cls=forestry.arboriculture.gadgets.BlockFruitPod
+# slabs3:* (tile.for.slabs3), render=0(STANDARD), opaque=false,cls=forestry.arboriculture.gadgets.BlockSlab
+boxblock:id=slabs3,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=slabs3,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# fences2:* (tile.for.fences2), render=52(CUSTOM), opaque=false,cls=forestry.arboriculture.gadgets.BlockArbFence

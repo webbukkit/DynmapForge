@@ -1,0 +1,15 @@
+# BuildCraft|Core 4.1.2
+version:1.6
+modname:BuildCraft|Core
+
+var:springBlock.id=0
+
+cfgfile:config/buildcraft/main.conf
+
+
+texturepath:assets/buildcraft/textures/blocks/
+texture:id=minecraft/bedrock,filename=assets/minecraft/textures/blocks/bedrock.png
+
+
+# springBlock.id:* (eternalSpring), render=0(STANDARD), opaque=true,cls=buildcraft.core.BlockSpring
+block:id=springBlock.id,data=*,stdrot=true,face0-5=0:minecraft/bedrock

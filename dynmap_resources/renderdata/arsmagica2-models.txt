@@ -1,0 +1,98 @@
+# arsmagica2 1.1.1c
+version:1.6
+modname:arsmagica2
+
+var:wakebloom_ID=0,seer_stone_ID=0,witchwood_slab_double_ID=0,magic_wall_ID=0,essence_conduit_ID=0,astral_barrier_ID=0,light_nexus_ID=0,inlay_iron_ID=0,desert_nova_ID=0,crystal_pillar_ID=0
+var:invisibleUtility_ID=0,inlay_redstone_ID=0,arcane_reconstructor_ID=0,keystone_recepticle_ID=0,caster_rune_ID=0,essence_refiner_ID=0,witchwood_stairs_ID=0,ores_ID=0,keystone_door_ID=0,inscription_table_ID=0
+var:witchwood_log_ID=0,keystone_trapdoor_ID=0,vinteum_torch_ID=0,dark_nexus_ID=0,deco_block_ID=0,illusion_block_ID=0,liquidEssence_ID=0,witchwood_sapling_ID=0,lectern_ID=0,summoner_ID=0
+var:block_caster_ID=0,crafting_altar_ID=0,magic_sigil_ID=0,essence_nexus_ID=0,magicians_workbench_ID=0,everstone_ID=0,blue_orchid_ID=0,witchwood_slab_single_ID=0,occulus_ID=0,calefactor_ID=0
+var:spell_rune_ID=0,tarma_root_ID=0,witchwood_planks_ID=0,aum_ID=0,mana_battery_ID=0,keystone_chest_ID=0,thorns_ID=0,witchwood_leaves_ID=0,inlay_gold_ID=0
+
+cfgfile:config/AM2/AM2.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+# keystone_door_ID:* (keystoneDoor), render=7(DOOR), opaque=false,cls=am2.blocks.BlockKeystoneDoor
+customblock:id=keystone_door_ID,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# keystone_trapdoor_ID:* (keystoneTrapDoor), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockKeystoneTrapdoor
+boxblock:id=keystone_trapdoor_ID,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3
+boxblock:id=keystone_trapdoor_ID,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=4
+boxblock:id=keystone_trapdoor_ID,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=5
+boxblock:id=keystone_trapdoor_ID,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=6
+boxblock:id=keystone_trapdoor_ID,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=keystone_trapdoor_ID,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11
+boxblock:id=keystone_trapdoor_ID,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.8125,zmax=1.0,data=12
+boxblock:id=keystone_trapdoor_ID,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.1875,data=13
+boxblock:id=keystone_trapdoor_ID,xmin=0.8125,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=14
+boxblock:id=keystone_trapdoor_ID,xmin=0.0,xmax=0.1875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=15
+# essence_conduit_ID:* (essenceConduit), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockEssenceConduit
+# essence_nexus_ID:* (essenceNexus), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockEssenceNexus
+# block_caster_ID:* (blockCaster), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockCaster
+# crystal_pillar_ID:* (crystalPillar), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockCrystalPillar
+# calefactor_ID:* (calefactor), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockCalefactor
+# keystone_recepticle_ID:* (keystoneReceptacle), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockKeystoneReceptacle
+# astral_barrier_ID:* (astralBarrier), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockAstralBarrier
+# dark_nexus_ID:* (darkNexus), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockEssenceNexus
+# thorns_ID:* (thorns), render=13(CACTUS), opaque=false,cls=am2.blocks.BlockThorns
+patchblock:id=thorns_ID,patch0=VertX00625,patch1=VertX00625@90,patch2=VertX00625@180,patch3=VertX00625@270,patch4=HorizY100ZTop,patch5=HorizY100ZTop@180/0/0,data=*
+# seer_stone_ID:* (seerStone), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockSeerStone
+# light_nexus_ID:* (tile.arsmagica2:lightnexus), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockEssenceNexus
+# blue_orchid_ID:* (blueOrchid), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.AMFlower
+patchblock:id=blue_orchid_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# desert_nova_ID:* (desertNova), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.BlockDesertNova
+patchblock:id=desert_nova_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# keystone_chest_ID:* (keystoneChest), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockKeystoneChest
+# lectern_ID:* (blockLectern), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockLectern
+# arcane_reconstructor_ID:* (blockArcaneReconstructor), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockArcaneReconstructor
+# mana_battery_ID:* (manaBattery), render=49(CUSTOM), opaque=true,cls=am2.blocks.BlockManaBattery
+# occulus_ID:* (occulus), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockOcculus
+# crafting_altar_ID:* (CraftingAltar), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockCraftingAltar
+# spell_rune_ID:* (SpellRune), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockGroundRuneSpell
+boxblock:id=spell_rune_ID,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11
+# deco_block_ID:* (ParticleEmitter), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockParticleEmitter
+boxblock:id=deco_block_ID,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=0.009999999776482582,zmin=0.0,zmax=0.009999999776482582,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# vinteum_torch_ID:* (VinteumTorch), render=2(TORCH), opaque=false,cls=am2.blocks.VinteumTorch
+patchblock:id=vinteum_torch_ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=vinteum_torch_ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=vinteum_torch_ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=vinteum_torch_ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=vinteum_torch_ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=vinteum_torch_ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# inscription_table_ID:* (InscriptionTable), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockInscriptionTable
+# aum_ID:* (Aum), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.AMFlower
+patchblock:id=aum_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# wakebloom_ID:* (WakeBloom), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.BlockWakebloom
+patchblock:id=wakebloom_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# tarma_root_ID:* (TarmaRoot), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.BlockTarmaRoot
+patchblock:id=tarma_root_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# summoner_ID:* (Summoner), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockSummoner
+# liquidEssence_ID:* (liquidEssence), render=40(CUSTOM), opaque=false,cls=am2.blocks.liquid.BlockLiquidEssence
+# inlay_redstone_ID:* (redstoneInlay), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockInlay
+# inlay_iron_ID:* (ironInlay), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockInlay
+# inlay_gold_ID:* (goldInlay), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockInlay
+# witchwood_slab_single_ID:* (tile.arsmagica2:witchwoodSingleSlab), render=0(STANDARD), opaque=false,cls=am2.blocks.WitchwoodSlabs
+boxblock:id=witchwood_slab_single_ID,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=witchwood_slab_single_ID,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# witchwood_stairs_ID:* (stairsWitchwood), render=10(STAIRS), opaque=false,cls=am2.blocks.WitchwoodStairs
+customblock:id=witchwood_stairs_ID,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# witchwood_sapling_ID:* (saplingWitchwood), render=1(CROSSEDSQUARES), opaque=false,cls=am2.blocks.WitchwoodSapling
+patchblock:id=witchwood_sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# everstone_ID:* (everstone), render=49(CUSTOM), opaque=false,cls=am2.blocks.BlockEverstone
+# invisibleUtility_ID:* (invisibleUtility), render=0(STANDARD), opaque=false,cls=am2.blocks.BlockInvisibleUtility
+boxblock:id=invisibleUtility_ID,xmin=0.0,xmax=0.009999999776482582,ymin=0.0,ymax=0.009999999776482582,zmin=0.0,zmax=0.009999999776482582,data=*
+# magic_sigil_ID:* (magic_sigil), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockMagicSigil
+# magicians_workbench_ID:* (magiciansWorkbench), render=48(CUSTOM), opaque=false,cls=am2.blocks.BlockMagiciansWorkbench

@@ -1,0 +1,51 @@
+# OpenPeripheral 0.2.1
+version:1.6
+modname:OpenPeripheral
+
+var:blocks/playerInventoryId=0,blocks/sensorBlockId=0,blocks/proxyBlockId=0,blocks/bridgeId=0,blocks/ticketMachineId=0,blocks/robotBlockId=0
+
+cfgfile:config/OpenPeripheral.cfg
+
+
+texturepath:assets/openperipheral/textures/blocks/
+texture:id=openperipheral/ticketmachine_side_right,filename=assets/openperipheral/textures/blocks/ticketmachine_side_right.png
+texture:id=openperipheral/sensor,filename=assets/openperipheral/textures/blocks/sensor.png
+texture:id=openperipheral/proxy_side_right,filename=assets/openperipheral/textures/blocks/proxy_side_right.png
+texture:id=openperipheral/ticketmachine_side_left,filename=assets/openperipheral/textures/blocks/ticketmachine_side_left.png
+texture:id=openperipheral/ticketmachine_back,filename=assets/openperipheral/textures/blocks/ticketmachine_back.png
+texture:id=openperipheral/proxy_bottom,filename=assets/openperipheral/textures/blocks/proxy_bottom.png
+texture:id=openperipheral/ticketmachine_front,filename=assets/openperipheral/textures/blocks/ticketmachine_front.png
+texture:id=openperipheral/proxy_side_down,filename=assets/openperipheral/textures/blocks/proxy_side_down.png
+texture:id=openperipheral/playerinventory,filename=assets/openperipheral/textures/blocks/playerinventory.png
+texture:id=openperipheral/ticketmachine_top,filename=assets/openperipheral/textures/blocks/ticketmachine_top.png
+texture:id=openperipheral/robot,filename=assets/openperipheral/textures/blocks/robot.png
+texture:id=openperipheral/proxy_side_left,filename=assets/openperipheral/textures/blocks/proxy_side_left.png
+texture:id=openperipheral/proxy_top,filename=assets/openperipheral/textures/blocks/proxy_top.png
+texture:id=openperipheral/ticketmachine_bottom,filename=assets/openperipheral/textures/blocks/ticketmachine_bottom.png
+texture:id=openperipheral/bridge,filename=assets/openperipheral/textures/blocks/bridge.png
+texture:id=openperipheral/proxy_side_up,filename=assets/openperipheral/textures/blocks/proxy_side_up.png
+
+
+# blocks/bridgeId:* (glassesbridge), render=0(STANDARD), opaque=true,cls=openperipheral.glasses.block.BlockGlassesBridge
+block:id=blocks/bridgeId,data=*,stdrot=true,face0-5=0:openperipheral/bridge
+# blocks/proxyBlockId:* (proxyblock), render=0(STANDARD), opaque=true,cls=openperipheral.core.block.BlockProxy
+block:id=blocks/proxyBlockId,data=0,stdrot=true,face0=0:openperipheral/proxy_bottom,face1=0:openperipheral/proxy_top,face2-5=0:openperipheral/proxy_side_up
+block:id=blocks/proxyBlockId,data=1,stdrot=true,face0=0:openperipheral/proxy_top,face1=0:openperipheral/proxy_bottom,face2-5=0:openperipheral/proxy_side_down
+block:id=blocks/proxyBlockId,data=2,stdrot=true,face0-1=0:openperipheral/proxy_side_down,face2=0:openperipheral/proxy_bottom,face3=0:openperipheral/proxy_top,face4=0:openperipheral/proxy_side_right,face5=0:openperipheral/proxy_side_left
+block:id=blocks/proxyBlockId,data=3,stdrot=true,face0-1=0:openperipheral/proxy_side_up,face2=0:openperipheral/proxy_top,face3=0:openperipheral/proxy_bottom,face4=0:openperipheral/proxy_side_left,face5=0:openperipheral/proxy_side_right
+block:id=blocks/proxyBlockId,data=4,stdrot=true,face0-1=0:openperipheral/proxy_side_right,face2=0:openperipheral/proxy_side_left,face3=0:openperipheral/proxy_side_right,face4=0:openperipheral/proxy_bottom,face5=0:openperipheral/proxy_top
+block:id=blocks/proxyBlockId,data=5,stdrot=true,face0-1=0:openperipheral/proxy_side_left,face2=0:openperipheral/proxy_side_right,face3=0:openperipheral/proxy_side_left,face4=0:openperipheral/proxy_top,face5=0:openperipheral/proxy_bottom
+block:id=blocks/proxyBlockId,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:openperipheral/proxy_side_left
+# blocks/playerInventoryId:* (playerinventory), render=228(CUSTOM), opaque=false,cls=openperipheral.core.block.BlockPlayerInventory
+block:id=blocks/playerInventoryId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openperipheral/playerinventory
+# blocks/ticketMachineId:* (ticketmachine), render=0(STANDARD), opaque=true,cls=openperipheral.core.block.BlockTicketMachine
+block:id=blocks/ticketMachineId,data=0,data=1,stdrot=true,face0=0:openperipheral/ticketmachine_bottom,face1=0:openperipheral/ticketmachine_top,face2=0:openperipheral/ticketmachine_side_right,face3=0:openperipheral/ticketmachine_side_left,face4=0:openperipheral/ticketmachine_front,face5=0:openperipheral/ticketmachine_back
+block:id=blocks/ticketMachineId,data=2,stdrot=true,face0=0:openperipheral/ticketmachine_bottom,face1=0:openperipheral/ticketmachine_top,face2=0:openperipheral/ticketmachine_front,face3=0:openperipheral/ticketmachine_back,face4=0:openperipheral/ticketmachine_side_left,face5=0:openperipheral/ticketmachine_side_right
+block:id=blocks/ticketMachineId,data=3,stdrot=true,face0=0:openperipheral/ticketmachine_bottom,face1=0:openperipheral/ticketmachine_top,face2=0:openperipheral/ticketmachine_back,face3=0:openperipheral/ticketmachine_front,face4=0:openperipheral/ticketmachine_side_right,face5=0:openperipheral/ticketmachine_side_left
+block:id=blocks/ticketMachineId,data=4,stdrot=true,face0=0:openperipheral/ticketmachine_bottom,face1=0:openperipheral/ticketmachine_top,face2=0:openperipheral/ticketmachine_side_right,face3=0:openperipheral/ticketmachine_side_left,face4=0:openperipheral/ticketmachine_front,face5=0:openperipheral/ticketmachine_back
+block:id=blocks/ticketMachineId,data=5,stdrot=true,face0=0:openperipheral/ticketmachine_bottom,face1=0:openperipheral/ticketmachine_top,face2=0:openperipheral/ticketmachine_side_left,face3=0:openperipheral/ticketmachine_side_right,face4=0:openperipheral/ticketmachine_back,face5=0:openperipheral/ticketmachine_front
+block:id=blocks/ticketMachineId,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:openperipheral/ticketmachine_bottom,face1=0:openperipheral/ticketmachine_top,face2=0:openperipheral/ticketmachine_side_right,face3=0:openperipheral/ticketmachine_side_left,face4=0:openperipheral/ticketmachine_front,face5=0:openperipheral/ticketmachine_back
+# blocks/sensorBlockId:* (openp_sensor), render=228(CUSTOM), opaque=false,cls=openperipheral.sensor.block.BlockSensor
+block:id=blocks/sensorBlockId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openperipheral/sensor
+# blocks/robotBlockId:* (openp_robot), render=228(CUSTOM), opaque=false,cls=openperipheral.robots.block.BlockRobot
+block:id=blocks/robotBlockId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openperipheral/robot

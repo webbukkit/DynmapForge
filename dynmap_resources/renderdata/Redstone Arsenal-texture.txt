@@ -1,0 +1,17 @@
+# Redstone Arsenal 1.0.0.0
+version:1.6
+modname:Redstone Arsenal
+
+var:Storage=0
+
+cfgfile:config/cofh/RedstoneArsenal.cfg
+
+
+texturepath:assets/redstone arsenal/textures/blocks/
+texture:id=redstonearsenal/storage/Block_ElectrumFlux,filename=assets/redstonearsenal/textures/blocks/storage/Block_ElectrumFlux.png
+texture:id=redstonearsenal/storage/Block_CrystalFlux,filename=assets/redstonearsenal/textures/blocks/storage/Block_CrystalFlux.png
+
+
+# Storage:* (Storage), render=0(STANDARD), opaque=true,cls=redstonearsenal.block.BlockStorage
+block:id=Storage,data=0,stdrot=true,face0-5=0:redstonearsenal/storage/Block_ElectrumFlux
+block:id=Storage,data=1,stdrot=true,face0-5=0:redstonearsenal/storage/Block_CrystalFlux

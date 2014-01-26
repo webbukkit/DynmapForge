@@ -1,0 +1,177 @@
+# OpenBlocks 1.2.2
+version:1.6
+modname:OpenBlocks
+
+var:blockLightboxId=0,blockElevatorId=0,blockVacuumHopperId=0,blockVillageHighlighterId=0,blockCanvasId=0,blockBlockBreakerId=0,blockBlockPlacerId=0,blockLadderId=0,blockGuideId=0,blockXPDrainId=0
+var:blockItemDropperId=0,blockImaginaryId=0,blockDrawingTable=0,blockProjectorId=0,blockTrophyId=0,blockFanId=0,blockTankId=0,blockTargetId=0,blockSpongeId=0,blockCanvasGlassId=0
+var:blockBearTrapId=0,blockCannonId=0,blockPathId=0,blockGraveId=0,blockHealId=0,blockBigButton=0,blockAutoAnvilId=0,blockSprinklerId=0,blockFlagId=0,blockPaintMixer=0
+var:blockPaintCanId=0,blockDonationStationId=0,blockRopeLadderId=0,blockAutoEnchantmentTableId=0,blockXPBottlerId=0
+
+cfgfile:config/OpenBlocks.cfg
+
+
+texturepath:assets/openblocks/textures/blocks/
+texture:id=openblocks/xpbottler_bottom,filename=assets/openblocks/textures/blocks/xpbottler_bottom.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+texture:id=openblocks/blockBreaker_bottom,filename=assets/openblocks/textures/blocks/blockBreaker_bottom.png
+texture:id=openblocks/blockPlacer_bottom,filename=assets/openblocks/textures/blocks/blockPlacer_bottom.png
+texture:id=minecraft/stone_slab_top,filename=assets/minecraft/textures/blocks/stone_slab_top.png
+texture:id=openblocks/cannon,filename=assets/openblocks/textures/blocks/cannon.png
+texture:id=openblocks/trophy,filename=assets/openblocks/textures/blocks/trophy.png
+texture:id=openblocks/paintcan_left,filename=assets/openblocks/textures/blocks/paintcan_left.png
+texture:id=openblocks/guide,filename=assets/openblocks/textures/blocks/guide.png
+texture:id=openblocks/fan,filename=assets/openblocks/textures/blocks/fan.png
+texture:id=openblocks/xpbottler_sides,filename=assets/openblocks/textures/blocks/xpbottler_sides.png
+texture:id=openblocks/ropeladder,filename=assets/openblocks/textures/blocks/ropeladder.png
+texture:id=openblocks/donationstation,filename=assets/openblocks/textures/blocks/donationstation.png
+texture:id=openblocks/target,filename=assets/openblocks/textures/blocks/target.png
+texture:id=openblocks/blockPlacer,filename=assets/openblocks/textures/blocks/blockPlacer.png
+texture:id=openblocks/paintcan_front,filename=assets/openblocks/textures/blocks/paintcan_front.png
+texture:id=openblocks/guide_side,filename=assets/openblocks/textures/blocks/guide_side.png
+texture:id=openblocks/xpbottler_front,filename=assets/openblocks/textures/blocks/xpbottler_front.png
+texture:id=openblocks/paintmixer,filename=assets/openblocks/textures/blocks/paintmixer.png
+texture:id=openblocks/grave,filename=assets/openblocks/textures/blocks/grave.png
+texture:id=openblocks/blockPlacer_side,filename=assets/openblocks/textures/blocks/blockPlacer_side.png
+texture:id=openblocks/autoanvil,filename=assets/openblocks/textures/blocks/autoanvil.png
+texture:id=openblocks/autoenchantmenttable,filename=assets/openblocks/textures/blocks/autoenchantmenttable.png
+texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/planks_spruce.png
+texture:id=openblocks/vacuumhopper,filename=assets/openblocks/textures/blocks/vacuumhopper.png
+texture:id=openblocks/sprinkler,filename=assets/openblocks/textures/blocks/sprinkler.png
+texture:id=openblocks/blockBreaker_side,filename=assets/openblocks/textures/blocks/blockBreaker_side.png
+texture:id=minecraft/planks_jungle,filename=assets/minecraft/textures/blocks/planks_jungle.png
+texture:id=openblocks/lightbox_back,filename=assets/openblocks/textures/blocks/lightbox_back.png
+texture:id=openblocks/xpdrain,filename=assets/openblocks/textures/blocks/xpdrain.png
+texture:id=openblocks/itemDropper_down,filename=assets/openblocks/textures/blocks/itemDropper_down.png
+texture:id=openblocks/beartrap,filename=assets/openblocks/textures/blocks/beartrap.png
+texture:id=openblocks/drawingtable_top,filename=assets/openblocks/textures/blocks/drawingtable_top.png
+texture:id=openblocks/bigbutton,filename=assets/openblocks/textures/blocks/bigbutton.png
+texture:id=openblocks/tank,filename=assets/openblocks/textures/blocks/tank.png
+texture:id=minecraft/planks_birch,filename=assets/minecraft/textures/blocks/planks_birch.png
+texture:id=openblocks/canvasglass,filename=assets/openblocks/textures/blocks/canvasglass.png
+texture:id=openblocks/path,filename=assets/openblocks/textures/blocks/path.png
+texture:id=openblocks/pencilBlock,filename=assets/openblocks/textures/blocks/pencilBlock.png
+texture:id=openblocks/paintcan_top,filename=assets/openblocks/textures/blocks/paintcan_top.png
+texture:id=openblocks/itemDropper,filename=assets/openblocks/textures/blocks/itemDropper.png
+texture:id=openblocks/paintcan_bottom,filename=assets/openblocks/textures/blocks/paintcan_bottom.png
+texture:id=openblocks/heal,filename=assets/openblocks/textures/blocks/heal.png
+texture:id=openblocks/drawingtable_front,filename=assets/openblocks/textures/blocks/drawingtable_front.png
+texture:id=openblocks/blockBreaker,filename=assets/openblocks/textures/blocks/blockBreaker.png
+texture:id=openblocks/autoenchantmenttable_bottom,filename=assets/openblocks/textures/blocks/autoenchantmenttable_bottom.png
+texture:id=openblocks/xpbottler_top,filename=assets/openblocks/textures/blocks/xpbottler_top.png
+texture:id=openblocks/drawingtable,filename=assets/openblocks/textures/blocks/drawingtable.png
+texture:id=openblocks/village_highlighter,filename=assets/openblocks/textures/blocks/village_highlighter.png
+texture:id=openblocks/elevator,filename=assets/openblocks/textures/blocks/elevator.png
+texture:id=openblocks/ladder,filename=assets/openblocks/textures/blocks/ladder.png
+texture:id=openblocks/paintcan_right,filename=assets/openblocks/textures/blocks/paintcan_right.png
+texture:id=openblocks/canvas,filename=assets/openblocks/textures/blocks/canvas.png
+texture:id=openblocks/paintcan_side,filename=assets/openblocks/textures/blocks/paintcan_side.png
+texture:id=openblocks/sponge,filename=assets/openblocks/textures/blocks/sponge.png
+texture:id=openblocks/lightbox,filename=assets/openblocks/textures/blocks/lightbox.png
+texture:id=openblocks/xpbottler_back,filename=assets/openblocks/textures/blocks/xpbottler_back.png
+texture:id=openblocks/autoenchantmenttable_top,filename=assets/openblocks/textures/blocks/autoenchantmenttable_top.png
+
+
+# blockGuideId:* (openblocks_guide), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockGuide
+block:id=blockGuideId,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:openblocks/guide,face2-5=0:openblocks/guide_side
+# blockElevatorId:* (openblocks_elevator), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockElevator
+block:id=blockElevatorId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/elevator
+# blockHealId:* (openblocks_heal), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockHeal
+block:id=blockHealId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/heal
+# blockLightboxId:* (openblocks_lightbox), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockLightbox
+block:id=blockLightboxId,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/lightbox_back,face1=0:openblocks/lightbox,face2-5=0:openblocks/lightbox_back
+block:id=blockLightboxId,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/lightbox,face1-5=0:openblocks/lightbox_back
+block:id=blockLightboxId,data=2,stdrot=true,transparency=TRANSPARENT,face0-2=0:openblocks/lightbox_back,face3=0:openblocks/lightbox,face4-5=0:openblocks/lightbox_back
+block:id=blockLightboxId,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:openblocks/lightbox_back,face2=0:openblocks/lightbox,face3-5=0:openblocks/lightbox_back
+block:id=blockLightboxId,data=4,stdrot=true,transparency=TRANSPARENT,face0-4=0:openblocks/lightbox_back,face5=0:openblocks/lightbox
+block:id=blockLightboxId,data=5,stdrot=true,transparency=TRANSPARENT,face0-3=0:openblocks/lightbox_back,face4=0:openblocks/lightbox,face5=0:openblocks/lightbox_back
+block:id=blockLightboxId,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/lightbox,face1-5=0:openblocks/lightbox_back
+# blockTargetId:* (openblocks_target), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockTarget
+block:id=blockTargetId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/target
+# blockGraveId:* (openblocks_grave), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockGrave
+block:id=blockGraveId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/grave
+# blockFlagId:* (openblocks_flag), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockFlag
+block:id=blockFlagId,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+block:id=blockFlagId,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+block:id=blockFlagId,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_birch
+block:id=blockFlagId,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_jungle
+block:id=blockFlagId,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+# blockTankId:* (openblocks_tank), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockTank
+block:id=blockTankId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/tank
+# blockTrophyId:* (openblocks_trophy), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockTrophy
+block:id=blockTrophyId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/trophy
+# blockBearTrapId:* (openblocks_beartrap), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockBearTrap
+block:id=blockBearTrapId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/beartrap
+# blockSprinklerId:* (openblocks_sprinkler), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockSprinkler
+block:id=blockSprinklerId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/sprinkler
+# blockCannonId:* (openblocks_cannon), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockCannon
+block:id=blockCannonId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/cannon
+# blockVacuumHopperId:* (openblocks_vacuumhopper), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockVacuumHopper
+block:id=blockVacuumHopperId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/vacuumhopper
+# blockSpongeId:* (openblocks_sponge), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockSponge
+block:id=blockSpongeId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/sponge
+# blockBigButton:* (openblocks_bigbutton), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockBigButton
+block:id=blockBigButton,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/bigbutton
+# blockImaginaryId:* (openblocks_imaginary), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockImaginary
+block:id=blockImaginaryId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/pencilBlock
+# blockXPBottlerId:* (openblocks_xpbottler), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockXPBottler
+block:id=blockXPBottlerId,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_back,face3=0:openblocks/xpbottler_front,face4-5=0:openblocks/xpbottler_sides
+block:id=blockXPBottlerId,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_front,face3=0:openblocks/xpbottler_back,face4-5=0:openblocks/xpbottler_sides
+block:id=blockXPBottlerId,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_back,face5=0:openblocks/xpbottler_front
+block:id=blockXPBottlerId,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2-3=0:openblocks/xpbottler_sides,face4=0:openblocks/xpbottler_front,face5=0:openblocks/xpbottler_back
+block:id=blockXPBottlerId,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/xpbottler_bottom,face1=0:openblocks/xpbottler_top,face2=0:openblocks/xpbottler_back,face3=0:openblocks/xpbottler_front,face4-5=0:openblocks/xpbottler_sides
+# blockVillageHighlighterId:* (openblocks_village_highlighter), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockVillageHighlighter
+block:id=blockVillageHighlighterId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/village_highlighter
+# blockPathId:* (openblocks_path), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockPath
+block:id=blockPathId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/path
+# blockAutoAnvilId:* (openblocks_autoanvil), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockAutoAnvil
+block:id=blockAutoAnvilId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/autoanvil
+# blockAutoEnchantmentTableId:* (openblocks_autoenchantmenttable), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockAutoEnchantmentTable
+block:id=blockAutoEnchantmentTableId,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/autoenchantmenttable_bottom,face1=0:openblocks/autoenchantmenttable_top,face2-5=0:openblocks/autoenchantmenttable
+# blockXPDrainId:* (openblocks_xpdrain), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockXPDrain
+block:id=blockXPDrainId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/xpdrain
+# blockBlockBreakerId:* (openblocks_blockbreaker), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockBlockBreaker
+block:id=blockBlockBreakerId,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/blockBreaker,face1=0:openblocks/blockBreaker_bottom,face2-5=0:openblocks/blockBreaker_side
+block:id=blockBlockBreakerId,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/blockBreaker_bottom,face1=0:openblocks/blockBreaker,face2-5=0:openblocks/blockBreaker_side
+block:id=blockBlockBreakerId,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:openblocks/blockBreaker_side,face2=0:openblocks/blockBreaker,face3=0:openblocks/blockBreaker_bottom,face4-5=0:openblocks/blockBreaker_side
+block:id=blockBlockBreakerId,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:openblocks/blockBreaker_side,face2=0:openblocks/blockBreaker_bottom,face3=0:openblocks/blockBreaker,face4-5=0:openblocks/blockBreaker_side
+block:id=blockBlockBreakerId,data=4,stdrot=true,transparency=TRANSPARENT,face0-3=0:openblocks/blockBreaker_side,face4=0:openblocks/blockBreaker,face5=0:openblocks/blockBreaker_bottom
+block:id=blockBlockBreakerId,data=5,stdrot=true,transparency=TRANSPARENT,face0-3=0:openblocks/blockBreaker_side,face4=0:openblocks/blockBreaker_bottom,face5=0:openblocks/blockBreaker
+block:id=blockBlockBreakerId,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/blockBreaker_bottom,face1=0:openblocks/blockBreaker,face2-5=0:openblocks/blockBreaker_side
+# blockBlockPlacerId:* (openblocks_blockPlacer), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockBlockPlacer
+block:id=blockBlockPlacerId,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/blockPlacer,face1=0:openblocks/blockPlacer_bottom,face2-5=0:openblocks/blockPlacer_side
+block:id=blockBlockPlacerId,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/blockPlacer_bottom,face1=0:openblocks/blockPlacer,face2-5=0:openblocks/blockPlacer_side
+block:id=blockBlockPlacerId,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:openblocks/blockPlacer_side,face2=0:openblocks/blockPlacer,face3=0:openblocks/blockPlacer_bottom,face4-5=0:openblocks/blockPlacer_side
+block:id=blockBlockPlacerId,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:openblocks/blockPlacer_side,face2=0:openblocks/blockPlacer_bottom,face3=0:openblocks/blockPlacer,face4-5=0:openblocks/blockPlacer_side
+block:id=blockBlockPlacerId,data=4,stdrot=true,transparency=TRANSPARENT,face0-3=0:openblocks/blockPlacer_side,face4=0:openblocks/blockPlacer,face5=0:openblocks/blockPlacer_bottom
+block:id=blockBlockPlacerId,data=5,stdrot=true,transparency=TRANSPARENT,face0-3=0:openblocks/blockPlacer_side,face4=0:openblocks/blockPlacer_bottom,face5=0:openblocks/blockPlacer
+block:id=blockBlockPlacerId,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/blockPlacer_bottom,face1=0:openblocks/blockPlacer,face2-5=0:openblocks/blockPlacer_side
+# blockItemDropperId:* (openblocks_itemDropper), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockItemDropper
+block:id=blockItemDropperId,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/itemDropper_down,face1-5=0:openblocks/itemDropper
+# blockRopeLadderId:* (openblocks_ropeladder), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockRopeLadder
+block:id=blockRopeLadderId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/ropeladder
+# blockDonationStationId:* (openblocks_donationStation), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockDonationStation
+block:id=blockDonationStationId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/donationstation
+# blockPaintMixer:* (openblocks_paintmixer), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockPaintMixer
+block:id=blockPaintMixer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/paintmixer
+# blockCanvasId:* (openblocks_canvas), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockCanvas
+block:id=blockCanvasId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/canvas
+# blockPaintCanId:* (openblocks_paintcan), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockPaintCan
+block:id=blockPaintCanId,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_side,face3=0:openblocks/paintcan_front,face4=0:openblocks/paintcan_left,face5=0:openblocks/paintcan_right
+block:id=blockPaintCanId,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_front,face3=0:openblocks/paintcan_side,face4=0:openblocks/paintcan_right,face5=0:openblocks/paintcan_left
+block:id=blockPaintCanId,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_right,face3=0:openblocks/paintcan_left,face4=0:openblocks/paintcan_side,face5=0:openblocks/paintcan_front
+block:id=blockPaintCanId,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_left,face3=0:openblocks/paintcan_right,face4=0:openblocks/paintcan_front,face5=0:openblocks/paintcan_side
+block:id=blockPaintCanId,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/paintcan_bottom,face1=0:openblocks/paintcan_top,face2=0:openblocks/paintcan_side,face3=0:openblocks/paintcan_front,face4=0:openblocks/paintcan_left,face5=0:openblocks/paintcan_right
+# blockCanvasGlassId:* (openblocks_canvasglass), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockCanvasGlass
+block:id=blockCanvasGlassId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/canvasglass
+# blockProjectorId:* (openblocks_projector), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockProjector
+block:id=blockProjectorId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone_slab_top
+# blockDrawingTable:* (openblocks_drawingtable), render=229(CUSTOM), opaque=true,cls=openblocks.common.block.BlockDrawingTable
+block:id=blockDrawingTable,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable,face3=0:openblocks/drawingtable_front,face4-5=0:openblocks/drawingtable
+block:id=blockDrawingTable,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable_front,face3-5=0:openblocks/drawingtable
+block:id=blockDrawingTable,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-4=0:openblocks/drawingtable,face5=0:openblocks/drawingtable_front
+block:id=blockDrawingTable,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2-3=0:openblocks/drawingtable,face4=0:openblocks/drawingtable_front,face5=0:openblocks/drawingtable
+block:id=blockDrawingTable,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:openblocks/drawingtable,face1=0:openblocks/drawingtable_top,face2=0:openblocks/drawingtable,face3=0:openblocks/drawingtable_front,face4-5=0:openblocks/drawingtable
+# blockFanId:* (openblocks_fan), render=229(CUSTOM), opaque=false,cls=openblocks.common.block.BlockFan
+block:id=blockFanId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/fan
+# blockLadderId:* (openblocks_ladder), render=0(STANDARD), opaque=false,cls=openblocks.common.block.BlockLadder
+block:id=blockLadderId,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openblocks/ladder
