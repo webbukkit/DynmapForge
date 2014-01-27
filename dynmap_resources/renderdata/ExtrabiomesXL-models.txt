@@ -1,63 +1,84 @@
-# ExtraBiomesXL 3+ Block mapping (v1.6.2 or later)
+# ExtrabiomesXL 3.14.5
+version:1.6
 modname:ExtrabiomesXL
-version:1.5.1-
-# configuration file
+
+var:planks.id=0,minilog.id=0,newwoodslab.id=0,biome/redwoodforest.id=0,doublewoodslab.id=0,biome/wasteland.id=0,biome/autumnwoods.id=0,cypressstairs.id=0,doubleredrockslab.id=0,moreleaves.id=0
+var:biome/woodlands.id=0,redrock.id=0,redcobblestairs.id=0,quarterlog2.id=0,redrockslab.id=0,biome/rainforest.id=0,biome/pineforest.id=0,biome/mountaindesert.id=0,customlog.id=0,biome/mountainridge.id=0
+var:redwoodstairs.id=0,flower.id=0,rainbowquarterlog.id=0,sakurablossomstairs.id=0,biome/snowyrainforest.id=0,biome/glacier.id=0,quarterlog0.id=0,biome/snowyforest.id=0,biome/tundra.id=0,grass.id=0
+var:biome/forestedhills.id=0,greenleaves.id=0,leafpile.id=0,autumnleaves.id=0,japanesemaplestairs.id=0,biome/extremejungle.id=0,newlog.id=0,cattail.id=0,rainboweucalyptusstairs.id=0,biome/minijungle.id=0
+var:biome/icewasteland.id=0,rainbowkneelog.id=0,sapling.id=0,woodslab.id=0,baldcypressstairs.id=0,quarterlog3.id=0,biome/meadow.id=0,autumnstairs.id=0,newquarterlog.id=0,newsapling.id=0
+var:wall.id=0,quicksand.id=0,biome/shrubland.id=0,crackedsand.id=0,biome/forestedisland.id=0,biome/greenswamp.id=0,quarterlog1.id=0,biome/alpine.id=0,biome/redwoodlush.id=0,biome/mountaintaiga.id=0
+var:biome/temporaterainforest.id=0,biome/savanna.id=0,biome/birchforest.id=0,kneelog.id=0,firstairs.id=0,newleaves.id=0,acaciastairs.id=0,biome/greenhills.id=0,newdoublewoodslab.id=0,redrockbrickstairs.id=0
+
 cfgfile:config/extrabiomes/extrabiomes.cfg
 
-# Vertical patch, 45 degrees from xz=1.0/0.0 to xz=0.0/1.0
 patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
-# Horizontal patch - Y+ facing at Y=0.01, top of texture at +Z
-patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
-# Vertical patch, X+ facing side from xz=0.25,1.0 to 0.25/0.0
 patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
-# Vertical patch, X+ facing side from xz=0.75,1.0 to 0.75/0.0
 patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# Blocks
-# Flowers (flowerID:*)
-# Tall grass (grassID:*)
-# Saplings (saplingID:*)
-# newsapling.id
-patchblock:id=flower.id,id=grass.id,id=sapling.id,id=newsapling.id,data=*,patch0=VertX1Z0ToX0Z1,patch1=VertX1Z0ToX0Z1@90
-# Leaf piles (leafpileID:*)
-patchblock:id=leafpile.id,data=*,patch0=HorizY001ZTop
-# Cattailes
-patchblock:id=cattail.id,data=*,patch0=VertX075,patch1=VertX075@90,patch2=VertX025,patch3=VertX025@90
-
-# Wood Stair
-# autumnstairs.id
-# baldcypressstairs.id
-# cypressstairs.id
-# japanesemaplestairs.id
-# rainboweucalyptusstairs.id
-# sakurablossomstairs.id
-customblock:id=redcobblestairs.id,id=redrockbrickstairs.id,id=acaciastairs.id,id=firstairs.id,id=redwoodstairs.id,id=autumnstairs.id,id=baldcypressstairs.id,id=cypressstairs.id,id=japanesemaplestairs.id,id=rainboweucalyptusstairs.id,id=sakurablossomstairs.id,data=*,class=org.dynmap.hdmap.renderer.StairBlockRenderer
-
-# Slab
-# newwoodslab.id
-block:id=redrockslab.id,id=woodslab.id,id=newwoodslab.id,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,scale=4
-layer:0,1
-****
-****
-****
-****
-layer:2,3
-----
-----
-----
-----
-# Top Slab
-block:id=redrockslab.id,id=woodslab.id,id=newwoodslab.id,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,scale=4
-layer:0,1
-----
-----
-----
-----
-layer:2,3
-****
-****
-****
-****
-
-# Red rock wall
-customblock:id=wall.id,data=*,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=wall,link0=107
+# cattail.id:* (tile.extrabiomes.cattail:extrabiomes.blocks.BlockCatTail), render=6(CROPS), opaque=false,cls=extrabiomes.blocks.BlockCatTail
+patchblock:id=cattail.id,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+# flower.id:* (tile.extrabiomes.flower:extrabiomes.blocks.BlockCustomFlower), render=1(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomFlower
+patchblock:id=flower.id,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# grass.id:* (tile.extrabiomes.tallgrass:extrabiomes.blocks.BlockCustomTallGrass), render=1(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomTallGrass
+patchblock:id=grass.id,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# leafpile.id:* (tile.extrabiomes.leafpile:extrabiomes.blocks.BlockLeafPile), render=0(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockLeafPile
+boxblock:id=leafpile.id,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=*
+# redrockslab.id:* (tile.extrabiomes.redrockslab:extrabiomes.module.fabrica.block.BlockRedRockSlab), render=0(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockRedRockSlab
+boxblock:id=redrockslab.id,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=redrockslab.id,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# sapling.id:* (tile.extrabiomes.sapling:extrabiomes.blocks.BlockCustomSapling), render=1(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomSapling
+patchblock:id=sapling.id,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# quarterlog0.id:* (tile.extrabiomes.log.quarter:NW:extrabiomes.blocks.BlockQuarterLog), render=49(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
+# wall.id:* (tile.extrabiomes.wall:extrabiomes.module.fabrica.block.BlockCustomWall), render=32(WALL), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomWall
+customblock:id=wall.id,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+# quarterlog1.id:* (tile.extrabiomes.log.quarter:NE:extrabiomes.blocks.BlockQuarterLog), render=49(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
+# quarterlog2.id:* (tile.extrabiomes.log.quarter:SW:extrabiomes.blocks.BlockQuarterLog), render=49(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
+# quarterlog3.id:* (tile.extrabiomes.log.quarter:SE:extrabiomes.blocks.BlockQuarterLog), render=49(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
+# woodslab.id:* (tile.extrabiomes.woodslab:extrabiomes.module.fabrica.block.BlockCustomWoodSlab), render=0(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomWoodSlab
+boxblock:id=woodslab.id,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=woodslab.id,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# redwoodstairs.id:* (tile.extrabiomes.stairs.redwood:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=redwoodstairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# firstairs.id:* (tile.extrabiomes.stairs.fir:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=firstairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# acaciastairs.id:* (tile.extrabiomes.stairs.acacia:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=acaciastairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# redrockbrickstairs.id:* (tile.extrabiomes.stairs.redrockbrick:extrabiomes.module.fabrica.block.BlockCustomStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomStairs
+customblock:id=redrockbrickstairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# redcobblestairs.id:* (tile.extrabiomes.stairs.redcobble:extrabiomes.module.fabrica.block.BlockCustomStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomStairs
+customblock:id=redcobblestairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# newsapling.id:* (tile.extrabiomes.sapling:extrabiomes.blocks.BlockNewSapling), render=1(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockNewSapling
+patchblock:id=newsapling.id,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# newquarterlog.id:* (tile.extrabiomes.baldcypressquarter:extrabiomes.blocks.BlockNewQuarterLog), render=50(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
+# kneelog.id:* (tile.extrabiomes.cypresskneelog:extrabiomes.blocks.BlockKneeLog), render=51(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockKneeLog
+# rainbowkneelog.id:* (tile.extrabiomes.rainbowkneelog:extrabiomes.blocks.BlockKneeLog), render=51(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockKneeLog
+# rainbowquarterlog.id:* (tile.extrabiomes.rainboweucalyptusquarter:extrabiomes.blocks.BlockNewQuarterLog), render=50(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
+# cypressstairs.id:* (tile.extrabiomes.stairs.cypress:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=cypressstairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# japanesemaplestairs.id:* (tile.extrabiomes.stairs.japanesemaple:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=japanesemaplestairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# rainboweucalyptusstairs.id:* (tile.extrabiomes.stairs.rainboweucalyptus:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=rainboweucalyptusstairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# autumnstairs.id:* (tile.extrabiomes.stairs.autumn:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=autumnstairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# baldcypressstairs.id:* (tile.extrabiomes.stairs.baldcypress:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=baldcypressstairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+# minilog.id:* (tile.extrabiomes.log:extrabiomes.blocks.BlockMiniLog), render=48(CUSTOM), opaque=false,cls=extrabiomes.blocks.BlockMiniLog
+# newwoodslab.id:* (tile.extrabiomes.woodslab:extrabiomes.module.fabrica.block.BlockNewWoodSlab), render=0(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockNewWoodSlab
+boxblock:id=newwoodslab.id,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=newwoodslab.id,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# sakurablossomstairs.id:* (tile.extrabiomes.stairs.sakurablossom:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+customblock:id=sakurablossomstairs.id,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*

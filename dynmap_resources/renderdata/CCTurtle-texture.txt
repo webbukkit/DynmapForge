@@ -1,4 +1,4 @@
-# CCTurtle 1.57
+# CCTurtle 1.58
 version:1.6
 modname:CCTurtle
 
@@ -11,9 +11,12 @@ texturepath:assets/ccturtle/textures/blocks/
 texture:id=computercraft/turtle,filename=assets/computercraft/textures/blocks/turtle.png
 
 
-# turtleBlockID:* (CC-Turtle), render=192(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleMFR
-block:id=turtleBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/turtle
-# turtleUpgradedBlockID:* (CC-TurtleExpanded), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleExpandedMFR
-block:id=turtleUpgradedBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/turtle
-# turtleAdvancedBlockID:* (CC-TurtleAdvanced), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleAdvancedMFR
+
+# turtleAdvancedBlockID:* (CC-TurtleAdvanced), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleAdvanced
 block:id=turtleAdvancedBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/turtle
+
+# turtleBlockID:* (CC-Turtle), render=80(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtle
+block:id=turtleBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/turtle
+
+# turtleUpgradedBlockID:* (CC-TurtleExpanded), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleExpanded
+block:id=turtleUpgradedBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/turtle

@@ -199,7 +199,7 @@ texture:id=forestry/wood/heart.wenge,filename=assets/forestry/textures/blocks/wo
 texture:id=forestry/stained/13,filename=assets/forestry/textures/blocks/stained/13.png
 texture:id=forestry/mailbox.0,filename=assets/forestry/textures/blocks/mailbox.0.png
 texture:id=forestry/stained/15,filename=assets/forestry/textures/blocks/stained/15.png
-
+texture:id=forestry/pipes/pipe_prop.empty,filename=assets/forestry/textures/blocks/pipes/pipe_prop.empty.png
 
 # lepidopterology:* (tile.for.lepidopterology), render=0(STANDARD), opaque=true,cls=forestry.core.gadgets.BlockBase
 block:id=lepidopterology,data=*,stdrot=true,face0=0:forestry/lepichest.0,face1=0:forestry/lepichest.1,face2=0:forestry/lepichest.2,face3=0:forestry/lepichest.3,face4-5=0:forestry/lepichest.4
@@ -522,3 +522,6 @@ block:id=fences2,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:forestry/
 block:id=fences2,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:forestry/wood/planks.citrus
 #block:id=fences2,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:forestry/wood/planks.giganteum
 block:id=fences2,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:forestry/wood/planks.larch
+
+# BuildCraft pipes
+addtotexturemap:mapid=PIPES,key:14000=0:forestry/pipes/pipe_prop.empty

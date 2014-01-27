@@ -1,158 +1,158 @@
-# TwilightForest 1.20.2
+# TwilightForest 1.20.3
 version:1.6
 modname:TwilightForest
 
-var:UncraftingTable=0,UnderBrick=0,Plant=0,TowerWood=0,Portal=0,Leaves=0,BossSpawner=0,Roots=0,Sapling=0,TrophyPedestal=0
-var:Mazestone=0,Cicada=0,AuroraBrick=0,Shield=0,Log=0,TowerDevice=0,Hedge=0,FireJet=0,MagicLogSpecial=0,TowerTranslucent=0
-var:FireflyJar=0,MagicLog=0,Trophy=0,MagicLeaves=0,Nagastone=0,Moonworm=0,Critter=0
-
-var:biome/biome.id.Lake=0,biome/biome.id.TwilightForest=0,biome/biome.id.Stream=0,biome/biome.id.Snowfield=0,biome/biome.id.Glacier=0,biome/biome.id.Clearing=0,biome/biome.id.TwilightForestVariant=0,biome/biome.id.Highlands=0,biome/biome.id.Mushrooms=0,biome/biome.id.Swamp=0
-var:biome/biome.id.DarkForest=0,biome/biome.id.MinorFeature=0,biome/biome.id.FireSwamp=0,biome/biome.id.EnchantedForest=0,biome/biome.id.LakeBorder=0,biome/biome.id.ClearingBorder=0,biome/biome.id.MajorFeature=0,biome/biome.id.DeepMushrooms=0
+var:UnderBrick=0,biome/biome.id.Clearing=0,biome/biome.id.Stream=0,biome/biome.id.LakeBorder=0,biome/biome.id.DarkForest=0,Portal=0,Roots=0,TrophyPedestal=0,Cicada=0,biome/biome.id.ClearingBorder=0
+var:biome/biome.id.EnchantedForest=0,Log=0,TowerDevice=0,biome/biome.id.TwilightForestVariant=0,FireJet=0,MagicLogSpecial=0,TowerTranslucent=0,FireflyJar=0,MagicLeaves=0,biome/biome.id.Mushrooms=0
+var:Critter=0,UncraftingTable=0,biome/biome.id.DeepMushrooms=0,Plant=0,TowerWood=0,biome/biome.id.Snowfield=0,biome/biome.id.FireSwamp=0,Leaves=0,BossSpawner=0,Sapling=0
+var:biome/biome.id.MinorFeature=0,Mazestone=0,biome/biome.id.Glacier=0,AuroraBrick=0,biome/biome.id.Highlands=0,biome/biome.id.MajorFeature=0,Shield=0,biome/biome.id.Swamp=0,Hedge=0,MagicLog=0
+var:biome/biome.id.TwilightForest=0,biome/biome.id.Lake=0,Trophy=0,Nagastone=0,Moonworm=0
 
 cfgfile:config/TwilightForest.cfg
 
 
 texturepath:assets/twilightforest/textures/blocks/
-texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
-texture:id=TwilightForest/towerdev_builder_off,filename=assets/twilightforest/textures/blocks/towerdev_builder_off.png
-texture:id=TwilightForest/hedge,filename=assets/twilightforest/textures/blocks/hedge.png
-texture:id=TwilightForest/towerdev_reappearing_on,filename=assets/twilightforest/textures/blocks/towerdev_reappearing_on.png
-texture:id=TwilightForest/towerdev_ghasttraplid_on,filename=assets/twilightforest/textures/blocks/towerdev_ghasttraplid_on.png
-texture:id=TwilightForest/towerwood_planks,filename=assets/twilightforest/textures/blocks/towerwood_planks.png
-texture:id=TwilightForest/towerdev_antibuilt,filename=assets/twilightforest/textures/blocks/towerdev_antibuilt.png
-texture:id=TwilightForest/pedestal_naga,filename=assets/twilightforest/textures/blocks/pedestal_naga.png
-texture:id=TwilightForest/towerdev_reappearing_trace_off,filename=assets/twilightforest/textures/blocks/towerdev_reappearing_trace_off.png
-texture:id=TwilightForest/uncrafting_side,filename=assets/twilightforest/textures/blocks/uncrafting_side.png
-texture:id=TwilightForest/towerdev_vanish_off,filename=assets/twilightforest/textures/blocks/towerdev_vanish_off.png
-texture:id=TwilightForest/mine_section,filename=assets/twilightforest/textures/blocks/mine_section.png
-texture:id=TwilightForest/nagastone_tip_long,filename=assets/twilightforest/textures/blocks/nagastone_tip_long.png
-texture:id=TwilightForest/towerdev_firejet_off,filename=assets/twilightforest/textures/blocks/towerdev_firejet_off.png
-texture:id=TwilightForest/knightbrick_mossy,filename=assets/twilightforest/textures/blocks/knightbrick_mossy.png
-texture:id=TwilightForest/trans_heart,filename=assets/twilightforest/textures/blocks/trans_heart.png
-texture:id=TwilightForest/mazestone_mossy,filename=assets/twilightforest/textures/blocks/mazestone_mossy.png
-texture:id=TwilightForest/sapling_darkwood,filename=assets/twilightforest/textures/blocks/sapling_darkwood.png
-texture:id=TwilightForest/mazestone_cracked,filename=assets/twilightforest/textures/blocks/mazestone_cracked.png
-texture:id=TwilightForest/pedestal_top,filename=assets/twilightforest/textures/blocks/pedestal_top.png
-texture:id=TwilightForest/sapling_rainboak,filename=assets/twilightforest/textures/blocks/sapling_rainboak.png
-texture:id=TwilightForest/towerdev_builder_timeout,filename=assets/twilightforest/textures/blocks/towerdev_builder_timeout.png
-texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
-texture:id=TwilightForest/sapling_mangrove,filename=assets/twilightforest/textures/blocks/sapling_mangrove.png
-texture:id=TwilightForest/towerwood_mossy,filename=assets/twilightforest/textures/blocks/towerwood_mossy.png
-texture:id=TwilightForest/mushgloom,filename=assets/twilightforest/textures/blocks/mushgloom.png
-texture:id=TwilightForest/towerdev_reappearing_trace_on,filename=assets/twilightforest/textures/blocks/towerdev_reappearing_trace_on.png
-texture:id=TwilightForest/nagastone_right_down,filename=assets/twilightforest/textures/blocks/nagastone_right_down.png
-texture:id=TwilightForest/mine_gem_off,filename=assets/twilightforest/textures/blocks/mine_gem_off.png
-texture:id=TwilightForest/towerdev_lock_off,filename=assets/twilightforest/textures/blocks/towerdev_lock_off.png
-texture:id=TwilightForest/fiddlehead,filename=assets/twilightforest/textures/blocks/fiddlehead.png
-texture:id=TwilightForest/towerdev_reactor_off,filename=assets/twilightforest/textures/blocks/towerdev_reactor_off.png
-texture:id=TwilightForest/mine_side,filename=assets/twilightforest/textures/blocks/mine_side.png
-texture:id=TwilightForest/sapling_hollow_oak,filename=assets/twilightforest/textures/blocks/sapling_hollow_oak.png
-texture:id=TwilightForest/canopy_top,filename=assets/twilightforest/textures/blocks/canopy_top.png
-texture:id=TwilightForest/time_section,filename=assets/twilightforest/textures/blocks/time_section.png
-texture:id=TwilightForest/fireflyjar_side,filename=assets/twilightforest/textures/blocks/fireflyjar_side.png
-texture:id=TwilightForest/knightbrick,filename=assets/twilightforest/textures/blocks/knightbrick.png
-texture:id=minecraft/leaves_birch,filename=assets/minecraft/textures/blocks/leaves_birch.png
-texture:id=TwilightForest/sort_side,filename=assets/twilightforest/textures/blocks/sort_side.png
-texture:id=TwilightForest/mazestone_plain,filename=assets/twilightforest/textures/blocks/mazestone_plain.png
-texture:id=TwilightForest/TFMoonworm,filename=assets/twilightforest/textures/blocks/TFMoonworm.png
-texture:id=TwilightForest/firejet_side,filename=assets/twilightforest/textures/blocks/firejet_side.png
-texture:id=TwilightForest/trans_leaves,filename=assets/twilightforest/textures/blocks/trans_leaves.png
-texture:id=TwilightForest/towerdev_vanish_on,filename=assets/twilightforest/textures/blocks/towerdev_vanish_on.png
-texture:id=minecraft/tallgrass,filename=assets/minecraft/textures/blocks/tallgrass.png
-texture:id=TwilightForest/darkwood_top,filename=assets/twilightforest/textures/blocks/darkwood_top.png
-texture:id=TwilightForest/mazestone_border,filename=assets/twilightforest/textures/blocks/mazestone_border.png
-texture:id=TwilightForest/sapling_mining,filename=assets/twilightforest/textures/blocks/sapling_mining.png
-texture:id=TwilightForest/mazestone_brick,filename=assets/twilightforest/textures/blocks/mazestone_brick.png
-texture:id=TwilightForest/nagastone_tip_right,filename=assets/twilightforest/textures/blocks/nagastone_tip_right.png
-texture:id=TwilightForest/sapling_canopy,filename=assets/twilightforest/textures/blocks/sapling_canopy.png
-texture:id=TwilightForest/nagastone_left_down,filename=assets/twilightforest/textures/blocks/nagastone_left_down.png
-texture:id=TwilightForest/sapling_time,filename=assets/twilightforest/textures/blocks/sapling_time.png
-texture:id=TwilightForest/pedestal_urghast,filename=assets/twilightforest/textures/blocks/pedestal_urghast.png
-texture:id=TwilightForest/towerdev_ghasttraplid_off,filename=assets/twilightforest/textures/blocks/towerdev_ghasttraplid_off.png
-texture:id=TwilightForest/pedestal_top_active,filename=assets/twilightforest/textures/blocks/pedestal_top_active.png
-texture:id=TwilightForest/towerdev_reappearing_off,filename=assets/twilightforest/textures/blocks/towerdev_reappearing_off.png
-texture:id=TwilightForest/towerdev_builder_on,filename=assets/twilightforest/textures/blocks/towerdev_builder_on.png
-texture:id=minecraft/bedrock,filename=assets/minecraft/textures/blocks/bedrock.png
-texture:id=minecraft/quartz_block_top,filename=assets/minecraft/textures/blocks/quartz_block_top.png
-texture:id=TwilightForest/nagastone_right_up,filename=assets/twilightforest/textures/blocks/nagastone_right_up.png
-texture:id=TwilightForest/nagastone_long_side,filename=assets/twilightforest/textures/blocks/nagastone_long_side.png
-texture:id=TwilightForest/pedestal_hydra,filename=assets/twilightforest/textures/blocks/pedestal_hydra.png
-texture:id=TwilightForest/sort_eye_off,filename=assets/twilightforest/textures/blocks/sort_eye_off.png
-texture:id=TwilightForest/knightbrick_cracked,filename=assets/twilightforest/textures/blocks/knightbrick_cracked.png
-texture:id=TwilightForest/pedestal_lich,filename=assets/twilightforest/textures/blocks/pedestal_lich.png
-texture:id=TwilightForest/towerdev_firejet_on,filename=assets/twilightforest/textures/blocks/towerdev_firejet_on.png
-texture:id=TwilightForest/oreroots,filename=assets/twilightforest/textures/blocks/oreroots.png
-texture:id=TwilightForest/time_clock_off,filename=assets/twilightforest/textures/blocks/time_clock_off.png
-texture:id=TwilightForest/nagastone_face_left,filename=assets/twilightforest/textures/blocks/nagastone_face_left.png
-texture:id=minecraft/leaves_spruce,filename=assets/minecraft/textures/blocks/leaves_spruce.png
-texture:id=TwilightForest/firejet_top,filename=assets/twilightforest/textures/blocks/firejet_top.png
-texture:id=TwilightForest/sapling_transformation,filename=assets/twilightforest/textures/blocks/sapling_transformation.png
-texture:id=TwilightForest/nagastone_face_front,filename=assets/twilightforest/textures/blocks/nagastone_face_front.png
-texture:id=TwilightForest/pedestal_lich_active,filename=assets/twilightforest/textures/blocks/pedestal_lich_active.png
-texture:id=TwilightForest/rootblock,filename=assets/twilightforest/textures/blocks/rootblock.png
-texture:id=minecraft/mob_spawner,filename=assets/minecraft/textures/blocks/mob_spawner.png
-texture:id=TwilightForest/fireflyjar_top,filename=assets/twilightforest/textures/blocks/fireflyjar_top.png
-texture:id=TwilightForest/canopy_side,filename=assets/twilightforest/textures/blocks/canopy_side.png
-texture:id=TwilightForest/time_side,filename=assets/twilightforest/textures/blocks/time_side.png
-texture:id=TwilightForest/shield_inside,filename=assets/twilightforest/textures/blocks/shield_inside.png
-texture:id=TwilightForest/towerdev_antibuilder,filename=assets/twilightforest/textures/blocks/towerdev_antibuilder.png
-texture:id=TwilightForest/darkwood_side,filename=assets/twilightforest/textures/blocks/darkwood_side.png
-texture:id=TwilightForest/sort_eye,filename=assets/twilightforest/textures/blocks/sort_eye.png
-texture:id=TwilightForest/oak_top,filename=assets/twilightforest/textures/blocks/oak_top.png
-texture:id=TwilightForest/time_clock,filename=assets/twilightforest/textures/blocks/time_clock.png
-texture:id=TwilightForest/nagastone_bottom_long,filename=assets/twilightforest/textures/blocks/nagastone_bottom_long.png
-texture:id=TwilightForest/shield_outside,filename=assets/twilightforest/textures/blocks/shield_outside.png
-texture:id=TwilightForest/sort_section,filename=assets/twilightforest/textures/blocks/sort_section.png
-texture:id=TwilightForest/mangrove_side,filename=assets/twilightforest/textures/blocks/mangrove_side.png
-texture:id=TwilightForest/TFFirefly,filename=assets/twilightforest/textures/blocks/TFFirefly.png
-texture:id=TwilightForest/trans_heart_off,filename=assets/twilightforest/textures/blocks/trans_heart_off.png
-texture:id=TwilightForest/towerwood_infested,filename=assets/twilightforest/textures/blocks/towerwood_infested.png
-texture:id=TwilightForest/trans_section,filename=assets/twilightforest/textures/blocks/trans_section.png
-texture:id=TwilightForest/towerdev_lock_on,filename=assets/twilightforest/textures/blocks/towerdev_lock_on.png
-texture:id=TwilightForest/nagastone_cross_section,filename=assets/twilightforest/textures/blocks/nagastone_cross_section.png
-texture:id=TwilightForest/sort_leaves,filename=assets/twilightforest/textures/blocks/sort_leaves.png
-texture:id=TwilightForest/mazestone_decorative,filename=assets/twilightforest/textures/blocks/mazestone_decorative.png
-texture:id=TwilightForest/towerwood_cracked,filename=assets/twilightforest/textures/blocks/towerwood_cracked.png
-texture:id=TwilightForest/mayapple,filename=assets/twilightforest/textures/blocks/mayapple.png
-texture:id=TwilightForest/darkwood_leaves,filename=assets/twilightforest/textures/blocks/darkwood_leaves.png
-texture:id=TwilightForest/towerdev_smoker_on,filename=assets/twilightforest/textures/blocks/towerdev_smoker_on.png
-texture:id=TwilightForest/mazestone_pillar,filename=assets/twilightforest/textures/blocks/mazestone_pillar.png
-texture:id=TwilightForest/nagastone_face_right,filename=assets/twilightforest/textures/blocks/nagastone_face_right.png
-texture:id=TwilightForest/nagastone_turn_top,filename=assets/twilightforest/textures/blocks/nagastone_turn_top.png
-texture:id=TwilightForest/towerdev_ghasttrap_off,filename=assets/twilightforest/textures/blocks/towerdev_ghasttrap_off.png
-texture:id=TwilightForest/mosspatch,filename=assets/twilightforest/textures/blocks/mosspatch.png
-texture:id=TwilightForest/nagastone_left_up,filename=assets/twilightforest/textures/blocks/nagastone_left_up.png
-texture:id=minecraft/diamond_block,filename=assets/minecraft/textures/blocks/diamond_block.png
-texture:id=TwilightForest/trans_side,filename=assets/twilightforest/textures/blocks/trans_side.png
-texture:id=TwilightForest/towerdev_smoker_off,filename=assets/twilightforest/textures/blocks/towerdev_smoker_off.png
-texture:id=TwilightForest/pedestal_naga_active,filename=assets/twilightforest/textures/blocks/pedestal_naga_active.png
-texture:id=TwilightForest/mangrove_top,filename=assets/twilightforest/textures/blocks/mangrove_top.png
-texture:id=TwilightForest/cloverpatch,filename=assets/twilightforest/textures/blocks/cloverpatch.png
-texture:id=TwilightForest/rootstrand,filename=assets/twilightforest/textures/blocks/rootstrand.png
-texture:id=TwilightForest/towerdev_built_off,filename=assets/twilightforest/textures/blocks/towerdev_built_off.png
-texture:id=TwilightForest/nagastone_top_tip,filename=assets/twilightforest/textures/blocks/nagastone_top_tip.png
-texture:id=TwilightForest/sapling_sorting,filename=assets/twilightforest/textures/blocks/sapling_sorting.png
-texture:id=TwilightForest/nagastone_tip_left,filename=assets/twilightforest/textures/blocks/nagastone_tip_left.png
-texture:id=TwilightForest/towerdev_ghasttrap_on,filename=assets/twilightforest/textures/blocks/towerdev_ghasttrap_on.png
-texture:id=minecraft/quartz_block_bottom,filename=assets/minecraft/textures/blocks/quartz_block_bottom.png
-texture:id=TwilightForest/time_leaves,filename=assets/twilightforest/textures/blocks/time_leaves.png
-texture:id=TwilightForest/mine_gem,filename=assets/twilightforest/textures/blocks/mine_gem.png
-texture:id=TwilightForest/towerwood_encased,filename=assets/twilightforest/textures/blocks/towerwood_encased.png
-texture:id=minecraft/deadbush,filename=assets/minecraft/textures/blocks/deadbush.png
-texture:id=minecraft/portal,filename=assets/minecraft/textures/blocks/portal.png
-texture:id=TwilightForest/towerdev_built_on,filename=assets/twilightforest/textures/blocks/towerdev_built_on.png
-texture:id=TwilightForest/uncrafting_top,filename=assets/twilightforest/textures/blocks/uncrafting_top.png
-texture:id=TwilightForest/pedestal_urghast_active,filename=assets/twilightforest/textures/blocks/pedestal_urghast_active.png
-texture:id=minecraft/gold_block,filename=assets/minecraft/textures/blocks/gold_block.png
-texture:id=minecraft/leaves_oak,filename=assets/minecraft/textures/blocks/leaves_oak.png
-texture:id=TwilightForest/oak_side,filename=assets/twilightforest/textures/blocks/oak_side.png
-texture:id=TwilightForest/mazestone_mosaic,filename=assets/twilightforest/textures/blocks/mazestone_mosaic.png
-texture:id=TwilightForest/nagastone_bottom_tip,filename=assets/twilightforest/textures/blocks/nagastone_bottom_tip.png
-texture:id=TwilightForest/pedestal_hydra_active,filename=assets/twilightforest/textures/blocks/pedestal_hydra_active.png
 texture:id=TwilightForest/TFCicada,filename=assets/twilightforest/textures/blocks/TFCicada.png
-texture:id=TwilightForest/torchberry,filename=assets/twilightforest/textures/blocks/torchberry.png
+texture:id=TwilightForest/TFFirefly,filename=assets/twilightforest/textures/blocks/TFFirefly.png
+texture:id=TwilightForest/TFMoonworm,filename=assets/twilightforest/textures/blocks/TFMoonworm.png
+texture:id=TwilightForest/canopy_side,filename=assets/twilightforest/textures/blocks/canopy_side.png
+texture:id=TwilightForest/canopy_top,filename=assets/twilightforest/textures/blocks/canopy_top.png
+texture:id=TwilightForest/cloverpatch,filename=assets/twilightforest/textures/blocks/cloverpatch.png
+texture:id=TwilightForest/darkwood_leaves,filename=assets/twilightforest/textures/blocks/darkwood_leaves.png
+texture:id=TwilightForest/darkwood_side,filename=assets/twilightforest/textures/blocks/darkwood_side.png
+texture:id=TwilightForest/darkwood_top,filename=assets/twilightforest/textures/blocks/darkwood_top.png
+texture:id=TwilightForest/fiddlehead,filename=assets/twilightforest/textures/blocks/fiddlehead.png
+texture:id=TwilightForest/fireflyjar_side,filename=assets/twilightforest/textures/blocks/fireflyjar_side.png
+texture:id=TwilightForest/fireflyjar_top,filename=assets/twilightforest/textures/blocks/fireflyjar_top.png
+texture:id=TwilightForest/firejet_side,filename=assets/twilightforest/textures/blocks/firejet_side.png
+texture:id=TwilightForest/firejet_top,filename=assets/twilightforest/textures/blocks/firejet_top.png
+texture:id=TwilightForest/hedge,filename=assets/twilightforest/textures/blocks/hedge.png
+texture:id=TwilightForest/knightbrick,filename=assets/twilightforest/textures/blocks/knightbrick.png
+texture:id=TwilightForest/knightbrick_cracked,filename=assets/twilightforest/textures/blocks/knightbrick_cracked.png
+texture:id=TwilightForest/knightbrick_mossy,filename=assets/twilightforest/textures/blocks/knightbrick_mossy.png
+texture:id=TwilightForest/mangrove_side,filename=assets/twilightforest/textures/blocks/mangrove_side.png
+texture:id=TwilightForest/mangrove_top,filename=assets/twilightforest/textures/blocks/mangrove_top.png
+texture:id=TwilightForest/mayapple,filename=assets/twilightforest/textures/blocks/mayapple.png
+texture:id=TwilightForest/mazestone_border,filename=assets/twilightforest/textures/blocks/mazestone_border.png
+texture:id=TwilightForest/mazestone_brick,filename=assets/twilightforest/textures/blocks/mazestone_brick.png
+texture:id=TwilightForest/mazestone_cracked,filename=assets/twilightforest/textures/blocks/mazestone_cracked.png
+texture:id=TwilightForest/mazestone_decorative,filename=assets/twilightforest/textures/blocks/mazestone_decorative.png
+texture:id=TwilightForest/mazestone_mosaic,filename=assets/twilightforest/textures/blocks/mazestone_mosaic.png
+texture:id=TwilightForest/mazestone_mossy,filename=assets/twilightforest/textures/blocks/mazestone_mossy.png
+texture:id=TwilightForest/mazestone_pillar,filename=assets/twilightforest/textures/blocks/mazestone_pillar.png
+texture:id=TwilightForest/mazestone_plain,filename=assets/twilightforest/textures/blocks/mazestone_plain.png
+texture:id=TwilightForest/mine_gem,filename=assets/twilightforest/textures/blocks/mine_gem.png
+texture:id=TwilightForest/mine_gem_off,filename=assets/twilightforest/textures/blocks/mine_gem_off.png
+texture:id=TwilightForest/mine_section,filename=assets/twilightforest/textures/blocks/mine_section.png
+texture:id=TwilightForest/mine_side,filename=assets/twilightforest/textures/blocks/mine_side.png
+texture:id=TwilightForest/mosspatch,filename=assets/twilightforest/textures/blocks/mosspatch.png
+texture:id=TwilightForest/mushgloom,filename=assets/twilightforest/textures/blocks/mushgloom.png
+texture:id=TwilightForest/nagastone_bottom_long,filename=assets/twilightforest/textures/blocks/nagastone_bottom_long.png
+texture:id=TwilightForest/nagastone_bottom_tip,filename=assets/twilightforest/textures/blocks/nagastone_bottom_tip.png
+texture:id=TwilightForest/nagastone_cross_section,filename=assets/twilightforest/textures/blocks/nagastone_cross_section.png
+texture:id=TwilightForest/nagastone_face_front,filename=assets/twilightforest/textures/blocks/nagastone_face_front.png
+texture:id=TwilightForest/nagastone_face_left,filename=assets/twilightforest/textures/blocks/nagastone_face_left.png
+texture:id=TwilightForest/nagastone_face_right,filename=assets/twilightforest/textures/blocks/nagastone_face_right.png
+texture:id=TwilightForest/nagastone_left_down,filename=assets/twilightforest/textures/blocks/nagastone_left_down.png
+texture:id=TwilightForest/nagastone_left_up,filename=assets/twilightforest/textures/blocks/nagastone_left_up.png
+texture:id=TwilightForest/nagastone_long_side,filename=assets/twilightforest/textures/blocks/nagastone_long_side.png
+texture:id=TwilightForest/nagastone_right_down,filename=assets/twilightforest/textures/blocks/nagastone_right_down.png
+texture:id=TwilightForest/nagastone_right_up,filename=assets/twilightforest/textures/blocks/nagastone_right_up.png
+texture:id=TwilightForest/nagastone_tip_left,filename=assets/twilightforest/textures/blocks/nagastone_tip_left.png
+texture:id=TwilightForest/nagastone_tip_long,filename=assets/twilightforest/textures/blocks/nagastone_tip_long.png
+texture:id=TwilightForest/nagastone_tip_right,filename=assets/twilightforest/textures/blocks/nagastone_tip_right.png
+texture:id=TwilightForest/nagastone_top_tip,filename=assets/twilightforest/textures/blocks/nagastone_top_tip.png
+texture:id=TwilightForest/nagastone_turn_top,filename=assets/twilightforest/textures/blocks/nagastone_turn_top.png
+texture:id=TwilightForest/oak_side,filename=assets/twilightforest/textures/blocks/oak_side.png
+texture:id=TwilightForest/oak_top,filename=assets/twilightforest/textures/blocks/oak_top.png
+texture:id=TwilightForest/oreroots,filename=assets/twilightforest/textures/blocks/oreroots.png
+texture:id=TwilightForest/pedestal_hydra,filename=assets/twilightforest/textures/blocks/pedestal_hydra.png
+texture:id=TwilightForest/pedestal_hydra_active,filename=assets/twilightforest/textures/blocks/pedestal_hydra_active.png
+texture:id=TwilightForest/pedestal_lich,filename=assets/twilightforest/textures/blocks/pedestal_lich.png
+texture:id=TwilightForest/pedestal_lich_active,filename=assets/twilightforest/textures/blocks/pedestal_lich_active.png
+texture:id=TwilightForest/pedestal_naga,filename=assets/twilightforest/textures/blocks/pedestal_naga.png
+texture:id=TwilightForest/pedestal_naga_active,filename=assets/twilightforest/textures/blocks/pedestal_naga_active.png
+texture:id=TwilightForest/pedestal_top,filename=assets/twilightforest/textures/blocks/pedestal_top.png
+texture:id=TwilightForest/pedestal_top_active,filename=assets/twilightforest/textures/blocks/pedestal_top_active.png
+texture:id=TwilightForest/pedestal_urghast,filename=assets/twilightforest/textures/blocks/pedestal_urghast.png
+texture:id=TwilightForest/pedestal_urghast_active,filename=assets/twilightforest/textures/blocks/pedestal_urghast_active.png
+texture:id=TwilightForest/rootblock,filename=assets/twilightforest/textures/blocks/rootblock.png
+texture:id=TwilightForest/rootstrand,filename=assets/twilightforest/textures/blocks/rootstrand.png
+texture:id=TwilightForest/sapling_canopy,filename=assets/twilightforest/textures/blocks/sapling_canopy.png
+texture:id=TwilightForest/sapling_darkwood,filename=assets/twilightforest/textures/blocks/sapling_darkwood.png
+texture:id=TwilightForest/sapling_hollow_oak,filename=assets/twilightforest/textures/blocks/sapling_hollow_oak.png
+texture:id=TwilightForest/sapling_mangrove,filename=assets/twilightforest/textures/blocks/sapling_mangrove.png
+texture:id=TwilightForest/sapling_mining,filename=assets/twilightforest/textures/blocks/sapling_mining.png
 texture:id=TwilightForest/sapling_oak,filename=assets/twilightforest/textures/blocks/sapling_oak.png
+texture:id=TwilightForest/sapling_rainboak,filename=assets/twilightforest/textures/blocks/sapling_rainboak.png
+texture:id=TwilightForest/sapling_sorting,filename=assets/twilightforest/textures/blocks/sapling_sorting.png
+texture:id=TwilightForest/sapling_time,filename=assets/twilightforest/textures/blocks/sapling_time.png
+texture:id=TwilightForest/sapling_transformation,filename=assets/twilightforest/textures/blocks/sapling_transformation.png
+texture:id=TwilightForest/shield_inside,filename=assets/twilightforest/textures/blocks/shield_inside.png
+texture:id=TwilightForest/shield_outside,filename=assets/twilightforest/textures/blocks/shield_outside.png
+texture:id=TwilightForest/sort_eye,filename=assets/twilightforest/textures/blocks/sort_eye.png
+texture:id=TwilightForest/sort_eye_off,filename=assets/twilightforest/textures/blocks/sort_eye_off.png
+texture:id=TwilightForest/sort_leaves,filename=assets/twilightforest/textures/blocks/sort_leaves.png
+texture:id=TwilightForest/sort_section,filename=assets/twilightforest/textures/blocks/sort_section.png
+texture:id=TwilightForest/sort_side,filename=assets/twilightforest/textures/blocks/sort_side.png
+texture:id=TwilightForest/time_clock,filename=assets/twilightforest/textures/blocks/time_clock.png
+texture:id=TwilightForest/time_clock_off,filename=assets/twilightforest/textures/blocks/time_clock_off.png
+texture:id=TwilightForest/time_leaves,filename=assets/twilightforest/textures/blocks/time_leaves.png
+texture:id=TwilightForest/time_section,filename=assets/twilightforest/textures/blocks/time_section.png
+texture:id=TwilightForest/time_side,filename=assets/twilightforest/textures/blocks/time_side.png
+texture:id=TwilightForest/torchberry,filename=assets/twilightforest/textures/blocks/torchberry.png
+texture:id=TwilightForest/towerdev_antibuilder,filename=assets/twilightforest/textures/blocks/towerdev_antibuilder.png
+texture:id=TwilightForest/towerdev_antibuilt,filename=assets/twilightforest/textures/blocks/towerdev_antibuilt.png
+texture:id=TwilightForest/towerdev_builder_off,filename=assets/twilightforest/textures/blocks/towerdev_builder_off.png
+texture:id=TwilightForest/towerdev_builder_on,filename=assets/twilightforest/textures/blocks/towerdev_builder_on.png
+texture:id=TwilightForest/towerdev_builder_timeout,filename=assets/twilightforest/textures/blocks/towerdev_builder_timeout.png
+texture:id=TwilightForest/towerdev_built_off,filename=assets/twilightforest/textures/blocks/towerdev_built_off.png
+texture:id=TwilightForest/towerdev_built_on,filename=assets/twilightforest/textures/blocks/towerdev_built_on.png
+texture:id=TwilightForest/towerdev_firejet_off,filename=assets/twilightforest/textures/blocks/towerdev_firejet_off.png
+texture:id=TwilightForest/towerdev_firejet_on,filename=assets/twilightforest/textures/blocks/towerdev_firejet_on.png
+texture:id=TwilightForest/towerdev_ghasttrap_off,filename=assets/twilightforest/textures/blocks/towerdev_ghasttrap_off.png
+texture:id=TwilightForest/towerdev_ghasttrap_on,filename=assets/twilightforest/textures/blocks/towerdev_ghasttrap_on.png
+texture:id=TwilightForest/towerdev_ghasttraplid_off,filename=assets/twilightforest/textures/blocks/towerdev_ghasttraplid_off.png
+texture:id=TwilightForest/towerdev_ghasttraplid_on,filename=assets/twilightforest/textures/blocks/towerdev_ghasttraplid_on.png
+texture:id=TwilightForest/towerdev_lock_off,filename=assets/twilightforest/textures/blocks/towerdev_lock_off.png
+texture:id=TwilightForest/towerdev_lock_on,filename=assets/twilightforest/textures/blocks/towerdev_lock_on.png
+texture:id=TwilightForest/towerdev_reactor_off,filename=assets/twilightforest/textures/blocks/towerdev_reactor_off.png
 texture:id=TwilightForest/towerdev_reactor_on,filename=assets/twilightforest/textures/blocks/towerdev_reactor_on.png
+texture:id=TwilightForest/towerdev_reappearing_off,filename=assets/twilightforest/textures/blocks/towerdev_reappearing_off.png
+texture:id=TwilightForest/towerdev_reappearing_on,filename=assets/twilightforest/textures/blocks/towerdev_reappearing_on.png
+texture:id=TwilightForest/towerdev_reappearing_trace_off,filename=assets/twilightforest/textures/blocks/towerdev_reappearing_trace_off.png
+texture:id=TwilightForest/towerdev_reappearing_trace_on,filename=assets/twilightforest/textures/blocks/towerdev_reappearing_trace_on.png
+texture:id=TwilightForest/towerdev_smoker_off,filename=assets/twilightforest/textures/blocks/towerdev_smoker_off.png
+texture:id=TwilightForest/towerdev_smoker_on,filename=assets/twilightforest/textures/blocks/towerdev_smoker_on.png
+texture:id=TwilightForest/towerdev_vanish_off,filename=assets/twilightforest/textures/blocks/towerdev_vanish_off.png
+texture:id=TwilightForest/towerdev_vanish_on,filename=assets/twilightforest/textures/blocks/towerdev_vanish_on.png
+texture:id=TwilightForest/towerwood_cracked,filename=assets/twilightforest/textures/blocks/towerwood_cracked.png
+texture:id=TwilightForest/towerwood_encased,filename=assets/twilightforest/textures/blocks/towerwood_encased.png
+texture:id=TwilightForest/towerwood_infested,filename=assets/twilightforest/textures/blocks/towerwood_infested.png
+texture:id=TwilightForest/towerwood_mossy,filename=assets/twilightforest/textures/blocks/towerwood_mossy.png
+texture:id=TwilightForest/towerwood_planks,filename=assets/twilightforest/textures/blocks/towerwood_planks.png
+texture:id=TwilightForest/trans_heart,filename=assets/twilightforest/textures/blocks/trans_heart.png
+texture:id=TwilightForest/trans_heart_off,filename=assets/twilightforest/textures/blocks/trans_heart_off.png
+texture:id=TwilightForest/trans_leaves,filename=assets/twilightforest/textures/blocks/trans_leaves.png
+texture:id=TwilightForest/trans_section,filename=assets/twilightforest/textures/blocks/trans_section.png
+texture:id=TwilightForest/trans_side,filename=assets/twilightforest/textures/blocks/trans_side.png
+texture:id=TwilightForest/uncrafting_side,filename=assets/twilightforest/textures/blocks/uncrafting_side.png
+texture:id=TwilightForest/uncrafting_top,filename=assets/twilightforest/textures/blocks/uncrafting_top.png
+texture:id=minecraft/bedrock,filename=assets/minecraft/textures/blocks/bedrock.png
+texture:id=minecraft/deadbush,filename=assets/minecraft/textures/blocks/deadbush.png
+texture:id=minecraft/diamond_block,filename=assets/minecraft/textures/blocks/diamond_block.png
+texture:id=minecraft/gold_block,filename=assets/minecraft/textures/blocks/gold_block.png
+texture:id=minecraft/leaves_birch,filename=assets/minecraft/textures/blocks/leaves_birch.png
+texture:id=minecraft/leaves_oak,filename=assets/minecraft/textures/blocks/leaves_oak.png
+texture:id=minecraft/leaves_spruce,filename=assets/minecraft/textures/blocks/leaves_spruce.png
+texture:id=minecraft/mob_spawner,filename=assets/minecraft/textures/blocks/mob_spawner.png
+texture:id=minecraft/netherrack,filename=assets/minecraft/textures/blocks/netherrack.png
+texture:id=minecraft/obsidian,filename=assets/minecraft/textures/blocks/obsidian.png
+texture:id=minecraft/portal,filename=assets/minecraft/textures/blocks/portal.png
+texture:id=minecraft/quartz_block_bottom,filename=assets/minecraft/textures/blocks/quartz_block_bottom.png
+texture:id=minecraft/quartz_block_top,filename=assets/minecraft/textures/blocks/quartz_block_top.png
+texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
+texture:id=minecraft/tallgrass,filename=assets/minecraft/textures/blocks/tallgrass.png
 
 # biome/biome.id.Lake
 biome:id=biome/biome.id.Lake,grassColorMult=170C15B,foliageColorMult=14CB031,waterColorMult=FFFFFF
@@ -187,14 +187,17 @@ biome:id=biome/biome.id.MinorFeature,grassColorMult=18EB971,foliageColorMult=171
 # biome/biome.id.DarkForest
 biome:id=biome/biome.id.DarkForest,grassColorMult=1554114,foliageColorMult=13B5E3F,waterColorMult=FFFFFF
 # biome/biome.id.EnchantedForest
-biome:id=biome/biome.id.EnchantedForest,grassColorMult=190B8AF,foliageColorMult=16DC30E,waterColorMult=FFFFFF
+biome:id=biome/biome.id.EnchantedForest,grassColorMult=16FC6E8,foliageColorMult=189B506,waterColorMult=FFFFFF
 # biome/biome.id.FireSwamp
 biome:id=biome/biome.id.FireSwamp,grassColorMult=1572E23,foliageColorMult=164260F,waterColorMult=6C2C2C
 
-# Critter:* (tile.TFFirefly), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFirefly
+
+# Critter:* (tile.TFFirefly), render=117(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFirefly
 block:id=Critter,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/TFFirefly
+
 # Portal:* (tile.TFPortal), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFPortal
 block:id=Portal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/portal
+
 # Log:* (tile.TFLog), render=31(LOG), opaque=true,cls=twilightforest.block.BlockTFLog
 block:id=Log,data=0,stdrot=true,face0-1=0:TwilightForest/oak_top,face2-5=0:TwilightForest/oak_side
 block:id=Log,data=1,stdrot=true,face0-1=0:TwilightForest/canopy_top,face2-5=0:TwilightForest/canopy_side
@@ -212,6 +215,7 @@ block:id=Log,data=12,stdrot=true,face0-5=0:TwilightForest/oak_side
 block:id=Log,data=13,stdrot=true,face0-5=0:TwilightForest/canopy_side
 block:id=Log,data=14,stdrot=true,face0-5=0:TwilightForest/mangrove_side
 block:id=Log,data=15,stdrot=true,face0-5=0:TwilightForest/darkwood_side
+
 # Leaves:* (tile.TFLeaves), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFLeaves
 block:id=Leaves,data=0,stdrot=true,face0-5=2000:minecraft/leaves_oak
 block:id=Leaves,data=1,stdrot=true,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
@@ -226,6 +230,7 @@ block:id=Leaves,data=11,data=12,stdrot=true,face0-5=2000:minecraft/leaves_oak
 block:id=Leaves,data=13,stdrot=true,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
 block:id=Leaves,data=14,stdrot=true,face0-5=14000:minecraft/leaves_birch
 block:id=Leaves,data=15,stdrot=true,face0-5=2000:minecraft/leaves_oak
+
 # Mazestone:* (tile.TFMazestone), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFMazestone
 block:id=Mazestone,data=0,stdrot=true,face0-5=0:TwilightForest/mazestone_plain
 block:id=Mazestone,data=1,stdrot=true,face0-5=0:TwilightForest/mazestone_brick
@@ -236,15 +241,19 @@ block:id=Mazestone,data=5,stdrot=true,face0-5=0:TwilightForest/mazestone_mossy
 block:id=Mazestone,data=6,stdrot=true,face0-1=0:TwilightForest/mazestone_mosaic,face2-5=0:TwilightForest/mazestone_brick
 block:id=Mazestone,data=7,stdrot=true,face0-1=0:TwilightForest/mazestone_border,face2-5=0:TwilightForest/mazestone_brick
 block:id=Mazestone,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/mazestone_plain
+
 # Hedge:* (tile.TFHedge), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFHedge
 block:id=Hedge,data=0,stdrot=true,face0-5=0:TwilightForest/hedge
 block:id=Hedge,data=1,stdrot=true,face0-5=0:TwilightForest/darkwood_leaves
 block:id=Hedge,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/hedge
+
 # BossSpawner:* (tile.TFBossSpawner), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFBossSpawner
 block:id=BossSpawner,data=*,stdrot=true,face0-5=0:minecraft/mob_spawner
-# FireflyJar:* (tile.TFFireflyJar), render=219(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFireflyJar
+
+# FireflyJar:* (tile.TFFireflyJar), render=115(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFireflyJar
 block:id=FireflyJar,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/fireflyjar_top,face2-5=0:TwilightForest/fireflyjar_side
-# Plant:* (tile.TFPlant), render=220(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFPlant
+
+# Plant:* (tile.TFPlant), render=116(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFPlant
 block:id=Plant,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/mosspatch
 block:id=Plant,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=2000:TwilightForest/mayapple
 block:id=Plant,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=2000:TwilightForest/cloverpatch
@@ -254,10 +263,57 @@ block:id=Plant,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecra
 block:id=Plant,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/deadbush
 block:id=Plant,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/torchberry
 block:id=Plant,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/rootstrand
+
 # Roots:* (tile.TFRoots), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFRoots
 block:id=Roots,data=0,stdrot=true,face0-5=0:TwilightForest/rootblock
 block:id=Roots,data=1,stdrot=true,face0-5=0:TwilightForest/oreroots
 block:id=Roots,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/rootblock
+
+# Cicada:* (tile.TFCicada), render=117(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFCicada
+block:id=Cicada,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/TFCicada
+
+# UncraftingTable:* (tile.TFUncraftingTable), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFUncraftingTable
+block:id=UncraftingTable,data=*,stdrot=true,face0=0:TwilightForest/uncrafting_side,face1=0:TwilightForest/uncrafting_top,face2-5=0:TwilightForest/uncrafting_side
+
+# FireJet:* (tile.TFFireJet), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFFireJet
+block:id=FireJet,data=0,stdrot=true,face0=0:TwilightForest/firejet_side,face1=0:TwilightForest/firejet_top,face2-5=0:TwilightForest/firejet_side
+block:id=FireJet,data=1,stdrot=true,face0=0:TwilightForest/towerwood_encased,face1=0:TwilightForest/towerdev_ghasttraplid_off,face2-5=0:TwilightForest/towerdev_smoker_off
+block:id=FireJet,data=2,stdrot=true,face0=0:TwilightForest/towerwood_encased,face1=0:TwilightForest/towerdev_ghasttraplid_on,face2-5=0:TwilightForest/towerdev_smoker_on
+block:id=FireJet,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,stdrot=true,face0=0:TwilightForest/firejet_side,face1=0:TwilightForest/firejet_top,face2-5=0:TwilightForest/firejet_side
+block:id=FireJet,data=11,stdrot=true,face0=0:TwilightForest/towerwood_encased,face1=0:TwilightForest/towerdev_ghasttraplid_off,face2-5=0:TwilightForest/towerdev_firejet_off
+block:id=FireJet,data=12,data=13,stdrot=true,face0=0:TwilightForest/towerwood_encased,face1=0:TwilightForest/towerdev_ghasttraplid_on,face2-5=0:TwilightForest/towerdev_firejet_on
+block:id=FireJet,data=14,data=15,stdrot=true,face0=0:TwilightForest/firejet_side,face1=0:TwilightForest/firejet_top,face2-5=0:TwilightForest/firejet_side
+
+# Nagastone:* (tile.TFNagastone), render=118(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone
+block:id=Nagastone,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_face_front,face3=0:TwilightForest/nagastone_cross_section,face4=0:TwilightForest/nagastone_face_left,face5=0:TwilightForest/nagastone_face_right
+block:id=Nagastone,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_cross_section,face3=0:TwilightForest/nagastone_face_front,face4=0:TwilightForest/nagastone_face_right,face5=0:TwilightForest/nagastone_face_left
+block:id=Nagastone,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_face_right,face3=0:TwilightForest/nagastone_face_left,face4=0:TwilightForest/nagastone_face_front,face5=0:TwilightForest/nagastone_cross_section
+block:id=Nagastone,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_face_left,face3=0:TwilightForest/nagastone_face_right,face4=0:TwilightForest/nagastone_cross_section,face5=0:TwilightForest/nagastone_face_front
+block:id=Nagastone,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_cross_section,face3=0:TwilightForest/nagastone_tip_right,face4=0:TwilightForest/nagastone_left_down,face5=0:TwilightForest/nagastone_right_down
+block:id=Nagastone,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_tip_left,face3=0:TwilightForest/nagastone_cross_section,face4=0:TwilightForest/nagastone_right_down,face5=0:TwilightForest/nagastone_left_down
+block:id=Nagastone,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_right_down,face3=0:TwilightForest/nagastone_left_down,face4=0:TwilightForest/nagastone_cross_section,face5=0:TwilightForest/nagastone_tip_left
+block:id=Nagastone,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_left_down,face3=0:TwilightForest/nagastone_right_down,face4=0:TwilightForest/nagastone_tip_right,face5=0:TwilightForest/nagastone_cross_section
+block:id=Nagastone,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1-2=0:TwilightForest/nagastone_cross_section,face3=0:TwilightForest/nagastone_tip_left,face4=0:TwilightForest/nagastone_left_up,face5=0:TwilightForest/nagastone_right_up
+block:id=Nagastone,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_cross_section,face2=0:TwilightForest/nagastone_tip_right,face3=0:TwilightForest/nagastone_cross_section,face4=0:TwilightForest/nagastone_right_up,face5=0:TwilightForest/nagastone_left_up
+block:id=Nagastone,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_cross_section,face2=0:TwilightForest/nagastone_right_up,face3=0:TwilightForest/nagastone_left_up,face4=0:TwilightForest/nagastone_cross_section,face5=0:TwilightForest/nagastone_tip_left
+block:id=Nagastone,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_cross_section,face2=0:TwilightForest/nagastone_left_up,face3=0:TwilightForest/nagastone_right_up,face4=0:TwilightForest/nagastone_tip_left,face5=0:TwilightForest/nagastone_cross_section
+block:id=Nagastone,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_long,face1=0:TwilightForest/nagastone_tip_long,face2-3=0:TwilightForest/nagastone_long_side,face4-5=0:TwilightForest/nagastone_cross_section
+block:id=Nagastone,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_long,face1=0:TwilightForest/nagastone_tip_long,face2-3=0:TwilightForest/nagastone_cross_section,face4-5=0:TwilightForest/nagastone_long_side
+block:id=Nagastone,data=14,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/nagastone_cross_section,face2-5=0:TwilightForest/nagastone_long_side
+block:id=Nagastone,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_turn_top,face2-5=0:TwilightForest/nagastone_long_side
+
+# Sapling:* (tile.TFSapling), render=1(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFSapling
+block:id=Sapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_oak
+block:id=Sapling,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_canopy
+block:id=Sapling,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_mangrove
+block:id=Sapling,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_darkwood
+block:id=Sapling,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_hollow_oak
+block:id=Sapling,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_time
+block:id=Sapling,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_transformation
+block:id=Sapling,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_mining
+block:id=Sapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_sorting
+block:id=Sapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_rainboak
+
 # MagicLog:* (tile.TFMagicLog), render=31(LOG), opaque=true,cls=twilightforest.block.BlockTFMagicLog
 block:id=MagicLog,data=0,stdrot=true,face0-1=0:TwilightForest/time_section,face2-5=0:TwilightForest/time_side
 block:id=MagicLog,data=1,stdrot=true,face0-1=0:TwilightForest/trans_section,face2-5=0:TwilightForest/trans_side
@@ -275,7 +331,8 @@ block:id=MagicLog,data=12,stdrot=true,face0-5=0:TwilightForest/time_side
 block:id=MagicLog,data=13,stdrot=true,face0-5=0:TwilightForest/trans_side
 block:id=MagicLog,data=14,stdrot=true,face0-5=0:TwilightForest/mine_side
 block:id=MagicLog,data=15,stdrot=true,face0-5=0:TwilightForest/sort_side
-# MagicLeaves:* (tile.TFMagicLeaves), render=223(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMagicLeaves
+
+# MagicLeaves:* (tile.TFMagicLeaves), render=119(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMagicLeaves
 block:id=MagicLeaves,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=6A9C17,face0-5=17000:TwilightForest/time_leaves
 block:id=MagicLeaves,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
 block:id=MagicLeaves,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
@@ -292,8 +349,10 @@ block:id=MagicLeaves,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=6A9C
 block:id=MagicLeaves,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=6CCCEA,face0-5=17000:TwilightForest/trans_leaves
 block:id=MagicLeaves,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=FCF144,face0-5=17000:TwilightForest/time_leaves
 block:id=MagicLeaves,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=364C03,face0-5=17000:TwilightForest/sort_leaves
-# Moonworm:* (tile.TFMoonworm), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMoonworm
+
+# Moonworm:* (tile.TFMoonworm), render=117(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMoonworm
 block:id=Moonworm,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/TFMoonworm
+
 # MagicLogSpecial:* (tile.TFMagicLogSpecial), render=31(LOG), opaque=true,cls=twilightforest.block.BlockTFMagicLogSpecial
 block:id=MagicLogSpecial,data=0,stdrot=true,face0-1=0:TwilightForest/time_section,face2-5=0:TwilightForest/time_clock
 block:id=MagicLogSpecial,data=1,stdrot=true,face0-1=0:TwilightForest/trans_section,face2-5=0:TwilightForest/trans_heart
@@ -311,6 +370,7 @@ block:id=MagicLogSpecial,data=12,stdrot=true,face0-1=0:TwilightForest/time_secti
 block:id=MagicLogSpecial,data=13,stdrot=true,face0-1=0:TwilightForest/trans_section,face2-5=0:TwilightForest/trans_heart_off
 block:id=MagicLogSpecial,data=14,stdrot=true,face0-1=0:TwilightForest/mine_section,face2-5=0:TwilightForest/mine_gem_off
 block:id=MagicLogSpecial,data=15,stdrot=true,face0-1=0:TwilightForest/sort_section,face2-5=0:TwilightForest/sort_eye_off
+
 # TowerWood:* (tile.TFTowerStone), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFTowerWood
 block:id=TowerWood,data=0,stdrot=true,face0-5=0:TwilightForest/towerwood_planks
 block:id=TowerWood,data=1,stdrot=true,face0-5=0:TwilightForest/towerwood_encased
@@ -318,6 +378,7 @@ block:id=TowerWood,data=2,stdrot=true,face0-5=0:TwilightForest/towerwood_cracked
 block:id=TowerWood,data=3,stdrot=true,face0-5=0:TwilightForest/towerwood_mossy
 block:id=TowerWood,data=4,stdrot=true,face0-5=0:TwilightForest/towerwood_infested
 block:id=TowerWood,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerwood_planks
+
 # TowerDevice:* (tile.TFTowerDevice), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFTowerDevice
 block:id=TowerDevice,data=0,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_off
 block:id=TowerDevice,data=1,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_on
@@ -334,6 +395,7 @@ block:id=TowerDevice,data=11,stdrot=true,face0=0:TwilightForest/towerwood_encase
 block:id=TowerDevice,data=12,stdrot=true,face0-5=0:TwilightForest/towerdev_reactor_off
 block:id=TowerDevice,data=13,stdrot=true,face0-5=0:TwilightForest/towerdev_reactor_on
 block:id=TowerDevice,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_off
+
 # Shield:* (tile.TFShield), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFShield
 block:id=Shield,data=0,stdrot=true,face0=0:TwilightForest/shield_inside,face1-5=0:TwilightForest/shield_outside
 block:id=Shield,data=1,stdrot=true,face0=0:TwilightForest/shield_outside,face1=0:TwilightForest/shield_inside,face2-5=0:TwilightForest/shield_outside
@@ -342,65 +404,44 @@ block:id=Shield,data=3,stdrot=true,face0-2=0:TwilightForest/shield_outside,face3
 block:id=Shield,data=4,stdrot=true,face0-3=0:TwilightForest/shield_outside,face4=0:TwilightForest/shield_inside,face5=0:TwilightForest/shield_outside
 block:id=Shield,data=5,stdrot=true,face0-4=0:TwilightForest/shield_outside,face5=0:TwilightForest/shield_inside
 block:id=Shield,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/shield_outside
+
 # TowerTranslucent:* (tile.TFTowerTranslucent), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
 block:id=TowerTranslucent,data=0,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off
 block:id=TowerTranslucent,data=1,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_on
 block:id=TowerTranslucent,data=2,stdrot=true,face0-5=0:TwilightForest/towerdev_built_off
 block:id=TowerTranslucent,data=3,stdrot=true,face0-5=0:TwilightForest/towerdev_built_on
 block:id=TowerTranslucent,data=4,stdrot=true,face0-5=0:TwilightForest/towerdev_antibuilt
-block:id=TowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/portal,face1=0:minecraft/bedrock,face2=0:minecraft/portal,face3=0:minecraft/obsidian,face4-5=0:minecraft/bedrock
+block:id=TowerTranslucent,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/portal,face1=0:minecraft/netherrack,face2=0:minecraft/obsidian,face3=0:minecraft/bedrock,face4=0:minecraft/netherrack,face5=0:minecraft/portal
 block:id=TowerTranslucent,data=6,stdrot=true,face0-5=0:minecraft/gold_block
 block:id=TowerTranslucent,data=7,stdrot=true,face0-5=0:minecraft/diamond_block
 block:id=TowerTranslucent,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/towerdev_reappearing_trace_off
+
 # Trophy:* (tile.TFTrophy), render=-1(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophy
 block:id=Trophy,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
-# TrophyPedestal:* (tile.TFTrophyPedestal), render=224(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophyPedestal
+
+# TrophyPedestal:* (tile.TFTrophyPedestal), render=120(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophyPedestal
 block:id=TrophyPedestal,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/pedestal_top,face2=0:TwilightForest/pedestal_naga,face3=0:TwilightForest/pedestal_lich,face4=0:TwilightForest/pedestal_hydra,face5=0:TwilightForest/pedestal_urghast
-block:id=TrophyPedestal,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_naga_active,face3=0:TwilightForest/pedestal_lich_active,face4=0:TwilightForest/pedestal_hydra_active,face5=0:TwilightForest/pedestal_urghast_active
+block:id=TrophyPedestal,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/pedestal_top,face2=0:TwilightForest/pedestal_lich,face3=0:TwilightForest/pedestal_hydra,face4=0:TwilightForest/pedestal_urghast,face5=0:TwilightForest/pedestal_naga
+block:id=TrophyPedestal,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/pedestal_top,face2=0:TwilightForest/pedestal_hydra,face3=0:TwilightForest/pedestal_urghast,face4=0:TwilightForest/pedestal_naga,face5=0:TwilightForest/pedestal_lich
+block:id=TrophyPedestal,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/pedestal_top,face2=0:TwilightForest/pedestal_urghast,face3=0:TwilightForest/pedestal_naga,face4=0:TwilightForest/pedestal_lich,face5=0:TwilightForest/pedestal_hydra
+block:id=TrophyPedestal,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/pedestal_top,face2=0:TwilightForest/pedestal_naga,face3=0:TwilightForest/pedestal_lich,face4=0:TwilightForest/pedestal_hydra,face5=0:TwilightForest/pedestal_urghast
+block:id=TrophyPedestal,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/pedestal_top,face2=0:TwilightForest/pedestal_lich,face3=0:TwilightForest/pedestal_hydra,face4=0:TwilightForest/pedestal_urghast,face5=0:TwilightForest/pedestal_naga
+block:id=TrophyPedestal,data=6,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/pedestal_top,face2=0:TwilightForest/pedestal_hydra,face3=0:TwilightForest/pedestal_urghast,face4=0:TwilightForest/pedestal_naga,face5=0:TwilightForest/pedestal_lich
+block:id=TrophyPedestal,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/pedestal_top,face2=0:TwilightForest/pedestal_urghast,face3=0:TwilightForest/pedestal_naga,face4=0:TwilightForest/pedestal_lich,face5=0:TwilightForest/pedestal_hydra
+block:id=TrophyPedestal,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_naga_active,face3=0:TwilightForest/pedestal_lich_active,face4=0:TwilightForest/pedestal_hydra_active,face5=0:TwilightForest/pedestal_urghast_active
+block:id=TrophyPedestal,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_lich_active,face3=0:TwilightForest/pedestal_hydra_active,face4=0:TwilightForest/pedestal_urghast_active,face5=0:TwilightForest/pedestal_naga_active
+block:id=TrophyPedestal,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_hydra_active,face3=0:TwilightForest/pedestal_urghast_active,face4=0:TwilightForest/pedestal_naga_active,face5=0:TwilightForest/pedestal_lich_active
+block:id=TrophyPedestal,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_urghast_active,face3=0:TwilightForest/pedestal_naga_active,face4=0:TwilightForest/pedestal_lich_active,face5=0:TwilightForest/pedestal_hydra_active
+block:id=TrophyPedestal,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_naga_active,face3=0:TwilightForest/pedestal_lich_active,face4=0:TwilightForest/pedestal_hydra_active,face5=0:TwilightForest/pedestal_urghast_active
+block:id=TrophyPedestal,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_lich_active,face3=0:TwilightForest/pedestal_hydra_active,face4=0:TwilightForest/pedestal_urghast_active,face5=0:TwilightForest/pedestal_naga_active
+block:id=TrophyPedestal,data=14,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_hydra_active,face3=0:TwilightForest/pedestal_urghast_active,face4=0:TwilightForest/pedestal_naga_active,face5=0:TwilightForest/pedestal_lich_active
+block:id=TrophyPedestal,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/pedestal_top,face1=0:TwilightForest/pedestal_top_active,face2=0:TwilightForest/pedestal_urghast_active,face3=0:TwilightForest/pedestal_naga_active,face4=0:TwilightForest/pedestal_lich_active,face5=0:TwilightForest/pedestal_hydra_active
+
 # AuroraBrick:* (tile.TFAuroraBrick), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFAuroraBrick
 block:id=AuroraBrick,data=*,stdrot=true,face0=0:minecraft/quartz_block_bottom,face1-5=0:minecraft/quartz_block_top
+
 # UnderBrick:* (tile.TFUnderBrick), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFUnderBrick
 block:id=UnderBrick,data=0,stdrot=true,face0-5=0:TwilightForest/knightbrick
 block:id=UnderBrick,data=1,stdrot=true,face0-5=0:TwilightForest/knightbrick_mossy
 block:id=UnderBrick,data=2,stdrot=true,face0-5=0:TwilightForest/knightbrick_cracked
 block:id=UnderBrick,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:TwilightForest/knightbrick
-# Sapling:* (tile.TFSapling), render=1(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFSapling
-block:id=Sapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_oak
-block:id=Sapling,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_canopy
-block:id=Sapling,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_mangrove
-block:id=Sapling,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_darkwood
-block:id=Sapling,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_hollow_oak
-block:id=Sapling,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_time
-block:id=Sapling,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_transformation
-block:id=Sapling,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_mining
-block:id=Sapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_sorting
-block:id=Sapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:TwilightForest/sapling_rainboak
-# Nagastone:* (tile.TFNagastone), render=222(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone
-block:id=Nagastone,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_face_front,face3=0:TwilightForest/nagastone_cross_section,face4=0:TwilightForest/nagastone_face_left,face5=0:TwilightForest/nagastone_face_right
-block:id=Nagastone,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_cross_section,face3=0:TwilightForest/nagastone_face_front,face4=0:TwilightForest/nagastone_face_right,face5=0:TwilightForest/nagastone_face_left
-block:id=Nagastone,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_face_right,face3=0:TwilightForest/nagastone_face_left,face4=0:TwilightForest/nagastone_face_front,face5=0:TwilightForest/nagastone_cross_section
-block:id=Nagastone,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_face_left,face3=0:TwilightForest/nagastone_face_right,face4=0:TwilightForest/nagastone_cross_section,face5=0:TwilightForest/nagastone_face_front
-block:id=Nagastone,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_cross_section,face3=0:TwilightForest/nagastone_tip_right,face4=0:TwilightForest/nagastone_left_down,face5=0:TwilightForest/nagastone_right_down
-block:id=Nagastone,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_tip_left,face3=0:TwilightForest/nagastone_cross_section,face4=0:TwilightForest/nagastone_right_down,face5=0:TwilightForest/nagastone_left_down
-block:id=Nagastone,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_right_down,face3=0:TwilightForest/nagastone_left_down,face4=0:TwilightForest/nagastone_cross_section,face5=0:TwilightForest/nagastone_tip_left
-block:id=Nagastone,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_top_tip,face2=0:TwilightForest/nagastone_left_down,face3=0:TwilightForest/nagastone_right_down,face4=0:TwilightForest/nagastone_tip_right,face5=0:TwilightForest/nagastone_cross_section
-block:id=Nagastone,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1-2=0:TwilightForest/nagastone_cross_section,face3=0:TwilightForest/nagastone_tip_left,face4=0:TwilightForest/nagastone_left_up,face5=0:TwilightForest/nagastone_right_up
-block:id=Nagastone,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_cross_section,face2=0:TwilightForest/nagastone_tip_right,face3=0:TwilightForest/nagastone_cross_section,face4=0:TwilightForest/nagastone_right_up,face5=0:TwilightForest/nagastone_left_up
-block:id=Nagastone,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_cross_section,face2=0:TwilightForest/nagastone_right_up,face3=0:TwilightForest/nagastone_left_up,face4=0:TwilightForest/nagastone_cross_section,face5=0:TwilightForest/nagastone_tip_left
-block:id=Nagastone,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_tip,face1=0:TwilightForest/nagastone_cross_section,face2=0:TwilightForest/nagastone_left_up,face3=0:TwilightForest/nagastone_right_up,face4=0:TwilightForest/nagastone_tip_left,face5=0:TwilightForest/nagastone_cross_section
-block:id=Nagastone,data=12,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_long,face1=0:TwilightForest/nagastone_tip_long,face2-3=0:TwilightForest/nagastone_long_side,face4-5=0:TwilightForest/nagastone_cross_section
-block:id=Nagastone,data=13,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_bottom_long,face1=0:TwilightForest/nagastone_tip_long,face2-3=0:TwilightForest/nagastone_cross_section,face4-5=0:TwilightForest/nagastone_long_side
-block:id=Nagastone,data=14,stdrot=true,transparency=TRANSPARENT,face0-1=0:TwilightForest/nagastone_cross_section,face2-5=0:TwilightForest/nagastone_long_side
-block:id=Nagastone,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:TwilightForest/nagastone_cross_section,face1=0:TwilightForest/nagastone_turn_top,face2-5=0:TwilightForest/nagastone_long_side
-# Cicada:* (tile.TFCicada), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFCicada
-block:id=Cicada,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:TwilightForest/TFCicada
-# FireJet:* (tile.TFFireJet), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFFireJet
-block:id=FireJet,data=0,stdrot=true,face0=0:TwilightForest/firejet_side,face1=0:TwilightForest/firejet_top,face2-5=0:TwilightForest/firejet_side
-block:id=FireJet,data=1,stdrot=true,face0=0:TwilightForest/towerwood_encased,face1=0:TwilightForest/towerdev_ghasttraplid_off,face2-5=0:TwilightForest/towerdev_smoker_off
-block:id=FireJet,data=2,stdrot=true,face0=0:TwilightForest/towerwood_encased,face1=0:TwilightForest/towerdev_ghasttraplid_on,face2-5=0:TwilightForest/towerdev_smoker_on
-block:id=FireJet,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,stdrot=true,face0=0:TwilightForest/firejet_side,face1=0:TwilightForest/firejet_top,face2-5=0:TwilightForest/firejet_side
-block:id=FireJet,data=11,stdrot=true,face0=0:TwilightForest/towerwood_encased,face1=0:TwilightForest/towerdev_ghasttraplid_off,face2-5=0:TwilightForest/towerdev_firejet_off
-block:id=FireJet,data=12,data=13,stdrot=true,face0=0:TwilightForest/towerwood_encased,face1=0:TwilightForest/towerdev_ghasttraplid_on,face2-5=0:TwilightForest/towerdev_firejet_on
-block:id=FireJet,data=14,data=15,stdrot=true,face0=0:TwilightForest/firejet_side,face1=0:TwilightForest/firejet_top,face2-5=0:TwilightForest/firejet_side
-# UncraftingTable:* (tile.TFUncraftingTable), render=0(STANDARD), opaque=true,cls=twilightforest.block.BlockTFUncraftingTable
-block:id=UncraftingTable,data=*,stdrot=true,face0=0:TwilightForest/uncrafting_side,face1=0:TwilightForest/uncrafting_top,face2-5=0:TwilightForest/uncrafting_side

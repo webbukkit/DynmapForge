@@ -1,8 +1,8 @@
-# ProjRed|Exploration 1.0
+# ProjRed 
 version:1.6
-modname:ProjRed|Exploration
+modname:ProjRed|Core
 
-var:block_dyeLeafID=0,block_stoneWallsID=0,block_stonesID=0,block_dyeSaplingID=0,block_oresID=0
+var:block_lampID=0,block_dyeLeafID=0,block_stoneWallsID=0,block_stonesID=0,block_dyeSaplingID=0,block_oresID=0
 
 cfgfile:config/ProjectRed.cfg
 

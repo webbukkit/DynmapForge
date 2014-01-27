@@ -1,0 +1,26 @@
+# AdvancedMachines 5.2.3
+version:1.6
+modname:AdvancedMachines
+
+var:ids/AdvancedMachineBlock=0
+
+cfgfile:config/AdvancedMachines.cfg
+
+
+texturepath:assets/advancedmachines/textures/blocks/
+texture:id=advancedmachines/bottom,filename=assets/advancedmachines/textures/blocks/bottom.png
+texture:id=advancedmachines/frontCompressorOFF,filename=assets/advancedmachines/textures/blocks/frontCompressorOFF.png
+texture:id=advancedmachines/frontExtractorOFF,filename=assets/advancedmachines/textures/blocks/frontExtractorOFF.png
+texture:id=advancedmachines/frontMaceratorOFF,filename=assets/advancedmachines/textures/blocks/frontMaceratorOFF.png
+texture:id=advancedmachines/sideExtractorOFF,filename=assets/advancedmachines/textures/blocks/sideExtractorOFF.png
+texture:id=advancedmachines/sideplate,filename=assets/advancedmachines/textures/blocks/sideplate.png
+texture:id=advancedmachines/topCompressorOFF,filename=assets/advancedmachines/textures/blocks/topCompressorOFF.png
+texture:id=advancedmachines/topExtractorOFF,filename=assets/advancedmachines/textures/blocks/topExtractorOFF.png
+texture:id=advancedmachines/topMaceratorOFF,filename=assets/advancedmachines/textures/blocks/topMaceratorOFF.png
+
+
+
+# ids/AdvancedMachineBlock:* (blockAdvMachine), render=0(STANDARD), opaque=true,cls=ic2.advancedmachines.common.BlockAdvancedMachines
+block:id=ids/AdvancedMachineBlock,data=0,stdrot=true,face0=0:advancedmachines/bottom,face1=0:advancedmachines/topMaceratorOFF,face2=0:advancedmachines/sideplate,face3=0:advancedmachines/frontMaceratorOFF,face4-5=0:advancedmachines/sideplate
+block:id=ids/AdvancedMachineBlock,data=1,stdrot=true,face0=0:advancedmachines/bottom,face1=0:advancedmachines/topCompressorOFF,face2=0:advancedmachines/sideplate,face3=0:advancedmachines/frontCompressorOFF,face4-5=0:advancedmachines/sideplate
+block:id=ids/AdvancedMachineBlock,data=2,stdrot=true,face0=0:advancedmachines/bottom,face1=0:advancedmachines/topExtractorOFF,face2=0:advancedmachines/sideExtractorOFF,face3=0:advancedmachines/frontExtractorOFF,face4-5=0:advancedmachines/sideExtractorOFF

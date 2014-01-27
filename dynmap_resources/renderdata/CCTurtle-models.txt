@@ -1,4 +1,4 @@
-# CCTurtle 1.57
+# CCTurtle 1.58
 version:1.6
 modname:CCTurtle
 
@@ -22,6 +22,6 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# turtleBlockID:* (CC-Turtle), render=192(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleMFR
-# turtleUpgradedBlockID:* (CC-TurtleExpanded), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleExpandedMFR
-# turtleAdvancedBlockID:* (CC-TurtleAdvanced), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleAdvancedMFR
+# turtleAdvancedBlockID:* (CC-TurtleAdvanced), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleAdvanced
+# turtleBlockID:* (CC-Turtle), render=80(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtle
+# turtleUpgradedBlockID:* (CC-TurtleExpanded), render=-1(CUSTOM), opaque=false,cls=dan200.turtle.shared.BlockTurtleExpanded

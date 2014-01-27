@@ -3,7 +3,7 @@ version:1.6
 modname:Thaumcraft
 
 var:BlockHole=0,BlockChestHungry=0,BlockCustomPlant=0,BlockTaintFibres=0,BlockMagicalLog=0,BlockTable=0,BlockLifter=0,BlockManaPod=0,BlockTaint=0,BlockJar=0
-var:BlockCustomOre=0,BlockFluxGoo=0,BlockArcaneDoor=0,BlockMagicalLeaves=0,BlockCandle=0,BlockCrystal=0,BlockCosmeticOpaque=0,BlockFluxGas=0,BlockTube=0,BlockWoodenDevice=0
+var:BlockCustomOre=0,BlockFluxGoo=0,BlockArcaneDoor=0,BlockMagicalLeaves=0,BlockCandle=0,BlockCrystal=0,BlockCosmeticOpaque=0,BlockFluxGas=0,BlockWoodenDevice=0,BlockTube=0
 var:BlockMirror=0,BlockStoneDevice=0,BlockAiry=0,BlockCosmeticSolid=0,BlockMetalDevice=0
 
 cfgfile:config/Thaumcraft.cfg
@@ -25,25 +25,25 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 # BlockFluxGoo:* (blockFluxGoo), render=40(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockFluxGoo
-# BlockFluxGas:* (blockFluxGas), render=201(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockFluxGas
-# BlockCustomOre:* (blockCustomOre), render=209(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockCustomOre
+# BlockCustomOre:* (blockCustomOre), render=106(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockCustomOre
 # BlockCustomPlant:* (blockCustomPlant), render=1(CROSSEDSQUARES), opaque=false,cls=thaumcraft.common.blocks.BlockCustomPlant
 patchblock:id=BlockCustomPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1,data=2,data=3,data=4
-# BlockMetalDevice:* (blockMetalDevice), render=203(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMetalDevice
-# BlockTable:* (blockTable), render=211(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTable
-# BlockChestHungry:* (blockChestHungry), render=210(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockChestHungry
-# BlockCandle:* (blockCandle), render=212(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCandle
-# BlockJar:* (blockJar), render=208(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockJar
+# BlockMetalDevice:* (blockMetalDevice), render=100(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMetalDevice
+# BlockTable:* (blockTable), render=108(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTable
+# BlockChestHungry:* (blockChestHungry), render=107(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockChestHungry
+# BlockCandle:* (blockCandle), render=109(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCandle
+# BlockJar:* (blockJar), render=105(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockJar
 # BlockArcaneDoor:* (blockArcaneDoor), render=7(DOOR), opaque=false,cls=thaumcraft.common.blocks.BlockArcaneDoor
 customblock:id=BlockArcaneDoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-# BlockWoodenDevice:* (blockWoodenDevice), render=213(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockWoodenDevice
-# BlockLifter:* (blockLifter), render=214(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockLifter
 # BlockAiry:* (blockAiry), render=-1(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockAiry
-# BlockCrystal:* (blockCrystal), render=215(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCrystal
-# BlockCosmeticOpaque:* (blockCosmeticOpaque), render=216(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticOpaque
+# BlockWoodenDevice:* (blockWoodenDevice), render=110(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockWoodenDevice
+# BlockLifter:* (blockLifter), render=111(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockLifter
+# BlockCrystal:* (blockCrystal), render=112(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCrystal
+# BlockCosmeticOpaque:* (blockCosmeticOpaque), render=113(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticOpaque
 # BlockMirror:* (blockMirror), render=-1(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMirror
-# BlockTaint:* (blockTaint), render=205(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockTaint
-# BlockTaintFibres:* (blockTaintFibres), render=207(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTaintFibres
-# BlockStoneDevice:* (blockStoneDevice), render=204(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockStoneDevice
 # BlockManaPod:* (blockManaPod), render=28(COCOA), opaque=false,cls=thaumcraft.common.blocks.BlockManaPod
-# BlockTube:* (blockTube), render=206(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTube
+# BlockTube:* (blockTube), render=103(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTube
+# BlockFluxGas:* (blockFluxGas), render=98(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockFluxGas
+# BlockStoneDevice:* (blockStoneDevice), render=101(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockStoneDevice
+# BlockTaint:* (blockTaint), render=102(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockTaint
+# BlockTaintFibres:* (blockTaintFibres), render=104(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTaintFibres

@@ -1,11 +1,11 @@
-# IC2 2.0.316-experimental
+# IC2 2.0.344-experimental
 version:1.6
 modname:IC2
 
-var:blockLuminator=0,blockDynamiteRemote=0,blockDoorAlloy=0,blockFenceIron=0,blockMiningTip=0,blockMiningPipe=0,blockMachine2=0,blockfluidUuMatter=0,blockWall=0,blockRubLeaves=0
-var:blockfluidCf=0,blockMetal=0,blockGenerator=0,blockBarrel=0,blockDynamite=0,blockMachine=0,blockRubber=0,blockFoam=0,blockIronScaffold=0,blockHarz=0
-var:blockRubSapling=0,blockFluidcoolant=0,blockAlloyGlass=0,blockRubWood=0,blockOreUran=0,blockCable=0,blockReactorChamber=0,blockAlloy=0,blockITNT=0,blockReinforcedFoam=0
-var:blockPersonal=0,blockCrop=0,blockLuminatorDark=0,blockElectric=0,blockScaffold=0,blockNuke=0
+var:blockLuminator=0,blockDoorAlloy=0,blockDynamiteRemote=0,blockFenceIron=0,blockMiningTip=0,blockMiningPipe=0,blockMachine2=0,blockOreCopper=0,blockWall=0,blockfluidUuMatter=0
+var:blockRubLeaves=0,blockfluidCf=0,blockMetal=0,blockGenerator=0,blockBarrel=0,blockDynamite=0,blockMachine=0,blockRubber=0,blockFoam=0,blockIronScaffold=0
+var:blockHarz=0,blockRubSapling=0,blockOreLead=0,blockAlloyGlass=0,blockFluidcoolant=0,blockRubWood=0,blockOreUran=0,blockCable=0,blockAlloy=0,blockITNT=0
+var:blockReactorChamber=0,blockOreTin=0,blockReinforcedFoam=0,blockPersonal=0,blockCrop=0,blockLuminatorDark=0,blockElectric=0,blockNuke=0,blockScaffold=0
 
 cfgfile:config/IC2.cfg
 
@@ -25,33 +25,33 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
+# blockfluidUuMatter:* (blockfluidUuMatter), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+# blockfluidCf:* (blockfluidCf), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+# blockFluidcoolant:* (blockFluidcoolant), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
 # blockBarrel:* (blockBarrel), render=41(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
-# blockCable:* (blockCable), render=42(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
 # blockCrop:* (blockCrop), render=43(CUSTOM), opaque=false,cls=ic2.core.block.BlockCrop
-# blockDoorAlloy:* (blockDoorAlloy), render=7(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
-customblock:id=blockDoorAlloy,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-# blockDynamite:* (blockDynamite), render=2(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
-patchblock:id=blockDynamite,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
 # blockDynamiteRemote:* (blockDynamiteRemote), render=2(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
 patchblock:id=blockDynamiteRemote,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
-# blockElectric:* (blockElectric), render=41(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
-# blockFenceIron:* (blockFenceIron), render=44(CUSTOM), opaque=false,cls=ic2.core.block.BlockPoleFence
-# blockFluidcoolant:* (blockFluidcoolant), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-# blockGenerator:* (blockGenerator), render=41(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
-# blockHarz:* (blockHarz), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
-boxblock:id=blockHarz,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
-# blockLuminator:* (blockLuminator), render=45(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
-# blockLuminatorDark:* (blockLuminatorDark), render=45(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
-# blockMachine:* (blockMachine), render=41(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
-# blockMachine2:* (blockMachine2), render=41(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
+# blockDynamite:* (blockDynamite), render=2(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+patchblock:id=blockDynamite,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+# blockPersonal:* (blockPersonal), render=46(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
 # blockMiningPipe:* (blockMiningPipe), render=0(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
 boxblock:id=blockMiningPipe,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=0
-# blockPersonal:* (blockPersonal), render=46(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
+# blockLuminator:* (blockLuminator), render=45(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
+# blockLuminatorDark:* (blockLuminatorDark), render=45(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
+# blockMachine2:* (blockMachine2), render=41(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
+# blockMachine:* (blockMachine), render=41(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
+# blockElectric:* (blockElectric), render=41(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
 # blockReactorChamber:* (blockReactorChamber), render=41(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
-# blockRubSapling:* (blockRubSapling), render=1(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
-patchblock:id=blockRubSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# blockGenerator:* (blockGenerator), render=41(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
+# blockCable:* (blockCable), render=42(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
+# blockWall:* (blockWall), render=47(CUSTOM), opaque=true,cls=ic2.core.block.BlockWall
+# blockDoorAlloy:* (blockDoorAlloy), render=7(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
+customblock:id=blockDoorAlloy,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+# blockFenceIron:* (blockFenceIron), render=44(CUSTOM), opaque=false,cls=ic2.core.block.BlockPoleFence
 # blockRubber:* (blockRubber), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
 boxblock:id=blockRubber,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
-# blockWall:* (blockWall), render=47(CUSTOM), opaque=true,cls=ic2.core.block.BlockWall
-# blockfluidCf:* (blockfluidCf), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-# blockfluidUuMatter:* (blockfluidUuMatter), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+# blockHarz:* (blockHarz), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
+boxblock:id=blockHarz,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
+# blockRubSapling:* (blockRubSapling), render=1(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
+patchblock:id=blockRubSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*

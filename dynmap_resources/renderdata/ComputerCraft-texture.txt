@@ -1,4 +1,4 @@
-# ComputerCraft 1.57
+# ComputerCraft 1.58
 version:1.6
 modname:ComputerCraft
 
@@ -8,39 +8,42 @@ cfgfile:config/ComputerCraft.cfg
 
 
 texturepath:assets/computercraft/textures/blocks/
-texture:id=computercraft/wiredModemSide,filename=assets/computercraft/textures/blocks/wiredModemSide.png
-texture:id=computercraft/cableCore,filename=assets/computercraft/textures/blocks/cableCore.png
-texture:id=computercraft/diskDriveSide,filename=assets/computercraft/textures/blocks/diskDriveSide.png
 texture:id=computercraft/advMonitor0,filename=assets/computercraft/textures/blocks/advMonitor0.png
-texture:id=computercraft/monitor15,filename=assets/computercraft/textures/blocks/monitor15.png
-texture:id=computercraft/printerEmpty,filename=assets/computercraft/textures/blocks/printerEmpty.png
-texture:id=computercraft/blink,filename=assets/computercraft/textures/blocks/blink.png
-texture:id=computercraft/computerTop,filename=assets/computercraft/textures/blocks/computerTop.png
 texture:id=computercraft/advMonitor15,filename=assets/computercraft/textures/blocks/advMonitor15.png
-texture:id=computercraft/monitor0,filename=assets/computercraft/textures/blocks/monitor0.png
-texture:id=computercraft/diskDrive,filename=assets/computercraft/textures/blocks/diskDrive.png
-texture:id=computercraft/monitor32,filename=assets/computercraft/textures/blocks/monitor32.png
-texture:id=computercraft/wirelessModemFace,filename=assets/computercraft/textures/blocks/wirelessModemFace.png
 texture:id=computercraft/advMonitor32,filename=assets/computercraft/textures/blocks/advMonitor32.png
-texture:id=computercraft/wirelessModemSide,filename=assets/computercraft/textures/blocks/wirelessModemSide.png
+texture:id=computercraft/blink,filename=assets/computercraft/textures/blocks/blink.png
+texture:id=computercraft/cableCore,filename=assets/computercraft/textures/blocks/cableCore.png
 texture:id=computercraft/cableSide,filename=assets/computercraft/textures/blocks/cableSide.png
-texture:id=computercraft/diskDriveTop,filename=assets/computercraft/textures/blocks/diskDriveTop.png
 texture:id=computercraft/computerSide,filename=assets/computercraft/textures/blocks/computerSide.png
-texture:id=computercraft/wiredModemFace,filename=assets/computercraft/textures/blocks/wiredModemFace.png
-texture:id=computercraft/printerTop,filename=assets/computercraft/textures/blocks/printerTop.png
+texture:id=computercraft/computerTop,filename=assets/computercraft/textures/blocks/computerTop.png
+texture:id=computercraft/diskDrive,filename=assets/computercraft/textures/blocks/diskDrive.png
+texture:id=computercraft/diskDriveSide,filename=assets/computercraft/textures/blocks/diskDriveSide.png
+texture:id=computercraft/diskDriveTop,filename=assets/computercraft/textures/blocks/diskDriveTop.png
+texture:id=computercraft/monitor0,filename=assets/computercraft/textures/blocks/monitor0.png
+texture:id=computercraft/monitor15,filename=assets/computercraft/textures/blocks/monitor15.png
+texture:id=computercraft/monitor32,filename=assets/computercraft/textures/blocks/monitor32.png
+texture:id=computercraft/printerEmpty,filename=assets/computercraft/textures/blocks/printerEmpty.png
 texture:id=computercraft/printerSide,filename=assets/computercraft/textures/blocks/printerSide.png
+texture:id=computercraft/printerTop,filename=assets/computercraft/textures/blocks/printerTop.png
+texture:id=computercraft/wiredModemFace,filename=assets/computercraft/textures/blocks/wiredModemFace.png
+texture:id=computercraft/wiredModemSide,filename=assets/computercraft/textures/blocks/wiredModemSide.png
+texture:id=computercraft/wirelessModemFace,filename=assets/computercraft/textures/blocks/wirelessModemFace.png
+texture:id=computercraft/wirelessModemSide,filename=assets/computercraft/textures/blocks/wirelessModemSide.png
 
 
-# computerBlockID:* (CC-Computer), render=189(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockComputerMFR
+
+# cableBlockID:* (CC-Cable), render=79(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockCable
+block:id=cableBlockID,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/cableSide,face2-3=0:computercraft/cableCore,face4-5=0:computercraft/cableSide
+block:id=cableBlockID,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/wiredModemFace,face2=0:computercraft/wiredModemSide,face3-4=0:computercraft/wiredModemFace,face5=0:computercraft/wiredModemSide
+block:id=cableBlockID,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/wiredModemFace
+
+# computerBlockID:* (CC-Computer), render=77(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockComputer
 block:id=computerBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/computerTop,face2=0:computercraft/computerSide,face3=0:computercraft/blink,face4-5=0:computercraft/computerSide
-# peripheralBlockID:* (CC-Peripheral), render=190(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockPeripheral
+
+# peripheralBlockID:* (CC-Peripheral), render=78(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockPeripheral
 block:id=peripheralBlockID,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/diskDriveTop,face2=0:computercraft/diskDriveSide,face3=0:computercraft/diskDrive,face4-5=0:computercraft/diskDriveSide
 block:id=peripheralBlockID,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/wirelessModemFace,face2=0:computercraft/wirelessModemSide,face3-4=0:computercraft/wirelessModemFace,face5=0:computercraft/wirelessModemSide
 block:id=peripheralBlockID,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/monitor0,face2=0:computercraft/monitor32,face3=0:computercraft/monitor15,face4-5=0:computercraft/monitor32
 block:id=peripheralBlockID,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/printerTop,face2=0:computercraft/printerSide,face3=0:computercraft/printerEmpty,face4-5=0:computercraft/printerSide
 block:id=peripheralBlockID,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/advMonitor0,face2=0:computercraft/advMonitor32,face3=0:computercraft/advMonitor15,face4-5=0:computercraft/advMonitor32
 block:id=peripheralBlockID,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/printerTop
-# cableBlockID:* (CC-Cable), render=191(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockCable
-block:id=cableBlockID,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/cableSide,face2-3=0:computercraft/cableCore,face4-5=0:computercraft/cableSide
-block:id=cableBlockID,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/wiredModemFace,face2=0:computercraft/wiredModemSide,face3-4=0:computercraft/wiredModemFace,face5=0:computercraft/wiredModemSide
-block:id=cableBlockID,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/wiredModemFace

@@ -2,85 +2,86 @@
 version:1.6
 modname:ThermalExpansion
 
-var:FluidPyrotheum=0,Machine=0,Device=0,Dynamo=0,Tesseract=0,Glass=0,FluidCryotheum=0,Lamp=0,Conduit=0,FluidGlowstone=0
+var:FluidPyrotheum=0,Machine=0,Dynamo=0,Tesseract=0,Device=0,Glass=0,FluidCryotheum=0,Lamp=0,Conduit=0,FluidGlowstone=0
 var:Storage=0,Ore=0,Tank=0,FluidCoal=0,EnergyCell=0,FluidRedstone=0,Strongbox=0,FluidEnder=0,Rockwool=0
 
 cfgfile:config/cofh/ThermalExpansion.cfg
 
 
 texturepath:assets/thermalexpansion/textures/blocks/
-texture:id=thermalexpansion/ore/Ore_Nickel,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Nickel.png
-texture:id=thermalexpansion/device/Device_Side_Workbench,filename=assets/thermalexpansion/textures/blocks/device/Device_Side_Workbench.png
-texture:id=thermalexpansion/glass/Glass_Hardened,filename=assets/thermalexpansion/textures/blocks/glass/Glass_Hardened.png
-texture:id=thermalexpansion/storage/Block_Enderium,filename=assets/thermalexpansion/textures/blocks/storage/Block_Enderium.png
-texture:id=thermalexpansion/fluid/Fluid_Ender_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Ender_Still.png
-texture:id=thermalexpansion/ore/Ore_Lead,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Lead.png
-texture:id=thermalexpansion/machine/Machine_Top,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Top.png
-texture:id=minecraft/wool_colored_silver,filename=assets/minecraft/textures/blocks/wool_colored_silver.png
-#texture:id=thermalexpansion/device/Device_Face_Lexicon,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Lexicon.png
-texture:id=thermalexpansion/fluid/Fluid_Redstone_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Redstone_Still.png
-texture:id=thermalexpansion/machine/Machine_Face_Sawmill,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Sawmill.png
-texture:id=thermalexpansion/tesseract/Tesseract,filename=assets/thermalexpansion/textures/blocks/tesseract/Tesseract.png
-texture:id=thermalexpansion/fluid/Fluid_Pyrotheum_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Pyrotheum_Flow.png
-texture:id=minecraft/wool_colored_gray,filename=assets/minecraft/textures/blocks/wool_colored_gray.png
-texture:id=minecraft/wool_colored_lime,filename=assets/minecraft/textures/blocks/wool_colored_lime.png
-texture:id=thermalexpansion/device/Device_Side,filename=assets/thermalexpansion/textures/blocks/device/Device_Side.png
-texture:id=thermalexpansion/device/Device_Face_Nullifier,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Nullifier.png
-texture:id=thermalexpansion/fluid/Fluid_Cryotheum_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Cryotheum_Flow.png
-texture:id=thermalexpansion/storage/Block_Silver,filename=assets/thermalexpansion/textures/blocks/storage/Block_Silver.png
-texture:id=minecraft/wool_colored_magenta,filename=assets/minecraft/textures/blocks/wool_colored_magenta.png
-texture:id=thermalexpansion/device/Device_Face_Activator,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Activator.png
-texture:id=thermalexpansion/machine/Machine_Face_Furnace,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Furnace.png
-texture:id=thermalexpansion/energycell/Cell_Hardened,filename=assets/thermalexpansion/textures/blocks/energycell/Cell_Hardened.png
-texture:id=thermalexpansion/machine/Machine_Face_IceGen,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_IceGen.png
-texture:id=thermalexpansion/storage/Block_Bronze,filename=assets/thermalexpansion/textures/blocks/storage/Block_Bronze.png
-texture:id=thermalexpansion/fluid/Fluid_Glowstone_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Glowstone_Still.png
-texture:id=thermalexpansion/storage/Block_Invar,filename=assets/thermalexpansion/textures/blocks/storage/Block_Invar.png
-texture:id=thermalexpansion/fluid/Fluid_Coal_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Coal_Still.png
-texture:id=thermalexpansion/storage/Block_Nickel,filename=assets/thermalexpansion/textures/blocks/storage/Block_Nickel.png
-texture:id=thermalexpansion/fluid/Fluid_Pyrotheum_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Pyrotheum_Still.png
-texture:id=thermalexpansion/storage/Block_Tin,filename=assets/thermalexpansion/textures/blocks/storage/Block_Tin.png
-texture:id=thermalexpansion/machine/Machine_Side,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Side.png
-texture:id=thermalexpansion/fluid/Fluid_Coal_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Coal_Flow.png
-texture:id=thermalexpansion/energycell/Cell_Reinforced,filename=assets/thermalexpansion/textures/blocks/energycell/Cell_Reinforced.png
-texture:id=thermalexpansion/fluid/Fluid_Redstone_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Redstone_Flow.png
-texture:id=minecraft/wool_colored_yellow,filename=assets/minecraft/textures/blocks/wool_colored_yellow.png
-texture:id=thermalexpansion/machine/Machine_Face_Transposer,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Transposer.png
-texture:id=thermalexpansion/fluid/Fluid_Ender_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Ender_Flow.png
-texture:id=minecraft/wool_colored_red,filename=assets/minecraft/textures/blocks/wool_colored_red.png
-texture:id=thermalexpansion/device/Device_Top_Workbench,filename=assets/thermalexpansion/textures/blocks/device/Device_Top_Workbench.png
-texture:id=thermalexpansion/energycell/Cell_Resonant,filename=assets/thermalexpansion/textures/blocks/energycell/Cell_Resonant.png
-texture:id=thermalexpansion/fluid/Fluid_Cryotheum_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Cryotheum_Still.png
 texture:id=minecraft/wool_colored_black,filename=assets/minecraft/textures/blocks/wool_colored_black.png
-texture:id=thermalexpansion/storage/Block_Platinum,filename=assets/thermalexpansion/textures/blocks/storage/Block_Platinum.png
-texture:id=thermalexpansion/ore/Ore_Silver,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Silver.png
-texture:id=minecraft/wool_colored_green,filename=assets/minecraft/textures/blocks/wool_colored_green.png
-texture:id=thermalexpansion/machine/Machine_Face_Smelter,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Smelter.png
-texture:id=thermalexpansion/machine/Machine_Face_Charger,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Charger.png
-texture:id=thermalexpansion/machine/Machine_Face_Crucible,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Crucible.png
-texture:id=minecraft/wool_colored_pink,filename=assets/minecraft/textures/blocks/wool_colored_pink.png
-texture:id=thermalexpansion/fluid/Fluid_Glowstone_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Glowstone_Flow.png
-texture:id=thermalexpansion/machine/Machine_Bottom,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Bottom.png
-texture:id=thermalexpansion/machine/Machine_Face_Pulverizer,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Pulverizer.png
-texture:id=thermalexpansion/ore/Ore_Copper,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Copper.png
-texture:id=thermalexpansion/storage/Block_Lead,filename=assets/thermalexpansion/textures/blocks/storage/Block_Lead.png
-texture:id=minecraft/wool_colored_purple,filename=assets/minecraft/textures/blocks/wool_colored_purple.png
-texture:id=minecraft/wool_colored_orange,filename=assets/minecraft/textures/blocks/wool_colored_orange.png
 texture:id=minecraft/wool_colored_blue,filename=assets/minecraft/textures/blocks/wool_colored_blue.png
-texture:id=thermalexpansion/device/Device_Bottom_Workbench,filename=assets/thermalexpansion/textures/blocks/device/Device_Bottom_Workbench.png
-texture:id=minecraft/wool_colored_white,filename=assets/minecraft/textures/blocks/wool_colored_white.png
-texture:id=thermalexpansion/ore/Ore_Tin,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Tin.png
-texture:id=minecraft/wool_colored_cyan,filename=assets/minecraft/textures/blocks/wool_colored_cyan.png
-texture:id=thermalexpansion/machine/Machine_Face_RockGen,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_RockGen.png
-texture:id=thermalexpansion/device/Device_Face_Breaker,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Breaker.png
-texture:id=thermalexpansion/storage/Block_Copper,filename=assets/thermalexpansion/textures/blocks/storage/Block_Copper.png
-texture:id=thermalexpansion/machine/Machine_Face_WaterGen,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_WaterGen.png
 texture:id=minecraft/wool_colored_brown,filename=assets/minecraft/textures/blocks/wool_colored_brown.png
-texture:id=thermalexpansion/machine/Machine_Face_Assembler,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Assembler.png
+texture:id=minecraft/wool_colored_cyan,filename=assets/minecraft/textures/blocks/wool_colored_cyan.png
+texture:id=minecraft/wool_colored_gray,filename=assets/minecraft/textures/blocks/wool_colored_gray.png
+texture:id=minecraft/wool_colored_green,filename=assets/minecraft/textures/blocks/wool_colored_green.png
+texture:id=minecraft/wool_colored_light_blue,filename=assets/minecraft/textures/blocks/wool_colored_light_blue.png
+texture:id=minecraft/wool_colored_lime,filename=assets/minecraft/textures/blocks/wool_colored_lime.png
+texture:id=minecraft/wool_colored_magenta,filename=assets/minecraft/textures/blocks/wool_colored_magenta.png
+texture:id=minecraft/wool_colored_orange,filename=assets/minecraft/textures/blocks/wool_colored_orange.png
+texture:id=minecraft/wool_colored_pink,filename=assets/minecraft/textures/blocks/wool_colored_pink.png
+texture:id=minecraft/wool_colored_purple,filename=assets/minecraft/textures/blocks/wool_colored_purple.png
+texture:id=minecraft/wool_colored_red,filename=assets/minecraft/textures/blocks/wool_colored_red.png
+texture:id=minecraft/wool_colored_silver,filename=assets/minecraft/textures/blocks/wool_colored_silver.png
+texture:id=minecraft/wool_colored_white,filename=assets/minecraft/textures/blocks/wool_colored_white.png
+texture:id=minecraft/wool_colored_yellow,filename=assets/minecraft/textures/blocks/wool_colored_yellow.png
+texture:id=thermalexpansion/device/Device_Bottom_Workbench,filename=assets/thermalexpansion/textures/blocks/device/Device_Bottom_Workbench.png
+texture:id=thermalexpansion/device/Device_Face_Activator,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Activator.png
+texture:id=thermalexpansion/device/Device_Face_Breaker,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Breaker.png
+texture:id=thermalexpansion/device/Device_Face_Lexicon,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Lexicon.png
+texture:id=thermalexpansion/device/Device_Face_Nullifier,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Nullifier.png
+texture:id=thermalexpansion/device/Device_Side,filename=assets/thermalexpansion/textures/blocks/device/Device_Side.png
+texture:id=thermalexpansion/device/Device_Side_Workbench,filename=assets/thermalexpansion/textures/blocks/device/Device_Side_Workbench.png
+texture:id=thermalexpansion/device/Device_Top_Workbench,filename=assets/thermalexpansion/textures/blocks/device/Device_Top_Workbench.png
 texture:id=thermalexpansion/energycell/Cell_Basic,filename=assets/thermalexpansion/textures/blocks/energycell/Cell_Basic.png
 texture:id=thermalexpansion/energycell/Cell_Creative,filename=assets/thermalexpansion/textures/blocks/energycell/Cell_Creative.png
+texture:id=thermalexpansion/energycell/Cell_Hardened,filename=assets/thermalexpansion/textures/blocks/energycell/Cell_Hardened.png
+texture:id=thermalexpansion/energycell/Cell_Reinforced,filename=assets/thermalexpansion/textures/blocks/energycell/Cell_Reinforced.png
+texture:id=thermalexpansion/energycell/Cell_Resonant,filename=assets/thermalexpansion/textures/blocks/energycell/Cell_Resonant.png
+texture:id=thermalexpansion/fluid/Fluid_Coal_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Coal_Flow.png
+texture:id=thermalexpansion/fluid/Fluid_Coal_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Coal_Still.png
+texture:id=thermalexpansion/fluid/Fluid_Cryotheum_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Cryotheum_Flow.png
+texture:id=thermalexpansion/fluid/Fluid_Cryotheum_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Cryotheum_Still.png
+texture:id=thermalexpansion/fluid/Fluid_Ender_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Ender_Flow.png
+texture:id=thermalexpansion/fluid/Fluid_Ender_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Ender_Still.png
+texture:id=thermalexpansion/fluid/Fluid_Glowstone_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Glowstone_Flow.png
+texture:id=thermalexpansion/fluid/Fluid_Glowstone_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Glowstone_Still.png
+texture:id=thermalexpansion/fluid/Fluid_Pyrotheum_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Pyrotheum_Flow.png
+texture:id=thermalexpansion/fluid/Fluid_Pyrotheum_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Pyrotheum_Still.png
+texture:id=thermalexpansion/fluid/Fluid_Redstone_Flow,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Redstone_Flow.png
+texture:id=thermalexpansion/fluid/Fluid_Redstone_Still,filename=assets/thermalexpansion/textures/blocks/fluid/Fluid_Redstone_Still.png
+texture:id=thermalexpansion/glass/Glass_Hardened,filename=assets/thermalexpansion/textures/blocks/glass/Glass_Hardened.png
+texture:id=thermalexpansion/machine/Machine_Bottom,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Bottom.png
+texture:id=thermalexpansion/machine/Machine_Face_Assembler,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Assembler.png
+texture:id=thermalexpansion/machine/Machine_Face_Charger,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Charger.png
+texture:id=thermalexpansion/machine/Machine_Face_Crucible,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Crucible.png
+texture:id=thermalexpansion/machine/Machine_Face_Furnace,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Furnace.png
+texture:id=thermalexpansion/machine/Machine_Face_IceGen,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_IceGen.png
+texture:id=thermalexpansion/machine/Machine_Face_Pulverizer,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Pulverizer.png
+texture:id=thermalexpansion/machine/Machine_Face_RockGen,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_RockGen.png
+texture:id=thermalexpansion/machine/Machine_Face_Sawmill,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Sawmill.png
+texture:id=thermalexpansion/machine/Machine_Face_Smelter,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Smelter.png
+texture:id=thermalexpansion/machine/Machine_Face_Transposer,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_Transposer.png
+texture:id=thermalexpansion/machine/Machine_Face_WaterGen,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Face_WaterGen.png
+texture:id=thermalexpansion/machine/Machine_Side,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Side.png
+texture:id=thermalexpansion/machine/Machine_Top,filename=assets/thermalexpansion/textures/blocks/machine/Machine_Top.png
+texture:id=thermalexpansion/ore/Ore_Copper,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Copper.png
+texture:id=thermalexpansion/ore/Ore_Lead,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Lead.png
+texture:id=thermalexpansion/ore/Ore_Nickel,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Nickel.png
+texture:id=thermalexpansion/ore/Ore_Silver,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Silver.png
+texture:id=thermalexpansion/ore/Ore_Tin,filename=assets/thermalexpansion/textures/blocks/ore/Ore_Tin.png
+texture:id=thermalexpansion/storage/Block_Bronze,filename=assets/thermalexpansion/textures/blocks/storage/Block_Bronze.png
+texture:id=thermalexpansion/storage/Block_Copper,filename=assets/thermalexpansion/textures/blocks/storage/Block_Copper.png
 texture:id=thermalexpansion/storage/Block_Electrum,filename=assets/thermalexpansion/textures/blocks/storage/Block_Electrum.png
-texture:id=minecraft/wool_colored_light_blue,filename=assets/minecraft/textures/blocks/wool_colored_light_blue.png
+texture:id=thermalexpansion/storage/Block_Enderium,filename=assets/thermalexpansion/textures/blocks/storage/Block_Enderium.png
+texture:id=thermalexpansion/storage/Block_Invar,filename=assets/thermalexpansion/textures/blocks/storage/Block_Invar.png
+texture:id=thermalexpansion/storage/Block_Lead,filename=assets/thermalexpansion/textures/blocks/storage/Block_Lead.png
+texture:id=thermalexpansion/storage/Block_Nickel,filename=assets/thermalexpansion/textures/blocks/storage/Block_Nickel.png
+texture:id=thermalexpansion/storage/Block_Platinum,filename=assets/thermalexpansion/textures/blocks/storage/Block_Platinum.png
+texture:id=thermalexpansion/storage/Block_Silver,filename=assets/thermalexpansion/textures/blocks/storage/Block_Silver.png
+texture:id=thermalexpansion/storage/Block_Tin,filename=assets/thermalexpansion/textures/blocks/storage/Block_Tin.png
+texture:id=thermalexpansion/tesseract/Tesseract,filename=assets/thermalexpansion/textures/blocks/tesseract/Tesseract.png
+
 
 
 # Ore:* (Ore), render=0(STANDARD), opaque=true,cls=thermalexpansion.block.simple.BlockOre
@@ -89,6 +90,7 @@ block:id=Ore,data=1,stdrot=true,face0-5=0:thermalexpansion/ore/Ore_Tin
 block:id=Ore,data=2,stdrot=true,face0-5=0:thermalexpansion/ore/Ore_Silver
 block:id=Ore,data=3,stdrot=true,face0-5=0:thermalexpansion/ore/Ore_Lead
 block:id=Ore,data=4,stdrot=true,face0-5=0:thermalexpansion/ore/Ore_Nickel
+
 # Machine:* (Machine), render=0(STANDARD), opaque=true,cls=thermalexpansion.block.machine.BlockMachine
 block:id=Machine,data=0,stdrot=true,face0=12000:thermalexpansion/machine/Machine_Bottom,face1=12000:thermalexpansion/machine/Machine_Top,face2=12000:thermalexpansion/machine/Machine_Side,face3=12000:thermalexpansion/machine/Machine_Face_Furnace,face4-5=12000:thermalexpansion/machine/Machine_Side
 block:id=Machine,data=1,stdrot=true,face0=12000:thermalexpansion/machine/Machine_Bottom,face1=12000:thermalexpansion/machine/Machine_Top,face2=12000:thermalexpansion/machine/Machine_Side,face3=12000:thermalexpansion/machine/Machine_Face_Pulverizer,face4-5=12000:thermalexpansion/machine/Machine_Side
@@ -102,32 +104,13 @@ block:id=Machine,data=8,stdrot=true,face0=12000:thermalexpansion/machine/Machine
 block:id=Machine,data=9,stdrot=true,face0=12000:thermalexpansion/machine/Machine_Bottom,face1=12000:thermalexpansion/machine/Machine_Top,face2=12000:thermalexpansion/machine/Machine_Side,face3=12000:thermalexpansion/machine/Machine_Face_Assembler,face4-5=12000:thermalexpansion/machine/Machine_Side
 block:id=Machine,data=10,stdrot=true,face0=12000:thermalexpansion/machine/Machine_Bottom,face1=12000:thermalexpansion/machine/Machine_Top,face2=12000:thermalexpansion/machine/Machine_Side,face3=12000:thermalexpansion/machine/Machine_Face_Charger,face4-5=12000:thermalexpansion/machine/Machine_Side
 block:id=Machine,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=12000:thermalexpansion/machine/Machine_Bottom,face1=12000:thermalexpansion/machine/Machine_Top,face2=12000:thermalexpansion/machine/Machine_Side,face4-5=12000:thermalexpansion/machine/Machine_Side
-# Device:* (Device), render=0(STANDARD), opaque=true,cls=thermalexpansion.block.device.BlockDevice
-block:id=Device,data=0,stdrot=true,face0=12000:thermalexpansion/device/Device_Bottom_Workbench,face1=12000:thermalexpansion/device/Device_Top_Workbench,face2-5=12000:thermalexpansion/device/Device_Side_Workbench
-block:id=Device,data=1,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face4-5=12000:thermalexpansion/device/Device_Side
-block:id=Device,data=2,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Activator,face4-5=12000:thermalexpansion/device/Device_Side
-block:id=Device,data=3,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Breaker,face4-5=12000:thermalexpansion/device/Device_Side
-block:id=Device,data=4,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Nullifier,face4-5=12000:thermalexpansion/device/Device_Side
-#block:id=Device,data=5,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Lexicon,face4-5=12000:thermalexpansion/device/Device_Side
-block:id=Device,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face4-5=12000:thermalexpansion/device/Device_Side
-# Dynamo:* (Dynamo), render=241(CUSTOM), opaque=false,cls=thermalexpansion.block.dynamo.BlockDynamo
-block:id=Dynamo,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
-# EnergyCell:* (EnergyCell), render=235(CUSTOM), opaque=false,cls=thermalexpansion.block.energycell.BlockEnergyCell
-block:id=EnergyCell,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Creative
-block:id=EnergyCell,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Basic
-block:id=EnergyCell,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Hardened
-block:id=EnergyCell,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Reinforced
-block:id=EnergyCell,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Resonant
-# Tank:* (Tank), render=242(CUSTOM), opaque=false,cls=thermalexpansion.block.tank.BlockTank
+
+# Tank:* (Tank), render=129(CUSTOM), opaque=false,cls=thermalexpansion.block.tank.BlockTank
 block:id=Tank,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
-# Strongbox:* (Strongbox), render=-1(CUSTOM), opaque=false,cls=thermalexpansion.block.strongbox.BlockStrongbox
-block:id=Strongbox,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
-# Conduit:* (Conduit), render=237(CUSTOM), opaque=false,cls=thermalexpansion.block.conduit.BlockConduit
-block:id=Conduit,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
-# Tesseract:* (Tesseract), render=236(CUSTOM), opaque=false,cls=thermalexpansion.block.tesseract.BlockTesseract
-block:id=Tesseract,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/tesseract/Tesseract
-# Lamp:* (Lamp), render=244(CUSTOM), opaque=false,cls=thermalexpansion.block.lamp.BlockLamp
-block:id=Lamp,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
+
+# Dynamo:* (Dynamo), render=128(CUSTOM), opaque=false,cls=thermalexpansion.block.dynamo.BlockDynamo
+block:id=Dynamo,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
+
 # Storage:* (Storage), render=0(STANDARD), opaque=true,cls=thermalexpansion.block.simple.BlockStorage
 block:id=Storage,data=0,stdrot=true,face0-5=0:thermalexpansion/storage/Block_Copper
 block:id=Storage,data=1,stdrot=true,face0-5=0:thermalexpansion/storage/Block_Tin
@@ -139,8 +122,16 @@ block:id=Storage,data=6,stdrot=true,face0-5=0:thermalexpansion/storage/Block_Ele
 block:id=Storage,data=7,stdrot=true,face0-5=0:thermalexpansion/storage/Block_Invar
 block:id=Storage,data=8,stdrot=true,face0-5=0:thermalexpansion/storage/Block_Bronze
 block:id=Storage,data=10,stdrot=true,face0-5=0:thermalexpansion/storage/Block_Enderium
+
+# Conduit:* (Conduit), render=124(CUSTOM), opaque=false,cls=thermalexpansion.block.conduit.BlockConduit
+block:id=Conduit,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
+
+# Tesseract:* (Tesseract), render=123(CUSTOM), opaque=false,cls=thermalexpansion.block.tesseract.BlockTesseract
+block:id=Tesseract,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/tesseract/Tesseract
+
 # Glass:* (Glass), render=0(STANDARD), opaque=false,cls=thermalexpansion.block.simple.BlockGlass
 block:id=Glass,data=*,stdrot=true,face0-5=12000:thermalexpansion/glass/Glass_Hardened
+
 # Rockwool:* (Rockwool), render=0(STANDARD), opaque=true,cls=thermalexpansion.block.simple.BlockRockwool
 block:id=Rockwool,data=0,stdrot=true,face0-5=0:minecraft/wool_colored_white
 block:id=Rockwool,data=1,stdrot=true,face0-5=0:minecraft/wool_colored_orange
@@ -158,15 +149,43 @@ block:id=Rockwool,data=12,stdrot=true,face0-5=0:minecraft/wool_colored_brown
 block:id=Rockwool,data=13,stdrot=true,face0-5=0:minecraft/wool_colored_green
 block:id=Rockwool,data=14,stdrot=true,face0-5=0:minecraft/wool_colored_red
 block:id=Rockwool,data=15,stdrot=true,face0-5=0:minecraft/wool_colored_black
+
+# Device:* (Device), render=0(STANDARD), opaque=true,cls=thermalexpansion.block.device.BlockDevice
+block:id=Device,data=0,stdrot=true,face0=12000:thermalexpansion/device/Device_Bottom_Workbench,face1=12000:thermalexpansion/device/Device_Top_Workbench,face2-5=12000:thermalexpansion/device/Device_Side_Workbench
+block:id=Device,data=1,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face4-5=12000:thermalexpansion/device/Device_Side
+block:id=Device,data=2,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Activator,face4-5=12000:thermalexpansion/device/Device_Side
+block:id=Device,data=3,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Breaker,face4-5=12000:thermalexpansion/device/Device_Side
+block:id=Device,data=4,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Nullifier,face4-5=12000:thermalexpansion/device/Device_Side
+block:id=Device,data=5,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Lexicon,face4-5=12000:thermalexpansion/device/Device_Side
+block:id=Device,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face4-5=12000:thermalexpansion/device/Device_Side
+
+# EnergyCell:* (EnergyCell), render=122(CUSTOM), opaque=false,cls=thermalexpansion.block.energycell.BlockEnergyCell
+block:id=EnergyCell,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Creative
+block:id=EnergyCell,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Basic
+block:id=EnergyCell,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Hardened
+block:id=EnergyCell,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Reinforced
+block:id=EnergyCell,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/energycell/Cell_Resonant
+
+# Strongbox:* (Strongbox), render=-1(CUSTOM), opaque=false,cls=thermalexpansion.block.strongbox.BlockStrongbox
+block:id=Strongbox,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
+
+# Lamp:* (Lamp), render=131(CUSTOM), opaque=false,cls=thermalexpansion.block.lamp.BlockLamp
+block:id=Lamp,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:thermalexpansion/glass/Glass_Hardened
+
 # FluidRedstone:* (FluidRedstone), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidRedstone
 block:id=FluidRedstone,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:thermalexpansion/fluid/Fluid_Redstone_Still,face2-5=0:thermalexpansion/fluid/Fluid_Redstone_Flow
+
 # FluidGlowstone:* (FluidGlowstone), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidGlowstone
 block:id=FluidGlowstone,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:thermalexpansion/fluid/Fluid_Glowstone_Still,face2-5=0:thermalexpansion/fluid/Fluid_Glowstone_Flow
+
 # FluidEnder:* (FluidEnder), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidEnder
 block:id=FluidEnder,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:thermalexpansion/fluid/Fluid_Ender_Still,face2-5=0:thermalexpansion/fluid/Fluid_Ender_Flow
+
 # FluidPyrotheum:* (FluidPyrotheum), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidPyrotheum
 block:id=FluidPyrotheum,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:thermalexpansion/fluid/Fluid_Pyrotheum_Still,face2-5=0:thermalexpansion/fluid/Fluid_Pyrotheum_Flow
+
 # FluidCryotheum:* (FluidCryotheum), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidCryotheum
 block:id=FluidCryotheum,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:thermalexpansion/fluid/Fluid_Cryotheum_Still,face2-5=0:thermalexpansion/fluid/Fluid_Cryotheum_Flow
+
 # FluidCoal:* (FluidCoal), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidCoal
 block:id=FluidCoal,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:thermalexpansion/fluid/Fluid_Coal_Still,face2-5=0:thermalexpansion/fluid/Fluid_Coal_Flow

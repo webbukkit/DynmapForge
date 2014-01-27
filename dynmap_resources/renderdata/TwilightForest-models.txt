@@ -1,10 +1,12 @@
-# TwilightForest 1.20.2
+# TwilightForest 1.20.3
 version:1.6
 modname:TwilightForest
 
-var:UncraftingTable=0,UnderBrick=0,Plant=0,TowerWood=0,Portal=0,Leaves=0,BossSpawner=0,Roots=0,Sapling=0,TrophyPedestal=0
-var:Mazestone=0,Cicada=0,AuroraBrick=0,Shield=0,Log=0,TowerDevice=0,Hedge=0,FireJet=0,MagicLogSpecial=0,TowerTranslucent=0
-var:FireflyJar=0,MagicLog=0,Trophy=0,MagicLeaves=0,Nagastone=0,Moonworm=0,Critter=0
+var:UnderBrick=0,biome/biome.id.Clearing=0,biome/biome.id.Stream=0,biome/biome.id.LakeBorder=0,biome/biome.id.DarkForest=0,Portal=0,Roots=0,TrophyPedestal=0,Cicada=0,biome/biome.id.ClearingBorder=0
+var:biome/biome.id.EnchantedForest=0,Log=0,TowerDevice=0,biome/biome.id.TwilightForestVariant=0,FireJet=0,MagicLogSpecial=0,TowerTranslucent=0,FireflyJar=0,MagicLeaves=0,biome/biome.id.Mushrooms=0
+var:Critter=0,UncraftingTable=0,biome/biome.id.DeepMushrooms=0,Plant=0,TowerWood=0,biome/biome.id.Snowfield=0,biome/biome.id.FireSwamp=0,Leaves=0,BossSpawner=0,Sapling=0
+var:biome/biome.id.MinorFeature=0,Mazestone=0,biome/biome.id.Glacier=0,AuroraBrick=0,biome/biome.id.Highlands=0,biome/biome.id.MajorFeature=0,Shield=0,biome/biome.id.Swamp=0,Hedge=0,MagicLog=0
+var:biome/biome.id.TwilightForest=0,biome/biome.id.Lake=0,Trophy=0,Nagastone=0,Moonworm=0
 
 cfgfile:config/TwilightForest.cfg
 
@@ -24,18 +26,18 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# Critter:* (tile.TFFirefly), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFirefly
+# Critter:* (tile.TFFirefly), render=117(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFirefly
 # Portal:* (tile.TFPortal), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFPortal
 boxblock:id=Portal,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.75,zmin=0.0,zmax=1.0,data=*
-# FireflyJar:* (tile.TFFireflyJar), render=219(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFireflyJar
-# Plant:* (tile.TFPlant), render=220(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFPlant
-# MagicLeaves:* (tile.TFMagicLeaves), render=223(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMagicLeaves
-# Moonworm:* (tile.TFMoonworm), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMoonworm
-# TowerTranslucent:* (tile.TFTowerTranslucent), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
-boxblock:id=TowerTranslucent,xmin=0.14929203689098358,xmax=0.7641385793685913,ymin=0.038753509521484375,ymax=0.9891966581344604,zmin=0.39010390639305115,zmax=0.7767026424407959,data=5
-# Trophy:* (tile.TFTrophy), render=-1(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophy
-# TrophyPedestal:* (tile.TFTrophyPedestal), render=224(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophyPedestal
+# FireflyJar:* (tile.TFFireflyJar), render=115(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFFireflyJar
+# Plant:* (tile.TFPlant), render=116(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFPlant
+# Cicada:* (tile.TFCicada), render=117(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFCicada
+# Nagastone:* (tile.TFNagastone), render=118(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone
 # Sapling:* (tile.TFSapling), render=1(CROSSEDSQUARES), opaque=false,cls=twilightforest.block.BlockTFSapling
 patchblock:id=Sapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9
-# Nagastone:* (tile.TFNagastone), render=222(CUSTOM), opaque=true,cls=twilightforest.block.BlockTFNagastone
-# Cicada:* (tile.TFCicada), render=221(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFCicada
+# MagicLeaves:* (tile.TFMagicLeaves), render=119(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMagicLeaves
+# Moonworm:* (tile.TFMoonworm), render=117(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFMoonworm
+# TowerTranslucent:* (tile.TFTowerTranslucent), render=0(STANDARD), opaque=false,cls=twilightforest.block.BlockTFTowerTranslucent
+boxblock:id=TowerTranslucent,xmin=0.38478124141693115,xmax=0.6501822471618652,ymin=0.37817254662513733,ymax=0.9378035664558411,zmin=0.004479146096855402,zmax=0.7077057361602783,data=5
+# Trophy:* (tile.TFTrophy), render=-1(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophy
+# TrophyPedestal:* (tile.TFTrophyPedestal), render=120(CUSTOM), opaque=false,cls=twilightforest.block.BlockTFTrophyPedestal

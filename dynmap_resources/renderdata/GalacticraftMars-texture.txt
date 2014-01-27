@@ -1,4 +1,4 @@
-# GalacticraftMars 2.0.7
+# GalacticraftMars 2.0.8
 version:1.6
 modname:GalacticraftMars
 
@@ -11,7 +11,7 @@ texturepath:assets/galacticraftmars/textures/blocks/
 texture:id=galacticraftcore/blank,filename=assets/galacticraftcore/textures/blocks/blank.png
 texture:id=galacticraftcore/machine_blank,filename=assets/galacticraftcore/textures/blocks/machine_blank.png
 texture:id=galacticraftcore/machine_input,filename=assets/galacticraftcore/textures/blocks/machine_input.png
-texture:id=galacticraftcore/treasure_front_single,filename=assets/galacticraftcore/textures/blocks/treasureChest.png
+texture:id=galacticraftcore/treasure_front_single,filename=assets/galacticraftcore/textures/blocks/treasure_front_single.png
 texture:id=galacticraftmars/blueEgg_0,filename=assets/galacticraftmars/textures/blocks/blueEgg_0.png
 texture:id=galacticraftmars/blueEgg_1,filename=assets/galacticraftmars/textures/blocks/blueEgg_1.png
 texture:id=galacticraftmars/bottom,filename=assets/galacticraftmars/textures/blocks/bottom.png
@@ -55,6 +55,7 @@ texture:id=galacticraftmars/yellowEgg_0,filename=assets/galacticraftmars/texture
 texture:id=galacticraftmars/yellowEgg_1,filename=assets/galacticraftmars/textures/blocks/yellowEgg_1.png
 
 
+
 # idBlockMars:* (tile.mars), render=0(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlock
 block:id=idBlockMars,data=0,stdrot=true,face0-5=0:galacticraftmars/copper
 block:id=idBlockMars,data=1,stdrot=true,face0-5=0:galacticraftmars/tin
@@ -68,13 +69,16 @@ block:id=idBlockMars,data=8,stdrot=true,face0-5=0:galacticraftmars/decoration_de
 block:id=idBlockMars,data=9,stdrot=true,face0-5=0:galacticraftmars/bottom
 block:id=idBlockMars,data=10,stdrot=true,face0-5=0:galacticraftcore/blank
 block:id=idBlockMars,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftmars/decoration_desh
+
 # idBlockBacterialSludge:* (tile.sludge), render=40(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSludge
 block:id=idBlockBacterialSludge,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftmars/sludge,face1-5=0:galacticraftmars/sludge_flow
-# idBlockVine:* (tile.cavernVines), render=72(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockVine
+
+# idBlockVine:* (tile.cavernVines), render=92(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockVine
 block:id=idBlockVine,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_0
 block:id=idBlockVine,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_1
 block:id=idBlockVine,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_2
-# idBlockRock:* (tile.slimelingEgg), render=73(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSlimelingEgg
+
+# idBlockRock:* (tile.slimelingEgg), render=93(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSlimelingEgg
 block:id=idBlockRock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
 block:id=idBlockRock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
 block:id=idBlockRock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
@@ -91,9 +95,11 @@ block:id=idBlockRock,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:gala
 block:id=idBlockRock,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
 block:id=idBlockRock,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
 block:id=idBlockRock,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
-# idBlockTreasureChestT2:* (tile.treasureT2), render=74(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockT2TreasureChest
+
+# idBlockTreasureChestT2:* (tile.treasureT2), render=94(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockT2TreasureChest
 block:id=idBlockTreasureChestT2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/treasure_front_single
-# idBlockMachine:* (tile.marsMachine), render=75(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockMachine
+
+# idBlockMachine:* (tile.marsMachine), render=95(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockMachine
 block:id=idBlockMachine,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/terraformer_0
 block:id=idBlockMachine,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/terraformer_0,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/terraformer_0
 block:id=idBlockMachine,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/terraformer_0,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/terraformer_0
@@ -104,9 +110,11 @@ block:id=idBlockMachine,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:ga
 block:id=idBlockMachine,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/launchController,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/launchController
 block:id=idBlockMachine,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/launchController,face5=0:galacticraftcore/machine_input
 block:id=idBlockMachine,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/launchController
+
 # idBlockCreeperEgg:* (tile.creeperEgg), render=27(DRAGONEGG), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockCreeperEgg
 block:id=idBlockCreeperEgg,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/creeperEgg
-# idBlockTintedGlassPane:* (tile.tintedGlassPane), render=76(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockTintedGlassPane
+
+# idBlockTintedGlassPane:* (tile.tintedGlassPane), render=96(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockTintedGlassPane
 block:id=idBlockTintedGlassPane,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_white
 block:id=idBlockTintedGlassPane,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_orange
 block:id=idBlockTintedGlassPane,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_magenta

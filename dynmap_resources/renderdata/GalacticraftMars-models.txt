@@ -1,4 +1,4 @@
-# GalacticraftMars 2.0.7
+# GalacticraftMars 2.0.8
 version:1.6
 modname:GalacticraftMars
 
@@ -23,9 +23,9 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 # idBlockBacterialSludge:* (tile.sludge), render=40(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSludge
-# idBlockVine:* (tile.cavernVines), render=72(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockVine
-# idBlockRock:* (tile.slimelingEgg), render=73(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSlimelingEgg
-# idBlockTreasureChestT2:* (tile.treasureT2), render=74(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockT2TreasureChest
-# idBlockMachine:* (tile.marsMachine), render=75(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockMachine
+# idBlockVine:* (tile.cavernVines), render=92(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockVine
+# idBlockRock:* (tile.slimelingEgg), render=93(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSlimelingEgg
+# idBlockTreasureChestT2:* (tile.treasureT2), render=94(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockT2TreasureChest
+# idBlockMachine:* (tile.marsMachine), render=95(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockMachine
 # idBlockCreeperEgg:* (tile.creeperEgg), render=27(DRAGONEGG), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockCreeperEgg
-# idBlockTintedGlassPane:* (tile.tintedGlassPane), render=76(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockTintedGlassPane
+# idBlockTintedGlassPane:* (tile.tintedGlassPane), render=96(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockTintedGlassPane

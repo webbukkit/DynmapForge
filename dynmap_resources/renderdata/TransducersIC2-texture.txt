@@ -1,0 +1,26 @@
+# TransducersIC2 1.1.0
+version:1.6
+modname:TransducersIC2
+
+var:item_highThroughputPowerPipe=0,pneumaticGenerator=0
+
+cfgfile:config/Transducers.cfg
+
+
+texturepath:assets/transducersic2/textures/blocks/
+texture:id=transducers/PTrans_EV,filename=assets/transducers/textures/blocks/PTrans_EV.png
+texture:id=transducers/PTrans_HV,filename=assets/transducers/textures/blocks/PTrans_HV.png
+texture:id=transducers/PTrans_LV,filename=assets/transducers/textures/blocks/PTrans_LV.png
+texture:id=transducers/PTrans_MV,filename=assets/transducers/textures/blocks/PTrans_MV.png
+texture:id=transducers/pipePowerWood_highThroughput,filename=assets/transducers/textures/blocks/pipePowerWood_highThroughput.png
+
+
+
+# pneumaticGenerator:* (pneumaticTransducer), render=0(STANDARD), opaque=true,cls=adamros.mods.transducers.block.BlockPneumaticTransducer
+block:id=pneumaticGenerator,data=0,stdrot=true,face0-5=0:transducers/PTrans_LV
+block:id=pneumaticGenerator,data=1,stdrot=true,face0-5=0:transducers/PTrans_MV
+block:id=pneumaticGenerator,data=2,stdrot=true,face0-5=0:transducers/PTrans_HV
+block:id=pneumaticGenerator,data=3,stdrot=true,face0-5=0:transducers/PTrans_EV
+# BuildCraft pipes
+addtotexturemap:mapid=PIPES,key:item_highThroughputPowerPipe=0:transducers/pipePowerWood_highThroughput
+
