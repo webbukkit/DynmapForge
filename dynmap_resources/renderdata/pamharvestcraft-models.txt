@@ -1,0 +1,266 @@
+# pamharvestcraft 1.0
+version:1.6
+modname:pamharvestcraft
+
+var:pamnutmegID=0,pamlimeID=0,pamplumsaplingID=0,candledeco14ID=0,pamspiceleafwildID=0,pampearID=0,pamcuttingboardID=0,pamapplesaplingID=0,candledeco13ID=0,pammangosaplingID=0
+var:candledeco9ID=0,pamcottonwildID=0,pampeppercornID=0,pamvanillabeansaplingID=0,pampeachID=0,pamcinnamonsaplingID=0,candledeco8ID=0,pamapiaryID=0,candledeco16ID=0,pamlemonID=0
+var:pamraspberrywildID=0,pamgrapewildID=0,pammangoID=0,pamlemonsaplingID=0,pampapayasaplingID=0,pambananaID=0,pamolivesaplingID=0,sinkID=0,candledeco15ID=0,pamblackberrywildID=0
+var:pambambooshootwildID=0,pamnutmegsaplingID=0,pamoliveID=0,pamcherrysaplingID=0,candledeco1ID=0,pambananasaplingID=0,pamcherryID=0,pamlimesaplingID=0,pamdragonfruitsaplingID=0,pamcoconutsaplingID=0
+var:pamwhitemushroomwildID=0,pamcactusfruitwildID=0,pamrhubarbwildID=0,pamsunflowerwildID=0,pamsaltID=0,pamstarfruitsaplingID=0,pamcranberrywildID=0,pamstarfruitID=0,pamcandleberrywildID=0,candledeco4ID=0
+var:pamstrawberrywildID=0,pampeachsaplingID=0,pamwalnutsaplingID=0,pampomegranatesaplingID=0,candledeco3ID=0,pamvanillabeanID=0,pamavocadoID=0,pamrutabagawildID=0,pamcoconutID=0,pampresserID=0
+var:candledeco2ID=0,candledeco5ID=0,pamkiwiwildID=0,pamwalnutID=0,pamavocadosaplingID=0,pamappleID=0,pamorangeID=0,pamseaweedwildID=0,candledeco11ID=0,pambeehiveID=0
+var:candledeco7ID=0,pamorangesaplingID=0,pampapayaID=0,candledeco12ID=0,candledeco6ID=0,pampomegranateID=0,pamblueberrywildID=0,candledeco10ID=0,pamcinnamonID=0,pampearsaplingID=0
+var:pampeppercornsaplingID=0,pamdragonfruitID=0,pamplumID=0
+
+cfgfile:config/pamharvestcraft.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+# pamcuttingboardID:* (tile.PamHarvestCraft:cuttingboard), render=0(STANDARD), opaque=false,cls=assets.pamharvestcraft.BlockPamCuttingBoard
+boxblock:id=pamcuttingboardID,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+# pambambooshootwildID:* (tile.PamHarvestCraft:bambooshootcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pambambooshootwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamdragonfruitID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamdragonfruitID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamdragonfruitsaplingID:* (tile.PamHarvestCraft:dragonfruitSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamdragonfruitsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcactusfruitwildID:* (tile.PamHarvestCraft:cactusfruitcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamcactusfruitwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamrhubarbwildID:* (tile.PamHarvestCraft:rhubarbcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamrhubarbwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamrutabagawildID:* (tile.PamHarvestCraft:rutabagacrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamrutabagawildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamwhitemushroomwildID:* (tile.PamHarvestCraft:whitemushroomcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamwhitemushroomwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcandleberrywildID:* (tile.PamHarvestCraft:candleberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamcandleberrywildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# candledeco1ID:* (tile.PamHarvestCraft:candle_0), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco1ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco1ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco1ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco1ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco1ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco1ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco2ID:* (tile.PamHarvestCraft:candle_1), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco2ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco2ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco2ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco2ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco2ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco2ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco3ID:* (tile.PamHarvestCraft:candle_2), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco3ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco3ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco3ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco3ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco3ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco3ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco4ID:* (tile.PamHarvestCraft:candle_3), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco4ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco4ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco4ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco4ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco4ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco4ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco5ID:* (tile.PamHarvestCraft:candle_4), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco5ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco5ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco5ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco5ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco5ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco5ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco6ID:* (tile.PamHarvestCraft:candle_5), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco6ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco6ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco6ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco6ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco6ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco6ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco7ID:* (tile.PamHarvestCraft:candle_6), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco7ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco7ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco7ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco7ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco7ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco7ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco8ID:* (tile.PamHarvestCraft:candle_7), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco8ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco8ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco8ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco8ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco8ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco8ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco9ID:* (tile.PamHarvestCraft:candle_8), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco9ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco9ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco9ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco9ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco9ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco9ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco10ID:* (tile.PamHarvestCraft:candle_9), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco10ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco10ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco10ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco10ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco10ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco10ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco11ID:* (tile.PamHarvestCraft:candle_10), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco11ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco11ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco11ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco11ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco11ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco11ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco12ID:* (tile.PamHarvestCraft:candle_11), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco12ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco12ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco12ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco12ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco12ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco12ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco13ID:* (tile.PamHarvestCraft:candle_12), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco13ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco13ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco13ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco13ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco13ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco13ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco14ID:* (tile.PamHarvestCraft:candle_13), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco14ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco14ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco14ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco14ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco14ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco14ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco15ID:* (tile.PamHarvestCraft:candle_14), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco15ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco15ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco15ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco15ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco15ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco15ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# candledeco16ID:* (tile.PamHarvestCraft:candle_15), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+patchblock:id=candledeco16ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+patchblock:id=candledeco16ID,patch0=TorchSide1#0,patch1=TorchSide2#0,patch2=TorchSide3#0,patch3=TorchSide4#0,patch4=TorchTopSlope@270#0,data=1
+patchblock:id=candledeco16ID,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,patch2=TorchSide3@180#0,patch3=TorchSide4@180#0,patch4=TorchTopSlope@90#0,data=2
+patchblock:id=candledeco16ID,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
+patchblock:id=candledeco16ID,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
+patchblock:id=candledeco16ID,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+# pamblackberrywildID:* (tile.PamHarvestCraft:blackberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamblackberrywildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamraspberrywildID:* (tile.PamHarvestCraft:raspberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamraspberrywildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcranberrywildID:* (tile.PamHarvestCraft:cranberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamcranberrywildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamkiwiwildID:* (tile.PamHarvestCraft:kiwicrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamkiwiwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamsunflowerwildID:* (tile.PamHarvestCraft:sunflowercrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamsunflowerwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamspiceleafwildID:* (tile.PamHarvestCraft:spiceleafcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamspiceleafwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamwalnutID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamwalnutID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamwalnutsaplingID:* (tile.PamHarvestCraft:walnutSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamwalnutsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampearID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pampearID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampearsaplingID:* (tile.PamHarvestCraft:pearSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pampearsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamplumID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamplumID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamplumsaplingID:* (tile.PamHarvestCraft:plumSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamplumsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamavocadoID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamavocadoID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamavocadosaplingID:* (tile.PamHarvestCraft:avocadoSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamavocadosaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamnutmegID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamnutmegID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamnutmegsaplingID:* (tile.PamHarvestCraft:nutmegSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamnutmegsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pambananaID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pambananaID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pambananasaplingID:* (tile.PamHarvestCraft:bananaSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pambananasaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcoconutID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamcoconutID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcoconutsaplingID:* (tile.PamHarvestCraft:coconutSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamcoconutsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampapayaID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pampapayaID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampapayasaplingID:* (tile.PamHarvestCraft:papayaSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pampapayasaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcinnamonsaplingID:* (tile.PamHarvestCraft:cinnamonSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamcinnamonsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamorangeID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamorangeID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamorangesaplingID:* (tile.PamHarvestCraft:orangeSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamorangesaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampeachID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pampeachID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampeachsaplingID:* (tile.PamHarvestCraft:peachSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pampeachsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamlimeID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamlimeID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamlimesaplingID:* (tile.PamHarvestCraft:limeSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamlimesaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pammangoID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pammangoID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pammangosaplingID:* (tile.PamHarvestCraft:mangoSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pammangosaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamoliveID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamoliveID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamolivesaplingID:* (tile.PamHarvestCraft:oliveSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamolivesaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampomegranateID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pampomegranateID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampomegranatesaplingID:* (tile.PamHarvestCraft:pomegranateSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pampomegranatesaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamvanillabeanID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamvanillabeanID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamvanillabeansaplingID:* (tile.PamHarvestCraft:vanillabeanSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamvanillabeansaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampeppercornID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pampeppercornID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pampeppercornsaplingID:* (tile.PamHarvestCraft:peppercornSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pampeppercornsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamstarfruitID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamstarfruitID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamstarfruitsaplingID:* (tile.PamHarvestCraft:starfruitSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamstarfruitsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamseaweedwildID:* (tile.PamHarvestCraft:seaweedcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamseaweedwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamstrawberrywildID:* (tile.PamHarvestCraft:strawberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamstrawberrywildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamappleID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamappleID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamapplesaplingID:* (tile.PamHarvestCraft:appleSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamapplesaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcottonwildID:* (tile.PamHarvestCraft:cottoncrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamcottonwildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamgrapewildID:* (tile.PamHarvestCraft:grapecrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamgrapewildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamlemonID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamlemonID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamlemonsaplingID:* (tile.PamHarvestCraft:lemonSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamlemonsaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamblueberrywildID:* (tile.PamHarvestCraft:blueberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+patchblock:id=pamblueberrywildID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcherryID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+patchblock:id=pamcherryID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# pamcherrysaplingID:* (tile.PamHarvestCraft:cherrySapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+patchblock:id=pamcherrysaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*

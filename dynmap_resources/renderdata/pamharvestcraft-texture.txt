@@ -1,0 +1,751 @@
+# pamharvestcraft 1.0
+version:1.6
+modname:pamharvestcraft
+
+var:pamnutmegID=0,pamlimeID=0,pamplumsaplingID=0,candledeco14ID=0,pamspiceleafwildID=0,pampearID=0,pamcuttingboardID=0,pamapplesaplingID=0,candledeco13ID=0,pammangosaplingID=0
+var:candledeco9ID=0,pamcottonwildID=0,pampeppercornID=0,pamvanillabeansaplingID=0,pampeachID=0,pamcinnamonsaplingID=0,candledeco8ID=0,pamapiaryID=0,candledeco16ID=0,pamlemonID=0
+var:pamraspberrywildID=0,pamgrapewildID=0,pammangoID=0,pamlemonsaplingID=0,pampapayasaplingID=0,pambananaID=0,pamolivesaplingID=0,sinkID=0,candledeco15ID=0,pamblackberrywildID=0
+var:pambambooshootwildID=0,pamnutmegsaplingID=0,pamoliveID=0,pamcherrysaplingID=0,candledeco1ID=0,pambananasaplingID=0,pamcherryID=0,pamlimesaplingID=0,pamdragonfruitsaplingID=0,pamcoconutsaplingID=0
+var:pamwhitemushroomwildID=0,pamcactusfruitwildID=0,pamrhubarbwildID=0,pamsunflowerwildID=0,pamsaltID=0,pamstarfruitsaplingID=0,pamcranberrywildID=0,pamstarfruitID=0,pamcandleberrywildID=0,candledeco4ID=0
+var:pamstrawberrywildID=0,pampeachsaplingID=0,pamwalnutsaplingID=0,pampomegranatesaplingID=0,candledeco3ID=0,pamvanillabeanID=0,pamavocadoID=0,pamrutabagawildID=0,pamcoconutID=0,pampresserID=0
+var:candledeco2ID=0,candledeco5ID=0,pamkiwiwildID=0,pamwalnutID=0,pamavocadosaplingID=0,pamappleID=0,pamorangeID=0,pamseaweedwildID=0,candledeco11ID=0,pambeehiveID=0
+var:candledeco7ID=0,pamorangesaplingID=0,pampapayaID=0,candledeco12ID=0,candledeco6ID=0,pampomegranateID=0,pamblueberrywildID=0,candledeco10ID=0,pamcinnamonID=0,pampearsaplingID=0
+var:pampeppercornsaplingID=0,pamdragonfruitID=0,pamplumID=0
+
+cfgfile:config/pamharvestcraft.cfg
+
+
+texturepath:assets/pamharvestcraft/textures/blocks/
+texture:id=PamHarvestCraft/apiaryside,filename=assets/pamharvestcraft/textures/blocks/apiaryside.png
+texture:id=PamHarvestCraft/apiarytop,filename=assets/pamharvestcraft/textures/blocks/apiarytop.png
+texture:id=PamHarvestCraft/appleSapling,filename=assets/pamharvestcraft/textures/blocks/appleSapling.png
+texture:id=PamHarvestCraft/apple_0,filename=assets/pamharvestcraft/textures/blocks/apple_0.png
+texture:id=PamHarvestCraft/apple_1,filename=assets/pamharvestcraft/textures/blocks/apple_1.png
+texture:id=PamHarvestCraft/apple_2,filename=assets/pamharvestcraft/textures/blocks/apple_2.png
+texture:id=PamHarvestCraft/avocadoSapling,filename=assets/pamharvestcraft/textures/blocks/avocadoSapling.png
+texture:id=PamHarvestCraft/avocado_0,filename=assets/pamharvestcraft/textures/blocks/avocado_0.png
+texture:id=PamHarvestCraft/avocado_1,filename=assets/pamharvestcraft/textures/blocks/avocado_1.png
+texture:id=PamHarvestCraft/avocado_2,filename=assets/pamharvestcraft/textures/blocks/avocado_2.png
+texture:id=PamHarvestCraft/bambooshootcrop_2,filename=assets/pamharvestcraft/textures/blocks/bambooshootcrop_2.png
+texture:id=PamHarvestCraft/bananaSapling,filename=assets/pamharvestcraft/textures/blocks/bananaSapling.png
+texture:id=PamHarvestCraft/banana_0,filename=assets/pamharvestcraft/textures/blocks/banana_0.png
+texture:id=PamHarvestCraft/banana_1,filename=assets/pamharvestcraft/textures/blocks/banana_1.png
+texture:id=PamHarvestCraft/banana_2,filename=assets/pamharvestcraft/textures/blocks/banana_2.png
+texture:id=PamHarvestCraft/beehivebottom,filename=assets/pamharvestcraft/textures/blocks/beehivebottom.png
+texture:id=PamHarvestCraft/beehiveside,filename=assets/pamharvestcraft/textures/blocks/beehiveside.png
+texture:id=PamHarvestCraft/beehivetop,filename=assets/pamharvestcraft/textures/blocks/beehivetop.png
+texture:id=PamHarvestCraft/blackberrycrop_2,filename=assets/pamharvestcraft/textures/blocks/blackberrycrop_2.png
+texture:id=PamHarvestCraft/blueberrycrop_2,filename=assets/pamharvestcraft/textures/blocks/blueberrycrop_2.png
+texture:id=PamHarvestCraft/cactusfruitcrop_2,filename=assets/pamharvestcraft/textures/blocks/cactusfruitcrop_2.png
+texture:id=PamHarvestCraft/candle_0,filename=assets/pamharvestcraft/textures/blocks/candle_0.png
+texture:id=PamHarvestCraft/candle_1,filename=assets/pamharvestcraft/textures/blocks/candle_1.png
+texture:id=PamHarvestCraft/candle_10,filename=assets/pamharvestcraft/textures/blocks/candle_10.png
+texture:id=PamHarvestCraft/candle_11,filename=assets/pamharvestcraft/textures/blocks/candle_11.png
+texture:id=PamHarvestCraft/candle_12,filename=assets/pamharvestcraft/textures/blocks/candle_12.png
+texture:id=PamHarvestCraft/candle_13,filename=assets/pamharvestcraft/textures/blocks/candle_13.png
+texture:id=PamHarvestCraft/candle_14,filename=assets/pamharvestcraft/textures/blocks/candle_14.png
+texture:id=PamHarvestCraft/candle_15,filename=assets/pamharvestcraft/textures/blocks/candle_15.png
+texture:id=PamHarvestCraft/candle_2,filename=assets/pamharvestcraft/textures/blocks/candle_2.png
+texture:id=PamHarvestCraft/candle_3,filename=assets/pamharvestcraft/textures/blocks/candle_3.png
+texture:id=PamHarvestCraft/candle_4,filename=assets/pamharvestcraft/textures/blocks/candle_4.png
+texture:id=PamHarvestCraft/candle_5,filename=assets/pamharvestcraft/textures/blocks/candle_5.png
+texture:id=PamHarvestCraft/candle_6,filename=assets/pamharvestcraft/textures/blocks/candle_6.png
+texture:id=PamHarvestCraft/candle_7,filename=assets/pamharvestcraft/textures/blocks/candle_7.png
+texture:id=PamHarvestCraft/candle_8,filename=assets/pamharvestcraft/textures/blocks/candle_8.png
+texture:id=PamHarvestCraft/candle_9,filename=assets/pamharvestcraft/textures/blocks/candle_9.png
+texture:id=PamHarvestCraft/candleberrycrop_2,filename=assets/pamharvestcraft/textures/blocks/candleberrycrop_2.png
+texture:id=PamHarvestCraft/cherrySapling,filename=assets/pamharvestcraft/textures/blocks/cherrySapling.png
+texture:id=PamHarvestCraft/cherry_0,filename=assets/pamharvestcraft/textures/blocks/cherry_0.png
+texture:id=PamHarvestCraft/cherry_1,filename=assets/pamharvestcraft/textures/blocks/cherry_1.png
+texture:id=PamHarvestCraft/cherry_2,filename=assets/pamharvestcraft/textures/blocks/cherry_2.png
+texture:id=PamHarvestCraft/cinnamonSapling,filename=assets/pamharvestcraft/textures/blocks/cinnamonSapling.png
+texture:id=PamHarvestCraft/cinnamon_0,filename=assets/pamharvestcraft/textures/blocks/cinnamon_0.png
+texture:id=PamHarvestCraft/cinnamon_1,filename=assets/pamharvestcraft/textures/blocks/cinnamon_1.png
+texture:id=PamHarvestCraft/cinnamon_2,filename=assets/pamharvestcraft/textures/blocks/cinnamon_2.png
+texture:id=PamHarvestCraft/coconutSapling,filename=assets/pamharvestcraft/textures/blocks/coconutSapling.png
+texture:id=PamHarvestCraft/coconut_0,filename=assets/pamharvestcraft/textures/blocks/coconut_0.png
+texture:id=PamHarvestCraft/coconut_1,filename=assets/pamharvestcraft/textures/blocks/coconut_1.png
+texture:id=PamHarvestCraft/coconut_2,filename=assets/pamharvestcraft/textures/blocks/coconut_2.png
+texture:id=PamHarvestCraft/cottoncrop_2,filename=assets/pamharvestcraft/textures/blocks/cottoncrop_2.png
+texture:id=PamHarvestCraft/cranberrycrop_2,filename=assets/pamharvestcraft/textures/blocks/cranberrycrop_2.png
+texture:id=PamHarvestCraft/cuttingboardsidebottom,filename=assets/pamharvestcraft/textures/blocks/cuttingboardsidebottom.png
+texture:id=PamHarvestCraft/cuttingboardtop,filename=assets/pamharvestcraft/textures/blocks/cuttingboardtop.png
+texture:id=PamHarvestCraft/dragonfruitSapling,filename=assets/pamharvestcraft/textures/blocks/dragonfruitSapling.png
+texture:id=PamHarvestCraft/dragonfruit_0,filename=assets/pamharvestcraft/textures/blocks/dragonfruit_0.png
+texture:id=PamHarvestCraft/dragonfruit_1,filename=assets/pamharvestcraft/textures/blocks/dragonfruit_1.png
+texture:id=PamHarvestCraft/dragonfruit_2,filename=assets/pamharvestcraft/textures/blocks/dragonfruit_2.png
+texture:id=PamHarvestCraft/grapecrop_2,filename=assets/pamharvestcraft/textures/blocks/grapecrop_2.png
+texture:id=PamHarvestCraft/kiwicrop_2,filename=assets/pamharvestcraft/textures/blocks/kiwicrop_2.png
+texture:id=PamHarvestCraft/lemonSapling,filename=assets/pamharvestcraft/textures/blocks/lemonSapling.png
+texture:id=PamHarvestCraft/lemon_0,filename=assets/pamharvestcraft/textures/blocks/lemon_0.png
+texture:id=PamHarvestCraft/lemon_1,filename=assets/pamharvestcraft/textures/blocks/lemon_1.png
+texture:id=PamHarvestCraft/lemon_2,filename=assets/pamharvestcraft/textures/blocks/lemon_2.png
+texture:id=PamHarvestCraft/limeSapling,filename=assets/pamharvestcraft/textures/blocks/limeSapling.png
+texture:id=PamHarvestCraft/lime_0,filename=assets/pamharvestcraft/textures/blocks/lime_0.png
+texture:id=PamHarvestCraft/lime_1,filename=assets/pamharvestcraft/textures/blocks/lime_1.png
+texture:id=PamHarvestCraft/lime_2,filename=assets/pamharvestcraft/textures/blocks/lime_2.png
+texture:id=PamHarvestCraft/mangoSapling,filename=assets/pamharvestcraft/textures/blocks/mangoSapling.png
+texture:id=PamHarvestCraft/mango_0,filename=assets/pamharvestcraft/textures/blocks/mango_0.png
+texture:id=PamHarvestCraft/mango_1,filename=assets/pamharvestcraft/textures/blocks/mango_1.png
+texture:id=PamHarvestCraft/mango_2,filename=assets/pamharvestcraft/textures/blocks/mango_2.png
+texture:id=PamHarvestCraft/nutmegSapling,filename=assets/pamharvestcraft/textures/blocks/nutmegSapling.png
+texture:id=PamHarvestCraft/nutmeg_0,filename=assets/pamharvestcraft/textures/blocks/nutmeg_0.png
+texture:id=PamHarvestCraft/nutmeg_1,filename=assets/pamharvestcraft/textures/blocks/nutmeg_1.png
+texture:id=PamHarvestCraft/nutmeg_2,filename=assets/pamharvestcraft/textures/blocks/nutmeg_2.png
+texture:id=PamHarvestCraft/oliveSapling,filename=assets/pamharvestcraft/textures/blocks/oliveSapling.png
+texture:id=PamHarvestCraft/olive_0,filename=assets/pamharvestcraft/textures/blocks/olive_0.png
+texture:id=PamHarvestCraft/olive_1,filename=assets/pamharvestcraft/textures/blocks/olive_1.png
+texture:id=PamHarvestCraft/olive_2,filename=assets/pamharvestcraft/textures/blocks/olive_2.png
+texture:id=PamHarvestCraft/orangeSapling,filename=assets/pamharvestcraft/textures/blocks/orangeSapling.png
+texture:id=PamHarvestCraft/orange_0,filename=assets/pamharvestcraft/textures/blocks/orange_0.png
+texture:id=PamHarvestCraft/orange_1,filename=assets/pamharvestcraft/textures/blocks/orange_1.png
+texture:id=PamHarvestCraft/orange_2,filename=assets/pamharvestcraft/textures/blocks/orange_2.png
+texture:id=PamHarvestCraft/papayaSapling,filename=assets/pamharvestcraft/textures/blocks/papayaSapling.png
+texture:id=PamHarvestCraft/papaya_0,filename=assets/pamharvestcraft/textures/blocks/papaya_0.png
+texture:id=PamHarvestCraft/papaya_1,filename=assets/pamharvestcraft/textures/blocks/papaya_1.png
+texture:id=PamHarvestCraft/papaya_2,filename=assets/pamharvestcraft/textures/blocks/papaya_2.png
+texture:id=PamHarvestCraft/peachSapling,filename=assets/pamharvestcraft/textures/blocks/peachSapling.png
+texture:id=PamHarvestCraft/peach_0,filename=assets/pamharvestcraft/textures/blocks/peach_0.png
+texture:id=PamHarvestCraft/peach_1,filename=assets/pamharvestcraft/textures/blocks/peach_1.png
+texture:id=PamHarvestCraft/peach_2,filename=assets/pamharvestcraft/textures/blocks/peach_2.png
+texture:id=PamHarvestCraft/pearSapling,filename=assets/pamharvestcraft/textures/blocks/pearSapling.png
+texture:id=PamHarvestCraft/pear_0,filename=assets/pamharvestcraft/textures/blocks/pear_0.png
+texture:id=PamHarvestCraft/pear_1,filename=assets/pamharvestcraft/textures/blocks/pear_1.png
+texture:id=PamHarvestCraft/pear_2,filename=assets/pamharvestcraft/textures/blocks/pear_2.png
+texture:id=PamHarvestCraft/peppercornSapling,filename=assets/pamharvestcraft/textures/blocks/peppercornSapling.png
+texture:id=PamHarvestCraft/peppercorn_0,filename=assets/pamharvestcraft/textures/blocks/peppercorn_0.png
+texture:id=PamHarvestCraft/peppercorn_1,filename=assets/pamharvestcraft/textures/blocks/peppercorn_1.png
+texture:id=PamHarvestCraft/peppercorn_2,filename=assets/pamharvestcraft/textures/blocks/peppercorn_2.png
+texture:id=PamHarvestCraft/plumSapling,filename=assets/pamharvestcraft/textures/blocks/plumSapling.png
+texture:id=PamHarvestCraft/plum_0,filename=assets/pamharvestcraft/textures/blocks/plum_0.png
+texture:id=PamHarvestCraft/plum_1,filename=assets/pamharvestcraft/textures/blocks/plum_1.png
+texture:id=PamHarvestCraft/plum_2,filename=assets/pamharvestcraft/textures/blocks/plum_2.png
+texture:id=PamHarvestCraft/pomegranateSapling,filename=assets/pamharvestcraft/textures/blocks/pomegranateSapling.png
+texture:id=PamHarvestCraft/pomegranate_0,filename=assets/pamharvestcraft/textures/blocks/pomegranate_0.png
+texture:id=PamHarvestCraft/pomegranate_1,filename=assets/pamharvestcraft/textures/blocks/pomegranate_1.png
+texture:id=PamHarvestCraft/pomegranate_2,filename=assets/pamharvestcraft/textures/blocks/pomegranate_2.png
+texture:id=PamHarvestCraft/presserfront,filename=assets/pamharvestcraft/textures/blocks/presserfront.png
+texture:id=PamHarvestCraft/presserside,filename=assets/pamharvestcraft/textures/blocks/presserside.png
+texture:id=PamHarvestCraft/pressertop,filename=assets/pamharvestcraft/textures/blocks/pressertop.png
+texture:id=PamHarvestCraft/raspberrycrop_2,filename=assets/pamharvestcraft/textures/blocks/raspberrycrop_2.png
+texture:id=PamHarvestCraft/rhubarbcrop_2,filename=assets/pamharvestcraft/textures/blocks/rhubarbcrop_2.png
+texture:id=PamHarvestCraft/rutabagacrop_2,filename=assets/pamharvestcraft/textures/blocks/rutabagacrop_2.png
+texture:id=PamHarvestCraft/salt,filename=assets/pamharvestcraft/textures/blocks/salt.png
+texture:id=PamHarvestCraft/seaweedcrop_2,filename=assets/pamharvestcraft/textures/blocks/seaweedcrop_2.png
+texture:id=PamHarvestCraft/sinkbottom_0,filename=assets/pamharvestcraft/textures/blocks/sinkbottom_0.png
+texture:id=PamHarvestCraft/sinkbottom_1,filename=assets/pamharvestcraft/textures/blocks/sinkbottom_1.png
+texture:id=PamHarvestCraft/sinkbottom_2,filename=assets/pamharvestcraft/textures/blocks/sinkbottom_2.png
+texture:id=PamHarvestCraft/sinkbottom_3,filename=assets/pamharvestcraft/textures/blocks/sinkbottom_3.png
+texture:id=PamHarvestCraft/sinkside_0,filename=assets/pamharvestcraft/textures/blocks/sinkside_0.png
+texture:id=PamHarvestCraft/sinkside_1,filename=assets/pamharvestcraft/textures/blocks/sinkside_1.png
+texture:id=PamHarvestCraft/sinkside_2,filename=assets/pamharvestcraft/textures/blocks/sinkside_2.png
+texture:id=PamHarvestCraft/sinkside_3,filename=assets/pamharvestcraft/textures/blocks/sinkside_3.png
+texture:id=PamHarvestCraft/sinktop_0,filename=assets/pamharvestcraft/textures/blocks/sinktop_0.png
+texture:id=PamHarvestCraft/sinktop_1,filename=assets/pamharvestcraft/textures/blocks/sinktop_1.png
+texture:id=PamHarvestCraft/sinktop_2,filename=assets/pamharvestcraft/textures/blocks/sinktop_2.png
+texture:id=PamHarvestCraft/sinktop_3,filename=assets/pamharvestcraft/textures/blocks/sinktop_3.png
+texture:id=PamHarvestCraft/spiceleafcrop_2,filename=assets/pamharvestcraft/textures/blocks/spiceleafcrop_2.png
+texture:id=PamHarvestCraft/starfruitSapling,filename=assets/pamharvestcraft/textures/blocks/starfruitSapling.png
+texture:id=PamHarvestCraft/starfruit_0,filename=assets/pamharvestcraft/textures/blocks/starfruit_0.png
+texture:id=PamHarvestCraft/starfruit_1,filename=assets/pamharvestcraft/textures/blocks/starfruit_1.png
+texture:id=PamHarvestCraft/starfruit_2,filename=assets/pamharvestcraft/textures/blocks/starfruit_2.png
+texture:id=PamHarvestCraft/strawberrycrop_2,filename=assets/pamharvestcraft/textures/blocks/strawberrycrop_2.png
+texture:id=PamHarvestCraft/sunflowercrop_2,filename=assets/pamharvestcraft/textures/blocks/sunflowercrop_2.png
+texture:id=PamHarvestCraft/vanillabeanSapling,filename=assets/pamharvestcraft/textures/blocks/vanillabeanSapling.png
+texture:id=PamHarvestCraft/vanillabean_0,filename=assets/pamharvestcraft/textures/blocks/vanillabean_0.png
+texture:id=PamHarvestCraft/vanillabean_1,filename=assets/pamharvestcraft/textures/blocks/vanillabean_1.png
+texture:id=PamHarvestCraft/vanillabean_2,filename=assets/pamharvestcraft/textures/blocks/vanillabean_2.png
+texture:id=PamHarvestCraft/walnutSapling,filename=assets/pamharvestcraft/textures/blocks/walnutSapling.png
+texture:id=PamHarvestCraft/walnut_0,filename=assets/pamharvestcraft/textures/blocks/walnut_0.png
+texture:id=PamHarvestCraft/walnut_1,filename=assets/pamharvestcraft/textures/blocks/walnut_1.png
+texture:id=PamHarvestCraft/walnut_2,filename=assets/pamharvestcraft/textures/blocks/walnut_2.png
+texture:id=PamHarvestCraft/whitemushroomcrop_2,filename=assets/pamharvestcraft/textures/blocks/whitemushroomcrop_2.png
+
+
+
+# pamcuttingboardID:* (tile.PamHarvestCraft:cuttingboard), render=0(STANDARD), opaque=false,cls=assets.pamharvestcraft.BlockPamCuttingBoard
+block:id=pamcuttingboardID,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:PamHarvestCraft/cuttingboardsidebottom,face1=0:PamHarvestCraft/cuttingboardtop,face2-5=0:PamHarvestCraft/cuttingboardsidebottom
+
+# pambambooshootwildID:* (tile.PamHarvestCraft:bambooshootcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pambambooshootwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/bambooshootcrop_2
+
+# pambeehiveID:* (tile.PamHarvestCraft:beehive), render=0(STANDARD), opaque=true,cls=assets.pamharvestcraft.BlockPamBeehive
+block:id=pambeehiveID,data=*,stdrot=true,face0=0:PamHarvestCraft/beehivebottom,face1=0:PamHarvestCraft/beehivetop,face2-5=0:PamHarvestCraft/beehiveside
+
+# pamapiaryID:* (tile.PamHarvestCraft:apiary), render=0(STANDARD), opaque=true,cls=assets.pamharvestcraft.BlockPamApiary
+block:id=pamapiaryID,data=*,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_0,face1=0:PamHarvestCraft/apiarytop,face2-5=0:PamHarvestCraft/apiaryside
+
+# pampresserID:* (tile.PamHarvestCraft:presser), render=0(STANDARD), opaque=true,cls=assets.pamharvestcraft.BlockPamPresser
+block:id=pampresserID,data=0,data=1,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_0,face1=0:PamHarvestCraft/pressertop,face2-5=0:PamHarvestCraft/presserside
+block:id=pampresserID,data=2,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_0,face1=0:PamHarvestCraft/pressertop,face2=0:PamHarvestCraft/presserfront,face3-5=0:PamHarvestCraft/presserside
+block:id=pampresserID,data=3,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_0,face1=0:PamHarvestCraft/pressertop,face2=0:PamHarvestCraft/presserside,face3=0:PamHarvestCraft/presserfront,face4-5=0:PamHarvestCraft/presserside
+block:id=pampresserID,data=4,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_0,face1=0:PamHarvestCraft/pressertop,face2-3=0:PamHarvestCraft/presserside,face4=0:PamHarvestCraft/presserfront,face5=0:PamHarvestCraft/presserside
+block:id=pampresserID,data=5,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_0,face1=0:PamHarvestCraft/pressertop,face2-4=0:PamHarvestCraft/presserside,face5=0:PamHarvestCraft/presserfront
+block:id=pampresserID,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_0,face1=0:PamHarvestCraft/pressertop,face2-5=0:PamHarvestCraft/presserside
+
+# pamdragonfruitID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamdragonfruitID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_0
+block:id=pamdragonfruitID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_1
+block:id=pamdragonfruitID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_2
+block:id=pamdragonfruitID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_0
+block:id=pamdragonfruitID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_1
+block:id=pamdragonfruitID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_2
+block:id=pamdragonfruitID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_0
+block:id=pamdragonfruitID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_1
+block:id=pamdragonfruitID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_2
+block:id=pamdragonfruitID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_0
+block:id=pamdragonfruitID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_1
+block:id=pamdragonfruitID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_2
+block:id=pamdragonfruitID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_0
+block:id=pamdragonfruitID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_1
+block:id=pamdragonfruitID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_2
+block:id=pamdragonfruitID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruit_0
+
+# pamdragonfruitsaplingID:* (tile.PamHarvestCraft:dragonfruitSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamdragonfruitsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/dragonfruitSapling
+
+# pamcactusfruitwildID:* (tile.PamHarvestCraft:cactusfruitcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamcactusfruitwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cactusfruitcrop_2
+
+# pamrhubarbwildID:* (tile.PamHarvestCraft:rhubarbcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamrhubarbwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/rhubarbcrop_2
+
+# pamrutabagawildID:* (tile.PamHarvestCraft:rutabagacrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamrutabagawildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/rutabagacrop_2
+
+# pamwhitemushroomwildID:* (tile.PamHarvestCraft:whitemushroomcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamwhitemushroomwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/whitemushroomcrop_2
+
+# pamsaltID:* (tile.PamHarvestCraft:salt), render=0(STANDARD), opaque=true,cls=assets.pamharvestcraft.BlockPamSalt
+block:id=pamsaltID,data=*,stdrot=true,face0-5=0:PamHarvestCraft/salt
+
+# pamcandleberrywildID:* (tile.PamHarvestCraft:candleberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamcandleberrywildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candleberrycrop_2
+
+# candledeco1ID:* (tile.PamHarvestCraft:candle_0), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco1ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_0
+
+# candledeco2ID:* (tile.PamHarvestCraft:candle_1), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco2ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_1
+
+# candledeco3ID:* (tile.PamHarvestCraft:candle_2), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco3ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_2
+
+# candledeco4ID:* (tile.PamHarvestCraft:candle_3), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco4ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_3
+
+# candledeco5ID:* (tile.PamHarvestCraft:candle_4), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco5ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_4
+
+# candledeco6ID:* (tile.PamHarvestCraft:candle_5), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco6ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_5
+
+# candledeco7ID:* (tile.PamHarvestCraft:candle_6), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco7ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_6
+
+# candledeco8ID:* (tile.PamHarvestCraft:candle_7), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco8ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_7
+
+# candledeco9ID:* (tile.PamHarvestCraft:candle_8), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco9ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_8
+
+# candledeco10ID:* (tile.PamHarvestCraft:candle_9), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco10ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_9
+
+# candledeco11ID:* (tile.PamHarvestCraft:candle_10), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco11ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_10
+
+# candledeco12ID:* (tile.PamHarvestCraft:candle_11), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco12ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_11
+
+# candledeco13ID:* (tile.PamHarvestCraft:candle_12), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco13ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_12
+
+# candledeco14ID:* (tile.PamHarvestCraft:candle_13), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco14ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_13
+
+# candledeco15ID:* (tile.PamHarvestCraft:candle_14), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco15ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_14
+
+# candledeco16ID:* (tile.PamHarvestCraft:candle_15), render=2(TORCH), opaque=false,cls=assets.pamharvestcraft.BlockPamCandleDeco
+block:id=candledeco16ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/candle_15
+
+# pamblackberrywildID:* (tile.PamHarvestCraft:blackberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamblackberrywildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/blackberrycrop_2
+
+# pamraspberrywildID:* (tile.PamHarvestCraft:raspberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamraspberrywildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/raspberrycrop_2
+
+# pamcranberrywildID:* (tile.PamHarvestCraft:cranberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamcranberrywildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cranberrycrop_2
+
+# pamkiwiwildID:* (tile.PamHarvestCraft:kiwicrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamkiwiwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/kiwicrop_2
+
+# pamsunflowerwildID:* (tile.PamHarvestCraft:sunflowercrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamsunflowerwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/sunflowercrop_2
+
+# pamspiceleafwildID:* (tile.PamHarvestCraft:spiceleafcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamspiceleafwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/spiceleafcrop_2
+
+# sinkID:* (tile.null), render=0(STANDARD), opaque=true,cls=assets.pamharvestcraft.BlockPamSinkBarrel
+block:id=sinkID,data=0,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_0,face1=0:PamHarvestCraft/sinktop_0,face2-5=0:PamHarvestCraft/sinkside_0
+block:id=sinkID,data=1,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_1,face1=0:PamHarvestCraft/sinktop_1,face2-5=0:PamHarvestCraft/sinkside_1
+block:id=sinkID,data=2,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_2,face1=0:PamHarvestCraft/sinktop_2,face2-5=0:PamHarvestCraft/sinkside_2
+block:id=sinkID,data=3,stdrot=true,face0=0:PamHarvestCraft/sinkbottom_3,face1=0:PamHarvestCraft/sinktop_3,face2-5=0:PamHarvestCraft/sinkside_3
+
+# pamwalnutID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamwalnutID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_0
+block:id=pamwalnutID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_1
+block:id=pamwalnutID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_2
+block:id=pamwalnutID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_0
+block:id=pamwalnutID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_1
+block:id=pamwalnutID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_2
+block:id=pamwalnutID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_0
+block:id=pamwalnutID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_1
+block:id=pamwalnutID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_2
+block:id=pamwalnutID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_0
+block:id=pamwalnutID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_1
+block:id=pamwalnutID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_2
+block:id=pamwalnutID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_0
+block:id=pamwalnutID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_1
+block:id=pamwalnutID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_2
+block:id=pamwalnutID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnut_0
+
+# pamwalnutsaplingID:* (tile.PamHarvestCraft:walnutSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamwalnutsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/walnutSapling
+
+# pampearID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pampearID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_0
+block:id=pampearID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_1
+block:id=pampearID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_2
+block:id=pampearID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_0
+block:id=pampearID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_1
+block:id=pampearID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_2
+block:id=pampearID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_0
+block:id=pampearID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_1
+block:id=pampearID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_2
+block:id=pampearID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_0
+block:id=pampearID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_1
+block:id=pampearID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_2
+block:id=pampearID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_0
+block:id=pampearID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_1
+block:id=pampearID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_2
+block:id=pampearID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pear_0
+
+# pampearsaplingID:* (tile.PamHarvestCraft:pearSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pampearsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pearSapling
+
+# pamplumID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamplumID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_0
+block:id=pamplumID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_1
+block:id=pamplumID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_2
+block:id=pamplumID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_0
+block:id=pamplumID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_1
+block:id=pamplumID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_2
+block:id=pamplumID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_0
+block:id=pamplumID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_1
+block:id=pamplumID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_2
+block:id=pamplumID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_0
+block:id=pamplumID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_1
+block:id=pamplumID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_2
+block:id=pamplumID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_0
+block:id=pamplumID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_1
+block:id=pamplumID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_2
+block:id=pamplumID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plum_0
+
+# pamplumsaplingID:* (tile.PamHarvestCraft:plumSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamplumsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/plumSapling
+
+# pamavocadoID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamavocadoID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_0
+block:id=pamavocadoID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_1
+block:id=pamavocadoID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_2
+block:id=pamavocadoID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_0
+block:id=pamavocadoID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_1
+block:id=pamavocadoID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_2
+block:id=pamavocadoID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_0
+block:id=pamavocadoID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_1
+block:id=pamavocadoID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_2
+block:id=pamavocadoID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_0
+block:id=pamavocadoID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_1
+block:id=pamavocadoID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_2
+block:id=pamavocadoID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_0
+block:id=pamavocadoID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_1
+block:id=pamavocadoID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_2
+block:id=pamavocadoID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocado_0
+
+# pamavocadosaplingID:* (tile.PamHarvestCraft:avocadoSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamavocadosaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/avocadoSapling
+
+# pamnutmegID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamnutmegID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_0
+block:id=pamnutmegID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_1
+block:id=pamnutmegID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_2
+block:id=pamnutmegID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_0
+block:id=pamnutmegID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_1
+block:id=pamnutmegID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_2
+block:id=pamnutmegID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_0
+block:id=pamnutmegID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_1
+block:id=pamnutmegID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_2
+block:id=pamnutmegID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_0
+block:id=pamnutmegID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_1
+block:id=pamnutmegID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_2
+block:id=pamnutmegID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_0
+block:id=pamnutmegID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_1
+block:id=pamnutmegID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_2
+block:id=pamnutmegID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmeg_0
+
+# pamnutmegsaplingID:* (tile.PamHarvestCraft:nutmegSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamnutmegsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/nutmegSapling
+
+# pambananaID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pambananaID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_0
+block:id=pambananaID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_1
+block:id=pambananaID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_2
+block:id=pambananaID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_0
+block:id=pambananaID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_1
+block:id=pambananaID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_2
+block:id=pambananaID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_0
+block:id=pambananaID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_1
+block:id=pambananaID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_2
+block:id=pambananaID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_0
+block:id=pambananaID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_1
+block:id=pambananaID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_2
+block:id=pambananaID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_0
+block:id=pambananaID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_1
+block:id=pambananaID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_2
+block:id=pambananaID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/banana_0
+
+# pambananasaplingID:* (tile.PamHarvestCraft:bananaSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pambananasaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/bananaSapling
+
+# pamcoconutID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamcoconutID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_0
+block:id=pamcoconutID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_1
+block:id=pamcoconutID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_2
+block:id=pamcoconutID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_0
+block:id=pamcoconutID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_1
+block:id=pamcoconutID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_2
+block:id=pamcoconutID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_0
+block:id=pamcoconutID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_1
+block:id=pamcoconutID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_2
+block:id=pamcoconutID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_0
+block:id=pamcoconutID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_1
+block:id=pamcoconutID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_2
+block:id=pamcoconutID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_0
+block:id=pamcoconutID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_1
+block:id=pamcoconutID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_2
+block:id=pamcoconutID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconut_0
+
+# pamcoconutsaplingID:* (tile.PamHarvestCraft:coconutSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamcoconutsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/coconutSapling
+
+# pampapayaID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pampapayaID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_0
+block:id=pampapayaID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_1
+block:id=pampapayaID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_2
+block:id=pampapayaID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_0
+block:id=pampapayaID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_1
+block:id=pampapayaID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_2
+block:id=pampapayaID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_0
+block:id=pampapayaID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_1
+block:id=pampapayaID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_2
+block:id=pampapayaID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_0
+block:id=pampapayaID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_1
+block:id=pampapayaID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_2
+block:id=pampapayaID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_0
+block:id=pampapayaID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_1
+block:id=pampapayaID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_2
+block:id=pampapayaID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papaya_0
+
+# pampapayasaplingID:* (tile.PamHarvestCraft:papayaSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pampapayasaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/papayaSapling
+
+# pamcinnamonID:* (tile.null), render=0(STANDARD), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamcinnamonID,data=0,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_0
+block:id=pamcinnamonID,data=1,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_1
+block:id=pamcinnamonID,data=2,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_2
+block:id=pamcinnamonID,data=3,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_0
+block:id=pamcinnamonID,data=4,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_1
+block:id=pamcinnamonID,data=5,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_2
+block:id=pamcinnamonID,data=6,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_0
+block:id=pamcinnamonID,data=7,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_1
+block:id=pamcinnamonID,data=8,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_2
+block:id=pamcinnamonID,data=9,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_0
+block:id=pamcinnamonID,data=10,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_1
+block:id=pamcinnamonID,data=11,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_2
+block:id=pamcinnamonID,data=12,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_0
+block:id=pamcinnamonID,data=13,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_1
+block:id=pamcinnamonID,data=14,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_2
+block:id=pamcinnamonID,data=15,stdrot=true,face0-5=0:PamHarvestCraft/cinnamon_0
+
+# pamcinnamonsaplingID:* (tile.PamHarvestCraft:cinnamonSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamcinnamonsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cinnamonSapling
+
+# pamorangeID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamorangeID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_0
+block:id=pamorangeID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_1
+block:id=pamorangeID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_2
+block:id=pamorangeID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_0
+block:id=pamorangeID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_1
+block:id=pamorangeID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_2
+block:id=pamorangeID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_0
+block:id=pamorangeID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_1
+block:id=pamorangeID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_2
+block:id=pamorangeID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_0
+block:id=pamorangeID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_1
+block:id=pamorangeID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_2
+block:id=pamorangeID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_0
+block:id=pamorangeID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_1
+block:id=pamorangeID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_2
+block:id=pamorangeID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orange_0
+
+# pamorangesaplingID:* (tile.PamHarvestCraft:orangeSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamorangesaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/orangeSapling
+
+# pampeachID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pampeachID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_0
+block:id=pampeachID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_1
+block:id=pampeachID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_2
+block:id=pampeachID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_0
+block:id=pampeachID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_1
+block:id=pampeachID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_2
+block:id=pampeachID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_0
+block:id=pampeachID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_1
+block:id=pampeachID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_2
+block:id=pampeachID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_0
+block:id=pampeachID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_1
+block:id=pampeachID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_2
+block:id=pampeachID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_0
+block:id=pampeachID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_1
+block:id=pampeachID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_2
+block:id=pampeachID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peach_0
+
+# pampeachsaplingID:* (tile.PamHarvestCraft:peachSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pampeachsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peachSapling
+
+# pamlimeID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamlimeID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_0
+block:id=pamlimeID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_1
+block:id=pamlimeID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_2
+block:id=pamlimeID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_0
+block:id=pamlimeID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_1
+block:id=pamlimeID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_2
+block:id=pamlimeID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_0
+block:id=pamlimeID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_1
+block:id=pamlimeID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_2
+block:id=pamlimeID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_0
+block:id=pamlimeID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_1
+block:id=pamlimeID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_2
+block:id=pamlimeID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_0
+block:id=pamlimeID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_1
+block:id=pamlimeID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_2
+block:id=pamlimeID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lime_0
+
+# pamlimesaplingID:* (tile.PamHarvestCraft:limeSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamlimesaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/limeSapling
+
+# pammangoID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pammangoID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_0
+block:id=pammangoID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_1
+block:id=pammangoID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_2
+block:id=pammangoID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_0
+block:id=pammangoID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_1
+block:id=pammangoID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_2
+block:id=pammangoID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_0
+block:id=pammangoID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_1
+block:id=pammangoID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_2
+block:id=pammangoID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_0
+block:id=pammangoID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_1
+block:id=pammangoID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_2
+block:id=pammangoID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_0
+block:id=pammangoID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_1
+block:id=pammangoID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_2
+block:id=pammangoID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mango_0
+
+# pammangosaplingID:* (tile.PamHarvestCraft:mangoSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pammangosaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/mangoSapling
+
+# pamoliveID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamoliveID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_0
+block:id=pamoliveID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_1
+block:id=pamoliveID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_2
+block:id=pamoliveID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_0
+block:id=pamoliveID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_1
+block:id=pamoliveID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_2
+block:id=pamoliveID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_0
+block:id=pamoliveID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_1
+block:id=pamoliveID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_2
+block:id=pamoliveID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_0
+block:id=pamoliveID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_1
+block:id=pamoliveID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_2
+block:id=pamoliveID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_0
+block:id=pamoliveID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_1
+block:id=pamoliveID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_2
+block:id=pamoliveID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/olive_0
+
+# pamolivesaplingID:* (tile.PamHarvestCraft:oliveSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamolivesaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/oliveSapling
+
+# pampomegranateID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pampomegranateID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_0
+block:id=pampomegranateID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_1
+block:id=pampomegranateID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_2
+block:id=pampomegranateID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_0
+block:id=pampomegranateID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_1
+block:id=pampomegranateID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_2
+block:id=pampomegranateID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_0
+block:id=pampomegranateID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_1
+block:id=pampomegranateID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_2
+block:id=pampomegranateID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_0
+block:id=pampomegranateID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_1
+block:id=pampomegranateID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_2
+block:id=pampomegranateID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_0
+block:id=pampomegranateID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_1
+block:id=pampomegranateID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_2
+block:id=pampomegranateID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranate_0
+
+# pampomegranatesaplingID:* (tile.PamHarvestCraft:pomegranateSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pampomegranatesaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/pomegranateSapling
+
+# pamvanillabeanID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamvanillabeanID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_0
+block:id=pamvanillabeanID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_1
+block:id=pamvanillabeanID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_2
+block:id=pamvanillabeanID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_0
+block:id=pamvanillabeanID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_1
+block:id=pamvanillabeanID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_2
+block:id=pamvanillabeanID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_0
+block:id=pamvanillabeanID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_1
+block:id=pamvanillabeanID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_2
+block:id=pamvanillabeanID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_0
+block:id=pamvanillabeanID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_1
+block:id=pamvanillabeanID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_2
+block:id=pamvanillabeanID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_0
+block:id=pamvanillabeanID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_1
+block:id=pamvanillabeanID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_2
+block:id=pamvanillabeanID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabean_0
+
+# pamvanillabeansaplingID:* (tile.PamHarvestCraft:vanillabeanSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamvanillabeansaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/vanillabeanSapling
+
+# pampeppercornID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pampeppercornID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_0
+block:id=pampeppercornID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_1
+block:id=pampeppercornID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_2
+block:id=pampeppercornID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_0
+block:id=pampeppercornID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_1
+block:id=pampeppercornID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_2
+block:id=pampeppercornID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_0
+block:id=pampeppercornID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_1
+block:id=pampeppercornID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_2
+block:id=pampeppercornID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_0
+block:id=pampeppercornID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_1
+block:id=pampeppercornID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_2
+block:id=pampeppercornID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_0
+block:id=pampeppercornID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_1
+block:id=pampeppercornID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_2
+block:id=pampeppercornID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercorn_0
+
+# pampeppercornsaplingID:* (tile.PamHarvestCraft:peppercornSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pampeppercornsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/peppercornSapling
+
+# pamstarfruitID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamstarfruitID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_0
+block:id=pamstarfruitID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_1
+block:id=pamstarfruitID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_2
+block:id=pamstarfruitID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_0
+block:id=pamstarfruitID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_1
+block:id=pamstarfruitID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_2
+block:id=pamstarfruitID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_0
+block:id=pamstarfruitID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_1
+block:id=pamstarfruitID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_2
+block:id=pamstarfruitID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_0
+block:id=pamstarfruitID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_1
+block:id=pamstarfruitID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_2
+block:id=pamstarfruitID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_0
+block:id=pamstarfruitID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_1
+block:id=pamstarfruitID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_2
+block:id=pamstarfruitID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruit_0
+
+# pamstarfruitsaplingID:* (tile.PamHarvestCraft:starfruitSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamstarfruitsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/starfruitSapling
+
+# pamseaweedwildID:* (tile.PamHarvestCraft:seaweedcrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamseaweedwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/seaweedcrop_2
+
+# pamstrawberrywildID:* (tile.PamHarvestCraft:strawberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamstrawberrywildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/strawberrycrop_2
+
+# pamappleID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamappleID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_0
+block:id=pamappleID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_1
+block:id=pamappleID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_2
+block:id=pamappleID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_0
+block:id=pamappleID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_1
+block:id=pamappleID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_2
+block:id=pamappleID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_0
+block:id=pamappleID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_1
+block:id=pamappleID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_2
+block:id=pamappleID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_0
+block:id=pamappleID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_1
+block:id=pamappleID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_2
+block:id=pamappleID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_0
+block:id=pamappleID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_1
+block:id=pamappleID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_2
+block:id=pamappleID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/apple_0
+
+# pamapplesaplingID:* (tile.PamHarvestCraft:appleSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamapplesaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/appleSapling
+
+# pamcottonwildID:* (tile.PamHarvestCraft:cottoncrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamcottonwildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cottoncrop_2
+
+# pamgrapewildID:* (tile.PamHarvestCraft:grapecrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamgrapewildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/grapecrop_2
+
+# pamlemonID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamlemonID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_0
+block:id=pamlemonID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_1
+block:id=pamlemonID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_2
+block:id=pamlemonID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_0
+block:id=pamlemonID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_1
+block:id=pamlemonID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_2
+block:id=pamlemonID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_0
+block:id=pamlemonID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_1
+block:id=pamlemonID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_2
+block:id=pamlemonID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_0
+block:id=pamlemonID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_1
+block:id=pamlemonID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_2
+block:id=pamlemonID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_0
+block:id=pamlemonID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_1
+block:id=pamlemonID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_2
+block:id=pamlemonID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemon_0
+
+# pamlemonsaplingID:* (tile.PamHarvestCraft:lemonSapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamlemonsaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/lemonSapling
+
+# pamblueberrywildID:* (tile.PamHarvestCraft:blueberrycrop_2), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamBushWild
+block:id=pamblueberrywildID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/blueberrycrop_2
+
+# pamcherryID:* (tile.null), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamFruit
+block:id=pamcherryID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_0
+block:id=pamcherryID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_1
+block:id=pamcherryID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_2
+block:id=pamcherryID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_0
+block:id=pamcherryID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_1
+block:id=pamcherryID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_2
+block:id=pamcherryID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_0
+block:id=pamcherryID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_1
+block:id=pamcherryID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_2
+block:id=pamcherryID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_0
+block:id=pamcherryID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_1
+block:id=pamcherryID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_2
+block:id=pamcherryID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_0
+block:id=pamcherryID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_1
+block:id=pamcherryID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_2
+block:id=pamcherryID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherry_0
+
+# pamcherrysaplingID:* (tile.PamHarvestCraft:cherrySapling), render=1(CROSSEDSQUARES), opaque=false,cls=assets.pamharvestcraft.BlockPamSapling
+block:id=pamcherrysaplingID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:PamHarvestCraft/cherrySapling
