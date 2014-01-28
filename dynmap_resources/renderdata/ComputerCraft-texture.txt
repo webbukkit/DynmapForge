@@ -32,18 +32,20 @@ texture:id=computercraft/wirelessModemSide,filename=assets/computercraft/texture
 
 
 
-# cableBlockID:* (CC-Cable), render=79(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockCable
+# cableBlockID:* (CC-Cable), render=dan200.computer.client.ComputerCraftProxyClient$CableBlockRenderingHandler(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockCable
 block:id=cableBlockID,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/cableSide,face2-3=0:computercraft/cableCore,face4-5=0:computercraft/cableSide
 block:id=cableBlockID,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/wiredModemFace,face2=0:computercraft/wiredModemSide,face3-4=0:computercraft/wiredModemFace,face5=0:computercraft/wiredModemSide
 block:id=cableBlockID,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/wiredModemFace
 
-# computerBlockID:* (CC-Computer), render=77(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockComputer
-block:id=computerBlockID,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/computerTop,face2=0:computercraft/computerSide,face3=0:computercraft/blink,face4-5=0:computercraft/computerSide
+# computerBlockID:* (CC-Computer), render=dan200.computer.client.ComputerCraftProxyClient$ComputerBlockRenderingHandler(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockComputer
+block:id=computerBlockID,data=*,stdrot=true,face0-1=0:computercraft/computerTop,face2=0:computercraft/computerSide,face3=0:computercraft/blink,face4-5=0:computercraft/computerSide
 
-# peripheralBlockID:* (CC-Peripheral), render=78(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockPeripheral
+# peripheralBlockID:* (CC-Peripheral), render=dan200.computer.client.ComputerCraftProxyClient$PeripheralBlockRenderingHandler(CUSTOM), opaque=false,cls=dan200.computer.shared.BlockPeripheral
 block:id=peripheralBlockID,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/diskDriveTop,face2=0:computercraft/diskDriveSide,face3=0:computercraft/diskDrive,face4-5=0:computercraft/diskDriveSide
 block:id=peripheralBlockID,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/wirelessModemFace,face2=0:computercraft/wirelessModemSide,face3-4=0:computercraft/wirelessModemFace,face5=0:computercraft/wirelessModemSide
-block:id=peripheralBlockID,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/monitor0,face2=0:computercraft/monitor32,face3=0:computercraft/monitor15,face4-5=0:computercraft/monitor32
-block:id=peripheralBlockID,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/printerTop,face2=0:computercraft/printerSide,face3=0:computercraft/printerEmpty,face4-5=0:computercraft/printerSide
-block:id=peripheralBlockID,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:computercraft/advMonitor0,face2=0:computercraft/advMonitor32,face3=0:computercraft/advMonitor15,face4-5=0:computercraft/advMonitor32
-block:id=peripheralBlockID,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/printerTop
+block:id=peripheralBlockID,data=2,stdrot=true,face0-1=0:computercraft/monitor0,face2=0:computercraft/monitor32,face3=0:computercraft/monitor15,face4-5=0:computercraft/monitor32
+block:id=peripheralBlockID,data=3,stdrot=true,face0-1=0:computercraft/printerTop,face2=0:computercraft/printerSide,face3=0:computercraft/printerEmpty,face4-5=0:computercraft/printerSide
+block:id=peripheralBlockID,data=4,stdrot=true,face0-1=0:computercraft/advMonitor0,face2=0:computercraft/advMonitor32,face3=0:computercraft/advMonitor15,face4-5=0:computercraft/advMonitor32
+block:id=peripheralBlockID,data=5,stdrot=true,face0-5=0:computercraft/printerTop
+block:id=peripheralBlockID,data=6,data=7,data=8,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:computercraft/printerTop
+block:id=peripheralBlockID,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:computercraft/printerTop

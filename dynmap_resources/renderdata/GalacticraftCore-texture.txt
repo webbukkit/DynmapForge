@@ -111,7 +111,7 @@ texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks
 
 
 
-# idBlockMoon:* (tile.moonBlock), render=0(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlock
+# idBlockMoon:* (tile.moonBlock), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlock
 block:id=idBlockMoon,data=0,stdrot=true,face0-5=0:galacticraftmoon/moonore_copper
 block:id=idBlockMoon,data=1,stdrot=true,face0-5=0:galacticraftmoon/moonore_tin
 block:id=idBlockMoon,data=2,stdrot=true,face0-5=0:galacticraftmoon/moonore_cheese
@@ -129,134 +129,134 @@ block:id=idBlockMoon,data=13,stdrot=true,face0=0:galacticraftmoon/middle,face1=0
 block:id=idBlockMoon,data=14,stdrot=true,face0-5=0:galacticraftmoon/brick
 block:id=idBlockMoon,data=15,stdrot=true,face0-5=0:galacticraftcore/blank
 
-# idBlockCheese:* (tile.cheeseBlock), render=0(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlockCheese
+# idBlockCheese:* (tile.cheeseBlock), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.moon.blocks.GCMoonBlockCheese
 block:id=idBlockCheese,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftmoon/cheese_1,face2-5=0:galacticraftmoon/cheese_2
 block:id=idBlockCheese,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftmoon/cheese_1,face2-3=0:galacticraftmoon/cheese_2,face4=0:galacticraftmoon/cheese_3,face5=0:galacticraftmoon/cheese_2
 
-# idBlockCoreBreatheableAir:* (tile.breatheableAir), render=0(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockBreathableAir
+# idBlockCoreBreatheableAir:* (tile.breatheableAir), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockBreathableAir
 block:id=idBlockCoreBreatheableAir,data=*,stdrot=true,face0-5=12000:galacticraftcore/breatheableAir
 
-# idBlockLandingPad:* (tile.landingPad), render=0(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockLandingPad
+# idBlockLandingPad:* (tile.landingPad), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockLandingPad
 block:id=idBlockLandingPad,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
 block:id=idBlockLandingPad,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/buggy_fueler_blank
 block:id=idBlockLandingPad,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/cargo_pad
 block:id=idBlockLandingPad,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
 
-# idBlockLandingPadFull:* (tile.landingPadFull), render=90(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockLandingPadFull
-block:id=idBlockLandingPadFull,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
-block:id=idBlockLandingPadFull,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/buggy_fueler
-block:id=idBlockLandingPadFull,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/buggy_fueler_blank
-block:id=idBlockLandingPadFull,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
+# idBlockLandingPadFull:* (tile.landingPadFull), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererLandingPad(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockLandingPadFull
+block:id=idBlockLandingPadFull,data=0,stdrot=true,face0-5=0:galacticraftcore/launch_pad
+block:id=idBlockLandingPadFull,data=1,stdrot=true,face0-5=0:galacticraftcore/buggy_fueler
+block:id=idBlockLandingPadFull,data=2,stdrot=true,face0-5=0:galacticraftcore/buggy_fueler_blank
+block:id=idBlockLandingPadFull,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/launch_pad
 
-# idBlockUnlitTorch:* (tile.unlitTorch), render=85(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockUnlitTorch
-block:id=idBlockUnlitTorch,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/unlitTorchLit
+# idBlockUnlitTorch:* (tile.unlitTorch), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererUnlitTorch(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockUnlitTorch
+block:id=idBlockUnlitTorch,data=*,stdrot=true,face0-5=0:galacticraftcore/unlitTorchLit
 
-# idBlockUnlitTorchLit:* (tile.unlitTorchLit), render=85(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockUnlitTorch
-block:id=idBlockUnlitTorchLit,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/unlitTorchLit
+# idBlockUnlitTorchLit:* (tile.unlitTorchLit), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererUnlitTorch(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockUnlitTorch
+block:id=idBlockUnlitTorchLit,data=*,stdrot=true,face0-5=0:galacticraftcore/unlitTorchLit
 
-# idBlockAirDistributor:* (tile.distributor), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenDistributor
-block:id=idBlockAirDistributor,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_input,face4-5=0:galacticraftcore/machine_distributor_fan
-block:id=idBlockAirDistributor,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_oxygen_input,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_distributor_fan
-block:id=idBlockAirDistributor,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_distributor_fan,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_input
-block:id=idBlockAirDistributor,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_distributor_fan,face4=0:galacticraftcore/machine_oxygen_input,face5=0:galacticraftcore/machine_input
-block:id=idBlockAirDistributor,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/machine_distributor_fan
+# idBlockAirDistributor:* (tile.distributor), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenDistributor
+block:id=idBlockAirDistributor,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_input,face4-5=0:galacticraftcore/machine_distributor_fan
+block:id=idBlockAirDistributor,data=1,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_oxygen_input,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_distributor_fan
+block:id=idBlockAirDistributor,data=2,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_distributor_fan,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_input
+block:id=idBlockAirDistributor,data=3,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_distributor_fan,face4=0:galacticraftcore/machine_oxygen_input,face5=0:galacticraftcore/machine_input
+block:id=idBlockAirDistributor,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/machine_distributor_fan
 
-# idBlockAirCompressor:* (tile.oxygenCompressor), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenCompressor
-block:id=idBlockAirCompressor,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_input,face4=0:galacticraftcore/machine_compressor_1,face5=0:galacticraftcore/machine_compressor_2
-block:id=idBlockAirCompressor,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_oxygen_input,face3=0:galacticraftcore/machine_input,face4=0:galacticraftcore/machine_compressor_2,face5=0:galacticraftcore/machine_compressor_1
-block:id=idBlockAirCompressor,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_compressor_2,face3=0:galacticraftcore/machine_compressor_1,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_input
-block:id=idBlockAirCompressor,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_compressor_1,face3=0:galacticraftcore/machine_compressor_2,face4=0:galacticraftcore/machine_oxygen_input,face5=0:galacticraftcore/machine_input
-block:id=idBlockAirCompressor,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_output,face4=0:galacticraftcore/machine_decompressor_1,face5=0:galacticraftcore/machine_compressor_2
-block:id=idBlockAirCompressor,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_oxygen_output,face3=0:galacticraftcore/machine_input,face4=0:galacticraftcore/machine_compressor_2,face5=0:galacticraftcore/machine_decompressor_1
-block:id=idBlockAirCompressor,data=6,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_compressor_2,face3=0:galacticraftcore/machine_decompressor_1,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_output
-block:id=idBlockAirCompressor,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_decompressor_1,face3=0:galacticraftcore/machine_compressor_2,face4=0:galacticraftcore/machine_oxygen_output,face5=0:galacticraftcore/machine_input
-block:id=idBlockAirCompressor,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/machine_decompressor_1
+# idBlockAirCompressor:* (tile.oxygenCompressor), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenCompressor
+block:id=idBlockAirCompressor,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_input,face4=0:galacticraftcore/machine_compressor_1,face5=0:galacticraftcore/machine_compressor_2
+block:id=idBlockAirCompressor,data=1,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_oxygen_input,face3=0:galacticraftcore/machine_input,face4=0:galacticraftcore/machine_compressor_2,face5=0:galacticraftcore/machine_compressor_1
+block:id=idBlockAirCompressor,data=2,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_compressor_2,face3=0:galacticraftcore/machine_compressor_1,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_input
+block:id=idBlockAirCompressor,data=3,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_compressor_1,face3=0:galacticraftcore/machine_compressor_2,face4=0:galacticraftcore/machine_oxygen_input,face5=0:galacticraftcore/machine_input
+block:id=idBlockAirCompressor,data=4,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_output,face4=0:galacticraftcore/machine_decompressor_1,face5=0:galacticraftcore/machine_compressor_2
+block:id=idBlockAirCompressor,data=5,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_oxygen_output,face3=0:galacticraftcore/machine_input,face4=0:galacticraftcore/machine_compressor_2,face5=0:galacticraftcore/machine_decompressor_1
+block:id=idBlockAirCompressor,data=6,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_compressor_2,face3=0:galacticraftcore/machine_decompressor_1,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_output
+block:id=idBlockAirCompressor,data=7,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_decompressor_1,face3=0:galacticraftcore/machine_compressor_2,face4=0:galacticraftcore/machine_oxygen_output,face5=0:galacticraftcore/machine_input
+block:id=idBlockAirCompressor,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/machine_decompressor_1
 
-# idBlockAirCollector:* (tile.oxygenCollector), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenCollector
-block:id=idBlockAirCollector,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_collector_fan,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_output,face4-5=0:galacticraftcore/machine_collector_fan
-block:id=idBlockAirCollector,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_collector_fan,face2=0:galacticraftcore/machine_oxygen_output,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_collector_fan
-block:id=idBlockAirCollector,data=2,stdrot=true,transparency=TRANSPARENT,face0-3=0:galacticraftcore/machine_collector_fan,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_output
-block:id=idBlockAirCollector,data=3,stdrot=true,transparency=TRANSPARENT,face0-3=0:galacticraftcore/machine_collector_fan,face4=0:galacticraftcore/machine_oxygen_output,face5=0:galacticraftcore/machine_input
-block:id=idBlockAirCollector,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/machine_collector_fan
+# idBlockAirCollector:* (tile.oxygenCollector), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenCollector
+block:id=idBlockAirCollector,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_collector_fan,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_output,face4-5=0:galacticraftcore/machine_collector_fan
+block:id=idBlockAirCollector,data=1,stdrot=true,face0-1=0:galacticraftcore/machine_collector_fan,face2=0:galacticraftcore/machine_oxygen_output,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_collector_fan
+block:id=idBlockAirCollector,data=2,stdrot=true,face0-3=0:galacticraftcore/machine_collector_fan,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_output
+block:id=idBlockAirCollector,data=3,stdrot=true,face0-3=0:galacticraftcore/machine_collector_fan,face4=0:galacticraftcore/machine_oxygen_output,face5=0:galacticraftcore/machine_input
+block:id=idBlockAirCollector,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/machine_collector_fan
 
-# idBlockRefinery:* (tile.refinery), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockRefinery
-block:id=idBlockRefinery,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2=0:galacticraftcore/machine_fuel_input,face3=0:galacticraftcore/machine_oil_input,face4=0:galacticraftcore/refinery_front,face5=0:galacticraftcore/refinery_side
-block:id=idBlockRefinery,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2=0:galacticraftcore/machine_oil_input,face3=0:galacticraftcore/machine_fuel_input,face4=0:galacticraftcore/refinery_side,face5=0:galacticraftcore/refinery_front
-block:id=idBlockRefinery,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2=0:galacticraftcore/refinery_side,face3=0:galacticraftcore/refinery_front,face4=0:galacticraftcore/machine_fuel_input,face5=0:galacticraftcore/machine_oil_input
-block:id=idBlockRefinery,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2=0:galacticraftcore/refinery_front,face3=0:galacticraftcore/refinery_side,face4=0:galacticraftcore/machine_oil_input,face5=0:galacticraftcore/machine_fuel_input
-block:id=idBlockRefinery,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2-5=0:galacticraftcore/refinery_side
+# idBlockRefinery:* (tile.refinery), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockRefinery
+block:id=idBlockRefinery,data=0,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2=0:galacticraftcore/machine_fuel_input,face3=0:galacticraftcore/machine_oil_input,face4=0:galacticraftcore/refinery_front,face5=0:galacticraftcore/refinery_side
+block:id=idBlockRefinery,data=1,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2=0:galacticraftcore/machine_oil_input,face3=0:galacticraftcore/machine_fuel_input,face4=0:galacticraftcore/refinery_side,face5=0:galacticraftcore/refinery_front
+block:id=idBlockRefinery,data=2,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2=0:galacticraftcore/refinery_side,face3=0:galacticraftcore/refinery_front,face4=0:galacticraftcore/machine_fuel_input,face5=0:galacticraftcore/machine_oil_input
+block:id=idBlockRefinery,data=3,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2=0:galacticraftcore/refinery_front,face3=0:galacticraftcore/refinery_side,face4=0:galacticraftcore/machine_oil_input,face5=0:galacticraftcore/machine_fuel_input
+block:id=idBlockRefinery,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_input,face2-5=0:galacticraftcore/refinery_side
 
-# idBlockFuelLoader:* (tile.fuelLoader), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockFuelLoader
-block:id=idBlockFuelLoader,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_fuel_input,face4-5=0:galacticraftcore/machine_fuelloader
-block:id=idBlockFuelLoader,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_fuel_input,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_fuelloader
-block:id=idBlockFuelLoader,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_fuelloader,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_fuel_input
-block:id=idBlockFuelLoader,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_fuelloader,face4=0:galacticraftcore/machine_fuel_input,face5=0:galacticraftcore/machine_input
-block:id=idBlockFuelLoader,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/machine_fuelloader
+# idBlockFuelLoader:* (tile.fuelLoader), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockFuelLoader
+block:id=idBlockFuelLoader,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_fuel_input,face4-5=0:galacticraftcore/machine_fuelloader
+block:id=idBlockFuelLoader,data=1,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_fuel_input,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_fuelloader
+block:id=idBlockFuelLoader,data=2,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_fuelloader,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_fuel_input
+block:id=idBlockFuelLoader,data=3,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_fuelloader,face4=0:galacticraftcore/machine_fuel_input,face5=0:galacticraftcore/machine_input
+block:id=idBlockFuelLoader,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/machine_fuelloader
 
-# idBlockOxygenSealer:* (tile.sealer), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenSealer
-block:id=idBlockOxygenSealer,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_input,face4-5=0:galacticraftcore/machine_blank
-block:id=idBlockOxygenSealer,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2=0:galacticraftcore/machine_oxygen_input,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_blank
-block:id=idBlockOxygenSealer,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2-3=0:galacticraftcore/machine_blank,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_input
-block:id=idBlockOxygenSealer,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2-3=0:galacticraftcore/machine_blank,face4=0:galacticraftcore/machine_oxygen_input,face5=0:galacticraftcore/machine_input
-block:id=idBlockOxygenSealer,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2-5=0:galacticraftcore/machine_blank
+# idBlockOxygenSealer:* (tile.sealer), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenSealer
+block:id=idBlockOxygenSealer,data=0,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_oxygen_input,face4-5=0:galacticraftcore/machine_blank
+block:id=idBlockOxygenSealer,data=1,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2=0:galacticraftcore/machine_oxygen_input,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_blank
+block:id=idBlockOxygenSealer,data=2,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2-3=0:galacticraftcore/machine_blank,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_oxygen_input
+block:id=idBlockOxygenSealer,data=3,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2-3=0:galacticraftcore/machine_blank,face4=0:galacticraftcore/machine_oxygen_input,face5=0:galacticraftcore/machine_input
+block:id=idBlockOxygenSealer,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/machine_sealer,face2-5=0:galacticraftcore/machine_blank
 
-# idBlockOxygenDetector:* (tile.oxygenDetector), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenDetector
-block:id=idBlockOxygenDetector,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/detector_side
+# idBlockOxygenDetector:* (tile.oxygenDetector), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenDetector
+block:id=idBlockOxygenDetector,data=*,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/detector_side
 
-# idBlockCargoLoader:* (tile.cargo), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockCargoLoader
-block:id=idBlockCargoLoader,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_item_input,face4-5=0:galacticraftcore/machine_cargoloader
-block:id=idBlockCargoLoader,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_item_input,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_cargoloader
-block:id=idBlockCargoLoader,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_cargoloader,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_item_input
-block:id=idBlockCargoLoader,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_cargoloader,face4=0:galacticraftcore/machine_item_input,face5=0:galacticraftcore/machine_input
-block:id=idBlockCargoLoader,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_item_output,face4-5=0:galacticraftcore/machine_cargounloader
-block:id=idBlockCargoLoader,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_item_output,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_cargounloader
-block:id=idBlockCargoLoader,data=6,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_cargounloader,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_item_output
-block:id=idBlockCargoLoader,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_cargounloader,face4=0:galacticraftcore/machine_item_output,face5=0:galacticraftcore/machine_input
-block:id=idBlockCargoLoader,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/machine_cargounloader
+# idBlockCargoLoader:* (tile.cargo), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockCargoLoader
+block:id=idBlockCargoLoader,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_item_input,face4-5=0:galacticraftcore/machine_cargoloader
+block:id=idBlockCargoLoader,data=1,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_item_input,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_cargoloader
+block:id=idBlockCargoLoader,data=2,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_cargoloader,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_item_input
+block:id=idBlockCargoLoader,data=3,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_cargoloader,face4=0:galacticraftcore/machine_item_input,face5=0:galacticraftcore/machine_input
+block:id=idBlockCargoLoader,data=4,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_item_output,face4-5=0:galacticraftcore/machine_cargounloader
+block:id=idBlockCargoLoader,data=5,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_item_output,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/machine_cargounloader
+block:id=idBlockCargoLoader,data=6,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_cargounloader,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_item_output
+block:id=idBlockCargoLoader,data=7,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftcore/machine_cargounloader,face4=0:galacticraftcore/machine_item_output,face5=0:galacticraftcore/machine_input
+block:id=idBlockCargoLoader,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftcore/machine_cargounloader
 
-# idBlockMachineB:* (tile.machine), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockMachine
-block:id=idBlockMachineB,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/coalGenerator,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/machine_output,face4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/coalGenerator
-block:id=idBlockMachineB,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/coalGenerator,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/coalGenerator,face3-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/machine_output
-block:id=idBlockMachineB,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/energyStorageModule_16
-block:id=idBlockMachineB,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_output,face4-5=0:galacticraftcore/energyStorageModule_16
-block:id=idBlockMachineB,data=6,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/energyStorageModule_16,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/machine_input
-block:id=idBlockMachineB,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/energyStorageModule_16,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_output
-block:id=idBlockMachineB,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/electricFurnace,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/machine_input,face4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/electricFurnace
-block:id=idBlockMachineB,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/electricFurnace,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/electricFurnace,face3-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/machine_input
-block:id=idBlockMachineB,data=12,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/compressor,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB,data=13,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/compressor
-block:id=idBlockMachineB,data=14,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/compressor,face4-5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/compressor,face3-5=0:galacticraftcore/machine_side
+# idBlockMachineB:* (tile.machine), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockMachine
+block:id=idBlockMachineB,data=0,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/coalGenerator,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB,data=1,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/machine_output,face4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/coalGenerator
+block:id=idBlockMachineB,data=2,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/coalGenerator,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB,data=3,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/coalGenerator,face3-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/machine_output
+block:id=idBlockMachineB,data=4,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftcore/energyStorageModule_16
+block:id=idBlockMachineB,data=5,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_output,face4-5=0:galacticraftcore/energyStorageModule_16
+block:id=idBlockMachineB,data=6,stdrot=true,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/energyStorageModule_16,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/machine_input
+block:id=idBlockMachineB,data=7,stdrot=true,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/energyStorageModule_16,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_output
+block:id=idBlockMachineB,data=8,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_input,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/electricFurnace,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB,data=9,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/machine_input,face4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/electricFurnace
+block:id=idBlockMachineB,data=10,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/electricFurnace,face4=0:galacticraftcore/machine_input,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB,data=11,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/electricFurnace,face3-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/machine_input
+block:id=idBlockMachineB,data=12,stdrot=true,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/compressor,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB,data=13,stdrot=true,face0-1=0:galacticraftcore/machine,face2-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/compressor
+block:id=idBlockMachineB,data=14,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/compressor,face4-5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB,data=15,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/compressor,face3-5=0:galacticraftcore/machine_side
 
-# idBlockMachineB2:* (tile.machine2), render=91(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockMachine2
-block:id=idBlockMachineB2,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/electric_compressor,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB2,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/machine_output,face4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/electric_compressor
-block:id=idBlockMachineB2,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/electric_compressor,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB2,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/electric_compressor,face3-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/machine_output
-block:id=idBlockMachineB2,data=4,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/circuit_fabricator,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB2,data=5,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/machine_output,face4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/circuit_fabricator
-block:id=idBlockMachineB2,data=6,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/circuit_fabricator,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/machine_side
-block:id=idBlockMachineB2,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/circuit_fabricator,face3-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/machine_output
-block:id=idBlockMachineB2,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_oxygen_input,face3=0:galacticraftcore/machine_oxygen_output,face4-5=0:galacticraftcore/oxygenStorageModule_16
-block:id=idBlockMachineB2,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_oxygen_output,face3=0:galacticraftcore/machine_oxygen_input,face4-5=0:galacticraftcore/oxygenStorageModule_16
-block:id=idBlockMachineB2,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/oxygenStorageModule_16,face4=0:galacticraftcore/machine_oxygen_input,face5=0:galacticraftcore/machine_oxygen_output
-block:id=idBlockMachineB2,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/oxygenStorageModule_16,face4=0:galacticraftcore/machine_oxygen_output,face5=0:galacticraftcore/machine_oxygen_input
-block:id=idBlockMachineB2,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine,face2-5=0:galacticraftcore/oxygenStorageModule_16
+# idBlockMachineB2:* (tile.machine2), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMachine(CUSTOM), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockMachine2
+block:id=idBlockMachineB2,data=0,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/electric_compressor,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB2,data=1,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/machine_output,face4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/electric_compressor
+block:id=idBlockMachineB2,data=2,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/electric_compressor,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB2,data=3,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/electric_compressor,face3-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/machine_output
+block:id=idBlockMachineB2,data=4,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_output,face3=0:galacticraftcore/machine_side,face4=0:galacticraftcore/circuit_fabricator,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB2,data=5,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/machine_output,face4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/circuit_fabricator
+block:id=idBlockMachineB2,data=6,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_side,face3=0:galacticraftcore/circuit_fabricator,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/machine_side
+block:id=idBlockMachineB2,data=7,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/circuit_fabricator,face3-4=0:galacticraftcore/machine_side,face5=0:galacticraftcore/machine_output
+block:id=idBlockMachineB2,data=8,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_oxygen_input,face3=0:galacticraftcore/machine_oxygen_output,face4-5=0:galacticraftcore/oxygenStorageModule_16
+block:id=idBlockMachineB2,data=9,stdrot=true,face0-1=0:galacticraftcore/machine,face2=0:galacticraftcore/machine_oxygen_output,face3=0:galacticraftcore/machine_oxygen_input,face4-5=0:galacticraftcore/oxygenStorageModule_16
+block:id=idBlockMachineB2,data=10,stdrot=true,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/oxygenStorageModule_16,face4=0:galacticraftcore/machine_oxygen_input,face5=0:galacticraftcore/machine_oxygen_output
+block:id=idBlockMachineB2,data=11,stdrot=true,face0-1=0:galacticraftcore/machine,face2-3=0:galacticraftcore/oxygenStorageModule_16,face4=0:galacticraftcore/machine_oxygen_output,face5=0:galacticraftcore/machine_oxygen_input
+block:id=idBlockMachineB2,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/machine,face2-5=0:galacticraftcore/oxygenStorageModule_16
 
-# idBlockAirPipe:* (tile.oxygenPipe), render=87(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenPipe
-block:id=idBlockAirPipe,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/pipe_oxygen_white
+# idBlockAirPipe:* (tile.oxygenPipe), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererOxygenPipe(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockOxygenPipe
+block:id=idBlockAirPipe,data=*,stdrot=true,face0-5=0:galacticraftcore/pipe_oxygen_white
 
-# idBlockRocketBench:* (tile.rocketWorkbench), render=89(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockAdvancedCraftingTable
+# idBlockRocketBench:* (tile.rocketWorkbench), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererCraftingTable(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockAdvancedCraftingTable
 block:id=idBlockRocketBench,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftcore/workbench_nasa_side,face1=0:galacticraftcore/workbench_nasa_top,face2-5=0:galacticraftcore/workbench_nasa_side
 
-# idBlockFallenMeteor:* (tile.fallenMeteor), render=88(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockFallenMeteor
+# idBlockFallenMeteor:* (tile.fallenMeteor), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererMeteor(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockFallenMeteor
 block:id=idBlockFallenMeteor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/fallen_meteor
 
-# idBlockDecorationBlock:* (tile.gcBlockCore), render=0(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlock
+# idBlockDecorationBlock:* (tile.gcBlockCore), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlock
 block:id=idBlockDecorationBlock,data=0,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_2
 block:id=idBlockDecorationBlock,data=1,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_4
 block:id=idBlockDecorationBlock,data=2,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_1
@@ -271,21 +271,22 @@ block:id=idBlockDecorationBlock,data=10,stdrot=true,face0-5=0:galacticraftcore/d
 block:id=idBlockDecorationBlock,data=11,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_block
 block:id=idBlockDecorationBlock,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/deco_aluminium_2
 
-# idBlockAirLockFrame:* (tile.airLockFrame), render=0(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockAirLockFrame
+# idBlockAirLockFrame:* (tile.airLockFrame), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockAirLockFrame
 block:id=idBlockAirLockFrame,data=0,stdrot=true,face0-5=0:galacticraftcore/airlock_off
 block:id=idBlockAirLockFrame,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/airlock_off,face2-5=0:galacticraftcore/airlock_control_off
 
-# idBlockAirLockSeal:* (tile.airLockSeal), render=0(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockAirLockWall
+# idBlockAirLockSeal:* (tile.airLockSeal), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockAirLockWall
 block:id=idBlockAirLockSeal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/deco_aluminium_4
 
-# idBlockDummy:* (tile.dummyblock), render=-1(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockMulti
-block:id=idBlockDummy,data=0,data=1,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
-block:id=idBlockDummy,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/workbench_nasa_top
-block:id=idBlockDummy,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/solar_basic_0
-block:id=idBlockDummy,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/cryoDummy
-block:id=idBlockDummy,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
+# idBlockDummy:* (tile.dummyblock), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockMulti
+block:id=idBlockDummy,data=0,data=1,stdrot=true,face0-5=0:galacticraftcore/launch_pad
+block:id=idBlockDummy,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/launch_pad
+block:id=idBlockDummy,data=3,stdrot=true,face0-5=0:galacticraftcore/workbench_nasa_top
+block:id=idBlockDummy,data=4,stdrot=true,face0-5=0:galacticraftcore/solar_basic_0
+block:id=idBlockDummy,data=5,stdrot=true,face0-5=0:galacticraftmars/cryoDummy
+block:id=idBlockDummy,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftcore/launch_pad
 
-# idBlockEnclosedWire:* (tile.enclosed), render=0(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockEnclosed
+# idBlockEnclosedWire:* (tile.enclosed), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockEnclosed
 block:id=idBlockEnclosedWire,data=1,stdrot=true,face0-5=0:galacticraftcore/enclosed_oxygen_pipe
 block:id=idBlockEnclosedWire,data=2,stdrot=true,face0-5=0:galacticraftcore/enclosed_copper_cable
 block:id=idBlockEnclosedWire,data=3,stdrot=true,face0-5=0:galacticraftcore/enclosed_gold_cable
@@ -302,13 +303,13 @@ block:id=idBlockEnclosedWire,data=13,stdrot=true,face0-5=0:galacticraftcore/encl
 block:id=idBlockEnclosedWire,data=14,stdrot=true,face0-5=0:galacticraftcore/enclosed_aluminum_wire
 block:id=idBlockEnclosedWire,data=15,stdrot=true,face0-5=0:galacticraftcore/enclosed_heavy_aluminum_wire
 
-# idBlockTieredTreasureChest:* (tile.treasureChest), render=84(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockT1TreasureChest
-block:id=idBlockTieredTreasureChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/treasure_front_single
+# idBlockTieredTreasureChest:* (tile.treasureChest), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererTreasureChest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockT1TreasureChest
+block:id=idBlockTieredTreasureChest,data=*,stdrot=true,face0-5=0:galacticraftcore/treasure_front_single
 
-# idBlockParachest:* (tile.parachest), render=22(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockParachest
+# idBlockParachest:* (tile.parachest), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockParachest
 block:id=idBlockParachest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
 
-# idBlockSolarPanel:* (tile.solar), render=0(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockSolar
+# idBlockSolarPanel:* (tile.solar), render=(STANDARD), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockSolar
 block:id=idBlockSolarPanel,data=0,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_basic_0,face2=0:galacticraftcore/solar_basic_1,face3=0:galacticraftcore/machine_output,face4-5=0:galacticraftcore/solar_basic_1
 block:id=idBlockSolarPanel,data=1,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_basic_0,face2=0:galacticraftcore/machine_output,face3-5=0:galacticraftcore/solar_basic_1
 block:id=idBlockSolarPanel,data=2,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_basic_0,face2-4=0:galacticraftcore/solar_basic_1,face5=0:galacticraftcore/machine_output
@@ -319,10 +320,10 @@ block:id=idBlockSolarPanel,data=6,stdrot=true,face0=0:galacticraftcore/machine_b
 block:id=idBlockSolarPanel,data=7,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_advanced_0,face2-3=0:galacticraftcore/solar_advanced_1,face4=0:galacticraftcore/machine_output,face5=0:galacticraftcore/solar_advanced_1
 block:id=idBlockSolarPanel,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:galacticraftcore/machine_blank,face1=0:galacticraftcore/solar_advanced_0,face2-5=0:galacticraftcore/solar_advanced_1
 
-# idBlockGlowstoneTorch:* (tile.glowstoneTorch), render=85(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockGlowstoneTorch
-block:id=idBlockGlowstoneTorch,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/glowstoneTorch
+# idBlockGlowstoneTorch:* (tile.glowstoneTorch), render=micdoodle8.mods.galacticraft.core.client.render.block.GCCoreBlockRendererUnlitTorch(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockGlowstoneTorch
+block:id=idBlockGlowstoneTorch,data=*,stdrot=true,face0-5=0:galacticraftcore/glowstoneTorch
 
-# idBlockCopperWire:* (tile.aluminumWire), render=-1(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockAluminumWire
+# idBlockCopperWire:* (tile.aluminumWire), render=(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.core.blocks.GCCoreBlockAluminumWire
 block:id=idBlockCopperWire,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/aluminumWire
 block:id=idBlockCopperWire,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/aluminumWireHeavy
 block:id=idBlockCopperWire,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/aluminumWire

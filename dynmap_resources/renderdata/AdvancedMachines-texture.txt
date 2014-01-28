@@ -20,7 +20,7 @@ texture:id=advancedmachines/topMaceratorOFF,filename=assets/advancedmachines/tex
 
 
 
-# ids/AdvancedMachineBlock:* (blockAdvMachine), render=0(STANDARD), opaque=true,cls=ic2.advancedmachines.common.BlockAdvancedMachines
+# ids/AdvancedMachineBlock:* (blockAdvMachine), render=(STANDARD), opaque=true,cls=ic2.advancedmachines.common.BlockAdvancedMachines
 block:id=ids/AdvancedMachineBlock,data=0,stdrot=true,face0=0:advancedmachines/bottom,face1=0:advancedmachines/topMaceratorOFF,face2=0:advancedmachines/sideplate,face3=0:advancedmachines/frontMaceratorOFF,face4-5=0:advancedmachines/sideplate
 block:id=ids/AdvancedMachineBlock,data=1,stdrot=true,face0=0:advancedmachines/bottom,face1=0:advancedmachines/topCompressorOFF,face2=0:advancedmachines/sideplate,face3=0:advancedmachines/frontCompressorOFF,face4-5=0:advancedmachines/sideplate
 block:id=ids/AdvancedMachineBlock,data=2,stdrot=true,face0=0:advancedmachines/bottom,face1=0:advancedmachines/topExtractorOFF,face2=0:advancedmachines/sideExtractorOFF,face3=0:advancedmachines/frontExtractorOFF,face4-5=0:advancedmachines/sideExtractorOFF

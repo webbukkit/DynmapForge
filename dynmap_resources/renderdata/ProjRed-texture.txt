@@ -40,12 +40,12 @@ texture:id=projectred/ore/storagesapphire,filename=assets/projectred/textures/bl
 
 
 
-# block_oresID:* (projectred.exploration.ore), render=0(STANDARD), opaque=true,cls=mrtjp.projectred.exploration.BlockOre
+# block_oresID:* (projectred.exploration.ore), render=(STANDARD), opaque=true,cls=mrtjp.projectred.exploration.BlockOre
 block:id=block_oresID,data=0,stdrot=true,face0-5=0:projectred/ore/oreruby
 block:id=block_oresID,data=1,stdrot=true,face0-5=0:projectred/ore/oresapphire
 block:id=block_oresID,data=2,stdrot=true,face0-5=0:projectred/ore/oreperidot
 
-# block_stonesID:* (projectred.exploration.stone), render=0(STANDARD), opaque=true,cls=mrtjp.projectred.exploration.BlockSpecialStone
+# block_stonesID:* (projectred.exploration.stone), render=(STANDARD), opaque=true,cls=mrtjp.projectred.exploration.BlockSpecialStone
 block:id=block_stonesID,data=0,stdrot=true,face0-5=0:projectred/ore/stonemarble
 block:id=block_stonesID,data=1,stdrot=true,face0-5=0:projectred/ore/brickmarble
 block:id=block_stonesID,data=2,stdrot=true,face0-5=0:projectred/ore/cobblebasalt
@@ -55,7 +55,7 @@ block:id=block_stonesID,data=5,stdrot=true,face0-5=0:projectred/ore/storageruby
 block:id=block_stonesID,data=6,stdrot=true,face0-5=0:projectred/ore/storagesapphire
 block:id=block_stonesID,data=7,stdrot=true,face0-5=0:projectred/ore/storageperidot
 
-# block_lampID:* (projectred.illumination.lamp), render=0(STANDARD), opaque=true,cls=mrtjp.projectred.illumination.BlockLamp
+# block_lampID:* (projectred.illumination.lamp), render=(STANDARD), opaque=true,cls=mrtjp.projectred.illumination.BlockLamp
 block:id=block_lampID,data=0,stdrot=true,face0-5=0:projectred/lights/lampoff/0
 block:id=block_lampID,data=1,stdrot=true,face0-5=0:projectred/lights/lampoff/1
 block:id=block_lampID,data=2,stdrot=true,face0-5=0:projectred/lights/lampoff/2
@@ -73,7 +73,7 @@ block:id=block_lampID,data=13,stdrot=true,face0-5=0:projectred/lights/lampoff/13
 block:id=block_lampID,data=14,stdrot=true,face0-5=0:projectred/lights/lampoff/14
 block:id=block_lampID,data=15,stdrot=true,face0-5=0:projectred/lights/lampoff/15
 
-# block_stoneWallsID:* (projectred.exploration.stonewalls), render=32(WALL), opaque=false,cls=mrtjp.projectred.exploration.BlockSpecialStoneWall
+# block_stoneWallsID:* (projectred.exploration.stonewalls), render=(WALL), opaque=false,cls=mrtjp.projectred.exploration.BlockSpecialStoneWall
 block:id=block_stoneWallsID,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/stonemarble
 block:id=block_stoneWallsID,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/brickmarble
 block:id=block_stoneWallsID,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/cobblebasalt
@@ -83,7 +83,7 @@ block:id=block_stoneWallsID,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2
 block:id=block_stoneWallsID,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/storagesapphire
 block:id=block_stoneWallsID,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/storageperidot
 
-# block_dyeLeafID:* (projectred.exploration.dyeleaf), render=0(STANDARD), opaque=false,cls=mrtjp.projectred.exploration.BlockStainedLeaf
+# block_dyeLeafID:* (projectred.exploration.dyeleaf), render=(STANDARD), opaque=false,cls=mrtjp.projectred.exploration.BlockStainedLeaf
 block:id=block_dyeLeafID,data=0,stdrot=true,face0-5=0:ProjectRed/ore/leaves
 block:id=block_dyeLeafID,data=1,stdrot=true,colorMult=C06300,face0-5=17000:ProjectRed/ore/leaves
 block:id=block_dyeLeafID,data=2,stdrot=true,colorMult=B51AB5,face0-5=17000:ProjectRed/ore/leaves
@@ -101,7 +101,7 @@ block:id=block_dyeLeafID,data=13,stdrot=true,colorMult=088700,face0-5=17000:Proj
 block:id=block_dyeLeafID,data=14,stdrot=true,colorMult=A20F06,face0-5=17000:ProjectRed/ore/leaves
 block:id=block_dyeLeafID,data=15,stdrot=true,colorMult=1F1F1F,face0-5=17000:ProjectRed/ore/leaves
 
-# block_dyeSaplingID:* (projectred.exploration.dyesapling), render=1(CROSSEDSQUARES), opaque=false,cls=mrtjp.projectred.exploration.BlockStainedSapling
+# block_dyeSaplingID:* (projectred.exploration.dyesapling), render=(CROSSEDSQUARES), opaque=false,cls=mrtjp.projectred.exploration.BlockStainedSapling
 block:id=block_dyeSaplingID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ProjectRed/ore/sapling
 block:id=block_dyeSaplingID,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=C06300,patch0=17000:ProjectRed/ore/sapling
 block:id=block_dyeSaplingID,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=B51AB5,patch0=17000:ProjectRed/ore/sapling

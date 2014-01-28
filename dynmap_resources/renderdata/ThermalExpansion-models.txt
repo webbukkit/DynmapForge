@@ -23,16 +23,105 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# Tank:* (Tank), render=129(CUSTOM), opaque=false,cls=thermalexpansion.block.tank.BlockTank
-# Dynamo:* (Dynamo), render=128(CUSTOM), opaque=false,cls=thermalexpansion.block.dynamo.BlockDynamo
-# Conduit:* (Conduit), render=124(CUSTOM), opaque=false,cls=thermalexpansion.block.conduit.BlockConduit
-# Tesseract:* (Tesseract), render=123(CUSTOM), opaque=false,cls=thermalexpansion.block.tesseract.BlockTesseract
-# EnergyCell:* (EnergyCell), render=122(CUSTOM), opaque=false,cls=thermalexpansion.block.energycell.BlockEnergyCell
-# Strongbox:* (Strongbox), render=-1(CUSTOM), opaque=false,cls=thermalexpansion.block.strongbox.BlockStrongbox
-# Lamp:* (Lamp), render=131(CUSTOM), opaque=false,cls=thermalexpansion.block.lamp.BlockLamp
-# FluidRedstone:* (FluidRedstone), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidRedstone
-# FluidGlowstone:* (FluidGlowstone), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidGlowstone
-# FluidEnder:* (FluidEnder), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidEnder
-# FluidPyrotheum:* (FluidPyrotheum), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidPyrotheum
-# FluidCryotheum:* (FluidCryotheum), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidCryotheum
-# FluidCoal:* (FluidCoal), render=40(CUSTOM), opaque=false,cls=thermalexpansion.fluid.BlockFluidCoal
+
+# Tank:* (Tank), render=thermalexpansion.render.RenderTank(CUSTOM), opaque=false,cls=thermalexpansion.block.tank.BlockTank
+boxblock:id=Tank,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=*
+
+# Strongbox:* (Strongbox), render=(CUSTOM), opaque=false,cls=thermalexpansion.block.strongbox.BlockStrongbox
+boxblock:id=Strongbox,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# FluidRedstone:* (FluidRedstone), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=thermalexpansion.fluid.BlockFluidRedstone
+boxblock:id=FluidRedstone,ymax=0.875,data=1
+boxblock:id=FluidRedstone,ymax=0.75,data=2
+boxblock:id=FluidRedstone,ymax=0.625,data=3
+boxblock:id=FluidRedstone,ymax=0.5,data=4
+boxblock:id=FluidRedstone,ymax=0.375,data=5
+boxblock:id=FluidRedstone,ymax=0.25,data=6
+boxblock:id=FluidRedstone,ymax=0.125,data=7
+boxblock:id=FluidRedstone,ymax=0.875,data=9
+boxblock:id=FluidRedstone,ymax=0.75,data=10
+boxblock:id=FluidRedstone,ymax=0.625,data=11
+boxblock:id=FluidRedstone,ymax=0.5,data=12
+boxblock:id=FluidRedstone,ymax=0.375,data=13
+boxblock:id=FluidRedstone,ymax=0.25,data=14
+boxblock:id=FluidRedstone,ymax=0.125,data=15
+
+# FluidGlowstone:* (FluidGlowstone), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=thermalexpansion.fluid.BlockFluidGlowstone
+boxblock:id=FluidGlowstone,ymax=0.875,data=1
+boxblock:id=FluidGlowstone,ymax=0.75,data=2
+boxblock:id=FluidGlowstone,ymax=0.625,data=3
+boxblock:id=FluidGlowstone,ymax=0.5,data=4
+boxblock:id=FluidGlowstone,ymax=0.375,data=5
+boxblock:id=FluidGlowstone,ymax=0.25,data=6
+boxblock:id=FluidGlowstone,ymax=0.125,data=7
+boxblock:id=FluidGlowstone,ymax=0.875,data=9
+boxblock:id=FluidGlowstone,ymax=0.75,data=10
+boxblock:id=FluidGlowstone,ymax=0.625,data=11
+boxblock:id=FluidGlowstone,ymax=0.5,data=12
+boxblock:id=FluidGlowstone,ymax=0.375,data=13
+boxblock:id=FluidGlowstone,ymax=0.25,data=14
+boxblock:id=FluidGlowstone,ymax=0.125,data=15
+
+# FluidEnder:* (FluidEnder), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=thermalexpansion.fluid.BlockFluidEnder
+boxblock:id=FluidEnder,ymax=0.875,data=1
+boxblock:id=FluidEnder,ymax=0.75,data=2
+boxblock:id=FluidEnder,ymax=0.625,data=3
+boxblock:id=FluidEnder,ymax=0.5,data=4
+boxblock:id=FluidEnder,ymax=0.375,data=5
+boxblock:id=FluidEnder,ymax=0.25,data=6
+boxblock:id=FluidEnder,ymax=0.125,data=7
+boxblock:id=FluidEnder,ymax=0.875,data=9
+boxblock:id=FluidEnder,ymax=0.75,data=10
+boxblock:id=FluidEnder,ymax=0.625,data=11
+boxblock:id=FluidEnder,ymax=0.5,data=12
+boxblock:id=FluidEnder,ymax=0.375,data=13
+boxblock:id=FluidEnder,ymax=0.25,data=14
+boxblock:id=FluidEnder,ymax=0.125,data=15
+
+# FluidPyrotheum:* (FluidPyrotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=thermalexpansion.fluid.BlockFluidPyrotheum
+boxblock:id=FluidPyrotheum,ymax=0.875,data=1
+boxblock:id=FluidPyrotheum,ymax=0.75,data=2
+boxblock:id=FluidPyrotheum,ymax=0.625,data=3
+boxblock:id=FluidPyrotheum,ymax=0.5,data=4
+boxblock:id=FluidPyrotheum,ymax=0.375,data=5
+boxblock:id=FluidPyrotheum,ymax=0.25,data=6
+boxblock:id=FluidPyrotheum,ymax=0.125,data=7
+boxblock:id=FluidPyrotheum,ymax=0.875,data=9
+boxblock:id=FluidPyrotheum,ymax=0.75,data=10
+boxblock:id=FluidPyrotheum,ymax=0.625,data=11
+boxblock:id=FluidPyrotheum,ymax=0.5,data=12
+boxblock:id=FluidPyrotheum,ymax=0.375,data=13
+boxblock:id=FluidPyrotheum,ymax=0.25,data=14
+boxblock:id=FluidPyrotheum,ymax=0.125,data=15
+
+# FluidCryotheum:* (FluidCryotheum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=thermalexpansion.fluid.BlockFluidCryotheum
+boxblock:id=FluidCryotheum,ymax=0.875,data=1
+boxblock:id=FluidCryotheum,ymax=0.75,data=2
+boxblock:id=FluidCryotheum,ymax=0.625,data=3
+boxblock:id=FluidCryotheum,ymax=0.5,data=4
+boxblock:id=FluidCryotheum,ymax=0.375,data=5
+boxblock:id=FluidCryotheum,ymax=0.25,data=6
+boxblock:id=FluidCryotheum,ymax=0.125,data=7
+boxblock:id=FluidCryotheum,ymax=0.875,data=9
+boxblock:id=FluidCryotheum,ymax=0.75,data=10
+boxblock:id=FluidCryotheum,ymax=0.625,data=11
+boxblock:id=FluidCryotheum,ymax=0.5,data=12
+boxblock:id=FluidCryotheum,ymax=0.375,data=13
+boxblock:id=FluidCryotheum,ymax=0.25,data=14
+boxblock:id=FluidCryotheum,ymax=0.125,data=15
+
+# FluidCoal:* (FluidCoal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=thermalexpansion.fluid.BlockFluidCoal
+boxblock:id=FluidCoal,ymax=0.875,data=1
+boxblock:id=FluidCoal,ymax=0.75,data=2
+boxblock:id=FluidCoal,ymax=0.625,data=3
+boxblock:id=FluidCoal,ymax=0.5,data=4
+boxblock:id=FluidCoal,ymax=0.375,data=5
+boxblock:id=FluidCoal,ymax=0.25,data=6
+boxblock:id=FluidCoal,ymax=0.125,data=7
+boxblock:id=FluidCoal,ymax=0.875,data=9
+boxblock:id=FluidCoal,ymax=0.75,data=10
+boxblock:id=FluidCoal,ymax=0.625,data=11
+boxblock:id=FluidCoal,ymax=0.5,data=12
+boxblock:id=FluidCoal,ymax=0.375,data=13
+boxblock:id=FluidCoal,ymax=0.25,data=14
+boxblock:id=FluidCoal,ymax=0.125,data=15

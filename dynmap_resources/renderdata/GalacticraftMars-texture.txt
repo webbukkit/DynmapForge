@@ -56,7 +56,7 @@ texture:id=galacticraftmars/yellowEgg_1,filename=assets/galacticraftmars/texture
 
 
 
-# idBlockMars:* (tile.mars), render=0(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlock
+# idBlockMars:* (tile.mars), render=(STANDARD), opaque=true,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlock
 block:id=idBlockMars,data=0,stdrot=true,face0-5=0:galacticraftmars/copper
 block:id=idBlockMars,data=1,stdrot=true,face0-5=0:galacticraftmars/tin
 block:id=idBlockMars,data=2,stdrot=true,face0-5=0:galacticraftmars/desh
@@ -70,64 +70,64 @@ block:id=idBlockMars,data=9,stdrot=true,face0-5=0:galacticraftmars/bottom
 block:id=idBlockMars,data=10,stdrot=true,face0-5=0:galacticraftcore/blank
 block:id=idBlockMars,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:galacticraftmars/decoration_desh
 
-# idBlockBacterialSludge:* (tile.sludge), render=40(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSludge
-block:id=idBlockBacterialSludge,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:galacticraftmars/sludge,face1-5=0:galacticraftmars/sludge_flow
+# idBlockBacterialSludge:* (tile.sludge), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSludge
+block:id=idBlockBacterialSludge,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0=12000:galacticraftmars/sludge,face1-5=12000:galacticraftmars/sludge_flow
 
-# idBlockVine:* (tile.cavernVines), render=92(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockVine
-block:id=idBlockVine,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_0
-block:id=idBlockVine,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_1
-block:id=idBlockVine,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/vine_2
+# idBlockVine:* (tile.cavernVines), render=micdoodle8.mods.galacticraft.mars.client.render.block.GCMarsBlockRendererVine(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockVine
+block:id=idBlockVine,data=0,stdrot=true,face0-5=0:galacticraftmars/vine_0
+block:id=idBlockVine,data=1,stdrot=true,face0-5=0:galacticraftmars/vine_1
+block:id=idBlockVine,data=2,stdrot=true,face0-5=0:galacticraftmars/vine_2
 
-# idBlockRock:* (tile.slimelingEgg), render=93(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSlimelingEgg
-block:id=idBlockRock,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
-block:id=idBlockRock,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
-block:id=idBlockRock,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
-block:id=idBlockRock,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
-block:id=idBlockRock,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_1
-block:id=idBlockRock,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_1
-block:id=idBlockRock,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
-block:id=idBlockRock,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
-block:id=idBlockRock,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
-block:id=idBlockRock,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
-block:id=idBlockRock,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_1
-block:id=idBlockRock,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_1
-block:id=idBlockRock,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_0
-block:id=idBlockRock,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/blueEgg_0
-block:id=idBlockRock,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/yellowEgg_0
-block:id=idBlockRock,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/redEgg_1
+# idBlockRock:* (tile.slimelingEgg), render=micdoodle8.mods.galacticraft.mars.client.render.block.GCMarsBlockRendererRock(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockSlimelingEgg
+block:id=idBlockRock,data=0,stdrot=true,face0-5=0:galacticraftmars/redEgg_0
+block:id=idBlockRock,data=1,stdrot=true,face0-5=0:galacticraftmars/blueEgg_0
+block:id=idBlockRock,data=2,stdrot=true,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=idBlockRock,data=3,stdrot=true,face0-5=0:galacticraftmars/redEgg_1
+block:id=idBlockRock,data=4,stdrot=true,face0-5=0:galacticraftmars/blueEgg_1
+block:id=idBlockRock,data=5,stdrot=true,face0-5=0:galacticraftmars/yellowEgg_1
+block:id=idBlockRock,data=6,stdrot=true,face0-5=0:galacticraftmars/redEgg_0
+block:id=idBlockRock,data=7,stdrot=true,face0-5=0:galacticraftmars/blueEgg_0
+block:id=idBlockRock,data=8,stdrot=true,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=idBlockRock,data=9,stdrot=true,face0-5=0:galacticraftmars/redEgg_1
+block:id=idBlockRock,data=10,stdrot=true,face0-5=0:galacticraftmars/blueEgg_1
+block:id=idBlockRock,data=11,stdrot=true,face0-5=0:galacticraftmars/yellowEgg_1
+block:id=idBlockRock,data=12,stdrot=true,face0-5=0:galacticraftmars/redEgg_0
+block:id=idBlockRock,data=13,stdrot=true,face0-5=0:galacticraftmars/blueEgg_0
+block:id=idBlockRock,data=14,stdrot=true,face0-5=0:galacticraftmars/yellowEgg_0
+block:id=idBlockRock,data=15,stdrot=true,face0-5=0:galacticraftmars/redEgg_1
 
-# idBlockTreasureChestT2:* (tile.treasureT2), render=94(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockT2TreasureChest
-block:id=idBlockTreasureChestT2,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftcore/treasure_front_single
+# idBlockTreasureChestT2:* (tile.treasureT2), render=micdoodle8.mods.galacticraft.mars.client.render.block.GCMarsBlockRendererTreasureChest(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockT2TreasureChest
+block:id=idBlockTreasureChestT2,data=*,stdrot=true,face0-5=0:galacticraftcore/treasure_front_single
 
-# idBlockMachine:* (tile.marsMachine), render=95(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockMachine
-block:id=idBlockMachine,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/terraformer_0
-block:id=idBlockMachine,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/terraformer_0,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/terraformer_0
-block:id=idBlockMachine,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/terraformer_0,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/terraformer_0
-block:id=idBlockMachine,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/terraformer_0,face5=0:galacticraftcore/machine_input
-block:id=idBlockMachine,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/cryoDummy
-block:id=idBlockMachine,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/launchController
-block:id=idBlockMachine,data=9,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/launchController,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/launchController
-block:id=idBlockMachine,data=10,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/launchController,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/launchController
-block:id=idBlockMachine,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/launchController,face5=0:galacticraftcore/machine_input
-block:id=idBlockMachine,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/launchController
+# idBlockMachine:* (tile.marsMachine), render=micdoodle8.mods.galacticraft.mars.client.render.block.GCMarsBlockRendererMachine(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockMachine
+block:id=idBlockMachine,data=0,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/terraformer_0
+block:id=idBlockMachine,data=1,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/terraformer_0,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/terraformer_0
+block:id=idBlockMachine,data=2,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/terraformer_0,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/terraformer_0
+block:id=idBlockMachine,data=3,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/terraformer_0,face5=0:galacticraftcore/machine_input
+block:id=idBlockMachine,data=4,data=5,data=6,data=7,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/cryoDummy
+block:id=idBlockMachine,data=8,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftcore/machine_input,face3-5=0:galacticraftmars/launchController
+block:id=idBlockMachine,data=9,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2=0:galacticraftmars/launchController,face3=0:galacticraftcore/machine_input,face4-5=0:galacticraftmars/launchController
+block:id=idBlockMachine,data=10,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-3=0:galacticraftmars/launchController,face4=0:galacticraftcore/machine_input,face5=0:galacticraftmars/launchController
+block:id=idBlockMachine,data=11,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-4=0:galacticraftmars/launchController,face5=0:galacticraftcore/machine_input
+block:id=idBlockMachine,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:galacticraftcore/machine_blank,face2-5=0:galacticraftmars/launchController
 
-# idBlockCreeperEgg:* (tile.creeperEgg), render=27(DRAGONEGG), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockCreeperEgg
+# idBlockCreeperEgg:* (tile.creeperEgg), render=(DRAGONEGG), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockCreeperEgg
 block:id=idBlockCreeperEgg,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/creeperEgg
 
-# idBlockTintedGlassPane:* (tile.tintedGlassPane), render=96(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockTintedGlassPane
-block:id=idBlockTintedGlassPane,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_white
-block:id=idBlockTintedGlassPane,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_orange
-block:id=idBlockTintedGlassPane,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_magenta
-block:id=idBlockTintedGlassPane,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_light_blue
-block:id=idBlockTintedGlassPane,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_yellow
-block:id=idBlockTintedGlassPane,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_lime
-block:id=idBlockTintedGlassPane,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_pink
-block:id=idBlockTintedGlassPane,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_gray
-block:id=idBlockTintedGlassPane,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_silver
-block:id=idBlockTintedGlassPane,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_cyan
-block:id=idBlockTintedGlassPane,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_purple
-block:id=idBlockTintedGlassPane,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_blue
-block:id=idBlockTintedGlassPane,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_brown
-block:id=idBlockTintedGlassPane,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_green
-block:id=idBlockTintedGlassPane,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_red
-block:id=idBlockTintedGlassPane,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:galacticraftmars/tintedGlassPane_black
+# idBlockTintedGlassPane:* (tile.tintedGlassPane), render=micdoodle8.mods.galacticraft.mars.client.render.block.GCMarsBlockRendererTintedGlassPane(CUSTOM), opaque=false,cls=micdoodle8.mods.galacticraft.mars.blocks.GCMarsBlockTintedGlassPane
+block:id=idBlockTintedGlassPane,data=0,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_white
+block:id=idBlockTintedGlassPane,data=1,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_orange
+block:id=idBlockTintedGlassPane,data=2,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_magenta
+block:id=idBlockTintedGlassPane,data=3,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_light_blue
+block:id=idBlockTintedGlassPane,data=4,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_yellow
+block:id=idBlockTintedGlassPane,data=5,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_lime
+block:id=idBlockTintedGlassPane,data=6,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_pink
+block:id=idBlockTintedGlassPane,data=7,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_gray
+block:id=idBlockTintedGlassPane,data=8,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_silver
+block:id=idBlockTintedGlassPane,data=9,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_cyan
+block:id=idBlockTintedGlassPane,data=10,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_purple
+block:id=idBlockTintedGlassPane,data=11,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_blue
+block:id=idBlockTintedGlassPane,data=12,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_brown
+block:id=idBlockTintedGlassPane,data=13,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_green
+block:id=idBlockTintedGlassPane,data=14,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_red
+block:id=idBlockTintedGlassPane,data=15,stdrot=true,face0-5=12000:galacticraftmars/tintedGlassPane_black

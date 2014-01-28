@@ -1,41 +1,62 @@
-# NetherOres Block mapping
-modname:mod_NetherOres,NetherOres
-# configuration file
-cfgfile:config/NetherOres.cfg
+# NetherOres 1.6.2R2.2.1
+version:1.6
+modname:NetherOres
+
+var:ID.NetherOreBlock1=0,ID.HellfishBlock=0,ID.NetherOreBlock=0
+
 cfgfile:config/powercrystals/netherores/common.cfg
 
-# Files
-texturefile:id=blk0,filename=powercrystals/netherores/textures/terrain_0.png,xcount=16,ycount=16
-# Blocks
-# Coal (NetherOreBlock:0)
-block:id=ID.NetherOreBlock,data=0,allfaces=0,txtid=blk0
-# Diamond (NetherOreBlock:1)
-block:id=ID.NetherOreBlock,data=1,allfaces=1,txtid=blk0
-# Gold (NetherOreBlock:2)
-block:id=ID.NetherOreBlock,data=2,allfaces=2,txtid=blk0
-# Iron (NetherOreBlock:3)
-block:id=ID.NetherOreBlock,data=3,allfaces=3,txtid=blk0
-# Lapis (NetherOreBlock:4)
-block:id=ID.NetherOreBlock,data=4,allfaces=4,txtid=blk0
-# Redstone (NetherOreBlock:5)
-block:id=ID.NetherOreBlock,data=5,allfaces=5,txtid=blk0
-# Copper (NetherOreBlock:6)
-block:id=ID.NetherOreBlock,data=6,allfaces=6,txtid=blk0
-# Tin (NetherOreBlock:7)
-block:id=ID.NetherOreBlock,data=7,allfaces=7,txtid=blk0
-# Emerald (NetherOreBlock:8)
-block:id=ID.NetherOreBlock,data=8,allfaces=8,txtid=blk0
-# Silver (NetherOreBlock:9)
-block:id=ID.NetherOreBlock,data=9,allfaces=9,txtid=blk0
-# Lead (NetherOreBlock:10)
-block:id=ID.NetherOreBlock,data=10,allfaces=10,txtid=blk0
-# Uranium (NetherOreBlock:11)
-block:id=ID.NetherOreBlock,data=11,allfaces=11,txtid=blk0
-# Nikolite (NetherOreBlock:12)
-block:id=ID.NetherOreBlock,data=12,allfaces=12,txtid=blk0
-# Ruby (NetherOreBlock:13)
-block:id=ID.NetherOreBlock,data=13,allfaces=13,txtid=blk0
-# Green Sapphire (NetherOreBlock:14)
-block:id=ID.NetherOreBlock,data=14,allfaces=14,txtid=blk0
-# Blue Sapphire (NetherOreBlock:15)
-block:id=ID.NetherOreBlock,data=15,allfaces=15,txtid=blk0
+
+texturepath:assets/netherores/textures/blocks/
+texture:id=minecraft/netherrack,filename=assets/minecraft/textures/blocks/netherrack.png
+texture:id=netherores/tile.netherores.ore.0_0,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_0.png
+texture:id=netherores/tile.netherores.ore.0_1,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_1.png
+texture:id=netherores/tile.netherores.ore.0_10,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_10.png
+texture:id=netherores/tile.netherores.ore.0_11,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_11.png
+texture:id=netherores/tile.netherores.ore.0_12,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_12.png
+texture:id=netherores/tile.netherores.ore.0_13,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_13.png
+texture:id=netherores/tile.netherores.ore.0_14,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_14.png
+texture:id=netherores/tile.netherores.ore.0_15,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_15.png
+texture:id=netherores/tile.netherores.ore.0_2,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_2.png
+texture:id=netherores/tile.netherores.ore.0_3,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_3.png
+texture:id=netherores/tile.netherores.ore.0_4,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_4.png
+texture:id=netherores/tile.netherores.ore.0_5,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_5.png
+texture:id=netherores/tile.netherores.ore.0_6,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_6.png
+texture:id=netherores/tile.netherores.ore.0_7,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_7.png
+texture:id=netherores/tile.netherores.ore.0_8,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_8.png
+texture:id=netherores/tile.netherores.ore.0_9,filename=assets/netherores/textures/blocks/tile.netherores.ore.0_9.png
+texture:id=netherores/tile.netherores.ore.1_0,filename=assets/netherores/textures/blocks/tile.netherores.ore.1_0.png
+texture:id=netherores/tile.netherores.ore.1_1,filename=assets/netherores/textures/blocks/tile.netherores.ore.1_1.png
+texture:id=netherores/tile.netherores.ore.1_2,filename=assets/netherores/textures/blocks/tile.netherores.ore.1_2.png
+texture:id=netherores/tile.netherores.ore.1_3,filename=assets/netherores/textures/blocks/tile.netherores.ore.1_3.png
+texture:id=netherores/tile.netherores.ore.1_4,filename=assets/netherores/textures/blocks/tile.netherores.ore.1_4.png
+
+
+
+# ID.HellfishBlock:* (netherOresBlockHellfish), render=(STANDARD), opaque=true,cls=powercrystals.netherores.world.BlockHellfish
+block:id=ID.HellfishBlock,data=*,stdrot=true,face0-5=0:minecraft/netherrack
+
+# ID.NetherOreBlock1:* (tile.netherores.ore.1), render=(STANDARD), opaque=true,cls=powercrystals.netherores.ores.BlockNetherOres
+block:id=ID.NetherOreBlock1,data=0,stdrot=true,face0-5=0:netherores/tile.netherores.ore.1_0
+block:id=ID.NetherOreBlock1,data=1,stdrot=true,face0-5=0:netherores/tile.netherores.ore.1_1
+block:id=ID.NetherOreBlock1,data=2,stdrot=true,face0-5=0:netherores/tile.netherores.ore.1_2
+block:id=ID.NetherOreBlock1,data=3,stdrot=true,face0-5=0:netherores/tile.netherores.ore.1_3
+block:id=ID.NetherOreBlock1,data=4,stdrot=true,face0-5=0:netherores/tile.netherores.ore.1_4
+
+# ID.NetherOreBlock:* (tile.netherores.ore.0), render=(STANDARD), opaque=true,cls=powercrystals.netherores.ores.BlockNetherOres
+block:id=ID.NetherOreBlock,data=0,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_0
+block:id=ID.NetherOreBlock,data=1,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_1
+block:id=ID.NetherOreBlock,data=2,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_2
+block:id=ID.NetherOreBlock,data=3,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_3
+block:id=ID.NetherOreBlock,data=4,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_4
+block:id=ID.NetherOreBlock,data=5,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_5
+block:id=ID.NetherOreBlock,data=6,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_6
+block:id=ID.NetherOreBlock,data=7,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_7
+block:id=ID.NetherOreBlock,data=8,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_8
+block:id=ID.NetherOreBlock,data=9,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_9
+block:id=ID.NetherOreBlock,data=10,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_10
+block:id=ID.NetherOreBlock,data=11,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_11
+block:id=ID.NetherOreBlock,data=12,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_12
+block:id=ID.NetherOreBlock,data=13,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_13
+block:id=ID.NetherOreBlock,data=14,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_14
+block:id=ID.NetherOreBlock,data=15,stdrot=true,face0-5=0:netherores/tile.netherores.ore.0_15

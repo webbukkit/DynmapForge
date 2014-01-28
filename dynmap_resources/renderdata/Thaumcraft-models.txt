@@ -24,26 +24,79 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# BlockFluxGoo:* (blockFluxGoo), render=40(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockFluxGoo
-# BlockCustomOre:* (blockCustomOre), render=106(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockCustomOre
-# BlockCustomPlant:* (blockCustomPlant), render=1(CROSSEDSQUARES), opaque=false,cls=thaumcraft.common.blocks.BlockCustomPlant
+
+# BlockFluxGoo:* (blockFluxGoo), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=thaumcraft.common.blocks.BlockFluxGoo
+boxblock:id=BlockFluxGoo,ymax=0.875,data=1
+boxblock:id=BlockFluxGoo,ymax=0.75,data=2
+boxblock:id=BlockFluxGoo,ymax=0.625,data=3
+boxblock:id=BlockFluxGoo,ymax=0.5,data=4
+boxblock:id=BlockFluxGoo,ymax=0.375,data=5
+boxblock:id=BlockFluxGoo,ymax=0.25,data=6
+boxblock:id=BlockFluxGoo,ymax=0.125,data=7
+boxblock:id=BlockFluxGoo,ymax=0.875,data=9
+boxblock:id=BlockFluxGoo,ymax=0.75,data=10
+boxblock:id=BlockFluxGoo,ymax=0.625,data=11
+boxblock:id=BlockFluxGoo,ymax=0.5,data=12
+boxblock:id=BlockFluxGoo,ymax=0.375,data=13
+boxblock:id=BlockFluxGoo,ymax=0.25,data=14
+boxblock:id=BlockFluxGoo,ymax=0.125,data=15
+
+# BlockCustomOre:* (blockCustomOre), render=thaumcraft.client.renderers.block.BlockCustomOreRenderer(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockCustomOre
+
+# BlockCustomPlant:* (blockCustomPlant), render=(CROSSEDSQUARES), opaque=false,cls=thaumcraft.common.blocks.BlockCustomPlant
 patchblock:id=BlockCustomPlant,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1,data=2,data=3,data=4
-# BlockMetalDevice:* (blockMetalDevice), render=100(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMetalDevice
-# BlockTable:* (blockTable), render=108(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTable
-# BlockChestHungry:* (blockChestHungry), render=107(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockChestHungry
-# BlockCandle:* (blockCandle), render=109(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCandle
-# BlockJar:* (blockJar), render=105(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockJar
-# BlockArcaneDoor:* (blockArcaneDoor), render=7(DOOR), opaque=false,cls=thaumcraft.common.blocks.BlockArcaneDoor
+
+# BlockMetalDevice:* (blockMetalDevice), render=thaumcraft.client.renderers.block.BlockMetalDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMetalDevice
+boxblock:id=BlockMetalDevice,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.10000000149011612,ymax=0.8999999761581421,zmin=0.20000000298023224,zmax=0.800000011920929,data=1
+boxblock:id=BlockMetalDevice,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6
+boxblock:id=BlockMetalDevice,xmin=0.25,xmax=0.75,ymin=0.125,ymax=0.875,zmin=0.25,zmax=0.75,data=7,data=8
+
+# BlockChestHungry:* (blockChestHungry), render=thaumcraft.client.renderers.block.BlockChestHungryRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockChestHungry
+boxblock:id=BlockChestHungry,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
+
+# BlockCandle:* (blockCandle), render=thaumcraft.client.renderers.block.BlockCandleRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCandle
+boxblock:id=BlockCandle,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.5,zmin=0.375,zmax=0.625,data=*
+
+# BlockJar:* (blockJar), render=thaumcraft.client.renderers.block.BlockJarRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockJar
+boxblock:id=BlockJar,xmin=0.1875,xmax=0.8125,ymin=0.0,ymax=0.75,zmin=0.1875,zmax=0.8125,data=*
+
+# BlockArcaneDoor:* (blockArcaneDoor), render=(DOOR), opaque=false,cls=thaumcraft.common.blocks.BlockArcaneDoor
 customblock:id=BlockArcaneDoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-# BlockAiry:* (blockAiry), render=-1(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockAiry
-# BlockWoodenDevice:* (blockWoodenDevice), render=110(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockWoodenDevice
-# BlockLifter:* (blockLifter), render=111(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockLifter
-# BlockCrystal:* (blockCrystal), render=112(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCrystal
-# BlockCosmeticOpaque:* (blockCosmeticOpaque), render=113(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockCosmeticOpaque
-# BlockMirror:* (blockMirror), render=-1(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMirror
-# BlockManaPod:* (blockManaPod), render=28(COCOA), opaque=false,cls=thaumcraft.common.blocks.BlockManaPod
-# BlockTube:* (blockTube), render=103(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTube
-# BlockFluxGas:* (blockFluxGas), render=98(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockFluxGas
-# BlockStoneDevice:* (blockStoneDevice), render=101(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockStoneDevice
-# BlockTaint:* (blockTaint), render=102(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockTaint
-# BlockTaintFibres:* (blockTaintFibres), render=104(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTaintFibres
+
+# BlockAiry:* (blockAiry), render=(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockAiry
+boxblock:id=BlockAiry,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
+
+# BlockWoodenDevice:* (blockWoodenDevice), render=thaumcraft.client.renderers.block.BlockWoodenDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockWoodenDevice
+boxblock:id=BlockWoodenDevice,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.0,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=0
+boxblock:id=BlockWoodenDevice,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=BlockWoodenDevice,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=3
+
+# BlockLifter:* (blockLifter), render=thaumcraft.client.renderers.block.BlockLifterRenderer(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockLifter
+
+# BlockMirror:* (blockMirror), render=(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockMirror
+boxblock:id=BlockMirror,xmin=0.0,xmax=1.0,ymin=0.9375,ymax=1.0,zmin=0.0,zmax=1.0,data=0
+boxblock:id=BlockMirror,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=1
+boxblock:id=BlockMirror,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.9375,zmax=1.0,data=2
+boxblock:id=BlockMirror,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.0625,data=3
+boxblock:id=BlockMirror,xmin=0.9375,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=BlockMirror,xmin=0.0,xmax=0.0625,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# BlockManaPod:* (blockManaPod), render=(COCOA), opaque=false,cls=thaumcraft.common.blocks.BlockManaPod
+
+# BlockTube:* (blockTube), render=thaumcraft.client.renderers.block.BlockTubeRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTube
+boxblock:id=BlockTube,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=0,data=1
+boxblock:id=BlockTube,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=2
+boxblock:id=BlockTube,xmin=0.3125,xmax=0.6875,ymin=0.3125,ymax=0.6875,zmin=0.3125,zmax=0.6875,data=3
+
+# BlockStoneDevice:* (blockStoneDevice), render=thaumcraft.client.renderers.block.BlockStoneDeviceRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockStoneDevice
+boxblock:id=BlockStoneDevice,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.9900000095367432,zmin=0.25,zmax=0.75,data=1
+boxblock:id=BlockStoneDevice,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=3
+boxblock:id=BlockStoneDevice,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0E-4,zmin=0.0,zmax=1.0,data=4
+boxblock:id=BlockStoneDevice,xmin=0.25,xmax=0.75,ymin=0.0,ymax=1.0,zmin=0.25,zmax=0.75,data=5
+boxblock:id=BlockStoneDevice,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.4375,zmin=0.0625,zmax=0.9375,data=8
+
+# BlockTaint:* (blockTaint), render=thaumcraft.client.renderers.block.BlockTaintRenderer(CUSTOM), opaque=true,cls=thaumcraft.common.blocks.BlockTaint
+
+# BlockTaintFibres:* (blockTaintFibres), render=thaumcraft.client.renderers.block.BlockTaintFibreRenderer(CUSTOM), opaque=false,cls=thaumcraft.common.blocks.BlockTaintFibres
+boxblock:id=BlockTaintFibres,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=0
+boxblock:id=BlockTaintFibres,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.800000011920929,zmin=0.20000000298023224,zmax=0.800000011920929,data=1,data=2,data=3,data=4

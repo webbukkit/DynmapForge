@@ -25,33 +25,93 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# blockfluidUuMatter:* (blockfluidUuMatter), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-# blockfluidCf:* (blockfluidCf), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-# blockFluidcoolant:* (blockFluidcoolant), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-# blockBarrel:* (blockBarrel), render=41(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
-# blockCrop:* (blockCrop), render=43(CUSTOM), opaque=false,cls=ic2.core.block.BlockCrop
-# blockDynamiteRemote:* (blockDynamiteRemote), render=2(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+
+# blockfluidUuMatter:* (blockfluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+boxblock:id=blockfluidUuMatter,ymax=0.875,data=1
+boxblock:id=blockfluidUuMatter,ymax=0.75,data=2
+boxblock:id=blockfluidUuMatter,ymax=0.625,data=3
+boxblock:id=blockfluidUuMatter,ymax=0.5,data=4
+boxblock:id=blockfluidUuMatter,ymax=0.375,data=5
+boxblock:id=blockfluidUuMatter,ymax=0.25,data=6
+boxblock:id=blockfluidUuMatter,ymax=0.125,data=7
+boxblock:id=blockfluidUuMatter,ymax=0.875,data=9
+boxblock:id=blockfluidUuMatter,ymax=0.75,data=10
+boxblock:id=blockfluidUuMatter,ymax=0.625,data=11
+boxblock:id=blockfluidUuMatter,ymax=0.5,data=12
+boxblock:id=blockfluidUuMatter,ymax=0.375,data=13
+boxblock:id=blockfluidUuMatter,ymax=0.25,data=14
+boxblock:id=blockfluidUuMatter,ymax=0.125,data=15
+
+# blockfluidCf:* (blockfluidCf), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+boxblock:id=blockfluidCf,ymax=0.875,data=1
+boxblock:id=blockfluidCf,ymax=0.75,data=2
+boxblock:id=blockfluidCf,ymax=0.625,data=3
+boxblock:id=blockfluidCf,ymax=0.5,data=4
+boxblock:id=blockfluidCf,ymax=0.375,data=5
+boxblock:id=blockfluidCf,ymax=0.25,data=6
+boxblock:id=blockfluidCf,ymax=0.125,data=7
+boxblock:id=blockfluidCf,ymax=0.875,data=9
+boxblock:id=blockfluidCf,ymax=0.75,data=10
+boxblock:id=blockfluidCf,ymax=0.625,data=11
+boxblock:id=blockfluidCf,ymax=0.5,data=12
+boxblock:id=blockfluidCf,ymax=0.375,data=13
+boxblock:id=blockfluidCf,ymax=0.25,data=14
+boxblock:id=blockfluidCf,ymax=0.125,data=15
+
+# blockFluidcoolant:* (blockFluidcoolant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+boxblock:id=blockFluidcoolant,ymax=0.875,data=1
+boxblock:id=blockFluidcoolant,ymax=0.75,data=2
+boxblock:id=blockFluidcoolant,ymax=0.625,data=3
+boxblock:id=blockFluidcoolant,ymax=0.5,data=4
+boxblock:id=blockFluidcoolant,ymax=0.375,data=5
+boxblock:id=blockFluidcoolant,ymax=0.25,data=6
+boxblock:id=blockFluidcoolant,ymax=0.125,data=7
+boxblock:id=blockFluidcoolant,ymax=0.875,data=9
+boxblock:id=blockFluidcoolant,ymax=0.75,data=10
+boxblock:id=blockFluidcoolant,ymax=0.625,data=11
+boxblock:id=blockFluidcoolant,ymax=0.5,data=12
+boxblock:id=blockFluidcoolant,ymax=0.375,data=13
+boxblock:id=blockFluidcoolant,ymax=0.25,data=14
+boxblock:id=blockFluidcoolant,ymax=0.125,data=15
+
+# blockBarrel:* (blockBarrel), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
+
+# blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.block.BlockCrop
+patchblock:id=blockCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# blockDynamiteRemote:* (blockDynamiteRemote), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
 patchblock:id=blockDynamiteRemote,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
-# blockDynamite:* (blockDynamite), render=2(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+
+# blockDynamite:* (blockDynamite), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
 patchblock:id=blockDynamite,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
-# blockPersonal:* (blockPersonal), render=46(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
-# blockMiningPipe:* (blockMiningPipe), render=0(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
+
+# blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
 boxblock:id=blockMiningPipe,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=0
-# blockLuminator:* (blockLuminator), render=45(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
-# blockLuminatorDark:* (blockLuminatorDark), render=45(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
-# blockMachine2:* (blockMachine2), render=41(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
-# blockMachine:* (blockMachine), render=41(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
-# blockElectric:* (blockElectric), render=41(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
-# blockReactorChamber:* (blockReactorChamber), render=41(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
-# blockGenerator:* (blockGenerator), render=41(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
-# blockCable:* (blockCable), render=42(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
-# blockWall:* (blockWall), render=47(CUSTOM), opaque=true,cls=ic2.core.block.BlockWall
-# blockDoorAlloy:* (blockDoorAlloy), render=7(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
+
+# blockMachine2:* (blockMachine2), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
+
+# blockMachine:* (blockMachine), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
+
+# blockElectric:* (blockElectric), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
+
+# blockReactorChamber:* (blockReactorChamber), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
+
+# blockGenerator:* (blockGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
+
+# blockWall:* (blockWall), render=ic2.core.block.RenderBlockWall(WALL), opaque=true,cls=ic2.core.block.BlockWall
+customblock:id=blockWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
 customblock:id=blockDoorAlloy,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-# blockFenceIron:* (blockFenceIron), render=44(CUSTOM), opaque=false,cls=ic2.core.block.BlockPoleFence
-# blockRubber:* (blockRubber), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
+
+# blockFenceIron:* (blockFenceIron), render=ic2.core.block.RenderBlockFence(FENCE), opaque=false,cls=ic2.core.block.BlockPoleFence
+customblock:id=blockFenceIron,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# blockRubber:* (blockRubber), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
 boxblock:id=blockRubber,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
-# blockHarz:* (blockHarz), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
+
+# blockHarz:* (blockHarz), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
 boxblock:id=blockHarz,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
-# blockRubSapling:* (blockRubSapling), render=1(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
+
+# blockRubSapling:* (blockRubSapling), render=(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
 patchblock:id=blockRubSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*

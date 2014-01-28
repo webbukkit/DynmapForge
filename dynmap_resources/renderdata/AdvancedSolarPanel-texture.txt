@@ -21,7 +21,7 @@ texture:id=advancedsolarpanel/usp_top,filename=assets/advancedsolarpanel/texture
 
 
 
-# blockID:* (BlockAdvSolarPanel), render=0(STANDARD), opaque=true,cls=advsolar.common.blocks.BlockAdvSolarPanel
+# blockID:* (BlockAdvSolarPanel), render=(STANDARD), opaque=true,cls=advsolar.common.blocks.BlockAdvSolarPanel
 block:id=blockID,data=0,stdrot=true,face0=0:advancedsolarpanel/asp_bottom,face1=0:advancedsolarpanel/asp_top,face2-5=0:advancedsolarpanel/asp_side
 block:id=blockID,data=1,stdrot=true,face0=0:advancedsolarpanel/hsp_bottom,face1=0:advancedsolarpanel/hsp_top,face2-5=0:advancedsolarpanel/hsp_side
 block:id=blockID,data=2,stdrot=true,face0=0:advancedsolarpanel/usp_bottom,face1=0:advancedsolarpanel/usp_top,face2-5=0:advancedsolarpanel/usp_side

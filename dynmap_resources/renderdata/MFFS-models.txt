@@ -22,8 +22,9 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# forceField:* (tile.mffs:forceField), render=125(CUSTOM), opaque=false,cls=mffs.block.BlockForceField
-# coercionDeriver:* (tile.mffs:coercionDeriver), render=126(CUSTOM), opaque=false,cls=mffs.block.BlockCoercionDeriver
-# fortronCapacitor:* (tile.mffs:fortronCapacitor), render=126(CUSTOM), opaque=false,cls=mffs.block.BlockFortronCapacitor
-# projector:* (tile.mffs:projector), render=126(CUSTOM), opaque=false,cls=mffs.block.BlockForceFieldProjector
-# manipulator:* (tile.mffs:manipulator), render=126(CUSTOM), opaque=false,cls=mffs.block.BlockForceManipulator
+
+# coercionDeriver:* (tile.mffs:coercionDeriver), render=mffs.render.RenderBlockHandler(CUSTOM), opaque=false,cls=mffs.block.BlockCoercionDeriver
+boxblock:id=coercionDeriver,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.800000011920929,zmin=0.0,zmax=1.0,data=*
+
+# projector:* (tile.mffs:projector), render=mffs.render.RenderBlockHandler(CUSTOM), opaque=false,cls=mffs.block.BlockForceFieldProjector
+boxblock:id=projector,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.800000011920929,zmin=0.0,zmax=1.0,data=*

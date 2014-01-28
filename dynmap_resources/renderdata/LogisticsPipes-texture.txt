@@ -58,7 +58,7 @@ texture:id=logisticspipes/pipes/overlay_gen/supplier/un-overlayed,filename=asset
 
 
 
-# logisticsSolidBlockId:* (tile.logisticsSolidBlock), render=0(STANDARD), opaque=true,cls=logisticspipes.blocks.LogisticsSolidBlock
+# logisticsSolidBlockId:* (tile.logisticsSolidBlock), render=(STANDARD), opaque=true,cls=logisticspipes.blocks.LogisticsSolidBlock
 block:id=logisticsSolidBlockId,data=0,stdrot=true,face0=0:logisticspipes/lpsolidblock/2,face1=0:logisticspipes/lpsolidblock/1,face2=0:logisticspipes/lpsolidblock/7,face3=0:logisticspipes/lpsolidblock/8,face4-5=0:logisticspipes/lpsolidblock/7
 block:id=logisticsSolidBlockId,data=1,stdrot=true,face0=0:logisticspipes/lpsolidblock/5,face1=0:logisticspipes/lpsolidblock/4,face2-5=0:logisticspipes/lpsolidblock/6
 block:id=logisticsSolidBlockId,data=2,stdrot=true,face0=0:logisticspipes/lpsolidblock/5,face1=0:logisticspipes/lpsolidblock/9,face2-5=0:logisticspipes/lpsolidblock/6

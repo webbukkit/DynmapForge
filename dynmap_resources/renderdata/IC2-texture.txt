@@ -136,192 +136,192 @@ texture:id=ic2/wiring/cable/blockTinCableI,filename=assets/ic2/textures/blocks/w
 
 
 
-# blockOreLead:* (blockOreLead), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# blockOreLead:* (blockOreLead), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=blockOreLead,data=0,stdrot=true,face0-5=0:ic2/blockOreLead
 
-# blockReinforcedFoam:* (blockReinforcedFoam), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockReinforcedFoam
+# blockReinforcedFoam:* (blockReinforcedFoam), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockReinforcedFoam
 block:id=blockReinforcedFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockReinforcedFoam
 
-# blockfluidUuMatter:* (blockfluidUuMatter), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=blockfluidUuMatter,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:ic2/blockuumatter_still,face2-5=0:ic2/blockuumatter_flow
+# blockfluidUuMatter:* (blockfluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=blockfluidUuMatter,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockuumatter_still,face2-5=12000:ic2/blockuumatter_flow
 
-# blockfluidCf:* (blockfluidCf), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=blockfluidCf,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:ic2/blockconstructionfoam_still,face2-5=0:ic2/blockconstructionfoam_flow
+# blockfluidCf:* (blockfluidCf), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=blockfluidCf,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockconstructionfoam_still,face2-5=12000:ic2/blockconstructionfoam_flow
 
-# blockFluidcoolant:* (blockFluidcoolant), render=40(CUSTOM), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=blockFluidcoolant,data=*,stdrot=true,transparency=TRANSPARENT,face0-1=0:ic2/blockic2coolant_still,face2-5=0:ic2/blockic2coolant_flow
+# blockFluidcoolant:* (blockFluidcoolant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=blockFluidcoolant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockic2coolant_still,face2-5=12000:ic2/blockic2coolant_flow
 
-# blockBarrel:* (blockBarrel), render=41(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
-block:id=blockBarrel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/blockBarrel
+# blockBarrel:* (blockBarrel), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
+block:id=blockBarrel,data=*,stdrot=true,face0-5=0:ic2/blockBarrel
 
-# blockCrop:* (blockCrop), render=43(CUSTOM), opaque=false,cls=ic2.core.block.BlockCrop
-block:id=blockCrop,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/crop/blockCrop.stick
-block:id=blockCrop,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/crop/blockCrop.stick.upgraded
-block:id=blockCrop,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/crop/blockCrop.stick
+# blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.block.BlockCrop
+block:id=blockCrop,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
+block:id=blockCrop,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick.upgraded
+block:id=blockCrop,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
 
-# blockDynamiteRemote:* (blockDynamiteRemote), render=2(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+# blockDynamiteRemote:* (blockDynamiteRemote), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
 block:id=blockDynamiteRemote,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDynamiteRemote
 
-# blockDynamite:* (blockDynamite), render=2(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+# blockDynamite:* (blockDynamite), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
 block:id=blockDynamite,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDynamite
 
-# blockNuke:* (blockNuke), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
+# blockNuke:* (blockNuke), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
 block:id=blockNuke,data=0,stdrot=true,face0-5=0:ic2/blockNuke
 
-# blockITNT:* (blockITNT), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
+# blockITNT:* (blockITNT), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
 block:id=blockITNT,data=0,stdrot=true,face0-5=0:ic2/blockITNT
 
-# blockPersonal:* (blockPersonal), render=46(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
-block:id=blockPersonal,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/personal/blockPersonalChest
-block:id=blockPersonal,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/personal/blockPersonalTrader
-block:id=blockPersonal,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/personal/blockPersonalTraderEnergy
+# blockPersonal:* (blockPersonal), render=ic2.core.block.personal.RenderBlockPersonal(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
+block:id=blockPersonal,data=0,stdrot=true,face0-5=0:ic2/personal/blockPersonalChest
+block:id=blockPersonal,data=1,stdrot=true,face0-5=0:ic2/personal/blockPersonalTrader
+block:id=blockPersonal,data=2,stdrot=true,face0-5=0:ic2/personal/blockPersonalTraderEnergy
 
-# blockMiningTip:* (blockMiningTip), render=0(STANDARD), opaque=true,cls=ic2.core.block.machine.BlockMiningTip
+# blockMiningTip:* (blockMiningTip), render=(STANDARD), opaque=true,cls=ic2.core.block.machine.BlockMiningTip
 block:id=blockMiningTip,data=0,stdrot=true,face0-5=0:ic2/machine/blockMiningTip
 
-# blockMiningPipe:* (blockMiningPipe), render=0(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
+# blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
 block:id=blockMiningPipe,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMiningPipe
 
-# blockLuminator:* (blockLuminator), render=45(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
-block:id=blockLuminator,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockLuminator
+# blockLuminator:* (blockLuminator), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
+block:id=blockLuminator,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLuminator
 
-# blockLuminatorDark:* (blockLuminatorDark), render=45(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
-block:id=blockLuminatorDark,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockLuminatorDark
+# blockLuminatorDark:* (blockLuminatorDark), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
+block:id=blockLuminatorDark,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLuminatorDark
 
-# blockMachine2:* (blockMachine2), render=41(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
-block:id=blockMachine2,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockTeleporter
-block:id=blockMachine2,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockTesla
-block:id=blockMachine2,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockCropmatron
-block:id=blockMachine2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockCentrifuge
-block:id=blockMachine2,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMetalFormer
-block:id=blockMachine2,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockOreWashingPlant
-block:id=blockMachine2,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockPatternStorage
-block:id=blockMachine2,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockScanner
-block:id=blockMachine2,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockReplicator
-block:id=blockMachine2,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockSolidCanner
-block:id=blockMachine2,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockFluidBottler
-block:id=blockMachine2,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockAdvMiner
+# blockMachine2:* (blockMachine2), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
+block:id=blockMachine2,data=0,stdrot=true,face0-5=0:ic2/machine/blockTeleporter
+block:id=blockMachine2,data=1,stdrot=true,face0-5=0:ic2/machine/blockTesla
+block:id=blockMachine2,data=2,stdrot=true,face0-5=0:ic2/machine/blockCropmatron
+block:id=blockMachine2,data=3,stdrot=true,face0-5=0:ic2/machine/blockCentrifuge
+block:id=blockMachine2,data=4,stdrot=true,face0-5=0:ic2/machine/blockMetalFormer
+block:id=blockMachine2,data=5,stdrot=true,face0-5=0:ic2/machine/blockOreWashingPlant
+block:id=blockMachine2,data=6,stdrot=true,face0-5=0:ic2/machine/blockPatternStorage
+block:id=blockMachine2,data=7,stdrot=true,face0-5=0:ic2/machine/blockScanner
+block:id=blockMachine2,data=8,stdrot=true,face0-5=0:ic2/machine/blockReplicator
+block:id=blockMachine2,data=9,stdrot=true,face0-5=0:ic2/machine/blockSolidCanner
+block:id=blockMachine2,data=10,stdrot=true,face0-5=0:ic2/machine/blockFluidBottler
+block:id=blockMachine2,data=11,stdrot=true,face0-5=0:ic2/machine/blockAdvMiner
 
-# blockMachine:* (blockMachine), render=41(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
-block:id=blockMachine,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMachine
-block:id=blockMachine,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockIronFurnace
-block:id=blockMachine,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockElecFurnace
-block:id=blockMachine,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMacerator
-block:id=blockMachine,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockExtractor
-block:id=blockMachine,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockCompressor
-block:id=blockMachine,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockCanner
-block:id=blockMachine,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMiner
-block:id=blockMachine,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockPump
-block:id=blockMachine,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMagnetizer
-block:id=blockMachine,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockElectrolyzer
-block:id=blockMachine,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockRecycler
-block:id=blockMachine,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockAdvMachine
-block:id=blockMachine,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockInduction
-block:id=blockMachine,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMatter
-block:id=blockMachine,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockTerra
+# blockMachine:* (blockMachine), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
+block:id=blockMachine,data=0,stdrot=true,face0-5=0:ic2/machine/blockMachine
+block:id=blockMachine,data=1,stdrot=true,face0-5=0:ic2/machine/blockIronFurnace
+block:id=blockMachine,data=2,stdrot=true,face0-5=0:ic2/machine/blockElecFurnace
+block:id=blockMachine,data=3,stdrot=true,face0-5=0:ic2/machine/blockMacerator
+block:id=blockMachine,data=4,stdrot=true,face0-5=0:ic2/machine/blockExtractor
+block:id=blockMachine,data=5,stdrot=true,face0-5=0:ic2/machine/blockCompressor
+block:id=blockMachine,data=6,stdrot=true,face0-5=0:ic2/machine/blockCanner
+block:id=blockMachine,data=7,stdrot=true,face0-5=0:ic2/machine/blockMiner
+block:id=blockMachine,data=8,stdrot=true,face0-5=0:ic2/machine/blockPump
+block:id=blockMachine,data=9,stdrot=true,face0-5=0:ic2/machine/blockMagnetizer
+block:id=blockMachine,data=10,stdrot=true,face0-5=0:ic2/machine/blockElectrolyzer
+block:id=blockMachine,data=11,stdrot=true,face0-5=0:ic2/machine/blockRecycler
+block:id=blockMachine,data=12,stdrot=true,face0-5=0:ic2/machine/blockAdvMachine
+block:id=blockMachine,data=13,stdrot=true,face0-5=0:ic2/machine/blockInduction
+block:id=blockMachine,data=14,stdrot=true,face0-5=0:ic2/machine/blockMatter
+block:id=blockMachine,data=15,stdrot=true,face0-5=0:ic2/machine/blockTerra
 
-# blockElectric:* (blockElectric), render=41(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
-block:id=blockElectric,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockBatBox
-block:id=blockElectric,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockMFE
-block:id=blockElectric,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockMFSU
-block:id=blockElectric,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockTransformerLV
-block:id=blockElectric,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockTransformerMV
-block:id=blockElectric,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockTransformerHV
-block:id=blockElectric,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockTransformerEV
-block:id=blockElectric,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockCESU
+# blockElectric:* (blockElectric), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
+block:id=blockElectric,data=0,stdrot=true,face0-5=0:ic2/wiring/blockBatBox
+block:id=blockElectric,data=1,stdrot=true,face0-5=0:ic2/wiring/blockMFE
+block:id=blockElectric,data=2,stdrot=true,face0-5=0:ic2/wiring/blockMFSU
+block:id=blockElectric,data=3,stdrot=true,face0-5=0:ic2/wiring/blockTransformerLV
+block:id=blockElectric,data=4,stdrot=true,face0-5=0:ic2/wiring/blockTransformerMV
+block:id=blockElectric,data=5,stdrot=true,face0-5=0:ic2/wiring/blockTransformerHV
+block:id=blockElectric,data=6,stdrot=true,face0-5=0:ic2/wiring/blockTransformerEV
+block:id=blockElectric,data=7,stdrot=true,face0-5=0:ic2/wiring/blockCESU
 
-# blockReactorChamber:* (blockReactorChamber), render=41(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
-block:id=blockReactorChamber,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockReactorChamber
+# blockReactorChamber:* (blockReactorChamber), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
+block:id=blockReactorChamber,data=0,stdrot=true,face0-5=0:ic2/generator/blockReactorChamber
 
-# blockGenerator:* (blockGenerator), render=41(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
-block:id=blockGenerator,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockGenerator
-block:id=blockGenerator,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockGeoGenerator
-block:id=blockGenerator,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockWaterGenerator
-block:id=blockGenerator,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockSolarGenerator
-block:id=blockGenerator,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockWindGenerator
-block:id=blockGenerator,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockNuclearReactor
-block:id=blockGenerator,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockRTGenerator
-block:id=blockGenerator,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/generator/blockSemifluidGenerator
+# blockGenerator:* (blockGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
+block:id=blockGenerator,data=0,stdrot=true,face0-5=0:ic2/generator/blockGenerator
+block:id=blockGenerator,data=1,stdrot=true,face0-5=0:ic2/generator/blockGeoGenerator
+block:id=blockGenerator,data=2,stdrot=true,face0-5=0:ic2/generator/blockWaterGenerator
+block:id=blockGenerator,data=3,stdrot=true,face0-5=0:ic2/generator/blockSolarGenerator
+block:id=blockGenerator,data=4,stdrot=true,face0-5=0:ic2/generator/blockWindGenerator
+block:id=blockGenerator,data=5,stdrot=true,face0-5=0:ic2/generator/blockNuclearReactor
+block:id=blockGenerator,data=6,stdrot=true,face0-5=0:ic2/generator/blockRTGenerator
+block:id=blockGenerator,data=7,stdrot=true,face0-5=0:ic2/generator/blockSemifluidGenerator
 
-# blockCable:* (blockCable), render=42(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
-block:id=blockCable,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockCable
-block:id=blockCable,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockCableO
-block:id=blockCable,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockGoldCable
-block:id=blockCable,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockGoldCableI
-block:id=blockCable,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockGoldCableII
-block:id=blockCable,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockIronCable
-block:id=blockCable,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockIronCableI
-block:id=blockCable,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockIronCableII
-block:id=blockCable,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockIronCableIIII
-block:id=blockCable,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockGlassCable
-block:id=blockCable,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockTinCable
-block:id=blockCable,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockDetectorCable
-block:id=blockCable,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockSplitterCable
-block:id=blockCable,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/cable/blockTinCableI
+# blockCable:* (blockCable), render=ic2.core.block.wiring.RenderBlockCable(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
+block:id=blockCable,data=0,stdrot=true,face0-5=0:ic2/wiring/cable/blockCable
+block:id=blockCable,data=1,stdrot=true,face0-5=0:ic2/wiring/cable/blockCableO
+block:id=blockCable,data=2,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCable
+block:id=blockCable,data=3,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCableI
+block:id=blockCable,data=4,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCableII
+block:id=blockCable,data=5,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCable
+block:id=blockCable,data=6,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableI
+block:id=blockCable,data=7,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableII
+block:id=blockCable,data=8,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableIIII
+block:id=blockCable,data=9,stdrot=true,face0-5=0:ic2/wiring/cable/blockGlassCable
+block:id=blockCable,data=10,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCable
+block:id=blockCable,data=11,stdrot=true,face0-5=0:ic2/wiring/cable/blockDetectorCable
+block:id=blockCable,data=12,stdrot=true,face0-5=0:ic2/wiring/cable/blockSplitterCable
+block:id=blockCable,data=13,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCableI
 
-# blockMetal:* (blockMetal), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockMetal
+# blockMetal:* (blockMetal), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetal
 block:id=blockMetal,data=0,stdrot=true,face0-5=0:ic2/blockMetalCopper
 block:id=blockMetal,data=1,stdrot=true,face0-5=0:ic2/blockMetalTin
 block:id=blockMetal,data=2,stdrot=true,face0-5=0:ic2/blockMetalBronze
 block:id=blockMetal,data=3,stdrot=true,face0-5=0:ic2/blockMetalUranium
 block:id=blockMetal,data=4,stdrot=true,face0-5=0:ic2/blockMetalLead
 
-# blockIronScaffold:* (blockIronScaffold), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
+# blockIronScaffold:* (blockIronScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
 block:id=blockIronScaffold,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,stdrot=true,face0-5=0:ic2/blockIronScaffold
 block:id=blockIronScaffold,data=12,stdrot=true,face0-5=0:ic2/blockIronScaffold.reinforced
 block:id=blockIronScaffold,data=13,data=14,data=15,stdrot=true,face0-5=0:ic2/blockIronScaffold
 
-# blockScaffold:* (blockScaffold), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
+# blockScaffold:* (blockScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
 block:id=blockScaffold,data=0,data=1,data=2,data=3,data=4,stdrot=true,face0-5=0:ic2/blockScaffold
 block:id=blockScaffold,data=5,stdrot=true,face0-5=0:ic2/blockScaffold.reinforced
 block:id=blockScaffold,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:ic2/blockScaffold
 
-# blockWall:* (blockWall), render=47(CUSTOM), opaque=true,cls=ic2.core.block.BlockWall
-block:id=blockWall,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.black
-block:id=blockWall,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.red
-block:id=blockWall,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.green
-block:id=blockWall,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.brown
-block:id=blockWall,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.blue
-block:id=blockWall,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.purple
-block:id=blockWall,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.cyan
-block:id=blockWall,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.lightGray
-block:id=blockWall,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.gray
-block:id=blockWall,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.pink
-block:id=blockWall,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.lime
-block:id=blockWall,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.yellow
-block:id=blockWall,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.lightBlue
-block:id=blockWall,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.magenta
-block:id=blockWall,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.orange
-block:id=blockWall,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/cf/blockWall.white
+# blockWall:* (blockWall), render=ic2.core.block.RenderBlockWall(WALL), opaque=true,cls=ic2.core.block.BlockWall
+block:id=blockWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.black
+block:id=blockWall,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.red
+block:id=blockWall,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.green
+block:id=blockWall,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.brown
+block:id=blockWall,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.blue
+block:id=blockWall,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.purple
+block:id=blockWall,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.cyan
+block:id=blockWall,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.lightGray
+block:id=blockWall,data=8,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.gray
+block:id=blockWall,data=9,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.pink
+block:id=blockWall,data=10,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.lime
+block:id=blockWall,data=11,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.yellow
+block:id=blockWall,data=12,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.lightBlue
+block:id=blockWall,data=13,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.magenta
+block:id=blockWall,data=14,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.orange
+block:id=blockWall,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.white
 
-# blockFoam:* (blockFoam), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockFoam
+# blockFoam:* (blockFoam), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockFoam
 block:id=blockFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockFoam
 
-# blockDoorAlloy:* (blockDoorAlloy), render=7(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
+# blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
 block:id=blockDoorAlloy,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDoorAlloy.top,patch1=0:ic2/blockDoorAlloy.bottom
 
-# blockAlloyGlass:* (blockAlloyGlass), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockTexGlass
+# blockAlloyGlass:* (blockAlloyGlass), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockTexGlass
 block:id=blockAlloyGlass,data=0,stdrot=true,face0-5=0:ic2/blockAlloyGlass
 
-# blockAlloy:* (blockAlloy), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# blockAlloy:* (blockAlloy), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=blockAlloy,data=0,stdrot=true,face0-5=0:ic2/blockAlloy
 
-# blockFenceIron:* (blockFenceIron), render=44(CUSTOM), opaque=false,cls=ic2.core.block.BlockPoleFence
-block:id=blockFenceIron,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/blockFenceIron
+# blockFenceIron:* (blockFenceIron), render=ic2.core.block.RenderBlockFence(FENCE), opaque=false,cls=ic2.core.block.BlockPoleFence
+block:id=blockFenceIron,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/blockFenceIron
 
-# blockRubber:* (blockRubber), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
+# blockRubber:* (blockRubber), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
 block:id=blockRubber,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/blockRubber
 
-# blockHarz:* (blockHarz), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
+# blockHarz:* (blockHarz), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
 block:id=blockHarz,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/blockHarz
 
-# blockRubSapling:* (blockRubSapling), render=1(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
+# blockRubSapling:* (blockRubSapling), render=(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
 block:id=blockRubSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockRubSapling
 
-# blockRubLeaves:* (blockRubLeaves), render=0(STANDARD), opaque=false,cls=ic2.core.block.BlockRubLeaves
+# blockRubLeaves:* (blockRubLeaves), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubLeaves
 block:id=blockRubLeaves,data=*,stdrot=true,face0-5=14000:ic2/blockRubLeaves
 
-# blockRubWood:* (blockRubWood), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockRubWood
+# blockRubWood:* (blockRubWood), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockRubWood
 block:id=blockRubWood,data=0,data=1,stdrot=true,face0-5=0:ic2/blockRubWood
 block:id=blockRubWood,data=2,data=3,data=4,data=5,stdrot=true,face0-5=0:ic2/blockRubWood.wet
 block:id=blockRubWood,data=6,data=7,stdrot=true,face0-5=0:ic2/blockRubWood
@@ -329,11 +329,11 @@ block:id=blockRubWood,data=8,data=9,data=10,data=11,stdrot=true,face0-5=0:ic2/bl
 block:id=blockRubWood,data=12,data=13,stdrot=true,face0-5=0:ic2/blockRubWood
 block:id=blockRubWood,data=14,data=15,stdrot=true,face0-5=0:ic2/blockRubWood.dry
 
-# blockOreUran:* (blockOreUran), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# blockOreUran:* (blockOreUran), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=blockOreUran,data=0,stdrot=true,face0-5=0:ic2/blockOreUran
 
-# blockOreTin:* (blockOreTin), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# blockOreTin:* (blockOreTin), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=blockOreTin,data=0,stdrot=true,face0-5=0:ic2/blockOreTin
 
-# blockOreCopper:* (blockOreCopper), render=0(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+# blockOreCopper:* (blockOreCopper), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=blockOreCopper,data=0,stdrot=true,face0-5=0:ic2/blockOreCopper

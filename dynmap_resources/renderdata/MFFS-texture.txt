@@ -15,23 +15,23 @@ texture:id=mffs/machine,filename=assets/mffs/textures/blocks/machine.png
 
 
 
-# forceField:* (tile.mffs:forceField), render=125(CUSTOM), opaque=false,cls=mffs.block.BlockForceField
-block:id=forceField,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/forceField
+# forceField:* (tile.mffs:forceField), render=mffs.render.RenderForceField(CUSTOM), opaque=false,cls=mffs.block.BlockForceField
+block:id=forceField,data=*,stdrot=true,face0-5=12000:mffs/forceField
 
-# coercionDeriver:* (tile.mffs:coercionDeriver), render=126(CUSTOM), opaque=false,cls=mffs.block.BlockCoercionDeriver
+# coercionDeriver:* (tile.mffs:coercionDeriver), render=mffs.render.RenderBlockHandler(CUSTOM), opaque=false,cls=mffs.block.BlockCoercionDeriver
 block:id=coercionDeriver,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/machine
 
-# fortronCapacitor:* (tile.mffs:fortronCapacitor), render=126(CUSTOM), opaque=false,cls=mffs.block.BlockFortronCapacitor
-block:id=fortronCapacitor,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/machine
+# fortronCapacitor:* (tile.mffs:fortronCapacitor), render=mffs.render.RenderBlockHandler(CUSTOM), opaque=false,cls=mffs.block.BlockFortronCapacitor
+block:id=fortronCapacitor,data=*,stdrot=true,face0-5=0:mffs/machine
 
-# projector:* (tile.mffs:projector), render=126(CUSTOM), opaque=false,cls=mffs.block.BlockForceFieldProjector
+# projector:* (tile.mffs:projector), render=mffs.render.RenderBlockHandler(CUSTOM), opaque=false,cls=mffs.block.BlockForceFieldProjector
 block:id=projector,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/machine
 
-# biometricIdentifier:* (tile.mffs:biometricIdentifier), render=0(STANDARD), opaque=true,cls=mffs.block.BlockBiometricIdentifier
+# biometricIdentifier:* (tile.mffs:biometricIdentifier), render=(STANDARD), opaque=true,cls=mffs.block.BlockBiometricIdentifier
 block:id=biometricIdentifier,data=*,stdrot=true,face0-5=0:mffs/biometricIdentifier
 
-# interdictionMatrix:* (tile.mffs:interdictionMatrix), render=0(STANDARD), opaque=true,cls=mffs.block.BlockInterdictionMatrix
+# interdictionMatrix:* (tile.mffs:interdictionMatrix), render=(STANDARD), opaque=true,cls=mffs.block.BlockInterdictionMatrix
 block:id=interdictionMatrix,data=*,stdrot=true,face0-5=0:mffs/interdictionMatrix
 
-# manipulator:* (tile.mffs:manipulator), render=126(CUSTOM), opaque=false,cls=mffs.block.BlockForceManipulator
-block:id=manipulator,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mffs/machine
+# manipulator:* (tile.mffs:manipulator), render=mffs.render.RenderBlockHandler(CUSTOM), opaque=false,cls=mffs.block.BlockForceManipulator
+block:id=manipulator,data=*,stdrot=true,face0-5=0:mffs/machine

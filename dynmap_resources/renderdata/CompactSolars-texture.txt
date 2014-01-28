@@ -20,7 +20,7 @@ texture:id=compactsolars/mvTop,filename=assets/compactsolars/textures/blocks/mvT
 
 
 
-# compactSolar:* (CompactSolarBlock), render=0(STANDARD), opaque=true,cls=cpw.mods.compactsolars.BlockCompactSolar
+# compactSolar:* (CompactSolarBlock), render=(STANDARD), opaque=true,cls=cpw.mods.compactsolars.BlockCompactSolar
 block:id=compactSolar,data=0,stdrot=true,face0=0:compactsolars/lvBottom,face1=0:compactsolars/lvTop,face2-5=0:compactsolars/lvSide
 block:id=compactSolar,data=1,stdrot=true,face0=0:compactsolars/mvBottom,face1=0:compactsolars/mvTop,face2-5=0:compactsolars/mvSide
 block:id=compactSolar,data=2,stdrot=true,face0=0:compactsolars/hvBottom,face1=0:compactsolars/hvTop,face2-5=0:compactsolars/hvSide

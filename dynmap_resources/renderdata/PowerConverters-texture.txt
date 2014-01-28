@@ -27,15 +27,15 @@ texture:id=PowerConverters/tile.powerconverters.te.producer.off,filename=assets/
 
 
 
-# ID.BlockCommon:* (tile.powerconverters.common), render=0(STANDARD), opaque=true,cls=powercrystals.powerconverters.common.BlockPowerConverterCommon
+# ID.BlockCommon:* (tile.powerconverters.common), render=(STANDARD), opaque=true,cls=powercrystals.powerconverters.common.BlockPowerConverterCommon
 block:id=ID.BlockCommon,data=0,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.common.bridge
 block:id=ID.BlockCommon,data=2,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.common.charger.off
 
-# ID.BlockBuildcraft:* (tile.powerconverters.bc), render=0(STANDARD), opaque=true,cls=powercrystals.powerconverters.power.buildcraft.BlockPowerConverterBuildCraft
+# ID.BlockBuildcraft:* (tile.powerconverters.bc), render=(STANDARD), opaque=true,cls=powercrystals.powerconverters.power.buildcraft.BlockPowerConverterBuildCraft
 block:id=ID.BlockBuildcraft,data=0,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.bc.consumer.off
 block:id=ID.BlockBuildcraft,data=1,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.bc.producer.off
 
-# ID.BlockIndustrialCraft:* (tile.powerconverters.ic2), render=0(STANDARD), opaque=true,cls=powercrystals.powerconverters.power.ic2.BlockPowerConverterIndustrialCraft
+# ID.BlockIndustrialCraft:* (tile.powerconverters.ic2), render=(STANDARD), opaque=true,cls=powercrystals.powerconverters.power.ic2.BlockPowerConverterIndustrialCraft
 block:id=ID.BlockIndustrialCraft,data=0,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.ic2.lv.consumer.off
 block:id=ID.BlockIndustrialCraft,data=1,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.ic2.lv.producer.off
 block:id=ID.BlockIndustrialCraft,data=2,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.ic2.mv.consumer.off
@@ -45,10 +45,10 @@ block:id=ID.BlockIndustrialCraft,data=5,stdrot=true,face0-5=0:PowerConverters/ti
 block:id=ID.BlockIndustrialCraft,data=6,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.ic2.ev.consumer.off
 block:id=ID.BlockIndustrialCraft,data=7,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.ic2.ev.producer.off
 
-# ID.BlockSteam:* (tile.powerconverters.steam), render=0(STANDARD), opaque=true,cls=powercrystals.powerconverters.power.steam.BlockPowerConverterSteam
+# ID.BlockSteam:* (tile.powerconverters.steam), render=(STANDARD), opaque=true,cls=powercrystals.powerconverters.power.steam.BlockPowerConverterSteam
 block:id=ID.BlockSteam,data=0,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.steam.consumer.off
 block:id=ID.BlockSteam,data=1,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.steam.producer.off
 
-# ID.BlockThermalExpansion:* (tile.powerconverters.te), render=0(STANDARD), opaque=true,cls=powercrystals.powerconverters.power.thermalexpansion.BlockPowerConverterRF
+# ID.BlockThermalExpansion:* (tile.powerconverters.te), render=(STANDARD), opaque=true,cls=powercrystals.powerconverters.power.thermalexpansion.BlockPowerConverterRF
 block:id=ID.BlockThermalExpansion,data=0,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.te.consumer.off
 block:id=ID.BlockThermalExpansion,data=1,stdrot=true,face0-5=0:PowerConverters/tile.powerconverters.te.producer.off

@@ -197,15 +197,15 @@ biome:id=biome/wasteland.id,grassColorMult=1BFB755,foliageColorMult=1AEA42A,wate
 biome:id=biome/woodlands.id,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
 
 
-# redrock.id:* (tile.extrabiomes.redrock:extrabiomes.blocks.BlockRedRock), render=0(STANDARD), opaque=true,cls=extrabiomes.blocks.BlockRedRock
+# redrock.id:* (tile.extrabiomes.redrock:extrabiomes.blocks.BlockRedRock), render=(STANDARD), opaque=true,cls=extrabiomes.blocks.BlockRedRock
 block:id=redrock.id,data=0,stdrot=true,face0-5=0:extrabiomesxl/redrock
 block:id=redrock.id,data=1,stdrot=true,face0-5=0:extrabiomesxl/redrockcobble
 block:id=redrock.id,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/redrockbrick
 
-# crackedsand.id:* (tile.extrabiomes.crackedsand:extrabiomes.blocks.GenericTerrainBlock), render=0(STANDARD), opaque=true,cls=extrabiomes.blocks.GenericTerrainBlock
+# crackedsand.id:* (tile.extrabiomes.crackedsand:extrabiomes.blocks.GenericTerrainBlock), render=(STANDARD), opaque=true,cls=extrabiomes.blocks.GenericTerrainBlock
 block:id=crackedsand.id,data=*,stdrot=true,face0-5=0:extrabiomesxl/crackedsand
 
-# autumnleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockAutumnLeaves), render=0(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockAutumnLeaves
+# autumnleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockAutumnLeaves), render=(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockAutumnLeaves
 block:id=autumnleaves.id,data=0,stdrot=true,face0-5=0:extrabiomesxl/leavesbrownautumnfancy
 block:id=autumnleaves.id,data=1,stdrot=true,face0-5=0:extrabiomesxl/leavesorangeautumnfancy
 block:id=autumnleaves.id,data=2,stdrot=true,face0-5=0:extrabiomesxl/leavesredautumnfancy
@@ -223,10 +223,10 @@ block:id=autumnleaves.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/leavesorang
 block:id=autumnleaves.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/leavesredautumnfancy
 block:id=autumnleaves.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/leavesyellowautumnfancy
 
-# cattail.id:* (tile.extrabiomes.cattail:extrabiomes.blocks.BlockCatTail), render=6(CROPS), opaque=false,cls=extrabiomes.blocks.BlockCatTail
+# cattail.id:* (tile.extrabiomes.cattail:extrabiomes.blocks.BlockCatTail), render=(CROPS), opaque=false,cls=extrabiomes.blocks.BlockCatTail
 block:id=cattail.id,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/cattail
 
-# flower.id:* (tile.extrabiomes.flower:extrabiomes.blocks.BlockCustomFlower), render=1(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomFlower
+# flower.id:* (tile.extrabiomes.flower:extrabiomes.blocks.BlockCustomFlower), render=(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomFlower
 block:id=flower.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/autumnshrub
 block:id=flower.id,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/hydrangea
 block:id=flower.id,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/buttercup
@@ -237,7 +237,7 @@ block:id=flower.id,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabio
 block:id=flower.id,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/calla
 block:id=flower.id,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/autumnshrub
 
-# grass.id:* (tile.extrabiomes.tallgrass:extrabiomes.blocks.BlockCustomTallGrass), render=1(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomTallGrass
+# grass.id:* (tile.extrabiomes.tallgrass:extrabiomes.blocks.BlockCustomTallGrass), render=(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomTallGrass
 block:id=grass.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/browngrasstall
 block:id=grass.id,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/browngrassshort
 block:id=grass.id,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/deadgrassshort
@@ -245,7 +245,7 @@ block:id=grass.id,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiom
 block:id=grass.id,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/deadgrassyellow
 block:id=grass.id,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/browngrasstall
 
-# greenleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockGreenLeaves), render=0(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockGreenLeaves
+# greenleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockGreenLeaves), render=(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockGreenLeaves
 block:id=greenleaves.id,data=0,stdrot=true,face0-5=13000:extrabiomesxl/leavesfirfancy
 block:id=greenleaves.id,data=1,stdrot=true,face0-5=2000:extrabiomesxl/leavesredwoodfancy
 block:id=greenleaves.id,data=2,stdrot=true,colorMult=FF9BA72F,face0-5=17000:extrabiomesxl/leavesacaciafancy
@@ -263,10 +263,10 @@ block:id=greenleaves.id,data=13,stdrot=true,face0-5=2000:extrabiomesxl/leavesred
 block:id=greenleaves.id,data=14,stdrot=true,colorMult=FF9BA72F,face0-5=17000:extrabiomesxl/leavesacaciafancy
 block:id=greenleaves.id,data=15,stdrot=true,colorMult=E5FFF3,face0-5=17000:extrabiomesxl/leavescypressfancy
 
-# leafpile.id:* (tile.extrabiomes.leafpile:extrabiomes.blocks.BlockLeafPile), render=0(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockLeafPile
+# leafpile.id:* (tile.extrabiomes.leafpile:extrabiomes.blocks.BlockLeafPile), render=(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockLeafPile
 block:id=leafpile.id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=2000:extrabiomesxl/leafpile
 
-# redrockslab.id:* (tile.extrabiomes.redrockslab:extrabiomes.module.fabrica.block.BlockRedRockSlab), render=0(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockRedRockSlab
+# redrockslab.id:* (tile.extrabiomes.redrockslab:extrabiomes.module.fabrica.block.BlockRedRockSlab), render=(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockRedRockSlab
 block:id=redrockslab.id,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/redrockcobble
 block:id=redrockslab.id,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-1=0:extrabiomesxl/redrockslabtop,face2-5=0:extrabiomesxl/redrockslabside
 block:id=redrockslab.id,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/redrockbrick
@@ -275,7 +275,7 @@ block:id=redrockslab.id,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-1=
 block:id=redrockslab.id,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/redrockbrick
 block:id=redrockslab.id,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/redrockcobble
 
-# sapling.id:* (tile.extrabiomes.sapling:extrabiomes.blocks.BlockCustomSapling), render=1(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomSapling
+# sapling.id:* (tile.extrabiomes.sapling:extrabiomes.blocks.BlockCustomSapling), render=(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomSapling
 block:id=sapling.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingbrownautumn
 block:id=sapling.id,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingorangeautumn
 block:id=sapling.id,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingredautumn
@@ -293,7 +293,7 @@ block:id=sapling.id,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:extrab
 block:id=sapling.id,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingacacia
 block:id=sapling.id,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingcypress
 
-# customlog.id:* (tile.extrabiomes.log:extrabiomes.blocks.BlockCustomLog), render=31(LOG), opaque=true,cls=extrabiomes.blocks.BlockCustomLog
+# customlog.id:* (tile.extrabiomes.log:extrabiomes.blocks.BlockCustomLog), render=(LOG), opaque=true,cls=extrabiomes.blocks.BlockCustomLog
 block:id=customlog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/logfirtop,face2-5=0:extrabiomesxl/logfirside
 block:id=customlog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/logacaciatop,face2-5=0:extrabiomesxl/logacaciaside
 block:id=customlog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/logcypresstop,face2-5=0:extrabiomesxl/logcypressside
@@ -311,85 +311,85 @@ block:id=customlog.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/logacaciaside
 block:id=customlog.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/logcypressside
 block:id=customlog.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/logjapanesemapleside
 
-# quarterlog0.id:* (tile.extrabiomes.log.quarter:NW:extrabiomes.blocks.BlockQuarterLog), render=49(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
-block:id=quarterlog0.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/redwoodtopleft,face2=0:extrabiomesxl/logredwoodsideright,face3=0:extrabiomesxl/redwoodsideleft,face4=0:extrabiomesxl/logredwoodsideleft,face5=0:extrabiomesxl/redwoodsideright
-block:id=quarterlog0.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/firtopleft,face2=0:extrabiomesxl/logfirsideright,face3=0:extrabiomesxl/firsideleft,face4=0:extrabiomesxl/logfirsideleft,face5=0:extrabiomesxl/firsideright
-block:id=quarterlog0.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/oaktopleft,face2=0:extrabiomesxl/logoaksideright,face3=0:extrabiomesxl/oaksideleft,face4=0:extrabiomesxl/logoaksideleft,face5=0:extrabiomesxl/oaksideright
-block:id=quarterlog0.id,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/redwoodtopleft,face2=0:extrabiomesxl/logredwoodsideright,face3=0:extrabiomesxl/redwoodsideleft,face4=0:extrabiomesxl/logredwoodsideleft,face5=0:extrabiomesxl/redwoodsideright
-block:id=quarterlog0.id,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/redwoodsideleft,face1=0:extrabiomesxl/logredwoodsideright,face2=0:extrabiomesxl/redwoodsideright,face3=0:extrabiomesxl/logredwoodsideleft,face4=0:extrabiomesxl/redwoodtopright,face5=0:extrabiomesxl/redwoodtopleft
-block:id=quarterlog0.id,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/firsideleft,face1=0:extrabiomesxl/logfirsideright,face2=0:extrabiomesxl/firsideright,face3=0:extrabiomesxl/logfirsideleft,face4=0:extrabiomesxl/firtopright,face5=0:extrabiomesxl/firtopleft
-block:id=quarterlog0.id,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/oaksideleft,face1=0:extrabiomesxl/logoaksideright,face2=0:extrabiomesxl/oaksideright,face3=0:extrabiomesxl/logoaksideleft,face4=0:extrabiomesxl/oaktopright,face5=0:extrabiomesxl/oaktopleft
-block:id=quarterlog0.id,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/redwoodsideleft,face1=0:extrabiomesxl/logredwoodsideright,face2=0:extrabiomesxl/redwoodsideright,face3=0:extrabiomesxl/logredwoodsideleft,face4=0:extrabiomesxl/redwoodtopright,face5=0:extrabiomesxl/redwoodtopleft
-block:id=quarterlog0.id,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/redwoodsideleft,face1=0:extrabiomesxl/logredwoodsideleft,face2=0:extrabiomesxl/redwoodtopright,face3=0:extrabiomesxl/redwoodtopleft,face4=0:extrabiomesxl/logredwoodsideright,face5=0:extrabiomesxl/redwoodsideright
-block:id=quarterlog0.id,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/firsideleft,face1=0:extrabiomesxl/logfirsideleft,face2=0:extrabiomesxl/firtopright,face3=0:extrabiomesxl/firtopleft,face4=0:extrabiomesxl/logfirsideright,face5=0:extrabiomesxl/firsideright
-block:id=quarterlog0.id,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/oaksideleft,face1=0:extrabiomesxl/logoaksideleft,face2=0:extrabiomesxl/oaktopright,face3=0:extrabiomesxl/oaktopleft,face4=0:extrabiomesxl/logoaksideright,face5=0:extrabiomesxl/oaksideright
-block:id=quarterlog0.id,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/redwoodsideleft,face1=0:extrabiomesxl/logredwoodsideleft,face2=0:extrabiomesxl/redwoodtopright,face3=0:extrabiomesxl/redwoodtopleft,face4=0:extrabiomesxl/logredwoodsideright,face5=0:extrabiomesxl/redwoodsideright
-block:id=quarterlog0.id,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logredwoodsideleft
-block:id=quarterlog0.id,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logfirsideleft
-block:id=quarterlog0.id,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logoaksideleft
-block:id=quarterlog0.id,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logredwoodsideleft
+# quarterlog0.id:* (tile.extrabiomes.log.quarter:NW:extrabiomes.blocks.BlockQuarterLog), render=extrabiomes.renderers.RenderQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
+block:id=quarterlog0.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/redwoodtopleft,face2=0:extrabiomesxl/logredwoodsideright,face3=0:extrabiomesxl/redwoodsideleft,face4=0:extrabiomesxl/logredwoodsideleft,face5=0:extrabiomesxl/redwoodsideright
+block:id=quarterlog0.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/firtopleft,face2=0:extrabiomesxl/logfirsideright,face3=0:extrabiomesxl/firsideleft,face4=0:extrabiomesxl/logfirsideleft,face5=0:extrabiomesxl/firsideright
+block:id=quarterlog0.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/oaktopleft,face2=0:extrabiomesxl/logoaksideright,face3=0:extrabiomesxl/oaksideleft,face4=0:extrabiomesxl/logoaksideleft,face5=0:extrabiomesxl/oaksideright
+block:id=quarterlog0.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/redwoodtopleft,face2=0:extrabiomesxl/logredwoodsideright,face3=0:extrabiomesxl/redwoodsideleft,face4=0:extrabiomesxl/logredwoodsideleft,face5=0:extrabiomesxl/redwoodsideright
+block:id=quarterlog0.id,data=4,stdrot=true,face0=0:extrabiomesxl/redwoodsideleft,face1=0:extrabiomesxl/logredwoodsideright,face2=0:extrabiomesxl/redwoodsideright,face3=0:extrabiomesxl/logredwoodsideleft,face4=0:extrabiomesxl/redwoodtopright,face5=0:extrabiomesxl/redwoodtopleft
+block:id=quarterlog0.id,data=5,stdrot=true,face0=0:extrabiomesxl/firsideleft,face1=0:extrabiomesxl/logfirsideright,face2=0:extrabiomesxl/firsideright,face3=0:extrabiomesxl/logfirsideleft,face4=0:extrabiomesxl/firtopright,face5=0:extrabiomesxl/firtopleft
+block:id=quarterlog0.id,data=6,stdrot=true,face0=0:extrabiomesxl/oaksideleft,face1=0:extrabiomesxl/logoaksideright,face2=0:extrabiomesxl/oaksideright,face3=0:extrabiomesxl/logoaksideleft,face4=0:extrabiomesxl/oaktopright,face5=0:extrabiomesxl/oaktopleft
+block:id=quarterlog0.id,data=7,stdrot=true,face0=0:extrabiomesxl/redwoodsideleft,face1=0:extrabiomesxl/logredwoodsideright,face2=0:extrabiomesxl/redwoodsideright,face3=0:extrabiomesxl/logredwoodsideleft,face4=0:extrabiomesxl/redwoodtopright,face5=0:extrabiomesxl/redwoodtopleft
+block:id=quarterlog0.id,data=8,stdrot=true,face0=0:extrabiomesxl/redwoodsideleft,face1=0:extrabiomesxl/logredwoodsideleft,face2=0:extrabiomesxl/redwoodtopright,face3=0:extrabiomesxl/redwoodtopleft,face4=0:extrabiomesxl/logredwoodsideright,face5=0:extrabiomesxl/redwoodsideright
+block:id=quarterlog0.id,data=9,stdrot=true,face0=0:extrabiomesxl/firsideleft,face1=0:extrabiomesxl/logfirsideleft,face2=0:extrabiomesxl/firtopright,face3=0:extrabiomesxl/firtopleft,face4=0:extrabiomesxl/logfirsideright,face5=0:extrabiomesxl/firsideright
+block:id=quarterlog0.id,data=10,stdrot=true,face0=0:extrabiomesxl/oaksideleft,face1=0:extrabiomesxl/logoaksideleft,face2=0:extrabiomesxl/oaktopright,face3=0:extrabiomesxl/oaktopleft,face4=0:extrabiomesxl/logoaksideright,face5=0:extrabiomesxl/oaksideright
+block:id=quarterlog0.id,data=11,stdrot=true,face0=0:extrabiomesxl/redwoodsideleft,face1=0:extrabiomesxl/logredwoodsideleft,face2=0:extrabiomesxl/redwoodtopright,face3=0:extrabiomesxl/redwoodtopleft,face4=0:extrabiomesxl/logredwoodsideright,face5=0:extrabiomesxl/redwoodsideright
+block:id=quarterlog0.id,data=12,stdrot=true,face0-5=0:extrabiomesxl/logredwoodsideleft
+block:id=quarterlog0.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/logfirsideleft
+block:id=quarterlog0.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/logoaksideleft
+block:id=quarterlog0.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/logredwoodsideleft
 
-# wall.id:* (tile.extrabiomes.wall:extrabiomes.module.fabrica.block.BlockCustomWall), render=32(WALL), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomWall
+# wall.id:* (tile.extrabiomes.wall:extrabiomes.module.fabrica.block.BlockCustomWall), render=(WALL), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomWall
 block:id=wall.id,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:extrabiomesxl/redrockcobble
 
-# quarterlog1.id:* (tile.extrabiomes.log.quarter:NE:extrabiomes.blocks.BlockQuarterLog), render=49(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
-block:id=quarterlog1.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/redwoodtopright,face2=0:extrabiomesxl/logredwoodsideleft,face3=0:extrabiomesxl/redwoodsideright,face4=0:extrabiomesxl/redwoodsideleft,face5=0:extrabiomesxl/logredwoodsideright
-block:id=quarterlog1.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/firtopright,face2=0:extrabiomesxl/logfirsideleft,face3=0:extrabiomesxl/firsideright,face4=0:extrabiomesxl/firsideleft,face5=0:extrabiomesxl/logfirsideright
-block:id=quarterlog1.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/oaktopright,face2=0:extrabiomesxl/logoaksideleft,face3=0:extrabiomesxl/oaksideright,face4=0:extrabiomesxl/oaksideleft,face5=0:extrabiomesxl/logoaksideright
-block:id=quarterlog1.id,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/redwoodtopright,face2=0:extrabiomesxl/logredwoodsideleft,face3=0:extrabiomesxl/redwoodsideright,face4=0:extrabiomesxl/redwoodsideleft,face5=0:extrabiomesxl/logredwoodsideright
-block:id=quarterlog1.id,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/redwoodsideright,face1=0:extrabiomesxl/logredwoodsideleft,face2=0:extrabiomesxl/logredwoodsideright,face3=0:extrabiomesxl/redwoodsideleft,face4=0:extrabiomesxl/redwoodtopleft,face5=0:extrabiomesxl/redwoodtopright
-block:id=quarterlog1.id,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/firsideright,face1=0:extrabiomesxl/logfirsideleft,face2=0:extrabiomesxl/logfirsideright,face3=0:extrabiomesxl/firsideleft,face4=0:extrabiomesxl/firtopleft,face5=0:extrabiomesxl/firtopright
-block:id=quarterlog1.id,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/oaksideright,face1=0:extrabiomesxl/logoaksideleft,face2=0:extrabiomesxl/logoaksideright,face3=0:extrabiomesxl/oaksideleft,face4=0:extrabiomesxl/oaktopleft,face5=0:extrabiomesxl/oaktopright
-block:id=quarterlog1.id,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/redwoodsideright,face1=0:extrabiomesxl/logredwoodsideleft,face2=0:extrabiomesxl/logredwoodsideright,face3=0:extrabiomesxl/redwoodsideleft,face4=0:extrabiomesxl/redwoodtopleft,face5=0:extrabiomesxl/redwoodtopright
-block:id=quarterlog1.id,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/redwoodsideright,face1=0:extrabiomesxl/logredwoodsideright,face2=0:extrabiomesxl/redwoodtopleft,face3=0:extrabiomesxl/redwoodtopright,face4=0:extrabiomesxl/redwoodsideright,face5=0:extrabiomesxl/logredwoodsideright
-block:id=quarterlog1.id,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/firsideright,face1=0:extrabiomesxl/logfirsideright,face2=0:extrabiomesxl/firtopleft,face3=0:extrabiomesxl/firtopright,face4=0:extrabiomesxl/firsideright,face5=0:extrabiomesxl/logfirsideright
-block:id=quarterlog1.id,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/oaksideright,face1=0:extrabiomesxl/logoaksideright,face2=0:extrabiomesxl/oaktopleft,face3=0:extrabiomesxl/oaktopright,face4=0:extrabiomesxl/oaksideright,face5=0:extrabiomesxl/logoaksideright
-block:id=quarterlog1.id,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/redwoodsideright,face1=0:extrabiomesxl/logredwoodsideright,face2=0:extrabiomesxl/redwoodtopleft,face3=0:extrabiomesxl/redwoodtopright,face4=0:extrabiomesxl/redwoodsideright,face5=0:extrabiomesxl/logredwoodsideright
-block:id=quarterlog1.id,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logredwoodsideleft
-block:id=quarterlog1.id,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logfirsideleft
-block:id=quarterlog1.id,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logoaksideleft
-block:id=quarterlog1.id,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logredwoodsideleft
+# quarterlog1.id:* (tile.extrabiomes.log.quarter:NE:extrabiomes.blocks.BlockQuarterLog), render=extrabiomes.renderers.RenderQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
+block:id=quarterlog1.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/redwoodtopright,face2=0:extrabiomesxl/logredwoodsideleft,face3=0:extrabiomesxl/redwoodsideright,face4=0:extrabiomesxl/redwoodsideleft,face5=0:extrabiomesxl/logredwoodsideright
+block:id=quarterlog1.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/firtopright,face2=0:extrabiomesxl/logfirsideleft,face3=0:extrabiomesxl/firsideright,face4=0:extrabiomesxl/firsideleft,face5=0:extrabiomesxl/logfirsideright
+block:id=quarterlog1.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/oaktopright,face2=0:extrabiomesxl/logoaksideleft,face3=0:extrabiomesxl/oaksideright,face4=0:extrabiomesxl/oaksideleft,face5=0:extrabiomesxl/logoaksideright
+block:id=quarterlog1.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/redwoodtopright,face2=0:extrabiomesxl/logredwoodsideleft,face3=0:extrabiomesxl/redwoodsideright,face4=0:extrabiomesxl/redwoodsideleft,face5=0:extrabiomesxl/logredwoodsideright
+block:id=quarterlog1.id,data=4,stdrot=true,face0=0:extrabiomesxl/redwoodsideright,face1=0:extrabiomesxl/logredwoodsideleft,face2=0:extrabiomesxl/logredwoodsideright,face3=0:extrabiomesxl/redwoodsideleft,face4=0:extrabiomesxl/redwoodtopleft,face5=0:extrabiomesxl/redwoodtopright
+block:id=quarterlog1.id,data=5,stdrot=true,face0=0:extrabiomesxl/firsideright,face1=0:extrabiomesxl/logfirsideleft,face2=0:extrabiomesxl/logfirsideright,face3=0:extrabiomesxl/firsideleft,face4=0:extrabiomesxl/firtopleft,face5=0:extrabiomesxl/firtopright
+block:id=quarterlog1.id,data=6,stdrot=true,face0=0:extrabiomesxl/oaksideright,face1=0:extrabiomesxl/logoaksideleft,face2=0:extrabiomesxl/logoaksideright,face3=0:extrabiomesxl/oaksideleft,face4=0:extrabiomesxl/oaktopleft,face5=0:extrabiomesxl/oaktopright
+block:id=quarterlog1.id,data=7,stdrot=true,face0=0:extrabiomesxl/redwoodsideright,face1=0:extrabiomesxl/logredwoodsideleft,face2=0:extrabiomesxl/logredwoodsideright,face3=0:extrabiomesxl/redwoodsideleft,face4=0:extrabiomesxl/redwoodtopleft,face5=0:extrabiomesxl/redwoodtopright
+block:id=quarterlog1.id,data=8,stdrot=true,face0=0:extrabiomesxl/redwoodsideright,face1=0:extrabiomesxl/logredwoodsideright,face2=0:extrabiomesxl/redwoodtopleft,face3=0:extrabiomesxl/redwoodtopright,face4=0:extrabiomesxl/redwoodsideright,face5=0:extrabiomesxl/logredwoodsideright
+block:id=quarterlog1.id,data=9,stdrot=true,face0=0:extrabiomesxl/firsideright,face1=0:extrabiomesxl/logfirsideright,face2=0:extrabiomesxl/firtopleft,face3=0:extrabiomesxl/firtopright,face4=0:extrabiomesxl/firsideright,face5=0:extrabiomesxl/logfirsideright
+block:id=quarterlog1.id,data=10,stdrot=true,face0=0:extrabiomesxl/oaksideright,face1=0:extrabiomesxl/logoaksideright,face2=0:extrabiomesxl/oaktopleft,face3=0:extrabiomesxl/oaktopright,face4=0:extrabiomesxl/oaksideright,face5=0:extrabiomesxl/logoaksideright
+block:id=quarterlog1.id,data=11,stdrot=true,face0=0:extrabiomesxl/redwoodsideright,face1=0:extrabiomesxl/logredwoodsideright,face2=0:extrabiomesxl/redwoodtopleft,face3=0:extrabiomesxl/redwoodtopright,face4=0:extrabiomesxl/redwoodsideright,face5=0:extrabiomesxl/logredwoodsideright
+block:id=quarterlog1.id,data=12,stdrot=true,face0-5=0:extrabiomesxl/logredwoodsideleft
+block:id=quarterlog1.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/logfirsideleft
+block:id=quarterlog1.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/logoaksideleft
+block:id=quarterlog1.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/logredwoodsideleft
 
-# quarterlog2.id:* (tile.extrabiomes.log.quarter:SW:extrabiomes.blocks.BlockQuarterLog), render=49(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
-block:id=quarterlog2.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/redwoodbottomleft,face2=0:extrabiomesxl/redwoodsideright,face3=0:extrabiomesxl/logredwoodsideleft,face4=0:extrabiomesxl/logredwoodsideright,face5=0:extrabiomesxl/redwoodsideleft
-block:id=quarterlog2.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/firbottomleft,face2=0:extrabiomesxl/firsideright,face3=0:extrabiomesxl/logfirsideleft,face4=0:extrabiomesxl/logfirsideright,face5=0:extrabiomesxl/firsideleft
-block:id=quarterlog2.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/oakbottomleft,face2=0:extrabiomesxl/oaksideright,face3=0:extrabiomesxl/logoaksideleft,face4=0:extrabiomesxl/logoaksideright,face5=0:extrabiomesxl/oaksideleft
-block:id=quarterlog2.id,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/redwoodbottomleft,face2=0:extrabiomesxl/redwoodsideright,face3=0:extrabiomesxl/logredwoodsideleft,face4=0:extrabiomesxl/logredwoodsideright,face5=0:extrabiomesxl/redwoodsideleft
-block:id=quarterlog2.id,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logredwoodsideright,face1=0:extrabiomesxl/redwoodsideleft,face2=0:extrabiomesxl/logredwoodsideleft,face3=0:extrabiomesxl/redwoodsideright,face4=0:extrabiomesxl/redwoodbottomleft,face5=0:extrabiomesxl/redwoodbottomright
-block:id=quarterlog2.id,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logfirsideright,face1=0:extrabiomesxl/firsideleft,face2=0:extrabiomesxl/logfirsideleft,face3=0:extrabiomesxl/firsideright,face4=0:extrabiomesxl/firbottomleft,face5=0:extrabiomesxl/firbottomright
-block:id=quarterlog2.id,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logoaksideright,face1=0:extrabiomesxl/oaksideleft,face2=0:extrabiomesxl/logoaksideleft,face3=0:extrabiomesxl/oaksideright,face4=0:extrabiomesxl/oakbottomleft,face5=0:extrabiomesxl/oakbottomright
-block:id=quarterlog2.id,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logredwoodsideright,face1=0:extrabiomesxl/redwoodsideleft,face2=0:extrabiomesxl/logredwoodsideleft,face3=0:extrabiomesxl/redwoodsideright,face4=0:extrabiomesxl/redwoodbottomleft,face5=0:extrabiomesxl/redwoodbottomright
-block:id=quarterlog2.id,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logredwoodsideleft,face1=0:extrabiomesxl/redwoodsideleft,face2=0:extrabiomesxl/redwoodbottomright,face3=0:extrabiomesxl/redwoodbottomleft,face4=0:extrabiomesxl/logredwoodsideleft,face5=0:extrabiomesxl/redwoodsideleft
-block:id=quarterlog2.id,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logfirsideleft,face1=0:extrabiomesxl/firsideleft,face2=0:extrabiomesxl/firbottomright,face3=0:extrabiomesxl/firbottomleft,face4=0:extrabiomesxl/logfirsideleft,face5=0:extrabiomesxl/firsideleft
-block:id=quarterlog2.id,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logoaksideleft,face1=0:extrabiomesxl/oaksideleft,face2=0:extrabiomesxl/oakbottomright,face3=0:extrabiomesxl/oakbottomleft,face4=0:extrabiomesxl/logoaksideleft,face5=0:extrabiomesxl/oaksideleft
-block:id=quarterlog2.id,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logredwoodsideleft,face1=0:extrabiomesxl/redwoodsideleft,face2=0:extrabiomesxl/redwoodbottomright,face3=0:extrabiomesxl/redwoodbottomleft,face4=0:extrabiomesxl/logredwoodsideleft,face5=0:extrabiomesxl/redwoodsideleft
-block:id=quarterlog2.id,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logredwoodsideleft
-block:id=quarterlog2.id,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logfirsideleft
-block:id=quarterlog2.id,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logoaksideleft
-block:id=quarterlog2.id,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logredwoodsideleft
+# quarterlog2.id:* (tile.extrabiomes.log.quarter:SW:extrabiomes.blocks.BlockQuarterLog), render=extrabiomes.renderers.RenderQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
+block:id=quarterlog2.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/redwoodbottomleft,face2=0:extrabiomesxl/redwoodsideright,face3=0:extrabiomesxl/logredwoodsideleft,face4=0:extrabiomesxl/logredwoodsideright,face5=0:extrabiomesxl/redwoodsideleft
+block:id=quarterlog2.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/firbottomleft,face2=0:extrabiomesxl/firsideright,face3=0:extrabiomesxl/logfirsideleft,face4=0:extrabiomesxl/logfirsideright,face5=0:extrabiomesxl/firsideleft
+block:id=quarterlog2.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/oakbottomleft,face2=0:extrabiomesxl/oaksideright,face3=0:extrabiomesxl/logoaksideleft,face4=0:extrabiomesxl/logoaksideright,face5=0:extrabiomesxl/oaksideleft
+block:id=quarterlog2.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/redwoodbottomleft,face2=0:extrabiomesxl/redwoodsideright,face3=0:extrabiomesxl/logredwoodsideleft,face4=0:extrabiomesxl/logredwoodsideright,face5=0:extrabiomesxl/redwoodsideleft
+block:id=quarterlog2.id,data=4,stdrot=true,face0=0:extrabiomesxl/logredwoodsideright,face1=0:extrabiomesxl/redwoodsideleft,face2=0:extrabiomesxl/logredwoodsideleft,face3=0:extrabiomesxl/redwoodsideright,face4=0:extrabiomesxl/redwoodbottomleft,face5=0:extrabiomesxl/redwoodbottomright
+block:id=quarterlog2.id,data=5,stdrot=true,face0=0:extrabiomesxl/logfirsideright,face1=0:extrabiomesxl/firsideleft,face2=0:extrabiomesxl/logfirsideleft,face3=0:extrabiomesxl/firsideright,face4=0:extrabiomesxl/firbottomleft,face5=0:extrabiomesxl/firbottomright
+block:id=quarterlog2.id,data=6,stdrot=true,face0=0:extrabiomesxl/logoaksideright,face1=0:extrabiomesxl/oaksideleft,face2=0:extrabiomesxl/logoaksideleft,face3=0:extrabiomesxl/oaksideright,face4=0:extrabiomesxl/oakbottomleft,face5=0:extrabiomesxl/oakbottomright
+block:id=quarterlog2.id,data=7,stdrot=true,face0=0:extrabiomesxl/logredwoodsideright,face1=0:extrabiomesxl/redwoodsideleft,face2=0:extrabiomesxl/logredwoodsideleft,face3=0:extrabiomesxl/redwoodsideright,face4=0:extrabiomesxl/redwoodbottomleft,face5=0:extrabiomesxl/redwoodbottomright
+block:id=quarterlog2.id,data=8,stdrot=true,face0=0:extrabiomesxl/logredwoodsideleft,face1=0:extrabiomesxl/redwoodsideleft,face2=0:extrabiomesxl/redwoodbottomright,face3=0:extrabiomesxl/redwoodbottomleft,face4=0:extrabiomesxl/logredwoodsideleft,face5=0:extrabiomesxl/redwoodsideleft
+block:id=quarterlog2.id,data=9,stdrot=true,face0=0:extrabiomesxl/logfirsideleft,face1=0:extrabiomesxl/firsideleft,face2=0:extrabiomesxl/firbottomright,face3=0:extrabiomesxl/firbottomleft,face4=0:extrabiomesxl/logfirsideleft,face5=0:extrabiomesxl/firsideleft
+block:id=quarterlog2.id,data=10,stdrot=true,face0=0:extrabiomesxl/logoaksideleft,face1=0:extrabiomesxl/oaksideleft,face2=0:extrabiomesxl/oakbottomright,face3=0:extrabiomesxl/oakbottomleft,face4=0:extrabiomesxl/logoaksideleft,face5=0:extrabiomesxl/oaksideleft
+block:id=quarterlog2.id,data=11,stdrot=true,face0=0:extrabiomesxl/logredwoodsideleft,face1=0:extrabiomesxl/redwoodsideleft,face2=0:extrabiomesxl/redwoodbottomright,face3=0:extrabiomesxl/redwoodbottomleft,face4=0:extrabiomesxl/logredwoodsideleft,face5=0:extrabiomesxl/redwoodsideleft
+block:id=quarterlog2.id,data=12,stdrot=true,face0-5=0:extrabiomesxl/logredwoodsideleft
+block:id=quarterlog2.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/logfirsideleft
+block:id=quarterlog2.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/logoaksideleft
+block:id=quarterlog2.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/logredwoodsideleft
 
-# quarterlog3.id:* (tile.extrabiomes.log.quarter:SE:extrabiomes.blocks.BlockQuarterLog), render=49(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
-block:id=quarterlog3.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/redwoodbottomright,face2=0:extrabiomesxl/redwoodsideleft,face3=0:extrabiomesxl/logredwoodsideright,face4=0:extrabiomesxl/redwoodsideright,face5=0:extrabiomesxl/logredwoodsideleft
-block:id=quarterlog3.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/firbottomright,face2=0:extrabiomesxl/firsideleft,face3=0:extrabiomesxl/logfirsideright,face4=0:extrabiomesxl/firsideright,face5=0:extrabiomesxl/logfirsideleft
-block:id=quarterlog3.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/oakbottomright,face2=0:extrabiomesxl/oaksideleft,face3=0:extrabiomesxl/logoaksideright,face4=0:extrabiomesxl/oaksideright,face5=0:extrabiomesxl/logoaksideleft
-block:id=quarterlog3.id,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/redwoodbottomright,face2=0:extrabiomesxl/redwoodsideleft,face3=0:extrabiomesxl/logredwoodsideright,face4=0:extrabiomesxl/redwoodsideright,face5=0:extrabiomesxl/logredwoodsideleft
-block:id=quarterlog3.id,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logredwoodsideleft,face1=0:extrabiomesxl/redwoodsideright,face2=0:extrabiomesxl/redwoodsideleft,face3=0:extrabiomesxl/logredwoodsideright,face4=0:extrabiomesxl/redwoodbottomright,face5=0:extrabiomesxl/redwoodbottomleft
-block:id=quarterlog3.id,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logfirsideleft,face1=0:extrabiomesxl/firsideright,face2=0:extrabiomesxl/firsideleft,face3=0:extrabiomesxl/logfirsideright,face4=0:extrabiomesxl/firbottomright,face5=0:extrabiomesxl/firbottomleft
-block:id=quarterlog3.id,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logoaksideleft,face1=0:extrabiomesxl/oaksideright,face2=0:extrabiomesxl/oaksideleft,face3=0:extrabiomesxl/logoaksideright,face4=0:extrabiomesxl/oakbottomright,face5=0:extrabiomesxl/oakbottomleft
-block:id=quarterlog3.id,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logredwoodsideleft,face1=0:extrabiomesxl/redwoodsideright,face2=0:extrabiomesxl/redwoodsideleft,face3=0:extrabiomesxl/logredwoodsideright,face4=0:extrabiomesxl/redwoodbottomright,face5=0:extrabiomesxl/redwoodbottomleft
-block:id=quarterlog3.id,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logredwoodsideright,face1=0:extrabiomesxl/redwoodsideright,face2=0:extrabiomesxl/redwoodbottomleft,face3=0:extrabiomesxl/redwoodbottomright,face4=0:extrabiomesxl/redwoodsideleft,face5=0:extrabiomesxl/logredwoodsideleft
-block:id=quarterlog3.id,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logfirsideright,face1=0:extrabiomesxl/firsideright,face2=0:extrabiomesxl/firbottomleft,face3=0:extrabiomesxl/firbottomright,face4=0:extrabiomesxl/firsideleft,face5=0:extrabiomesxl/logfirsideleft
-block:id=quarterlog3.id,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logoaksideright,face1=0:extrabiomesxl/oaksideright,face2=0:extrabiomesxl/oakbottomleft,face3=0:extrabiomesxl/oakbottomright,face4=0:extrabiomesxl/oaksideleft,face5=0:extrabiomesxl/logoaksideleft
-block:id=quarterlog3.id,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logredwoodsideright,face1=0:extrabiomesxl/redwoodsideright,face2=0:extrabiomesxl/redwoodbottomleft,face3=0:extrabiomesxl/redwoodbottomright,face4=0:extrabiomesxl/redwoodsideleft,face5=0:extrabiomesxl/logredwoodsideleft
-block:id=quarterlog3.id,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logredwoodsideleft
-block:id=quarterlog3.id,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logfirsideleft
-block:id=quarterlog3.id,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logoaksideleft
-block:id=quarterlog3.id,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logredwoodsideleft
+# quarterlog3.id:* (tile.extrabiomes.log.quarter:SE:extrabiomes.blocks.BlockQuarterLog), render=extrabiomes.renderers.RenderQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockQuarterLog
+block:id=quarterlog3.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/redwoodbottomright,face2=0:extrabiomesxl/redwoodsideleft,face3=0:extrabiomesxl/logredwoodsideright,face4=0:extrabiomesxl/redwoodsideright,face5=0:extrabiomesxl/logredwoodsideleft
+block:id=quarterlog3.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/firbottomright,face2=0:extrabiomesxl/firsideleft,face3=0:extrabiomesxl/logfirsideright,face4=0:extrabiomesxl/firsideright,face5=0:extrabiomesxl/logfirsideleft
+block:id=quarterlog3.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/oakbottomright,face2=0:extrabiomesxl/oaksideleft,face3=0:extrabiomesxl/logoaksideright,face4=0:extrabiomesxl/oaksideright,face5=0:extrabiomesxl/logoaksideleft
+block:id=quarterlog3.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/redwoodbottomright,face2=0:extrabiomesxl/redwoodsideleft,face3=0:extrabiomesxl/logredwoodsideright,face4=0:extrabiomesxl/redwoodsideright,face5=0:extrabiomesxl/logredwoodsideleft
+block:id=quarterlog3.id,data=4,stdrot=true,face0=0:extrabiomesxl/logredwoodsideleft,face1=0:extrabiomesxl/redwoodsideright,face2=0:extrabiomesxl/redwoodsideleft,face3=0:extrabiomesxl/logredwoodsideright,face4=0:extrabiomesxl/redwoodbottomright,face5=0:extrabiomesxl/redwoodbottomleft
+block:id=quarterlog3.id,data=5,stdrot=true,face0=0:extrabiomesxl/logfirsideleft,face1=0:extrabiomesxl/firsideright,face2=0:extrabiomesxl/firsideleft,face3=0:extrabiomesxl/logfirsideright,face4=0:extrabiomesxl/firbottomright,face5=0:extrabiomesxl/firbottomleft
+block:id=quarterlog3.id,data=6,stdrot=true,face0=0:extrabiomesxl/logoaksideleft,face1=0:extrabiomesxl/oaksideright,face2=0:extrabiomesxl/oaksideleft,face3=0:extrabiomesxl/logoaksideright,face4=0:extrabiomesxl/oakbottomright,face5=0:extrabiomesxl/oakbottomleft
+block:id=quarterlog3.id,data=7,stdrot=true,face0=0:extrabiomesxl/logredwoodsideleft,face1=0:extrabiomesxl/redwoodsideright,face2=0:extrabiomesxl/redwoodsideleft,face3=0:extrabiomesxl/logredwoodsideright,face4=0:extrabiomesxl/redwoodbottomright,face5=0:extrabiomesxl/redwoodbottomleft
+block:id=quarterlog3.id,data=8,stdrot=true,face0=0:extrabiomesxl/logredwoodsideright,face1=0:extrabiomesxl/redwoodsideright,face2=0:extrabiomesxl/redwoodbottomleft,face3=0:extrabiomesxl/redwoodbottomright,face4=0:extrabiomesxl/redwoodsideleft,face5=0:extrabiomesxl/logredwoodsideleft
+block:id=quarterlog3.id,data=9,stdrot=true,face0=0:extrabiomesxl/logfirsideright,face1=0:extrabiomesxl/firsideright,face2=0:extrabiomesxl/firbottomleft,face3=0:extrabiomesxl/firbottomright,face4=0:extrabiomesxl/firsideleft,face5=0:extrabiomesxl/logfirsideleft
+block:id=quarterlog3.id,data=10,stdrot=true,face0=0:extrabiomesxl/logoaksideright,face1=0:extrabiomesxl/oaksideright,face2=0:extrabiomesxl/oakbottomleft,face3=0:extrabiomesxl/oakbottomright,face4=0:extrabiomesxl/oaksideleft,face5=0:extrabiomesxl/logoaksideleft
+block:id=quarterlog3.id,data=11,stdrot=true,face0=0:extrabiomesxl/logredwoodsideright,face1=0:extrabiomesxl/redwoodsideright,face2=0:extrabiomesxl/redwoodbottomleft,face3=0:extrabiomesxl/redwoodbottomright,face4=0:extrabiomesxl/redwoodsideleft,face5=0:extrabiomesxl/logredwoodsideleft
+block:id=quarterlog3.id,data=12,stdrot=true,face0-5=0:extrabiomesxl/logredwoodsideleft
+block:id=quarterlog3.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/logfirsideleft
+block:id=quarterlog3.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/logoaksideleft
+block:id=quarterlog3.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/logredwoodsideleft
 
-# quicksand.id:* (ExtrabiomesXL:extrabiomes.quicksand), render=0(STANDARD), opaque=true,cls=extrabiomes.module.cautia.block.BlockQuicksand
+# quicksand.id:* (ExtrabiomesXL:extrabiomes.quicksand), render=(STANDARD), opaque=true,cls=extrabiomes.module.cautia.block.BlockQuicksand
 block:id=quicksand.id,data=*,stdrot=true,face0-5=0:extrabiomesxl/quicksand
 
-# planks.id:* (tile.extrabiomes.planks:extrabiomes.module.fabrica.block.BlockCustomWood), render=0(STANDARD), opaque=true,cls=extrabiomes.module.fabrica.block.BlockCustomWood
+# planks.id:* (tile.extrabiomes.planks:extrabiomes.module.fabrica.block.BlockCustomWood), render=(STANDARD), opaque=true,cls=extrabiomes.module.fabrica.block.BlockCustomWood
 block:id=planks.id,data=0,stdrot=true,face0-5=0:extrabiomesxl/planksredwood
 block:id=planks.id,data=1,stdrot=true,face0-5=0:extrabiomesxl/planksfir
 block:id=planks.id,data=2,stdrot=true,face0-5=0:extrabiomesxl/planksacacia
@@ -401,7 +401,7 @@ block:id=planks.id,data=7,stdrot=true,face0-5=0:extrabiomesxl/planksbaldcypress
 block:id=planks.id,data=8,stdrot=true,face0-5=0:extrabiomesxl/plankssakura
 block:id=planks.id,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/planksredwood
 
-# woodslab.id:* (tile.extrabiomes.woodslab:extrabiomes.module.fabrica.block.BlockCustomWoodSlab), render=0(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomWoodSlab
+# woodslab.id:* (tile.extrabiomes.woodslab:extrabiomes.module.fabrica.block.BlockCustomWoodSlab), render=(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomWoodSlab
 block:id=woodslab.id,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksredwood
 block:id=woodslab.id,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksfir
 block:id=woodslab.id,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksacacia
@@ -419,7 +419,7 @@ block:id=woodslab.id,data=13,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:
 block:id=woodslab.id,data=14,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksautumn
 block:id=woodslab.id,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksbaldcypress
 
-# doublewoodslab.id:* (tile.extrabiomes.woodslab:double:extrabiomes.module.fabrica.block.BlockCustomWoodSlab), render=0(STANDARD), opaque=true,cls=extrabiomes.module.fabrica.block.BlockCustomWoodSlab
+# doublewoodslab.id:* (tile.extrabiomes.woodslab:double:extrabiomes.module.fabrica.block.BlockCustomWoodSlab), render=(STANDARD), opaque=true,cls=extrabiomes.module.fabrica.block.BlockCustomWoodSlab
 block:id=doublewoodslab.id,data=0,stdrot=true,face0-5=0:extrabiomesxl/planksredwood
 block:id=doublewoodslab.id,data=1,stdrot=true,face0-5=0:extrabiomesxl/planksfir
 block:id=doublewoodslab.id,data=2,stdrot=true,face0-5=0:extrabiomesxl/planksacacia
@@ -437,19 +437,19 @@ block:id=doublewoodslab.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/planksrai
 block:id=doublewoodslab.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/planksautumn
 block:id=doublewoodslab.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/planksbaldcypress
 
-# redwoodstairs.id:* (tile.extrabiomes.stairs.redwood:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# redwoodstairs.id:* (tile.extrabiomes.stairs.redwood:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=redwoodstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksredwood
 
-# firstairs.id:* (tile.extrabiomes.stairs.fir:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# firstairs.id:* (tile.extrabiomes.stairs.fir:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=firstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksfir
 
-# acaciastairs.id:* (tile.extrabiomes.stairs.acacia:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# acaciastairs.id:* (tile.extrabiomes.stairs.acacia:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=acaciastairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksacacia
 
-# redrockbrickstairs.id:* (tile.extrabiomes.stairs.redrockbrick:extrabiomes.module.fabrica.block.BlockCustomStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomStairs
+# redrockbrickstairs.id:* (tile.extrabiomes.stairs.redrockbrick:extrabiomes.module.fabrica.block.BlockCustomStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomStairs
 block:id=redrockbrickstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/redrockbrick
 
-# doubleredrockslab.id:* (tile.extrabiomes.redrockslab:double:extrabiomes.module.fabrica.block.BlockRedRockSlab), render=0(STANDARD), opaque=true,cls=extrabiomes.module.fabrica.block.BlockRedRockSlab
+# doubleredrockslab.id:* (tile.extrabiomes.redrockslab:double:extrabiomes.module.fabrica.block.BlockRedRockSlab), render=(STANDARD), opaque=true,cls=extrabiomes.module.fabrica.block.BlockRedRockSlab
 block:id=doubleredrockslab.id,data=0,stdrot=true,face0-5=0:extrabiomesxl/redrockcobble
 block:id=doubleredrockslab.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/redrockslabtop,face2-5=0:extrabiomesxl/redrockslabside
 block:id=doubleredrockslab.id,data=2,stdrot=true,face0-5=0:extrabiomesxl/redrockbrick
@@ -458,10 +458,10 @@ block:id=doubleredrockslab.id,data=9,stdrot=true,face0-1=0:extrabiomesxl/redrock
 block:id=doubleredrockslab.id,data=10,stdrot=true,face0-5=0:extrabiomesxl/redrockbrick
 block:id=doubleredrockslab.id,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/redrockcobble
 
-# redcobblestairs.id:* (tile.extrabiomes.stairs.redcobble:extrabiomes.module.fabrica.block.BlockCustomStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomStairs
+# redcobblestairs.id:* (tile.extrabiomes.stairs.redcobble:extrabiomes.module.fabrica.block.BlockCustomStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockCustomStairs
 block:id=redcobblestairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/redrockcobble
 
-# newsapling.id:* (tile.extrabiomes.sapling:extrabiomes.blocks.BlockNewSapling), render=1(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockNewSapling
+# newsapling.id:* (tile.extrabiomes.sapling:extrabiomes.blocks.BlockNewSapling), render=(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockNewSapling
 block:id=newsapling.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingbaldcypress
 block:id=newsapling.id,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingjapanesemaple
 block:id=newsapling.id,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingjapanesemapleshrub
@@ -474,22 +474,22 @@ block:id=newsapling.id,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:ext
 block:id=newsapling.id,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingsakura
 block:id=newsapling.id,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/saplingbaldcypress
 
-# newquarterlog.id:* (tile.extrabiomes.baldcypressquarter:extrabiomes.blocks.BlockNewQuarterLog), render=50(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
-block:id=newquarterlog.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/baldcypresstop1,face2=0:extrabiomesxl/baldcypresslog1,face3=0:extrabiomesxl/baldcypressside2,face4=0:extrabiomesxl/baldcypresslog2,face5=0:extrabiomesxl/baldcypressside1
-block:id=newquarterlog.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/baldcypresstop2,face2=0:extrabiomesxl/baldcypresslog2,face3=0:extrabiomesxl/baldcypressside1,face4=0:extrabiomesxl/baldcypressside2,face5=0:extrabiomesxl/baldcypresslog1
-block:id=newquarterlog.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/baldcypresstop3,face2=0:extrabiomesxl/baldcypressside2,face3=0:extrabiomesxl/baldcypresslog1,face4=0:extrabiomesxl/baldcypressside1,face5=0:extrabiomesxl/baldcypresslog2
-block:id=newquarterlog.id,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/baldcypresstop4,face2=0:extrabiomesxl/baldcypressside1,face3=0:extrabiomesxl/baldcypresslog2,face4=0:extrabiomesxl/baldcypresslog1,face5=0:extrabiomesxl/baldcypressside2
-block:id=newquarterlog.id,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/baldcypressside1,face1=0:extrabiomesxl/baldcypresslog1,face2=0:extrabiomesxl/baldcypresstop1,face3=0:extrabiomesxl/baldcypresstop2,face4=0:extrabiomesxl/baldcypressside2,face5=0:extrabiomesxl/baldcypresslog1
-block:id=newquarterlog.id,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/baldcypressside2,face1=0:extrabiomesxl/baldcypresslog2,face2=0:extrabiomesxl/baldcypresstop2,face3=0:extrabiomesxl/baldcypresstop1,face4=0:extrabiomesxl/baldcypresslog2,face5=0:extrabiomesxl/baldcypressside1
-block:id=newquarterlog.id,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/baldcypresslog2,face1=0:extrabiomesxl/baldcypressside2,face2=0:extrabiomesxl/baldcypresstop3,face3=0:extrabiomesxl/baldcypresstop4,face4=0:extrabiomesxl/baldcypresslog1,face5=0:extrabiomesxl/baldcypressside2
-block:id=newquarterlog.id,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/baldcypresslog1,face1=0:extrabiomesxl/baldcypressside1,face2=0:extrabiomesxl/baldcypresstop4,face3=0:extrabiomesxl/baldcypresstop3,face4=0:extrabiomesxl/baldcypressside1,face5=0:extrabiomesxl/baldcypresslog2
-block:id=newquarterlog.id,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/baldcypressside1,face1=0:extrabiomesxl/baldcypresslog2,face2=0:extrabiomesxl/baldcypresslog1,face3=0:extrabiomesxl/baldcypressside1,face4=0:extrabiomesxl/baldcypresstop1,face5=0:extrabiomesxl/baldcypresstop2
-block:id=newquarterlog.id,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/baldcypressside2,face1=0:extrabiomesxl/baldcypresslog1,face2=0:extrabiomesxl/baldcypressside2,face3=0:extrabiomesxl/baldcypresslog2,face4=0:extrabiomesxl/baldcypresstop2,face5=0:extrabiomesxl/baldcypresstop1
-block:id=newquarterlog.id,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/baldcypresslog2,face1-2=0:extrabiomesxl/baldcypressside1,face3=0:extrabiomesxl/baldcypresslog1,face4=0:extrabiomesxl/baldcypresstop3,face5=0:extrabiomesxl/baldcypresstop4
-block:id=newquarterlog.id,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/baldcypresslog1,face1=0:extrabiomesxl/baldcypressside2,face2=0:extrabiomesxl/baldcypresslog2,face3=0:extrabiomesxl/baldcypressside2,face4=0:extrabiomesxl/baldcypresstop4,face5=0:extrabiomesxl/baldcypresstop3
-block:id=newquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/todo
+# newquarterlog.id:* (tile.extrabiomes.baldcypressquarter:extrabiomes.blocks.BlockNewQuarterLog), render=extrabiomes.renderers.RenderNewQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
+block:id=newquarterlog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/baldcypresstop1,face2=0:extrabiomesxl/baldcypresslog1,face3=0:extrabiomesxl/baldcypressside2,face4=0:extrabiomesxl/baldcypresslog2,face5=0:extrabiomesxl/baldcypressside1
+block:id=newquarterlog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/baldcypresstop2,face2=0:extrabiomesxl/baldcypresslog2,face3=0:extrabiomesxl/baldcypressside1,face4=0:extrabiomesxl/baldcypressside2,face5=0:extrabiomesxl/baldcypresslog1
+block:id=newquarterlog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/baldcypresstop3,face2=0:extrabiomesxl/baldcypressside2,face3=0:extrabiomesxl/baldcypresslog1,face4=0:extrabiomesxl/baldcypressside1,face5=0:extrabiomesxl/baldcypresslog2
+block:id=newquarterlog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/baldcypresstop4,face2=0:extrabiomesxl/baldcypressside1,face3=0:extrabiomesxl/baldcypresslog2,face4=0:extrabiomesxl/baldcypresslog1,face5=0:extrabiomesxl/baldcypressside2
+block:id=newquarterlog.id,data=4,stdrot=true,face0=0:extrabiomesxl/baldcypressside1,face1=0:extrabiomesxl/baldcypresslog1,face2=0:extrabiomesxl/baldcypresstop1,face3=0:extrabiomesxl/baldcypresstop2,face4=0:extrabiomesxl/baldcypressside2,face5=0:extrabiomesxl/baldcypresslog1
+block:id=newquarterlog.id,data=5,stdrot=true,face0=0:extrabiomesxl/baldcypressside2,face1=0:extrabiomesxl/baldcypresslog2,face2=0:extrabiomesxl/baldcypresstop2,face3=0:extrabiomesxl/baldcypresstop1,face4=0:extrabiomesxl/baldcypresslog2,face5=0:extrabiomesxl/baldcypressside1
+block:id=newquarterlog.id,data=6,stdrot=true,face0=0:extrabiomesxl/baldcypresslog2,face1=0:extrabiomesxl/baldcypressside2,face2=0:extrabiomesxl/baldcypresstop3,face3=0:extrabiomesxl/baldcypresstop4,face4=0:extrabiomesxl/baldcypresslog1,face5=0:extrabiomesxl/baldcypressside2
+block:id=newquarterlog.id,data=7,stdrot=true,face0=0:extrabiomesxl/baldcypresslog1,face1=0:extrabiomesxl/baldcypressside1,face2=0:extrabiomesxl/baldcypresstop4,face3=0:extrabiomesxl/baldcypresstop3,face4=0:extrabiomesxl/baldcypressside1,face5=0:extrabiomesxl/baldcypresslog2
+block:id=newquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/baldcypressside1,face1=0:extrabiomesxl/baldcypresslog2,face2=0:extrabiomesxl/baldcypresslog1,face3=0:extrabiomesxl/baldcypressside1,face4=0:extrabiomesxl/baldcypresstop1,face5=0:extrabiomesxl/baldcypresstop2
+block:id=newquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/baldcypressside2,face1=0:extrabiomesxl/baldcypresslog1,face2=0:extrabiomesxl/baldcypressside2,face3=0:extrabiomesxl/baldcypresslog2,face4=0:extrabiomesxl/baldcypresstop2,face5=0:extrabiomesxl/baldcypresstop1
+block:id=newquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/baldcypresslog2,face1-2=0:extrabiomesxl/baldcypressside1,face3=0:extrabiomesxl/baldcypresslog1,face4=0:extrabiomesxl/baldcypresstop3,face5=0:extrabiomesxl/baldcypresstop4
+block:id=newquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/baldcypresslog1,face1=0:extrabiomesxl/baldcypressside2,face2=0:extrabiomesxl/baldcypresslog2,face3=0:extrabiomesxl/baldcypressside2,face4=0:extrabiomesxl/baldcypresstop4,face5=0:extrabiomesxl/baldcypresstop3
+block:id=newquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/todo
 
-# newleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockNewLeaves), render=0(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockNewLeaves
+# newleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockNewLeaves), render=(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockNewLeaves
 block:id=newleaves.id,data=0,stdrot=true,colorMult=FF64B216,face0-5=17000:extrabiomesxl/leavesbaldcypressfancy
 block:id=newleaves.id,data=1,stdrot=true,face0-5=0:extrabiomesxl/leavesjapanesemaplefancy
 block:id=newleaves.id,data=2,stdrot=true,colorMult=FF64B216,face0-5=17000:extrabiomesxl/leavesjapanesemapleshrubfancy
@@ -507,52 +507,52 @@ block:id=newleaves.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/leavesjapanese
 block:id=newleaves.id,data=14,stdrot=true,colorMult=FF64B216,face0-5=17000:extrabiomesxl/leavesjapanesemapleshrubfancy
 block:id=newleaves.id,data=15,stdrot=true,colorMult=FFAEA42A,face0-5=17000:extrabiomesxl/leavesrainboweucalyptusfancy
 
-# kneelog.id:* (tile.extrabiomes.cypresskneelog:extrabiomes.blocks.BlockKneeLog), render=51(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockKneeLog
-block:id=kneelog.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/logbaldcypressknee1,face2=0:extrabiomesxl/logbaldcypressside1,face3=0:extrabiomesxl/logbaldcypresstop,face4=0:extrabiomesxl/logbaldcypressside2,face5=0:extrabiomesxl/logbaldcypresstop
-block:id=kneelog.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/logbaldcypressknee2,face2=0:extrabiomesxl/logbaldcypressside2,face3-4=0:extrabiomesxl/logbaldcypresstop,face5=0:extrabiomesxl/logbaldcypressside1
-block:id=kneelog.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/logbaldcypressknee3,face2=0:extrabiomesxl/logbaldcypresstop,face3=0:extrabiomesxl/logbaldcypressside1,face4=0:extrabiomesxl/logbaldcypresstop,face5=0:extrabiomesxl/logbaldcypressside2
-block:id=kneelog.id,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/logbaldcypressknee4,face2=0:extrabiomesxl/logbaldcypresstop,face3=0:extrabiomesxl/logbaldcypressside2,face4=0:extrabiomesxl/logbaldcypressside1,face5=0:extrabiomesxl/logbaldcypresstop
-block:id=kneelog.id,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logbaldcypresstop,face1=0:extrabiomesxl/logbaldcypressside1,face2=0:extrabiomesxl/logbaldcypressknee1,face3=0:extrabiomesxl/logbaldcypressknee2,face4=0:extrabiomesxl/logbaldcypresstop,face5=0:extrabiomesxl/logbaldcypressside1
-block:id=kneelog.id,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logbaldcypresstop,face1=0:extrabiomesxl/logbaldcypressside2,face2=0:extrabiomesxl/logbaldcypressknee2,face3=0:extrabiomesxl/logbaldcypressknee1,face4=0:extrabiomesxl/logbaldcypressside1,face5=0:extrabiomesxl/logbaldcypresstop
-block:id=kneelog.id,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logbaldcypressside1,face1=0:extrabiomesxl/logbaldcypresstop,face2=0:extrabiomesxl/logbaldcypressknee3,face3=0:extrabiomesxl/logbaldcypressknee4,face4=0:extrabiomesxl/logbaldcypressside2,face5=0:extrabiomesxl/logbaldcypresstop
-block:id=kneelog.id,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logbaldcypressside2,face1=0:extrabiomesxl/logbaldcypresstop,face2=0:extrabiomesxl/logbaldcypressknee2,face3=0:extrabiomesxl/logbaldcypressknee3,face4=0:extrabiomesxl/logbaldcypresstop,face5=0:extrabiomesxl/logbaldcypressside2
-block:id=kneelog.id,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logbaldcypresstop,face1-2=0:extrabiomesxl/logbaldcypressside1,face3=0:extrabiomesxl/logbaldcypresstop,face4=0:extrabiomesxl/logbaldcypressknee1,face5=0:extrabiomesxl/logbaldcypressknee2
-block:id=kneelog.id,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logbaldcypresstop,face1=0:extrabiomesxl/logbaldcypressside2,face2=0:extrabiomesxl/logbaldcypresstop,face3=0:extrabiomesxl/logbaldcypressside1,face4=0:extrabiomesxl/logbaldcypressknee2,face5=0:extrabiomesxl/logbaldcypressknee1
-block:id=kneelog.id,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logbaldcypressside2,face1-2=0:extrabiomesxl/logbaldcypresstop,face3=0:extrabiomesxl/logbaldcypressside2,face4=0:extrabiomesxl/logbaldcypressknee3,face5=0:extrabiomesxl/logbaldcypressknee4
-block:id=kneelog.id,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/logbaldcypressside1,face1=0:extrabiomesxl/logbaldcypresstop,face2=0:extrabiomesxl/logbaldcypressside2,face3=0:extrabiomesxl/logbaldcypresstop,face4=0:extrabiomesxl/logbaldcypressknee4,face5=0:extrabiomesxl/logbaldcypressknee3
-block:id=kneelog.id,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/todo
+# kneelog.id:* (tile.extrabiomes.cypresskneelog:extrabiomes.blocks.BlockKneeLog), render=extrabiomes.renderers.RenderKneeLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockKneeLog
+block:id=kneelog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/logbaldcypressknee1,face2=0:extrabiomesxl/logbaldcypressside1,face3=0:extrabiomesxl/logbaldcypresstop,face4=0:extrabiomesxl/logbaldcypressside2,face5=0:extrabiomesxl/logbaldcypresstop
+block:id=kneelog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/logbaldcypressknee2,face2=0:extrabiomesxl/logbaldcypressside2,face3-4=0:extrabiomesxl/logbaldcypresstop,face5=0:extrabiomesxl/logbaldcypressside1
+block:id=kneelog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/logbaldcypressknee3,face2=0:extrabiomesxl/logbaldcypresstop,face3=0:extrabiomesxl/logbaldcypressside1,face4=0:extrabiomesxl/logbaldcypresstop,face5=0:extrabiomesxl/logbaldcypressside2
+block:id=kneelog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/logbaldcypressknee4,face2=0:extrabiomesxl/logbaldcypresstop,face3=0:extrabiomesxl/logbaldcypressside2,face4=0:extrabiomesxl/logbaldcypressside1,face5=0:extrabiomesxl/logbaldcypresstop
+block:id=kneelog.id,data=4,stdrot=true,face0=0:extrabiomesxl/logbaldcypresstop,face1=0:extrabiomesxl/logbaldcypressside1,face2=0:extrabiomesxl/logbaldcypressknee1,face3=0:extrabiomesxl/logbaldcypressknee2,face4=0:extrabiomesxl/logbaldcypresstop,face5=0:extrabiomesxl/logbaldcypressside1
+block:id=kneelog.id,data=5,stdrot=true,face0=0:extrabiomesxl/logbaldcypresstop,face1=0:extrabiomesxl/logbaldcypressside2,face2=0:extrabiomesxl/logbaldcypressknee2,face3=0:extrabiomesxl/logbaldcypressknee1,face4=0:extrabiomesxl/logbaldcypressside1,face5=0:extrabiomesxl/logbaldcypresstop
+block:id=kneelog.id,data=6,stdrot=true,face0=0:extrabiomesxl/logbaldcypressside1,face1=0:extrabiomesxl/logbaldcypresstop,face2=0:extrabiomesxl/logbaldcypressknee3,face3=0:extrabiomesxl/logbaldcypressknee4,face4=0:extrabiomesxl/logbaldcypressside2,face5=0:extrabiomesxl/logbaldcypresstop
+block:id=kneelog.id,data=7,stdrot=true,face0=0:extrabiomesxl/logbaldcypressside2,face1=0:extrabiomesxl/logbaldcypresstop,face2=0:extrabiomesxl/logbaldcypressknee2,face3=0:extrabiomesxl/logbaldcypressknee3,face4=0:extrabiomesxl/logbaldcypresstop,face5=0:extrabiomesxl/logbaldcypressside2
+block:id=kneelog.id,data=8,stdrot=true,face0=0:extrabiomesxl/logbaldcypresstop,face1-2=0:extrabiomesxl/logbaldcypressside1,face3=0:extrabiomesxl/logbaldcypresstop,face4=0:extrabiomesxl/logbaldcypressknee1,face5=0:extrabiomesxl/logbaldcypressknee2
+block:id=kneelog.id,data=9,stdrot=true,face0=0:extrabiomesxl/logbaldcypresstop,face1=0:extrabiomesxl/logbaldcypressside2,face2=0:extrabiomesxl/logbaldcypresstop,face3=0:extrabiomesxl/logbaldcypressside1,face4=0:extrabiomesxl/logbaldcypressknee2,face5=0:extrabiomesxl/logbaldcypressknee1
+block:id=kneelog.id,data=10,stdrot=true,face0=0:extrabiomesxl/logbaldcypressside2,face1-2=0:extrabiomesxl/logbaldcypresstop,face3=0:extrabiomesxl/logbaldcypressside2,face4=0:extrabiomesxl/logbaldcypressknee3,face5=0:extrabiomesxl/logbaldcypressknee4
+block:id=kneelog.id,data=11,stdrot=true,face0=0:extrabiomesxl/logbaldcypressside1,face1=0:extrabiomesxl/logbaldcypresstop,face2=0:extrabiomesxl/logbaldcypressside2,face3=0:extrabiomesxl/logbaldcypresstop,face4=0:extrabiomesxl/logbaldcypressknee4,face5=0:extrabiomesxl/logbaldcypressknee3
+block:id=kneelog.id,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/todo
 
-# rainbowkneelog.id:* (tile.extrabiomes.rainbowkneelog:extrabiomes.blocks.BlockKneeLog), render=51(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockKneeLog
-block:id=rainbowkneelog.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/lograinboweucalyptusknee1,face2=0:extrabiomesxl/lograinboweucalyptusside1,face3=0:extrabiomesxl/lograinboweucalyptustop,face4=0:extrabiomesxl/lograinboweucalyptusside2,face5=0:extrabiomesxl/lograinboweucalyptustop
-block:id=rainbowkneelog.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/lograinboweucalyptusknee2,face2=0:extrabiomesxl/lograinboweucalyptusside2,face3-4=0:extrabiomesxl/lograinboweucalyptustop,face5=0:extrabiomesxl/lograinboweucalyptusside1
-block:id=rainbowkneelog.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/lograinboweucalyptusknee3,face2=0:extrabiomesxl/lograinboweucalyptustop,face3=0:extrabiomesxl/lograinboweucalyptusside1,face4=0:extrabiomesxl/lograinboweucalyptustop,face5=0:extrabiomesxl/lograinboweucalyptusside2
-block:id=rainbowkneelog.id,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/lograinboweucalyptusknee4,face2=0:extrabiomesxl/lograinboweucalyptustop,face3=0:extrabiomesxl/lograinboweucalyptusside2,face4=0:extrabiomesxl/lograinboweucalyptusside1,face5=0:extrabiomesxl/lograinboweucalyptustop
-block:id=rainbowkneelog.id,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/lograinboweucalyptustop,face1=0:extrabiomesxl/lograinboweucalyptusside1,face2=0:extrabiomesxl/lograinboweucalyptusknee1,face3=0:extrabiomesxl/lograinboweucalyptusknee2,face4=0:extrabiomesxl/lograinboweucalyptustop,face5=0:extrabiomesxl/lograinboweucalyptusside1
-block:id=rainbowkneelog.id,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/lograinboweucalyptustop,face1=0:extrabiomesxl/lograinboweucalyptusside2,face2=0:extrabiomesxl/lograinboweucalyptusknee2,face3=0:extrabiomesxl/lograinboweucalyptusknee1,face4=0:extrabiomesxl/lograinboweucalyptusside1,face5=0:extrabiomesxl/lograinboweucalyptustop
-block:id=rainbowkneelog.id,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/lograinboweucalyptusside1,face1=0:extrabiomesxl/lograinboweucalyptustop,face2=0:extrabiomesxl/lograinboweucalyptusknee3,face3=0:extrabiomesxl/lograinboweucalyptusknee4,face4=0:extrabiomesxl/lograinboweucalyptusside2,face5=0:extrabiomesxl/lograinboweucalyptustop
-block:id=rainbowkneelog.id,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/lograinboweucalyptusside2,face1=0:extrabiomesxl/lograinboweucalyptustop,face2=0:extrabiomesxl/lograinboweucalyptusknee2,face3=0:extrabiomesxl/lograinboweucalyptusknee3,face4=0:extrabiomesxl/lograinboweucalyptustop,face5=0:extrabiomesxl/lograinboweucalyptusside2
-block:id=rainbowkneelog.id,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/lograinboweucalyptustop,face1-2=0:extrabiomesxl/lograinboweucalyptusside1,face3=0:extrabiomesxl/lograinboweucalyptustop,face4=0:extrabiomesxl/lograinboweucalyptusknee1,face5=0:extrabiomesxl/lograinboweucalyptusknee2
-block:id=rainbowkneelog.id,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/lograinboweucalyptustop,face1=0:extrabiomesxl/lograinboweucalyptusside2,face2=0:extrabiomesxl/lograinboweucalyptustop,face3=0:extrabiomesxl/lograinboweucalyptusside1,face4=0:extrabiomesxl/lograinboweucalyptusknee2,face5=0:extrabiomesxl/lograinboweucalyptusknee1
-block:id=rainbowkneelog.id,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/lograinboweucalyptusside2,face1-2=0:extrabiomesxl/lograinboweucalyptustop,face3=0:extrabiomesxl/lograinboweucalyptusside2,face4=0:extrabiomesxl/lograinboweucalyptusknee3,face5=0:extrabiomesxl/lograinboweucalyptusknee4
-block:id=rainbowkneelog.id,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/lograinboweucalyptusside1,face1=0:extrabiomesxl/lograinboweucalyptustop,face2=0:extrabiomesxl/lograinboweucalyptusside2,face3=0:extrabiomesxl/lograinboweucalyptustop,face4=0:extrabiomesxl/lograinboweucalyptusknee4,face5=0:extrabiomesxl/lograinboweucalyptusknee3
-block:id=rainbowkneelog.id,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/todo
+# rainbowkneelog.id:* (tile.extrabiomes.rainbowkneelog:extrabiomes.blocks.BlockKneeLog), render=extrabiomes.renderers.RenderKneeLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockKneeLog
+block:id=rainbowkneelog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/lograinboweucalyptusknee1,face2=0:extrabiomesxl/lograinboweucalyptusside1,face3=0:extrabiomesxl/lograinboweucalyptustop,face4=0:extrabiomesxl/lograinboweucalyptusside2,face5=0:extrabiomesxl/lograinboweucalyptustop
+block:id=rainbowkneelog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/lograinboweucalyptusknee2,face2=0:extrabiomesxl/lograinboweucalyptusside2,face3-4=0:extrabiomesxl/lograinboweucalyptustop,face5=0:extrabiomesxl/lograinboweucalyptusside1
+block:id=rainbowkneelog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/lograinboweucalyptusknee3,face2=0:extrabiomesxl/lograinboweucalyptustop,face3=0:extrabiomesxl/lograinboweucalyptusside1,face4=0:extrabiomesxl/lograinboweucalyptustop,face5=0:extrabiomesxl/lograinboweucalyptusside2
+block:id=rainbowkneelog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/lograinboweucalyptusknee4,face2=0:extrabiomesxl/lograinboweucalyptustop,face3=0:extrabiomesxl/lograinboweucalyptusside2,face4=0:extrabiomesxl/lograinboweucalyptusside1,face5=0:extrabiomesxl/lograinboweucalyptustop
+block:id=rainbowkneelog.id,data=4,stdrot=true,face0=0:extrabiomesxl/lograinboweucalyptustop,face1=0:extrabiomesxl/lograinboweucalyptusside1,face2=0:extrabiomesxl/lograinboweucalyptusknee1,face3=0:extrabiomesxl/lograinboweucalyptusknee2,face4=0:extrabiomesxl/lograinboweucalyptustop,face5=0:extrabiomesxl/lograinboweucalyptusside1
+block:id=rainbowkneelog.id,data=5,stdrot=true,face0=0:extrabiomesxl/lograinboweucalyptustop,face1=0:extrabiomesxl/lograinboweucalyptusside2,face2=0:extrabiomesxl/lograinboweucalyptusknee2,face3=0:extrabiomesxl/lograinboweucalyptusknee1,face4=0:extrabiomesxl/lograinboweucalyptusside1,face5=0:extrabiomesxl/lograinboweucalyptustop
+block:id=rainbowkneelog.id,data=6,stdrot=true,face0=0:extrabiomesxl/lograinboweucalyptusside1,face1=0:extrabiomesxl/lograinboweucalyptustop,face2=0:extrabiomesxl/lograinboweucalyptusknee3,face3=0:extrabiomesxl/lograinboweucalyptusknee4,face4=0:extrabiomesxl/lograinboweucalyptusside2,face5=0:extrabiomesxl/lograinboweucalyptustop
+block:id=rainbowkneelog.id,data=7,stdrot=true,face0=0:extrabiomesxl/lograinboweucalyptusside2,face1=0:extrabiomesxl/lograinboweucalyptustop,face2=0:extrabiomesxl/lograinboweucalyptusknee2,face3=0:extrabiomesxl/lograinboweucalyptusknee3,face4=0:extrabiomesxl/lograinboweucalyptustop,face5=0:extrabiomesxl/lograinboweucalyptusside2
+block:id=rainbowkneelog.id,data=8,stdrot=true,face0=0:extrabiomesxl/lograinboweucalyptustop,face1-2=0:extrabiomesxl/lograinboweucalyptusside1,face3=0:extrabiomesxl/lograinboweucalyptustop,face4=0:extrabiomesxl/lograinboweucalyptusknee1,face5=0:extrabiomesxl/lograinboweucalyptusknee2
+block:id=rainbowkneelog.id,data=9,stdrot=true,face0=0:extrabiomesxl/lograinboweucalyptustop,face1=0:extrabiomesxl/lograinboweucalyptusside2,face2=0:extrabiomesxl/lograinboweucalyptustop,face3=0:extrabiomesxl/lograinboweucalyptusside1,face4=0:extrabiomesxl/lograinboweucalyptusknee2,face5=0:extrabiomesxl/lograinboweucalyptusknee1
+block:id=rainbowkneelog.id,data=10,stdrot=true,face0=0:extrabiomesxl/lograinboweucalyptusside2,face1-2=0:extrabiomesxl/lograinboweucalyptustop,face3=0:extrabiomesxl/lograinboweucalyptusside2,face4=0:extrabiomesxl/lograinboweucalyptusknee3,face5=0:extrabiomesxl/lograinboweucalyptusknee4
+block:id=rainbowkneelog.id,data=11,stdrot=true,face0=0:extrabiomesxl/lograinboweucalyptusside1,face1=0:extrabiomesxl/lograinboweucalyptustop,face2=0:extrabiomesxl/lograinboweucalyptusside2,face3=0:extrabiomesxl/lograinboweucalyptustop,face4=0:extrabiomesxl/lograinboweucalyptusknee4,face5=0:extrabiomesxl/lograinboweucalyptusknee3
+block:id=rainbowkneelog.id,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/todo
 
-# rainbowquarterlog.id:* (tile.extrabiomes.rainboweucalyptusquarter:extrabiomes.blocks.BlockNewQuarterLog), render=50(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
-block:id=rainbowquarterlog.id,data=0,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/rainboweucalyptustop1,face2=0:extrabiomesxl/rainboweucalyptuslog1,face3=0:extrabiomesxl/rainboweucalyptusside2,face4=0:extrabiomesxl/rainboweucalyptuslog2,face5=0:extrabiomesxl/rainboweucalyptusside1
-block:id=rainbowquarterlog.id,data=1,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/rainboweucalyptustop2,face2=0:extrabiomesxl/rainboweucalyptuslog2,face3=0:extrabiomesxl/rainboweucalyptusside1,face4=0:extrabiomesxl/rainboweucalyptusside2,face5=0:extrabiomesxl/rainboweucalyptuslog1
-block:id=rainbowquarterlog.id,data=2,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/rainboweucalyptustop3,face2=0:extrabiomesxl/rainboweucalyptusside2,face3=0:extrabiomesxl/rainboweucalyptuslog1,face4=0:extrabiomesxl/rainboweucalyptusside1,face5=0:extrabiomesxl/rainboweucalyptuslog2
-block:id=rainbowquarterlog.id,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/rainboweucalyptustop4,face2=0:extrabiomesxl/rainboweucalyptusside1,face3=0:extrabiomesxl/rainboweucalyptuslog2,face4=0:extrabiomesxl/rainboweucalyptuslog1,face5=0:extrabiomesxl/rainboweucalyptusside2
-block:id=rainbowquarterlog.id,data=4,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/rainboweucalyptusside1,face1=0:extrabiomesxl/rainboweucalyptuslog1,face2=0:extrabiomesxl/rainboweucalyptustop1,face3=0:extrabiomesxl/rainboweucalyptustop2,face4=0:extrabiomesxl/rainboweucalyptusside2,face5=0:extrabiomesxl/rainboweucalyptuslog1
-block:id=rainbowquarterlog.id,data=5,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/rainboweucalyptusside2,face1=0:extrabiomesxl/rainboweucalyptuslog2,face2=0:extrabiomesxl/rainboweucalyptustop2,face3=0:extrabiomesxl/rainboweucalyptustop1,face4=0:extrabiomesxl/rainboweucalyptuslog2,face5=0:extrabiomesxl/rainboweucalyptusside1
-block:id=rainbowquarterlog.id,data=6,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/rainboweucalyptuslog2,face1=0:extrabiomesxl/rainboweucalyptusside2,face2=0:extrabiomesxl/rainboweucalyptustop3,face3=0:extrabiomesxl/rainboweucalyptustop4,face4=0:extrabiomesxl/rainboweucalyptuslog1,face5=0:extrabiomesxl/rainboweucalyptusside2
-block:id=rainbowquarterlog.id,data=7,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/rainboweucalyptuslog1,face1=0:extrabiomesxl/rainboweucalyptusside1,face2=0:extrabiomesxl/rainboweucalyptustop4,face3=0:extrabiomesxl/rainboweucalyptustop3,face4=0:extrabiomesxl/rainboweucalyptusside1,face5=0:extrabiomesxl/rainboweucalyptuslog2
-block:id=rainbowquarterlog.id,data=8,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/rainboweucalyptusside1,face1=0:extrabiomesxl/rainboweucalyptuslog2,face2=0:extrabiomesxl/rainboweucalyptuslog1,face3=0:extrabiomesxl/rainboweucalyptusside1,face4=0:extrabiomesxl/rainboweucalyptustop1,face5=0:extrabiomesxl/rainboweucalyptustop2
-block:id=rainbowquarterlog.id,data=9,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/rainboweucalyptusside2,face1=0:extrabiomesxl/rainboweucalyptuslog1,face2=0:extrabiomesxl/rainboweucalyptusside2,face3=0:extrabiomesxl/rainboweucalyptuslog2,face4=0:extrabiomesxl/rainboweucalyptustop2,face5=0:extrabiomesxl/rainboweucalyptustop1
-block:id=rainbowquarterlog.id,data=10,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/rainboweucalyptuslog2,face1-2=0:extrabiomesxl/rainboweucalyptusside1,face3=0:extrabiomesxl/rainboweucalyptuslog1,face4=0:extrabiomesxl/rainboweucalyptustop3,face5=0:extrabiomesxl/rainboweucalyptustop4
-block:id=rainbowquarterlog.id,data=11,stdrot=true,transparency=TRANSPARENT,face0=0:extrabiomesxl/rainboweucalyptuslog1,face1=0:extrabiomesxl/rainboweucalyptusside2,face2=0:extrabiomesxl/rainboweucalyptuslog2,face3=0:extrabiomesxl/rainboweucalyptusside2,face4=0:extrabiomesxl/rainboweucalyptustop4,face5=0:extrabiomesxl/rainboweucalyptustop3
-block:id=rainbowquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/todo
+# rainbowquarterlog.id:* (tile.extrabiomes.rainboweucalyptusquarter:extrabiomes.blocks.BlockNewQuarterLog), render=extrabiomes.renderers.RenderNewQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
+block:id=rainbowquarterlog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/rainboweucalyptustop1,face2=0:extrabiomesxl/rainboweucalyptuslog1,face3=0:extrabiomesxl/rainboweucalyptusside2,face4=0:extrabiomesxl/rainboweucalyptuslog2,face5=0:extrabiomesxl/rainboweucalyptusside1
+block:id=rainbowquarterlog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/rainboweucalyptustop2,face2=0:extrabiomesxl/rainboweucalyptuslog2,face3=0:extrabiomesxl/rainboweucalyptusside1,face4=0:extrabiomesxl/rainboweucalyptusside2,face5=0:extrabiomesxl/rainboweucalyptuslog1
+block:id=rainbowquarterlog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/rainboweucalyptustop3,face2=0:extrabiomesxl/rainboweucalyptusside2,face3=0:extrabiomesxl/rainboweucalyptuslog1,face4=0:extrabiomesxl/rainboweucalyptusside1,face5=0:extrabiomesxl/rainboweucalyptuslog2
+block:id=rainbowquarterlog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/rainboweucalyptustop4,face2=0:extrabiomesxl/rainboweucalyptusside1,face3=0:extrabiomesxl/rainboweucalyptuslog2,face4=0:extrabiomesxl/rainboweucalyptuslog1,face5=0:extrabiomesxl/rainboweucalyptusside2
+block:id=rainbowquarterlog.id,data=4,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside1,face1=0:extrabiomesxl/rainboweucalyptuslog1,face2=0:extrabiomesxl/rainboweucalyptustop1,face3=0:extrabiomesxl/rainboweucalyptustop2,face4=0:extrabiomesxl/rainboweucalyptusside2,face5=0:extrabiomesxl/rainboweucalyptuslog1
+block:id=rainbowquarterlog.id,data=5,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside2,face1=0:extrabiomesxl/rainboweucalyptuslog2,face2=0:extrabiomesxl/rainboweucalyptustop2,face3=0:extrabiomesxl/rainboweucalyptustop1,face4=0:extrabiomesxl/rainboweucalyptuslog2,face5=0:extrabiomesxl/rainboweucalyptusside1
+block:id=rainbowquarterlog.id,data=6,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog2,face1=0:extrabiomesxl/rainboweucalyptusside2,face2=0:extrabiomesxl/rainboweucalyptustop3,face3=0:extrabiomesxl/rainboweucalyptustop4,face4=0:extrabiomesxl/rainboweucalyptuslog1,face5=0:extrabiomesxl/rainboweucalyptusside2
+block:id=rainbowquarterlog.id,data=7,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog1,face1=0:extrabiomesxl/rainboweucalyptusside1,face2=0:extrabiomesxl/rainboweucalyptustop4,face3=0:extrabiomesxl/rainboweucalyptustop3,face4=0:extrabiomesxl/rainboweucalyptusside1,face5=0:extrabiomesxl/rainboweucalyptuslog2
+block:id=rainbowquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside1,face1=0:extrabiomesxl/rainboweucalyptuslog2,face2=0:extrabiomesxl/rainboweucalyptuslog1,face3=0:extrabiomesxl/rainboweucalyptusside1,face4=0:extrabiomesxl/rainboweucalyptustop1,face5=0:extrabiomesxl/rainboweucalyptustop2
+block:id=rainbowquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside2,face1=0:extrabiomesxl/rainboweucalyptuslog1,face2=0:extrabiomesxl/rainboweucalyptusside2,face3=0:extrabiomesxl/rainboweucalyptuslog2,face4=0:extrabiomesxl/rainboweucalyptustop2,face5=0:extrabiomesxl/rainboweucalyptustop1
+block:id=rainbowquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog2,face1-2=0:extrabiomesxl/rainboweucalyptusside1,face3=0:extrabiomesxl/rainboweucalyptuslog1,face4=0:extrabiomesxl/rainboweucalyptustop3,face5=0:extrabiomesxl/rainboweucalyptustop4
+block:id=rainbowquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog1,face1=0:extrabiomesxl/rainboweucalyptusside2,face2=0:extrabiomesxl/rainboweucalyptuslog2,face3=0:extrabiomesxl/rainboweucalyptusside2,face4=0:extrabiomesxl/rainboweucalyptustop4,face5=0:extrabiomesxl/rainboweucalyptustop3
+block:id=rainbowquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/todo
 
-# newlog.id:* (tile.extrabiomes.newlog:extrabiomes.blocks.BlockNewLog), render=31(LOG), opaque=true,cls=extrabiomes.blocks.BlockNewLog
+# newlog.id:* (tile.extrabiomes.newlog:extrabiomes.blocks.BlockNewLog), render=(LOG), opaque=true,cls=extrabiomes.blocks.BlockNewLog
 block:id=newlog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/lograinboweucalyptustop,face2-5=0:extrabiomesxl/lograinboweucalyptusside
 block:id=newlog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/logautumntop,face2-5=0:extrabiomesxl/logautumnside
 block:id=newlog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/logbaldcypresstop,face2-5=0:extrabiomesxl/logbaldcypressside
@@ -570,38 +570,38 @@ block:id=newlog.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/logautumnside
 block:id=newlog.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/logbaldcypressside
 block:id=newlog.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/lograinboweucalyptusside
 
-# cypressstairs.id:* (tile.extrabiomes.stairs.cypress:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# cypressstairs.id:* (tile.extrabiomes.stairs.cypress:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=cypressstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/plankscypress
 
-# japanesemaplestairs.id:* (tile.extrabiomes.stairs.japanesemaple:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# japanesemaplestairs.id:* (tile.extrabiomes.stairs.japanesemaple:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=japanesemaplestairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksjapanesemaple
 
-# rainboweucalyptusstairs.id:* (tile.extrabiomes.stairs.rainboweucalyptus:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# rainboweucalyptusstairs.id:* (tile.extrabiomes.stairs.rainboweucalyptus:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=rainboweucalyptusstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksrainboweucalyptus
 
-# autumnstairs.id:* (tile.extrabiomes.stairs.autumn:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# autumnstairs.id:* (tile.extrabiomes.stairs.autumn:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=autumnstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksautumn
 
-# baldcypressstairs.id:* (tile.extrabiomes.stairs.baldcypress:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# baldcypressstairs.id:* (tile.extrabiomes.stairs.baldcypress:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=baldcypressstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/planksbaldcypress
 
-# moreleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockMoreLeaves), render=0(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockMoreLeaves
+# moreleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockMoreLeaves), render=(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockMoreLeaves
 block:id=moreleaves.id,data=0,stdrot=true,face0-5=0:extrabiomesxl/leavessakurafancy
 block:id=moreleaves.id,data=4,stdrot=true,face0-5=0:extrabiomesxl/leavessakurafancy
 block:id=moreleaves.id,data=8,stdrot=true,face0-5=0:extrabiomesxl/leavessakurafancy
 block:id=moreleaves.id,data=12,stdrot=true,face0-5=0:extrabiomesxl/leavessakurafancy
 
-# minilog.id:* (tile.extrabiomes.log:extrabiomes.blocks.BlockMiniLog), render=48(CUSTOM), opaque=false,cls=extrabiomes.blocks.BlockMiniLog
-block:id=minilog.id,data=0,data=1,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/logsakuratop,face2-5=0:extrabiomesxl/logsakuraside
-block:id=minilog.id,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-3=0:extrabiomesxl/logsakuraside,face4-5=0:extrabiomesxl/logsakuratop
-block:id=minilog.id,data=8,data=9,data=10,data=11,stdrot=true,transparency=TRANSPARENT,face0-1=0:extrabiomesxl/logsakuraside,face2-3=0:extrabiomesxl/logsakuratop,face4-5=0:extrabiomesxl/logsakuraside
-block:id=minilog.id,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:extrabiomesxl/logsakuraside
+# minilog.id:* (tile.extrabiomes.log:extrabiomes.blocks.BlockMiniLog), render=extrabiomes.renderers.RenderMiniLog(CUSTOM), opaque=false,cls=extrabiomes.blocks.BlockMiniLog
+block:id=minilog.id,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:extrabiomesxl/logsakuratop,face2-5=0:extrabiomesxl/logsakuraside
+block:id=minilog.id,data=4,data=5,data=6,data=7,stdrot=true,face0-3=0:extrabiomesxl/logsakuraside,face4-5=0:extrabiomesxl/logsakuratop
+block:id=minilog.id,data=8,data=9,data=10,data=11,stdrot=true,face0-1=0:extrabiomesxl/logsakuraside,face2-3=0:extrabiomesxl/logsakuratop,face4-5=0:extrabiomesxl/logsakuraside
+block:id=minilog.id,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/logsakuraside
 
-# newwoodslab.id:* (tile.extrabiomes.woodslab:extrabiomes.module.fabrica.block.BlockNewWoodSlab), render=0(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockNewWoodSlab
+# newwoodslab.id:* (tile.extrabiomes.woodslab:extrabiomes.module.fabrica.block.BlockNewWoodSlab), render=(STANDARD), opaque=false,cls=extrabiomes.module.fabrica.block.BlockNewWoodSlab
 block:id=newwoodslab.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/plankssakura
 
-# newdoublewoodslab.id:* (tile.extrabiomes.woodslab:double:extrabiomes.module.fabrica.block.BlockNewWoodSlab), render=0(STANDARD), opaque=true,cls=extrabiomes.module.fabrica.block.BlockNewWoodSlab
+# newdoublewoodslab.id:* (tile.extrabiomes.woodslab:double:extrabiomes.module.fabrica.block.BlockNewWoodSlab), render=(STANDARD), opaque=true,cls=extrabiomes.module.fabrica.block.BlockNewWoodSlab
 block:id=newdoublewoodslab.id,data=*,stdrot=true,face0-5=0:extrabiomesxl/plankssakura
 
-# sakurablossomstairs.id:* (tile.extrabiomes.stairs.sakurablossom:extrabiomes.module.fabrica.block.BlockWoodStairs), render=10(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
+# sakurablossomstairs.id:* (tile.extrabiomes.stairs.sakurablossom:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=sakurablossomstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/plankssakura
