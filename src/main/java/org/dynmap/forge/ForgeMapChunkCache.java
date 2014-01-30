@@ -117,7 +117,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     	World ww;
     	int xx, zz;
 		@Override
-		public Chunk loadChunk(World w, int x, int z) throws IOException {
+		public Chunk loadChunk(World w, int x, int z) {
 			Chunk c = base.loadChunk(w, x, z);
 			if((c == null) && (w == ww) && (x == xx) && (z == zz)) {
 				throw new NoChunkFoundThrow();
@@ -125,7 +125,7 @@ public class ForgeMapChunkCache implements MapChunkCache
 			return c;
 		}
 		@Override
-		public void saveChunk(World var1, Chunk var2) throws MinecraftException, IOException {
+		public void saveChunk(World var1, Chunk var2) {
 			base.saveChunk(var1, var2);
 		}
 
