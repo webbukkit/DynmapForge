@@ -32,6 +32,7 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.Item;
 import net.minecraft.network.NetServerHandler;
 import net.minecraft.network.packet.NetHandler;
 import net.minecraft.network.packet.Packet3Chat;
@@ -325,7 +326,7 @@ public class DynmapPlugin
     /**
      * Server access abstraction class
      */
-    public class ForgeServer implements DynmapServerInterface, ITickHandler
+    public class ForgeServer extends DynmapServerInterface implements ITickHandler
     {
         /* Chunk load handling */
         private Object loadlock = new Object();
@@ -932,7 +933,38 @@ public class DynmapPlugin
             }
             return null;
         }
-
+        /**
+         * Get block unique ID map (module:blockid)
+         */
+        @Override
+        public Map<String, Integer> getBlockUniqueIDMap() {
+            HashMap<String, Integer> map = new HashMap<String, Integer>();
+            for (int i = 0; i < Block.blocksList.length; i++) {
+                Block b = Block.blocksList[i];
+                if (b == null) continue;
+                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(b);
+                if (ui != null) {
+                    map.put(ui.modId + ":" + ui.name, i);
+                }
+            }
+            return map;
+        }
+        /**
+         * Get item unique ID map (module:itemid)
+         */
+        @Override
+        public Map<String, Integer> getItemUniqueIDMap() {
+            HashMap<String, Integer> map = new HashMap<String, Integer>();
+            for (int i = 0; i < Item.itemsList.length; i++) {
+                Item itm = Item.itemsList[i];
+                if (itm == null) continue;
+                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(itm);
+                if (ui != null) {
+                    map.put(ui.modId + ":" + ui.name, i);
+                }
+            }
+            return map;
+        }
     }
     /**
      * Player access abstraction class
