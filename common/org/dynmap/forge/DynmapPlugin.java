@@ -325,7 +325,7 @@ public class DynmapPlugin
     /**
      * Server access abstraction class
      */
-    public class ForgeServer implements DynmapServerInterface, ITickHandler
+    public class ForgeServer extends DynmapServerInterface implements ITickHandler
     {
         /* Chunk load handling */
         private Object loadlock = new Object();
