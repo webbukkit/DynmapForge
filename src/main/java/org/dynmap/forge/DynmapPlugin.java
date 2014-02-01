@@ -31,6 +31,7 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.Item;
 import net.minecraft.network.NetHandlerPlayServer;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.client.C01PacketChatMessage;
@@ -149,6 +150,9 @@ public class DynmapPlugin
     }
     public static final Block getBlockByID(int id) {
         return Block.func_149729_e(id);
+    }
+    public static final Item getItemByID(int id) {
+        return Item.func_150899_d(id);
     }
     public static final Material getBlockMaterial(Block b) {
         return b.func_149688_o();
@@ -389,7 +393,7 @@ public class DynmapPlugin
     /**
      * Server access abstraction class
      */
-    public class ForgeServer implements DynmapServerInterface
+    public class ForgeServer extends DynmapServerInterface
     {
         /* Chunk load handling */
         private Object loadlock = new Object();
@@ -981,6 +985,38 @@ public class DynmapPlugin
                 }
             }
             return null;
+        }
+        /**
+         * Get block unique ID map (module:blockid)
+         */
+        @Override
+        public Map<String, Integer> getBlockUniqueIDMap() {
+            HashMap<String, Integer> map = new HashMap<String, Integer>();
+            for (int i = 0; i < 4096; i++) {
+                Block b = getBlockByID(i);
+                if (b == null) continue;
+                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(b);
+                if (ui != null) {
+                    map.put(ui.modId + ":" + ui.name, i);
+                }
+            }
+            return map;
+        }
+        /**
+         * Get item unique ID map (module:itemid)
+         */
+        @Override
+        public Map<String, Integer> getItemUniqueIDMap() {
+            HashMap<String, Integer> map = new HashMap<String, Integer>();
+            for (int i = 0; i < 32000; i++) {
+                Item itm = getItemByID(i);
+                if (itm == null) continue;
+                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(itm);
+                if (ui != null) {
+                    map.put(ui.modId + ":" + ui.name, i);
+                }
+            }
+            return map;
         }
 
     }
