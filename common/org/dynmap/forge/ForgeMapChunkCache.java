@@ -51,11 +51,12 @@ import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.VisibilityLimit;
+import org.dynmap.utils.MapChunkCache.ChunkStats;
 
 /**
  * Container for managing chunks - dependent upon using chunk snapshots, since rendering is off server thread
  */
-public class ForgeMapChunkCache implements MapChunkCache
+public class ForgeMapChunkCache extends MapChunkCache
 {
     private static boolean init = false;
     private static Field unloadqueue = null;
@@ -92,12 +93,6 @@ public class ForgeMapChunkCache implements MapChunkCache
     private BiomeMap[][] biomemap;
     private boolean[][] isSectionNotEmpty; /* Indexed by snapshot index, then by section index */
     
-    private int chunks_read;    /* Number of chunks actually loaded */
-    private int chunks_attempted;   /* Number of chunks attempted to load */
-    private long total_loadtime;    /* Total time loading chunks, in nanoseconds */
-
-    private long exceptions;
-
     private static final BlockStep unstep[] = { BlockStep.X_MINUS, BlockStep.Y_MINUS, BlockStep.Z_MINUS,
             BlockStep.X_PLUS, BlockStep.Y_PLUS, BlockStep.Z_PLUS
                                               };
@@ -321,7 +316,6 @@ public class ForgeMapChunkCache implements MapChunkCache
             }
             catch (Exception ex)
             {
-                exceptions++;
                 return BiomeMap.NULL;
             }
         }
@@ -363,7 +357,6 @@ public class ForgeMapChunkCache implements MapChunkCache
             }
             catch (Exception x)
             {
-                exceptions++;
                 mult = 0xFFFFFF;
             }
 
@@ -407,7 +400,6 @@ public class ForgeMapChunkCache implements MapChunkCache
             }
             catch (Exception x)
             {
-                exceptions++;
                 mult = 0xFFFFFF;
             }
 
@@ -468,7 +460,6 @@ public class ForgeMapChunkCache implements MapChunkCache
             }
             catch (Exception x)
             {
-                exceptions++;
                 mult = 0xFFFFFF;
             }
 
@@ -508,7 +499,6 @@ public class ForgeMapChunkCache implements MapChunkCache
             }
             catch (Exception x)
             {
-                exceptions++;
                 return 0xFFFFFF;
             }
         }
@@ -550,7 +540,6 @@ public class ForgeMapChunkCache implements MapChunkCache
             }
             catch (Exception x)
             {
-                exceptions++;
                 mult = 0xFFFFFF;
             }
 
@@ -1322,7 +1311,6 @@ public class ForgeMapChunkCache implements MapChunkCache
 
     public int loadChunks(int max_to_load)
     {
-        long t0 = System.nanoTime();
         if(!dw.isLoaded()) {
         	isempty = true;
         	unloadChunks();
@@ -1361,6 +1349,7 @@ public class ForgeMapChunkCache implements MapChunkCache
         // Load the required chunks.
         while ((cnt < max_to_load) && iterator.hasNext())
         {
+            long startTime = System.nanoTime();
             DynmapChunk chunk = iterator.next();
             boolean vis = true;
             if(visible_limits != null) {
@@ -1405,11 +1394,11 @@ public class ForgeMapChunkCache implements MapChunkCache
                 int idx = (chunk.x-x_min) + (chunk.z - z_min)*x_dim;
                 snaparray[idx] = ss;
                 snaptile[idx] = ssr.tileData;
+                endChunkLoad(startTime, ChunkStats.CACHED_SNAPSHOT_HIT);
 
                 continue;
             }
 
-            chunks_attempted++;
             boolean wasLoaded = cps.chunkExists(chunk.x, chunk.z);
             boolean didload = false;
             boolean isunloadpending = false;
@@ -1568,12 +1557,9 @@ public class ForgeMapChunkCache implements MapChunkCache
                 /* If wasn't loaded before, we need to do unload */
                 if (nbt != null) {
                     /* No unload needed if we fetched NBT */
-                    chunks_read++;
                 }
                 else if (!wasLoaded)
                 {
-                    chunks_read++;
-
                     if (cps != null)
                     {
                         cps.unloadChunksIfNotNearSpawn(chunk.x,  chunk.z);
@@ -1586,6 +1572,15 @@ public class ForgeMapChunkCache implements MapChunkCache
                         cps.unloadChunksIfNotNearSpawn(chunk.x,  chunk.z);
                     }
                 }
+                if (wasLoaded) {
+                    endChunkLoad(startTime, ChunkStats.LOADED_CHUNKS);
+                }
+                else {
+                    endChunkLoad(startTime, ChunkStats.UNLOADED_CHUNKS);
+                }
+            }
+            else {
+                endChunkLoad(startTime, ChunkStats.UNGENERATED_CHUNKS);
             }
 
             cnt++;
@@ -1618,8 +1613,6 @@ public class ForgeMapChunkCache implements MapChunkCache
             	}
             }
         }
-
-        total_loadtime += System.nanoTime() - t0;
         return cnt;
     }
     /**
@@ -1739,27 +1732,7 @@ public class ForgeMapChunkCache implements MapChunkCache
     {
         return dw;
     }
-    @Override
-    public int getChunksLoaded()
-    {
-        return chunks_read;
-    }
-    @Override
-    public int getChunkLoadsAttempted()
-    {
-        return chunks_attempted;
-    }
-    @Override
-    public long getTotalRuntimeNanos()
-    {
-        return total_loadtime;
-    }
-    @Override
-    public long getExceptionCount()
-    {
-        return exceptions;
-    }
-
+    
     static
     {
         BiomeGenBase b[] = BiomeGenBase.biomeList;
