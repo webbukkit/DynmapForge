@@ -1,11 +1,11 @@
-# IC2 2.0.344-experimental
+# IC2 2.0.370-experimental
 version:1.6
-modname:IC2
+modname:IC2[2.0]
 
-var:blockLuminator=0,blockDoorAlloy=0,blockDynamiteRemote=0,blockFenceIron=0,blockMiningTip=0,blockMiningPipe=0,blockMachine2=0,blockOreCopper=0,blockWall=0,blockfluidUuMatter=0
+var:blockLuminator=0,blockDoorAlloy=0,blockDynamiteRemote=0,blockMiningTip=0,blockFenceIron=0,blockMiningPipe=0,blockMachine2=0,blockfluidUuMatter=0,blockOreCopper=0,blockWall=0
 var:blockRubLeaves=0,blockfluidCf=0,blockMetal=0,blockGenerator=0,blockBarrel=0,blockDynamite=0,blockMachine=0,blockRubber=0,blockFoam=0,blockIronScaffold=0
-var:blockHarz=0,blockRubSapling=0,blockOreLead=0,blockAlloyGlass=0,blockFluidcoolant=0,blockRubWood=0,blockOreUran=0,blockCable=0,blockAlloy=0,blockITNT=0
-var:blockReactorChamber=0,blockOreTin=0,blockReinforcedFoam=0,blockPersonal=0,blockCrop=0,blockLuminatorDark=0,blockElectric=0,blockNuke=0,blockScaffold=0
+var:blockHarz=0,blockRubSapling=0,blockOreLead=0,blockFluidcoolant=0,blockAlloyGlass=0,blockRubWood=0,blockOreUran=0,blockCable=0,blockAlloy=0,blockReactorChamber=0
+var:blockITNT=0,blockReinforcedFoam=0,blockOreTin=0,blockPersonal=0,blockLuminatorDark=0,blockCrop=0,blockElectric=0,blockScaffold=0,blockNuke=0
 
 cfgfile:config/IC2.cfg
 
@@ -25,6 +25,56 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
+
+# blockBarrel:* (blockBarrel), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
+
+# blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.block.BlockCrop
+patchblock:id=blockCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# blockWall:* (blockWall), render=ic2.core.block.RenderBlockWall(WALL), opaque=true,cls=ic2.core.block.BlockWall
+customblock:id=blockWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# blockMachine2:* (blockMachine2), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
+#Need to identify the way IC2 rotates blocks for proper Dynmap block rotation rendering
+#customblock:id=blockMachine2,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=direction,index0=0,map0=S243015,index1=1,map1=S032145,index2=2,map2=S012435,index3=3,map3=S012543,index4=4,map4=S013245,index5=5,map5=S012345
+
+# blockElectric:* (blockElectric), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
+#Need to identify the way IC2 rotates blocks for proper Dynmap block rotation rendering
+#customblock:id=blockElectric,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=direction,index0=0,map0=S243015,index1=1,map1=S032145,index2=2,map2=S012435,index3=3,map3=S012543,index4=4,map4=S013245,index5=5,map5=S012345
+
+# blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
+customblock:id=blockDoorAlloy,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# blockFenceIron:* (blockFenceIron), render=ic2.core.block.RenderBlockFence(FENCE), opaque=false,cls=ic2.core.block.BlockPoleFence
+customblock:id=blockFenceIron,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# blockReactorChamber:* (blockReactorChamber), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
+
+# blockRubber:* (blockRubber), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
+boxblock:id=blockRubber,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
+
+# blockDynamiteRemote:* (blockDynamiteRemote), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+patchblock:id=blockDynamiteRemote,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+
+# blockDynamite:* (blockDynamite), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+patchblock:id=blockDynamite,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
+
+# blockHarz:* (blockHarz), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
+boxblock:id=blockHarz,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
+
+# blockRubSapling:* (blockRubSapling), render=(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
+patchblock:id=blockRubSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
+boxblock:id=blockMiningPipe,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=0
+
+# blockGenerator:* (blockGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
+#Need to identify the way IC2 rotates blocks for proper Dynmap block rotation rendering
+#customblock:id=blockGenerator,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=direction,index0=0,map0=S243015,index1=1,map1=S032145,index2=2,map2=S012435,index3=3,map3=S012543,index4=4,map4=S013245,index5=5,map5=S012345
+
+# blockMachine:* (blockMachine), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
+#Need to identify the way IC2 rotates blocks for proper Dynmap block rotation rendering
+#customblock:id=blockMachine,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=direction,index0=0,map0=S243015,index1=1,map1=S032145,index2=2,map2=S012435,index3=3,map3=S012543,index4=4,map4=S013245,index5=5,map5=S012345
 
 # blockfluidUuMatter:* (blockfluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
 boxblock:id=blockfluidUuMatter,ymax=0.875,data=1
@@ -74,44 +124,9 @@ boxblock:id=blockFluidcoolant,ymax=0.375,data=13
 boxblock:id=blockFluidcoolant,ymax=0.25,data=14
 boxblock:id=blockFluidcoolant,ymax=0.125,data=15
 
-# blockBarrel:* (blockBarrel), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
+# blockLuminatorDark:* (blockLuminatorDark), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
+boxblock:id=blockLuminatorDark,ymax=0.0625,data=*
 
-# blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.block.BlockCrop
-patchblock:id=blockCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+# blockLuminator:* (blockLuminator), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
+boxblock:id=blockLuminator,ymax=0.0625,data=*
 
-# blockDynamiteRemote:* (blockDynamiteRemote), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
-patchblock:id=blockDynamiteRemote,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
-
-# blockDynamite:* (blockDynamite), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
-patchblock:id=blockDynamite,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
-
-# blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
-boxblock:id=blockMiningPipe,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=0
-
-# blockMachine2:* (blockMachine2), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
-
-# blockMachine:* (blockMachine), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
-
-# blockElectric:* (blockElectric), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
-
-# blockReactorChamber:* (blockReactorChamber), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
-
-# blockGenerator:* (blockGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
-
-# blockWall:* (blockWall), render=ic2.core.block.RenderBlockWall(WALL), opaque=true,cls=ic2.core.block.BlockWall
-customblock:id=blockWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
-
-# blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
-customblock:id=blockDoorAlloy,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
-
-# blockFenceIron:* (blockFenceIron), render=ic2.core.block.RenderBlockFence(FENCE), opaque=false,cls=ic2.core.block.BlockPoleFence
-customblock:id=blockFenceIron,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
-
-# blockRubber:* (blockRubber), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
-boxblock:id=blockRubber,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=*
-
-# blockHarz:* (blockHarz), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
-boxblock:id=blockHarz,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.125,zmin=0.0,zmax=1.0,data=0
-
-# blockRubSapling:* (blockRubSapling), render=(CROSSEDSQUARES), opaque=false,cls=ic2.core.block.BlockRubSapling
-patchblock:id=blockRubSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
