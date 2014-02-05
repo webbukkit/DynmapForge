@@ -1,11 +1,12 @@
-# IC2 2.0.344-experimental
+# IC2 2.0.370-experimental
 version:1.6
-modname:IC2
+modname:IC2[2.0]
 
-var:blockLuminator=0,blockDoorAlloy=0,blockDynamiteRemote=0,blockFenceIron=0,blockMiningTip=0,blockMiningPipe=0,blockMachine2=0,blockOreCopper=0,blockWall=0,blockfluidUuMatter=0
+
+var:blockLuminator=0,blockDoorAlloy=0,blockDynamiteRemote=0,blockMiningTip=0,blockFenceIron=0,blockMiningPipe=0,blockMachine2=0,blockfluidUuMatter=0,blockOreCopper=0,blockWall=0
 var:blockRubLeaves=0,blockfluidCf=0,blockMetal=0,blockGenerator=0,blockBarrel=0,blockDynamite=0,blockMachine=0,blockRubber=0,blockFoam=0,blockIronScaffold=0
-var:blockHarz=0,blockRubSapling=0,blockOreLead=0,blockAlloyGlass=0,blockFluidcoolant=0,blockRubWood=0,blockOreUran=0,blockCable=0,blockAlloy=0,blockITNT=0
-var:blockReactorChamber=0,blockOreTin=0,blockReinforcedFoam=0,blockPersonal=0,blockCrop=0,blockLuminatorDark=0,blockElectric=0,blockNuke=0,blockScaffold=0
+var:blockHarz=0,blockRubSapling=0,blockOreLead=0,blockFluidcoolant=0,blockAlloyGlass=0,blockRubWood=0,blockOreUran=0,blockCable=0,blockAlloy=0,blockReactorChamber=0
+var:blockITNT=0,blockReinforcedFoam=0,blockOreTin=0,blockPersonal=0,blockLuminatorDark=0,blockCrop=0,blockElectric=0,blockScaffold=0,blockNuke=0
 
 cfgfile:config/IC2.cfg
 
@@ -13,34 +14,34 @@ cfgfile:config/IC2.cfg
 texturepath:assets/ic2/textures/blocks/
 texture:id=ic2/blockAlloy,filename=assets/ic2/textures/blocks/blockAlloy.png
 texture:id=ic2/blockAlloyGlass,filename=assets/ic2/textures/blocks/blockAlloyGlass.png
-texture:id=ic2/blockBarrel,filename=assets/ic2/textures/blocks/blockBarrel.png
+texture:id=ic2/blockBarrel,filename=assets/ic2/textures/blocks/blockBarrel.png,xcount=6,ycount=1
 texture:id=ic2/blockDoorAlloy.bottom,filename=assets/ic2/textures/blocks/blockDoorAlloy.bottom.png
 texture:id=ic2/blockDoorAlloy.top,filename=assets/ic2/textures/blocks/blockDoorAlloy.top.png
 texture:id=ic2/blockDynamite,filename=assets/ic2/textures/blocks/blockDynamite.png
 texture:id=ic2/blockDynamiteRemote,filename=assets/ic2/textures/blocks/blockDynamiteRemote.png
 texture:id=ic2/blockFenceIron,filename=assets/ic2/textures/blocks/blockFenceIron.png
 texture:id=ic2/blockHarz,filename=assets/ic2/textures/blocks/blockHarz.png
-texture:id=ic2/blockITNT,filename=assets/ic2/textures/blocks/blockITNT.png
-texture:id=ic2/blockIronScaffold,filename=assets/ic2/textures/blocks/blockIronScaffold.png
-texture:id=ic2/blockIronScaffold.reinforced,filename=assets/ic2/textures/blocks/blockIronScaffold.reinforced.png
+texture:id=ic2/blockITNT,filename=assets/ic2/textures/blocks/blockITNT.png,xcount=6,ycount=1
+texture:id=ic2/blockIronScaffold,filename=assets/ic2/textures/blocks/blockIronScaffold.png,xcount=6,ycount=1
+texture:id=ic2/blockIronScaffold.reinforced,filename=assets/ic2/textures/blocks/blockIronScaffold.reinforced.png,xcount=6,ycount=1
 texture:id=ic2/blockMetalBronze,filename=assets/ic2/textures/blocks/blockMetalBronze.png
 texture:id=ic2/blockMetalCopper,filename=assets/ic2/textures/blocks/blockMetalCopper.png
 texture:id=ic2/blockMetalLead,filename=assets/ic2/textures/blocks/blockMetalLead.png
 texture:id=ic2/blockMetalTin,filename=assets/ic2/textures/blocks/blockMetalTin.png
-texture:id=ic2/blockMetalUranium,filename=assets/ic2/textures/blocks/blockMetalUranium.png
-texture:id=ic2/blockNuke,filename=assets/ic2/textures/blocks/blockNuke.png
+texture:id=ic2/blockMetalUranium,filename=assets/ic2/textures/blocks/blockMetalUranium.png,xcount=6,ycount=1
+texture:id=ic2/blockNuke,filename=assets/ic2/textures/blocks/blockNuke.png,xcount=6,ycount=1
 texture:id=ic2/blockOreCopper,filename=assets/ic2/textures/blocks/blockOreCopper.png
 texture:id=ic2/blockOreLead,filename=assets/ic2/textures/blocks/blockOreLead.png
 texture:id=ic2/blockOreTin,filename=assets/ic2/textures/blocks/blockOreTin.png
 texture:id=ic2/blockOreUran,filename=assets/ic2/textures/blocks/blockOreUran.png
 texture:id=ic2/blockRubLeaves,filename=assets/ic2/textures/blocks/blockRubLeaves.png
 texture:id=ic2/blockRubSapling,filename=assets/ic2/textures/blocks/blockRubSapling.png
-texture:id=ic2/blockRubWood,filename=assets/ic2/textures/blocks/blockRubWood.png
-texture:id=ic2/blockRubWood.dry,filename=assets/ic2/textures/blocks/blockRubWood.dry.png
-texture:id=ic2/blockRubWood.wet,filename=assets/ic2/textures/blocks/blockRubWood.wet.png
+texture:id=ic2/blockRubWood,filename=assets/ic2/textures/blocks/blockRubWood.png,xcount=6,ycount=1
+texture:id=ic2/blockRubWood.dry,filename=assets/ic2/textures/blocks/blockRubWood.dry.png,xcount=6,ycount=1
+texture:id=ic2/blockRubWood.wet,filename=assets/ic2/textures/blocks/blockRubWood.wet.png,xcount=6,ycount=1
 texture:id=ic2/blockRubber,filename=assets/ic2/textures/blocks/blockRubber.png
-texture:id=ic2/blockScaffold,filename=assets/ic2/textures/blocks/blockScaffold.png
-texture:id=ic2/blockScaffold.reinforced,filename=assets/ic2/textures/blocks/blockScaffold.reinforced.png
+texture:id=ic2/blockScaffold,filename=assets/ic2/textures/blocks/blockScaffold.png,xcount=6,ycount=1
+texture:id=ic2/blockScaffold.reinforced,filename=assets/ic2/textures/blocks/blockScaffold.reinforced.png,xcount=6,ycount=1
 texture:id=ic2/blockconstructionfoam_flow,filename=assets/ic2/textures/blocks/blockconstructionfoam_flow.png
 texture:id=ic2/blockconstructionfoam_still,filename=assets/ic2/textures/blocks/blockconstructionfoam_still.png
 texture:id=ic2/blockic2coolant_flow,filename=assets/ic2/textures/blocks/blockic2coolant_flow.png
@@ -67,58 +68,58 @@ texture:id=ic2/cf/blockWall.white,filename=assets/ic2/textures/blocks/cf/blockWa
 texture:id=ic2/cf/blockWall.yellow,filename=assets/ic2/textures/blocks/cf/blockWall.yellow.png
 texture:id=ic2/crop/blockCrop.stick,filename=assets/ic2/textures/blocks/crop/blockCrop.stick.png
 texture:id=ic2/crop/blockCrop.stick.upgraded,filename=assets/ic2/textures/blocks/crop/blockCrop.stick.upgraded.png
-texture:id=ic2/generator/blockGenerator,filename=assets/ic2/textures/blocks/generator/blockGenerator.png
-texture:id=ic2/generator/blockGeoGenerator,filename=assets/ic2/textures/blocks/generator/blockGeoGenerator.png
-texture:id=ic2/generator/blockNuclearReactor,filename=assets/ic2/textures/blocks/generator/blockNuclearReactor.png
-texture:id=ic2/generator/blockRTGenerator,filename=assets/ic2/textures/blocks/generator/blockRTGenerator.png
-texture:id=ic2/generator/blockReactorChamber,filename=assets/ic2/textures/blocks/generator/blockReactorChamber.png
-texture:id=ic2/generator/blockSemifluidGenerator,filename=assets/ic2/textures/blocks/generator/blockSemifluidGenerator.png
-texture:id=ic2/generator/blockSolarGenerator,filename=assets/ic2/textures/blocks/generator/blockSolarGenerator.png
-texture:id=ic2/generator/blockWaterGenerator,filename=assets/ic2/textures/blocks/generator/blockWaterGenerator.png
-texture:id=ic2/generator/blockWindGenerator,filename=assets/ic2/textures/blocks/generator/blockWindGenerator.png
+texture:id=ic2/generator/blockGenerator,filename=assets/ic2/textures/blocks/generator/blockGenerator.png,xcount=12,ycount=1
+texture:id=ic2/generator/blockGeoGenerator,filename=assets/ic2/textures/blocks/generator/blockGeoGenerator.png,xcount=12,ycount=1
+texture:id=ic2/generator/blockNuclearReactor,filename=assets/ic2/textures/blocks/generator/blockNuclearReactor.png,xcount=12,ycount=1
+texture:id=ic2/generator/blockRTGenerator,filename=assets/ic2/textures/blocks/generator/blockRTGenerator.png,xcount=12,ycount=1
+texture:id=ic2/generator/blockReactorChamber,filename=assets/ic2/textures/blocks/generator/blockReactorChamber.png,xcount=6,ycount=1
+texture:id=ic2/generator/blockSemifluidGenerator,filename=assets/ic2/textures/blocks/generator/blockSemifluidGenerator.png,xcount=12,ycount=1
+texture:id=ic2/generator/blockSolarGenerator,filename=assets/ic2/textures/blocks/generator/blockSolarGenerator.png,xcount=6,ycount=1
+texture:id=ic2/generator/blockWaterGenerator,filename=assets/ic2/textures/blocks/generator/blockWaterGenerator.png,xcount=6,ycount=1
+texture:id=ic2/generator/blockWindGenerator,filename=assets/ic2/textures/blocks/generator/blockWindGenerator.png,xcount=6,ycount=1
 texture:id=ic2/machine/blockAdvMachine,filename=assets/ic2/textures/blocks/machine/blockAdvMachine.png
-texture:id=ic2/machine/blockAdvMiner,filename=assets/ic2/textures/blocks/machine/blockAdvMiner.png
-texture:id=ic2/machine/blockCanner,filename=assets/ic2/textures/blocks/machine/blockCanner.png
-texture:id=ic2/machine/blockCentrifuge,filename=assets/ic2/textures/blocks/machine/blockCentrifuge.png
-texture:id=ic2/machine/blockCompressor,filename=assets/ic2/textures/blocks/machine/blockCompressor.png
-texture:id=ic2/machine/blockCropmatron,filename=assets/ic2/textures/blocks/machine/blockCropmatron.png
-texture:id=ic2/machine/blockElecFurnace,filename=assets/ic2/textures/blocks/machine/blockElecFurnace.png
-texture:id=ic2/machine/blockElectrolyzer,filename=assets/ic2/textures/blocks/machine/blockElectrolyzer.png
-texture:id=ic2/machine/blockExtractor,filename=assets/ic2/textures/blocks/machine/blockExtractor.png
-texture:id=ic2/machine/blockFluidBottler,filename=assets/ic2/textures/blocks/machine/blockFluidBottler.png
-texture:id=ic2/machine/blockInduction,filename=assets/ic2/textures/blocks/machine/blockInduction.png
-texture:id=ic2/machine/blockIronFurnace,filename=assets/ic2/textures/blocks/machine/blockIronFurnace.png
-texture:id=ic2/machine/blockMacerator,filename=assets/ic2/textures/blocks/machine/blockMacerator.png
+texture:id=ic2/machine/blockAdvMiner,filename=assets/ic2/textures/blocks/machine/blockAdvMiner.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockCanner,filename=assets/ic2/textures/blocks/machine/blockCanner.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockCentrifuge,filename=assets/ic2/textures/blocks/machine/blockCentrifuge.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockCompressor,filename=assets/ic2/textures/blocks/machine/blockCompressor.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockCropmatron,filename=assets/ic2/textures/blocks/machine/blockCropmatron.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockElecFurnace,filename=assets/ic2/textures/blocks/machine/blockElecFurnace.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockElectrolyzer,filename=assets/ic2/textures/blocks/machine/blockElectrolyzer.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockExtractor,filename=assets/ic2/textures/blocks/machine/blockExtractor.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockFluidBottler,filename=assets/ic2/textures/blocks/machine/blockFluidBottler.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockInduction,filename=assets/ic2/textures/blocks/machine/blockInduction.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockIronFurnace,filename=assets/ic2/textures/blocks/machine/blockIronFurnace.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockMacerator,filename=assets/ic2/textures/blocks/machine/blockMacerator.png,xcount=12,ycount=1
 texture:id=ic2/machine/blockMachine,filename=assets/ic2/textures/blocks/machine/blockMachine.png
-texture:id=ic2/machine/blockMagnetizer,filename=assets/ic2/textures/blocks/machine/blockMagnetizer.png
-texture:id=ic2/machine/blockMatter,filename=assets/ic2/textures/blocks/machine/blockMatter.png
-texture:id=ic2/machine/blockMetalFormer,filename=assets/ic2/textures/blocks/machine/blockMetalFormer.png
-texture:id=ic2/machine/blockMiner,filename=assets/ic2/textures/blocks/machine/blockMiner.png
+texture:id=ic2/machine/blockMagnetizer,filename=assets/ic2/textures/blocks/machine/blockMagnetizer.png,xcount=6,ycount=1
+texture:id=ic2/machine/blockMatter,filename=assets/ic2/textures/blocks/machine/blockMatter.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockMetalFormer,filename=assets/ic2/textures/blocks/machine/blockMetalFormer.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockMiner,filename=assets/ic2/textures/blocks/machine/blockMiner.png,xcount=12,ycount=1
 texture:id=ic2/machine/blockMiningPipe,filename=assets/ic2/textures/blocks/machine/blockMiningPipe.png
 texture:id=ic2/machine/blockMiningTip,filename=assets/ic2/textures/blocks/machine/blockMiningTip.png
-texture:id=ic2/machine/blockOreWashingPlant,filename=assets/ic2/textures/blocks/machine/blockOreWashingPlant.png
-texture:id=ic2/machine/blockPatternStorage,filename=assets/ic2/textures/blocks/machine/blockPatternStorage.png
-texture:id=ic2/machine/blockPump,filename=assets/ic2/textures/blocks/machine/blockPump.png
-texture:id=ic2/machine/blockRecycler,filename=assets/ic2/textures/blocks/machine/blockRecycler.png
-texture:id=ic2/machine/blockReplicator,filename=assets/ic2/textures/blocks/machine/blockReplicator.png
-texture:id=ic2/machine/blockScanner,filename=assets/ic2/textures/blocks/machine/blockScanner.png
-texture:id=ic2/machine/blockSolidCanner,filename=assets/ic2/textures/blocks/machine/blockSolidCanner.png
-texture:id=ic2/machine/blockTeleporter,filename=assets/ic2/textures/blocks/machine/blockTeleporter.png
-texture:id=ic2/machine/blockTerra,filename=assets/ic2/textures/blocks/machine/blockTerra.png
-texture:id=ic2/machine/blockTesla,filename=assets/ic2/textures/blocks/machine/blockTesla.png
-texture:id=ic2/personal/blockPersonalChest,filename=assets/ic2/textures/blocks/personal/blockPersonalChest.png
-texture:id=ic2/personal/blockPersonalTrader,filename=assets/ic2/textures/blocks/personal/blockPersonalTrader.png
-texture:id=ic2/personal/blockPersonalTraderEnergy,filename=assets/ic2/textures/blocks/personal/blockPersonalTraderEnergy.png
-texture:id=ic2/wiring/blockBatBox,filename=assets/ic2/textures/blocks/wiring/blockBatBox.png
-texture:id=ic2/wiring/blockCESU,filename=assets/ic2/textures/blocks/wiring/blockCESU.png
+texture:id=ic2/machine/blockOreWashingPlant,filename=assets/ic2/textures/blocks/machine/blockOreWashingPlant.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockPatternStorage,filename=assets/ic2/textures/blocks/machine/blockPatternStorage.png,xcount=6,ycount=1
+texture:id=ic2/machine/blockPump,filename=assets/ic2/textures/blocks/machine/blockPump.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockRecycler,filename=assets/ic2/textures/blocks/machine/blockRecycler.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockReplicator,filename=assets/ic2/textures/blocks/machine/blockReplicator.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockScanner,filename=assets/ic2/textures/blocks/machine/blockScanner.png,xcount=6,ycount=1
+texture:id=ic2/machine/blockSolidCanner,filename=assets/ic2/textures/blocks/machine/blockSolidCanner.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockTeleporter,filename=assets/ic2/textures/blocks/machine/blockTeleporter.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockTerra,filename=assets/ic2/textures/blocks/machine/blockTerra.png,xcount=12,ycount=1
+texture:id=ic2/machine/blockTesla,filename=assets/ic2/textures/blocks/machine/blockTesla.png,xcount=6,ycount=1
+texture:id=ic2/personal/blockPersonalChest,filename=assets/ic2/textures/blocks/personal/blockPersonalChest.png,xcount=6,ycount=1
+texture:id=ic2/personal/blockPersonalTrader,filename=assets/ic2/textures/blocks/personal/blockPersonalTrader.png,xcount=6,ycount=1
+texture:id=ic2/personal/blockPersonalTraderEnergy,filename=assets/ic2/textures/blocks/personal/blockPersonalTraderEnergy.png,xcount=6,ycount=1
+texture:id=ic2/wiring/blockBatBox,filename=assets/ic2/textures/blocks/wiring/blockBatBox.png,xcount=6,ycount=1
+texture:id=ic2/wiring/blockCESU,filename=assets/ic2/textures/blocks/wiring/blockCESU.png,xcount=6,ycount=1
 texture:id=ic2/wiring/blockLuminator,filename=assets/ic2/textures/blocks/wiring/blockLuminator.png
 texture:id=ic2/wiring/blockLuminatorDark,filename=assets/ic2/textures/blocks/wiring/blockLuminatorDark.png
-texture:id=ic2/wiring/blockMFE,filename=assets/ic2/textures/blocks/wiring/blockMFE.png
-texture:id=ic2/wiring/blockMFSU,filename=assets/ic2/textures/blocks/wiring/blockMFSU.png
-texture:id=ic2/wiring/blockTransformerEV,filename=assets/ic2/textures/blocks/wiring/blockTransformerEV.png
-texture:id=ic2/wiring/blockTransformerHV,filename=assets/ic2/textures/blocks/wiring/blockTransformerHV.png
-texture:id=ic2/wiring/blockTransformerLV,filename=assets/ic2/textures/blocks/wiring/blockTransformerLV.png
-texture:id=ic2/wiring/blockTransformerMV,filename=assets/ic2/textures/blocks/wiring/blockTransformerMV.png
+texture:id=ic2/wiring/blockMFE,filename=assets/ic2/textures/blocks/wiring/blockMFE.png,xcount=6,ycount=1
+texture:id=ic2/wiring/blockMFSU,filename=assets/ic2/textures/blocks/wiring/blockMFSU.png,xcount=6,ycount=1
+texture:id=ic2/wiring/blockTransformerEV,filename=assets/ic2/textures/blocks/wiring/blockTransformerEV.png,xcount=12,ycount=1
+texture:id=ic2/wiring/blockTransformerHV,filename=assets/ic2/textures/blocks/wiring/blockTransformerHV.png,xcount=12,ycount=1
+texture:id=ic2/wiring/blockTransformerLV,filename=assets/ic2/textures/blocks/wiring/blockTransformerLV.png,xcount=12,ycount=1
+texture:id=ic2/wiring/blockTransformerMV,filename=assets/ic2/textures/blocks/wiring/blockTransformerMV.png,xcount=12,ycount=1
 texture:id=ic2/wiring/cable/blockCable,filename=assets/ic2/textures/blocks/wiring/cable/blockCable.png
 texture:id=ic2/wiring/cable/blockCableO,filename=assets/ic2/textures/blocks/wiring/cable/blockCableO.png
 texture:id=ic2/wiring/cable/blockDetectorCable,filename=assets/ic2/textures/blocks/wiring/cable/blockDetectorCable.png
@@ -136,145 +137,26 @@ texture:id=ic2/wiring/cable/blockTinCableI,filename=assets/ic2/textures/blocks/w
 
 
 
-# blockOreLead:* (blockOreLead), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
-block:id=blockOreLead,data=0,stdrot=true,face0-5=0:ic2/blockOreLead
-
-# blockReinforcedFoam:* (blockReinforcedFoam), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockReinforcedFoam
-block:id=blockReinforcedFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockReinforcedFoam
-
-# blockfluidUuMatter:* (blockfluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=blockfluidUuMatter,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockuumatter_still,face2-5=12000:ic2/blockuumatter_flow
-
-# blockfluidCf:* (blockfluidCf), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=blockfluidCf,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockconstructionfoam_still,face2-5=12000:ic2/blockconstructionfoam_flow
-
-# blockFluidcoolant:* (blockFluidcoolant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=blockFluidcoolant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockic2coolant_still,face2-5=12000:ic2/blockic2coolant_flow
+# blockIronScaffold:* (blockIronScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
+block:id=blockIronScaffold,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockIronScaffold
+block:id=blockIronScaffold,data=12,stdrot=true,transparency=SEMITRANSPARENT,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockIronScaffold.reinforced
+block:id=blockIronScaffold,data=13,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockIronScaffold
 
 # blockBarrel:* (blockBarrel), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
-block:id=blockBarrel,data=*,stdrot=true,face0-5=0:ic2/blockBarrel
+block:id=blockBarrel,data=*,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockBarrel
 
 # blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.block.BlockCrop
 block:id=blockCrop,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
 block:id=blockCrop,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick.upgraded
 block:id=blockCrop,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
 
-# blockDynamiteRemote:* (blockDynamiteRemote), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
-block:id=blockDynamiteRemote,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDynamiteRemote
-
-# blockDynamite:* (blockDynamite), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
-block:id=blockDynamite,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDynamite
-
-# blockNuke:* (blockNuke), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
-block:id=blockNuke,data=0,stdrot=true,face0-5=0:ic2/blockNuke
-
-# blockITNT:* (blockITNT), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
-block:id=blockITNT,data=0,stdrot=true,face0-5=0:ic2/blockITNT
-
-# blockPersonal:* (blockPersonal), render=ic2.core.block.personal.RenderBlockPersonal(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
-block:id=blockPersonal,data=0,stdrot=true,face0-5=0:ic2/personal/blockPersonalChest
-block:id=blockPersonal,data=1,stdrot=true,face0-5=0:ic2/personal/blockPersonalTrader
-block:id=blockPersonal,data=2,stdrot=true,face0-5=0:ic2/personal/blockPersonalTraderEnergy
-
-# blockMiningTip:* (blockMiningTip), render=(STANDARD), opaque=true,cls=ic2.core.block.machine.BlockMiningTip
-block:id=blockMiningTip,data=0,stdrot=true,face0-5=0:ic2/machine/blockMiningTip
-
-# blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
-block:id=blockMiningPipe,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMiningPipe
-
-# blockLuminator:* (blockLuminator), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
-block:id=blockLuminator,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLuminator
-
 # blockLuminatorDark:* (blockLuminatorDark), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
 block:id=blockLuminatorDark,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLuminatorDark
 
-# blockMachine2:* (blockMachine2), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
-block:id=blockMachine2,data=0,stdrot=true,face0-5=0:ic2/machine/blockTeleporter
-block:id=blockMachine2,data=1,stdrot=true,face0-5=0:ic2/machine/blockTesla
-block:id=blockMachine2,data=2,stdrot=true,face0-5=0:ic2/machine/blockCropmatron
-block:id=blockMachine2,data=3,stdrot=true,face0-5=0:ic2/machine/blockCentrifuge
-block:id=blockMachine2,data=4,stdrot=true,face0-5=0:ic2/machine/blockMetalFormer
-block:id=blockMachine2,data=5,stdrot=true,face0-5=0:ic2/machine/blockOreWashingPlant
-block:id=blockMachine2,data=6,stdrot=true,face0-5=0:ic2/machine/blockPatternStorage
-block:id=blockMachine2,data=7,stdrot=true,face0-5=0:ic2/machine/blockScanner
-block:id=blockMachine2,data=8,stdrot=true,face0-5=0:ic2/machine/blockReplicator
-block:id=blockMachine2,data=9,stdrot=true,face0-5=0:ic2/machine/blockSolidCanner
-block:id=blockMachine2,data=10,stdrot=true,face0-5=0:ic2/machine/blockFluidBottler
-block:id=blockMachine2,data=11,stdrot=true,face0-5=0:ic2/machine/blockAdvMiner
-
-# blockMachine:* (blockMachine), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
-block:id=blockMachine,data=0,stdrot=true,face0-5=0:ic2/machine/blockMachine
-block:id=blockMachine,data=1,stdrot=true,face0-5=0:ic2/machine/blockIronFurnace
-block:id=blockMachine,data=2,stdrot=true,face0-5=0:ic2/machine/blockElecFurnace
-block:id=blockMachine,data=3,stdrot=true,face0-5=0:ic2/machine/blockMacerator
-block:id=blockMachine,data=4,stdrot=true,face0-5=0:ic2/machine/blockExtractor
-block:id=blockMachine,data=5,stdrot=true,face0-5=0:ic2/machine/blockCompressor
-block:id=blockMachine,data=6,stdrot=true,face0-5=0:ic2/machine/blockCanner
-block:id=blockMachine,data=7,stdrot=true,face0-5=0:ic2/machine/blockMiner
-block:id=blockMachine,data=8,stdrot=true,face0-5=0:ic2/machine/blockPump
-block:id=blockMachine,data=9,stdrot=true,face0-5=0:ic2/machine/blockMagnetizer
-block:id=blockMachine,data=10,stdrot=true,face0-5=0:ic2/machine/blockElectrolyzer
-block:id=blockMachine,data=11,stdrot=true,face0-5=0:ic2/machine/blockRecycler
-block:id=blockMachine,data=12,stdrot=true,face0-5=0:ic2/machine/blockAdvMachine
-block:id=blockMachine,data=13,stdrot=true,face0-5=0:ic2/machine/blockInduction
-block:id=blockMachine,data=14,stdrot=true,face0-5=0:ic2/machine/blockMatter
-block:id=blockMachine,data=15,stdrot=true,face0-5=0:ic2/machine/blockTerra
-
-# blockElectric:* (blockElectric), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
-block:id=blockElectric,data=0,stdrot=true,face0-5=0:ic2/wiring/blockBatBox
-block:id=blockElectric,data=1,stdrot=true,face0-5=0:ic2/wiring/blockMFE
-block:id=blockElectric,data=2,stdrot=true,face0-5=0:ic2/wiring/blockMFSU
-block:id=blockElectric,data=3,stdrot=true,face0-5=0:ic2/wiring/blockTransformerLV
-block:id=blockElectric,data=4,stdrot=true,face0-5=0:ic2/wiring/blockTransformerMV
-block:id=blockElectric,data=5,stdrot=true,face0-5=0:ic2/wiring/blockTransformerHV
-block:id=blockElectric,data=6,stdrot=true,face0-5=0:ic2/wiring/blockTransformerEV
-block:id=blockElectric,data=7,stdrot=true,face0-5=0:ic2/wiring/blockCESU
-
-# blockReactorChamber:* (blockReactorChamber), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
-block:id=blockReactorChamber,data=0,stdrot=true,face0-5=0:ic2/generator/blockReactorChamber
-
-# blockGenerator:* (blockGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
-block:id=blockGenerator,data=0,stdrot=true,face0-5=0:ic2/generator/blockGenerator
-block:id=blockGenerator,data=1,stdrot=true,face0-5=0:ic2/generator/blockGeoGenerator
-block:id=blockGenerator,data=2,stdrot=true,face0-5=0:ic2/generator/blockWaterGenerator
-block:id=blockGenerator,data=3,stdrot=true,face0-5=0:ic2/generator/blockSolarGenerator
-block:id=blockGenerator,data=4,stdrot=true,face0-5=0:ic2/generator/blockWindGenerator
-block:id=blockGenerator,data=5,stdrot=true,face0-5=0:ic2/generator/blockNuclearReactor
-block:id=blockGenerator,data=6,stdrot=true,face0-5=0:ic2/generator/blockRTGenerator
-block:id=blockGenerator,data=7,stdrot=true,face0-5=0:ic2/generator/blockSemifluidGenerator
-
-# blockCable:* (blockCable), render=ic2.core.block.wiring.RenderBlockCable(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
-block:id=blockCable,data=0,stdrot=true,face0-5=0:ic2/wiring/cable/blockCable
-block:id=blockCable,data=1,stdrot=true,face0-5=0:ic2/wiring/cable/blockCableO
-block:id=blockCable,data=2,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCable
-block:id=blockCable,data=3,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCableI
-block:id=blockCable,data=4,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCableII
-block:id=blockCable,data=5,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCable
-block:id=blockCable,data=6,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableI
-block:id=blockCable,data=7,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableII
-block:id=blockCable,data=8,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableIIII
-block:id=blockCable,data=9,stdrot=true,face0-5=0:ic2/wiring/cable/blockGlassCable
-block:id=blockCable,data=10,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCable
-block:id=blockCable,data=11,stdrot=true,face0-5=0:ic2/wiring/cable/blockDetectorCable
-block:id=blockCable,data=12,stdrot=true,face0-5=0:ic2/wiring/cable/blockSplitterCable
-block:id=blockCable,data=13,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCableI
-
-# blockMetal:* (blockMetal), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetal
-block:id=blockMetal,data=0,stdrot=true,face0-5=0:ic2/blockMetalCopper
-block:id=blockMetal,data=1,stdrot=true,face0-5=0:ic2/blockMetalTin
-block:id=blockMetal,data=2,stdrot=true,face0-5=0:ic2/blockMetalBronze
-block:id=blockMetal,data=3,stdrot=true,face0-5=0:ic2/blockMetalUranium
-block:id=blockMetal,data=4,stdrot=true,face0-5=0:ic2/blockMetalLead
-
-# blockIronScaffold:* (blockIronScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
-block:id=blockIronScaffold,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,stdrot=true,face0-5=0:ic2/blockIronScaffold
-block:id=blockIronScaffold,data=12,stdrot=true,face0-5=0:ic2/blockIronScaffold.reinforced
-block:id=blockIronScaffold,data=13,data=14,data=15,stdrot=true,face0-5=0:ic2/blockIronScaffold
-
 # blockScaffold:* (blockScaffold), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockScaffold
-block:id=blockScaffold,data=0,data=1,data=2,data=3,data=4,stdrot=true,face0-5=0:ic2/blockScaffold
-block:id=blockScaffold,data=5,stdrot=true,face0-5=0:ic2/blockScaffold.reinforced
-block:id=blockScaffold,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:ic2/blockScaffold
+block:id=blockScaffold,data=0,data=1,data=2,data=3,data=4,stdrot=true,transparency=SEMITRANSPARENT,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockScaffold
+block:id=blockScaffold,data=5,stdrot=true,transparency=SEMITRANSPARENT,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockScaffold.reinforced
+block:id=blockScaffold,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockScaffold
 
 # blockWall:* (blockWall), render=ic2.core.block.RenderBlockWall(WALL), opaque=true,cls=ic2.core.block.BlockWall
 block:id=blockWall,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/cf/blockWall.black
@@ -297,6 +179,62 @@ block:id=blockWall,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/c
 # blockFoam:* (blockFoam), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockFoam
 block:id=blockFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockFoam
 
+
+# blockMachine2:* (blockMachine2), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
+block:id=blockMachine2,data=0,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockTeleporter
+block:id=blockMachine2,data=1,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockTesla
+block:id=blockMachine2,data=2,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockCropmatron
+block:id=blockMachine2,data=3,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockCentrifuge
+block:id=blockMachine2,data=4,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockMetalFormer
+block:id=blockMachine2,data=5,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockOreWashingPlant
+block:id=blockMachine2,data=6,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockPatternStorage
+block:id=blockMachine2,data=7,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockScanner
+block:id=blockMachine2,data=8,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockReplicator
+block:id=blockMachine2,data=9,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockSolidCanner
+block:id=blockMachine2,data=10,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockFluidBottler
+block:id=blockMachine2,data=11,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockAdvMiner
+
+# blockMetal:* (blockMetal), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetal
+block:id=blockMetal,data=0,stdrot=true,face0-5=0:ic2/blockMetalCopper
+block:id=blockMetal,data=1,stdrot=true,face0-5=0:ic2/blockMetalTin
+block:id=blockMetal,data=2,stdrot=true,face0-5=0:ic2/blockMetalBronze
+block:id=blockMetal,data=3,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockMetalUranium
+block:id=blockMetal,data=4,stdrot=true,face0-5=0:ic2/blockMetalLead
+
+# blockPersonal:* (blockPersonal), render=ic2.core.block.personal.RenderBlockPersonal(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
+block:id=blockPersonal,data=0,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/personal/blockPersonalChest
+block:id=blockPersonal,data=1,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/personal/blockPersonalTrader
+block:id=blockPersonal,data=2,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/personal/blockPersonalTraderEnergy
+
+# blockLuminator:* (blockLuminator), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
+block:id=blockLuminator,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLuminator
+
+# blockElectric:* (blockElectric), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
+block:id=blockElectric,data=0,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/wiring/blockBatBox
+block:id=blockElectric,data=1,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/wiring/blockMFE
+block:id=blockElectric,data=2,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/wiring/blockMFSU
+block:id=blockElectric,data=3,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/wiring/blockTransformerLV
+block:id=blockElectric,data=4,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/wiring/blockTransformerMV
+block:id=blockElectric,data=5,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/wiring/blockTransformerHV
+block:id=blockElectric,data=6,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/wiring/blockTransformerEV
+block:id=blockElectric,data=7,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/wiring/blockCESU
+
+# blockCable:* (blockCable), render=ic2.core.block.wiring.RenderBlockCable(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
+block:id=blockCable,data=0,stdrot=true,face0-5=0:ic2/wiring/cable/blockCable
+block:id=blockCable,data=1,stdrot=true,face0-5=0:ic2/wiring/cable/blockCableO
+block:id=blockCable,data=2,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCable
+block:id=blockCable,data=3,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCableI
+block:id=blockCable,data=4,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCableII
+block:id=blockCable,data=5,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCable
+block:id=blockCable,data=6,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableI
+block:id=blockCable,data=7,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableII
+block:id=blockCable,data=8,stdrot=true,face0-5=0:ic2/wiring/cable/blockIronCableIIII
+block:id=blockCable,data=9,stdrot=true,face0-5=0:ic2/wiring/cable/blockGlassCable
+block:id=blockCable,data=10,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCable
+block:id=blockCable,data=11,stdrot=true,face0-5=0:ic2/wiring/cable/blockDetectorCable
+block:id=blockCable,data=12,stdrot=true,face0-5=0:ic2/wiring/cable/blockSplitterCable
+block:id=blockCable,data=13,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCableI
+
 # blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
 block:id=blockDoorAlloy,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDoorAlloy.top,patch1=0:ic2/blockDoorAlloy.bottom
 
@@ -309,8 +247,23 @@ block:id=blockAlloy,data=0,stdrot=true,face0-5=0:ic2/blockAlloy
 # blockFenceIron:* (blockFenceIron), render=ic2.core.block.RenderBlockFence(FENCE), opaque=false,cls=ic2.core.block.BlockPoleFence
 block:id=blockFenceIron,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:ic2/blockFenceIron
 
+# blockReactorChamber:* (blockReactorChamber), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockReactorChamber
+block:id=blockReactorChamber,data=0,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockReactorChamber
+
 # blockRubber:* (blockRubber), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockRubberSheet
 block:id=blockRubber,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/blockRubber
+
+# blockDynamiteRemote:* (blockDynamiteRemote), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+block:id=blockDynamiteRemote,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDynamiteRemote
+
+# blockDynamite:* (blockDynamite), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
+block:id=blockDynamite,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDynamite
+
+# blockNuke:* (blockNuke), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
+block:id=blockNuke,data=0,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockNuke
+
+# blockITNT:* (blockITNT), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockITNT
+block:id=blockITNT,data=0,stdstdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockITNT
 
 # blockHarz:* (blockHarz), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockResin
 block:id=blockHarz,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/blockHarz
@@ -322,12 +275,28 @@ block:id=blockRubSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:ic
 block:id=blockRubLeaves,data=*,stdrot=true,face0-5=14000:ic2/blockRubLeaves
 
 # blockRubWood:* (blockRubWood), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockRubWood
-block:id=blockRubWood,data=0,data=1,stdrot=true,face0-5=0:ic2/blockRubWood
-block:id=blockRubWood,data=2,data=3,data=4,data=5,stdrot=true,face0-5=0:ic2/blockRubWood.wet
-block:id=blockRubWood,data=6,data=7,stdrot=true,face0-5=0:ic2/blockRubWood
-block:id=blockRubWood,data=8,data=9,data=10,data=11,stdrot=true,face0-5=0:ic2/blockRubWood.dry
-block:id=blockRubWood,data=12,data=13,stdrot=true,face0-5=0:ic2/blockRubWood
-block:id=blockRubWood,data=14,data=15,stdrot=true,face0-5=0:ic2/blockRubWood.dry
+block:id=blockRubWood,data=0,data=1,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockRubWood
+block:id=blockRubWood,data=2,data=3,data=4,data=5,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockRubWood.wet
+block:id=blockRubWood,data=6,data=7,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockRubWood
+block:id=blockRubWood,data=8,data=9,data=10,data=11,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockRubWood.dry
+block:id=blockRubWood,data=12,data=13,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockRubWood
+block:id=blockRubWood,data=14,data=15,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/blockRubWood.dry
+
+# blockMiningTip:* (blockMiningTip), render=(STANDARD), opaque=true,cls=ic2.core.block.machine.BlockMiningTip
+block:id=blockMiningTip,data=0,stdrot=true,face0-5=0:ic2/machine/blockMiningTip
+
+# blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
+block:id=blockMiningPipe,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/machine/blockMiningPipe
+
+# blockGenerator:* (blockGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
+block:id=blockGenerator,data=0,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockGenerator
+block:id=blockGenerator,data=1,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockGeoGenerator
+block:id=blockGenerator,data=2,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockWaterGenerator
+block:id=blockGenerator,data=3,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockSolarGenerator
+block:id=blockGenerator,data=4,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockWindGenerator
+block:id=blockGenerator,data=5,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockNuclearReactor
+block:id=blockGenerator,data=6,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockRTGenerator
+block:id=blockGenerator,data=7,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/generator/blockSemifluidGenerator
 
 # blockOreUran:* (blockOreUran), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=blockOreUran,data=0,stdrot=true,face0-5=0:ic2/blockOreUran
@@ -337,3 +306,36 @@ block:id=blockOreTin,data=0,stdrot=true,face0-5=0:ic2/blockOreTin
 
 # blockOreCopper:* (blockOreCopper), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=blockOreCopper,data=0,stdrot=true,face0-5=0:ic2/blockOreCopper
+
+# blockMachine:* (blockMachine), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
+block:id=blockMachine,data=0,stdrot=true,face0-5=0:ic2/machine/blockMachine
+block:id=blockMachine,data=1,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockIronFurnace
+block:id=blockMachine,data=2,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockElecFurnace
+block:id=blockMachine,data=3,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockMacerator
+block:id=blockMachine,data=4,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockExtractor
+block:id=blockMachine,data=5,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockCompressor
+block:id=blockMachine,data=6,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockCanner
+block:id=blockMachine,data=7,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockMiner
+block:id=blockMachine,data=8,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockPump
+block:id=blockMachine,data=9,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockMagnetizer
+block:id=blockMachine,data=10,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockElectrolyzer
+block:id=blockMachine,data=11,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockRecycler
+block:id=blockMachine,data=12,stdrot=true,face0-5=0:ic2/machine/blockAdvMachine
+block:id=blockMachine,data=13,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockInduction
+block:id=blockMachine,data=14,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockMatter
+block:id=blockMachine,data=15,stdrot=true,face0=0,face1=1,face2=5,face3=3,face4=4,face5=2,txtid=ic2/machine/blockTerra
+
+# blockOreLead:* (blockOreLead), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
+block:id=blockOreLead,data=0,stdrot=true,face0-5=0:ic2/blockOreLead
+
+# blockReinforcedFoam:* (blockReinforcedFoam), render=(STANDARD), opaque=false,cls=ic2.core.block.BlockReinforcedFoam
+block:id=blockReinforcedFoam,data=0,stdrot=true,face0-5=0:ic2/cf/blockReinforcedFoam
+
+# blockfluidUuMatter:* (blockfluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=blockfluidUuMatter,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockuumatter_still,face2-5=12000:ic2/blockuumatter_flow
+
+# blockfluidCf:* (blockfluidCf), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=blockfluidCf,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockconstructionfoam_still,face2-5=12000:ic2/blockconstructionfoam_flow
+
+# blockFluidcoolant:* (blockFluidcoolant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=blockFluidcoolant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/blockic2coolant_still,face2-5=12000:ic2/blockic2coolant_flow
