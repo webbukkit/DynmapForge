@@ -1,0 +1,94 @@
+# ArchimedesShipsMod 1.6.4 v1.4.5
+version:1.6
+modname:ArchimedesShipsMod
+
+var:buffer=0,engine=0,seat=0,gauge=0,balloon=0,floater=0,mark_ship=0
+
+cfgfile:config/ArchimedesShipsMod.cfg
+
+
+texturepath:assets/archimedes/textures/blocks/
+texture:id=archimedes/balloon_black,filename=assets/archimedes/textures/blocks/balloon_black.png
+texture:id=archimedes/balloon_blue,filename=assets/archimedes/textures/blocks/balloon_blue.png
+texture:id=archimedes/balloon_brown,filename=assets/archimedes/textures/blocks/balloon_brown.png
+texture:id=archimedes/balloon_cyan,filename=assets/archimedes/textures/blocks/balloon_cyan.png
+texture:id=archimedes/balloon_gray,filename=assets/archimedes/textures/blocks/balloon_gray.png
+texture:id=archimedes/balloon_green,filename=assets/archimedes/textures/blocks/balloon_green.png
+texture:id=archimedes/balloon_light_blue,filename=assets/archimedes/textures/blocks/balloon_light_blue.png
+texture:id=archimedes/balloon_lime,filename=assets/archimedes/textures/blocks/balloon_lime.png
+texture:id=archimedes/balloon_magenta,filename=assets/archimedes/textures/blocks/balloon_magenta.png
+texture:id=archimedes/balloon_orange,filename=assets/archimedes/textures/blocks/balloon_orange.png
+texture:id=archimedes/balloon_pink,filename=assets/archimedes/textures/blocks/balloon_pink.png
+texture:id=archimedes/balloon_purple,filename=assets/archimedes/textures/blocks/balloon_purple.png
+texture:id=archimedes/balloon_red,filename=assets/archimedes/textures/blocks/balloon_red.png
+texture:id=archimedes/balloon_silver,filename=assets/archimedes/textures/blocks/balloon_silver.png
+texture:id=archimedes/balloon_white,filename=assets/archimedes/textures/blocks/balloon_white.png
+texture:id=archimedes/balloon_yellow,filename=assets/archimedes/textures/blocks/balloon_yellow.png
+texture:id=archimedes/buffer,filename=assets/archimedes/textures/blocks/buffer.png
+texture:id=archimedes/engine,filename=assets/archimedes/textures/blocks/engine.png
+texture:id=archimedes/floater,filename=assets/archimedes/textures/blocks/floater.png
+texture:id=archimedes/gauge,filename=assets/archimedes/textures/blocks/gauge.png
+texture:id=archimedes/gauge_ext,filename=assets/archimedes/textures/blocks/gauge_ext.png
+texture:id=archimedes/marker,filename=assets/archimedes/textures/blocks/marker.png
+texture:id=archimedes/marker_front,filename=assets/archimedes/textures/blocks/marker_front.png
+texture:id=archimedes/seat,filename=assets/archimedes/textures/blocks/seat.png
+texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
+
+
+
+# mark_ship:* (markShip), render=(STANDARD), opaque=true,cls=shipmod.blockitem.BlockHelm
+block:id=mark_ship,data=0,stdrot=true,face0-1=0:archimedes/marker,face2=0:archimedes/marker_front,face3-5=0:archimedes/marker
+block:id=mark_ship,data=1,stdrot=true,face0-4=0:archimedes/marker,face5=0:archimedes/marker_front
+block:id=mark_ship,data=2,stdrot=true,face0-2=0:archimedes/marker,face3=0:archimedes/marker_front,face4-5=0:archimedes/marker
+block:id=mark_ship,data=3,stdrot=true,face0-3=0:archimedes/marker,face4=0:archimedes/marker_front,face5=0:archimedes/marker
+block:id=mark_ship,data=4,stdrot=true,face0-1=0:archimedes/marker,face2=0:archimedes/marker_front,face3-5=0:archimedes/marker
+block:id=mark_ship,data=5,stdrot=true,face0-4=0:archimedes/marker,face5=0:archimedes/marker_front
+block:id=mark_ship,data=6,stdrot=true,face0-2=0:archimedes/marker,face3=0:archimedes/marker_front,face4-5=0:archimedes/marker
+block:id=mark_ship,data=7,stdrot=true,face0-3=0:archimedes/marker,face4=0:archimedes/marker_front,face5=0:archimedes/marker
+block:id=mark_ship,data=8,stdrot=true,face0-1=0:archimedes/marker,face2=0:archimedes/marker_front,face3-5=0:archimedes/marker
+block:id=mark_ship,data=9,stdrot=true,face0-4=0:archimedes/marker,face5=0:archimedes/marker_front
+block:id=mark_ship,data=10,stdrot=true,face0-2=0:archimedes/marker,face3=0:archimedes/marker_front,face4-5=0:archimedes/marker
+block:id=mark_ship,data=11,stdrot=true,face0-3=0:archimedes/marker,face4=0:archimedes/marker_front,face5=0:archimedes/marker
+block:id=mark_ship,data=12,stdrot=true,face0-1=0:archimedes/marker,face2=0:archimedes/marker_front,face3-5=0:archimedes/marker
+block:id=mark_ship,data=13,stdrot=true,face0-4=0:archimedes/marker,face5=0:archimedes/marker_front
+block:id=mark_ship,data=14,stdrot=true,face0-2=0:archimedes/marker,face3=0:archimedes/marker_front,face4-5=0:archimedes/marker
+block:id=mark_ship,data=15,stdrot=true,face0-3=0:archimedes/marker,face4=0:archimedes/marker_front,face5=0:archimedes/marker
+
+# floater:* (floater), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=floater,data=*,stdrot=true,face0-5=0:archimedes/floater
+
+# balloon:* (balloon), render=(STANDARD), opaque=true,cls=net.minecraft.block.BlockColored
+block:id=balloon,data=0,stdrot=true,face0-5=0:archimedes/balloon_white
+block:id=balloon,data=1,stdrot=true,face0-5=0:archimedes/balloon_orange
+block:id=balloon,data=2,stdrot=true,face0-5=0:archimedes/balloon_magenta
+block:id=balloon,data=3,stdrot=true,face0-5=0:archimedes/balloon_light_blue
+block:id=balloon,data=4,stdrot=true,face0-5=0:archimedes/balloon_yellow
+block:id=balloon,data=5,stdrot=true,face0-5=0:archimedes/balloon_lime
+block:id=balloon,data=6,stdrot=true,face0-5=0:archimedes/balloon_pink
+block:id=balloon,data=7,stdrot=true,face0-5=0:archimedes/balloon_gray
+block:id=balloon,data=8,stdrot=true,face0-5=0:archimedes/balloon_silver
+block:id=balloon,data=9,stdrot=true,face0-5=0:archimedes/balloon_cyan
+block:id=balloon,data=10,stdrot=true,face0-5=0:archimedes/balloon_purple
+block:id=balloon,data=11,stdrot=true,face0-5=0:archimedes/balloon_blue
+block:id=balloon,data=12,stdrot=true,face0-5=0:archimedes/balloon_brown
+block:id=balloon,data=13,stdrot=true,face0-5=0:archimedes/balloon_green
+block:id=balloon,data=14,stdrot=true,face0-5=0:archimedes/balloon_red
+block:id=balloon,data=15,stdrot=true,face0-5=0:archimedes/balloon_black
+
+# gauge:* (gauge), render=shipmod.ClientProxy$1(CUSTOM), opaque=false,cls=shipmod.blockitem.BlockGauge
+block:id=gauge,data=0,data=1,data=2,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:archimedes/gauge
+block:id=gauge,data=4,data=5,data=6,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:archimedes/gauge_ext
+block:id=gauge,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:archimedes/gauge
+
+# seat:* (seat), render=shipmod.render.RenderBlockSeat(CUSTOM), opaque=false,cls=shipmod.blockitem.BlockSeat
+block:id=seat,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-2=0:archimedes/seat,face3-5=0:minecraft/planks_oak
+block:id=seat,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:archimedes/seat,face2-4=0:minecraft/planks_oak,face5=0:archimedes/seat
+block:id=seat,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:archimedes/seat,face2=0:minecraft/planks_oak,face3=0:archimedes/seat,face4-5=0:minecraft/planks_oak
+block:id=seat,data=3,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1=0:archimedes/seat,face2-3=0:minecraft/planks_oak,face4=0:archimedes/seat,face5=0:minecraft/planks_oak
+block:id=seat,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:minecraft/planks_oak,face1-5=0:archimedes/seat
+
+# buffer:* (buffer), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=buffer,data=*,stdrot=true,face0-5=0:archimedes/buffer
+
+# engine:* (engine), render=(STANDARD), opaque=true,cls=net.minecraft.block.Block
+block:id=engine,data=*,stdrot=true,face0-5=0:archimedes/engine
