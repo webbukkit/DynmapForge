@@ -34,14 +34,6 @@ patchblock:id=blockCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0
 # blockWall:* (blockWall), render=ic2.core.block.RenderBlockWall(WALL), opaque=true,cls=ic2.core.block.BlockWall
 customblock:id=blockWall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
 
-# blockMachine2:* (blockMachine2), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
-#Need to identify the way IC2 rotates blocks for proper Dynmap block rotation rendering
-#customblock:id=blockMachine2,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=direction,index0=0,map0=S243015,index1=1,map1=S032145,index2=2,map2=S012435,index3=3,map3=S012543,index4=4,map4=S013245,index5=5,map5=S012345
-
-# blockElectric:* (blockElectric), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
-#Need to identify the way IC2 rotates blocks for proper Dynmap block rotation rendering
-#customblock:id=blockElectric,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=direction,index0=0,map0=S243015,index1=1,map1=S032145,index2=2,map2=S012435,index3=3,map3=S012543,index4=4,map4=S013245,index5=5,map5=S012345
-
 # blockDoorAlloy:* (blockDoorAlloy), render=(DOOR), opaque=false,cls=ic2.core.block.BlockIC2Door
 customblock:id=blockDoorAlloy,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
 
@@ -68,13 +60,12 @@ patchblock:id=blockRubSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0
 # blockMiningPipe:* (blockMiningPipe), render=(STANDARD), opaque=false,cls=ic2.core.block.machine.BlockMiningPipe
 boxblock:id=blockMiningPipe,xmin=0.375,xmax=0.625,ymin=0.0,ymax=1.0,zmin=0.375,zmax=0.625,data=0
 
-# blockGenerator:* (blockGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
-#Need to identify the way IC2 rotates blocks for proper Dynmap block rotation rendering
-#customblock:id=blockGenerator,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=direction,index0=0,map0=S243015,index1=1,map1=S032145,index2=2,map2=S012435,index3=3,map3=S012543,index4=4,map4=S013245,index5=5,map5=S012345
-
 # blockMachine:* (blockMachine), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
-#Need to identify the way IC2 rotates blocks for proper Dynmap block rotation rendering
-#customblock:id=blockMachine,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=direction,index0=0,map0=S243015,index1=1,map1=S032145,index2=2,map2=S012435,index3=3,map3=S012543,index4=4,map4=S013245,index5=5,map5=S012345
+# blockMachine2:* (blockMachine2), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine2
+# blockGenerator:* (blockGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.generator.block.BlockGenerator
+# blockElectric:* (blockElectric), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.wiring.BlockElectric
+# blockPersonal:* (blockPersonal), render=ic2.core.block.personal.RenderBlockPersonal(CUSTOM), opaque=false,cls=ic2.core.block.personal.BlockPersonal
+customblock:id=blockMachine,id=blockMachine2,id=blockGenerator,id=blockElectric,id=blockPersonal,data=*,class=org.dynmap.hdmap.renderer.RotatedBoxRenderer,textureIndex=facing,index0=0,map0=90/0/270,index1=1,map1=90/0/90,index2=2,map2=90,index3=3,map3=270,index4=4,map4=0,index5=5,map5=180
 
 # blockfluidUuMatter:* (blockfluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
 boxblock:id=blockfluidUuMatter,ymax=0.875,data=1
