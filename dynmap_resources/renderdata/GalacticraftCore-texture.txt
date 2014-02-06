@@ -83,7 +83,7 @@ texture:id=galacticraftcore/solar_advanced_0,filename=assets/galacticraftcore/te
 texture:id=galacticraftcore/solar_advanced_1,filename=assets/galacticraftcore/textures/blocks/solar_advanced_1.png
 texture:id=galacticraftcore/solar_basic_0,filename=assets/galacticraftcore/textures/blocks/solar_basic_0.png
 texture:id=galacticraftcore/solar_basic_1,filename=assets/galacticraftcore/textures/blocks/solar_basic_1.png
-texture:id=galacticraftcore/treasure_front_single,filename=assets/galacticraftcore/textures/blocks/treasure_front_single.png
+texture:id=galacticraftcore/treasure_front_single,filename=assets/galacticraftcore/textures/blocks/treasureChest.png
 texture:id=galacticraftcore/unlitTorchLit,filename=assets/galacticraftcore/textures/blocks/unlitTorchLit.png
 texture:id=galacticraftcore/workbench_nasa_side,filename=assets/galacticraftcore/textures/blocks/workbench_nasa_side.png
 texture:id=galacticraftcore/workbench_nasa_top,filename=assets/galacticraftcore/textures/blocks/workbench_nasa_top.png

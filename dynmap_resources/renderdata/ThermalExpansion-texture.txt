@@ -28,7 +28,6 @@ texture:id=minecraft/wool_colored_yellow,filename=assets/minecraft/textures/bloc
 texture:id=thermalexpansion/device/Device_Bottom_Workbench,filename=assets/thermalexpansion/textures/blocks/device/Device_Bottom_Workbench.png
 texture:id=thermalexpansion/device/Device_Face_Activator,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Activator.png
 texture:id=thermalexpansion/device/Device_Face_Breaker,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Breaker.png
-texture:id=thermalexpansion/device/Device_Face_Lexicon,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Lexicon.png
 texture:id=thermalexpansion/device/Device_Face_Nullifier,filename=assets/thermalexpansion/textures/blocks/device/Device_Face_Nullifier.png
 texture:id=thermalexpansion/device/Device_Side,filename=assets/thermalexpansion/textures/blocks/device/Device_Side.png
 texture:id=thermalexpansion/device/Device_Side_Workbench,filename=assets/thermalexpansion/textures/blocks/device/Device_Side_Workbench.png
@@ -156,8 +155,7 @@ block:id=Device,data=1,stdrot=true,face0-2=12000:thermalexpansion/device/Device_
 block:id=Device,data=2,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Activator,face4-5=12000:thermalexpansion/device/Device_Side
 block:id=Device,data=3,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Breaker,face4-5=12000:thermalexpansion/device/Device_Side
 block:id=Device,data=4,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Nullifier,face4-5=12000:thermalexpansion/device/Device_Side
-block:id=Device,data=5,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face3=12000:thermalexpansion/device/Device_Face_Lexicon,face4-5=12000:thermalexpansion/device/Device_Side
-block:id=Device,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face4-5=12000:thermalexpansion/device/Device_Side
+block:id=Device,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-2=12000:thermalexpansion/device/Device_Side,face4-5=12000:thermalexpansion/device/Device_Side
 
 # EnergyCell:* (EnergyCell), render=thermalexpansion.render.RenderEnergyCell(CUSTOM), opaque=false,cls=thermalexpansion.block.energycell.BlockEnergyCell
 block:id=EnergyCell,data=0,stdrot=true,face0-5=12000:thermalexpansion/energycell/Cell_Creative
