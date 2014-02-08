@@ -34,13 +34,11 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.network.NetHandlerPlayServer;
 import net.minecraft.network.NetworkManager;
-import net.minecraft.network.play.client.C01PacketChatMessage;
 import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.BanList;
 import net.minecraft.server.management.ServerConfigurationManager;
 import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.StringUtils;
@@ -51,7 +49,6 @@ import net.minecraft.world.WorldServer;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
-import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
@@ -146,32 +143,32 @@ public class DynmapPlugin
 
     public static final int getBlockID(World w, int x, int y, int z) {
         // Block.getIdFromBlock(w.getBlockType(x,y,z))
-        return Block.func_149682_b(w.func_147439_a(x,  y,  z));
+        return Block.getIdFromBlock(w.getBlock(x,  y,  z));
     }
     public static final Block getBlockByID(int id) {
-        return Block.func_149729_e(id);
+        return Block.getBlockById(id);
     }
     public static final Item getItemByID(int id) {
-        return Item.func_150899_d(id);
+        return Item.getItemById(id);
     }
     public static final Material getBlockMaterial(Block b) {
-        return b.func_149688_o();
+        return b.getMaterial();
     }
     public static final String getBlockUnlocalizedName(Block b) {
-        String s = b.func_149739_a();
+        String s = b.getUnlocalizedName();
         if (s.startsWith("tile.")) {
             s = s.substring(5);
         }
         return s;
     }
     public static final BiomeGenBase[] getBiomeList() {
-        return BiomeGenBase.func_150565_n();
+        return BiomeGenBase.getBiomeGenArray();
     }
     public static final String getChatMessage(IChatComponent cc) {
-        return cc.func_150254_d();
+        return cc.getUnformattedTextForChat();
     }
     public static final NetworkManager getNetworkManager(NetHandlerPlayServer nh) {
-        return nh.field_147371_a;
+        return nh.netManager;
     }
     
     private ForgePlayer getOrAddPlayer(EntityPlayer p) {
@@ -635,7 +632,7 @@ public class DynmapPlugin
         public void broadcastMessage(String msg)
         {
             IChatComponent ichatcomponent = new ChatComponentText(msg);
-            MinecraftServer.getServer().getConfigurationManager().func_148539_a(ichatcomponent);
+            MinecraftServer.getServer().getConfigurationManager().sendChatMsg(ichatcomponent);
             Log.info(StringUtils.stripControlCodes(msg));
         }
         @Override
@@ -1177,7 +1174,7 @@ public class DynmapPlugin
         public void sendMessage(String msg)
         {
             IChatComponent ichatcomponent = new ChatComponentText(msg);
-            player.func_145747_a(ichatcomponent);
+            player.addChatComponentMessage(ichatcomponent);
         }
         @Override
         public boolean isInvisible() {
@@ -1234,7 +1231,7 @@ public class DynmapPlugin
         {
         	if(sender != null) {
                 IChatComponent ichatcomponent = new ChatComponentText(msg);
-        	    sender.func_145747_a(ichatcomponent);
+        	    sender.addChatMessage(ichatcomponent);
         	}
         }
 
@@ -1480,15 +1477,17 @@ public class DynmapPlugin
         return new DynmapLocation(DynmapPlugin.this.getWorld(worldObj).getName(), x, y, z);
     }
 
-    private class PlayerTracker {
+    public class PlayerTracker {
 		@SubscribeEvent
 		public void onPlayerLogin(PlayerLoggedInEvent event) {			
+            Log.info("onPlayerLogin(" + event.player.getCommandSenderName() + ") - core_enabled=" + core_enabled);
 			if(!core_enabled) return;
             DynmapPlayer dp = getOrAddPlayer(event.player);
             core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
 		}
         @SubscribeEvent
 		public void onPlayerLogout(PlayerLoggedOutEvent event) {
+            Log.info("onPlayerLogout(" + event.player.getCommandSenderName() + ") - core_enabled=" + core_enabled);
 			if(!core_enabled) return;
 			DynmapPlayer dp = getOrAddPlayer(event.player);
             core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
@@ -1496,10 +1495,12 @@ public class DynmapPlugin
 		}
         @SubscribeEvent
 		public void onPlayerChangedDimension(PlayerChangedDimensionEvent event) {
+            Log.info("onPlayerChangedDimension(" + event.player.getCommandSenderName() + ") - core_enabled=" + core_enabled);
             getOrAddPlayer(event.player);	// Freshen player object reference
 		}
         @SubscribeEvent
 		public void onPlayerRespawn(PlayerRespawnEvent event) {
+            Log.info("onPlayerRespawn(" + event.player.getCommandSenderName() + ") - core_enabled=" + core_enabled);
             getOrAddPlayer(event.player);	// Freshen player object reference
 		}
     }
@@ -1509,7 +1510,8 @@ public class DynmapPlugin
     {
     	if (playerTracker == null) {
     		playerTracker = new PlayerTracker();
-    		MinecraftForge.EVENT_BUS.register(playerTracker);
+    		FMLCommonHandler.instance().bus().register(playerTracker);
+    		Log.info("Register PlayerTracker");
     	}
     }
 
@@ -1625,8 +1627,7 @@ public class DynmapPlugin
     	String worldid;
     	World world;
 		@Override
-		//public void markBlockForUpdate(int x, int y, int z) {
-        public void func_147586_a(int x, int y, int z) {
+        public void markBlockForUpdate(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
             if(onblockchange) {
             	BlockUpdateRec r = new BlockUpdateRec();
@@ -1637,16 +1638,14 @@ public class DynmapPlugin
             }
 		}
 		@Override
-		//public void markBlockForRenderUpdate(int x, int y, int z) {
-	    public void func_147588_b(int x, int y, int z) {
+	    public void markBlockForRenderUpdate(int x, int y, int z) {
             sscache.invalidateSnapshot(worldid, x, y, z);
             if(onlightingchange) {
             	mapManager.touch(worldid, x, y, z, "lightingchange");
             }
 		}
 		@Override
-		//public void markBlockRangeForRenderUpdate(int x1, int y1, int z1, int x2, int y2, int z2) {
-        public void func_147585_a(int x1, int y1, int z1, int x2, int y2, int z2) {
+        public void markBlockRangeForRenderUpdate(int x1, int y1, int z1, int x2, int y2, int z2) {
 		}
 		@Override
 		public void playSound(String var1, double var2, double var4,
@@ -1669,16 +1668,17 @@ public class DynmapPlugin
         public void playRecord(String s, int i, int j, int k) {
         }
         @Override
-        public void func_147587_b(int var1, int var2, int var3, int var4, int var5) {
-        }
-        @Override
         public void playAuxSFX(EntityPlayer entityplayer, int i, int j, int k, int l, int i1) {
         }
         @Override
-        public void func_147584_b() {
+        public void broadcastSound(int var1, int var2, int var3, int var4, int var5) {
         }
         @Override
-        public void broadcastSound(int var1, int var2, int var3, int var4, int var5) {
+        public void destroyBlockPartially(int var1, int var2, int var3,
+                int var4, int var5) {
+        }
+        @Override
+        public void onStaticEntitiesChanged() {
         }
     }
     

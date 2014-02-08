@@ -51,7 +51,6 @@ import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.MapIterator;
 import org.dynmap.utils.BlockStep;
 import org.dynmap.utils.VisibilityLimit;
-import org.dynmap.utils.MapChunkCache.ChunkStats;
 
 /**
  * Container for managing chunks - dependent upon using chunk snapshots, since rendering is off server thread
@@ -1301,11 +1300,11 @@ public class ForgeMapChunkCache extends MapChunkCache
                             vlist.add(dv);
                             break;
                         case 8:
-                            String sv = tl.func_150307_f(i);
+                            String sv = tl.getStringTagAt(i);
                             vlist.add(sv);
                             break;
                         case 10:
-                            NBTTagCompound tc = tl.func_150305_b(i);
+                            NBTTagCompound tc = tl.getCompoundTagAt(i);
                             vlist.add(getNBTValue(tc));
                             break;
                         case 11:
@@ -1498,12 +1497,12 @@ public class ForgeMapChunkCache extends MapChunkCache
                     if(nbt != null) {
                         ss = new ChunkSnapshot(nbt, dw.worldheight);
                         
-                        NBTTagList tiles = nbt.func_150295_c("TileEntities", 10);
+                        NBTTagList tiles = nbt.getTagList("TileEntities", 10);
                         if(tiles == null) tiles = new NBTTagList();
                         /* Get tile entity data */
                         List<Object> vals = new ArrayList<Object>();
                         for(int tid = 0; tid < tiles.tagCount(); tid++) {
-                            NBTTagCompound tc = tiles.func_150305_b(tid);
+                            NBTTagCompound tc = tiles.getCompoundTagAt(tid);
                             int tx = tc.getInteger("x");
                             int ty = tc.getInteger("y");
                             int tz = tc.getInteger("z");
@@ -1539,17 +1538,17 @@ public class ForgeMapChunkCache extends MapChunkCache
                         ss = new ChunkSnapshot(c, dw.worldheight);
                         /* Get tile entity data */
                         List<Object> vals = new ArrayList<Object>();
-                        for(Object t : c.field_150816_i.values()) {
+                        for(Object t : c.chunkTileEntityMap.values()) {
                             TileEntity te = (TileEntity)t;
-                            int cx = te.field_145851_c & 0xF;
-                            int cz = te.field_145849_e & 0xF;
-                            int blkid = ss.getBlockTypeId(cx, te.field_145848_d, cz);
-                            int blkdat = ss.getBlockData(cx, te.field_145848_d, cz);
+                            int cx = te.xCoord & 0xF;
+                            int cz = te.zCoord & 0xF;
+                            int blkid = ss.getBlockTypeId(cx, te.yCoord, cz);
+                            int blkdat = ss.getBlockData(cx, te.yCoord, cz);
                             String[] te_fields = HDBlockModels.getTileEntityFieldsNeeded(blkid,  blkdat);
                             if(te_fields != null) {
                                 NBTTagCompound tc = new NBTTagCompound();
                                 try {
-                                    te.func_145841_b(tc);
+                                    te.writeToNBT(tc);
                                 } catch (Exception x) {
                                 }
                                 vals.clear();
@@ -1565,7 +1564,7 @@ public class ForgeMapChunkCache extends MapChunkCache
                                 }
                                 if(vals.size() > 0) {
                                     Object[] vlist = vals.toArray(new Object[vals.size()]);
-                                    tileData.put(getIndexInChunk(cx,te.field_145848_d,cz), vlist);
+                                    tileData.put(getIndexInChunk(cx,te.yCoord,cz), vlist);
                                 }
                             }
                         }

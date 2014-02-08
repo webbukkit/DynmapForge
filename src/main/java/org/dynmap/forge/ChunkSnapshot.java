@@ -117,9 +117,9 @@ public class ChunkSnapshot
             this.skylight[i] = fullData;
         }
         /* Get sections */
-        NBTTagList sect = nbt.func_150295_c("Sections", 10);
+        NBTTagList sect = nbt.getTagList("Sections", 10);
         for (int i = 0; i < sect.tagCount(); i++) {
-            NBTTagCompound sec = sect.func_150305_b(i);
+            NBTTagCompound sec = sect.getCompoundTagAt(i);
             byte secnum = sec.getByte("Y");
             if (secnum >= this.sectionCnt) {
                 Log.info("Section " + (int) secnum + " above world height " + worldheight);
