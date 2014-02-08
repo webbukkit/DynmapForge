@@ -1,31 +1,15 @@
-# ProjRed 
+# ProjRed_Exploration 
 version:1.6
-modname:ProjRed|Core
+modname:ProjRed|Exploration
 
-var:block_lampID=0,block_dyeLeafID=0,block_stoneWallsID=0,block_stonesID=0,block_dyeSaplingID=0,block_oresID=0
+var:block_dyeLeafID=0,block_stoneWallsID=0,block_stonesID=0,block_dyeSaplingID=0,block_oresID=0
 
 cfgfile:config/ProjectRed.cfg
 
 
-texturepath:assets/projred/textures/blocks/
+texturepath:assets/projred_exploration/textures/blocks/
 texture:id=ProjectRed/ore/leaves,filename=assets/projectred/textures/blocks/ore/leaves.png
 texture:id=ProjectRed/ore/sapling,filename=assets/projectred/textures/blocks/ore/sapling.png
-texture:id=projectred/lights/lampoff/0,filename=assets/projectred/textures/blocks/lights/lampoff/0.png
-texture:id=projectred/lights/lampoff/1,filename=assets/projectred/textures/blocks/lights/lampoff/1.png
-texture:id=projectred/lights/lampoff/10,filename=assets/projectred/textures/blocks/lights/lampoff/10.png
-texture:id=projectred/lights/lampoff/11,filename=assets/projectred/textures/blocks/lights/lampoff/11.png
-texture:id=projectred/lights/lampoff/12,filename=assets/projectred/textures/blocks/lights/lampoff/12.png
-texture:id=projectred/lights/lampoff/13,filename=assets/projectred/textures/blocks/lights/lampoff/13.png
-texture:id=projectred/lights/lampoff/14,filename=assets/projectred/textures/blocks/lights/lampoff/14.png
-texture:id=projectred/lights/lampoff/15,filename=assets/projectred/textures/blocks/lights/lampoff/15.png
-texture:id=projectred/lights/lampoff/2,filename=assets/projectred/textures/blocks/lights/lampoff/2.png
-texture:id=projectred/lights/lampoff/3,filename=assets/projectred/textures/blocks/lights/lampoff/3.png
-texture:id=projectred/lights/lampoff/4,filename=assets/projectred/textures/blocks/lights/lampoff/4.png
-texture:id=projectred/lights/lampoff/5,filename=assets/projectred/textures/blocks/lights/lampoff/5.png
-texture:id=projectred/lights/lampoff/6,filename=assets/projectred/textures/blocks/lights/lampoff/6.png
-texture:id=projectred/lights/lampoff/7,filename=assets/projectred/textures/blocks/lights/lampoff/7.png
-texture:id=projectred/lights/lampoff/8,filename=assets/projectred/textures/blocks/lights/lampoff/8.png
-texture:id=projectred/lights/lampoff/9,filename=assets/projectred/textures/blocks/lights/lampoff/9.png
 texture:id=projectred/ore/brickbasalt,filename=assets/projectred/textures/blocks/ore/brickbasalt.png
 texture:id=projectred/ore/brickmarble,filename=assets/projectred/textures/blocks/ore/brickmarble.png
 texture:id=projectred/ore/cobblebasalt,filename=assets/projectred/textures/blocks/ore/cobblebasalt.png
@@ -54,24 +38,6 @@ block:id=block_stonesID,data=4,stdrot=true,face0-5=0:projectred/ore/brickbasalt
 block:id=block_stonesID,data=5,stdrot=true,face0-5=0:projectred/ore/storageruby
 block:id=block_stonesID,data=6,stdrot=true,face0-5=0:projectred/ore/storagesapphire
 block:id=block_stonesID,data=7,stdrot=true,face0-5=0:projectred/ore/storageperidot
-
-# block_lampID:* (projectred.illumination.lamp), render=(STANDARD), opaque=true,cls=mrtjp.projectred.illumination.BlockLamp
-block:id=block_lampID,data=0,stdrot=true,face0-5=0:projectred/lights/lampoff/0
-block:id=block_lampID,data=1,stdrot=true,face0-5=0:projectred/lights/lampoff/1
-block:id=block_lampID,data=2,stdrot=true,face0-5=0:projectred/lights/lampoff/2
-block:id=block_lampID,data=3,stdrot=true,face0-5=0:projectred/lights/lampoff/3
-block:id=block_lampID,data=4,stdrot=true,face0-5=0:projectred/lights/lampoff/4
-block:id=block_lampID,data=5,stdrot=true,face0-5=0:projectred/lights/lampoff/5
-block:id=block_lampID,data=6,stdrot=true,face0-5=0:projectred/lights/lampoff/6
-block:id=block_lampID,data=7,stdrot=true,face0-5=0:projectred/lights/lampoff/7
-block:id=block_lampID,data=8,stdrot=true,face0-5=0:projectred/lights/lampoff/8
-block:id=block_lampID,data=9,stdrot=true,face0-5=0:projectred/lights/lampoff/9
-block:id=block_lampID,data=10,stdrot=true,face0-5=0:projectred/lights/lampoff/10
-block:id=block_lampID,data=11,stdrot=true,face0-5=0:projectred/lights/lampoff/11
-block:id=block_lampID,data=12,stdrot=true,face0-5=0:projectred/lights/lampoff/12
-block:id=block_lampID,data=13,stdrot=true,face0-5=0:projectred/lights/lampoff/13
-block:id=block_lampID,data=14,stdrot=true,face0-5=0:projectred/lights/lampoff/14
-block:id=block_lampID,data=15,stdrot=true,face0-5=0:projectred/lights/lampoff/15
 
 # block_stoneWallsID:* (projectred.exploration.stonewalls), render=(WALL), opaque=false,cls=mrtjp.projectred.exploration.BlockSpecialStoneWall
 block:id=block_stoneWallsID,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/stonemarble
