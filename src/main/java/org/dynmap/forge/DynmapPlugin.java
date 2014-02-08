@@ -1480,14 +1480,12 @@ public class DynmapPlugin
     public class PlayerTracker {
 		@SubscribeEvent
 		public void onPlayerLogin(PlayerLoggedInEvent event) {			
-            Log.info("onPlayerLogin(" + event.player.getCommandSenderName() + ") - core_enabled=" + core_enabled);
 			if(!core_enabled) return;
             DynmapPlayer dp = getOrAddPlayer(event.player);
             core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
 		}
         @SubscribeEvent
 		public void onPlayerLogout(PlayerLoggedOutEvent event) {
-            Log.info("onPlayerLogout(" + event.player.getCommandSenderName() + ") - core_enabled=" + core_enabled);
 			if(!core_enabled) return;
 			DynmapPlayer dp = getOrAddPlayer(event.player);
             core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
@@ -1495,12 +1493,12 @@ public class DynmapPlugin
 		}
         @SubscribeEvent
 		public void onPlayerChangedDimension(PlayerChangedDimensionEvent event) {
-            Log.info("onPlayerChangedDimension(" + event.player.getCommandSenderName() + ") - core_enabled=" + core_enabled);
+            if(!core_enabled) return;
             getOrAddPlayer(event.player);	// Freshen player object reference
 		}
         @SubscribeEvent
 		public void onPlayerRespawn(PlayerRespawnEvent event) {
-            Log.info("onPlayerRespawn(" + event.player.getCommandSenderName() + ") - core_enabled=" + core_enabled);
+            if(!core_enabled) return;
             getOrAddPlayer(event.player);	// Freshen player object reference
 		}
     }
@@ -1511,7 +1509,6 @@ public class DynmapPlugin
     	if (playerTracker == null) {
     		playerTracker = new PlayerTracker();
     		FMLCommonHandler.instance().bus().register(playerTracker);
-    		Log.info("Register PlayerTracker");
     	}
     }
 
