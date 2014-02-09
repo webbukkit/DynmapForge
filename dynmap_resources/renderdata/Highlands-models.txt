@@ -1,0 +1,124 @@
+# Highlands 2.1.7
+version:1.6
+modname:Highlands
+
+var:biomes/biome_ids/Steppe_ID=0,biomes/biome_ids/Bog_ID=0,biomes/biome_ids/Woodlands_ID=0,block_ids/Acacia_Sapling_ID=0,block_ids/Lavender_ID=0,biomes/biome_ids/Rainforest_ID=0,biomes/sub-biome_ids/DesertIsland_ID=0,block_ids/Yellow_Wood_Stairs_ID=0,biomes/biome_ids/Autumn_Forest_ID=0,block_ids/Red_Wood_Stairs_ID=0
+var:block_ids/Poplar_Sapling_ID=0,block_ids/Fir_Log_ID=0,block_ids/Leafy_Fern_ID=0,block_ids/Blue_Flower_ID=0,biomes/biome_ids/Alps_ID=0,block_ids/Acacia_Log_ID=0,biomes/biome_ids/Tall_Pine_Forest_ID=0,biomes/biome_ids/Redwood_Forest_ID=0,block_ids/Cotton_ID=0,block_ids/Cattail_ID=0
+var:block_ids/Canopy_Tree_Sapling_ID=0,block_ids/Evergreen_Bush_Sapling_ID=0,biomes/biome_ids/Savannah_ID=0,block_ids/Autumn_Yellow_Sapling_ID=0,block_ids/Highlands_Planks_Double_Halfblock_ID=0,block_ids/Great_Oak_Sapling_ID=0,block_ids/Redwood_Log_ID=0,biomes/sub-biome_ids/Forest_Island_ID=0,block_ids/Canopy_Tree_Log_ID=0,block_ids/Autumn_Yellow_Leaves_ID=0
+var:biomes/sub-biome_ids/Jungle_Island_ID=0,block_ids/White_Flower_ID=0,block_ids/Autumn_Orange_Leaves_ID=0,block_ids/Ironwood_Sapling_ID=0,biomes/sub-biome_ids/Bald_Hill_ID=0,biomes/sub-biome_ids/Snow_Island_ID=0,block_ids/Highlands_Planks_Halfblock_ID=0,biomes/biome_ids/Flying_Mountains_ID=0,biomes/biome_ids/Meadow_ID=0,biomes/biome_ids/Desert_Mountains_ID=0
+var:block_ids/Acacia_Leaves_ID=0,biomes/biome_ids/Glacier_ID=0,biomes/biome_ids/Tropical_Islands_ID=0,biomes/sub-biome_ids/Lake_ID=0,biomes/sub-biome_ids/Volcano_Island_ID=0,biomes/biome_ids/Rock_Mountains_ID=0,biomes/biome_ids/Woodland_Mountains_ID=0,block_ids/Fir_Leaves_ID=0,block_ids/Ironwood_Log_ID=0,block_ids/Mangrove_Leaves_ID=0
+var:biomes/biome_ids/Sahel_ID=0,biomes/biome_ids/Lowlands_ID=0,block_ids/Canopy_Tree_Leaves_ID=0,biomes/sub-biome_ids/Rock_Island_ID=0,block_ids/Raspberry_Bush_ID=0,biomes/biome_ids/Estuary_ID=0,biomes/sub-biome_ids/Mesa_ID=0,biomes/biome_ids/Tropics_ID=0,block_ids/Ash_Tree_Leaves_ID=0,block_ids/Ash_Tree_Log_ID=0
+var:block_ids/Redwood_Sapling_ID=0,block_ids/White_Wood_Stairs_ID=0,block_ids/Mangrove_Sapling_ID=0,block_ids/Blueberry_Bush_ID=0,block_ids/Fir_Sapling_ID=0,biomes/biome_ids/Dunes_ID=0,biomes/biome_ids/Highlands_ID=0,block_ids/Autumn_Orange_Sapling_ID=0,biomes/biome_ids/Badlands_ID=0,block_ids/Poplar_Log_ID=0
+var:block_ids/Grey_Wood_Stairs_ID=0,block_ids/Thornbush_ID=0,biomes/biome_ids/Pinelands_ID=0,biomes/sub-biome_ids/Oasis_ID=0,block_ids/Redwood_Leaves_ID=0,block_ids/Ash_Tree_Sapling_ID=0,biomes/biome_ids/Outback_ID=0,block_ids/Poplar_Leaves_ID=0,block_ids/Deciduous_Bush_Sapling_ID=0,block_ids/Mangrove_Log_ID=0
+var:block_ids/Palm_Log_ID=0,block_ids/Beech_Sapling_ID=0,block_ids/Highlands_Planks_ID=0,block_ids/Ironwood_Leaves_ID=0,biomes/biome_ids/Improved_Oceans_ID=0,block_ids/Palm_Sapling_ID=0,biomes/biome_ids/Tundra_ID=0,block_ids/Dead_Tree_Sapling_ID=0,biomes/sub-biome_ids/Shrublands_ID=0,biomes/sub-biome_ids/Canyon_ID=0
+var:biomes/biome_ids/Cliffs_ID=0,biomes/biome_ids/Snow_Mountains_ID=0,biomes/sub-biome_ids/Valley_ID=0,block_ids/Palm_Leaves_ID=0,biomes/biome_ids/Birch_Hills_ID=0,biomes/sub-biome_ids/Windy_Island_ID=0
+
+cfgfile:config/Highlands.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# block_ids/Acacia_Sapling_ID:* (tile.hl_acaciaSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Acacia_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Beech_Sapling_ID:* (tile.hl_beechSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Beech_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Canopy_Tree_Sapling_ID:* (tile.hl_canopySapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Canopy_Tree_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Dead_Tree_Sapling_ID:* (tile.hl_deadSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Dead_Tree_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Great_Oak_Sapling_ID:* (tile.hl_greatOakSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Great_Oak_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Fir_Sapling_ID:* (tile.hl_firSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Fir_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Poplar_Sapling_ID:* (tile.hl_poplarSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Poplar_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Redwood_Sapling_ID:* (tile.hl_redwoodSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Redwood_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Evergreen_Bush_Sapling_ID:* (tile.hl_evgBushSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Evergreen_Bush_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Deciduous_Bush_Sapling_ID:* (tile.hl_decBushSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Deciduous_Bush_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Palm_Sapling_ID:* (tile.hl_palmSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Palm_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Ironwood_Sapling_ID:* (tile.hl_ironwoodSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Ironwood_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Mangrove_Sapling_ID:* (tile.hl_mangroveSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Mangrove_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Ash_Tree_Sapling_ID:* (tile.hl_ashSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Ash_Tree_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Autumn_Yellow_Sapling_ID:* (tile.hl_autumnYellowSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Autumn_Yellow_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Autumn_Orange_Sapling_ID:* (tile.hl_autumnOrangeSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+patchblock:id=block_ids/Autumn_Orange_Sapling_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Blue_Flower_ID:* (tile.hl_blueFlower), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/Blue_Flower_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Leafy_Fern_ID:* (tile.hl_leafyFern), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/Leafy_Fern_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/White_Flower_ID:* (tile.hl_whiteFlower), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/White_Flower_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Cattail_ID:* (tile.hl_cattail), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/Cattail_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Lavender_ID:* (tile.hl_lavender), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/Lavender_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Raspberry_Bush_ID:* (tile.hl_raspberryBush), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/Raspberry_Bush_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Blueberry_Bush_ID:* (tile.hl_blueberryBush), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/Blueberry_Bush_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Thornbush_ID:* (tile.hl_thornbush), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/Thornbush_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Cotton_ID:* (tile.hl_cotton), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+patchblock:id=block_ids/Cotton_ID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# block_ids/Yellow_Wood_Stairs_ID:* (tile.hl_woodStairs0), render=(STAIRS), opaque=false,cls=highlands.block.BlockHighlandsStairs
+customblock:id=block_ids/Yellow_Wood_Stairs_ID,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# block_ids/White_Wood_Stairs_ID:* (tile.hl_woodStairs1), render=(STAIRS), opaque=false,cls=highlands.block.BlockHighlandsStairs
+customblock:id=block_ids/White_Wood_Stairs_ID,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# block_ids/Red_Wood_Stairs_ID:* (tile.hl_woodStairs2), render=(STAIRS), opaque=false,cls=highlands.block.BlockHighlandsStairs
+customblock:id=block_ids/Red_Wood_Stairs_ID,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# block_ids/Grey_Wood_Stairs_ID:* (tile.hl_woodStairs3), render=(STAIRS), opaque=false,cls=highlands.block.BlockHighlandsStairs
+customblock:id=block_ids/Grey_Wood_Stairs_ID,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# block_ids/Highlands_Planks_Halfblock_ID:* (hl_woodSlab), render=(STANDARD), opaque=false,cls=highlands.block.BlockHLPlankSlab
+boxblock:id=block_ids/Highlands_Planks_Halfblock_ID,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=block_ids/Highlands_Planks_Halfblock_ID,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

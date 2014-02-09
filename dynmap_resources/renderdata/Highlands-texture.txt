@@ -1,0 +1,370 @@
+# Highlands 2.1.7
+version:1.6
+modname:Highlands
+
+var:biomes/biome_ids/Steppe_ID=0,biomes/biome_ids/Bog_ID=0,biomes/biome_ids/Woodlands_ID=0,block_ids/Acacia_Sapling_ID=0,block_ids/Lavender_ID=0,biomes/biome_ids/Rainforest_ID=0,biomes/sub-biome_ids/DesertIsland_ID=0,block_ids/Yellow_Wood_Stairs_ID=0,biomes/biome_ids/Autumn_Forest_ID=0,block_ids/Red_Wood_Stairs_ID=0
+var:block_ids/Poplar_Sapling_ID=0,block_ids/Fir_Log_ID=0,block_ids/Leafy_Fern_ID=0,block_ids/Blue_Flower_ID=0,biomes/biome_ids/Alps_ID=0,block_ids/Acacia_Log_ID=0,biomes/biome_ids/Tall_Pine_Forest_ID=0,biomes/biome_ids/Redwood_Forest_ID=0,block_ids/Cotton_ID=0,block_ids/Cattail_ID=0
+var:block_ids/Canopy_Tree_Sapling_ID=0,block_ids/Evergreen_Bush_Sapling_ID=0,biomes/biome_ids/Savannah_ID=0,block_ids/Autumn_Yellow_Sapling_ID=0,block_ids/Highlands_Planks_Double_Halfblock_ID=0,block_ids/Great_Oak_Sapling_ID=0,block_ids/Redwood_Log_ID=0,biomes/sub-biome_ids/Forest_Island_ID=0,block_ids/Canopy_Tree_Log_ID=0,block_ids/Autumn_Yellow_Leaves_ID=0
+var:biomes/sub-biome_ids/Jungle_Island_ID=0,block_ids/White_Flower_ID=0,block_ids/Autumn_Orange_Leaves_ID=0,block_ids/Ironwood_Sapling_ID=0,biomes/sub-biome_ids/Bald_Hill_ID=0,biomes/sub-biome_ids/Snow_Island_ID=0,block_ids/Highlands_Planks_Halfblock_ID=0,biomes/biome_ids/Flying_Mountains_ID=0,biomes/biome_ids/Meadow_ID=0,biomes/biome_ids/Desert_Mountains_ID=0
+var:block_ids/Acacia_Leaves_ID=0,biomes/biome_ids/Glacier_ID=0,biomes/biome_ids/Tropical_Islands_ID=0,biomes/sub-biome_ids/Lake_ID=0,biomes/sub-biome_ids/Volcano_Island_ID=0,biomes/biome_ids/Rock_Mountains_ID=0,biomes/biome_ids/Woodland_Mountains_ID=0,block_ids/Fir_Leaves_ID=0,block_ids/Ironwood_Log_ID=0,block_ids/Mangrove_Leaves_ID=0
+var:biomes/biome_ids/Sahel_ID=0,biomes/biome_ids/Lowlands_ID=0,block_ids/Canopy_Tree_Leaves_ID=0,biomes/sub-biome_ids/Rock_Island_ID=0,block_ids/Raspberry_Bush_ID=0,biomes/biome_ids/Estuary_ID=0,biomes/sub-biome_ids/Mesa_ID=0,biomes/biome_ids/Tropics_ID=0,block_ids/Ash_Tree_Leaves_ID=0,block_ids/Ash_Tree_Log_ID=0
+var:block_ids/Redwood_Sapling_ID=0,block_ids/White_Wood_Stairs_ID=0,block_ids/Mangrove_Sapling_ID=0,block_ids/Blueberry_Bush_ID=0,block_ids/Fir_Sapling_ID=0,biomes/biome_ids/Dunes_ID=0,biomes/biome_ids/Highlands_ID=0,block_ids/Autumn_Orange_Sapling_ID=0,biomes/biome_ids/Badlands_ID=0,block_ids/Poplar_Log_ID=0
+var:block_ids/Grey_Wood_Stairs_ID=0,block_ids/Thornbush_ID=0,biomes/biome_ids/Pinelands_ID=0,biomes/sub-biome_ids/Oasis_ID=0,block_ids/Redwood_Leaves_ID=0,block_ids/Ash_Tree_Sapling_ID=0,biomes/biome_ids/Outback_ID=0,block_ids/Poplar_Leaves_ID=0,block_ids/Deciduous_Bush_Sapling_ID=0,block_ids/Mangrove_Log_ID=0
+var:block_ids/Palm_Log_ID=0,block_ids/Beech_Sapling_ID=0,block_ids/Highlands_Planks_ID=0,block_ids/Ironwood_Leaves_ID=0,biomes/biome_ids/Improved_Oceans_ID=0,block_ids/Palm_Sapling_ID=0,biomes/biome_ids/Tundra_ID=0,block_ids/Dead_Tree_Sapling_ID=0,biomes/sub-biome_ids/Shrublands_ID=0,biomes/sub-biome_ids/Canyon_ID=0
+var:biomes/biome_ids/Cliffs_ID=0,biomes/biome_ids/Snow_Mountains_ID=0,biomes/sub-biome_ids/Valley_ID=0,block_ids/Palm_Leaves_ID=0,biomes/biome_ids/Birch_Hills_ID=0,biomes/sub-biome_ids/Windy_Island_ID=0
+
+cfgfile:config/Highlands.cfg
+
+
+texturepath:assets/highlands/textures/blocks/
+texture:id=Highlands/leavesAcacia,filename=assets/highlands/textures/blocks/leavesAcacia.png
+texture:id=Highlands/leavesAsh,filename=assets/highlands/textures/blocks/leavesAsh.png
+texture:id=Highlands/leavesAutumnOrange,filename=assets/highlands/textures/blocks/leavesAutumnOrange.png
+texture:id=Highlands/leavesAutumnYellow,filename=assets/highlands/textures/blocks/leavesAutumnYellow.png
+texture:id=Highlands/leavesEucalyptus,filename=assets/highlands/textures/blocks/leavesEucalyptus.png
+texture:id=Highlands/leavesFir,filename=assets/highlands/textures/blocks/leavesFir.png
+texture:id=Highlands/leavesIronwood,filename=assets/highlands/textures/blocks/leavesIronwood.png
+texture:id=Highlands/leavesMangrove,filename=assets/highlands/textures/blocks/leavesMangrove.png
+texture:id=Highlands/leavesPalm,filename=assets/highlands/textures/blocks/leavesPalm.png
+texture:id=Highlands/leavesPoplar,filename=assets/highlands/textures/blocks/leavesPoplar.png
+texture:id=Highlands/leavesRedwood,filename=assets/highlands/textures/blocks/leavesRedwood.png
+texture:id=Highlands/logAcaciaSide,filename=assets/highlands/textures/blocks/logAcaciaSide.png
+texture:id=Highlands/logAcaciaTop,filename=assets/highlands/textures/blocks/logAcaciaTop.png
+texture:id=Highlands/logAshSide,filename=assets/highlands/textures/blocks/logAshSide.png
+texture:id=Highlands/logAshTop,filename=assets/highlands/textures/blocks/logAshTop.png
+texture:id=Highlands/logEucalyptusSide,filename=assets/highlands/textures/blocks/logEucalyptusSide.png
+texture:id=Highlands/logEucalyptusTop,filename=assets/highlands/textures/blocks/logEucalyptusTop.png
+texture:id=Highlands/logFirSide,filename=assets/highlands/textures/blocks/logFirSide.png
+texture:id=Highlands/logFirTop,filename=assets/highlands/textures/blocks/logFirTop.png
+texture:id=Highlands/logIronwoodSide,filename=assets/highlands/textures/blocks/logIronwoodSide.png
+texture:id=Highlands/logIronwoodTop,filename=assets/highlands/textures/blocks/logIronwoodTop.png
+texture:id=Highlands/logMangroveSide,filename=assets/highlands/textures/blocks/logMangroveSide.png
+texture:id=Highlands/logMangroveTop,filename=assets/highlands/textures/blocks/logMangroveTop.png
+texture:id=Highlands/logPalmSide,filename=assets/highlands/textures/blocks/logPalmSide.png
+texture:id=Highlands/logPalmTop,filename=assets/highlands/textures/blocks/logPalmTop.png
+texture:id=Highlands/logPoplarSide,filename=assets/highlands/textures/blocks/logPoplarSide.png
+texture:id=Highlands/logPoplarTop,filename=assets/highlands/textures/blocks/logPoplarTop.png
+texture:id=Highlands/logRedwoodSide,filename=assets/highlands/textures/blocks/logRedwoodSide.png
+texture:id=Highlands/logRedwoodTop,filename=assets/highlands/textures/blocks/logRedwoodTop.png
+texture:id=Highlands/plankGrey,filename=assets/highlands/textures/blocks/plankGrey.png
+texture:id=Highlands/plankRed,filename=assets/highlands/textures/blocks/plankRed.png
+texture:id=Highlands/plankWhite,filename=assets/highlands/textures/blocks/plankWhite.png
+texture:id=Highlands/plankYellow,filename=assets/highlands/textures/blocks/plankYellow.png
+texture:id=Highlands/plantBlueFlower,filename=assets/highlands/textures/blocks/plantBlueFlower.png
+texture:id=Highlands/plantBlueberryBush,filename=assets/highlands/textures/blocks/plantBlueberryBush.png
+texture:id=Highlands/plantCattail,filename=assets/highlands/textures/blocks/plantCattail.png
+texture:id=Highlands/plantCotton,filename=assets/highlands/textures/blocks/plantCotton.png
+texture:id=Highlands/plantGreenLeaf,filename=assets/highlands/textures/blocks/plantGreenLeaf.png
+texture:id=Highlands/plantLavender,filename=assets/highlands/textures/blocks/plantLavender.png
+texture:id=Highlands/plantRaspberryBush,filename=assets/highlands/textures/blocks/plantRaspberryBush.png
+texture:id=Highlands/plantThornbush,filename=assets/highlands/textures/blocks/plantThornbush.png
+texture:id=Highlands/plantWhiteFlower,filename=assets/highlands/textures/blocks/plantWhiteFlower.png
+texture:id=Highlands/saplingAcacia,filename=assets/highlands/textures/blocks/saplingAcacia.png
+texture:id=Highlands/saplingAsh,filename=assets/highlands/textures/blocks/saplingAsh.png
+texture:id=Highlands/saplingAutumnOrange,filename=assets/highlands/textures/blocks/saplingAutumnOrange.png
+texture:id=Highlands/saplingAutumnYellow,filename=assets/highlands/textures/blocks/saplingAutumnYellow.png
+texture:id=Highlands/saplingBeech,filename=assets/highlands/textures/blocks/saplingBeech.png
+texture:id=Highlands/saplingDeadTree,filename=assets/highlands/textures/blocks/saplingDeadTree.png
+texture:id=Highlands/saplingDecBush,filename=assets/highlands/textures/blocks/saplingDecBush.png
+texture:id=Highlands/saplingEucalyptus,filename=assets/highlands/textures/blocks/saplingEucalyptus.png
+texture:id=Highlands/saplingEvgBush,filename=assets/highlands/textures/blocks/saplingEvgBush.png
+texture:id=Highlands/saplingFir,filename=assets/highlands/textures/blocks/saplingFir.png
+texture:id=Highlands/saplingGreatOak,filename=assets/highlands/textures/blocks/saplingGreatOak.png
+texture:id=Highlands/saplingIronwood,filename=assets/highlands/textures/blocks/saplingIronwood.png
+texture:id=Highlands/saplingMangrove,filename=assets/highlands/textures/blocks/saplingMangrove.png
+texture:id=Highlands/saplingPalm,filename=assets/highlands/textures/blocks/saplingPalm.png
+texture:id=Highlands/saplingPoplar,filename=assets/highlands/textures/blocks/saplingPoplar.png
+texture:id=Highlands/saplingRedwood,filename=assets/highlands/textures/blocks/saplingRedwood.png
+
+# biomes/biome_ids/Alps_ID
+biome:id=biomes/biome_ids/Alps_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biomes/biome_ids/Autumn_Forest_ID
+biome:id=biomes/biome_ids/Autumn_Forest_ID,grassColorMult=18DBB68,foliageColorMult=172A941,waterColorMult=FFFFFF
+# biomes/biome_ids/Badlands_ID
+biome:id=biomes/biome_ids/Badlands_ID,grassColorMult=1CCB978,foliageColorMult=189A449,waterColorMult=FFFFFF
+# biomes/biome_ids/Birch_Hills_ID
+biome:id=biomes/biome_ids/Birch_Hills_ID,grassColorMult=17FBD64,foliageColorMult=15FAC3C,waterColorMult=FFFFFF
+# biomes/biome_ids/Bog_ID
+biome:id=biomes/biome_ids/Bog_ID,grassColorMult=1545B33,foliageColorMult=148B22C,waterColorMult=84FF38
+# biomes/biome_ids/Cliffs_ID
+biome:id=biomes/biome_ids/Cliffs_ID,grassColorMult=190B879,foliageColorMult=173A557,waterColorMult=FFFFFF
+# biomes/biome_ids/Desert_Mountains_ID
+biome:id=biomes/biome_ids/Desert_Mountains_ID,grassColorMult=1B9B75B,foliageColorMult=1A6A432,waterColorMult=FFFFFF
+# biomes/biome_ids/Dunes_ID
+biome:id=biomes/biome_ids/Dunes_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biomes/biome_ids/Estuary_ID
+biome:id=biomes/biome_ids/Estuary_ID,grassColorMult=16AC44E,foliageColorMult=145B421,waterColorMult=FFFFFF
+# biomes/biome_ids/Flying_Mountains_ID
+biome:id=biomes/biome_ids/Flying_Mountains_ID,grassColorMult=100BA78,foliageColorMult=100BA78,waterColorMult=FFFFFF
+# biomes/biome_ids/Glacier_ID
+biome:id=biomes/biome_ids/Glacier_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biomes/biome_ids/Highlands_ID
+biome:id=biomes/biome_ids/Highlands_ID,grassColorMult=19CB96D,foliageColorMult=184A648,waterColorMult=FFFFFF
+# biomes/biome_ids/Lowlands_ID
+biome:id=biomes/biome_ids/Lowlands_ID,grassColorMult=17CBD6B,foliageColorMult=15BAB46,waterColorMult=FFFFFF
+# biomes/biome_ids/Meadow_ID
+biome:id=biomes/biome_ids/Meadow_ID,grassColorMult=17FBD64,foliageColorMult=15FAC3C,waterColorMult=FFFFFF
+# biomes/biome_ids/Outback_ID
+biome:id=biomes/biome_ids/Outback_ID,grassColorMult=1EEE980,foliageColorMult=1A6C968,waterColorMult=FFFFFF
+# biomes/biome_ids/Pinelands_ID
+biome:id=biomes/biome_ids/Pinelands_ID,grassColorMult=18ABA6F,foliageColorMult=16DA84B,waterColorMult=FFFFFF
+# biomes/biome_ids/Rainforest_ID
+biome:id=biomes/biome_ids/Rainforest_ID,grassColorMult=161C64B,foliageColorMult=13BB61E,waterColorMult=FFFFFF
+# biomes/biome_ids/Redwood_Forest_ID
+biome:id=biomes/biome_ids/Redwood_Forest_ID,grassColorMult=19CB96D,foliageColorMult=184A648,waterColorMult=FFFFFF
+# biomes/biome_ids/Rock_Mountains_ID
+biome:id=biomes/biome_ids/Rock_Mountains_ID,grassColorMult=18DBB68,foliageColorMult=172A941,waterColorMult=FFFFFF
+# biomes/biome_ids/Sahel_ID
+biome:id=biomes/biome_ids/Sahel_ID,grassColorMult=1B2B952,foliageColorMult=19FA726,waterColorMult=FFFFFF
+# biomes/biome_ids/Savannah_ID
+biome:id=biomes/biome_ids/Savannah_ID,grassColorMult=1B2B952,foliageColorMult=19FA726,waterColorMult=FFFFFF
+# biomes/biome_ids/Steppe_ID
+biome:id=biomes/biome_ids/Steppe_ID,grassColorMult=1CCB978,foliageColorMult=189A449,waterColorMult=FFFFFF
+# biomes/biome_ids/Snow_Mountains_ID
+biome:id=biomes/biome_ids/Snow_Mountains_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biomes/biome_ids/Tall_Pine_Forest_ID
+biome:id=biomes/biome_ids/Tall_Pine_Forest_ID,grassColorMult=183B68F,foliageColorMult=165A272,waterColorMult=FFFFFF
+# biomes/biome_ids/Tropics_ID
+biome:id=biomes/biome_ids/Tropics_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
+# biomes/biome_ids/Tropical_Islands_ID
+biome:id=biomes/biome_ids/Tropical_Islands_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
+# biomes/biome_ids/Tundra_ID
+biome:id=biomes/biome_ids/Tundra_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biomes/biome_ids/Woodlands_ID
+biome:id=biomes/biome_ids/Woodlands_ID,grassColorMult=188BB66,foliageColorMult=16BA940,waterColorMult=FFFFFF
+# biomes/biome_ids/Woodland_Mountains_ID
+biome:id=biomes/biome_ids/Woodland_Mountains_ID,grassColorMult=18DBB68,foliageColorMult=172A941,waterColorMult=FFFFFF
+# biomes/biome_ids/Improved_Oceans_ID
+biome:id=biomes/biome_ids/Improved_Oceans_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/DesertIsland_ID
+biome:id=biomes/sub-biome_ids/DesertIsland_ID,grassColorMult=191BD59,foliageColorMult=177AB2F,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Forest_Island_ID
+biome:id=biomes/sub-biome_ids/Forest_Island_ID,grassColorMult=188BB66,foliageColorMult=16BA940,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Jungle_Island_ID
+biome:id=biomes/sub-biome_ids/Jungle_Island_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Volcano_Island_ID
+biome:id=biomes/sub-biome_ids/Volcano_Island_ID,grassColorMult=191BD59,foliageColorMult=177AB2F,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Snow_Island_ID
+biome:id=biomes/sub-biome_ids/Snow_Island_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Rock_Island_ID
+biome:id=biomes/sub-biome_ids/Rock_Island_ID,grassColorMult=190B879,foliageColorMult=173A557,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Windy_Island_ID
+biome:id=biomes/sub-biome_ids/Windy_Island_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Lake_ID
+biome:id=biomes/sub-biome_ids/Lake_ID,grassColorMult=172C250,foliageColorMult=14EB224,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Bald_Hill_ID
+biome:id=biomes/sub-biome_ids/Bald_Hill_ID,grassColorMult=186BB6F,foliageColorMult=168A94A,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Mesa_ID
+biome:id=biomes/sub-biome_ids/Mesa_ID,grassColorMult=1B2B952,foliageColorMult=19FA726,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Valley_ID
+biome:id=biomes/sub-biome_ids/Valley_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Oasis_ID
+biome:id=biomes/sub-biome_ids/Oasis_ID,grassColorMult=155C93F,foliageColorMult=12BBB0F,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Canyon_ID
+biome:id=biomes/sub-biome_ids/Canyon_ID,grassColorMult=1EEE980,foliageColorMult=1A6C968,waterColorMult=FFFFFF
+# biomes/sub-biome_ids/Shrublands_ID
+biome:id=biomes/sub-biome_ids/Shrublands_ID,grassColorMult=18DBB68,foliageColorMult=172A941,waterColorMult=FFFFFF
+
+
+# block_ids/Acacia_Sapling_ID:* (tile.hl_acaciaSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Acacia_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingAcacia
+
+# block_ids/Beech_Sapling_ID:* (tile.hl_beechSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Beech_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingBeech
+
+# block_ids/Canopy_Tree_Sapling_ID:* (tile.hl_canopySapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Canopy_Tree_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingEucalyptus
+
+# block_ids/Dead_Tree_Sapling_ID:* (tile.hl_deadSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Dead_Tree_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingDeadTree
+
+# block_ids/Great_Oak_Sapling_ID:* (tile.hl_greatOakSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Great_Oak_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingGreatOak
+
+# block_ids/Fir_Sapling_ID:* (tile.hl_firSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Fir_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingFir
+
+# block_ids/Poplar_Sapling_ID:* (tile.hl_poplarSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Poplar_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingPoplar
+
+# block_ids/Redwood_Sapling_ID:* (tile.hl_redwoodSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Redwood_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingRedwood
+
+# block_ids/Evergreen_Bush_Sapling_ID:* (tile.hl_evgBushSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Evergreen_Bush_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingEvgBush
+
+# block_ids/Deciduous_Bush_Sapling_ID:* (tile.hl_decBushSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Deciduous_Bush_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingDecBush
+
+# block_ids/Palm_Sapling_ID:* (tile.hl_palmSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Palm_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingPalm
+
+# block_ids/Ironwood_Sapling_ID:* (tile.hl_ironwoodSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Ironwood_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingIronwood
+
+# block_ids/Mangrove_Sapling_ID:* (tile.hl_mangroveSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Mangrove_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingMangrove
+
+# block_ids/Ash_Tree_Sapling_ID:* (tile.hl_ashSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Ash_Tree_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingAsh
+
+# block_ids/Autumn_Yellow_Sapling_ID:* (tile.hl_autumnYellowSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Autumn_Yellow_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingAutumnYellow
+
+# block_ids/Autumn_Orange_Sapling_ID:* (tile.hl_autumnOrangeSapling), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSapling
+block:id=block_ids/Autumn_Orange_Sapling_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/saplingAutumnOrange
+
+# block_ids/Acacia_Log_ID:* (tile.hl_acaciaWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Acacia_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logAcaciaTop,face2-5=0:Highlands/logAcaciaSide
+block:id=block_ids/Acacia_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logAcaciaSide,face2-3=4000:Highlands/logAcaciaSide,face4-5=0:Highlands/logAcaciaTop
+block:id=block_ids/Acacia_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logAcaciaSide,face2-3=0:Highlands/logAcaciaTop,face4-5=4000:Highlands/logAcaciaSide
+block:id=block_ids/Acacia_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logAcaciaSide
+
+# block_ids/Canopy_Tree_Log_ID:* (tile.hl_canopyWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Canopy_Tree_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logEucalyptusTop,face2-5=0:Highlands/logEucalyptusSide
+block:id=block_ids/Canopy_Tree_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logEucalyptusSide,face2-3=4000:Highlands/logEucalyptusSide,face4-5=0:Highlands/logEucalyptusTop
+block:id=block_ids/Canopy_Tree_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logEucalyptusSide,face2-3=0:Highlands/logEucalyptusTop,face4-5=4000:Highlands/logEucalyptusSide
+block:id=block_ids/Canopy_Tree_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logEucalyptusSide
+
+# block_ids/Fir_Log_ID:* (tile.hl_firWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Fir_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logFirTop,face2-5=0:Highlands/logFirSide
+block:id=block_ids/Fir_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logFirSide,face2-3=4000:Highlands/logFirSide,face4-5=0:Highlands/logFirTop
+block:id=block_ids/Fir_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logFirSide,face2-3=0:Highlands/logFirTop,face4-5=4000:Highlands/logFirSide
+block:id=block_ids/Fir_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logFirSide
+
+# block_ids/Poplar_Log_ID:* (tile.hl_poplarWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Poplar_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logPoplarTop,face2-5=0:Highlands/logPoplarSide
+block:id=block_ids/Poplar_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logPoplarSide,face2-3=4000:Highlands/logPoplarSide,face4-5=0:Highlands/logPoplarTop
+block:id=block_ids/Poplar_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logPoplarSide,face2-3=0:Highlands/logPoplarTop,face4-5=4000:Highlands/logPoplarSide
+block:id=block_ids/Poplar_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logPoplarSide
+
+# block_ids/Redwood_Log_ID:* (tile.hl_redwoodWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Redwood_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logRedwoodTop,face2-5=0:Highlands/logRedwoodSide
+block:id=block_ids/Redwood_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logRedwoodSide,face2-3=4000:Highlands/logRedwoodSide,face4-5=0:Highlands/logRedwoodTop
+block:id=block_ids/Redwood_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logRedwoodSide,face2-3=0:Highlands/logRedwoodTop,face4-5=4000:Highlands/logRedwoodSide
+block:id=block_ids/Redwood_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logRedwoodSide
+
+# block_ids/Palm_Log_ID:* (tile.hl_palmWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Palm_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logPalmTop,face2-5=0:Highlands/logPalmSide
+block:id=block_ids/Palm_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logPalmSide,face2-3=4000:Highlands/logPalmSide,face4-5=0:Highlands/logPalmTop
+block:id=block_ids/Palm_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logPalmSide,face2-3=0:Highlands/logPalmTop,face4-5=4000:Highlands/logPalmSide
+block:id=block_ids/Palm_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logPalmSide
+
+# block_ids/Ironwood_Log_ID:* (tile.hl_ironwoodWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Ironwood_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logIronwoodTop,face2-5=0:Highlands/logIronwoodSide
+block:id=block_ids/Ironwood_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logIronwoodSide,face2-3=4000:Highlands/logIronwoodSide,face4-5=0:Highlands/logIronwoodTop
+block:id=block_ids/Ironwood_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logIronwoodSide,face2-3=0:Highlands/logIronwoodTop,face4-5=4000:Highlands/logIronwoodSide
+block:id=block_ids/Ironwood_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logIronwoodSide
+
+# block_ids/Mangrove_Log_ID:* (tile.hl_mangroveWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Mangrove_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logMangroveTop,face2-5=0:Highlands/logMangroveSide
+block:id=block_ids/Mangrove_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logMangroveSide,face2-3=4000:Highlands/logMangroveSide,face4-5=0:Highlands/logMangroveTop
+block:id=block_ids/Mangrove_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logMangroveSide,face2-3=0:Highlands/logMangroveTop,face4-5=4000:Highlands/logMangroveSide
+block:id=block_ids/Mangrove_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logMangroveSide
+
+# block_ids/Ash_Tree_Log_ID:* (tile.hl_ashWood), render=(LOG), opaque=true,cls=highlands.block.BlockHighlandsLog
+block:id=block_ids/Ash_Tree_Log_ID,data=0,data=1,data=2,data=3,stdrot=true,face0-1=0:Highlands/logAshTop,face2-5=0:Highlands/logAshSide
+block:id=block_ids/Ash_Tree_Log_ID,data=4,data=5,data=6,data=7,face0-1=0:Highlands/logAshSide,face2-3=4000:Highlands/logAshSide,face4-5=0:Highlands/logAshTop
+block:id=block_ids/Ash_Tree_Log_ID,data=8,data=9,data=10,data=11,face0-1=4000:Highlands/logAshSide,face2-3=0:Highlands/logAshTop,face4-5=4000:Highlands/logAshSide
+block:id=block_ids/Ash_Tree_Log_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/logAshSide
+
+# block_ids/Acacia_Leaves_ID:* (tile.hl_acaciaLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Acacia_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesAcacia
+
+# block_ids/Canopy_Tree_Leaves_ID:* (tile.hl_canopyLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Canopy_Tree_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesEucalyptus
+
+# block_ids/Fir_Leaves_ID:* (tile.hl_firLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Fir_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesFir
+
+# block_ids/Poplar_Leaves_ID:* (tile.hl_poplarLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Poplar_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesPoplar
+
+# block_ids/Redwood_Leaves_ID:* (tile.hl_redwoodLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Redwood_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesRedwood
+
+# block_ids/Palm_Leaves_ID:* (tile.hl_palmLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Palm_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesPalm
+
+# block_ids/Ironwood_Leaves_ID:* (tile.hl_ironwoodLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Ironwood_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesIronwood
+
+# block_ids/Mangrove_Leaves_ID:* (tile.hl_mangroveLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Mangrove_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesMangrove
+
+# block_ids/Ash_Tree_Leaves_ID:* (tile.hl_ashLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Ash_Tree_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesAsh
+
+# block_ids/Autumn_Yellow_Leaves_ID:* (tile.hl_autumnYellowLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Autumn_Yellow_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesAutumnOrange
+
+# block_ids/Autumn_Orange_Leaves_ID:* (tile.hl_autumnOrangeLeaves), render=(STANDARD), opaque=false,cls=highlands.block.BlockHighlandsLeaves
+block:id=block_ids/Autumn_Orange_Leaves_ID,data=*,stdrot=true,face0-5=0:Highlands/leavesAutumnYellow
+
+# block_ids/Blue_Flower_ID:* (tile.hl_blueFlower), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/Blue_Flower_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantBlueFlower
+
+# block_ids/Leafy_Fern_ID:* (tile.hl_leafyFern), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/Leafy_Fern_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantGreenLeaf
+
+# block_ids/White_Flower_ID:* (tile.hl_whiteFlower), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/White_Flower_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantWhiteFlower
+
+# block_ids/Cattail_ID:* (tile.hl_cattail), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/Cattail_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantCattail
+
+# block_ids/Lavender_ID:* (tile.hl_lavender), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/Lavender_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantLavender
+
+# block_ids/Raspberry_Bush_ID:* (tile.hl_raspberryBush), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/Raspberry_Bush_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantRaspberryBush
+
+# block_ids/Blueberry_Bush_ID:* (tile.hl_blueberryBush), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/Blueberry_Bush_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantBlueberryBush
+
+# block_ids/Thornbush_ID:* (tile.hl_thornbush), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/Thornbush_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantThornbush
+
+# block_ids/Cotton_ID:* (tile.hl_cotton), render=(CROSSEDSQUARES), opaque=false,cls=highlands.block.BlockHighlandsSmallPlants
+block:id=block_ids/Cotton_ID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:Highlands/plantCotton
+
+# block_ids/Highlands_Planks_ID:* (hl_woodPlanks), render=(STANDARD), opaque=true,cls=highlands.block.BlockHighlandsPlanks
+block:id=block_ids/Highlands_Planks_ID,data=0,stdrot=true,face0-5=0:Highlands/plankYellow
+block:id=block_ids/Highlands_Planks_ID,data=1,stdrot=true,face0-5=0:Highlands/plankWhite
+block:id=block_ids/Highlands_Planks_ID,data=2,stdrot=true,face0-5=0:Highlands/plankRed
+block:id=block_ids/Highlands_Planks_ID,data=3,stdrot=true,face0-5=0:Highlands/plankGrey
+block:id=block_ids/Highlands_Planks_ID,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/plankYellow
+
+# block_ids/Yellow_Wood_Stairs_ID:* (tile.hl_woodStairs0), render=(STAIRS), opaque=false,cls=highlands.block.BlockHighlandsStairs
+block:id=block_ids/Yellow_Wood_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankYellow
+
+# block_ids/White_Wood_Stairs_ID:* (tile.hl_woodStairs1), render=(STAIRS), opaque=false,cls=highlands.block.BlockHighlandsStairs
+block:id=block_ids/White_Wood_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankWhite
+
+# block_ids/Red_Wood_Stairs_ID:* (tile.hl_woodStairs2), render=(STAIRS), opaque=false,cls=highlands.block.BlockHighlandsStairs
+block:id=block_ids/Red_Wood_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankRed
+
+# block_ids/Grey_Wood_Stairs_ID:* (tile.hl_woodStairs3), render=(STAIRS), opaque=false,cls=highlands.block.BlockHighlandsStairs
+block:id=block_ids/Grey_Wood_Stairs_ID,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankGrey
+
+# block_ids/Highlands_Planks_Halfblock_ID:* (hl_woodSlab), render=(STANDARD), opaque=false,cls=highlands.block.BlockHLPlankSlab
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=0,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankYellow
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=1,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankWhite
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=2,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankRed
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=3,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankGrey
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=4,data=5,data=6,data=7,data=8,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankYellow
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=9,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankWhite
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=10,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankRed
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=11,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankGrey
+block:id=block_ids/Highlands_Planks_Halfblock_ID,data=12,data=13,data=14,data=15,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:Highlands/plankYellow
+
+# block_ids/Highlands_Planks_Double_Halfblock_ID:* (hl_woodDoubleSlab), render=(STANDARD), opaque=true,cls=highlands.block.BlockHLPlankSlab
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=0,stdrot=true,face0-5=0:Highlands/plankYellow
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=1,stdrot=true,face0-5=0:Highlands/plankWhite
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=2,stdrot=true,face0-5=0:Highlands/plankRed
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=3,stdrot=true,face0-5=0:Highlands/plankGrey
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=4,data=5,data=6,data=7,data=8,stdrot=true,face0-5=0:Highlands/plankYellow
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=9,stdrot=true,face0-5=0:Highlands/plankWhite
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=10,stdrot=true,face0-5=0:Highlands/plankRed
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=11,stdrot=true,face0-5=0:Highlands/plankGrey
+block:id=block_ids/Highlands_Planks_Double_Halfblock_ID,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:Highlands/plankYellow
