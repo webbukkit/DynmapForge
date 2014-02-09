@@ -1,0 +1,36 @@
+# bigtrees 1.6.4
+version:1.6
+modname:bigtrees
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/bigtrees/textures/blocks/
+texture:id=bigtrees/saplingBigBirch,filename=assets/bigtrees/textures/blocks/saplingBigBirch.png
+texture:id=bigtrees/saplingBigOak,filename=assets/bigtrees/textures/blocks/saplingBigOak.png
+texture:id=bigtrees/saplingBigPine,filename=assets/bigtrees/textures/blocks/saplingBigPine.png
+texture:id=bigtrees/saplingCyprus,filename=assets/bigtrees/textures/blocks/saplingCyprus.png
+texture:id=bigtrees/saplingDeadTree,filename=assets/bigtrees/textures/blocks/saplingDeadTree.png
+texture:id=bigtrees/saplingHatTree,filename=assets/bigtrees/textures/blocks/saplingHatTree.png
+
+
+
+# %tile.bt_bigOakSapling:* (tile.bt_bigOakSapling), render=(CROSSEDSQUARES), opaque=false,cls=karob.bigtrees.BlockBTSapling
+block:id=%tile.bt_bigOakSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:bigtrees/saplingBigOak
+
+# %tile.bt_bigBirchSapling:* (tile.bt_bigBirchSapling), render=(CROSSEDSQUARES), opaque=false,cls=karob.bigtrees.BlockBTSapling
+block:id=%tile.bt_bigBirchSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:bigtrees/saplingBigBirch
+
+# %tile.bt_bigPineSapling:* (tile.bt_bigPineSapling), render=(CROSSEDSQUARES), opaque=false,cls=karob.bigtrees.BlockBTSapling
+block:id=%tile.bt_bigPineSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:bigtrees/saplingBigPine
+
+# %tile.bt_deadTreeSapling:* (tile.bt_deadTreeSapling), render=(CROSSEDSQUARES), opaque=false,cls=karob.bigtrees.BlockBTSapling
+block:id=%tile.bt_deadTreeSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:bigtrees/saplingDeadTree
+
+# %tile.bt_cyprusSapling:* (tile.bt_cyprusSapling), render=(CROSSEDSQUARES), opaque=false,cls=karob.bigtrees.BlockBTSapling
+block:id=%tile.bt_cyprusSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:bigtrees/saplingCyprus
+
+# %tile.bt_hatTreeSapling:* (tile.bt_hatTreeSapling), render=(CROSSEDSQUARES), opaque=false,cls=karob.bigtrees.BlockBTSapling
+block:id=%tile.bt_hatTreeSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:bigtrees/saplingHatTree
