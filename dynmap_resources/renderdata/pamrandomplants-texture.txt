@@ -1,0 +1,16 @@
+# pamrandomplants 1.0
+version:1.6
+modname:pamrandomplants
+
+var:randomplantID=0
+
+cfgfile:config/pamrandomplants.cfg
+
+
+texturepath:assets/pamrandomplants/textures/blocks/
+texture:id=pamrandomplants/venusflytrap,filename=assets/pamrandomplants/textures/blocks/venusflytrap.png
+
+
+
+# randomplantID:* (tile.null), render=(CROSSEDSQUARES), opaque=false,cls=assets.pamrandomplants.BlockPamRandomPlant
+block:id=randomplantID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamrandomplants/venusflytrap

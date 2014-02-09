@@ -1,0 +1,143 @@
+# pamweeeflowers 1.1
+version:1.6
+modname:pamweeeflowers
+
+var:purplevineID=0,flowerID=0,orangevineID=0,yellowvineID=0,brownvineID=0,lightbluevineID=0,pinkvineID=0,cyanvineID=0,redvineID=0,limevineID=0
+var:whitevineID=0,lightgreyvineID=0,moonflowerID=0,darkgreyvineID=0,magentavineID=0,greenvineID=0,blackvineID=0,bluevineID=0
+
+cfgfile:config/pamweeeflowers.cfg
+
+
+texturepath:assets/pamweeeflowers/textures/blocks/
+texture:id=pamweeeflowers/flowerblack,filename=assets/pamweeeflowers/textures/blocks/flowerblack.png
+texture:id=pamweeeflowers/flowerblue,filename=assets/pamweeeflowers/textures/blocks/flowerblue.png
+texture:id=pamweeeflowers/flowerbrown,filename=assets/pamweeeflowers/textures/blocks/flowerbrown.png
+texture:id=pamweeeflowers/flowercyan,filename=assets/pamweeeflowers/textures/blocks/flowercyan.png
+texture:id=pamweeeflowers/flowerdarkgrey,filename=assets/pamweeeflowers/textures/blocks/flowerdarkgrey.png
+texture:id=pamweeeflowers/flowergreen,filename=assets/pamweeeflowers/textures/blocks/flowergreen.png
+texture:id=pamweeeflowers/flowerlightblue,filename=assets/pamweeeflowers/textures/blocks/flowerlightblue.png
+texture:id=pamweeeflowers/flowerlightgrey,filename=assets/pamweeeflowers/textures/blocks/flowerlightgrey.png
+texture:id=pamweeeflowers/flowerlime,filename=assets/pamweeeflowers/textures/blocks/flowerlime.png
+texture:id=pamweeeflowers/flowermagenta,filename=assets/pamweeeflowers/textures/blocks/flowermagenta.png
+texture:id=pamweeeflowers/flowerorange,filename=assets/pamweeeflowers/textures/blocks/flowerorange.png
+texture:id=pamweeeflowers/flowerpink,filename=assets/pamweeeflowers/textures/blocks/flowerpink.png
+texture:id=pamweeeflowers/flowerpurple,filename=assets/pamweeeflowers/textures/blocks/flowerpurple.png
+texture:id=pamweeeflowers/flowerwhite,filename=assets/pamweeeflowers/textures/blocks/flowerwhite.png
+texture:id=pamweeeflowers/moonflowerblack,filename=assets/pamweeeflowers/textures/blocks/moonflowerblack.png
+texture:id=pamweeeflowers/moonflowerblue,filename=assets/pamweeeflowers/textures/blocks/moonflowerblue.png
+texture:id=pamweeeflowers/moonflowerbrown,filename=assets/pamweeeflowers/textures/blocks/moonflowerbrown.png
+texture:id=pamweeeflowers/moonflowercyan,filename=assets/pamweeeflowers/textures/blocks/moonflowercyan.png
+texture:id=pamweeeflowers/moonflowerdarkgrey,filename=assets/pamweeeflowers/textures/blocks/moonflowerdarkgrey.png
+texture:id=pamweeeflowers/moonflowergreen,filename=assets/pamweeeflowers/textures/blocks/moonflowergreen.png
+texture:id=pamweeeflowers/moonflowerlightblue,filename=assets/pamweeeflowers/textures/blocks/moonflowerlightblue.png
+texture:id=pamweeeflowers/moonflowerlightgrey,filename=assets/pamweeeflowers/textures/blocks/moonflowerlightgrey.png
+texture:id=pamweeeflowers/moonflowerlime,filename=assets/pamweeeflowers/textures/blocks/moonflowerlime.png
+texture:id=pamweeeflowers/moonflowermagenta,filename=assets/pamweeeflowers/textures/blocks/moonflowermagenta.png
+texture:id=pamweeeflowers/moonflowerorange,filename=assets/pamweeeflowers/textures/blocks/moonflowerorange.png
+texture:id=pamweeeflowers/moonflowerpink,filename=assets/pamweeeflowers/textures/blocks/moonflowerpink.png
+texture:id=pamweeeflowers/moonflowerpurple,filename=assets/pamweeeflowers/textures/blocks/moonflowerpurple.png
+texture:id=pamweeeflowers/moonflowerred,filename=assets/pamweeeflowers/textures/blocks/moonflowerred.png
+texture:id=pamweeeflowers/moonflowerwhite,filename=assets/pamweeeflowers/textures/blocks/moonflowerwhite.png
+texture:id=pamweeeflowers/moonfloweryellow,filename=assets/pamweeeflowers/textures/blocks/moonfloweryellow.png
+texture:id=pamweeeflowers/vine_black,filename=assets/pamweeeflowers/textures/blocks/vine_black.png
+texture:id=pamweeeflowers/vine_blue,filename=assets/pamweeeflowers/textures/blocks/vine_blue.png
+texture:id=pamweeeflowers/vine_brown,filename=assets/pamweeeflowers/textures/blocks/vine_brown.png
+texture:id=pamweeeflowers/vine_cyan,filename=assets/pamweeeflowers/textures/blocks/vine_cyan.png
+texture:id=pamweeeflowers/vine_darkgrey,filename=assets/pamweeeflowers/textures/blocks/vine_darkgrey.png
+texture:id=pamweeeflowers/vine_green,filename=assets/pamweeeflowers/textures/blocks/vine_green.png
+texture:id=pamweeeflowers/vine_lightblue,filename=assets/pamweeeflowers/textures/blocks/vine_lightblue.png
+texture:id=pamweeeflowers/vine_lightgrey,filename=assets/pamweeeflowers/textures/blocks/vine_lightgrey.png
+texture:id=pamweeeflowers/vine_lime,filename=assets/pamweeeflowers/textures/blocks/vine_lime.png
+texture:id=pamweeeflowers/vine_magenta,filename=assets/pamweeeflowers/textures/blocks/vine_magenta.png
+texture:id=pamweeeflowers/vine_orange,filename=assets/pamweeeflowers/textures/blocks/vine_orange.png
+texture:id=pamweeeflowers/vine_pink,filename=assets/pamweeeflowers/textures/blocks/vine_pink.png
+texture:id=pamweeeflowers/vine_purple,filename=assets/pamweeeflowers/textures/blocks/vine_purple.png
+texture:id=pamweeeflowers/vine_red,filename=assets/pamweeeflowers/textures/blocks/vine_red.png
+texture:id=pamweeeflowers/vine_white,filename=assets/pamweeeflowers/textures/blocks/vine_white.png
+texture:id=pamweeeflowers/vine_yellow,filename=assets/pamweeeflowers/textures/blocks/vine_yellow.png
+
+
+
+# whitevineID:* (tile.PamWeeeFlowers:vine_white), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=whitevineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_white
+
+# orangevineID:* (tile.PamWeeeFlowers:vine_orange), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=orangevineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_orange
+
+# magentavineID:* (tile.PamWeeeFlowers:vine_magenta), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=magentavineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_magenta
+
+# lightbluevineID:* (tile.PamWeeeFlowers:vine_lightblue), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=lightbluevineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_lightblue
+
+# yellowvineID:* (tile.PamWeeeFlowers:vine_yellow), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=yellowvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_yellow
+
+# limevineID:* (tile.PamWeeeFlowers:vine_lime), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=limevineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_lime
+
+# pinkvineID:* (tile.PamWeeeFlowers:vine_pink), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=pinkvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_pink
+
+# darkgreyvineID:* (tile.PamWeeeFlowers:vine_darkgrey), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=darkgreyvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_darkgrey
+
+# lightgreyvineID:* (tile.PamWeeeFlowers:vine_lightgrey), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=lightgreyvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_lightgrey
+
+# cyanvineID:* (tile.PamWeeeFlowers:vine_cyan), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=cyanvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_cyan
+
+# purplevineID:* (tile.PamWeeeFlowers:vine_purple), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=purplevineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_purple
+
+# bluevineID:* (tile.PamWeeeFlowers:vine_blue), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=bluevineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_blue
+
+# brownvineID:* (tile.PamWeeeFlowers:vine_brown), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=brownvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_brown
+
+# greenvineID:* (tile.PamWeeeFlowers:vine_green), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=greenvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_green
+
+# redvineID:* (tile.PamWeeeFlowers:vine_red), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=redvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_red
+
+# blackvineID:* (tile.PamWeeeFlowers:vine_black), render=(VINE), opaque=false,cls=assets.pamweeeflowers.BlockPamFlowerVine
+block:id=blackvineID,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/vine_black
+
+# flowerID:* (tile.null), render=(CROSSEDSQUARES), opaque=false,cls=assets.pamweeeflowers.BlockPamFlower
+block:id=flowerID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerwhite
+block:id=flowerID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerorange
+block:id=flowerID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowermagenta
+block:id=flowerID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerlightblue
+block:id=flowerID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerlime
+block:id=flowerID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerpink
+block:id=flowerID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerdarkgrey
+block:id=flowerID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerlightgrey
+block:id=flowerID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowercyan
+block:id=flowerID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerpurple
+block:id=flowerID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerblue
+block:id=flowerID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerbrown
+block:id=flowerID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowergreen
+block:id=flowerID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerblack
+block:id=flowerID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerwhite
+block:id=flowerID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/flowerorange
+
+# moonflowerID:* (tile.null), render=(CROSSEDSQUARES), opaque=false,cls=assets.pamweeeflowers.BlockPamMoonFlower
+block:id=moonflowerID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerwhite
+block:id=moonflowerID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerorange
+block:id=moonflowerID,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowermagenta
+block:id=moonflowerID,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerlightblue
+block:id=moonflowerID,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonfloweryellow
+block:id=moonflowerID,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerlime
+block:id=moonflowerID,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerpink
+block:id=moonflowerID,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerdarkgrey
+block:id=moonflowerID,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerlightgrey
+block:id=moonflowerID,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowercyan
+block:id=moonflowerID,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerpurple
+block:id=moonflowerID,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerblue
+block:id=moonflowerID,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerbrown
+block:id=moonflowerID,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowergreen
+block:id=moonflowerID,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerred
+block:id=moonflowerID,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pamweeeflowers/moonflowerblack
