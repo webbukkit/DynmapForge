@@ -1,154 +1,38 @@
-# Millenaire block models
-modname:Millenaire
-# configuration file
+# millenaire 5.1.11
+version:1.6
+modname:millenaire
+
+var:block_byzantine_mixedbrick_id=0,block_path_id=0,block_byzantine_slab_id=0,block_crops_id=0,block_path_slab_id=0,block_panes_id=0,block_stone_id=0,block_wood_id=0,block_earth_id=0,block_byzantine_brick_id=0
+
 cfgfile:mods/millenaire/config-server.txt
-cfgfile:mods/millenaire/config.txt
 
-# block_crops_id
-patchblock:id=block_crops_id,data=*
-patchrotate:id=59,data=0,rot=0
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
-# block_building_id
-# Chest - set render alg
-linkmap:id=block_building_id,linkalg=2
-# Chest - single, facing west
-block:id=block_building_id,data=0,scale=16
-layer:0,1,2,3,4,5,6,7,12,13
-----------------
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
-----------------
-layer:8,9,10,11
-----------------
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
-***************-
-***************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
-----------------
-# Chest - single, facing south
-block:id=block_building_id,data=1,scale=16
-rotate:id=block_building_id,data=0,rot=270
-# Chest - single, facing east
-block:id=block_building_id,data=2,scale=16
-rotate:id=block_building_id,data=0,rot=180
-# Chest - single, facing north
-block:id=block_building_id,data=3,scale=16
-rotate:id=block_building_id,data=0,rot=90
 
-# Chest - left side of double, facing west
-block:id=block_building_id,data=4,scale=16
-layer:0,1,2,3,4,5,6,7,12,13
-----------------
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
-layer:8,9,10,11
-----------------
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
-***************-
-# Chest - left side of double, facing south
-block:id=block_building_id,data=5,scale=16
-rotate:id=block_building_id,data=4,rot=270
-# Chest - left side of double, facing east
-block:id=block_building_id,data=6,scale=16
-rotate:id=block_building_id,data=4,rot=180
-# Chest - left side of double, facing north
-block:id=block_building_id,data=7,scale=16
-rotate:id=block_building_id,data=4,rot=90
-# Chest - right side of double, facing west
-block:id=block_building_id,data=8,scale=16
-layer:0,1,2,3,4,5,6,7,12,13
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
-----------------
-layer:8,9,10,11
-***************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
--**************-
-----------------
-# Chest - right side of double, facing south
-block:id=block_building_id,data=9,scale=16
-rotate:id=block_building_id,data=8,rot=270
-# Chest - right side of double, facing east
-block:id=block_building_id,data=10,scale=16
-rotate:id=block_building_id,data=8,rot=180
-# Chest - right side of double, facing north
-block:id=block_building_id,data=11,scale=16
-rotate:id=block_building_id,data=8,rot=90
+# block_crops_id:* (tile.ml_crops), render=(CROPS), opaque=false,cls=org.millenaire.common.block.BlockMillCrops
+patchblock:id=block_crops_id,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
 
-# block_panes_id
-customblock:id=block_panes_id,data=*,class=org.dynmap.hdmap.renderer.PaneRenderer
+# block_panes_id:* (tile.ml_panes), render=(PANE), opaque=false,cls=org.millenaire.common.block.BlockMLNPane
+customblock:id=block_panes_id,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*
 
-# block_panel_id (TODO)
+# block_byzantine_slab_id:* (tile.byzantine_brick_slab), render=(STANDARD), opaque=false,cls=org.millenaire.common.block.BlockOrientedSlab
+boxblock:id=block_byzantine_slab_id,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=block_byzantine_slab_id,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# block_path_slab_id:* (tile.ml_path_slab), render=(STANDARD), opaque=false,cls=org.millenaire.common.block.BlockDecorativeSlab
+boxblock:id=block_path_slab_id,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=block_path_slab_id,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
