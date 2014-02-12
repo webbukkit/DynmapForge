@@ -1,0 +1,30 @@
+# minegicka 1.4.3
+version:1.6
+modname:minegicka
+
+var:Dust_Generator_MKIII_id=0,Magik_Altar_id=0,Dust_Generator_MKII_id=0,Generator_Catcher_id=0,Dust_Generator_MKI_id=0
+
+cfgfile:config/minegicka.cfg
+
+
+texturepath:assets/minegicka/textures/blocks/
+texture:id=minegicka/dustGenerator,filename=assets/minegicka/textures/blocks/dustGenerator.png
+texture:id=minegicka/generatorCatcher,filename=assets/minegicka/textures/blocks/generatorCatcher.png
+texture:id=minegicka/magikAltar,filename=assets/minegicka/textures/blocks/magikAltar.png
+
+
+
+# Magik_Altar_id:* (minegicka.Magik Altar), render=(STANDARD), opaque=false,cls=willeze.minegicka.stuffs.objects.BlockMagikAltar
+block:id=Magik_Altar_id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minegicka/magikAltar
+
+# Dust_Generator_MKI_id:* (tile.minegicka:dustGenerator1), render=(STANDARD), opaque=false,cls=willeze.minegicka.stuffs.objects.BlockDustGenerator
+block:id=Dust_Generator_MKI_id,data=*,stdrot=true,face0-5=0:minegicka/dustGenerator
+
+# Dust_Generator_MKII_id:* (tile.minegicka:dustGenerator2), render=(STANDARD), opaque=false,cls=willeze.minegicka.stuffs.objects.BlockDustGenerator
+block:id=Dust_Generator_MKII_id,data=*,stdrot=true,face0-5=0:minegicka/dustGenerator
+
+# Dust_Generator_MKIII_id:* (tile.minegicka:dustGenerator3), render=(STANDARD), opaque=false,cls=willeze.minegicka.stuffs.objects.BlockDustGenerator
+block:id=Dust_Generator_MKIII_id,data=*,stdrot=true,face0-5=0:minegicka/dustGenerator
+
+# Generator_Catcher_id:* (minegicka.Generator Catcher), render=(STANDARD), opaque=false,cls=willeze.minegicka.stuffs.objects.BlockGeneratorCatcher
+block:id=Generator_Catcher_id,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minegicka/generatorCatcher
