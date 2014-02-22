@@ -992,7 +992,12 @@ public class DynmapPlugin
             for (int i = 0; i < 4096; i++) {
                 Block b = getBlockByID(i);
                 if (b == null) continue;
-                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(b);
+                UniqueIdentifier ui = null;
+                try {
+                    ui = GameRegistry.findUniqueIdentifierFor(b);
+                } catch (Exception x) {
+                    Log.warning("Exception caught reading unique ID for block " + i);
+                }
                 if (ui != null) {
                     map.put(ui.modId + ":" + ui.name, i);
                 }
@@ -1008,9 +1013,14 @@ public class DynmapPlugin
             for (int i = 0; i < 32000; i++) {
                 Item itm = getItemByID(i);
                 if (itm == null) continue;
-                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(itm);
+                UniqueIdentifier ui = null;
+                try {
+                    ui = GameRegistry.findUniqueIdentifierFor(itm);
+                } catch (Exception x) {
+                    Log.warning("Exception caught reading unique ID for item " + i);
+                }
                 if (ui != null) {
-                    map.put(ui.modId + ":" + ui.name, i);
+                    map.put(ui.modId + ":" + ui.name, i - 256);
                 }
             }
             return map;
