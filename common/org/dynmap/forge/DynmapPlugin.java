@@ -960,7 +960,7 @@ public class DynmapPlugin
                 if (itm == null) continue;
                 UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(itm);
                 if (ui != null) {
-                    map.put(ui.modId + ":" + ui.name, i);
+                    map.put(ui.modId + ":" + ui.name, i - 256);
                 }
             }
             return map;
