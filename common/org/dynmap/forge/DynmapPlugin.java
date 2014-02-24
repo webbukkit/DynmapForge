@@ -1336,6 +1336,7 @@ public class DynmapPlugin
             scm.registerCommand(new DynmapCommand(this));
             scm.registerCommand(new DmapCommand(this));
             scm.registerCommand(new DmarkerCommand(this));
+            scm.registerCommand(new DynmapExpCommand(this));
         }
         /* Submit metrics to mcstats.org */
         initMetrics();
@@ -1884,4 +1885,8 @@ class DmarkerCommand extends DynmapCommandHandler {
         super("dmarker", p);
     }
 }
-
+class DynmapExpCommand extends DynmapCommandHandler {
+    DynmapExpCommand(DynmapPlugin p) {
+        super("dynmapexp", p);
+    }
+}
