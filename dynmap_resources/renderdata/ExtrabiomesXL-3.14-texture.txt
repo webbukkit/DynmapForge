@@ -1,26 +1,20 @@
-# ExtrabiomesXL 3.15.5
+# ExtrabiomesXL 3.14.5
 version:1.6
-modname:ExtrabiomesXL[3.15-]
+modname:ExtrabiomesXL[-3.14]
 
-var:planks.id=0,minilog.id=0,newwoodslab.id=0,biome/redwoodforest.id=0,doublewoodslab.id=0,biome/wasteland.id=0,waterplant.id=0,biome/autumnwoods.id=0,cypressstairs.id=0,doubleredrockslab.id=0
-var:moreleaves.id=0,biome/woodlands.id=0,redrock.id=0,redcobblestairs.id=0,quarterlog2.id=0,redrockslab.id=0,gloriosa.id=0,firquarterlog.id=0,flower3.id=0,oakquarterlog.id=0
-var:biome/rainforest.id=0,redwoodquarterlog.id=0,biome/pineforest.id=0,biome/mountaindesert.id=0,customlog.id=0,biome/mountainridge.id=0,flower2.id=0,redwoodstairs.id=0,flower.id=0,rainbowquarterlog.id=0
-var:strawberry.id=0,sakurablossomstairs.id=0,biome/snowyrainforest.id=0,biome/glacier.id=0,quarterlog0.id=0,biome/snowyforest.id=0,biome/tundra.id=0,grass.id=0,biome/forestedhills.id=0,greenleaves.id=0
-var:leafpile.id=0,autumnleaves.id=0,japanesemaplestairs.id=0,biome/extremejungle.id=0,newlog.id=0,cattail.id=0,rainboweucalyptusstairs.id=0,biome/minijungle.id=0,biome/icewasteland.id=0,rainbowkneelog.id=0
-var:sapling.id=0,woodslab.id=0,baldcypressstairs.id=0,quarterlog3.id=0,biome/meadow.id=0,autumnstairs.id=0,newquarterlog.id=0,newsapling.id=0,wall.id=0,quicksand.id=0
-var:biome/shrubland.id=0,crackedsand.id=0,biome/forestedisland.id=0,biome/greenswamp.id=0,quarterlog1.id=0,biome/alpine.id=0,biome/redwoodlush.id=0,biome/mountaintaiga.id=0,biome/temporaterainforest.id=0,biome/savanna.id=0
-var:biome/birchforest.id=0,kneelog.id=0,firstairs.id=0,newleaves.id=0,acaciastairs.id=0,biome/greenhills.id=0,newdoublewoodslab.id=0,redrockbrickstairs.id=0
+var:planks.id=0,minilog.id=0,newwoodslab.id=0,biome/redwoodforest.id=0,doublewoodslab.id=0,biome/wasteland.id=0,biome/autumnwoods.id=0,cypressstairs.id=0,doubleredrockslab.id=0,moreleaves.id=0
+var:biome/woodlands.id=0,redrock.id=0,redcobblestairs.id=0,quarterlog2.id=0,redrockslab.id=0,biome/rainforest.id=0,biome/pineforest.id=0,biome/mountaindesert.id=0,customlog.id=0,biome/mountainridge.id=0
+var:redwoodstairs.id=0,flower.id=0,rainbowquarterlog.id=0,sakurablossomstairs.id=0,biome/snowyrainforest.id=0,biome/glacier.id=0,quarterlog0.id=0,biome/snowyforest.id=0,biome/tundra.id=0,grass.id=0
+var:biome/forestedhills.id=0,greenleaves.id=0,leafpile.id=0,autumnleaves.id=0,japanesemaplestairs.id=0,biome/extremejungle.id=0,newlog.id=0,cattail.id=0,rainboweucalyptusstairs.id=0,biome/minijungle.id=0
+var:biome/icewasteland.id=0,rainbowkneelog.id=0,sapling.id=0,woodslab.id=0,baldcypressstairs.id=0,quarterlog3.id=0,biome/meadow.id=0,autumnstairs.id=0,newquarterlog.id=0,newsapling.id=0
+var:wall.id=0,quicksand.id=0,biome/shrubland.id=0,crackedsand.id=0,biome/forestedisland.id=0,biome/greenswamp.id=0,quarterlog1.id=0,biome/alpine.id=0,biome/redwoodlush.id=0,biome/mountaintaiga.id=0
+var:biome/temporaterainforest.id=0,biome/savanna.id=0,biome/birchforest.id=0,kneelog.id=0,firstairs.id=0,newleaves.id=0,acaciastairs.id=0,biome/greenhills.id=0,newdoublewoodslab.id=0,redrockbrickstairs.id=0
 
-cfgfile:config/extrabiomes.cfg
+cfgfile:config/extrabiomes/extrabiomes.cfg
 
 
 texturepath:assets/extrabiomesxl/textures/blocks/
-texture:id=extrabiomesxl/allium,filename=assets/extrabiomesxl/textures/blocks/allium.png
-texture:id=extrabiomesxl/amaryllis_pink,filename=assets/extrabiomesxl/textures/blocks/amaryllis_pink.png
-texture:id=extrabiomesxl/amaryllis_red,filename=assets/extrabiomesxl/textures/blocks/amaryllis_red.png
-texture:id=extrabiomesxl/amaryllis_white,filename=assets/extrabiomesxl/textures/blocks/amaryllis_white.png
 texture:id=extrabiomesxl/autumnshrub,filename=assets/extrabiomesxl/textures/blocks/autumnshrub.png
-texture:id=extrabiomesxl/bachelorsbutton_blue,filename=assets/extrabiomesxl/textures/blocks/bachelorsbutton_blue.png
 texture:id=extrabiomesxl/baldcypresslog1,filename=assets/extrabiomesxl/textures/blocks/baldcypresslog1.png
 texture:id=extrabiomesxl/baldcypresslog2,filename=assets/extrabiomesxl/textures/blocks/baldcypresslog2.png
 texture:id=extrabiomesxl/baldcypressside1,filename=assets/extrabiomesxl/textures/blocks/baldcypressside1.png
@@ -29,45 +23,22 @@ texture:id=extrabiomesxl/baldcypresstop1,filename=assets/extrabiomesxl/textures/
 texture:id=extrabiomesxl/baldcypresstop2,filename=assets/extrabiomesxl/textures/blocks/baldcypresstop2.png
 texture:id=extrabiomesxl/baldcypresstop3,filename=assets/extrabiomesxl/textures/blocks/baldcypresstop3.png
 texture:id=extrabiomesxl/baldcypresstop4,filename=assets/extrabiomesxl/textures/blocks/baldcypresstop4.png
-texture:id=extrabiomesxl/belladonna,filename=assets/extrabiomesxl/textures/blocks/belladonna.png
-texture:id=extrabiomesxl/bellsofireland,filename=assets/extrabiomesxl/textures/blocks/bellsofireland.png
-texture:id=extrabiomesxl/bluebell,filename=assets/extrabiomesxl/textures/blocks/bluebell.png
 texture:id=extrabiomesxl/browngrassshort,filename=assets/extrabiomesxl/textures/blocks/browngrassshort.png
 texture:id=extrabiomesxl/browngrasstall,filename=assets/extrabiomesxl/textures/blocks/browngrasstall.png
 texture:id=extrabiomesxl/buttercup,filename=assets/extrabiomesxl/textures/blocks/buttercup.png
-texture:id=extrabiomesxl/calla_black,filename=assets/extrabiomesxl/textures/blocks/calla_black.png
-texture:id=extrabiomesxl/calla_white,filename=assets/extrabiomesxl/textures/blocks/calla_white.png
+texture:id=extrabiomesxl/calla,filename=assets/extrabiomesxl/textures/blocks/calla.png
 texture:id=extrabiomesxl/cattail,filename=assets/extrabiomesxl/textures/blocks/cattail.png
 texture:id=extrabiomesxl/crackedsand,filename=assets/extrabiomesxl/textures/blocks/crackedsand.png
-texture:id=extrabiomesxl/daisy,filename=assets/extrabiomesxl/textures/blocks/daisy.png
-texture:id=extrabiomesxl/dandelion,filename=assets/extrabiomesxl/textures/blocks/dandelion.png
 texture:id=extrabiomesxl/deadgrassshort,filename=assets/extrabiomesxl/textures/blocks/deadgrassshort.png
 texture:id=extrabiomesxl/deadgrasstall,filename=assets/extrabiomesxl/textures/blocks/deadgrasstall.png
 texture:id=extrabiomesxl/deadgrassyellow,filename=assets/extrabiomesxl/textures/blocks/deadgrassyellow.png
-texture:id=extrabiomesxl/eelgrass,filename=assets/extrabiomesxl/textures/blocks/eelgrass.png
 texture:id=extrabiomesxl/firbottomleft,filename=assets/extrabiomesxl/textures/blocks/firbottomleft.png
 texture:id=extrabiomesxl/firbottomright,filename=assets/extrabiomesxl/textures/blocks/firbottomright.png
-texture:id=extrabiomesxl/firlog1,filename=assets/extrabiomesxl/textures/blocks/firlog1.png
-texture:id=extrabiomesxl/firlog2,filename=assets/extrabiomesxl/textures/blocks/firlog2.png
-texture:id=extrabiomesxl/firside1,filename=assets/extrabiomesxl/textures/blocks/firside1.png
-texture:id=extrabiomesxl/firside2,filename=assets/extrabiomesxl/textures/blocks/firside2.png
 texture:id=extrabiomesxl/firsideleft,filename=assets/extrabiomesxl/textures/blocks/firsideleft.png
 texture:id=extrabiomesxl/firsideright,filename=assets/extrabiomesxl/textures/blocks/firsideright.png
-texture:id=extrabiomesxl/firtop1,filename=assets/extrabiomesxl/textures/blocks/firtop1.png
-texture:id=extrabiomesxl/firtop2,filename=assets/extrabiomesxl/textures/blocks/firtop2.png
-texture:id=extrabiomesxl/firtop3,filename=assets/extrabiomesxl/textures/blocks/firtop3.png
-texture:id=extrabiomesxl/firtop4,filename=assets/extrabiomesxl/textures/blocks/firtop4.png
 texture:id=extrabiomesxl/firtopleft,filename=assets/extrabiomesxl/textures/blocks/firtopleft.png
 texture:id=extrabiomesxl/firtopright,filename=assets/extrabiomesxl/textures/blocks/firtopright.png
-texture:id=extrabiomesxl/gardenia,filename=assets/extrabiomesxl/textures/blocks/gardenia.png
-texture:id=extrabiomesxl/gerbera_orange,filename=assets/extrabiomesxl/textures/blocks/gerbera_orange.png
-texture:id=extrabiomesxl/gerbera_pink,filename=assets/extrabiomesxl/textures/blocks/gerbera_pink.png
-texture:id=extrabiomesxl/gerbera_red,filename=assets/extrabiomesxl/textures/blocks/gerbera_red.png
-texture:id=extrabiomesxl/gerbera_yellow,filename=assets/extrabiomesxl/textures/blocks/gerbera_yellow.png
-texture:id=extrabiomesxl/himalayanbluepoppy,filename=assets/extrabiomesxl/textures/blocks/himalayanbluepoppy.png
 texture:id=extrabiomesxl/hydrangea,filename=assets/extrabiomesxl/textures/blocks/hydrangea.png
-texture:id=extrabiomesxl/iris_blue,filename=assets/extrabiomesxl/textures/blocks/iris_blue.png
-texture:id=extrabiomesxl/iris_purple,filename=assets/extrabiomesxl/textures/blocks/iris_purple.png
 texture:id=extrabiomesxl/lavender,filename=assets/extrabiomesxl/textures/blocks/lavender.png
 texture:id=extrabiomesxl/leafpile,filename=assets/extrabiomesxl/textures/blocks/leafpile.png
 texture:id=extrabiomesxl/leavesacaciafancy,filename=assets/extrabiomesxl/textures/blocks/leavesacaciafancy.png
@@ -83,7 +54,6 @@ texture:id=extrabiomesxl/leavesredautumnfancy,filename=assets/extrabiomesxl/text
 texture:id=extrabiomesxl/leavesredwoodfancy,filename=assets/extrabiomesxl/textures/blocks/leavesredwoodfancy.png
 texture:id=extrabiomesxl/leavessakurafancy,filename=assets/extrabiomesxl/textures/blocks/leavessakurafancy.png
 texture:id=extrabiomesxl/leavesyellowautumnfancy,filename=assets/extrabiomesxl/textures/blocks/leavesyellowautumnfancy.png
-texture:id=extrabiomesxl/lily,filename=assets/extrabiomesxl/textures/blocks/lily.png
 texture:id=extrabiomesxl/logacaciaside,filename=assets/extrabiomesxl/textures/blocks/logacaciaside.png
 texture:id=extrabiomesxl/logacaciatop,filename=assets/extrabiomesxl/textures/blocks/logacaciatop.png
 texture:id=extrabiomesxl/logautumnside,filename=assets/extrabiomesxl/textures/blocks/logautumnside.png
@@ -114,29 +84,16 @@ texture:id=extrabiomesxl/lograinboweucalyptusside,filename=assets/extrabiomesxl/
 texture:id=extrabiomesxl/lograinboweucalyptusside1,filename=assets/extrabiomesxl/textures/blocks/lograinboweucalyptusside1.png
 texture:id=extrabiomesxl/lograinboweucalyptusside2,filename=assets/extrabiomesxl/textures/blocks/lograinboweucalyptusside2.png
 texture:id=extrabiomesxl/lograinboweucalyptustop,filename=assets/extrabiomesxl/textures/blocks/lograinboweucalyptustop.png
-texture:id=extrabiomesxl/logredwoodside,filename=assets/extrabiomesxl/textures/blocks/logredwoodside.png
 texture:id=extrabiomesxl/logredwoodsideleft,filename=assets/extrabiomesxl/textures/blocks/logredwoodsideleft.png
 texture:id=extrabiomesxl/logredwoodsideright,filename=assets/extrabiomesxl/textures/blocks/logredwoodsideright.png
-texture:id=extrabiomesxl/logredwoodtop,filename=assets/extrabiomesxl/textures/blocks/logredwoodtop.png
 texture:id=extrabiomesxl/logsakuraside,filename=assets/extrabiomesxl/textures/blocks/logsakuraside.png
 texture:id=extrabiomesxl/logsakuratop,filename=assets/extrabiomesxl/textures/blocks/logsakuratop.png
-texture:id=extrabiomesxl/marshmarigold,filename=assets/extrabiomesxl/textures/blocks/marshmarigold.png
 texture:id=extrabiomesxl/oakbottomleft,filename=assets/extrabiomesxl/textures/blocks/oakbottomleft.png
 texture:id=extrabiomesxl/oakbottomright,filename=assets/extrabiomesxl/textures/blocks/oakbottomright.png
-texture:id=extrabiomesxl/oaklog1,filename=assets/extrabiomesxl/textures/blocks/oaklog1.png
-texture:id=extrabiomesxl/oaklog2,filename=assets/extrabiomesxl/textures/blocks/oaklog2.png
-texture:id=extrabiomesxl/oakside1,filename=assets/extrabiomesxl/textures/blocks/oakside1.png
-texture:id=extrabiomesxl/oakside2,filename=assets/extrabiomesxl/textures/blocks/oakside2.png
 texture:id=extrabiomesxl/oaksideleft,filename=assets/extrabiomesxl/textures/blocks/oaksideleft.png
 texture:id=extrabiomesxl/oaksideright,filename=assets/extrabiomesxl/textures/blocks/oaksideright.png
-texture:id=extrabiomesxl/oaktop1,filename=assets/extrabiomesxl/textures/blocks/oaktop1.png
-texture:id=extrabiomesxl/oaktop2,filename=assets/extrabiomesxl/textures/blocks/oaktop2.png
-texture:id=extrabiomesxl/oaktop3,filename=assets/extrabiomesxl/textures/blocks/oaktop3.png
-texture:id=extrabiomesxl/oaktop4,filename=assets/extrabiomesxl/textures/blocks/oaktop4.png
 texture:id=extrabiomesxl/oaktopleft,filename=assets/extrabiomesxl/textures/blocks/oaktopleft.png
 texture:id=extrabiomesxl/oaktopright,filename=assets/extrabiomesxl/textures/blocks/oaktopright.png
-texture:id=extrabiomesxl/orientalpinklily,filename=assets/extrabiomesxl/textures/blocks/orientalpinklily.png
-texture:id=extrabiomesxl/pansy,filename=assets/extrabiomesxl/textures/blocks/pansy.png
 texture:id=extrabiomesxl/planksacacia,filename=assets/extrabiomesxl/textures/blocks/planksacacia.png
 texture:id=extrabiomesxl/planksautumn,filename=assets/extrabiomesxl/textures/blocks/planksautumn.png
 texture:id=extrabiomesxl/planksbaldcypress,filename=assets/extrabiomesxl/textures/blocks/planksbaldcypress.png
@@ -146,14 +103,6 @@ texture:id=extrabiomesxl/planksjapanesemaple,filename=assets/extrabiomesxl/textu
 texture:id=extrabiomesxl/planksrainboweucalyptus,filename=assets/extrabiomesxl/textures/blocks/planksrainboweucalyptus.png
 texture:id=extrabiomesxl/planksredwood,filename=assets/extrabiomesxl/textures/blocks/planksredwood.png
 texture:id=extrabiomesxl/plankssakura,filename=assets/extrabiomesxl/textures/blocks/plankssakura.png
-texture:id=extrabiomesxl/plant_strawberry0,filename=assets/extrabiomesxl/textures/blocks/plant_strawberry0.png
-texture:id=extrabiomesxl/plant_strawberry1,filename=assets/extrabiomesxl/textures/blocks/plant_strawberry1.png
-texture:id=extrabiomesxl/plant_strawberry2,filename=assets/extrabiomesxl/textures/blocks/plant_strawberry2.png
-texture:id=extrabiomesxl/plant_strawberry3,filename=assets/extrabiomesxl/textures/blocks/plant_strawberry3.png
-texture:id=extrabiomesxl/plant_strawberry4,filename=assets/extrabiomesxl/textures/blocks/plant_strawberry4.png
-texture:id=extrabiomesxl/plant_strawberry5,filename=assets/extrabiomesxl/textures/blocks/plant_strawberry5.png
-texture:id=extrabiomesxl/plant_strawberry7,filename=assets/extrabiomesxl/textures/blocks/plant_strawberry7.png
-texture:id=extrabiomesxl/poppy,filename=assets/extrabiomesxl/textures/blocks/poppy.png
 texture:id=extrabiomesxl/quicksand,filename=assets/extrabiomesxl/textures/blocks/quicksand.png
 texture:id=extrabiomesxl/rainboweucalyptuslog1,filename=assets/extrabiomesxl/textures/blocks/rainboweucalyptuslog1.png
 texture:id=extrabiomesxl/rainboweucalyptuslog2,filename=assets/extrabiomesxl/textures/blocks/rainboweucalyptuslog2.png
@@ -168,19 +117,10 @@ texture:id=extrabiomesxl/redrockbrick,filename=assets/extrabiomesxl/textures/blo
 texture:id=extrabiomesxl/redrockcobble,filename=assets/extrabiomesxl/textures/blocks/redrockcobble.png
 texture:id=extrabiomesxl/redrockslabside,filename=assets/extrabiomesxl/textures/blocks/redrockslabside.png
 texture:id=extrabiomesxl/redrockslabtop,filename=assets/extrabiomesxl/textures/blocks/redrockslabtop.png
-texture:id=extrabiomesxl/redrover,filename=assets/extrabiomesxl/textures/blocks/redrover.png
 texture:id=extrabiomesxl/redwoodbottomleft,filename=assets/extrabiomesxl/textures/blocks/redwoodbottomleft.png
 texture:id=extrabiomesxl/redwoodbottomright,filename=assets/extrabiomesxl/textures/blocks/redwoodbottomright.png
-texture:id=extrabiomesxl/redwoodlog1,filename=assets/extrabiomesxl/textures/blocks/redwoodlog1.png
-texture:id=extrabiomesxl/redwoodlog2,filename=assets/extrabiomesxl/textures/blocks/redwoodlog2.png
-texture:id=extrabiomesxl/redwoodside1,filename=assets/extrabiomesxl/textures/blocks/redwoodside1.png
-texture:id=extrabiomesxl/redwoodside2,filename=assets/extrabiomesxl/textures/blocks/redwoodside2.png
 texture:id=extrabiomesxl/redwoodsideleft,filename=assets/extrabiomesxl/textures/blocks/redwoodsideleft.png
 texture:id=extrabiomesxl/redwoodsideright,filename=assets/extrabiomesxl/textures/blocks/redwoodsideright.png
-texture:id=extrabiomesxl/redwoodtop1,filename=assets/extrabiomesxl/textures/blocks/redwoodtop1.png
-texture:id=extrabiomesxl/redwoodtop2,filename=assets/extrabiomesxl/textures/blocks/redwoodtop2.png
-texture:id=extrabiomesxl/redwoodtop3,filename=assets/extrabiomesxl/textures/blocks/redwoodtop3.png
-texture:id=extrabiomesxl/redwoodtop4,filename=assets/extrabiomesxl/textures/blocks/redwoodtop4.png
 texture:id=extrabiomesxl/redwoodtopleft,filename=assets/extrabiomesxl/textures/blocks/redwoodtopleft.png
 texture:id=extrabiomesxl/redwoodtopright,filename=assets/extrabiomesxl/textures/blocks/redwoodtopright.png
 texture:id=extrabiomesxl/root,filename=assets/extrabiomesxl/textures/blocks/root.png
@@ -197,14 +137,9 @@ texture:id=extrabiomesxl/saplingredautumn,filename=assets/extrabiomesxl/textures
 texture:id=extrabiomesxl/saplingredwood,filename=assets/extrabiomesxl/textures/blocks/saplingredwood.png
 texture:id=extrabiomesxl/saplingsakura,filename=assets/extrabiomesxl/textures/blocks/saplingsakura.png
 texture:id=extrabiomesxl/saplingyellowautumn,filename=assets/extrabiomesxl/textures/blocks/saplingyellowautumn.png
-texture:id=extrabiomesxl/snapdragon,filename=assets/extrabiomesxl/textures/blocks/snapdragon.png
 texture:id=extrabiomesxl/tinycactus,filename=assets/extrabiomesxl/textures/blocks/tinycactus.png
 texture:id=extrabiomesxl/toadstools,filename=assets/extrabiomesxl/textures/blocks/toadstools.png
 texture:id=extrabiomesxl/todo,filename=assets/extrabiomesxl/textures/blocks/todo.png
-texture:id=extrabiomesxl/tulips,filename=assets/extrabiomesxl/textures/blocks/tulips.png
-texture:id=extrabiomesxl/vine_gloriosa,filename=assets/extrabiomesxl/textures/blocks/vine_gloriosa.png
-texture:id=extrabiomesxl/violet,filename=assets/extrabiomesxl/textures/blocks/violet.png
-texture:id=extrabiomesxl/yarrow,filename=assets/extrabiomesxl/textures/blocks/yarrow.png
 
 # biome/alpine.id
 biome:id=biome/alpine.id,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
@@ -299,7 +234,8 @@ block:id=flower.id,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabio
 block:id=flower.id,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/tinycactus
 block:id=flower.id,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/root
 block:id=flower.id,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/toadstools
-block:id=flower.id,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/calla_white
+block:id=flower.id,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/calla
+block:id=flower.id,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/autumnshrub
 
 # grass.id:* (tile.extrabiomes.tallgrass:extrabiomes.blocks.BlockCustomTallGrass), render=(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomTallGrass
 block:id=grass.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/browngrasstall
@@ -547,11 +483,11 @@ block:id=newquarterlog.id,data=4,stdrot=true,face0=0:extrabiomesxl/baldcypresssi
 block:id=newquarterlog.id,data=5,stdrot=true,face0=0:extrabiomesxl/baldcypressside2,face1=0:extrabiomesxl/baldcypresslog2,face2=0:extrabiomesxl/baldcypresstop2,face3=0:extrabiomesxl/baldcypresstop1,face4=0:extrabiomesxl/baldcypresslog2,face5=0:extrabiomesxl/baldcypressside1
 block:id=newquarterlog.id,data=6,stdrot=true,face0=0:extrabiomesxl/baldcypresslog2,face1=0:extrabiomesxl/baldcypressside2,face2=0:extrabiomesxl/baldcypresstop3,face3=0:extrabiomesxl/baldcypresstop4,face4=0:extrabiomesxl/baldcypresslog1,face5=0:extrabiomesxl/baldcypressside2
 block:id=newquarterlog.id,data=7,stdrot=true,face0=0:extrabiomesxl/baldcypresslog1,face1=0:extrabiomesxl/baldcypressside1,face2=0:extrabiomesxl/baldcypresstop4,face3=0:extrabiomesxl/baldcypresstop3,face4=0:extrabiomesxl/baldcypressside1,face5=0:extrabiomesxl/baldcypresslog2
-block:id=newquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/baldcypressside1,face1=0:extrabiomesxl/baldcypresslog2,face2=0:extrabiomesxl/baldcypresslog1,face3=0:extrabiomesxl/baldcypressside2,face4=0:extrabiomesxl/baldcypresstop1,face5=0:extrabiomesxl/baldcypresstop2
-block:id=newquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/baldcypressside2,face1=0:extrabiomesxl/baldcypresslog1,face2=0:extrabiomesxl/baldcypressside1,face3=0:extrabiomesxl/baldcypresslog2,face4=0:extrabiomesxl/baldcypresstop2,face5=0:extrabiomesxl/baldcypresstop1
-block:id=newquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/baldcypresslog2,face1=0:extrabiomesxl/baldcypressside1,face2=0:extrabiomesxl/baldcypressside2,face3=0:extrabiomesxl/baldcypresslog1,face4=0:extrabiomesxl/baldcypresstop3,face5=0:extrabiomesxl/baldcypresstop4
-block:id=newquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/baldcypresslog1,face1=0:extrabiomesxl/baldcypressside2,face2=0:extrabiomesxl/baldcypresslog2,face3=0:extrabiomesxl/baldcypressside1,face4=0:extrabiomesxl/baldcypresstop4,face5=0:extrabiomesxl/baldcypresstop3
-block:id=newquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face3=0:extrabiomesxl/baldcypresstop1
+block:id=newquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/baldcypressside1,face1=0:extrabiomesxl/baldcypresslog2,face2=0:extrabiomesxl/baldcypresslog1,face3=0:extrabiomesxl/baldcypressside1,face4=0:extrabiomesxl/baldcypresstop1,face5=0:extrabiomesxl/baldcypresstop2
+block:id=newquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/baldcypressside2,face1=0:extrabiomesxl/baldcypresslog1,face2=0:extrabiomesxl/baldcypressside2,face3=0:extrabiomesxl/baldcypresslog2,face4=0:extrabiomesxl/baldcypresstop2,face5=0:extrabiomesxl/baldcypresstop1
+block:id=newquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/baldcypresslog2,face1-2=0:extrabiomesxl/baldcypressside1,face3=0:extrabiomesxl/baldcypresslog1,face4=0:extrabiomesxl/baldcypresstop3,face5=0:extrabiomesxl/baldcypresstop4
+block:id=newquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/baldcypresslog1,face1=0:extrabiomesxl/baldcypressside2,face2=0:extrabiomesxl/baldcypresslog2,face3=0:extrabiomesxl/baldcypressside2,face4=0:extrabiomesxl/baldcypresstop4,face5=0:extrabiomesxl/baldcypresstop3
+block:id=newquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/todo
 
 # newleaves.id:* (tile.extrabiomes.leaves:extrabiomes.blocks.BlockNewLeaves), render=(STANDARD), opaque=false,cls=extrabiomes.blocks.BlockNewLeaves
 block:id=newleaves.id,data=0,stdrot=true,colorMult=FF64B216,face0-5=17000:extrabiomesxl/leavesbaldcypressfancy
@@ -610,29 +546,29 @@ block:id=rainbowquarterlog.id,data=4,stdrot=true,face0=0:extrabiomesxl/rainboweu
 block:id=rainbowquarterlog.id,data=5,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside2,face1=0:extrabiomesxl/rainboweucalyptuslog2,face2=0:extrabiomesxl/rainboweucalyptustop2,face3=0:extrabiomesxl/rainboweucalyptustop1,face4=0:extrabiomesxl/rainboweucalyptuslog2,face5=0:extrabiomesxl/rainboweucalyptusside1
 block:id=rainbowquarterlog.id,data=6,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog2,face1=0:extrabiomesxl/rainboweucalyptusside2,face2=0:extrabiomesxl/rainboweucalyptustop3,face3=0:extrabiomesxl/rainboweucalyptustop4,face4=0:extrabiomesxl/rainboweucalyptuslog1,face5=0:extrabiomesxl/rainboweucalyptusside2
 block:id=rainbowquarterlog.id,data=7,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog1,face1=0:extrabiomesxl/rainboweucalyptusside1,face2=0:extrabiomesxl/rainboweucalyptustop4,face3=0:extrabiomesxl/rainboweucalyptustop3,face4=0:extrabiomesxl/rainboweucalyptusside1,face5=0:extrabiomesxl/rainboweucalyptuslog2
-block:id=rainbowquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside1,face1=0:extrabiomesxl/rainboweucalyptuslog2,face2=0:extrabiomesxl/rainboweucalyptuslog1,face3=0:extrabiomesxl/rainboweucalyptusside2,face4=0:extrabiomesxl/rainboweucalyptustop1,face5=0:extrabiomesxl/rainboweucalyptustop2
-block:id=rainbowquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside2,face1=0:extrabiomesxl/rainboweucalyptuslog1,face2=0:extrabiomesxl/rainboweucalyptusside1,face3=0:extrabiomesxl/rainboweucalyptuslog2,face4=0:extrabiomesxl/rainboweucalyptustop2,face5=0:extrabiomesxl/rainboweucalyptustop1
-block:id=rainbowquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog2,face1=0:extrabiomesxl/rainboweucalyptusside1,face2=0:extrabiomesxl/rainboweucalyptusside2,face3=0:extrabiomesxl/rainboweucalyptuslog1,face4=0:extrabiomesxl/rainboweucalyptustop3,face5=0:extrabiomesxl/rainboweucalyptustop4
-block:id=rainbowquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog1,face1=0:extrabiomesxl/rainboweucalyptusside2,face2=0:extrabiomesxl/rainboweucalyptuslog2,face3=0:extrabiomesxl/rainboweucalyptusside1,face4=0:extrabiomesxl/rainboweucalyptustop4,face5=0:extrabiomesxl/rainboweucalyptustop3
-block:id=rainbowquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face3=0:extrabiomesxl/rainboweucalyptustop1
+block:id=rainbowquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside1,face1=0:extrabiomesxl/rainboweucalyptuslog2,face2=0:extrabiomesxl/rainboweucalyptuslog1,face3=0:extrabiomesxl/rainboweucalyptusside1,face4=0:extrabiomesxl/rainboweucalyptustop1,face5=0:extrabiomesxl/rainboweucalyptustop2
+block:id=rainbowquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptusside2,face1=0:extrabiomesxl/rainboweucalyptuslog1,face2=0:extrabiomesxl/rainboweucalyptusside2,face3=0:extrabiomesxl/rainboweucalyptuslog2,face4=0:extrabiomesxl/rainboweucalyptustop2,face5=0:extrabiomesxl/rainboweucalyptustop1
+block:id=rainbowquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog2,face1-2=0:extrabiomesxl/rainboweucalyptusside1,face3=0:extrabiomesxl/rainboweucalyptuslog1,face4=0:extrabiomesxl/rainboweucalyptustop3,face5=0:extrabiomesxl/rainboweucalyptustop4
+block:id=rainbowquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/rainboweucalyptuslog1,face1=0:extrabiomesxl/rainboweucalyptusside2,face2=0:extrabiomesxl/rainboweucalyptuslog2,face3=0:extrabiomesxl/rainboweucalyptusside2,face4=0:extrabiomesxl/rainboweucalyptustop4,face5=0:extrabiomesxl/rainboweucalyptustop3
+block:id=rainbowquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:extrabiomesxl/todo
 
 # newlog.id:* (tile.extrabiomes.newlog:extrabiomes.blocks.BlockNewLog), render=(LOG), opaque=true,cls=extrabiomes.blocks.BlockNewLog
 block:id=newlog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/lograinboweucalyptustop,face2-5=0:extrabiomesxl/lograinboweucalyptusside
 block:id=newlog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/logautumntop,face2-5=0:extrabiomesxl/logautumnside
 block:id=newlog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/logbaldcypresstop,face2-5=0:extrabiomesxl/logbaldcypressside
-block:id=newlog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/logredwoodtop,face2-5=0:extrabiomesxl/logredwoodside
+block:id=newlog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/lograinboweucalyptustop,face2-5=0:extrabiomesxl/lograinboweucalyptusside
 block:id=newlog.id,data=4,face0-1=0:extrabiomesxl/lograinboweucalyptusside,face2-3=4000:extrabiomesxl/lograinboweucalyptusside,face4-5=0:extrabiomesxl/lograinboweucalyptustop
 block:id=newlog.id,data=5,face0-1=0:extrabiomesxl/logautumnside,face2-3=4000:extrabiomesxl/logautumnside,face4-5=0:extrabiomesxl/logautumntop
 block:id=newlog.id,data=6,face0-1=0:extrabiomesxl/logbaldcypressside,face2-3=4000:extrabiomesxl/logbaldcypressside,face4-5=0:extrabiomesxl/logbaldcypresstop
-block:id=newlog.id,data=7,face0-1=0:extrabiomesxl/logredwoodside,face2-3=4000:extrabiomesxl/logredwoodside,face4-5=0:extrabiomesxl/logredwoodtop
+block:id=newlog.id,data=7,face0-1=0:extrabiomesxl/lograinboweucalyptusside,face2-3=4000:extrabiomesxl/lograinboweucalyptusside,face4-5=0:extrabiomesxl/lograinboweucalyptustop
 block:id=newlog.id,data=8,face0-1=4000:extrabiomesxl/lograinboweucalyptusside,face2-3=0:extrabiomesxl/lograinboweucalyptustop,face4-5=4000:extrabiomesxl/lograinboweucalyptusside
 block:id=newlog.id,data=9,face0-1=4000:extrabiomesxl/logautumnside,face2-3=0:extrabiomesxl/logautumntop,face4-5=4000:extrabiomesxl/logautumnside
 block:id=newlog.id,data=10,face0-1=4000:extrabiomesxl/logbaldcypressside,face2-3=0:extrabiomesxl/logbaldcypresstop,face4-5=4000:extrabiomesxl/logbaldcypressside
-block:id=newlog.id,data=11,face0-1=4000:extrabiomesxl/logredwoodside,face2-3=0:extrabiomesxl/logredwoodtop,face4-5=4000:extrabiomesxl/logredwoodside
+block:id=newlog.id,data=11,face0-1=4000:extrabiomesxl/lograinboweucalyptusside,face2-3=0:extrabiomesxl/lograinboweucalyptustop,face4-5=4000:extrabiomesxl/lograinboweucalyptusside
 block:id=newlog.id,data=12,stdrot=true,face0-5=0:extrabiomesxl/lograinboweucalyptusside
 block:id=newlog.id,data=13,stdrot=true,face0-5=0:extrabiomesxl/logautumnside
 block:id=newlog.id,data=14,stdrot=true,face0-5=0:extrabiomesxl/logbaldcypressside
-block:id=newlog.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/logredwoodside
+block:id=newlog.id,data=15,stdrot=true,face0-5=0:extrabiomesxl/lograinboweucalyptusside
 
 # cypressstairs.id:* (tile.extrabiomes.stairs.cypress:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=cypressstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/plankscypress
@@ -669,97 +605,3 @@ block:id=newdoublewoodslab.id,data=*,stdrot=true,face0-5=0:extrabiomesxl/plankss
 
 # sakurablossomstairs.id:* (tile.extrabiomes.stairs.sakurablossom:extrabiomes.module.fabrica.block.BlockWoodStairs), render=(STAIRS), opaque=false,cls=extrabiomes.module.fabrica.block.BlockWoodStairs
 block:id=sakurablossomstairs.id,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:extrabiomesxl/plankssakura
-
-# flower2.id:* (tile.extrabiomes.flower1:extrabiomes.blocks.BlockCustomFlower), render=(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomFlower
-block:id=flower2.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/allium
-block:id=flower2.id,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/amaryllis_pink
-block:id=flower2.id,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/amaryllis_red
-block:id=flower2.id,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/amaryllis_white
-block:id=flower2.id,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/bachelorsbutton_blue
-block:id=flower2.id,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/bellsofireland
-block:id=flower2.id,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/bluebell
-block:id=flower2.id,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/calla_black
-block:id=flower2.id,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/daisy
-block:id=flower2.id,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/dandelion
-block:id=flower2.id,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/eelgrass
-block:id=flower2.id,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/gardenia
-block:id=flower2.id,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/gerbera_orange
-block:id=flower2.id,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/gerbera_pink
-block:id=flower2.id,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/gerbera_red
-block:id=flower2.id,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/gerbera_yellow
-
-# flower3.id:* (tile.extrabiomes.flower2:extrabiomes.blocks.BlockCustomFlower), render=(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCustomFlower
-block:id=flower3.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/orientalpinklily
-block:id=flower3.id,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/iris_blue
-block:id=flower3.id,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/iris_purple
-block:id=flower3.id,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/lily
-block:id=flower3.id,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/marshmarigold
-block:id=flower3.id,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/pansy
-block:id=flower3.id,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/poppy
-block:id=flower3.id,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/redrover
-block:id=flower3.id,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/snapdragon
-block:id=flower3.id,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/tulips
-block:id=flower3.id,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/violet
-block:id=flower3.id,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/yarrow
-block:id=flower3.id,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/belladonna
-block:id=flower3.id,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/himalayanbluepoppy
-
-# gloriosa.id:* (tile.extrabiomes.vine.gloriosa:extrabiomes.blocks.BlockCustomVine), render=(VINE), opaque=false,cls=extrabiomes.blocks.BlockCustomVine
-block:id=gloriosa.id,data=*,stdrot=true,transparency=TRANSPARENT,patch0=2000:extrabiomesxl/vine_gloriosa
-
-# waterplant.id:* (tile.extrabiomes.waterplant:extrabiomes.blocks.BlockWaterPlant), render=(CROPS), opaque=false,cls=extrabiomes.blocks.BlockWaterPlant
-block:id=waterplant.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/eelgrass
-
-# strawberry.id:* (tile.null), render=(CROSSEDSQUARES), opaque=false,cls=extrabiomes.blocks.BlockCropRegrow
-block:id=strawberry.id,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/plant_strawberry0
-block:id=strawberry.id,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/plant_strawberry1
-block:id=strawberry.id,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/plant_strawberry2
-block:id=strawberry.id,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/plant_strawberry3
-block:id=strawberry.id,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/plant_strawberry4
-block:id=strawberry.id,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/plant_strawberry5
-block:id=strawberry.id,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:extrabiomesxl/plant_strawberry7
-
-# firquarterlog.id:* (tile.extrabiomes.firquarter:extrabiomes.blocks.BlockNewQuarterLog), render=extrabiomes.renderers.RenderNewQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
-block:id=firquarterlog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/firtop1,face2=0:extrabiomesxl/firlog1,face3=0:extrabiomesxl/firside2,face4=0:extrabiomesxl/firlog2,face5=0:extrabiomesxl/firside1
-block:id=firquarterlog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/firtop2,face2=0:extrabiomesxl/firlog2,face3=0:extrabiomesxl/firside1,face4=0:extrabiomesxl/firside2,face5=0:extrabiomesxl/firlog1
-block:id=firquarterlog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/firtop3,face2=0:extrabiomesxl/firside2,face3=0:extrabiomesxl/firlog1,face4=0:extrabiomesxl/firside1,face5=0:extrabiomesxl/firlog2
-block:id=firquarterlog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/firtop4,face2=0:extrabiomesxl/firside1,face3=0:extrabiomesxl/firlog2,face4=0:extrabiomesxl/firlog1,face5=0:extrabiomesxl/firside2
-block:id=firquarterlog.id,data=4,stdrot=true,face0=0:extrabiomesxl/firside1,face1=0:extrabiomesxl/firlog1,face2=0:extrabiomesxl/firtop1,face3=0:extrabiomesxl/firtop2,face4=0:extrabiomesxl/firside2,face5=0:extrabiomesxl/firlog1
-block:id=firquarterlog.id,data=5,stdrot=true,face0=0:extrabiomesxl/firside2,face1=0:extrabiomesxl/firlog2,face2=0:extrabiomesxl/firtop2,face3=0:extrabiomesxl/firtop1,face4=0:extrabiomesxl/firlog2,face5=0:extrabiomesxl/firside1
-block:id=firquarterlog.id,data=6,stdrot=true,face0=0:extrabiomesxl/firlog2,face1=0:extrabiomesxl/firside2,face2=0:extrabiomesxl/firtop3,face3=0:extrabiomesxl/firtop4,face4=0:extrabiomesxl/firlog1,face5=0:extrabiomesxl/firside2
-block:id=firquarterlog.id,data=7,stdrot=true,face0=0:extrabiomesxl/firlog1,face1=0:extrabiomesxl/firside1,face2=0:extrabiomesxl/firtop4,face3=0:extrabiomesxl/firtop3,face4=0:extrabiomesxl/firside1,face5=0:extrabiomesxl/firlog2
-block:id=firquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/firside1,face1=0:extrabiomesxl/firlog2,face2=0:extrabiomesxl/firlog1,face3=0:extrabiomesxl/firside2,face4=0:extrabiomesxl/firtop1,face5=0:extrabiomesxl/firtop2
-block:id=firquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/firside2,face1=0:extrabiomesxl/firlog1,face2=0:extrabiomesxl/firside1,face3=0:extrabiomesxl/firlog2,face4=0:extrabiomesxl/firtop2,face5=0:extrabiomesxl/firtop1
-block:id=firquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/firlog2,face1=0:extrabiomesxl/firside1,face2=0:extrabiomesxl/firside2,face3=0:extrabiomesxl/firlog1,face4=0:extrabiomesxl/firtop3,face5=0:extrabiomesxl/firtop4
-block:id=firquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/firlog1,face1=0:extrabiomesxl/firside2,face2=0:extrabiomesxl/firlog2,face3=0:extrabiomesxl/firside1,face4=0:extrabiomesxl/firtop4,face5=0:extrabiomesxl/firtop3
-block:id=firquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face3=0:extrabiomesxl/firtop1
-
-# redwoodquarterlog.id:* (tile.extrabiomes.redwoodquarter:extrabiomes.blocks.BlockNewQuarterLog), render=extrabiomes.renderers.RenderNewQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
-block:id=redwoodquarterlog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/redwoodtop1,face2=0:extrabiomesxl/redwoodlog1,face3=0:extrabiomesxl/redwoodside2,face4=0:extrabiomesxl/redwoodlog2,face5=0:extrabiomesxl/redwoodside1
-block:id=redwoodquarterlog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/redwoodtop2,face2=0:extrabiomesxl/redwoodlog2,face3=0:extrabiomesxl/redwoodside1,face4=0:extrabiomesxl/redwoodside2,face5=0:extrabiomesxl/redwoodlog1
-block:id=redwoodquarterlog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/redwoodtop3,face2=0:extrabiomesxl/redwoodside2,face3=0:extrabiomesxl/redwoodlog1,face4=0:extrabiomesxl/redwoodside1,face5=0:extrabiomesxl/redwoodlog2
-block:id=redwoodquarterlog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/redwoodtop4,face2=0:extrabiomesxl/redwoodside1,face3=0:extrabiomesxl/redwoodlog2,face4=0:extrabiomesxl/redwoodlog1,face5=0:extrabiomesxl/redwoodside2
-block:id=redwoodquarterlog.id,data=4,stdrot=true,face0=0:extrabiomesxl/redwoodside1,face1=0:extrabiomesxl/redwoodlog1,face2=0:extrabiomesxl/redwoodtop1,face3=0:extrabiomesxl/redwoodtop2,face4=0:extrabiomesxl/redwoodside2,face5=0:extrabiomesxl/redwoodlog1
-block:id=redwoodquarterlog.id,data=5,stdrot=true,face0=0:extrabiomesxl/redwoodside2,face1=0:extrabiomesxl/redwoodlog2,face2=0:extrabiomesxl/redwoodtop2,face3=0:extrabiomesxl/redwoodtop1,face4=0:extrabiomesxl/redwoodlog2,face5=0:extrabiomesxl/redwoodside1
-block:id=redwoodquarterlog.id,data=6,stdrot=true,face0=0:extrabiomesxl/redwoodlog2,face1=0:extrabiomesxl/redwoodside2,face2=0:extrabiomesxl/redwoodtop3,face3=0:extrabiomesxl/redwoodtop4,face4=0:extrabiomesxl/redwoodlog1,face5=0:extrabiomesxl/redwoodside2
-block:id=redwoodquarterlog.id,data=7,stdrot=true,face0=0:extrabiomesxl/redwoodlog1,face1=0:extrabiomesxl/redwoodside1,face2=0:extrabiomesxl/redwoodtop4,face3=0:extrabiomesxl/redwoodtop3,face4=0:extrabiomesxl/redwoodside1,face5=0:extrabiomesxl/redwoodlog2
-block:id=redwoodquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/redwoodside1,face1=0:extrabiomesxl/redwoodlog2,face2=0:extrabiomesxl/redwoodlog1,face3=0:extrabiomesxl/redwoodside2,face4=0:extrabiomesxl/redwoodtop1,face5=0:extrabiomesxl/redwoodtop2
-block:id=redwoodquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/redwoodside2,face1=0:extrabiomesxl/redwoodlog1,face2=0:extrabiomesxl/redwoodside1,face3=0:extrabiomesxl/redwoodlog2,face4=0:extrabiomesxl/redwoodtop2,face5=0:extrabiomesxl/redwoodtop1
-block:id=redwoodquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/redwoodlog2,face1=0:extrabiomesxl/redwoodside1,face2=0:extrabiomesxl/redwoodside2,face3=0:extrabiomesxl/redwoodlog1,face4=0:extrabiomesxl/redwoodtop3,face5=0:extrabiomesxl/redwoodtop4
-block:id=redwoodquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/redwoodlog1,face1=0:extrabiomesxl/redwoodside2,face2=0:extrabiomesxl/redwoodlog2,face3=0:extrabiomesxl/redwoodside1,face4=0:extrabiomesxl/redwoodtop4,face5=0:extrabiomesxl/redwoodtop3
-block:id=redwoodquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face3=0:extrabiomesxl/redwoodtop1
-
-# oakquarterlog.id:* (tile.extrabiomes.oakquarter:extrabiomes.blocks.BlockNewQuarterLog), render=extrabiomes.renderers.RenderNewQuarterLog(CUSTOM), opaque=true,cls=extrabiomes.blocks.BlockNewQuarterLog
-block:id=oakquarterlog.id,data=0,stdrot=true,face0-1=0:extrabiomesxl/oaktop1,face2=0:extrabiomesxl/oaklog1,face3=0:extrabiomesxl/oakside2,face4=0:extrabiomesxl/oaklog2,face5=0:extrabiomesxl/oakside1
-block:id=oakquarterlog.id,data=1,stdrot=true,face0-1=0:extrabiomesxl/oaktop2,face2=0:extrabiomesxl/oaklog2,face3=0:extrabiomesxl/oakside1,face4=0:extrabiomesxl/oakside2,face5=0:extrabiomesxl/oaklog1
-block:id=oakquarterlog.id,data=2,stdrot=true,face0-1=0:extrabiomesxl/oaktop3,face2=0:extrabiomesxl/oakside2,face3=0:extrabiomesxl/oaklog1,face4=0:extrabiomesxl/oakside1,face5=0:extrabiomesxl/oaklog2
-block:id=oakquarterlog.id,data=3,stdrot=true,face0-1=0:extrabiomesxl/oaktop4,face2=0:extrabiomesxl/oakside1,face3=0:extrabiomesxl/oaklog2,face4=0:extrabiomesxl/oaklog1,face5=0:extrabiomesxl/oakside2
-block:id=oakquarterlog.id,data=4,stdrot=true,face0=0:extrabiomesxl/oakside1,face1=0:extrabiomesxl/oaklog1,face2=0:extrabiomesxl/oaktop1,face3=0:extrabiomesxl/oaktop2,face4=0:extrabiomesxl/oakside2,face5=0:extrabiomesxl/oaklog1
-block:id=oakquarterlog.id,data=5,stdrot=true,face0=0:extrabiomesxl/oakside2,face1=0:extrabiomesxl/oaklog2,face2=0:extrabiomesxl/oaktop2,face3=0:extrabiomesxl/oaktop1,face4=0:extrabiomesxl/oaklog2,face5=0:extrabiomesxl/oakside1
-block:id=oakquarterlog.id,data=6,stdrot=true,face0=0:extrabiomesxl/oaklog2,face1=0:extrabiomesxl/oakside2,face2=0:extrabiomesxl/oaktop3,face3=0:extrabiomesxl/oaktop4,face4=0:extrabiomesxl/oaklog1,face5=0:extrabiomesxl/oakside2
-block:id=oakquarterlog.id,data=7,stdrot=true,face0=0:extrabiomesxl/oaklog1,face1=0:extrabiomesxl/oakside1,face2=0:extrabiomesxl/oaktop4,face3=0:extrabiomesxl/oaktop3,face4=0:extrabiomesxl/oakside1,face5=0:extrabiomesxl/oaklog2
-block:id=oakquarterlog.id,data=8,stdrot=true,face0=0:extrabiomesxl/oakside1,face1=0:extrabiomesxl/oaklog2,face2=0:extrabiomesxl/oaklog1,face3=0:extrabiomesxl/oakside2,face4=0:extrabiomesxl/oaktop1,face5=0:extrabiomesxl/oaktop2
-block:id=oakquarterlog.id,data=9,stdrot=true,face0=0:extrabiomesxl/oakside2,face1=0:extrabiomesxl/oaklog1,face2=0:extrabiomesxl/oakside1,face3=0:extrabiomesxl/oaklog2,face4=0:extrabiomesxl/oaktop2,face5=0:extrabiomesxl/oaktop1
-block:id=oakquarterlog.id,data=10,stdrot=true,face0=0:extrabiomesxl/oaklog2,face1=0:extrabiomesxl/oakside1,face2=0:extrabiomesxl/oakside2,face3=0:extrabiomesxl/oaklog1,face4=0:extrabiomesxl/oaktop3,face5=0:extrabiomesxl/oaktop4
-block:id=oakquarterlog.id,data=11,stdrot=true,face0=0:extrabiomesxl/oaklog1,face1=0:extrabiomesxl/oakside2,face2=0:extrabiomesxl/oaklog2,face3=0:extrabiomesxl/oakside1,face4=0:extrabiomesxl/oaktop4,face5=0:extrabiomesxl/oaktop3
-block:id=oakquarterlog.id,data=12,data=13,data=14,data=15,stdrot=true,face3=0:extrabiomesxl/oaktop1
