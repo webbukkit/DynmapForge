@@ -165,7 +165,7 @@ biome:id=biome/biome.id.Highlands,grassColorMult=195B872,foliageColorMult=17AA54
 # biome/biome.id.Mushrooms
 biome:id=biome/biome.id.Mushrooms,grassColorMult=183BB6D,foliageColorMult=163A948,waterColorMult=FFFFFF
 # biome/biome.id.Swamp
-biome:id=biome/biome.id.Swamp,grassColorMult=15C694E,foliageColorMult=1496137,waterColorMult=E0FFAE
+biome:id=biome/biome.id.Swamp,grassColorMult=4E0E4E,foliageColorMult=4E0E4E,waterColorMult=E0FFAE
 # biome/biome.id.Stream
 biome:id=biome/biome.id.Stream,grassColorMult=17CBD6B,foliageColorMult=15BAB46,waterColorMult=FFFFFF
 # biome/biome.id.Snowfield
@@ -220,7 +220,7 @@ block:id=Log,data=15,stdrot=true,face0-5=0:TwilightForest/darkwood_side
 block:id=Leaves,data=0,stdrot=true,face0-5=2000:minecraft/leaves_oak
 block:id=Leaves,data=1,stdrot=true,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
 block:id=Leaves,data=2,stdrot=true,face0-5=14000:minecraft/leaves_birch
-block:id=Leaves,data=3,data=4,stdrot=true,face0-5=2000:minecraft/leaves_oak
+block:id=Leaves,data=3,data=4,stdrot=true,face0-5=22000:minecraft/leaves_oak,custColorMult=org.dynmap.hdmap.colormult.TFSpecialLeafColorMultiplier
 block:id=Leaves,data=5,stdrot=true,colorMult=609860,face0-5=17000:minecraft/leaves_spruce
 block:id=Leaves,data=6,stdrot=true,face0-5=14000:minecraft/leaves_birch
 block:id=Leaves,data=7,data=8,stdrot=true,face0-5=2000:minecraft/leaves_oak
@@ -372,7 +372,7 @@ block:id=MagicLogSpecial,data=14,stdrot=true,face0-1=0:TwilightForest/mine_secti
 block:id=MagicLogSpecial,data=15,stdrot=true,face0-1=0:TwilightForest/sort_section,face2-5=0:TwilightForest/sort_eye_off
 
 # TowerWood:* (tile.TFTowerStone), render=(STANDARD), opaque=true,cls=twilightforest.block.BlockTFTowerWood
-block:id=TowerWood,data=0,stdrot=true,face0-5=0:TwilightForest/towerwood_planks
+block:id=TowerWood,data=0,stdrot=true,face0-5=17000:TwilightForest/towerwood_planks,custColorMult=org.dynmap.hdmap.colormult.TFBandedWoodColorMultiplier
 block:id=TowerWood,data=1,stdrot=true,face0-5=0:TwilightForest/towerwood_encased
 block:id=TowerWood,data=2,stdrot=true,face0-5=0:TwilightForest/towerwood_cracked
 block:id=TowerWood,data=3,stdrot=true,face0-5=0:TwilightForest/towerwood_mossy
