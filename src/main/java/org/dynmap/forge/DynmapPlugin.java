@@ -1492,15 +1492,26 @@ public class DynmapPlugin
 		@SubscribeEvent
 		public void onPlayerLogin(PlayerLoggedInEvent event) {			
 			if(!core_enabled) return;
-            DynmapPlayer dp = getOrAddPlayer(event.player);
-            core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
+            final DynmapPlayer dp = getOrAddPlayer(event.player);
+            /* This event can be called from off server thread, so push processing there */
+            core.getServer().scheduleServerTask(new Runnable() {
+                public void run() {
+                    core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
+                }
+            }, 2);
 		}
         @SubscribeEvent
 		public void onPlayerLogout(PlayerLoggedOutEvent event) {
 			if(!core_enabled) return;
-			DynmapPlayer dp = getOrAddPlayer(event.player);
-            core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
-            players.remove(event.player.getCommandSenderName());
+            final DynmapPlayer dp = getOrAddPlayer(event.player);
+            final String name = event.player.getCommandSenderName();
+            /* This event can be called from off server thread, so push processing there */
+            core.getServer().scheduleServerTask(new Runnable() {
+                public void run() {
+                    core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
+                    players.remove(name);
+                }
+            }, 0);
 		}
         @SubscribeEvent
 		public void onPlayerChangedDimension(PlayerChangedDimensionEvent event) {
