@@ -1430,15 +1430,26 @@ public class DynmapPlugin
 		@Override
 		public void onPlayerLogin(EntityPlayer player) {			
 			if(!core_enabled) return;
-            DynmapPlayer dp = getOrAddPlayer(player);
-            core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
+            final DynmapPlayer dp = getOrAddPlayer(player);
+            /* This event can be called from off server thread, so push processing there */
+            core.getServer().scheduleServerTask(new Runnable() {
+                public void run() {
+                    core.listenerManager.processPlayerEvent(EventType.PLAYER_JOIN, dp);
+                }
+            }, 2);
 		}
 		@Override
 		public void onPlayerLogout(EntityPlayer player) {
 			if(!core_enabled) return;
-			DynmapPlayer dp = getOrAddPlayer(player);
-            core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
-            players.remove(player.username);
+            final DynmapPlayer dp = getOrAddPlayer(player);
+            final String name = player.username;
+            /* This event can be called from off server thread, so push processing there */
+            core.getServer().scheduleServerTask(new Runnable() {
+                public void run() {
+                    core.listenerManager.processPlayerEvent(EventType.PLAYER_QUIT, dp);
+                    players.remove(name);
+                }
+            }, 0);
 		}
 		@Override
 		public void onPlayerChangedDimension(EntityPlayer player) {
