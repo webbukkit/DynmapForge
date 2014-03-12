@@ -86,6 +86,8 @@ components:
     type: markers
     showlabel: false
     enablesigns: false
+    # Default marker set for sign markers
+    default-sign-set: markers
     # (optional) add spawn point markers to standard marker layer
     showspawn: true
     spawnicon: world
@@ -278,6 +280,9 @@ tilespath: web/tiles
 
 # The path where the web-files are located.
 webpath: web
+
+# The path were the /dynmapexp command exports OBJ ZIP files
+exportpath: export
 
 # The network-interface the webserver will bind to (0.0.0.0 for all interfaces, 127.0.0.1 for only local access).
 # If not set, uses same setting as server in server.properties (or 0.0.0.0 if not specified)
