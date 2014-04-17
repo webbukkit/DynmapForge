@@ -27,7 +27,7 @@ configFile.withReader {
 }
 
 version = "${config.Dynmap_version}${config.Dynmap_extversion}"
-group= "org.dynmap.forge" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "us.dynmap.forge" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Dynmap"
 targetCompatibility = '1.6'
 sourceCompatibility = '1.6'
@@ -52,8 +52,8 @@ configurations {
 }
 
 dependencies {
-    dynmap group: 'org.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}", ext: 'jar'
-    dynmap group: 'org.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}", ext: 'jar'
+    dynmap group: 'us.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}", ext: 'jar'
+    dynmap group: 'us.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}", ext: 'jar'
 }
 
 processResources
