@@ -51,8 +51,8 @@
 	
 	<target name="init.project.dependencies" depends="init.maven.tasks">
 		<artifact:dependencies filesetId="dependency.fileset">
-  	  		<dependency groupId="org.dynmap" artifactId="DynmapCore" version="${project.version}" type="jar" scope="compile" />
-		  	<dependency groupId="org.dynmap" artifactId="DynmapCoreAPI" version="${project.version}" type="jar" scope="compile" />
+  	  		<dependency groupId="us.dynmap" artifactId="DynmapCore" version="${project.version}" type="jar" scope="compile" />
+		  	<dependency groupId="us.dynmap" artifactId="DynmapCoreAPI" version="${project.version}" type="jar" scope="compile" />
 		</artifact:dependencies>
 	</target>
 
