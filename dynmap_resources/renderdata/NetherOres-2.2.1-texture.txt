@@ -1,6 +1,6 @@
 # NetherOres 1.6.2R2.2.1
 version:1.6
-modname:NetherOres
+modname:NetherOres[-1.6.2R2.2.1]
 
 var:ID.NetherOreBlock1=0,ID.HellfishBlock=0,ID.NetherOreBlock=0
 
