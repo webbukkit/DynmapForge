@@ -52,8 +52,8 @@ configurations {
 }
 
 dependencies {
-    dynmap group: 'us.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}", ext: 'jar'
-    dynmap group: 'us.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}", ext: 'jar'
+    dynmap group: 'us.dynmap', name: 'DynmapCore', version: "${config.Dynmap_version}${config.DynmapCore_devversion}", ext: 'jar'
+    dynmap group: 'us.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}${config.DynmapCore_devversion}", ext: 'jar'
 }
 
 processResources
