@@ -1915,6 +1915,14 @@ class DynmapCommandHandler extends CommandBase
     public String getCommandUsage(ICommandSender icommandsender) {
         return "Run /" + cmd + " help for details on using command";
     }
+
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof DynmapCommandHandler) {
+            return ((DynmapCommandHandler) o).getCommandName().compareTo(cmd);
+        }
+        return 0;
+    }
 }
 
 class DynmapCommand extends DynmapCommandHandler {
