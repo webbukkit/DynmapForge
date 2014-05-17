@@ -20,6 +20,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
+import java.util.regex.Pattern;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -133,7 +134,9 @@ public class DynmapPlugin
     private Field displayName = null; // MCPC+ display name
 
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkpopulate", "chunkgenerate" };
-    
+
+    private static final Pattern patternControlCode = Pattern.compile("(?i)\\u00A7[0-9A-FK-OR]");
+
     public static class BlockUpdateRec {
     	World w;
     	String wid;
@@ -518,10 +521,11 @@ public class DynmapPlugin
             BanList bl = server.getConfigurationManager().getBannedPlayers();
             return bl.isBanned(pid);
         }
+        
         @Override
         public String stripChatColor(String s)
         {
-            return StringUtils.stripControlCodes(s);
+            return patternControlCode.matcher(s).replaceAll("");
         }
         private Set<EventType> registered = new HashSet<EventType>();
         @Override
