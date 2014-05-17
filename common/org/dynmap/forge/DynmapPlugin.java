@@ -548,12 +548,7 @@ public class DynmapPlugin
         @Override
         public boolean sendWebChatEvent(String source, String name, String msg)
         {
-            /*TODO
-            DynmapWebChatEvent evt = new DynmapWebChatEvent(source, name, msg);
-            getServer().getPluginManager().callEvent(evt);
-            return ((evt.isCancelled() == false) && (evt.isProcessed() == false));
-            */
-            return true;
+            return DynmapCommonAPIListener.fireWebChatEvent(source, name, msg);
         }
         @Override
         public void broadcastMessage(String msg)
