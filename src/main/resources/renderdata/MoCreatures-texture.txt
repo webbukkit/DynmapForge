@@ -1,0 +1,68 @@
+# MoCreatures 6.1.0
+version:1.6
+modname:MoCreatures
+
+var:custom-id-settings/StoneBlockID=0,custom-id-settings/TallGrassBlockID=0,custom-id-settings/GrassBlockID=0,custom-id-settings/LeafBlockID=0,custom-id-settings/PlanksBlockID=0,custom-id-settings/LogBlockID=0,custom-id-settings/DirtBlockID=0
+
+cfgfile:config/MoCreatures/MoCSettings.cfg
+
+
+texturepath:assets/mocreatures/textures/blocks/
+texture:id=mocreatures/dirt_OgreLair,filename=assets/mocreatures/textures/blocks/dirt_OgreLair.png
+texture:id=mocreatures/dirt_WyvernLair,filename=assets/mocreatures/textures/blocks/dirt_WyvernLair.png
+texture:id=mocreatures/grassSide_OgreLair,filename=assets/mocreatures/textures/blocks/grassSide_OgreLair.png
+texture:id=mocreatures/grassSide_WyvernLair,filename=assets/mocreatures/textures/blocks/grassSide_WyvernLair.png
+texture:id=mocreatures/grassTop_OgreLair,filename=assets/mocreatures/textures/blocks/grassTop_OgreLair.png
+texture:id=mocreatures/grassTop_WyvernLair,filename=assets/mocreatures/textures/blocks/grassTop_WyvernLair.png
+texture:id=mocreatures/leaves_OgreLair_solid,filename=assets/mocreatures/textures/blocks/leaves_OgreLair_solid.png
+texture:id=mocreatures/leaves_WyvernLair_solid,filename=assets/mocreatures/textures/blocks/leaves_WyvernLair_solid.png
+texture:id=mocreatures/logSide_OgreLair,filename=assets/mocreatures/textures/blocks/logSide_OgreLair.png
+texture:id=mocreatures/logSide_WyvernLair,filename=assets/mocreatures/textures/blocks/logSide_WyvernLair.png
+texture:id=mocreatures/logTop_OgreLair,filename=assets/mocreatures/textures/blocks/logTop_OgreLair.png
+texture:id=mocreatures/logTop_WyvernLair,filename=assets/mocreatures/textures/blocks/logTop_WyvernLair.png
+texture:id=mocreatures/rock_OgreLair,filename=assets/mocreatures/textures/blocks/rock_OgreLair.png
+texture:id=mocreatures/rock_WyvernLair,filename=assets/mocreatures/textures/blocks/rock_WyvernLair.png
+texture:id=mocreatures/tallGrass_OgreLair,filename=assets/mocreatures/textures/blocks/tallGrass_OgreLair.png
+texture:id=mocreatures/tallGrass_WyvernLair,filename=assets/mocreatures/textures/blocks/tallGrass_WyvernLair.png
+texture:id=mocreatures/woodPlanks_OgreLair,filename=assets/mocreatures/textures/blocks/woodPlanks_OgreLair.png
+texture:id=mocreatures/woodPlanks_WyvernLair,filename=assets/mocreatures/textures/blocks/woodPlanks_WyvernLair.png
+
+
+
+# custom-id-settings/DirtBlockID:* (MoC_Dirt), render=(STANDARD), opaque=true,cls=drzhark.mocreatures.block.MoCBlockDirt
+block:id=custom-id-settings/DirtBlockID,data=0,stdrot=true,face0-5=0:mocreatures/dirt_WyvernLair
+block:id=custom-id-settings/DirtBlockID,data=1,stdrot=true,face0-5=0:mocreatures/dirt_OgreLair
+block:id=custom-id-settings/DirtBlockID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mocreatures/dirt_WyvernLair
+
+# custom-id-settings/GrassBlockID:* (MoC_Grass), render=(STANDARD), opaque=true,cls=drzhark.mocreatures.block.MoCBlockGrass
+block:id=custom-id-settings/GrassBlockID,data=0,stdrot=true,face0=0:mocreatures/dirt_WyvernLair,face1=0:mocreatures/grassTop_WyvernLair,face2-5=0:mocreatures/grassSide_WyvernLair
+block:id=custom-id-settings/GrassBlockID,data=1,stdrot=true,face0=0:mocreatures/dirt_OgreLair,face1=0:mocreatures/grassTop_OgreLair,face2-5=0:mocreatures/grassSide_OgreLair
+block:id=custom-id-settings/GrassBlockID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:mocreatures/dirt_WyvernLair,face1=0:mocreatures/grassTop_WyvernLair,face2-5=0:mocreatures/grassSide_WyvernLair
+
+# custom-id-settings/StoneBlockID:* (MoC_Stone), render=(STANDARD), opaque=true,cls=drzhark.mocreatures.block.MoCBlockRock
+block:id=custom-id-settings/StoneBlockID,data=0,stdrot=true,face0-5=0:mocreatures/rock_WyvernLair
+block:id=custom-id-settings/StoneBlockID,data=1,stdrot=true,face0-5=0:mocreatures/rock_OgreLair
+block:id=custom-id-settings/StoneBlockID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mocreatures/rock_WyvernLair
+
+# custom-id-settings/LeafBlockID:* (MoC_Leaf), render=(STANDARD), opaque=false,cls=drzhark.mocreatures.block.MoCBlockLeaf
+block:id=custom-id-settings/LeafBlockID,data=0,stdrot=true,face0-5=0:mocreatures/leaves_WyvernLair_solid
+block:id=custom-id-settings/LeafBlockID,data=1,stdrot=true,face0-5=0:mocreatures/leaves_OgreLair_solid
+block:id=custom-id-settings/LeafBlockID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mocreatures/leaves_WyvernLair_solid
+
+# custom-id-settings/LogBlockID:* (MoC_Log), render=(LOG), opaque=true,cls=drzhark.mocreatures.block.MoCBlockLog
+block:id=custom-id-settings/LogBlockID,data=0,stdrot=true,face0-1=0:mocreatures/logTop_WyvernLair,face2-5=0:mocreatures/logSide_WyvernLair
+block:id=custom-id-settings/LogBlockID,data=1,stdrot=true,face0-1=0:mocreatures/logTop_OgreLair,face2-5=0:mocreatures/logSide_OgreLair
+block:id=custom-id-settings/LogBlockID,data=2,data=3,stdrot=true,face0-1=0:mocreatures/logTop_WyvernLair,face2-5=0:mocreatures/logSide_WyvernLair
+block:id=custom-id-settings/LogBlockID,data=4,data=5,data=6,data=7,face0-1=0:mocreatures/logTop_WyvernLair,face2-3=4000:mocreatures/logSide_WyvernLair,face4-5=0:mocreatures/logSide_WyvernLair
+block:id=custom-id-settings/LogBlockID,data=8,data=9,data=10,data=11,face0-1=4000:mocreatures/logTop_WyvernLair,face2-3=0:mocreatures/logSide_WyvernLair,face4-5=4000:mocreatures/logSide_WyvernLair
+block:id=custom-id-settings/LogBlockID,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:mocreatures/logTop_WyvernLair,face2-5=0:mocreatures/logSide_WyvernLair
+
+# custom-id-settings/TallGrassBlockID:* (MoC_TallGrass), render=(CROSSEDSQUARES), opaque=false,cls=drzhark.mocreatures.block.MoCBlockTallGrass
+block:id=custom-id-settings/TallGrassBlockID,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:mocreatures/tallGrass_WyvernLair
+block:id=custom-id-settings/TallGrassBlockID,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:mocreatures/tallGrass_OgreLair
+block:id=custom-id-settings/TallGrassBlockID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:mocreatures/tallGrass_WyvernLair
+
+# custom-id-settings/PlanksBlockID:* (MoC_Planks), render=(STANDARD), opaque=true,cls=drzhark.mocreatures.block.MoCBlockPlanks
+block:id=custom-id-settings/PlanksBlockID,data=0,stdrot=true,face0-5=0:mocreatures/woodPlanks_WyvernLair
+block:id=custom-id-settings/PlanksBlockID,data=1,stdrot=true,face0-5=0:mocreatures/woodPlanks_OgreLair
+block:id=custom-id-settings/PlanksBlockID,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:mocreatures/woodPlanks_WyvernLair
