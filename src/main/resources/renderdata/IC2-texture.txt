@@ -1,6 +1,6 @@
 # IC2 2.0.370-experimental
 version:1.6
-modname:IC2[2.0]
+modname:IC2
 
 
 var:blockLuminator=0,blockDoorAlloy=0,blockDynamiteRemote=0,blockMiningTip=0,blockFenceIron=0,blockMiningPipe=0,blockMachine2=0,blockfluidUuMatter=0,blockOreCopper=0,blockWall=0
