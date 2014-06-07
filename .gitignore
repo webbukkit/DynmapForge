@@ -8,3 +8,4 @@ Dynmap-*.jar
 /run
 /.gradle
 /.settings
+.DS_Store
