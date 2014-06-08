@@ -1,0 +1,171 @@
+# Botania beta-21
+version:1.7
+modname:Botania
+
+
+cfgfile:config/Botania.cfg
+
+
+texturepath:assets/botania/textures/blocks/
+texture:id=botania/distributor0,filename=assets/botania/textures/blocks/distributor0.png
+texture:id=botania/distributor1,filename=assets/botania/textures/blocks/distributor1.png
+texture:id=botania/enchanter,filename=assets/botania/textures/blocks/enchanter.png
+texture:id=botania/flower0,filename=assets/botania/textures/blocks/flower0.png
+texture:id=botania/flower1,filename=assets/botania/textures/blocks/flower1.png
+texture:id=botania/flower10,filename=assets/botania/textures/blocks/flower10.png
+texture:id=botania/flower11,filename=assets/botania/textures/blocks/flower11.png
+texture:id=botania/flower12,filename=assets/botania/textures/blocks/flower12.png
+texture:id=botania/flower13,filename=assets/botania/textures/blocks/flower13.png
+texture:id=botania/flower14,filename=assets/botania/textures/blocks/flower14.png
+texture:id=botania/flower15,filename=assets/botania/textures/blocks/flower15.png
+texture:id=botania/flower16,filename=assets/botania/textures/blocks/flower16.png
+texture:id=botania/flower2,filename=assets/botania/textures/blocks/flower2.png
+texture:id=botania/flower3,filename=assets/botania/textures/blocks/flower3.png
+texture:id=botania/flower4,filename=assets/botania/textures/blocks/flower4.png
+texture:id=botania/flower5,filename=assets/botania/textures/blocks/flower5.png
+texture:id=botania/flower6,filename=assets/botania/textures/blocks/flower6.png
+texture:id=botania/flower7,filename=assets/botania/textures/blocks/flower7.png
+texture:id=botania/flower8,filename=assets/botania/textures/blocks/flower8.png
+texture:id=botania/flower9,filename=assets/botania/textures/blocks/flower9.png
+texture:id=botania/livingrock0,filename=assets/botania/textures/blocks/livingrock0.png
+texture:id=botania/livingrock1,filename=assets/botania/textures/blocks/livingrock1.png
+texture:id=botania/livingrock2,filename=assets/botania/textures/blocks/livingrock2.png
+texture:id=botania/livingrock3,filename=assets/botania/textures/blocks/livingrock3.png
+texture:id=botania/livingrock4,filename=assets/botania/textures/blocks/livingrock4.png
+texture:id=botania/livingwood0,filename=assets/botania/textures/blocks/livingwood0.png
+texture:id=botania/livingwood1,filename=assets/botania/textures/blocks/livingwood1.png
+texture:id=botania/livingwood2,filename=assets/botania/textures/blocks/livingwood2.png
+texture:id=botania/livingwood3,filename=assets/botania/textures/blocks/livingwood3.png
+texture:id=botania/livingwood4,filename=assets/botania/textures/blocks/livingwood4.png
+texture:id=botania/livingwood5,filename=assets/botania/textures/blocks/livingwood5.png
+texture:id=botania/manaBeacon0,filename=assets/botania/textures/blocks/manaBeacon0.png
+texture:id=botania/manaBeacon1,filename=assets/botania/textures/blocks/manaBeacon1.png
+texture:id=botania/manaDetector0,filename=assets/botania/textures/blocks/manaDetector0.png
+texture:id=botania/manaDetector1,filename=assets/botania/textures/blocks/manaDetector1.png
+texture:id=botania/manaVoid,filename=assets/botania/textures/blocks/manaVoid.png
+texture:id=botania/pistonRelay,filename=assets/botania/textures/blocks/pistonRelay.png
+texture:id=botania/runeAltar0,filename=assets/botania/textures/blocks/runeAltar0.png
+texture:id=botania/runeAltar1,filename=assets/botania/textures/blocks/runeAltar1.png
+texture:id=botania/runeAltar2,filename=assets/botania/textures/blocks/runeAltar2.png
+texture:id=botania/turntable0,filename=assets/botania/textures/blocks/turntable0.png
+texture:id=botania/turntable1,filename=assets/botania/textures/blocks/turntable1.png
+texture:id=botania/unstableBlock,filename=assets/botania/textures/blocks/unstableBlock.png
+texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=minecraft/diamond_block,filename=assets/minecraft/textures/blocks/diamond_block.png
+
+
+
+# 626:* (botania), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockModFlower
+block:id=626,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower0
+block:id=626,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower1
+block:id=626,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower2
+block:id=626,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower3
+block:id=626,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower4
+block:id=626,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower5
+block:id=626,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower6
+block:id=626,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower7
+block:id=626,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower8
+block:id=626,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower9
+block:id=626,data=10,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower10
+block:id=626,data=11,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower11
+block:id=626,data=12,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower12
+block:id=626,data=13,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower13
+block:id=626,data=14,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower14
+block:id=626,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower15
+
+# 627:* (botania), render=vazkii.botania.client.render.block.RenderAltar(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockAltar
+block:id=627,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/cobblestone
+
+# 628:* (botania), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.BlockLivingrock
+block:id=628,data=0,stdrot=true,face0-5=0:botania/livingrock0
+block:id=628,data=1,stdrot=true,face0-5=0:botania/livingrock1
+block:id=628,data=2,stdrot=true,face0-5=0:botania/livingrock2
+block:id=628,data=3,stdrot=true,face0-5=0:botania/livingrock3
+block:id=628,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/livingrock4
+
+# 629:* (botania), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.BlockLivingwood
+block:id=629,data=0,stdrot=true,face0-5=0:botania/livingwood0
+block:id=629,data=1,stdrot=true,face0-5=0:botania/livingwood1
+block:id=629,data=2,stdrot=true,face0-5=0:botania/livingwood2
+block:id=629,data=3,stdrot=true,face0-5=0:botania/livingwood3
+block:id=629,data=4,stdrot=true,face0-5=0:botania/livingwood4
+block:id=629,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/livingwood5
+
+# 630:* (botania), render=vazkii.botania.client.render.block.RenderSpecialFlower(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockSpecialFlower
+block:id=630,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower16
+
+# 631:* (botania), render=vazkii.botania.client.render.block.RenderSpreader(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockSpreader
+block:id=631,data=0,stdrot=true,face0-5=0:botania/livingwood0
+block:id=631,data=1,stdrot=true,face0-5=0:botania/livingwood1
+block:id=631,data=2,stdrot=true,face0-5=0:botania/livingwood2
+block:id=631,data=3,stdrot=true,face0-5=0:botania/livingwood3
+block:id=631,data=4,stdrot=true,face0-5=0:botania/livingwood4
+block:id=631,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/livingwood5
+
+# 632:* (botania), render=vazkii.botania.client.render.block.RenderPool(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockPool
+block:id=632,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/livingrock0
+block:id=632,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/livingrock1
+block:id=632,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/livingrock2
+block:id=632,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/livingrock3
+block:id=632,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/livingrock4
+
+# 633:* (botania), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockRuneAltar
+block:id=633,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:botania/runeAltar0,face1=0:botania/runeAltar1,face2-5=0:botania/runeAltar2
+
+# 634:* (botania), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockUnstable
+block:id=634,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/unstableBlock
+block:id=634,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FFD98033,face0-5=17000:botania/unstableBlock
+block:id=634,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FFB34DD9,face0-5=17000:botania/unstableBlock
+block:id=634,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=FF6699D9,face0-5=17000:botania/unstableBlock
+block:id=634,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=FFE6E633,face0-5=17000:botania/unstableBlock
+block:id=634,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=FF80CC1A,face0-5=17000:botania/unstableBlock
+block:id=634,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=FFF280A6,face0-5=17000:botania/unstableBlock
+block:id=634,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=FF4D4D4D,face0-5=17000:botania/unstableBlock
+block:id=634,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=FF999999,face0-5=17000:botania/unstableBlock
+block:id=634,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=FF4D8099,face0-5=17000:botania/unstableBlock
+block:id=634,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=FF8040B3,face0-5=17000:botania/unstableBlock
+block:id=634,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=FF334DB3,face0-5=17000:botania/unstableBlock
+block:id=634,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=FF664D33,face0-5=17000:botania/unstableBlock
+block:id=634,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=FF668033,face0-5=17000:botania/unstableBlock
+block:id=634,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=FF993333,face0-5=17000:botania/unstableBlock
+block:id=634,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=FF1A1A1A,face0-5=17000:botania/unstableBlock
+
+# 635:* (botania), render=vazkii.botania.client.render.block.RenderPylon(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockPylon
+block:id=635,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/diamond_block
+
+# 636:* (botania), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockPistonRelay
+block:id=636,data=*,stdrot=true,face0-5=0:botania/pistonRelay
+
+# 637:* (botania), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.BlockDistributor
+block:id=637,data=*,stdrot=true,face0=0:botania/livingrock0,face1=0:botania/distributor0,face2-5=0:botania/distributor1
+
+# 638:* (botania), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockManaBeacon
+block:id=638,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:botania/manaBeacon0,face1=0:botania/manaBeacon1,face2-5=0:botania/manaBeacon0
+block:id=638,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FFD98033,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=FFB34DD9,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=FF6699D9,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=FFE6E633,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=FF80CC1A,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=FFF280A6,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=FF4D4D4D,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=FF999999,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=FF4D8099,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=FF8040B3,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=FF334DB3,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=FF664D33,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=FF668033,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=FF993333,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+block:id=638,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=FF1A1A1A,face0=17000:botania/manaBeacon0,face1=17000:botania/manaBeacon1,face2-5=17000:botania/manaBeacon0
+
+# 639:* (botania), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.BlockManaVoid
+block:id=639,data=*,stdrot=true,face0-5=0:botania/manaVoid
+
+# 640:* (botania), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.BlockManaDetector
+block:id=640,data=0,stdrot=true,face0-5=0:botania/manaDetector0
+block:id=640,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/manaDetector1
+
+# 641:* (botania), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockEnchanter
+block:id=641,data=*,stdrot=true,face0-5=0:botania/enchanter
+
+# %botania:* (botania), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.BlockTurntable
+block:id=%botania,data=*,stdrot=true,face0=0:botania/turntable1,face1=0:botania/turntable0,face2-5=0:botania/turntable1
