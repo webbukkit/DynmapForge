@@ -1,0 +1,54 @@
+# RedGear_Geocraft 
+version:1.6
+modname:RedGear|Geocraft
+
+var:Limestone=0,Marble=0,Basalt=0
+
+cfgfile:config/RedGear/Geocraft.cfg
+
+
+texturepath:assets/redgear_geocraft/textures/blocks/
+texture:id=redgear_geocraft/basaltBrick,filename=assets/redgear_geocraft/textures/blocks/basaltBrick.png
+texture:id=redgear_geocraft/basaltCarved,filename=assets/redgear_geocraft/textures/blocks/basaltCarved.png
+texture:id=redgear_geocraft/basaltClean,filename=assets/redgear_geocraft/textures/blocks/basaltClean.png
+texture:id=redgear_geocraft/basaltCobble,filename=assets/redgear_geocraft/textures/blocks/basaltCobble.png
+texture:id=redgear_geocraft/basaltCracked,filename=assets/redgear_geocraft/textures/blocks/basaltCracked.png
+texture:id=redgear_geocraft/basaltPaver,filename=assets/redgear_geocraft/textures/blocks/basaltPaver.png
+texture:id=redgear_geocraft/limeBrick,filename=assets/redgear_geocraft/textures/blocks/limeBrick.png
+texture:id=redgear_geocraft/limeCarved,filename=assets/redgear_geocraft/textures/blocks/limeCarved.png
+texture:id=redgear_geocraft/limeClean,filename=assets/redgear_geocraft/textures/blocks/limeClean.png
+texture:id=redgear_geocraft/limeCobble,filename=assets/redgear_geocraft/textures/blocks/limeCobble.png
+texture:id=redgear_geocraft/limeCracked,filename=assets/redgear_geocraft/textures/blocks/limeCracked.png
+texture:id=redgear_geocraft/limePaver,filename=assets/redgear_geocraft/textures/blocks/limePaver.png
+texture:id=redgear_geocraft/marbleBrick,filename=assets/redgear_geocraft/textures/blocks/marbleBrick.png
+texture:id=redgear_geocraft/marbleCarved,filename=assets/redgear_geocraft/textures/blocks/marbleCarved.png
+texture:id=redgear_geocraft/marbleClean,filename=assets/redgear_geocraft/textures/blocks/marbleClean.png
+texture:id=redgear_geocraft/marbleCobble,filename=assets/redgear_geocraft/textures/blocks/marbleCobble.png
+texture:id=redgear_geocraft/marbleCracked,filename=assets/redgear_geocraft/textures/blocks/marbleCracked.png
+texture:id=redgear_geocraft/marblePaver,filename=assets/redgear_geocraft/textures/blocks/marblePaver.png
+
+
+
+# Limestone:* (RedGear.Geocraft.Limestone), render=(STANDARD), opaque=true,cls=redgear.core.block.MetaBlock
+block:id=Limestone,data=0,stdrot=true,face0-5=0:redgear_geocraft/limeCobble
+block:id=Limestone,data=1,stdrot=true,face0-5=0:redgear_geocraft/limeClean
+block:id=Limestone,data=2,stdrot=true,face0-5=0:redgear_geocraft/limeCracked
+block:id=Limestone,data=3,stdrot=true,face0-5=0:redgear_geocraft/limeBrick
+block:id=Limestone,data=4,stdrot=true,face0-5=0:redgear_geocraft/limeCarved
+block:id=Limestone,data=5,stdrot=true,face0-5=0:redgear_geocraft/limePaver
+
+# Basalt:* (RedGear.Geocraft.Basalt), render=(STANDARD), opaque=true,cls=redgear.core.block.MetaBlock
+block:id=Basalt,data=0,stdrot=true,face0-5=0:redgear_geocraft/basaltCobble
+block:id=Basalt,data=1,stdrot=true,face0-5=0:redgear_geocraft/basaltClean
+block:id=Basalt,data=2,stdrot=true,face0-5=0:redgear_geocraft/basaltCracked
+block:id=Basalt,data=3,stdrot=true,face0-5=0:redgear_geocraft/basaltBrick
+block:id=Basalt,data=4,stdrot=true,face0-5=0:redgear_geocraft/basaltCarved
+block:id=Basalt,data=5,stdrot=true,face0-5=0:redgear_geocraft/basaltPaver
+
+# Marble:* (RedGear.Geocraft.Marble), render=(STANDARD), opaque=true,cls=redgear.core.block.MetaBlock
+block:id=Marble,data=0,stdrot=true,face0-5=0:redgear_geocraft/marbleCobble
+block:id=Marble,data=1,stdrot=true,face0-5=0:redgear_geocraft/marbleClean
+block:id=Marble,data=2,stdrot=true,face0-5=0:redgear_geocraft/marbleCracked
+block:id=Marble,data=3,stdrot=true,face0-5=0:redgear_geocraft/marbleBrick
+block:id=Marble,data=4,stdrot=true,face0-5=0:redgear_geocraft/marbleCarved
+block:id=Marble,data=5,stdrot=true,face0-5=0:redgear_geocraft/marblePaver
