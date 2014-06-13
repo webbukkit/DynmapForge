@@ -1,0 +1,62 @@
+# gascraft 2.0.4.3
+version:1.6
+modname:gascraft
+
+var:Gas_Block_ID=0,Neurotoxin_ID=0,Corrosive_Gas_ID=0,Gas_Pocket_ID=0,Weaponized_Gas_Block_ID=0,Hydrogen_Block_ID=0,Propellent_ID=0,Shale_Resource_ID=0,Plasma_ID=0,Chimney_ID=0
+var:Smoke_ID=0
+
+cfgfile:config/gascraft.cfg
+
+
+texturepath:assets/gascraft/textures/blocks/
+texture:id=gascraft/chimney,filename=assets/gascraft/textures/blocks/chimney.png
+texture:id=gascraft/corrosiveGas,filename=assets/gascraft/textures/blocks/corrosiveGas.png
+texture:id=gascraft/hydrogen,filename=assets/gascraft/textures/blocks/hydrogen.png
+texture:id=gascraft/naturalGas,filename=assets/gascraft/textures/blocks/naturalGas.png
+texture:id=gascraft/neurotoxin,filename=assets/gascraft/textures/blocks/neurotoxin.png
+texture:id=gascraft/plasma,filename=assets/gascraft/textures/blocks/plasma.png
+texture:id=gascraft/propellent,filename=assets/gascraft/textures/blocks/propellent.png
+texture:id=gascraft/shalegas,filename=assets/gascraft/textures/blocks/shalegas.png
+texture:id=gascraft/shaleoil,filename=assets/gascraft/textures/blocks/shaleoil.png
+texture:id=gascraft/shaleplasma,filename=assets/gascraft/textures/blocks/shaleplasma.png
+texture:id=gascraft/smoke,filename=assets/gascraft/textures/blocks/smoke.png
+texture:id=gascraft/toxicGas,filename=assets/gascraft/textures/blocks/toxicGas.png
+texture:id=minecraft/brick,filename=assets/minecraft/textures/blocks/brick.png
+texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+
+
+
+# Hydrogen_Block_ID:* (hydrogen), render=(STANDARD), opaque=false,cls=emasher.gas.block.BlockHydrogen
+block:id=Hydrogen_Block_ID,data=*,stdrot=true,face0-5=12000:gascraft/hydrogen
+
+# Smoke_ID:* (smoke), render=(STANDARD), opaque=false,cls=emasher.gas.block.BlockSmoke
+block:id=Smoke_ID,data=*,stdrot=true,face0-5=12000:gascraft/smoke
+
+# Weaponized_Gas_Block_ID:* (weaponizedGas), render=(STANDARD), opaque=false,cls=emasher.gas.block.BlockWeaponizedGas
+block:id=Weaponized_Gas_Block_ID,data=*,stdrot=true,face0-5=12000:gascraft/toxicGas
+
+# Neurotoxin_ID:* (neurotoxin), render=(STANDARD), opaque=false,cls=emasher.gas.block.BlockNeurotoxin
+block:id=Neurotoxin_ID,data=*,stdrot=true,face0-5=12000:gascraft/neurotoxin
+
+# Corrosive_Gas_ID:* (corrosiveGas), render=(STANDARD), opaque=false,cls=emasher.gas.block.BlockCorrosiveGas
+block:id=Corrosive_Gas_ID,data=*,stdrot=true,face0-5=12000:gascraft/corrosiveGas
+
+# Plasma_ID:* (plasma), render=(STANDARD), opaque=false,cls=emasher.gas.block.BlockPlasma
+block:id=Plasma_ID,data=*,stdrot=true,face0-5=12000:gascraft/plasma
+
+# Chimney_ID:* (chimney), render=(STANDARD), opaque=true,cls=emasher.gas.block.BlockDuct
+block:id=Chimney_ID,data=*,stdrot=true,face0-1=0:gascraft/chimney,face2-5=0:minecraft/brick
+
+# Gas_Pocket_ID:* (gasPocket), render=(STANDARD), opaque=true,cls=emasher.gas.block.BlockMineGas
+block:id=Gas_Pocket_ID,data=*,stdrot=true,face0-5=0:minecraft/stone
+
+# Gas_Block_ID:* (naturalGas), render=(STANDARD), opaque=false,cls=emasher.gas.block.BlockNaturalGas
+block:id=Gas_Block_ID,data=*,stdrot=true,face0-5=12000:gascraft/naturalGas
+
+# Shale_Resource_ID:* (tile.shaleResource), render=(STANDARD), opaque=true,cls=emasher.gas.block.BlockShaleResource
+block:id=Shale_Resource_ID,data=0,stdrot=true,face0-5=0:gascraft/shalegas
+block:id=Shale_Resource_ID,data=1,stdrot=true,face0-5=0:gascraft/shaleoil
+block:id=Shale_Resource_ID,data=2,stdrot=true,face0-5=0:gascraft/shaleplasma
+
+# Propellent_ID:* (propellent), render=(STANDARD), opaque=false,cls=emasher.gas.block.BlockPropellent
+block:id=Propellent_ID,data=*,stdrot=true,face0-5=12000:gascraft/propellent
