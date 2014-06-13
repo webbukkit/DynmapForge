@@ -1,0 +1,96 @@
+# DyeTrees beta
+version:1.6
+modname:DyeTrees
+
+var:control_setup/Vanilla_Dye_Drop_Percentage=0,control_setup/Dye_Tree_Density_in_Normal_Biomes=0,control_setup/Rainbow_Forest_Animal_Density=0,control_setup/Rainbow_Forest_Biome_ID=0
+
+cfgfile:config/Reika/DyeTrees.cfg
+
+
+texturepath:assets/dyetrees/textures/blocks/
+texture:id=DyeTrees/leaves,filename=assets/dyetrees/textures/blocks/leaves.png
+texture:id=DyeTrees/rainbowsapling,filename=assets/dyetrees/textures/blocks/rainbowsapling.png
+texture:id=DyeTrees/sapling,filename=assets/dyetrees/textures/blocks/sapling.png
+texture:id=dyetrees/dye,filename=assets/dyetrees/textures/blocks/dye.png
+
+# control_setup/Rainbow_Forest_Biome_ID
+biome:id=control_setup/Rainbow_Forest_Biome_ID,grassColorMult=179BF59,foliageColorMult=159AE30,waterColorMult=00FFFF
+
+
+# %leaves:* (leaves), render=(STANDARD), opaque=false,cls=Reika.DyeTrees.Blocks.BlockDyeLeaf
+block:id=%leaves,data=0,stdrot=true,colorMult=191919,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=1,stdrot=true,colorMult=993333,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=2,stdrot=true,colorMult=667F33,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=3,stdrot=true,colorMult=664C33,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=4,stdrot=true,colorMult=334CB2,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=5,stdrot=true,colorMult=7F3FB2,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=6,stdrot=true,colorMult=4C7F99,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=7,stdrot=true,colorMult=999999,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=8,stdrot=true,colorMult=4C4C4C,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=9,stdrot=true,colorMult=F27FA5,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=10,stdrot=true,colorMult=7FCC19,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=11,stdrot=true,colorMult=E5E533,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=12,stdrot=true,colorMult=6699D8,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=13,stdrot=true,colorMult=B24CD8,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=14,stdrot=true,colorMult=D87F33,face0-5=17000:DyeTrees/leaves
+block:id=%leaves,data=15,stdrot=true,face0-5=0:DyeTrees/leaves
+
+# %sapling:* (sapling), render=(CROSSEDSQUARES), opaque=false,cls=Reika.DyeTrees.Blocks.BlockDyeSapling
+block:id=%sapling,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=191919,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=993333,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=2,stdrot=true,transparency=TRANSPARENT,colorMult=667F33,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=3,stdrot=true,transparency=TRANSPARENT,colorMult=664C33,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=4,stdrot=true,transparency=TRANSPARENT,colorMult=334CB2,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=5,stdrot=true,transparency=TRANSPARENT,colorMult=7F3FB2,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=6,stdrot=true,transparency=TRANSPARENT,colorMult=4C7F99,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=7,stdrot=true,transparency=TRANSPARENT,colorMult=999999,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=8,stdrot=true,transparency=TRANSPARENT,colorMult=4C4C4C,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=9,stdrot=true,transparency=TRANSPARENT,colorMult=F27FA5,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=10,stdrot=true,transparency=TRANSPARENT,colorMult=7FCC19,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=11,stdrot=true,transparency=TRANSPARENT,colorMult=E5E533,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=6699D8,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=B24CD8,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=D87F33,patch0=17000:DyeTrees/sapling
+block:id=%sapling,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:DyeTrees/sapling
+
+# %decayingleaves:* (decayingleaves), render=(STANDARD), opaque=false,cls=Reika.DyeTrees.Blocks.BlockDyeLeaf
+block:id=%decayingleaves,data=0,stdrot=true,colorMult=191919,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=1,stdrot=true,colorMult=993333,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=2,stdrot=true,colorMult=667F33,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=3,stdrot=true,colorMult=664C33,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=4,stdrot=true,colorMult=334CB2,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=5,stdrot=true,colorMult=7F3FB2,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=6,stdrot=true,colorMult=4C7F99,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=7,stdrot=true,colorMult=999999,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=8,stdrot=true,colorMult=4C4C4C,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=9,stdrot=true,colorMult=F27FA5,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=10,stdrot=true,colorMult=7FCC19,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=11,stdrot=true,colorMult=E5E533,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=12,stdrot=true,colorMult=6699D8,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=13,stdrot=true,colorMult=B24CD8,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=14,stdrot=true,colorMult=D87F33,face0-5=17000:DyeTrees/leaves
+block:id=%decayingleaves,data=15,stdrot=true,face0-5=0:DyeTrees/leaves
+
+# %dyeblock:* (dyeblock), render=(STANDARD), opaque=true,cls=Reika.DyeTrees.Blocks.BlockDye
+block:id=%dyeblock,data=0,stdrot=true,colorMult=191919,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=1,stdrot=true,colorMult=993333,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=2,stdrot=true,colorMult=667F33,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=3,stdrot=true,colorMult=664C33,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=4,stdrot=true,colorMult=334CB2,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=5,stdrot=true,colorMult=7F3FB2,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=6,stdrot=true,colorMult=4C7F99,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=7,stdrot=true,colorMult=999999,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=8,stdrot=true,colorMult=4C4C4C,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=9,stdrot=true,colorMult=F27FA5,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=10,stdrot=true,colorMult=7FCC19,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=11,stdrot=true,colorMult=E5E533,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=12,stdrot=true,colorMult=6699D8,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=13,stdrot=true,colorMult=B24CD8,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=14,stdrot=true,colorMult=D87F33,face0-5=17000:dyetrees/dye
+block:id=%dyeblock,data=15,stdrot=true,face0-5=0:dyetrees/dye
+
+# %rainbowleaves:* (rainbowleaves), render=(STANDARD), opaque=false,cls=Reika.DyeTrees.Blocks.BlockRainbowLeaf
+block:id=%rainbowleaves,data=*,stdrot=true,face0-5=0:DyeTrees/leaves
+
+# %rainbowsapling:* (rainbowsapling), render=(CROSSEDSQUARES), opaque=false,cls=Reika.DyeTrees.Blocks.BlockRainbowSapling
+block:id=%rainbowsapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:DyeTrees/rainbowsapling
