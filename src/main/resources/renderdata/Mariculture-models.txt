@@ -1,0 +1,91 @@
+# Mariculture 1.2.1e
+version:1.6
+modname:Mariculture
+
+var:Custom_Stairs=0,Air_Blocks=0,Pearl_Bricks_-_Legacy=0,Wooden_Blocks=0,Single_Blocks=0,Ore_Blocks=0,Limestone_Variants=0,Machine_Blocks=0,Transparent_Blocks=0,Sifter=0
+var:Oyster=0,Custom_Wall=0,Custom_Light=0,Pearl_Bricks=0,Custom_Slabs_Double=0,High_Pressure_Water=0,Custom_Flooring=0,Glass_Blocks=0,Earthy_Blocks=0,Custom_Gate=0
+var:Double_Blocks=0,Neon_Lamps_On=0,Neon_Lamps_Off=0,Custom_Blocks=0,Custom_Slabs_Single=0,Custom_Fence=0,Tank_Blocks=0,Custom_RF_Block=0,Coral_&_Kelp=0
+
+cfgfile:config/mariculture/ids.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# Coral_&_Kelp:* (coral), render=(CROSSEDSQUARES), opaque=false,cls=mariculture.world.BlockCoral
+patchblock:id=Coral_&_Kelp,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12
+
+# Custom_Fence:* (customFence), render=(FENCE), opaque=false,cls=mariculture.factory.blocks.BlockCustomFence
+customblock:id=Custom_Fence,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# Custom_Flooring:* (customFlooring), render=(STANDARD), opaque=false,cls=mariculture.factory.blocks.BlockCustomFlooring
+boxblock:id=Custom_Flooring,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+
+# Custom_Gate:* (customGate), render=(FENCEGATE), opaque=false,cls=mariculture.factory.blocks.BlockCustomGate
+customblock:id=Custom_Gate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+
+# Custom_Slabs_Double:* (customSlabsDouble), render=(STANDARD), opaque=false,cls=mariculture.factory.blocks.BlockCustomSlab
+boxblock:id=Custom_Slabs_Double,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Custom_Slabs_Double,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# Custom_Slabs_Single:* (customSlabs), render=(STANDARD), opaque=false,cls=mariculture.factory.blocks.BlockCustomSlab
+boxblock:id=Custom_Slabs_Single,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=Custom_Slabs_Single,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# Custom_Stairs:* (customStairs), render=(STAIRS), opaque=false,cls=mariculture.factory.blocks.BlockCustomStairs
+customblock:id=Custom_Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# Custom_Wall:* (customWall), render=(WALL), opaque=false,cls=mariculture.factory.blocks.BlockCustomWall
+customblock:id=Custom_Wall,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=*
+
+# Double_Blocks:* (doubleBlocks), render=mariculture.core.render.RenderDouble(CUSTOM), opaque=false,cls=mariculture.core.blocks.BlockDouble
+boxblock:id=Double_Blocks,xmin=0.05000000074505806,xmax=0.949999988079071,ymin=0.0,ymax=1.0,zmin=0.05000000074505806,zmax=0.949999988079071,data=0
+boxblock:id=Double_Blocks,xmin=0.05000000074505806,xmax=0.949999988079071,ymin=0.0,ymax=0.15000000596046448,zmin=0.05000000074505806,zmax=0.949999988079071,data=1
+boxblock:id=Double_Blocks,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.949999988079071,zmin=0.0,zmax=1.0,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# High_Pressure_Water:* (Mariculture_highPressureWaterBlock), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=mariculture.core.blocks.BlockFluidMari
+boxblock:id=High_Pressure_Water,ymax=0.875,data=1
+boxblock:id=High_Pressure_Water,ymax=0.75,data=2
+boxblock:id=High_Pressure_Water,ymax=0.625,data=3
+boxblock:id=High_Pressure_Water,ymax=0.5,data=4
+boxblock:id=High_Pressure_Water,ymax=0.375,data=5
+boxblock:id=High_Pressure_Water,ymax=0.25,data=6
+boxblock:id=High_Pressure_Water,ymax=0.125,data=7
+boxblock:id=High_Pressure_Water,ymax=0.875,data=9
+boxblock:id=High_Pressure_Water,ymax=0.75,data=10
+boxblock:id=High_Pressure_Water,ymax=0.625,data=11
+boxblock:id=High_Pressure_Water,ymax=0.5,data=12
+boxblock:id=High_Pressure_Water,ymax=0.375,data=13
+boxblock:id=High_Pressure_Water,ymax=0.25,data=14
+boxblock:id=High_Pressure_Water,ymax=0.125,data=15
+
+# Oyster:* (oysterBlock), render=mariculture.core.render.RenderSingle(CUSTOM), opaque=false,cls=mariculture.core.blocks.BlockOyster
+boxblock:id=Oyster,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=*
+
+# Sifter:* (siftBlock), render=mariculture.core.render.RenderSingle(CUSTOM), opaque=false,cls=mariculture.fishery.blocks.BlockSift
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=Sifter,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.800000011920929,zmin=0.0,zmax=1.0,data=*
+
+# Single_Blocks:* (customBlocks), render=mariculture.core.render.RenderSingle(CUSTOM), opaque=false,cls=mariculture.core.blocks.BlockSingle
+boxblock:id=Single_Blocks,xmin=0.20000000298023224,xmax=0.800000011920929,ymin=0.0,ymax=0.8999999761581421,zmin=0.20000000298023224,zmax=0.800000011920929,data=0
+boxblock:id=Single_Blocks,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.949999988079071,zmin=0.0,zmax=1.0,data=1,data=2,data=3,data=4,data=5,data=6
+boxblock:id=Single_Blocks,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=7
+boxblock:id=Single_Blocks,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.125,zmax=0.875,data=8
+boxblock:id=Single_Blocks,xmin=0.125,xmax=0.875,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=9
+boxblock:id=Single_Blocks,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.949999988079071,zmin=0.0,zmax=1.0,data=10,data=11
+
+# Tank_Blocks:* (tankBlocks), render=mariculture.core.render.RenderTanks(CUSTOM), opaque=false,cls=mariculture.core.blocks.BlockTank
+boxblock:id=Tank_Blocks,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.30000001192092896,ymax=0.699999988079071,zmin=0.30000001192092896,zmax=0.699999988079071,data=2
