@@ -1,0 +1,18 @@
+# DenPipes 2.1.18
+version:1.6
+modname:DenPipes
+
+var:item_denoflionsx.DenPipes.AddOns.AutomaticWoodenPipe.Pipe.AutomaticWoodenPipe=0,item_denoflionsx.DenPipes.AddOns.ValvePipe.Pipe.ValvePipe=0
+
+cfgfile:config/denoflionsx/DenPipes/DenPipes.cfg
+
+
+texturepath:assets/denpipes/textures/blocks/
+texture:id=denpipes/automatic_wooden_pipe,filename=assets/denpipes/textures/blocks/automatic_wooden_pipe.png
+texture:id=denpipes/valve_pipe,filename=assets/denpipes/textures/blocks/valve_pipe.png
+
+
+# BuildCraft pipes
+addtotexturemap:mapid=PIPES,key:item_denoflionsx.DenPipes.AddOns.AutomaticWoodenPipe.Pipe.AutomaticWoodenPipe=0:denpipes/automatic_wooden_pipe
+addtotexturemap:mapid=PIPES,key:item_denoflionsx.DenPipes.AddOns.ValvePipe.Pipe.ValvePipe=0:denpipes/valve_pipe
+
