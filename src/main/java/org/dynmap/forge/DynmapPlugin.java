@@ -39,6 +39,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.BanList;
 import net.minecraft.server.management.ServerConfigurationManager;
+import net.minecraft.server.management.UserListBans;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.IChatComponent;
@@ -339,7 +340,7 @@ public class DynmapPlugin
 
     public boolean isOp(String player) {
     	player = player.toLowerCase();
-    	return server.getConfigurationManager().getOps().contains(player) ||
+    	return (server.getConfigurationManager().func_152603_m().func_152700_a(player) != null) ||
     			(server.isSinglePlayer() && player.equalsIgnoreCase(server.getServerOwner()));
     }
     
@@ -474,18 +475,16 @@ public class DynmapPlugin
 
             return null;
         }
-        @SuppressWarnings("unchecked")
         @Override
         public Set<String> getIPBans()
         {
             BanList bl = server.getConfigurationManager().getBannedIPs();
             Set<String> ips = new HashSet<String>();
 
-            if (bl.isListActive())
-            {
-                ips = bl.getBannedList().keySet();
+            for (String s : bl.func_152685_a()) {
+                ips.add(s);
             }
-
+            
             return ips;
         }
         @Override
@@ -518,8 +517,8 @@ public class DynmapPlugin
         @Override
         public boolean isPlayerBanned(String pid)
         {
-            BanList bl = server.getConfigurationManager().getBannedPlayers();
-            return bl.isBanned(pid);
+            UserListBans bl = server.getConfigurationManager().func_152608_h();
+            return bl.func_152703_a(pid) != null;
         }
         
         @Override
@@ -678,9 +677,9 @@ public class DynmapPlugin
         {
             ServerConfigurationManager scm = MinecraftServer.getServer().getConfigurationManager();
             if (scm == null) return Collections.emptySet();
-            BanList bl = scm.getBannedPlayers();
+            UserListBans bl = scm.func_152608_h();
             if (bl == null) return Collections.emptySet();
-            if(bl.isBanned(player)) {
+            if(bl.func_152703_a(player) != null) {
                 return Collections.emptySet();
             }
             Set<String> rslt = hasOfflinePermissions(player, perms);
@@ -697,9 +696,9 @@ public class DynmapPlugin
         {
             ServerConfigurationManager scm = MinecraftServer.getServer().getConfigurationManager();
             if (scm == null) return false;
-            BanList bl = scm.getBannedPlayers();
+            UserListBans bl = scm.func_152608_h();
             if (bl == null) return false;
-            if(bl.isBanned(player)) {
+            if(bl.func_152703_a(player) != null) {
                 return false;
             }
             return hasOfflinePermission(player, perm);
