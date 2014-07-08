@@ -1,15 +1,15 @@
-# BiomesOPlenty 2.0.0
+# BiomesOPlenty 2.0.2
 version:1.7
 modname:BiomesOPlenty
 
 var:biome_ids/Moor_ID=0,biome_ids/Jade_Cliffs_ID=0,biome_ids/Snowy_Coniferous_Forest_ID=0,biome_ids/Volcano_ID=0,biome_ids/Thicket_ID=0,biome_ids/Outback_ID=0,biome_ids/Meadow_ID=0,biome_ids/Oasis_ID=0,biome_ids/Lush_River_ID=0,biome_ids/Bamboo_Forest_ID=0
-var:biome_ids/Grove_ID=0,biome_ids/Scrubland_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Garden_ID=0,biome_ids/Thick_Shrubland_(Sub-Biome)_ID=0,biome_ids/Coniferous_Forest_ID=0,biome_ids/Woodland_ID=0,biome_ids/Arctic_ID=0,biome_ids/Steppe_ID=0,biome_ids/Visceral_Heap_ID=0
-var:biome_ids/Spruce_Woods_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Bog_ID=0,biome_ids/Glacier_ID=0,biome_ids/Dead_Swamp_ID=0,biome_ids/Mountain_ID=0,biome_ids/Mangrove_ID=0,biome_ids/Thinned_Timber_(Sub-Biome)_ID=0,biome_ids/Grassland_ID=0,biome_ids/Maple_Woods_ID=0
-var:biome_ids/Highland_ID=0,biome_ids/Mystic_Grove_ID=0,biome_ids/Fungi_Forest_ID=0,biome_ids/Dead_Forest_ID=0,biome_ids/Wonderous_Woods_(Promised_Land)_ID=0,biome_ids/Tropical_Rainforest_ID=0,biome_ids/Frost_Forest_ID=0,biome_ids/Boneyard_ID=0,biome_ids/Lush_Desert_ID=0,biome_ids/Prairie_ID=0
-var:biome_ids/Phantasmagoric_Inferno_ID=0,biome_ids/Timber_ID=0,biome_ids/Redwood_Forest_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Wasteland_ID=0,biome_ids/Canyon_ID=0,biome_ids/Undergarden_ID=0,biome_ids/Cherry_Blossom_Grove_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Flower_Field_ID=0
-var:biome_ids/Shield_ID=0,biome_ids/Deciduous_Forest_ID=0,biome_ids/Ominous_Woods_ID=0,biome_ids/Fen_ID=0,biome_ids/Wetland_ID=0,biome_ids/Boreal_Forest_ID=0,biome_ids/Tropics_ID=0,biome_ids/Dry_River_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Chaparral_ID=0
-var:biome_ids/Lush_Swamp_ID=0,biome_ids/Origin_Valley_ID=0,biome_ids/Heathland_ID=0,biome_ids/Marsh_ID=0,biome_ids/Seasonal_Forest_ID=0,biome_ids/Tundra_ID=0,biome_ids/Rainforest_ID=0,biome_ids/Brushland_ID=0,biome_ids/Alps_ID=0,biome_ids/Temperate_Rainforest_ID=0
-var:biome_ids/Thick_Ominous_Woods_(Sub-Biome)_ID=0,biome_ids/Bayou_ID=0,biome_ids/Crag_ID=0,biome_ids/Quagmire_ID=0,biome_ids/Corrupted_Sands_ID=0,biome_ids/Orchard_ID=0
+var:biome_ids/Grove_ID=0,biome_ids/Scrubland_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Garden_ID=0,biome_ids/Coniferous_Forest_ID=0,biome_ids/Canyon_Ravine_ID=0,biome_ids/Woodland_ID=0,biome_ids/Alps_Forest_ID=0,biome_ids/Arctic_ID=0,biome_ids/Steppe_ID=0
+var:biome_ids/Visceral_Heap_ID=0,biome_ids/Spruce_Woods_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Bog_ID=0,biome_ids/Glacier_ID=0,biome_ids/Dead_Swamp_ID=0,biome_ids/Mountain_ID=0,biome_ids/Mangrove_ID=0,biome_ids/Grassland_ID=0,biome_ids/Maple_Woods_ID=0
+var:biome_ids/Highland_ID=0,biome_ids/Mystic_Grove_ID=0,biome_ids/Fungi_Forest_ID=0,biome_ids/Dead_Forest_ID=0,biome_ids/Tropical_Rainforest_ID=0,biome_ids/Frost_Forest_ID=0,biome_ids/Boneyard_ID=0,biome_ids/Lush_Desert_ID=0,biome_ids/Prairie_ID=0,biome_ids/Phantasmagoric_Inferno_ID=0
+var:biome_ids/Redwood_Forest_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Wasteland_ID=0,biome_ids/Canyon_ID=0,biome_ids/Undergarden_ID=0,biome_ids/Cherry_Blossom_Grove_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Shield_ID=0,biome_ids/Flower_Field_ID=0,biome_ids/Deciduous_Forest_ID=0
+var:biome_ids/Ominous_Woods_ID=0,biome_ids/Fen_ID=0,biome_ids/Wetland_ID=0,biome_ids/Kelp_Forest_ID=0,biome_ids/Boreal_Forest_ID=0,biome_ids/Tropics_ID=0,biome_ids/Dry_River_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Chaparral_ID=0,biome_ids/Lush_Swamp_ID=0
+var:biome_ids/Origin_Valley_ID=0,biome_ids/Meadow_Forest_ID=0,biome_ids/Heathland_ID=0,biome_ids/Marsh_ID=0,biome_ids/Seasonal_Forest_ID=0,biome_ids/Tundra_ID=0,biome_ids/Rainforest_ID=0,biome_ids/Brushland_ID=0,biome_ids/Coral_Reef_ID=0,biome_ids/Alps_ID=0
+var:biome_ids/Temperate_Rainforest_ID=0,biome_ids/Bayou_ID=0,biome_ids/Crag_ID=0,biome_ids/Quagmire_ID=0,biome_ids/Corrupted_Sands_ID=0,biome_ids/Orchard_ID=0
 
 cfgfile:config/biomesoplenty/ids.cfg
 

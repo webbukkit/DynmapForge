@@ -1,15 +1,15 @@
-# BiomesOPlenty 2.0.0
+# BiomesOPlenty 2.0.2
 version:1.7
 modname:BiomesOPlenty
 
 var:biome_ids/Moor_ID=0,biome_ids/Jade_Cliffs_ID=0,biome_ids/Snowy_Coniferous_Forest_ID=0,biome_ids/Volcano_ID=0,biome_ids/Thicket_ID=0,biome_ids/Outback_ID=0,biome_ids/Meadow_ID=0,biome_ids/Oasis_ID=0,biome_ids/Lush_River_ID=0,biome_ids/Bamboo_Forest_ID=0
-var:biome_ids/Grove_ID=0,biome_ids/Scrubland_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Garden_ID=0,biome_ids/Thick_Shrubland_(Sub-Biome)_ID=0,biome_ids/Coniferous_Forest_ID=0,biome_ids/Woodland_ID=0,biome_ids/Arctic_ID=0,biome_ids/Steppe_ID=0,biome_ids/Visceral_Heap_ID=0
-var:biome_ids/Spruce_Woods_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Bog_ID=0,biome_ids/Glacier_ID=0,biome_ids/Dead_Swamp_ID=0,biome_ids/Mountain_ID=0,biome_ids/Mangrove_ID=0,biome_ids/Thinned_Timber_(Sub-Biome)_ID=0,biome_ids/Grassland_ID=0,biome_ids/Maple_Woods_ID=0
-var:biome_ids/Highland_ID=0,biome_ids/Mystic_Grove_ID=0,biome_ids/Fungi_Forest_ID=0,biome_ids/Dead_Forest_ID=0,biome_ids/Wonderous_Woods_(Promised_Land)_ID=0,biome_ids/Tropical_Rainforest_ID=0,biome_ids/Frost_Forest_ID=0,biome_ids/Boneyard_ID=0,biome_ids/Lush_Desert_ID=0,biome_ids/Prairie_ID=0
-var:biome_ids/Phantasmagoric_Inferno_ID=0,biome_ids/Timber_ID=0,biome_ids/Redwood_Forest_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Wasteland_ID=0,biome_ids/Canyon_ID=0,biome_ids/Undergarden_ID=0,biome_ids/Cherry_Blossom_Grove_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Flower_Field_ID=0
-var:biome_ids/Shield_ID=0,biome_ids/Deciduous_Forest_ID=0,biome_ids/Ominous_Woods_ID=0,biome_ids/Fen_ID=0,biome_ids/Wetland_ID=0,biome_ids/Boreal_Forest_ID=0,biome_ids/Tropics_ID=0,biome_ids/Dry_River_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Chaparral_ID=0
-var:biome_ids/Lush_Swamp_ID=0,biome_ids/Origin_Valley_ID=0,biome_ids/Heathland_ID=0,biome_ids/Marsh_ID=0,biome_ids/Seasonal_Forest_ID=0,biome_ids/Tundra_ID=0,biome_ids/Rainforest_ID=0,biome_ids/Brushland_ID=0,biome_ids/Alps_ID=0,biome_ids/Temperate_Rainforest_ID=0
-var:biome_ids/Thick_Ominous_Woods_(Sub-Biome)_ID=0,biome_ids/Bayou_ID=0,biome_ids/Crag_ID=0,biome_ids/Quagmire_ID=0,biome_ids/Corrupted_Sands_ID=0,biome_ids/Orchard_ID=0
+var:biome_ids/Grove_ID=0,biome_ids/Scrubland_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Garden_ID=0,biome_ids/Coniferous_Forest_ID=0,biome_ids/Canyon_Ravine_ID=0,biome_ids/Woodland_ID=0,biome_ids/Alps_Forest_ID=0,biome_ids/Arctic_ID=0,biome_ids/Steppe_ID=0
+var:biome_ids/Visceral_Heap_ID=0,biome_ids/Spruce_Woods_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Bog_ID=0,biome_ids/Glacier_ID=0,biome_ids/Dead_Swamp_ID=0,biome_ids/Mountain_ID=0,biome_ids/Mangrove_ID=0,biome_ids/Grassland_ID=0,biome_ids/Maple_Woods_ID=0
+var:biome_ids/Highland_ID=0,biome_ids/Mystic_Grove_ID=0,biome_ids/Fungi_Forest_ID=0,biome_ids/Dead_Forest_ID=0,biome_ids/Tropical_Rainforest_ID=0,biome_ids/Frost_Forest_ID=0,biome_ids/Boneyard_ID=0,biome_ids/Lush_Desert_ID=0,biome_ids/Prairie_ID=0,biome_ids/Phantasmagoric_Inferno_ID=0
+var:biome_ids/Redwood_Forest_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Wasteland_ID=0,biome_ids/Canyon_ID=0,biome_ids/Undergarden_ID=0,biome_ids/Cherry_Blossom_Grove_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Shield_ID=0,biome_ids/Flower_Field_ID=0,biome_ids/Deciduous_Forest_ID=0
+var:biome_ids/Ominous_Woods_ID=0,biome_ids/Fen_ID=0,biome_ids/Wetland_ID=0,biome_ids/Kelp_Forest_ID=0,biome_ids/Boreal_Forest_ID=0,biome_ids/Tropics_ID=0,biome_ids/Dry_River_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Chaparral_ID=0,biome_ids/Lush_Swamp_ID=0
+var:biome_ids/Origin_Valley_ID=0,biome_ids/Meadow_Forest_ID=0,biome_ids/Heathland_ID=0,biome_ids/Marsh_ID=0,biome_ids/Seasonal_Forest_ID=0,biome_ids/Tundra_ID=0,biome_ids/Rainforest_ID=0,biome_ids/Brushland_ID=0,biome_ids/Coral_Reef_ID=0,biome_ids/Alps_ID=0
+var:biome_ids/Temperate_Rainforest_ID=0,biome_ids/Bayou_ID=0,biome_ids/Crag_ID=0,biome_ids/Quagmire_ID=0,biome_ids/Corrupted_Sands_ID=0,biome_ids/Orchard_ID=0
 
 cfgfile:config/biomesoplenty/ids.cfg
 
@@ -269,8 +269,6 @@ texture:id=biomesoplenty/witherwart,filename=assets/biomesoplenty/textures/block
 
 # biome_ids/Alps_ID
 biome:id=biome_ids/Alps_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
-# biome_ids/Snowy_Coniferous_Forest_ID
-biome:id=biome_ids/Snowy_Coniferous_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Arctic_ID
 biome:id=biome_ids/Arctic_ID,grassColorMult=1AA8A4E,foliageColorMult=1B5A353,waterColorMult=FFFFFF
 # biome_ids/Bamboo_Forest_ID
@@ -291,6 +289,8 @@ biome:id=biome_ids/Chaparral_ID,grassColorMult=1C0D85D,foliageColorMult=177AB2F,
 biome:id=biome_ids/Cherry_Blossom_Grove_ID,grassColorMult=1A3FFAA,foliageColorMult=1A3FFAA,waterColorMult=FFFFFF
 # biome_ids/Coniferous_Forest_ID
 biome:id=biome_ids/Coniferous_Forest_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
+# biome_ids/Snowy_Coniferous_Forest_ID
+biome:id=biome_ids/Snowy_Coniferous_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Crag_ID
 biome:id=biome_ids/Crag_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=0E6A35
 # biome_ids/Dead_Forest_ID
@@ -309,8 +309,6 @@ biome:id=biome_ids/Frost_Forest_ID,grassColorMult=1ABD6BC,foliageColorMult=1ABD6
 biome:id=biome_ids/Fungi_Forest_ID,grassColorMult=1F0F970,foliageColorMult=1A9FB6A,waterColorMult=00FF2E
 # biome_ids/Garden_ID
 biome:id=biome_ids/Garden_ID,grassColorMult=174D374,foliageColorMult=166E266,waterColorMult=FFFFFF
-# biome_ids/Glacier_ID
-biome:id=biome_ids/Glacier_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Grassland_ID
 biome:id=biome_ids/Grassland_ID,grassColorMult=17FDB7D,foliageColorMult=17FDB7D,waterColorMult=FFFFFF
 # biome_ids/Grove_ID
@@ -327,8 +325,6 @@ biome:id=biome_ids/Lavender_Fields_ID,grassColorMult=1A1C36D,foliageColorMult=1A
 biome:id=biome_ids/Lush_Desert_ID,grassColorMult=19ABE4B,foliageColorMult=182AC1E,waterColorMult=FFFFFF
 # biome_ids/Lush_Swamp_ID
 biome:id=biome_ids/Lush_Swamp_ID,grassColorMult=16DC257,foliageColorMult=148B22C,waterColorMult=FFFFFF
-# biome_ids/Mangrove_ID
-biome:id=biome_ids/Mangrove_ID,grassColorMult=16AC44E,foliageColorMult=145B421,waterColorMult=FFFFFF
 # biome_ids/Maple_Woods_ID
 biome:id=biome_ids/Maple_Woods_ID,grassColorMult=186B688,foliageColorMult=167A369,waterColorMult=FFFFFF
 # biome_ids/Marsh_ID
@@ -341,84 +337,88 @@ biome:id=biome_ids/Moor_ID,grassColorMult=1619365,foliageColorMult=1619365,water
 biome:id=biome_ids/Mountain_ID,grassColorMult=19CB774,foliageColorMult=183A352,waterColorMult=FFFFFF
 # biome_ids/Mystic_Grove_ID
 biome:id=biome_ids/Mystic_Grove_ID,grassColorMult=169CFDB,foliageColorMult=170E099,waterColorMult=FF107A
-# biome_ids/Oasis_ID
-biome:id=biome_ids/Oasis_ID,grassColorMult=173C447,foliageColorMult=150B41A,waterColorMult=FFFFFF
 # biome_ids/Ominous_Woods_ID
 biome:id=biome_ids/Ominous_Woods_ID,grassColorMult=13F4151,foliageColorMult=13F4151,waterColorMult=1E1B26
-# biome_ids/Orchard_ID
-biome:id=biome_ids/Orchard_ID,grassColorMult=1D5FF6D,foliageColorMult=1D5FF6D,waterColorMult=FFFFFF
 # biome_ids/Origin_Valley_ID
 biome:id=biome_ids/Origin_Valley_ID,grassColorMult=1A2FF5F,foliageColorMult=13AFF00,waterColorMult=FFFFFF
 # biome_ids/Outback_ID
 biome:id=biome_ids/Outback_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
 # biome_ids/Prairie_ID
 biome:id=biome_ids/Prairie_ID,grassColorMult=1C8E580,foliageColorMult=1ADE07B,waterColorMult=FFFFFF
-# biome_ids/Quagmire_ID
-biome:id=biome_ids/Quagmire_ID,grassColorMult=19E8B69,foliageColorMult=19E8B69,waterColorMult=CC5100
 # biome_ids/Rainforest_ID
 biome:id=biome_ids/Rainforest_ID,grassColorMult=11AD86C,foliageColorMult=114E26F,waterColorMult=FFFFFF
 # biome_ids/Redwood_Forest_ID
 biome:id=biome_ids/Redwood_Forest_ID,grassColorMult=191BD59,foliageColorMult=177AB2F,waterColorMult=FFFFFF
 # biome_ids/Sacred_Springs_ID
 biome:id=biome_ids/Sacred_Springs_ID,grassColorMult=100995B,foliageColorMult=100995B,waterColorMult=FFFFFF
-# biome_ids/Scrubland_ID
-biome:id=biome_ids/Scrubland_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
 # biome_ids/Seasonal_Forest_ID
 biome:id=biome_ids/Seasonal_Forest_ID,grassColorMult=1BEC44C,foliageColorMult=1B3C442,waterColorMult=FFFFFF
 # biome_ids/Shield_ID
 biome:id=biome_ids/Shield_ID,grassColorMult=1647F38,foliageColorMult=1789643,waterColorMult=FFFFFF
 # biome_ids/Shrubland_ID
 biome:id=biome_ids/Shrubland_ID,grassColorMult=1A4B76E,foliageColorMult=18CA44A,waterColorMult=FFFFFF
-# biome_ids/Silkglades_ID
-biome:id=biome_ids/Silkglades_ID,grassColorMult=1CCC9AD,foliageColorMult=1D7DBB6,waterColorMult=FFFF77
 # biome_ids/Sludgepit_ID
 biome:id=biome_ids/Sludgepit_ID,grassColorMult=1746429,foliageColorMult=1919134,waterColorMult=AF9200
-# biome_ids/Spruce_Woods_ID
-biome:id=biome_ids/Spruce_Woods_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
 # biome_ids/Steppe_ID
 biome:id=biome_ids/Steppe_ID,grassColorMult=1B28F6B,foliageColorMult=1B28F6B,waterColorMult=FFFFFF
 # biome_ids/Temperate_Rainforest_ID
 biome:id=biome_ids/Temperate_Rainforest_ID,grassColorMult=1B6D367,foliageColorMult=1BBDD63,waterColorMult=FFFFFF
-# biome_ids/Thick_Ominous_Woods_(Sub-Biome)_ID
-biome:id=biome_ids/Thick_Ominous_Woods_(Sub-Biome)_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
-# biome_ids/Thick_Shrubland_(Sub-Biome)_ID
-biome:id=biome_ids/Thick_Shrubland_(Sub-Biome)_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
 # biome_ids/Thicket_ID
 biome:id=biome_ids/Thicket_ID,grassColorMult=1A89A77,foliageColorMult=1A5A16D,waterColorMult=FFFFFF
-# biome_ids/Thinned_Timber_(Sub-Biome)_ID
-biome:id=biome_ids/Thinned_Timber_(Sub-Biome)_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
-# biome_ids/Timber_ID
-biome:id=biome_ids/Timber_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
 # biome_ids/Tropical_Rainforest_ID
 biome:id=biome_ids/Tropical_Rainforest_ID,grassColorMult=1C3E041,foliageColorMult=1A5E041,waterColorMult=5DFF00
-# biome_ids/Tropics_ID
-biome:id=biome_ids/Tropics_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
 # biome_ids/Tundra_ID
 biome:id=biome_ids/Tundra_ID,grassColorMult=1AD8456,foliageColorMult=1BF664E,waterColorMult=FFFFFF
-# biome_ids/Volcano_ID
-biome:id=biome_ids/Volcano_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
 # biome_ids/Wasteland_ID
 biome:id=biome_ids/Wasteland_ID,grassColorMult=19DA078,foliageColorMult=1999E55,waterColorMult=E5FF00
 # biome_ids/Wetland_ID
 biome:id=biome_ids/Wetland_ID,grassColorMult=15A935F,foliageColorMult=14F9657,waterColorMult=636084
-# biome_ids/Wonderous_Woods_(Promised_Land)_ID
-biome:id=biome_ids/Wonderous_Woods_(Promised_Land)_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
 # biome_ids/Woodland_ID
 biome:id=biome_ids/Woodland_ID,grassColorMult=1A6BB4E,foliageColorMult=191A922,waterColorMult=FFFFFF
+# biome_ids/Coral_Reef_ID
+biome:id=biome_ids/Coral_Reef_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Kelp_Forest_ID
+biome:id=biome_ids/Kelp_Forest_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Tropics_ID
+biome:id=biome_ids/Tropics_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
+# biome_ids/Volcano_ID
+biome:id=biome_ids/Volcano_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Mangrove_ID
+biome:id=biome_ids/Mangrove_ID,grassColorMult=16AC44E,foliageColorMult=145B421,waterColorMult=FFFFFF
+# biome_ids/Alps_Forest_ID
+biome:id=biome_ids/Alps_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Canyon_Ravine_ID
+biome:id=biome_ids/Canyon_Ravine_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
+# biome_ids/Glacier_ID
+biome:id=biome_ids/Glacier_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Meadow_Forest_ID
+biome:id=biome_ids/Meadow_Forest_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
+# biome_ids/Oasis_ID
+biome:id=biome_ids/Oasis_ID,grassColorMult=173C447,foliageColorMult=150B41A,waterColorMult=FFFFFF
+# biome_ids/Orchard_ID
+biome:id=biome_ids/Orchard_ID,grassColorMult=1D5FF6D,foliageColorMult=1D5FF6D,waterColorMult=FFFFFF
+# biome_ids/Quagmire_ID
+biome:id=biome_ids/Quagmire_ID,grassColorMult=19E8B69,foliageColorMult=19E8B69,waterColorMult=CC5100
+# biome_ids/Scrubland_ID
+biome:id=biome_ids/Scrubland_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Silkglades_ID
+biome:id=biome_ids/Silkglades_ID,grassColorMult=1CCC9AD,foliageColorMult=1D7DBB6,waterColorMult=FFFF77
+# biome_ids/Spruce_Woods_ID
+biome:id=biome_ids/Spruce_Woods_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
 # biome_ids/Corrupted_Sands_ID
-biome:id=biome_ids/Corrupted_Sands_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+biome:id=biome_ids/Corrupted_Sands_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Phantasmagoric_Inferno_ID
-biome:id=biome_ids/Phantasmagoric_Inferno_ID,grassColorMult=195B872,foliageColorMult=17AA54F,waterColorMult=FFFFFF
+biome:id=biome_ids/Phantasmagoric_Inferno_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Boneyard_ID
-biome:id=biome_ids/Boneyard_ID,grassColorMult=190B682,foliageColorMult=174A362,waterColorMult=FFFFFF
+biome:id=biome_ids/Boneyard_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Visceral_Heap_ID
-biome:id=biome_ids/Visceral_Heap_ID,grassColorMult=170C15B,foliageColorMult=14CB031,waterColorMult=FFFFFF
+biome:id=biome_ids/Visceral_Heap_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Undergarden_ID
-biome:id=biome_ids/Undergarden_ID,grassColorMult=17CBD6B,foliageColorMult=15BAB46,waterColorMult=FFFFFF
+biome:id=biome_ids/Undergarden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Lush_River_ID
-biome:id=biome_ids/Lush_River_ID,grassColorMult=172C250,foliageColorMult=14EB224,waterColorMult=FFFFFF
+biome:id=biome_ids/Lush_River_ID,grassColorMult=183BD65,foliageColorMult=165AB3E,waterColorMult=FFFFFF
 # biome_ids/Dry_River_ID
-biome:id=biome_ids/Dry_River_ID,grassColorMult=1B9B75B,foliageColorMult=1A6A432,waterColorMult=FFFFFF
+biome:id=biome_ids/Dry_River_ID,grassColorMult=182C245,foliageColorMult=164B216,waterColorMult=FFFFFF
 
 
 # %mud:* (mud), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockMud
