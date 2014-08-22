@@ -511,7 +511,13 @@ public class DynmapPlugin
         @Override
         public String getServerName()
         {
-        	String sn = server.getServerHostname();
+        	String sn;
+        	if (server.isSinglePlayer()) {
+        	    sn = "Integrated";
+        	}
+        	else {
+        	    sn = server.getServerHostname();
+        	}
         	if(sn == null) sn = "Unknown Server";
         	return sn;
         }
@@ -932,7 +938,10 @@ public class DynmapPlugin
         
         @Override
         public String getServerIP() {
-            return server.getServerHostname();
+            if (server.isSinglePlayer())
+                return "0.0.0.0";
+            else
+                return server.getServerHostname();
         }
         @Override
         public File getModContainerFile(String name) {
