@@ -1269,11 +1269,14 @@ public class DynmapPlugin
         } 
     }
 
-    public void loadExtraBiomes() {
+    public void loadExtraBiomes(String mcver) {
     	int cnt = 0;
+        BiomeMap.loadWellKnownByVersion(mcver);
+    	
     	BiomeGenBase[] list = getBiomeList();
     	
-        for(int i = BiomeMap.LAST_WELL_KNOWN+1; i < list.length; i++) {
+        for(int i = 0; i < list.length; i++) {
+            if (!BiomeMap.byBiomeID(i).isDefault()) continue;
             BiomeGenBase bb = list[i];
             if(bb != null) {
                 String id = bb.biomeName;
@@ -1339,8 +1342,10 @@ public class DynmapPlugin
     {
         server = MinecraftServer.getServer();
 
+        /* Get MC version */
+        String mcver = server.getMinecraftVersion();
         /* Load extra biomes */
-        loadExtraBiomes();
+        loadExtraBiomes(mcver);
         /* Set up player login/quit event handler */
         registerPlayerLoginListener();
         /* Initialize permissions handler */
@@ -1355,9 +1360,6 @@ public class DynmapPlugin
         {
             dataDirectory.mkdirs();
         }
-
-        /* Get MC version */
-        String mcver = server.getMinecraftVersion();
 
         /* Instantiate core */
         if (core == null)
