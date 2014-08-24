@@ -20,6 +20,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
+import java.util.regex.Pattern;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -38,6 +39,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.BanList;
 import net.minecraft.server.management.ServerConfigurationManager;
+import net.minecraft.server.management.UserListBans;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.IChatComponent;
@@ -133,7 +135,9 @@ public class DynmapPlugin
     private Field displayName = null; // MCPC+ display name
 
     private static final String[] TRIGGER_DEFAULTS = { "blockupdate", "chunkpopulate", "chunkgenerate" };
-    
+
+    private static final Pattern patternControlCode = Pattern.compile("(?i)\\u00A7[0-9A-FK-OR]");
+
     public static class BlockUpdateRec {
     	World w;
     	String wid;
@@ -336,7 +340,7 @@ public class DynmapPlugin
 
     public boolean isOp(String player) {
     	player = player.toLowerCase();
-    	return server.getConfigurationManager().getOps().contains(player) ||
+    	return (server.getConfigurationManager().func_152603_m().func_152700_a(player) != null) ||
     			(server.isSinglePlayer() && player.equalsIgnoreCase(server.getServerOwner()));
     }
     
@@ -471,18 +475,16 @@ public class DynmapPlugin
 
             return null;
         }
-        @SuppressWarnings("unchecked")
         @Override
         public Set<String> getIPBans()
         {
             BanList bl = server.getConfigurationManager().getBannedIPs();
             Set<String> ips = new HashSet<String>();
 
-            if (bl.isListActive())
-            {
-                ips = bl.getBannedList().keySet();
+            for (String s : bl.func_152685_a()) {
+                ips.add(s);
             }
-
+            
             return ips;
         }
         @Override
@@ -508,20 +510,25 @@ public class DynmapPlugin
         @Override
         public String getServerName()
         {
-        	String sn = server.getServerHostname();
+            String sn;
+            if (server.isSinglePlayer())
+                sn = "Integrated";
+            else
+                sn = server.getServerHostname();
         	if(sn == null) sn = "Unknown Server";
         	return sn;
         }
         @Override
         public boolean isPlayerBanned(String pid)
         {
-            BanList bl = server.getConfigurationManager().getBannedPlayers();
-            return bl.isBanned(pid);
+            UserListBans bl = server.getConfigurationManager().func_152608_h();
+            return bl.func_152703_a(pid) != null;
         }
+        
         @Override
         public String stripChatColor(String s)
         {
-            return StringUtils.stripControlCodes(s);
+            return patternControlCode.matcher(s).replaceAll("");
         }
         private Set<EventType> registered = new HashSet<EventType>();
         @Override
@@ -621,12 +628,7 @@ public class DynmapPlugin
         @Override
         public boolean sendWebChatEvent(String source, String name, String msg)
         {
-            /*TODO
-            DynmapWebChatEvent evt = new DynmapWebChatEvent(source, name, msg);
-            getServer().getPluginManager().callEvent(evt);
-            return ((evt.isCancelled() == false) && (evt.isProcessed() == false));
-            */
-            return true;
+            return DynmapCommonAPIListener.fireWebChatEvent(source, name, msg);
         }
         @Override
         public void broadcastMessage(String msg)
@@ -679,9 +681,9 @@ public class DynmapPlugin
         {
             ServerConfigurationManager scm = MinecraftServer.getServer().getConfigurationManager();
             if (scm == null) return Collections.emptySet();
-            BanList bl = scm.getBannedPlayers();
+            UserListBans bl = scm.func_152608_h();
             if (bl == null) return Collections.emptySet();
-            if(bl.isBanned(player)) {
+            if(bl.func_152703_a(player) != null) {
                 return Collections.emptySet();
             }
             Set<String> rslt = hasOfflinePermissions(player, perms);
@@ -698,9 +700,9 @@ public class DynmapPlugin
         {
             ServerConfigurationManager scm = MinecraftServer.getServer().getConfigurationManager();
             if (scm == null) return false;
-            BanList bl = scm.getBannedPlayers();
+            UserListBans bl = scm.func_152608_h();
             if (bl == null) return false;
-            if(bl.isBanned(player)) {
+            if(bl.func_152703_a(player) != null) {
                 return false;
             }
             return hasOfflinePermission(player, perm);
@@ -933,7 +935,10 @@ public class DynmapPlugin
         
         @Override
         public String getServerIP() {
-            return server.getServerHostname();
+            if (server.isSinglePlayer())
+                return "0.0.0.0";
+            else
+                return server.getServerHostname();
         }
         @Override
         public File getModContainerFile(String name) {
@@ -1261,11 +1266,14 @@ public class DynmapPlugin
         } 
     }
 
-    public void loadExtraBiomes() {
+    public void loadExtraBiomes(String mcver) {
     	int cnt = 0;
+        BiomeMap.loadWellKnownByVersion(mcver);
+
     	BiomeGenBase[] list = getBiomeList();
     	
-        for(int i = BiomeMap.LAST_WELL_KNOWN+1; i < list.length; i++) {
+        for(int i = 0; i < list.length; i++) {
+            if (!BiomeMap.byBiomeID(i).isDefault()) continue;
             BiomeGenBase bb = list[i];
             if(bb != null) {
                 String id = bb.biomeName;
@@ -1331,8 +1339,11 @@ public class DynmapPlugin
     {
         server = MinecraftServer.getServer();
 
+        /* Get MC version */
+        String mcver = server.getMinecraftVersion();
+
         /* Load extra biomes */
-        loadExtraBiomes();
+        loadExtraBiomes(mcver);
         /* Set up player login/quit event handler */
         registerPlayerLoginListener();
         /* Initialize permissions handler */
@@ -1347,9 +1358,6 @@ public class DynmapPlugin
         {
             dataDirectory.mkdirs();
         }
-
-        /* Get MC version */
-        String mcver = server.getMinecraftVersion();
 
         /* Instantiate core */
         if (core == null)

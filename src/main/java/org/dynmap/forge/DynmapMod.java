@@ -2,6 +2,7 @@ package org.dynmap.forge;
 
 import java.io.File;
 import java.util.List;
+import java.util.Map;
 
 import org.dynmap.DynmapCommonAPI; 
 import org.dynmap.DynmapCommonAPIListener;
@@ -22,6 +23,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent; 
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
+import cpw.mods.fml.common.network.NetworkCheckHandler;
+import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = "Dynmap", name = "Dynmap", version = Version.VER)
 public class DynmapMod
@@ -100,8 +103,6 @@ public class DynmapMod
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        if (!(proxy instanceof ClientProxy))
-            DynmapCommonAPIListener.register(new APICallback()); 
     }
 
     @EventHandler
@@ -111,8 +112,7 @@ public class DynmapMod
     @EventHandler
     public void serverStarted(FMLServerStartedEvent event)
     {
-        if (proxy instanceof ClientProxy)
-            DynmapCommonAPIListener.register(new APICallback()); 
+        DynmapCommonAPIListener.register(new APICallback()); 
         if(plugin == null)
             plugin = proxy.startServer();
         plugin.serverStarted();
@@ -122,5 +122,9 @@ public class DynmapMod
     {
     	proxy.stopServer(plugin);
     	plugin = null;
+    }
+    @NetworkCheckHandler
+    public boolean netCheckHandler(Map<String, String> mods, Side side) {
+        return true;
     }
 }

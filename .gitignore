@@ -8,3 +8,4 @@ Dynmap-*.jar
 .project
 /.settings
 /run
+.DS_Store
