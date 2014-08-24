@@ -1,8 +1,6 @@
 # ProjRed_Exploration 
-version:1.6
+version:1.7
 modname:ProjRed|Exploration
-
-var:block_dyeLeafID=0,block_stoneWallsID=0,block_stonesID=0,block_dyeSaplingID=0,block_oresID=0
 
 cfgfile:config/ProjectRed.cfg
 
@@ -23,8 +21,8 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# block_stoneWallsID:* (projectred.exploration.stonewalls), render=(WALL), opaque=false,cls=mrtjp.projectred.exploration.BlockSpecialStoneWall
-customblock:id=block_stoneWallsID,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+# %projectred.exploration.stonewalls:* (projectred.exploration.stonewalls), render=(WALL), opaque=false,cls=mrtjp.projectred.exploration.BlockSpecialStoneWall
+customblock:id=%projectred.exploration.stonewalls,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,type=wall,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
 
-# block_dyeSaplingID:* (projectred.exploration.dyesapling), render=(CROSSEDSQUARES), opaque=false,cls=mrtjp.projectred.exploration.BlockStainedSapling
-patchblock:id=block_dyeSaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+## block_dyeSaplingID:* (projectred.exploration.dyesapling), render=(CROSSEDSQUARES), opaque=false,cls=mrtjp.projectred.exploration.BlockStainedSapling
+#patchblock:id=block_dyeSaplingID,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
