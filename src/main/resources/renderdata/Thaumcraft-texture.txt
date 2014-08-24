@@ -2,8 +2,16 @@
 version:1.7
 modname:Thaumcraft
 
+var:biomes/biome_eerie=0
+var:biomes/biome_magical_forest=0
+var:biomes/biome_taint=0
 
 cfgfile:config/Thaumcraft.cfg
+
+
+biome:id=biomes/biome_magical_forest,grassColorMulti=55ff81,foliageColorMult=66ffc5,waterColorMult=0077ee
+biome:id=biomes/biome_eerie,grassColorMulti=404840,foliageColorMult=405340,waterColorMult=2e535f
+biome:id=biomes/biome_taint,grassColorMulti=6d4189,foliageColorMult=7c6d87,waterColorMult=cc1188
 
 
 texturepath:assets/thaumcraft/textures/blocks/
