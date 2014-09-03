@@ -231,7 +231,7 @@ public class ChunkSnapshot
                 	System.arraycopy(getValueArray(eb.getSkylightArray()), 0, this.skylight[i], 0, BLOCKS_PER_SECTION / 2);
                 }
                 else {
-                	this.skylight[i] = this.emptyData;
+                	this.skylight[i] = ChunkSnapshot.emptyData;
                 }
             }
         }
