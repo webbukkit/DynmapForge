@@ -9,6 +9,7 @@ import org.dynmap.DynmapCommonAPIListener;
 import org.dynmap.Log;
 import org.dynmap.forge.DynmapPlugin.OurLog;
 
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
@@ -100,9 +101,16 @@ public class DynmapMod
         }
     }
 
+    private boolean isMCPC;
+    
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        MinecraftServer ms = MinecraftServer.getServer();
+        isMCPC = (ms != null) && (ms.getServerModName().contains("mcpc"));
+        if (isMCPC) {
+            DynmapCommonAPIListener.register(new APICallback()); 
+        }
     }
 
     @EventHandler
@@ -112,7 +120,9 @@ public class DynmapMod
     @EventHandler
     public void serverStarted(FMLServerStartedEvent event)
     {
-        DynmapCommonAPIListener.register(new APICallback()); 
+        if (!isMCPC) {
+            DynmapCommonAPIListener.register(new APICallback()); 
+        }
         if(plugin == null)
             plugin = proxy.startServer();
         plugin.serverStarted();
