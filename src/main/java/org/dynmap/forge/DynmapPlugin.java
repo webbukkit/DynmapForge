@@ -43,7 +43,6 @@ import net.minecraft.server.management.UserListBans;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.IChatComponent;
-import net.minecraft.util.StringUtils;
 import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.IWorldAccess;
 import net.minecraft.world.World;
@@ -632,7 +631,7 @@ public class DynmapPlugin
         {
             IChatComponent ichatcomponent = new ChatComponentText(msg);
             MinecraftServer.getServer().getConfigurationManager().sendChatMsg(ichatcomponent);
-            Log.info(StringUtils.stripControlCodes(msg));
+            Log.info(stripChatColor(msg));
         }
         @Override
         public String[] getBiomeIDs()
