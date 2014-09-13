@@ -328,9 +328,6 @@ public class DynmapPlugin
      */
     public class ForgeServer extends DynmapServerInterface implements ITickHandler
     {
-        /* Chunk load handling */
-        private Object loadlock = new Object();
-        private int chunks_in_cur_tick = 0;
         /* Server thread scheduler */
         private Object schedlock = new Object();
         private long cur_tick;
@@ -642,7 +639,7 @@ public class DynmapPlugin
         public MapChunkCache createMapChunkCache(DynmapWorld w, List<DynmapChunk> chunks,
                 boolean blockdata, boolean highesty, boolean biome, boolean rawbiome)
         {
-            MapChunkCache c = w.getChunkCache(chunks);
+            ForgeMapChunkCache c = (ForgeMapChunkCache) w.getChunkCache(chunks);
             if(c == null) {
             	return null;
             }
@@ -677,69 +674,37 @@ public class DynmapPlugin
                 return c;
             }
             
-            final MapChunkCache cc = c;
-            long delay = 0;
-
-            while (!cc.isDoneLoading())
-            {
-                Future<Boolean> f = this.callSyncMethod(new Callable<Boolean>()
-                {
-                    public Boolean call() throws Exception
-                    {
-                        boolean exhausted = true;
-
-                        synchronized (loadlock)
-                        {
-                            if (chunks_in_cur_tick > 0)
-                            {
-                                // Update busy state on world
-                                ForgeWorld fw = (ForgeWorld)cc.getWorld();
-                                setBusy(fw.getWorld());
-                                boolean done = false;
-                                while (!done) {
-                                    int cnt = chunks_in_cur_tick;
-                                    if (cnt > 5) cnt = 5;
-                                    chunks_in_cur_tick -= cc.loadChunks(cnt);
-                                    exhausted = (chunks_in_cur_tick == 0) || ((System.nanoTime() - cur_tick_starttime) > perTickLimit);
-                                    done = exhausted || cc.isDoneLoading();
-                                }
-                            }
-                        }
-
-                        return exhausted;
-                    }
-                }, delay);
-                Boolean needdelay;
-
-                try
-                {
-                    needdelay = f.get();
+            //Now handle any chunks in server thread that are already loaded (on server thread)
+            final ForgeMapChunkCache cc = c;
+            Future<Boolean> f = this.callSyncMethod(new Callable<Boolean>() {
+                public Boolean call() throws Exception {
+                    // Update busy state on world
+                    ForgeWorld fw = (ForgeWorld)cc.getWorld();
+                    setBusy(fw.getWorld());
+                    cc.getLoadedChunks();
+                    return true;
                 }
-                catch (CancellationException cx)
-                {
-                    return null;
-                }
-                catch (ExecutionException xx) {
-                    Log.severe("Exception while loading chunks", xx.getCause());
-                    return null;
-                }
-                catch (Exception ix)
-                {
-                    Log.severe(ix);
-                    return null;
-                }
-
-                if ((needdelay != null) && needdelay.booleanValue())
-                {
-                	delay = 1;
-                }
-                else {
-                	delay = 0;
-                }
+            }, 0);
+            try {
+                f.get();
+            }
+            catch (CancellationException cx) {
+                return null;
+            }
+            catch (ExecutionException xx) {
+                Log.severe("Exception while loading chunks", xx.getCause());
+                return null;
+            }
+            catch (Exception ix) {
+                Log.severe(ix);
+                return null;
             }
             if(w.isLoaded() == false) {
             	return null;
             }
+            // Now, do rest of chunk reading from calling thread
+            c.readChunks(chunks.size());
+            
             return c;
         }
         @Override
@@ -794,7 +759,6 @@ public class DynmapPlugin
 							mapManager.touch(r.wid, r.x, r.y, r.z, "blockchange");
 					}
 				}
-
                 long now;
                 
 				synchronized(schedlock) {
@@ -808,9 +772,6 @@ public class DynmapPlugin
 					else {
 						tr = runqueue.poll();
 					}
-				}
-                synchronized (loadlock) {
-                	chunks_in_cur_tick = mapManager.getMaxChunkLoadsPerTick();
 				}
 				while (!done) {
 					tr.future.run();

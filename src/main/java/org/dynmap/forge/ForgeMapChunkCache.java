@@ -1,7 +1,6 @@
 package org.dynmap.forge;
 
 import java.io.DataInputStream;
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -25,9 +24,7 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.nbt.NBTTagLong;
 import net.minecraft.nbt.NBTTagShort;
 import net.minecraft.nbt.NBTTagString;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.ChunkCoordIntPair;
-import net.minecraft.world.MinecraftException;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -69,6 +66,8 @@ public class ForgeMapChunkCache extends MapChunkCache
     private static Field pendingAnvilChunksCoordinates = null; // Set
     private static Field pendingAnvilChunksMCPC; // LinkedHashMap
     private static Field syncLockObject = null; // Object
+    private static Method writechunktonbt = null; // writeChunkToNBT(Chunk c, World w, NBTTagCompound nbt)
+
     /* AnvilChunkLoaderPending fields */
     private static Field chunkCoord = null;
     private static Field nbtTag = null;
@@ -92,6 +91,8 @@ public class ForgeMapChunkCache extends MapChunkCache
     private byte[][] sameneighborbiomecnt;
     private BiomeMap[][] biomemap;
     private boolean[][] isSectionNotEmpty; /* Indexed by snapshot index, then by section index */
+    private Set<?> queue = null;
+    private Object queue_mcpc = null;
 
     private static final BlockStep unstep[] = { BlockStep.X_MINUS, BlockStep.Y_MINUS, BlockStep.Z_MINUS,
             BlockStep.X_PLUS, BlockStep.Y_PLUS, BlockStep.Z_PLUS
@@ -103,45 +104,6 @@ public class ForgeMapChunkCache extends MapChunkCache
         return (cy << 8) | (cz << 4) | cx;
     }
 
-    private static class NoChunkFoundThrow extends Error {
-        private static final long serialVersionUID = 207122916585582193L;
-    }
-    
-    private static class NoCreateChunkLoader implements IChunkLoader {
-    	IChunkLoader base;
-    	World ww;
-    	int xx, zz;
-		@Override
-		public Chunk loadChunk(World w, int x, int z) {
-			Chunk c = base.loadChunk(w, x, z);
-			if((c == null) && (w == ww) && (x == xx) && (z == zz)) {
-				throw new NoChunkFoundThrow();
-			}
-			return c;
-		}
-		@Override
-		public void saveChunk(World var1, Chunk var2) {
-			base.saveChunk(var1, var2);
-		}
-
-		@Override
-		public void saveExtraChunkData(World var1, Chunk var2) {
-			base.saveExtraChunkData(var1, var2);
-		}
-
-		@Override
-		public void chunkTick() {
-			base.chunkTick();
-		}
-
-		@Override
-		public void saveExtraData() {
-			base.saveExtraData();
-		}
-    }
-    
-    private static NoCreateChunkLoader noCreateLoader = new NoCreateChunkLoader();
-    
     /**
      * Iterator for traversing map chunk cache (base is for non-snapshot)
      */
@@ -1013,8 +975,19 @@ public class ForgeMapChunkCache extends MapChunkCache
     		        syncLockObject.setAccessible(true);
     		    }
     		}
+    		// Get writeChunkToNBT method
+    	    Method[] ma = AnvilChunkLoader.class.getDeclaredMethods();
+    	    for (Method m : ma) {
+    	        Class<?>[] p = m.getParameterTypes();
+    	        if ((p.length == 3) && (p[0].equals(Chunk.class)) && (p[1].equals(World.class)) && (p[2].equals(NBTTagCompound.class))) {
+    	            writechunktonbt = m;
+    	            m.setAccessible(true);
+    	            break;
+    	        }
+    	    }
+    		
             if (((unloadqueue == null) && ((unloadqueue_mcpc == null) || (unloadqueue_mcpc_contains == null))) || 
-                    (currentchunkloader == null))
+                    (currentchunkloader == null) || (writechunktonbt == null))
             {
     			Log.severe("ERROR: cannot find unload queue or chunk provider field - dynmap cannot load chunks");
     		}
@@ -1101,81 +1074,37 @@ public class ForgeMapChunkCache extends MapChunkCache
         snaparray = new ChunkSnapshot[snapcnt];
         snaptile = new DynIntHashMap[snapcnt];
         isSectionNotEmpty = new boolean[snapcnt][];
-    }
-
-    private static boolean ldchunk = false;
-    
-    private Chunk loadChunkNoGenerate(int x, int z)
-    {
-        if ((cps == null) || (currentchunkloader == null))
-        {
-            return null;
-        }
-        if(!ldchunk) {
-            Log.info("Loading chunks without generating");
-            ldchunk = true;
-        }
-
-        Chunk c = null;
-
+        
         try
         {
-            IChunkLoader cur_ccl = null;
-            /* Get current chunk loader - save value */
-            cur_ccl = (IChunkLoader)currentchunkloader.get(cps);
-            /* Set current chunk loader to no-create loader - prevents generate on miss */
-            currentchunkloader.set(cps,  noCreateLoader);
-            /* Set loader to prevent create of target chunk */
-            noCreateLoader.base = cur_ccl;
-            noCreateLoader.ww = w;
-            noCreateLoader.xx = x;
-            noCreateLoader.zz = z;
-            
-            try
+            if ((unloadqueue != null) && (cps != null))
             {
-                /* Now, try to load chunk - throws IllegalArgumentException if doesn't exist */
-                c = cps.loadChunk(x,  z);
-            } catch (NoChunkFoundThrow ncft) {
-            	c = null;
+                queue = (Set<?>)unloadqueue.get(cps);
             }
-            finally
-            {
-                /* And restore current chunk loader */
-                currentchunkloader.set(cps,  cur_ccl);
-                noCreateLoader.ww = null;
+            else if ((unloadqueue_mcpc != null) && (cps != null)) {
+                queue_mcpc = unloadqueue_mcpc.get(cps);
             }
         }
         catch (IllegalArgumentException iax)
         {
-            c = null;
         }
-        catch (IllegalAccessException iaxx)
+        catch (IllegalAccessException e)
         {
-            c = null;
-        }
-        catch (NullPointerException npx)
-        {
-        	c = null;
         }
 
-        return c;
     }
-    
-    private static boolean rdchunk = false;
-    
-    private boolean readChunkActive = true;
+
+    private static boolean didError = false;
     
     public NBTTagCompound readChunk(int x, int z) {
         if((cps == null) || (!(cps.currentChunkLoader instanceof AnvilChunkLoader)) ||
                 (((chunksToRemove == null) || (pendingAnvilChunksCoordinates == null)) && (pendingAnvilChunksMCPC == null)) ||
                 (syncLockObject == null)) {
-            readChunkActive = false;
+            if (!didError) {
+                Log.severe("**** DYNMAP CANNOT READ CHUNKS (UNSUPPORTED CHUNK LOADER) ****");
+                didError = true;
+            }
             return null;
-        }
-        readChunkActive = true;
-        if(!rdchunk) {
-            Log.info("Reading chunks without loading/activating");
-            rdchunk = true;
         }
         try {
             AnvilChunkLoader acl = (AnvilChunkLoader)cps.currentChunkLoader;
@@ -1306,33 +1235,197 @@ public class ForgeMapChunkCache extends MapChunkCache
         }
         return val;
     }
+    
+    private boolean isChunkVisible(DynmapChunk chunk) {
+        boolean vis = true;
+        if(visible_limits != null) {
+            vis = false;
+            for(VisibilityLimit limit : visible_limits) {
+                if (limit.doIntersectChunk(chunk.x, chunk.z)) {
+                    vis = true;
+                    break;
+                }
+            }
+        }
+        if(vis && (hidden_limits != null)) {
+            for(VisibilityLimit limit : hidden_limits) {
+                if (limit.doIntersectChunk(chunk.x, chunk.z)) {
+                    vis = false;
+                    break;
+                }
+            }
+        }
+        return vis;
+    }
+    
+    private boolean tryChunkCache(DynmapChunk chunk, boolean vis) {
+        /* Check if cached chunk snapshot found */
+        ChunkSnapshot ss = null;
+        SnapshotRec ssr = DynmapPlugin.plugin.sscache.getSnapshot(dw.getName(), chunk.x, chunk.z, blockdata, biome, biomeraw, highesty); 
+        if(ssr != null) {
+            ss = ssr.ss;
+            if (!vis)
+            {
+                if (hidestyle == HiddenChunkStyle.FILL_STONE_PLAIN)
+                {
+                    ss = STONE;
+                }
+                else if (hidestyle == HiddenChunkStyle.FILL_OCEAN)
+                {
+                    ss = OCEAN;
+                }
+                else
+                {
+                    ss = EMPTY;
+                }
+            }
+            int idx = (chunk.x-x_min) + (chunk.z - z_min)*x_dim;
+            snaparray[idx] = ss;
+            snaptile[idx] = ssr.tileData;
+        }
+        return (ssr != null);
+    }
+    
+    private boolean isChunkUnloadPending(DynmapChunk chunk) {
+        boolean isunloadpending = false;
+        
+        if (queue != null)
+        {
+            long coord = ChunkCoordIntPair.chunkXZ2Int(chunk.x, chunk.z);
+            isunloadpending = queue.contains(Long.valueOf(coord));
+        }
+        else if (queue_mcpc != null)
+        {
+            try {
+                isunloadpending = (Boolean)unloadqueue_mcpc_contains.invoke(queue_mcpc, chunk.x, chunk.z);
+            } catch (IllegalArgumentException e) {
+            } catch (IllegalAccessException e) {
+            } catch (InvocationTargetException e) {
+            }
+        }
+        return isunloadpending;
+    }
 
+    // Prep snapshot and add to cache
+    private SnapshotRec prepChunkSnapshot(DynmapChunk chunk, NBTTagCompound nbt) {
+        ChunkSnapshot ss = new ChunkSnapshot(nbt, dw.worldheight);
+        DynIntHashMap tileData = new DynIntHashMap();
+
+        NBTTagList tiles = nbt.getTagList("TileEntities");
+        if(tiles == null) tiles = new NBTTagList();
+        /* Get tile entity data */
+        List<Object> vals = new ArrayList<Object>();
+        for(int tid = 0; tid < tiles.tagCount(); tid++) {
+            NBTTagCompound tc = (NBTTagCompound)tiles.tagAt(tid);
+            int tx = tc.getInteger("x");
+            int ty = tc.getInteger("y");
+            int tz = tc.getInteger("z");
+            int cx = tx & 0xF;
+            int cz = tz & 0xF;
+            int blkid = ss.getBlockTypeId(cx, ty, cz);
+            int blkdat = ss.getBlockData(cx, ty, cz);
+            String[] te_fields = HDBlockModels.getTileEntityFieldsNeeded(blkid,  blkdat);
+            if(te_fields != null) {
+                vals.clear();
+                for(String id: te_fields) {
+                    NBTBase v = tc.getTag(id);  /* Get field */
+                    if(v != null) {
+                        Object val = getNBTValue(v);
+                        if(val != null) {
+                            vals.add(id);
+                            vals.add(val);
+                        }
+                    }
+                }
+                if(vals.size() > 0) {
+                    Object[] vlist = vals.toArray(new Object[vals.size()]);
+                    tileData.put(getIndexInChunk(cx, ty, cz), vlist);
+                }
+            }
+        }
+        SnapshotRec ssr = new SnapshotRec();
+        ssr.ss = ss;
+        ssr.tileData = tileData;
+        DynmapPlugin.plugin.sscache.putSnapshot(dw.getName(), chunk.x, chunk.z, ssr, blockdata, biome, biomeraw, highesty);
+        
+        return ssr;
+    }
+    
+    /** 
+     * Read NBT data from loaded chunks - needs to be called from server/world thread to be safe
+     * @returns number loaded
+     */
+    public int getLoadedChunks() {
+        int cnt = 0;
+        if(!dw.isLoaded()) {
+            isempty = true;
+            unloadChunks();
+            return 0;
+        }
+        ListIterator<DynmapChunk> iter = chunks.listIterator();
+        while (iter.hasNext()) {
+            long startTime = System.nanoTime();
+            DynmapChunk chunk = iter.next();
+            int chunkindex = (chunk.x-x_min) + (chunk.z - z_min)*x_dim;
+            if (snaparray[chunkindex] != null) continue;    // Skip if already processed
+            
+            boolean vis = isChunkVisible(chunk);
+
+            /* Check if cached chunk snapshot found */
+            if (tryChunkCache(chunk, vis)) {
+                endChunkLoad(startTime, ChunkStats.CACHED_SNAPSHOT_HIT);
+                cnt++;
+            }
+            // If chunk is loaded and not being unloaded, we're grabbing its NBT data
+            else if (cps.chunkExists(chunk.x, chunk.z) && (!isChunkUnloadPending(chunk))) {
+                ChunkSnapshot ss;
+                DynIntHashMap tileData;
+                if (vis) {  // If visible 
+                    NBTTagCompound nbt = new NBTTagCompound();
+                    try {
+                        writechunktonbt.invoke(cps.currentChunkLoader, cps.loadChunk(chunk.x, chunk.z), w, nbt);
+                    } catch (IllegalAccessException e) {
+                    } catch (IllegalArgumentException e) {
+                    } catch (InvocationTargetException e) {
+                    }                
+                    SnapshotRec ssr = prepChunkSnapshot(chunk, nbt);
+                    ss = ssr.ss;
+                    tileData = ssr.tileData;
+                }
+                else {
+                    if (hidestyle == HiddenChunkStyle.FILL_STONE_PLAIN) {
+                        ss = STONE;
+                    }
+                    else if (hidestyle == HiddenChunkStyle.FILL_OCEAN) {
+                        ss = OCEAN;
+                    }
+                    else {
+                        ss = EMPTY;
+                    }
+                    tileData = new DynIntHashMap();
+                }
+                snaparray[chunkindex] = ss;
+                snaptile[chunkindex] = tileData;
+                endChunkLoad(startTime, ChunkStats.LOADED_CHUNKS);
+                cnt++;
+            }
+        }
+        return cnt;
+    }
+
+    @Override
     public int loadChunks(int max_to_load)
+    {
+        return getLoadedChunks() + readChunks(max_to_load);
+        
+    }
+    
+    public int readChunks(int max_to_load)
     {
         if(!dw.isLoaded()) {
         	isempty = true;
         	unloadChunks();
         	return 0;
-        }
-        Set<?> queue = null;
-        Object queue_mcpc = null;
-        IChunkProvider cp = w.getChunkProvider();
-
-        try
-        {
-            if ((unloadqueue != null) && (cps != null))
-            {
-                queue = (Set<?>)unloadqueue.get(cps);
-            }
-            else if ((unloadqueue_mcpc != null) && (cps != null)) {
-                queue_mcpc = unloadqueue_mcpc.get(cps);
-            }
-        }
-        catch (IllegalArgumentException iax)
-        {
-        }
-        catch (IllegalAccessException e)
-        {
         }
 
         int cnt = 0;
@@ -1350,238 +1443,50 @@ public class ForgeMapChunkCache extends MapChunkCache
             long startTime = System.nanoTime();
 
             DynmapChunk chunk = iterator.next();
-            boolean vis = true;
-            if(visible_limits != null) {
-                vis = false;
-                for(VisibilityLimit limit : visible_limits) {
-                    if (limit.doIntersectChunk(chunk.x, chunk.z)) {
-                        vis = true;
-                        break;
-                    }
-                }
-            }
-            if(vis && (hidden_limits != null)) {
-                for(VisibilityLimit limit : hidden_limits) {
-                    if (limit.doIntersectChunk(chunk.x, chunk.z)) {
-                        vis = false;
-                        break;
-                    }
-                }
-            }
+
+            int chunkindex = (chunk.x-x_min) + (chunk.z - z_min)*x_dim;
+
+            if (snaparray[chunkindex] != null) continue;    // Skip if already processed
+
+            boolean vis = isChunkVisible(chunk);
 
             /* Check if cached chunk snapshot found */
-            ChunkSnapshot ss = null;
-            DynIntHashMap tileData = null;
-            SnapshotRec ssr = DynmapPlugin.plugin.sscache.getSnapshot(dw.getName(), chunk.x, chunk.z, blockdata, biome, biomeraw, highesty); 
-            if(ssr != null) {
-                ss = ssr.ss;
-                if (!vis)
-                {
-                    if (hidestyle == HiddenChunkStyle.FILL_STONE_PLAIN)
-                    {
-                        ss = STONE;
-                    }
-                    else if (hidestyle == HiddenChunkStyle.FILL_OCEAN)
-                    {
-                        ss = OCEAN;
-                    }
-                    else
-                    {
-                        ss = EMPTY;
-                    }
-                }
-                int idx = (chunk.x-x_min) + (chunk.z - z_min)*x_dim;
-                snaparray[idx] = ss;
-                snaptile[idx] = ssr.tileData;
+            if (tryChunkCache(chunk, vis)) {
                 endChunkLoad(startTime, ChunkStats.CACHED_SNAPSHOT_HIT);
-
-                continue;
-            }
-
-            boolean wasLoaded = cps.chunkExists(chunk.x, chunk.z);
-            boolean didload = false;
-            boolean isunloadpending = false;
-
-            if (queue != null)
-            {
-                long coord = ChunkCoordIntPair.chunkXZ2Int(chunk.x, chunk.z);
-                isunloadpending = queue.contains(Long.valueOf(coord));
-            }
-            else if (queue_mcpc != null)
-            {
-                try {
-                    isunloadpending = (Boolean)unloadqueue_mcpc_contains.invoke(queue_mcpc, chunk.x, chunk.z);
-                } catch (IllegalArgumentException e) {
-                } catch (IllegalAccessException e) {
-                } catch (InvocationTargetException e) {
-                }
-            }
-
-            Chunk c = null;
-
-            if (isunloadpending)    /* Workaround: can't be pending if not loaded */
-            {
-                wasLoaded = true;
-            }
-
-            NBTTagCompound nbt = null;
-            
-            if (!wasLoaded)
-            {
-                nbt = readChunk(chunk.x, chunk.z);
-                if((nbt == null) && (!readChunkActive)) {
-                    c = loadChunkNoGenerate(chunk.x, chunk.z);
-                }
-                didload = (c != null) || (nbt != null);
-            }
-            else    /* If already was loaded, no need to load */
-            {
-                c = cp.loadChunk(chunk.x, chunk.z);
-                didload = true;
-            }
-
-            /* If it did load, make cache of it */
-            if (didload)
-            {
-                tileData = new DynIntHashMap();
-
-                /* Test if chunk isn't populated */
-                boolean populated = true;
-
-                if (!vis)
-                {
-                    if (hidestyle == HiddenChunkStyle.FILL_STONE_PLAIN)
-                    {
-                        ss = STONE;
-                    }
-                    else if (hidestyle == HiddenChunkStyle.FILL_OCEAN)
-                    {
-                        ss = OCEAN;
-                    }
-                    else
-                    {
-                        ss = EMPTY;
-                    }
-                }
-                else if (!populated)    /* If not populated, treat as empty */
-                {
-                    ss = EMPTY;
-                }
-                else
-                {
-                    if(nbt != null) {
-                        ss = new ChunkSnapshot(nbt, dw.worldheight);
-                        
-                        NBTTagList tiles = nbt.getTagList("TileEntities");
-                        if(tiles == null) tiles = new NBTTagList();
-                        /* Get tile entity data */
-                        List<Object> vals = new ArrayList<Object>();
-                        for(int tid = 0; tid < tiles.tagCount(); tid++) {
-                            NBTTagCompound tc = (NBTTagCompound)tiles.tagAt(tid);
-                            int tx = tc.getInteger("x");
-                            int ty = tc.getInteger("y");
-                            int tz = tc.getInteger("z");
-                            int cx = tx & 0xF;
-                            int cz = tz & 0xF;
-                            int blkid = ss.getBlockTypeId(cx, ty, cz);
-                            int blkdat = ss.getBlockData(cx, ty, cz);
-                            String[] te_fields = HDBlockModels.getTileEntityFieldsNeeded(blkid,  blkdat);
-                            if(te_fields != null) {
-                                vals.clear();
-                                for(String id: te_fields) {
-                                    NBTBase v = tc.getTag(id);  /* Get field */
-                                    if(v != null) {
-                                        Object val = getNBTValue(v);
-                                        if(val != null) {
-                                            vals.add(id);
-                                            vals.add(val);
-                                        }
-                                    }
-                                }
-                                if(vals.size() > 0) {
-                                    Object[] vlist = vals.toArray(new Object[vals.size()]);
-                                    tileData.put(getIndexInChunk(cx, ty, cz), vlist);
-                                }
-                            }
-                        }
-                        ssr = new SnapshotRec();
-                        ssr.ss = ss;
-                        ssr.tileData = tileData;
-                        DynmapPlugin.plugin.sscache.putSnapshot(dw.getName(), chunk.x, chunk.z, ssr, blockdata, biome, biomeraw, highesty);
-                    }
-                    else {
-                        ss = new ChunkSnapshot(c, dw.worldheight);
-                        /* Get tile entity data */
-                        List<Object> vals = new ArrayList<Object>();
-                        for(Object t : c.chunkTileEntityMap.values()) {
-                            TileEntity te = (TileEntity)t;
-                            int cx = te.xCoord & 0xF;
-                            int cz = te.zCoord & 0xF;
-                            int blkid = ss.getBlockTypeId(cx, te.yCoord, cz);
-                            int blkdat = ss.getBlockData(cx, te.yCoord, cz);
-                            String[] te_fields = HDBlockModels.getTileEntityFieldsNeeded(blkid,  blkdat);
-                            if(te_fields != null) {
-                                NBTTagCompound tc = new NBTTagCompound();
-                                try {
-                                    te.writeToNBT(tc);
-                                } catch (Exception x) {
-                                }
-                                vals.clear();
-                                for(String id: te_fields) {
-                                    NBTBase v = tc.getTag(id);  /* Get field */
-                                    if(v != null) {
-                                        Object val = getNBTValue(v);
-                                        if(val != null) {
-                                            vals.add(id);
-                                            vals.add(val);
-                                        }
-                                    }
-                                }
-                                if(vals.size() > 0) {
-                                    Object[] vlist = vals.toArray(new Object[vals.size()]);
-                                    tileData.put(getIndexInChunk(cx,te.yCoord,cz), vlist);
-                                }
-                            }
-                        }
-                        ssr = new SnapshotRec();
-                        ssr.ss = ss;
-                        ssr.tileData = tileData;
-                        DynmapPlugin.plugin.sscache.putSnapshot(dw.getName(), chunk.x, chunk.z, ssr, blockdata, biome, biomeraw, highesty);
-                    }
-                }
-
-                snaparray[(chunk.x - x_min) + (chunk.z - z_min) * x_dim] = ss;
-                snaptile[(chunk.x-x_min) + (chunk.z - z_min)*x_dim] = tileData;
-
-                /* If wasn't loaded before, we need to do unload */
-                if (nbt != null) {
-                    /* No unload needed if we fetched NBT */
-                }
-                else if (!wasLoaded)
-                {
-                    if (cps != null)
-                    {
-                        cps.unloadChunksIfNotNearSpawn(chunk.x,  chunk.z);
-                    }
-                }
-                else if (isunloadpending)   /* Else, if loaded and unload is pending */
-                {
-                    if (cps != null)
-                    {
-                        cps.unloadChunksIfNotNearSpawn(chunk.x,  chunk.z);
-                    }
-                }
-                if (wasLoaded) {
-                    endChunkLoad(startTime, ChunkStats.LOADED_CHUNKS);
-                }
-                else {
-                    endChunkLoad(startTime, ChunkStats.UNLOADED_CHUNKS);
-                }
             }
             else {
-                endChunkLoad(startTime, ChunkStats.UNGENERATED_CHUNKS);
+                NBTTagCompound nbt = readChunk(chunk.x, chunk.z);
+                // If read was good
+                if (nbt != null) {
+                    ChunkSnapshot ss;
+                    DynIntHashMap tileData;
+                    // If hidden
+                    if (!vis) {
+                        if (hidestyle == HiddenChunkStyle.FILL_STONE_PLAIN) {
+                            ss = STONE;
+                        }
+                        else if (hidestyle == HiddenChunkStyle.FILL_OCEAN) {
+                            ss = OCEAN;
+                        }
+                        else {
+                            ss = EMPTY;
+                        }
+                        tileData = new DynIntHashMap();
+                    }
+                    else {
+                        // Prep snapshot
+                        SnapshotRec ssr = prepChunkSnapshot(chunk, nbt);
+                        ss = ssr.ss;
+                        tileData = ssr.tileData;
+                    }
+                    snaparray[chunkindex] = ss;
+                    snaptile[chunkindex] = tileData;
+                    endChunkLoad(startTime, ChunkStats.UNLOADED_CHUNKS);
+                }
+                else {
+                    endChunkLoad(startTime, ChunkStats.UNGENERATED_CHUNKS);
+                }
             }
-
             cnt++;
         }
 
@@ -1602,14 +1507,6 @@ public class ForgeMapChunkCache extends MapChunkCache
                 {
                     isempty = false;
                 }
-            }
-            if(updateEntityTick != null) {
-            	try {
-            		/* Clear updateEntityTick - prevents problems due to entities not being cleaned up when no players are online */
-            		updateEntityTick.set(w, 0);
-            	} catch (Exception x) {
-            		Log.severe("Cannot update updateEntityTick on world - " + x.getMessage());
-            	}
             }
         }
         return cnt;
