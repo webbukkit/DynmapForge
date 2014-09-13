@@ -746,10 +746,72 @@ public class DynmapPlugin
                 Log.severe("CraftBukkit build does not support biome APIs");
             }
 
-            synchronized (loadlock) {
-                c.loadChunks(chunks.size());
+            if (chunks.size() == 0)     /* No chunks to get? */
+            {
+                c.loadChunks(0);
+                return c;
             }
             
+            final MapChunkCache cc = c;
+            long delay = 0;
+
+            while (!cc.isDoneLoading())
+            {
+                Future<Boolean> f = this.callSyncMethod(new Callable<Boolean>()
+                {
+                    public Boolean call() throws Exception
+                    {
+                        boolean exhausted = true;
+
+                        synchronized (loadlock)
+                        {
+                            if (chunks_in_cur_tick > 0)
+                            {
+                                // Update busy state on world
+                                ForgeWorld fw = (ForgeWorld)cc.getWorld();
+                                setBusy(fw.getWorld());
+                                boolean done = false;
+                                while (!done) {
+                                    int cnt = chunks_in_cur_tick;
+                                    if (cnt > 5) cnt = 5;
+                                    chunks_in_cur_tick -= cc.loadChunks(cnt);
+                                    exhausted = (chunks_in_cur_tick == 0) || ((System.nanoTime() - cur_tick_starttime) > perTickLimit);
+                                    done = exhausted || cc.isDoneLoading();
+                                }
+                            }
+                        }
+
+                        return exhausted;
+                    }
+                }, delay);
+                Boolean needdelay;
+
+                try
+                {
+                    needdelay = f.get();
+                }
+                catch (CancellationException cx)
+                {
+                    return null;
+                }
+                catch (ExecutionException xx) {
+                    Log.severe("Exception while loading chunks", xx.getCause());
+                    return null;
+                }
+                catch (Exception ix)
+                {
+                    Log.severe(ix);
+                    return null;
+                }
+
+                if ((needdelay != null) && needdelay.booleanValue())
+                {
+                	delay = 1;
+                }
+                else {
+                	delay = 0;
+                }
+            }
             if(w.isLoaded() == false) {
             	return null;
             }
