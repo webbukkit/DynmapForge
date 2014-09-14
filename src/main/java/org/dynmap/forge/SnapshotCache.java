@@ -42,7 +42,7 @@ public class SnapshotCache {
         }
         protected boolean removeEldestEntry(Map.Entry<String, CacheRec> last) {
             boolean remove = (size() >= limit);
-            if(remove) {
+            if(remove && (last != null) && (last.getValue() != null)) {
                 reverselookup.remove(last.getValue().ref);
             }
             return remove;
