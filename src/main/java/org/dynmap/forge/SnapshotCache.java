@@ -66,10 +66,12 @@ public class SnapshotCache {
      */
     public void invalidateSnapshot(String w, int x, int y, int z) {
         String key = getKey(w, x>>4, z>>4);
-        CacheRec rec = snapcache.remove(key);
-        if(rec != null) {
-            snapcache.reverselookup.remove(rec.ref);
-            rec.ref.clear();
+        synchronized(snapcache) {
+            CacheRec rec = snapcache.remove(key);
+            if(rec != null) {
+                snapcache.reverselookup.remove(rec.ref);
+                rec.ref.clear();
+            }
         }
         //processRefQueue();
     }
@@ -80,10 +82,12 @@ public class SnapshotCache {
         for(int xx = (x0>>4); xx <= (x1>>4); xx++) {
             for(int zz = (z0>>4); zz <= (z1>>4); zz++) {
                 String key = getKey(w, xx, zz);
-                CacheRec rec = snapcache.remove(key);
-                if(rec != null) {
-                    snapcache.reverselookup.remove(rec.ref);
-                    rec.ref.clear();
+                synchronized(snapcache) {
+                    CacheRec rec = snapcache.remove(key);
+                    if(rec != null) {
+                        snapcache.reverselookup.remove(rec.ref);
+                        rec.ref.clear();
+                    }
                 }
             }
         }
@@ -97,12 +101,15 @@ public class SnapshotCache {
         String key = getKey(w, chunkx, chunkz);
         processRefQueue();
         SnapshotRec ss = null;
-        CacheRec rec = snapcache.get(key);
-        if(rec != null) {
-            ss = rec.ref.get();
-            if(ss == null) {
-                snapcache.reverselookup.remove(rec.ref);
-                snapcache.remove(key);
+        CacheRec rec;
+        synchronized(snapcache) {
+            rec = snapcache.get(key);
+            if(rec != null) {
+                ss = rec.ref.get();
+                if(ss == null) {
+                    snapcache.reverselookup.remove(rec.ref);
+                    snapcache.remove(key);
+                }
             }
         }
         if(ss != null) {
@@ -146,9 +153,11 @@ public class SnapshotCache {
     private void processRefQueue() {
         Reference<? extends SnapshotRec> ref;
         while((ref = refqueue.poll()) != null) {
-            String k = snapcache.reverselookup.remove(ref);
-            if(k != null) {
-                snapcache.remove(k);
+            synchronized(snapcache) {
+                String k = snapcache.reverselookup.remove(ref);
+                if(k != null) {
+                    snapcache.remove(k);
+                }
             }
         }
     }
