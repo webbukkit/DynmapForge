@@ -6,7 +6,7 @@
 	<property name="forge.baseversion" value="7.8.1"/>
 	<property name="forge.build" value="738"/>
 	<property name="project.version" value="2.0.0"/>
-	<property name="project.devversion" value="-alpha-3"/>
+	<property name="project.devversion" value="-alpha-4"/>
 	<property name="dynmapcore.devversion" value="-SNAPSHOT"/>
 
 	<!-- Properties (build control) -->
