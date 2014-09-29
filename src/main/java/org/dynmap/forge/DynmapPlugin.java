@@ -653,12 +653,15 @@ public class DynmapPlugin
         @Override
         public double getCacheHitRate()
         {
-            return sscache.getHitRate();
+            if(sscache != null)
+                return sscache.getHitRate();
+            return 0.0;
         }
         @Override
         public void resetCacheStats()
         {
-            sscache.resetStats();
+            if(sscache != null)
+                sscache.resetStats();
         }
         @Override
         public DynmapWorld getWorldByName(String wname)
@@ -1622,7 +1625,8 @@ public class DynmapPlugin
     	World world;
 		@Override
         public void markBlockForUpdate(int x, int y, int z) {
-            sscache.invalidateSnapshot(worldid, x, y, z);
+            if(sscache != null)
+                sscache.invalidateSnapshot(worldid, x, y, z);
             if(onblockchange) {
             	BlockUpdateRec r = new BlockUpdateRec();
             	r.w = world;
@@ -1633,7 +1637,8 @@ public class DynmapPlugin
 		}
 		@Override
 	    public void markBlockForRenderUpdate(int x, int y, int z) {
-            sscache.invalidateSnapshot(worldid, x, y, z);
+            if(sscache != null)
+                sscache.invalidateSnapshot(worldid, x, y, z);
             if(onlightingchange) {
             	mapManager.touch(worldid, x, y, z, "lightingchange");
             }
