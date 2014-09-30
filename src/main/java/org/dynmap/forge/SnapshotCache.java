@@ -141,11 +141,13 @@ public class SnapshotCache {
             rec.ref = new SoftReference<SnapshotRec>(ss, refqueue);
         else
             rec.ref = new WeakReference<SnapshotRec>(ss, refqueue);
-        CacheRec prevrec = snapcache.put(key, rec);
-        if(prevrec != null) {
-            snapcache.reverselookup.remove(prevrec.ref);
+        synchronized(snapcache) {
+            CacheRec prevrec = snapcache.put(key, rec);
+            if(prevrec != null) {
+                snapcache.reverselookup.remove(prevrec.ref);
+            }
+            snapcache.reverselookup.put(rec.ref, key);
         }
-        snapcache.reverselookup.put(rec.ref, key);
     }
     /**
      * Process reference queue
