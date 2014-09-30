@@ -453,6 +453,7 @@ public class DynmapPlugin
         {
             plugin.onDisable();
             plugin.onEnable();
+            plugin.onStart();
         }
         @Override
         public DynmapPlayer getPlayer(String name)
@@ -1342,6 +1343,10 @@ public class DynmapPlugin
         {
         	return;
         }
+        DynmapCommonAPIListener.apiInitialized(core);
+    }
+    
+    public void onStart() {
         /* Enable core */
         if (!core.enableCore(null))
         {
@@ -1404,7 +1409,7 @@ public class DynmapPlugin
         /* Submit metrics to mcstats.org */
         initMetrics();
 
-        DynmapCommonAPIListener.apiInitialized(core);
+        //DynmapCommonAPIListener.apiInitialized(core);
 
         Log.info("Enabled");
     }
@@ -1918,6 +1923,7 @@ public class DynmapPlugin
         }
     }
     public void serverStarted() {
+        this.onStart();
         if (core != null) {
             core.serverStarted();
         }
