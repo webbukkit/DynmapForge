@@ -97,7 +97,7 @@
 
 	<!-- Download forge (if it doesn't exist) -->
 	<target name="download-forge" unless="forge-exists">
-		<get src="http://files.minecraftforge.net/${forge.name}" dest="${download.dir}/${forge.name}" usetimestamp="True"/>
+		<get src="http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.5.2-7.8.1.738/forge-1.5.2-7.8.1.738-src.zip" dest="${download.dir}/${forge.name}" usetimestamp="True"/>
 		<get src="http://files.minecraftforge.net/fmllibs/fml_libs_dev15.zip" dest="${download.dir}/fml_libs_dev15.zip" usetimestamp="True"/>
 	</target>
 	
