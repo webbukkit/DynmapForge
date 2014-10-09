@@ -97,7 +97,7 @@
 
 	<!-- Download forge (if it doesn't exist) -->
 	<target name="download-forge" unless="forge-exists">
-		<get src="http://files.minecraftforge.net/${forge.name}" dest="${download.dir}/${forge.name}" usetimestamp="True"/>
+		<get src="http://files.minecraftforge.net/minecraftforge/minecraftforge-src-1.4.7-6.6.2.534.zip" dest="${download.dir}/${forge.name}" usetimestamp="True"/>
 	</target>
 	
 	<!-- Setup mcp and forge -->
