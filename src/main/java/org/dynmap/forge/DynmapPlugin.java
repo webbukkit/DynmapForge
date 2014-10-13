@@ -1020,12 +1020,12 @@ public class DynmapPlugin
             return false;
         }
         @Override
-        public int getHealth()
+        public double getHealth()
         {
             if (player != null)
             {
-                int h = (int)player.getHealth();
-                if(h > 20) h = 20;
+                double h = player.getHealth();
+                if(h > 20.0) h = 20.0;
                 return h;  // Scale to 20 range
             }
             else
