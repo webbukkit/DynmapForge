@@ -11,21 +11,18 @@ import org.dynmap.forge.DynmapPlugin.OurLog;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeChunkManager;
-import net.minecraftforge.common.ForgeChunkManager.Ticket;
-import net.minecraftforge.common.config.Configuration;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartedEvent;
-import cpw.mods.fml.common.event.FMLServerStartingEvent; 
-import cpw.mods.fml.common.event.FMLServerStoppingEvent;
-import cpw.mods.fml.common.network.NetworkCheckHandler;
-import cpw.mods.fml.relauncher.Side;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
+import net.minecraftforge.fml.common.network.NetworkCheckHandler;
+import net.minecraftforge.fml.relauncher.Side;
 
 @Mod(modid = "Dynmap", name = "Dynmap", version = Version.VER)
 public class DynmapMod
@@ -54,6 +51,7 @@ public class DynmapMod
         }
     } 
     
+    /*TODO - need rest of forge for this....
     public class LoadingCallback implements net.minecraftforge.common.ForgeChunkManager.LoadingCallback {
         @Override
         public void ticketsLoaded(List<Ticket> tickets, World world) {
@@ -65,6 +63,7 @@ public class DynmapMod
             }
         }
     }
+    */
 
     public DynmapMod() {
         Log.setLogger(new OurLog());      
@@ -75,6 +74,7 @@ public class DynmapMod
     public void preInit(FMLPreInitializationEvent event)
     {
         jarfile = event.getSourceFile();
+        /*TODO - need rest of forge
         // Load configuration file - use suggested (config/WesterosBlocks.cfg)
         Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
         try {
@@ -86,6 +86,7 @@ public class DynmapMod
         {
             cfg.save();
         }
+        */
 
     }
 
@@ -94,7 +95,9 @@ public class DynmapMod
     {
         /* Set up for chunk loading notice from chunk manager */
         if(useforcedchunks) {
+            /*TODO - need rest of forge
             ForgeChunkManager.setForcedChunkLoadingCallback(DynmapMod.instance, new LoadingCallback());
+            */
         }
         else {
             System.out.println("[Dynmap] World loading using forced chunks is disabled");

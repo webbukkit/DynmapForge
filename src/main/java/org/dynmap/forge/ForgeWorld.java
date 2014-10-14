@@ -4,7 +4,7 @@ package org.dynmap.forge;
  */
 import java.util.List;
 
-import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
@@ -47,17 +47,17 @@ public class ForgeWorld extends DynmapWorld
             n = w.getWorldInfo().getWorldName();
         }
         else if (doSaveFolderMapping) { // New vanilla Forge mapping (consistent with MCPC+)
-            if (w.provider.dimensionId == 0) {
+            if (w.provider.getDimensionId() == 0) {
                 n = w.getWorldInfo().getWorldName();
             }
             else {
-                n = "DIM" + w.provider.dimensionId;
+                n = "DIM" + w.provider.getDimensionId();
             }
         }
         else {  // Legacy mapping
             n = w.getWorldInfo().getWorldName();
             WorldProvider wp = w.provider;
-            switch(wp.dimensionId) {
+            switch(wp.getDimensionId()) {
                 case 0:
                     break;
                 case -1:
@@ -67,7 +67,7 @@ public class ForgeWorld extends DynmapWorld
                     n += "_the_end";
                     break;
                 default:
-                    n += "_" + wp.dimensionId;
+                    n += "_" + wp.getDimensionId();
                     break;
             }
         }
@@ -119,10 +119,10 @@ public class ForgeWorld extends DynmapWorld
     public DynmapLocation getSpawnLocation()
     {
     	if(world != null) {
-    		ChunkCoordinates sloc = world.getSpawnPoint();
-    		spawnloc.x = sloc.posX;
-    		spawnloc.y = sloc.posY;
-    		spawnloc.z = sloc.posZ;
+    		BlockPos sloc = world.getSpawnPoint();
+    		spawnloc.x = sloc.getX();
+    		spawnloc.y = sloc.getY();
+    		spawnloc.z = sloc.getZ();
     		spawnloc.world = this.getName();
     	}
         return spawnloc;
@@ -171,7 +171,7 @@ public class ForgeWorld extends DynmapWorld
     public void setWorldLoaded(World w) {
     	world = w;
     	// Update lighting table
-    	float[] lt = w.provider.lightBrightnessTable;
+    	float[] lt = w.provider.getLightBrightnessTable();
     	for (int i = 0; i < 16; i++) {
     	    this.setBrightnessTableEntry(i, lt[i]);
     	}
@@ -181,7 +181,7 @@ public class ForgeWorld extends DynmapWorld
     public int getLightLevel(int x, int y, int z)
     {
     	if(world != null)
-    		return world.getBlockLightValue(x,  y,  z);
+    		return world.getLight(new BlockPos(x,  y,  z));
     	else
     		return -1;
     }
@@ -189,8 +189,9 @@ public class ForgeWorld extends DynmapWorld
     @Override
     public int getHighestBlockYAt(int x, int z)
     {
-    	if(world != null)
-    		return world.getHeightValue(x,  z);
+    	if(world != null) {
+            return world.getChunkFromChunkCoords(x >> 4, z >> 4).getHeight(x & 15, z & 15);
+    	}
     	else
     		return -1;
     }
@@ -204,8 +205,9 @@ public class ForgeWorld extends DynmapWorld
     @Override
     public int getSkyLightLevel(int x, int y, int z)
     {
-    	if(world != null)
-    		return world.getSavedLightValue(EnumSkyBlock.Sky, x, y, z);
+    	if(world != null) {
+    	    return world.getLightFor(EnumSkyBlock.SKY, new BlockPos(x, y, z));
+    	}
     	else
     		return -1;
     }

@@ -171,11 +171,11 @@ public class ChunkSnapshot
             } catch (InvocationTargetException e) {
             }
         }
-        return na.data;
+        return na.getData();
     }
     public ChunkSnapshot(Chunk chunk, int worldheight)
     {
-        this(worldheight, chunk.xPosition, chunk.zPosition, chunk.worldObj.getWorldTime(), chunk.inhabitedTime);
+        this(worldheight, chunk.xPosition, chunk.zPosition, chunk.getWorld().getWorldTime(), chunk.getInhabitedTime());
         /* Copy biome data */
         System.arraycopy(chunk.getBiomeArray(), 0, biome, 0, COLUMNS_PER_CHUNK);
         ExtendedBlockStorage[] ebs = chunk.getBlockStorageArray();
@@ -189,39 +189,18 @@ public class ChunkSnapshot
             {
                 this.empty[i] = false;
                 /* Copy base IDs */
-                byte[] baseids = eb.getBlockLSBArray();
+                /* Copy block data */
+                byte[] blockd = new byte[BLOCKS_PER_SECTION / 2];
                 short blockids[] = new short[BLOCKS_PER_SECTION];
-
+                char[] blkd = eb.getData();
+ 
                 for (int j = 0; j < BLOCKS_PER_SECTION; j++)
                 {
-                    blockids[j] = (short)(baseids[j] & 0xFF);
+                    blockids[j] = (short) (blkd[j] & 0xFFF);
+                    blockd[j / 2] = (byte)(blockd[j / 2] | ((0xF & (blkd[j] >> 12)) << (4 * (j & 1))));
                 }
-
-                /* Add MSB data, if section has any */
-                NibbleArray msb = eb.getBlockMSBArray();
-
-                if (msb != null)
-                {
-                    byte[] extids = getValueArray(msb);
-
-                    for (int j = 0; j < extids.length; j++)
-                    {
-                        short b = (short)(extids[j] & 0xFF);
-
-                        if (b == 0)
-                        {
-                            continue;
-                        }
-
-                        blockids[j << 1] |= (b & 0x0F) << 8;
-                        blockids[(j << 1) + 1] |= (b & 0xF0) << 4;
-                    }
-                }
-
                 this.blockids[i] = blockids;
-                /* Copy block data */
-                this.blockdata[i] = new byte[BLOCKS_PER_SECTION / 2];
-                System.arraycopy(getValueArray(eb.getMetadataArray()), 0, this.blockdata[i], 0, BLOCKS_PER_SECTION / 2);
+                this.blockdata[i] = blockd;
                 /* Copy block lighting data */
                 this.emitlight[i] = new byte[BLOCKS_PER_SECTION / 2];
                 System.arraycopy(getValueArray(eb.getBlocklightArray()), 0, this.emitlight[i], 0, BLOCKS_PER_SECTION / 2);
@@ -237,7 +216,7 @@ public class ChunkSnapshot
         }
 
         /* Save height map */
-        System.arraycopy(chunk.heightMap, 0, this.hmap, 0, hmap.length);
+        System.arraycopy(chunk.getHeightMap(), 0, this.hmap, 0, hmap.length);
     }
 
     public int getX()

@@ -1100,7 +1100,7 @@ public class ForgeMapChunkCache extends MapChunkCache
     private static boolean didError = false;
     
     public NBTTagCompound readChunk(int x, int z) {
-        if((cps == null) || (!(cps.currentChunkLoader instanceof AnvilChunkLoader)) ||
+        if((cps == null) || (!(cps.chunkLoader instanceof AnvilChunkLoader)) ||
                 (((chunksToRemove == null) || (pendingAnvilChunksCoordinates == null)) && (pendingAnvilChunksMCPC == null)) ||
                 (syncLockObject == null)) {
             if (!didError) {
@@ -1110,7 +1110,7 @@ public class ForgeMapChunkCache extends MapChunkCache
             return null;
         }
         try {
-            AnvilChunkLoader acl = (AnvilChunkLoader)cps.currentChunkLoader;
+            AnvilChunkLoader acl = (AnvilChunkLoader)cps.chunkLoader;
             List<?> chunkstoremove = null;
             Set<?> pendingcoords = null;
             LinkedHashMap<?,?> pendingsavesmcpc = null;
@@ -1191,41 +1191,41 @@ public class ForgeMapChunkCache extends MapChunkCache
         Object val = null;
         switch(v.getId()) {
             case 1: // Byte
-                val = Byte.valueOf(((NBTTagByte)v).func_150290_f());
+                val = Byte.valueOf(((NBTTagByte)v).getByte());
                 break;
             case 2: // Short
-                val = Short.valueOf(((NBTTagShort)v).func_150289_e());
+                val = Short.valueOf(((NBTTagShort)v).getShort());
                 break;
             case 3: // Int
-                val = Integer.valueOf(((NBTTagInt)v).func_150287_d());
+                val = Integer.valueOf(((NBTTagInt)v).getInt());
                 break;
             case 4: // Long
-                val = Long.valueOf(((NBTTagLong)v).func_150291_c());
+                val = Long.valueOf(((NBTTagLong)v).getLong());
                 break;
             case 5: // Float
-                val = Float.valueOf(((NBTTagFloat)v).func_150288_h());
+                val = Float.valueOf(((NBTTagFloat)v).getFloat());
                 break;
             case 6: // Double
-                val = Double.valueOf(((NBTTagDouble)v).func_150286_g());
+                val = Double.valueOf(((NBTTagDouble)v).getDouble());
                 break;
             case 7: // Byte[]
-                val = ((NBTTagByteArray)v).func_150292_c();
+                val = ((NBTTagByteArray)v).getByteArray();
                 break;
             case 8: // String
-                val = ((NBTTagString)v).func_150285_a_();
+                val = ((NBTTagString)v).getString();
                 break;
             case 9: // List
                 NBTTagList tl = (NBTTagList) v;
                 ArrayList<Object> vlist = new ArrayList<Object>();
-                int type = tl.func_150303_d();
+                int type = tl.getTagType();
                 for (int i = 0; i < tl.tagCount(); i++) {
                     switch (type) {
                         case 5:
-                            float fv = tl.func_150308_e(i);
+                            float fv = tl.getFloat(i);
                             vlist.add(fv);
                             break;
                         case 6:
-                            double dv = tl.func_150309_d(i);
+                            double dv = tl.getDouble(i);
                             vlist.add(dv);
                             break;
                         case 8:
@@ -1237,7 +1237,7 @@ public class ForgeMapChunkCache extends MapChunkCache
                             vlist.add(getNBTValue(tc));
                             break;
                         case 11:
-                            int[] ia = tl.func_150306_c(i);
+                            int[] ia = tl.getIntArray(i);
                             vlist.add(ia);
                             break;
                     }
@@ -1247,7 +1247,7 @@ public class ForgeMapChunkCache extends MapChunkCache
             case 10: // Map
                 NBTTagCompound tc = (NBTTagCompound) v;
                 HashMap<String, Object> vmap = new HashMap<String, Object>();
-                for (Object t : tc.func_150296_c()) {
+                for (Object t : tc.getKeySet()) {
                     String st = (String) t;
                     NBTBase tg = tc.getTag(st);
                     vmap.put(st, getNBTValue(tg));
@@ -1255,7 +1255,7 @@ public class ForgeMapChunkCache extends MapChunkCache
                 val = vmap;
                 break;
             case 11: // Int[]
-                val = ((NBTTagIntArray)v).func_150302_c();
+                val = ((NBTTagIntArray)v).getIntArray();
                 break;
         }
         return val;
@@ -1408,7 +1408,7 @@ public class ForgeMapChunkCache extends MapChunkCache
                 if (vis) {  // If visible 
                     NBTTagCompound nbt = new NBTTagCompound();
                     try {
-                        writechunktonbt.invoke(cps.currentChunkLoader, cps.loadChunk(chunk.x, chunk.z), w, nbt);
+                        writechunktonbt.invoke(cps.chunkLoader, cps.loadChunk(chunk.x, chunk.z), w, nbt);
                     } catch (IllegalAccessException e) {
                     } catch (IllegalArgumentException e) {
                     } catch (InvocationTargetException e) {

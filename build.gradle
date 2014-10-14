@@ -1,8 +1,10 @@
 buildscript {
     repositories {
         mavenCentral()
+        mavenLocal()
+        
         maven {
-            name = "forge"
+            name = "forgeFS"
             url = "http://files.minecraftforge.net/maven"
         }
         maven {
@@ -15,7 +17,8 @@ buildscript {
     }
 }
 
-apply plugin: 'forge'
+apply plugin: 'fml'
+
 
 // define the properties file
 ext.configFile = file "build.properties"
@@ -70,10 +73,15 @@ processResources
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+    // Move access transformer to META-INF
+    rename '(.+_at.cfg)', 'META-INF/$1'
 }
 
 jar {
-   classifier = "forge-10.13.0"
+   classifier = "forge-1.8.0"
    destinationDir = project.projectDir
    from { configurations.dynmap.collect { it.isDirectory() ? it : zipTree(it) } }
+   manifest {
+        attributes 'FMLAT': 'dynmap_at.cfg'
+    }
 }

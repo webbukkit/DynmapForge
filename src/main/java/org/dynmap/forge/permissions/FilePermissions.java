@@ -87,14 +87,14 @@ public class FilePermissions implements PermissionProvider {
     @Override
     public boolean has(ICommandSender sender, String permission) {
         if(sender instanceof EntityPlayer) {
-            return hasPerm(((EntityPlayer) sender).getDisplayName().toLowerCase(), permission);
+            return hasPerm(((EntityPlayer) sender).getName().toLowerCase(), permission);
         }
         return true;
     }
     @Override
     public boolean hasPermissionNode(ICommandSender sender, String permission) {
         if(sender instanceof EntityPlayer) {
-            String player = ((EntityPlayer) sender).getDisplayName().toLowerCase();
+            String player = ((EntityPlayer) sender).getName().toLowerCase();
             return DynmapPlugin.plugin.isOp(player);
         }
         return false;
