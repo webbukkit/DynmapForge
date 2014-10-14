@@ -73,7 +73,7 @@ processResources
 }
 
 jar {
-   classifier = "forge-9.11.1"
+   classifier = "forge-1.6.4"
    destinationDir = project.projectDir
    from { configurations.dynmap.collect { it.isDirectory() ? it : zipTree(it) } }
 }
