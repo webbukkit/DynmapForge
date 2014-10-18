@@ -98,6 +98,7 @@ import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
+import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.GameRegistry.UniqueIdentifier;
 
@@ -922,9 +923,9 @@ public class DynmapPlugin
             for (int i = 0; i < 4096; i++) {
                 Block b = getBlockByID(i);
                 if (b == null) continue;
-                UniqueIdentifier ui = GameRegistry.findUniqueIdentifierFor(b);
-                if (ui != null) {
-                    map.put(i, ui.modId + ":" + ui.name);
+                String blockname = GameData.getBlockRegistry().getNameForObject(b);
+                if (blockname != null) {
+                    map.put(i, blockname);
                 }
             }
             return map;
@@ -962,14 +963,9 @@ public class DynmapPlugin
             for (int i = 0; i < 4096; i++) {
                 Block b = getBlockByID(i);
                 if (b == null) continue;
-                UniqueIdentifier ui = null;
-                try {
-                    ui = GameRegistry.findUniqueIdentifierFor(b);
-                } catch (Exception x) {
-                    Log.warning("Exception caught reading unique ID for block " + i);
-                }
-                if (ui != null) {
-                    map.put(ui.modId + ":" + ui.name, i);
+                String blockname = GameData.getBlockRegistry().getNameForObject(b);
+                if (blockname != null) {
+                    map.put(blockname, i);
                 }
             }
             return map;
