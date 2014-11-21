@@ -1,0 +1,116 @@
+# chisel 1.5.7
+version:1.7
+modname:chisel
+
+
+cfgfile:config/chisel.cfg
+
+patch:id=VertX1Z0ToX0Z1,Ox=1.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0,visibility=flip
+patch:id=VertX025,Ox=0.25,Oy=0.0,Oz=1.0,Ux=0.25,Uy=0.0,Uz=0.0,Vx=0.25,Vy=1.0,Vz=1.0
+patch:id=VertX075,Ox=0.75,Oy=0.0,Oz=1.0,Ux=0.75,Uy=0.0,Uz=0.0,Vx=0.75,Vy=1.0,Vz=1.0
+patch:id=HorizY001ZTop,Ox=0.0,Oy=0.01,Oz=0.0,Ux=1.0,Uy=0.01,Uz=0.0,Vx=0.0,Vy=0.01,Vz=1.0
+patch:id=SlopeXUpZTop,Ox=0.0,Oy=0.0,Oz=0.0,Ux=0.0,Uy=0.0,Uz=1.0,Vx=1.0,Vy=1.0,Vz=0.0
+patch:id=VertX0In,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0
+patch:id=VertX04375,Ox=0.4375,Oy=0.0,Oz=0.0,Ux=0.4375,Uy=0.0,Uz=1.0,Vx=0.4375,Vy=1.0,Vz=0.0,visibility=top
+patch:id=TorchSide1,Ox=-0.5,Oy=0.2,Oz=0.4375,Ux=0.5,Uy=0.2,Uz=0.4375,Vx=-0.1,Vy=1.2,Vz=0.4375,Vmax=0.8,visibility=bottom
+patch:id=TorchSide2,Ox=-0.5,Oy=0.2,Oz=0.5625,Ux=0.5,Uy=0.2,Uz=0.5625,Vx=-0.1,Vy=1.2,Vz=0.5625,Vmax=0.8,visibility=top
+patch:id=TorchSide3,Ox=0.0625,Oy=0.2,Oz=0.0,Ux=0.0625,Uy=0.2,Uz=1.0,Vx=0.4625,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=bottom
+patch:id=TorchSide4,Ox=-0.0625,Oy=0.2,Oz=0.0,Ux=-0.0625,Uy=0.2,Uz=1.0,Vx=0.3375,Vy=1.2,Vz=0.0,Vmax=0.8,visibility=top
+patch:id=TorchTop,Ox=0.0,Oy=0.625,Oz=-0.0625,Ux=1.0,Uy=0.625,Uz=-0.0625,Vx=0.0,Vy=0.625,Vz=0.9375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=0.0,Vy=0.825,Vz=0.6375,Umin=0.4375,Umax=0.5625,Vmin=0.5,Vmax=0.625
+patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
+patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
+
+
+# %chisel.marble:* (chisel.marble), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.marbleSlab:* (chisel.marbleSlab), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=false,cls=info.jbcs.minecraft.chisel.block.BlockMarbleSlab
+boxblock:id=%chisel.marbleSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %chisel.marblePillarSlab:* (chisel.marblePillarSlab), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=false,cls=info.jbcs.minecraft.chisel.block.BlockMarbleSlab
+boxblock:id=%chisel.marblePillarSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %chisel.limestone:* (chisel.limestone), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.limestoneSlab:* (chisel.limestoneSlab), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=false,cls=info.jbcs.minecraft.chisel.block.BlockMarbleSlab
+boxblock:id=%chisel.limestoneSlab,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+
+# %chisel.cobblestone:* (chisel.cobblestone), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.sandstone:* (chisel.sandstone), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %tile.snakestoneSand:* (tile.snakestoneSand), render=info.jbcs.minecraft.chisel.client.render.BlockSnakeStoneRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockSnakestone
+
+# %chisel.sandstoneScribbles:* (chisel.sandstoneScribbles), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.concrete:* (chisel.concrete), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockConcrete
+
+# %roadLine:* (roadLine), render=info.jbcs.minecraft.chisel.client.render.BlockRoadLineRenderer(CUSTOM), opaque=false,cls=info.jbcs.minecraft.chisel.block.BlockRoadLine
+boxblock:id=%roadLine,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.00390625,zmin=0.0,zmax=1.0,data=*
+
+# %chisel.iron:* (chisel.iron), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockBeaconBase
+
+# %chisel.gold:* (chisel.gold), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockBeaconBase
+
+# %chisel.diamond:* (chisel.diamond), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockBeaconBase
+
+# %chisel.lightstone:* (chisel.lightstone), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockLightstoneCarvable
+
+# %chisel.lapis:* (chisel.lapis), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.emerald:* (chisel.emerald), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockBeaconBase
+
+# %chisel.netherBrick:* (chisel.netherBrick), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.hellrock:* (chisel.hellrock), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.stoneMoss:* (chisel.stoneMoss), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.stoneBrick:* (chisel.stoneBrick), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %tile.snakestoneStone:* (tile.snakestoneStone), render=info.jbcs.minecraft.chisel.client.render.BlockSnakeStoneRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockSnakestone
+
+# %chisel.blockDirt:* (chisel.blockDirt), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.wood-oak:* (chisel.wood-oak), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.wood-spruce:* (chisel.wood-spruce), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.wood-birch:* (chisel.wood-birch), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.wood-jungle:* (chisel.wood-jungle), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.wood-acacia:* (chisel.wood-acacia), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.wood-dark-oak:* (chisel.wood-dark-oak), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.obsidian:* (chisel.obsidian), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %tile.obsidianSnakestone:* (tile.obsidianSnakestone), render=info.jbcs.minecraft.chisel.client.render.BlockSnakeStoneRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockSnakestoneObsidian
+
+# %chisel.blockRedstone:* (chisel.blockRedstone), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvablePowered
+
+# %chisel.blockHolystone:* (chisel.blockHolystone), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockHolystone
+
+# %chisel.blockLavastone:* (chisel.blockLavastone), render=info.jbcs.minecraft.chisel.client.render.BlockTexturedOreRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockLavastone
+
+# %chisel.blockFft:* (chisel.blockFft), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.blockCarpet:* (chisel.blockCarpet), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.blockCarpetFloor:* (chisel.blockCarpetFloor), render=info.jbcs.minecraft.chisel.client.render.BlockCarpetRenderer(CUSTOM), opaque=false,cls=info.jbcs.minecraft.chisel.block.BlockMarbleCarpet
+boxblock:id=%chisel.blockCarpetFloor,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,zmax=1.0,data=*
+
+# %chisel.blockBookshelf:* (chisel.blockBookshelf), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockMarbleBookshelf
+
+# %chisel.blockTyrian:* (chisel.blockTyrian), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.blockTemple:* (chisel.blockTemple), render=info.jbcs.minecraft.chisel.client.render.BlockEldritchRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockEldritch
+
+# %chisel.blockTempleMossy:* (chisel.blockTempleMossy), render=info.jbcs.minecraft.chisel.client.render.BlockEldritchRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockEldritch
+
+# %chisel.blockFactory:* (chisel.blockFactory), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.blockWoolenClay:* (chisel.blockWoolenClay), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
+
+# %chisel.blockLaboratory:* (chisel.blockLaboratory), render=info.jbcs.minecraft.chisel.client.render.BlockAdvancedMarbleRenderer(CUSTOM), opaque=true,cls=info.jbcs.minecraft.chisel.block.BlockCarvable
