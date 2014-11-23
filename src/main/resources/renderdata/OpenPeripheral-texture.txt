@@ -1,0 +1,44 @@
+# OpenPeripheral 0.2.0
+version:1.7
+modname:OpenPeripheral
+
+
+cfgfile:config/OpenPeripheral.cfg
+
+
+texturepath:assets/openperipheral/textures/blocks/
+texture:id=openperipheraladdons/bridge,filename=assets/openperipheraladdons/textures/blocks/bridge.png
+texture:id=openperipheraladdons/pim_blue,filename=assets/openperipheraladdons/textures/blocks/pim_blue.png
+texture:id=openperipheraladdons/proxy_bottom,filename=assets/openperipheraladdons/textures/blocks/proxy_bottom.png
+texture:id=openperipheraladdons/proxy_side,filename=assets/openperipheraladdons/textures/blocks/proxy_side.png
+texture:id=openperipheraladdons/proxy_top,filename=assets/openperipheraladdons/textures/blocks/proxy_top.png
+texture:id=openperipheraladdons/ticketmachine_back,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_back.png
+texture:id=openperipheraladdons/ticketmachine_bottom,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_bottom.png
+texture:id=openperipheraladdons/ticketmachine_front_empty,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_front_empty.png
+texture:id=openperipheraladdons/ticketmachine_left,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_left.png
+texture:id=openperipheraladdons/ticketmachine_right,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_right.png
+texture:id=openperipheraladdons/ticketmachine_top,filename=assets/openperipheraladdons/textures/blocks/ticketmachine_top.png
+
+
+
+# %glassesbridge:* (glassesbridge), render=openperipheral.addons.client.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.glasses.BlockGlassesBridge
+block:id=%glassesbridge,data=*,stdrot=true,face0-5=0:openperipheraladdons/bridge
+
+# %peripheralproxy:* (peripheralproxy), render=openperipheral.addons.client.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.peripheralproxy.BlockPeripheralProxy
+block:id=%peripheralproxy,data=0,stdrot=true,face0=0:openperipheraladdons/proxy_top,face1=0:openperipheraladdons/proxy_bottom,face2-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=1,stdrot=true,face0=0:openperipheraladdons/proxy_bottom,face1=0:openperipheraladdons/proxy_top,face2-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=2,stdrot=true,face0-1=0:openperipheraladdons/proxy_side,face2=0:openperipheraladdons/proxy_top,face3=0:openperipheraladdons/proxy_bottom,face4-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=3,stdrot=true,face0-1=0:openperipheraladdons/proxy_side,face2=0:openperipheraladdons/proxy_bottom,face3=0:openperipheraladdons/proxy_top,face4-5=0:openperipheraladdons/proxy_side
+block:id=%peripheralproxy,data=4,stdrot=true,face0-3=0:openperipheraladdons/proxy_side,face4=0:openperipheraladdons/proxy_top,face5=0:openperipheraladdons/proxy_bottom
+block:id=%peripheralproxy,data=5,stdrot=true,face0-3=0:openperipheraladdons/proxy_side,face4=0:openperipheraladdons/proxy_bottom,face5=0:openperipheraladdons/proxy_top
+block:id=%peripheralproxy,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:openperipheraladdons/proxy_bottom,face1=0:openperipheraladdons/proxy_top,face2-5=0:openperipheraladdons/proxy_side
+
+# %pim:* (pim), render=openperipheral.addons.client.BlockRenderingHandler(CUSTOM), opaque=false,cls=openperipheral.addons.pim.BlockPIM
+block:id=%pim,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:openperipheraladdons/pim_blue
+
+# %ticketmachine:* (ticketmachine), render=openperipheral.addons.client.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.ticketmachine.BlockTicketMachine
+block:id=%ticketmachine,data=0,data=1,data=2,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_back,face3=0:openperipheraladdons/ticketmachine_front_empty,face4=0:openperipheraladdons/ticketmachine_right,face5=0:openperipheraladdons/ticketmachine_left
+block:id=%ticketmachine,data=3,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_front_empty,face3=0:openperipheraladdons/ticketmachine_back,face4=0:openperipheraladdons/ticketmachine_left,face5=0:openperipheraladdons/ticketmachine_right
+block:id=%ticketmachine,data=4,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_left,face3=0:openperipheraladdons/ticketmachine_right,face4=0:openperipheraladdons/ticketmachine_back,face5=0:openperipheraladdons/ticketmachine_front_empty
+block:id=%ticketmachine,data=5,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_right,face3=0:openperipheraladdons/ticketmachine_left,face4=0:openperipheraladdons/ticketmachine_front_empty,face5=0:openperipheraladdons/ticketmachine_back
+block:id=%ticketmachine,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:openperipheraladdons/ticketmachine_bottom,face1=0:openperipheraladdons/ticketmachine_top,face2=0:openperipheraladdons/ticketmachine_back,face3=0:openperipheraladdons/ticketmachine_front_empty,face4=0:openperipheraladdons/ticketmachine_right,face5=0:openperipheraladdons/ticketmachine_left

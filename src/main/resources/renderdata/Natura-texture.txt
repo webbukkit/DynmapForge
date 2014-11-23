@@ -614,11 +614,17 @@ block:id=%Rare Sapling,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:natu
 block:id=%Rare Sapling,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/purpleheart_sapling
 block:id=%Rare Sapling,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/tiger_sapling
 block:id=%Rare Sapling,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/willow_sapling
+block:id=%Rare Sapling,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/maple_sapling
+block:id=%Rare Sapling,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/silverbell_sapling
+block:id=%Rare Sapling,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/purpleheart_sapling
 block:id=%Rare Sapling,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/maple_sapling
 block:id=%Rare Sapling,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/silverbell_sapling
 block:id=%Rare Sapling,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/purpleheart_sapling
 block:id=%Rare Sapling,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/tiger_sapling
 block:id=%Rare Sapling,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/willow_sapling
+block:id=%Rare Sapling,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/maple_sapling
+block:id=%Rare Sapling,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/silverbell_sapling
+block:id=%Rare Sapling,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/purpleheart_sapling
 
 # %Bluebells:* (Bluebells), render=(CROSSEDSQUARES), opaque=false,cls=mods.natura.blocks.crops.FlowerBlock
 block:id=%Bluebells,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:natura/flower_bluebells

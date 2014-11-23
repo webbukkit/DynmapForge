@@ -1,4 +1,4 @@
-# BiblioCraft 1.6.3
+# BiblioCraft 1.8.1
 version:1.7
 modname:BiblioCraft
 
@@ -16,6 +16,42 @@ texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/pla
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 
 
+
+# %BiblioTypewriter:* (BiblioTypewriter), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockTypewriter
+block:id=%BiblioTypewriter,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioClock:* (BiblioClock), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockClock
+block:id=%BiblioClock,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioFlatPainting:* (BiblioFlatPainting), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPaintingFrameFlat
+block:id=%BiblioFlatPainting,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioSimplePainting:* (BiblioSimplePainting), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPaintingFrameSimple
+block:id=%BiblioSimplePainting,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioMiddlePainting:* (BiblioMiddlePainting), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPaintingFrameMiddle
+block:id=%BiblioMiddlePainting,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioFancyPainting:* (BiblioFancyPainting), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPaintingFrameFancy
+block:id=%BiblioFancyPainting,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioBorderlessPainting:* (BiblioBorderlessPainting), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPaintingFrameBorderless
+block:id=%BiblioBorderlessPainting,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioPaintPress:* (BiblioPaintPress), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPaintPress
+block:id=%BiblioPaintPress,data=*,stdrot=true,face0-5=0:minecraft/anvil_base
+
+# %BiblioSwordPedestal:* (BiblioSwordPedestal), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockSwordPedestal
+block:id=%BiblioSwordPedestal,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %BiblioFancySign:* (BiblioFancySign), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockFancySign
+block:id=%BiblioFancySign,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWorkbench:* (BiblioWorkbench), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockFancyWorkbench
+block:id=%BiblioWorkbench,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioBell:* (BiblioBell), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBell
+block:id=%BiblioBell,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
 
 # %Bibliotheca:* (Bibliotheca), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBookcase
 block:id=%Bibliotheca,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce

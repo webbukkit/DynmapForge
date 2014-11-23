@@ -1,4 +1,4 @@
-# RedstoneArsenal 1.7.10R1.1.0B3
+# RedstoneArsenal 1.7.10R1.1.0B4
 version:1.7
 modname:RedstoneArsenal
 

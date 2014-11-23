@@ -1,4 +1,4 @@
-# IC2 2.2.502-experimental
+# IC2 2.2.648-experimental
 version:1.7
 modname:IC2
 
@@ -21,6 +21,7 @@ texture:id=ic2/blockHarz,filename=assets/ic2/textures/blocks/blockHarz.png
 texture:id=ic2/blockITNT,filename=assets/ic2/textures/blocks/blockITNT.png
 texture:id=ic2/blockIronScaffold,filename=assets/ic2/textures/blocks/blockIronScaffold.png
 texture:id=ic2/blockIronScaffold.reinforced,filename=assets/ic2/textures/blocks/blockIronScaffold.reinforced.png
+texture:id=ic2/blockMetalAdvIron,filename=assets/ic2/textures/blocks/blockMetalAdvIron.png
 texture:id=ic2/blockMetalBronze,filename=assets/ic2/textures/blocks/blockMetalBronze.png
 texture:id=ic2/blockMetalCopper,filename=assets/ic2/textures/blocks/blockMetalCopper.png
 texture:id=ic2/blockMetalLead,filename=assets/ic2/textures/blocks/blockMetalLead.png
@@ -57,23 +58,37 @@ texture:id=ic2/cf/blockWall.purple,filename=assets/ic2/textures/blocks/cf/blockW
 texture:id=ic2/cf/blockWall.red,filename=assets/ic2/textures/blocks/cf/blockWall.red.png
 texture:id=ic2/cf/blockWall.white,filename=assets/ic2/textures/blocks/cf/blockWall.white.png
 texture:id=ic2/cf/blockWall.yellow,filename=assets/ic2/textures/blocks/cf/blockWall.yellow.png
+texture:id=ic2/crop/blockCrop.Infested.1,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.1.png
+texture:id=ic2/crop/blockCrop.Infested.2,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.2.png
+texture:id=ic2/crop/blockCrop.Infested.3,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.3.png
+texture:id=ic2/crop/blockCrop.Infested.4,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.4.png
+texture:id=ic2/crop/blockCrop.Infested.5,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.5.png
+texture:id=ic2/crop/blockCrop.Weed.1,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.1.png
+texture:id=ic2/crop/blockCrop.Weed.2,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.2.png
+texture:id=ic2/crop/blockCrop.Weed.3,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.3.png
+texture:id=ic2/crop/blockCrop.Weed.4,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.4.png
+texture:id=ic2/crop/blockCrop.Weed.5,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.5.png
 texture:id=ic2/crop/blockCrop.stick,filename=assets/ic2/textures/blocks/crop/blockCrop.stick.png
 texture:id=ic2/crop/blockCrop.stick.upgraded,filename=assets/ic2/textures/blocks/crop/blockCrop.stick.upgraded.png
-texture:id=ic2/fluids/blockbiogas_still,filename=assets/ic2/textures/blocks/fluids/blockbiogas_still.png
-texture:id=ic2/fluids/blockbiomass_flow,filename=assets/ic2/textures/blocks/fluids/blockbiomass_flow.png
-texture:id=ic2/fluids/blockbiomass_still,filename=assets/ic2/textures/blocks/fluids/blockbiomass_still.png
-texture:id=ic2/fluids/blockconstructionfoam_flow,filename=assets/ic2/textures/blocks/fluids/blockconstructionfoam_flow.png
-texture:id=ic2/fluids/blockconstructionfoam_still,filename=assets/ic2/textures/blocks/fluids/blockconstructionfoam_still.png
-texture:id=ic2/fluids/blockic2coolant_flow,filename=assets/ic2/textures/blocks/fluids/blockic2coolant_flow.png
-texture:id=ic2/fluids/blockic2coolant_still,filename=assets/ic2/textures/blocks/fluids/blockic2coolant_still.png
-texture:id=ic2/fluids/blockic2hotcoolant_flow,filename=assets/ic2/textures/blocks/fluids/blockic2hotcoolant_flow.png
-texture:id=ic2/fluids/blockic2hotcoolant_still,filename=assets/ic2/textures/blocks/fluids/blockic2hotcoolant_still.png
-texture:id=ic2/fluids/blockic2pahoehoelava_still,filename=assets/ic2/textures/blocks/fluids/blockic2pahoehoelava_still.png
-texture:id=ic2/fluids/blocksteam_still,filename=assets/ic2/textures/blocks/fluids/blocksteam_still.png
-texture:id=ic2/fluids/blockuumatter_flow,filename=assets/ic2/textures/blocks/fluids/blockuumatter_flow.png
-texture:id=ic2/fluids/blockuumatter_still,filename=assets/ic2/textures/blocks/fluids/blockuumatter_still.png
+texture:id=ic2/fluids/biogas_still,filename=assets/ic2/textures/blocks/fluids/biogas_still.png
+texture:id=ic2/fluids/biomass_flow,filename=assets/ic2/textures/blocks/fluids/biomass_flow.png
+texture:id=ic2/fluids/biomass_still,filename=assets/ic2/textures/blocks/fluids/biomass_still.png
+texture:id=ic2/fluids/constructionfoam_flow,filename=assets/ic2/textures/blocks/fluids/constructionfoam_flow.png
+texture:id=ic2/fluids/constructionfoam_still,filename=assets/ic2/textures/blocks/fluids/constructionfoam_still.png
+texture:id=ic2/fluids/coolant_flow,filename=assets/ic2/textures/blocks/fluids/coolant_flow.png
+texture:id=ic2/fluids/coolant_still,filename=assets/ic2/textures/blocks/fluids/coolant_still.png
+texture:id=ic2/fluids/distilledwater_flow,filename=assets/ic2/textures/blocks/fluids/distilledwater_flow.png
+texture:id=ic2/fluids/distilledwater_still,filename=assets/ic2/textures/blocks/fluids/distilledwater_still.png
+texture:id=ic2/fluids/hotcoolant_flow,filename=assets/ic2/textures/blocks/fluids/hotcoolant_flow.png
+texture:id=ic2/fluids/hotcoolant_still,filename=assets/ic2/textures/blocks/fluids/hotcoolant_still.png
+texture:id=ic2/fluids/pahoehoelava_still,filename=assets/ic2/textures/blocks/fluids/pahoehoelava_still.png
+texture:id=ic2/fluids/steam_still,filename=assets/ic2/textures/blocks/fluids/steam_still.png
+texture:id=ic2/fluids/superheatedsteam_still,filename=assets/ic2/textures/blocks/fluids/superheatedsteam_still.png
+texture:id=ic2/fluids/uumatter_flow,filename=assets/ic2/textures/blocks/fluids/uumatter_flow.png
+texture:id=ic2/fluids/uumatter_still,filename=assets/ic2/textures/blocks/fluids/uumatter_still.png
 texture:id=ic2/generator/blockGenerator,filename=assets/ic2/textures/blocks/generator/blockGenerator.png
 texture:id=ic2/generator/blockGeoGenerator,filename=assets/ic2/textures/blocks/generator/blockGeoGenerator.png
+texture:id=ic2/generator/blockKineticGenerator,filename=assets/ic2/textures/blocks/generator/blockKineticGenerator.png
 texture:id=ic2/generator/blockNuclearReactor,filename=assets/ic2/textures/blocks/generator/blockNuclearReactor.png
 texture:id=ic2/generator/blockRTGenerator,filename=assets/ic2/textures/blocks/generator/blockRTGenerator.png
 texture:id=ic2/generator/blockSemifluidGenerator,filename=assets/ic2/textures/blocks/generator/blockSemifluidGenerator.png
@@ -85,19 +100,28 @@ texture:id=ic2/heatgenerator/blockElectricHeatGenerator,filename=assets/ic2/text
 texture:id=ic2/heatgenerator/blockFluidHeatGenerator,filename=assets/ic2/textures/blocks/heatgenerator/blockFluidHeatGenerator.png
 texture:id=ic2/heatgenerator/blockRTHeatGenerator,filename=assets/ic2/textures/blocks/heatgenerator/blockRTHeatGenerator.png
 texture:id=ic2/heatgenerator/blockSolidHeatGenerator,filename=assets/ic2/textures/blocks/heatgenerator/blockSolidHeatGenerator.png
+texture:id=ic2/kineticgenerator/blockSteamKineticGenerator,filename=assets/ic2/textures/blocks/kineticgenerator/blockSteamKineticGenerator.png
+texture:id=ic2/kineticgenerator/blockWindKineticGenerator,filename=assets/ic2/textures/blocks/kineticgenerator/blockWindKineticGenerator.png
 texture:id=ic2/machine/blockAdvMachine,filename=assets/ic2/textures/blocks/machine/blockAdvMachine.png
 texture:id=ic2/machine/blockAdvMiner,filename=assets/ic2/textures/blocks/machine/blockAdvMiner.png
+texture:id=ic2/machine/blockBlastFurnace,filename=assets/ic2/textures/blocks/machine/blockBlastFurnace.png
+texture:id=ic2/machine/blockBlockCutter,filename=assets/ic2/textures/blocks/machine/blockBlockCutter.png
 texture:id=ic2/machine/blockCanner,filename=assets/ic2/textures/blocks/machine/blockCanner.png
 texture:id=ic2/machine/blockCentrifuge,filename=assets/ic2/textures/blocks/machine/blockCentrifuge.png
 texture:id=ic2/machine/blockCompressor,filename=assets/ic2/textures/blocks/machine/blockCompressor.png
+texture:id=ic2/machine/blockCondenser,filename=assets/ic2/textures/blocks/machine/blockCondenser.png
+texture:id=ic2/machine/blockCropHavester,filename=assets/ic2/textures/blocks/machine/blockCropHavester.png
 texture:id=ic2/machine/blockCropmatron,filename=assets/ic2/textures/blocks/machine/blockCropmatron.png
 texture:id=ic2/machine/blockElecFurnace,filename=assets/ic2/textures/blocks/machine/blockElecFurnace.png
 texture:id=ic2/machine/blockElectrolyzer,filename=assets/ic2/textures/blocks/machine/blockElectrolyzer.png
 texture:id=ic2/machine/blockExtractor,filename=assets/ic2/textures/blocks/machine/blockExtractor.png
 texture:id=ic2/machine/blockFermenter,filename=assets/ic2/textures/blocks/machine/blockFermenter.png
 texture:id=ic2/machine/blockFluidBottler,filename=assets/ic2/textures/blocks/machine/blockFluidBottler.png
+texture:id=ic2/machine/blockFluidDistributor,filename=assets/ic2/textures/blocks/machine/blockFluidDistributor.png
+texture:id=ic2/machine/blockFluidRegulator,filename=assets/ic2/textures/blocks/machine/blockFluidRegulator.png
 texture:id=ic2/machine/blockInduction,filename=assets/ic2/textures/blocks/machine/blockInduction.png
 texture:id=ic2/machine/blockIronFurnace,filename=assets/ic2/textures/blocks/machine/blockIronFurnace.png
+texture:id=ic2/machine/blockItemBuffer,filename=assets/ic2/textures/blocks/machine/blockItemBuffer.png
 texture:id=ic2/machine/blockLiquidHeatExchanger,filename=assets/ic2/textures/blocks/machine/blockLiquidHeatExchanger.png
 texture:id=ic2/machine/blockMacerator,filename=assets/ic2/textures/blocks/machine/blockMacerator.png
 texture:id=ic2/machine/blockMachine,filename=assets/ic2/textures/blocks/machine/blockMachine.png
@@ -113,11 +137,13 @@ texture:id=ic2/machine/blockPump,filename=assets/ic2/textures/blocks/machine/blo
 texture:id=ic2/machine/blockRecycler,filename=assets/ic2/textures/blocks/machine/blockRecycler.png
 texture:id=ic2/machine/blockReplicator,filename=assets/ic2/textures/blocks/machine/blockReplicator.png
 texture:id=ic2/machine/blockScanner,filename=assets/ic2/textures/blocks/machine/blockScanner.png
+texture:id=ic2/machine/blockSolarDestiller,filename=assets/ic2/textures/blocks/machine/blockSolarDestiller.png
 texture:id=ic2/machine/blockSolidCanner,filename=assets/ic2/textures/blocks/machine/blockSolidCanner.png
+texture:id=ic2/machine/blockSortingMachine,filename=assets/ic2/textures/blocks/machine/blockSortingMachine.png
+texture:id=ic2/machine/blockSteamGenerator,filename=assets/ic2/textures/blocks/machine/blockSteamGenerator.png
 texture:id=ic2/machine/blockTeleporter,filename=assets/ic2/textures/blocks/machine/blockTeleporter.png
 texture:id=ic2/machine/blockTerra,filename=assets/ic2/textures/blocks/machine/blockTerra.png
 texture:id=ic2/machine/blockTesla,filename=assets/ic2/textures/blocks/machine/blockTesla.png
-texture:id=ic2/machine/blockWaterHeater,filename=assets/ic2/textures/blocks/machine/blockWaterHeater.png
 texture:id=ic2/personal/blockPersonalChest,filename=assets/ic2/textures/blocks/personal/blockPersonalChest.png
 texture:id=ic2/personal/blockPersonalTrader,filename=assets/ic2/textures/blocks/personal/blockPersonalTrader.png
 texture:id=ic2/personal/blockPersonalTraderEnergy,filename=assets/ic2/textures/blocks/personal/blockPersonalTraderEnergy.png
@@ -128,6 +154,10 @@ texture:id=ic2/reactor/blockReactorRedstonePort,filename=assets/ic2/textures/blo
 texture:id=ic2/reactor/blockreactorvessel,filename=assets/ic2/textures/blocks/reactor/blockreactorvessel.png
 texture:id=ic2/wiring/blockBatBox,filename=assets/ic2/textures/blocks/wiring/blockBatBox.png
 texture:id=ic2/wiring/blockCESU,filename=assets/ic2/textures/blocks/wiring/blockCESU.png
+texture:id=ic2/wiring/blockChargepadBatBox,filename=assets/ic2/textures/blocks/wiring/blockChargepadBatBox.png
+texture:id=ic2/wiring/blockChargepadCESU,filename=assets/ic2/textures/blocks/wiring/blockChargepadCESU.png
+texture:id=ic2/wiring/blockChargepadMFE,filename=assets/ic2/textures/blocks/wiring/blockChargepadMFE.png
+texture:id=ic2/wiring/blockChargepadMFSU,filename=assets/ic2/textures/blocks/wiring/blockChargepadMFSU.png
 texture:id=ic2/wiring/blockLuminator,filename=assets/ic2/textures/blocks/wiring/blockLuminator.png
 texture:id=ic2/wiring/blockLuminatorDark,filename=assets/ic2/textures/blocks/wiring/blockLuminatorDark.png
 texture:id=ic2/wiring/blockMFE,filename=assets/ic2/textures/blocks/wiring/blockMFE.png
@@ -164,30 +194,6 @@ block:id=%blockOreUran,data=0,stdrot=true,face0-5=0:ic2/blockOreUran
 
 # %blockOreLead:* (blockOreLead), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockMetaData
 block:id=%blockOreLead,data=0,stdrot=true,face0-5=0:ic2/blockOreLead
-
-# %blockfluidUuMatter:* (blockfluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=%blockfluidUuMatter,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/blockuumatter_still,face2-5=12000:ic2/fluids/blockuumatter_flow
-
-# %blockfluidCf:* (blockfluidCf), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=%blockfluidCf,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/blockconstructionfoam_still,face2-5=12000:ic2/fluids/blockconstructionfoam_flow
-
-# %blockFluidcoolant:* (blockFluidcoolant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=%blockFluidcoolant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/blockic2coolant_still,face2-5=12000:ic2/fluids/blockic2coolant_flow
-
-# %blockFluidhotcoolant:* (blockFluidhotcoolant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=%blockFluidhotcoolant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/blockic2hotcoolant_still,face2-5=12000:ic2/fluids/blockic2hotcoolant_flow
-
-# %blockFluidpahoehoelava:* (blockFluidpahoehoelava), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=%blockFluidpahoehoelava,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:ic2/fluids/blockic2pahoehoelava_still
-
-# %blockbiomass:* (blockbiomass), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=%blockbiomass,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/blockbiomass_still,face2-5=12000:ic2/fluids/blockbiomass_flow
-
-# %blockbiogas:* (blockbiogas), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=%blockbiogas,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:ic2/fluids/blockbiogas_still
-
-# %blocksteam:* (blocksteam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
-block:id=%blocksteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:ic2/fluids/blocksteam_still
 
 # %blockRubWood:* (blockRubWood), render=(STANDARD), opaque=true,cls=ic2.core.block.BlockRubWood
 block:id=%blockRubWood,data=0,data=1,stdrot=true,face0-5=0:ic2/blockRubWood
@@ -264,8 +270,9 @@ block:id=%blockMetal,data=1,stdrot=true,face0-5=0:ic2/blockMetalTin
 block:id=%blockMetal,data=2,stdrot=true,face0-5=0:ic2/blockMetalBronze
 block:id=%blockMetal,data=3,stdrot=true,face0-5=0:ic2/blockMetalUranium
 block:id=%blockMetal,data=4,stdrot=true,face0-5=0:ic2/blockMetalLead
+block:id=%blockMetal,data=5,stdrot=true,face0-5=0:ic2/blockMetalAdvIron
 
-# %blockCable:* (blockCable), render=mods.immibis.core.multipart.ClientProxy$1(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
+# %blockCable:* (blockCable), render=ic2.core.block.wiring.RenderBlockCable(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockCable
 block:id=%blockCable,data=0,stdrot=true,face0-5=0:ic2/wiring/cable/blockCable
 block:id=%blockCable,data=1,stdrot=true,face0-5=0:ic2/wiring/cable/blockCableO
 block:id=%blockCable,data=2,stdrot=true,face0-5=0:ic2/wiring/cable/blockGoldCable
@@ -280,6 +287,10 @@ block:id=%blockCable,data=10,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCabl
 block:id=%blockCable,data=11,stdrot=true,face0-5=0:ic2/wiring/cable/blockDetectorCable
 block:id=%blockCable,data=12,stdrot=true,face0-5=0:ic2/wiring/cable/blockSplitterCable
 block:id=%blockCable,data=13,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCableI
+
+# %blockKineticGenerator:* (blockKineticGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.kineticgenerator.block.BlockKineticGenerator
+block:id=%blockKineticGenerator,data=0,stdrot=true,face0-5=0:ic2/kineticgenerator/blockWindKineticGenerator
+block:id=%blockKineticGenerator,data=1,stdrot=true,face0-5=0:ic2/kineticgenerator/blockSteamKineticGenerator
 
 # %blockHeatGenerator:* (blockHeatGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.heatgenerator.block.BlockHeatGenerator
 block:id=%blockHeatGenerator,data=0,stdrot=true,face0-5=0:ic2/heatgenerator/blockSolidHeatGenerator
@@ -297,6 +308,7 @@ block:id=%blockGenerator,data=5,stdrot=true,face0-5=0:ic2/generator/blockNuclear
 block:id=%blockGenerator,data=6,stdrot=true,face0-5=0:ic2/generator/blockRTGenerator
 block:id=%blockGenerator,data=7,stdrot=true,face0-5=0:ic2/generator/blockSemifluidGenerator
 block:id=%blockGenerator,data=8,stdrot=true,face0-5=0:ic2/generator/blockStirlingGenerator
+block:id=%blockGenerator,data=9,stdrot=true,face0-5=0:ic2/generator/blockKineticGenerator
 
 # %blockReactorChamber:* (blockReactorChamber), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.reactor.block.BlockReactorChamber
 block:id=%blockReactorChamber,data=0,stdrot=true,face0-5=0:ic2/reactor/blockReactorChamber
@@ -322,6 +334,12 @@ block:id=%blockElectric,data=4,stdrot=true,face0-5=0:ic2/wiring/blockTransformer
 block:id=%blockElectric,data=5,stdrot=true,face0-5=0:ic2/wiring/blockTransformerHV
 block:id=%blockElectric,data=6,stdrot=true,face0-5=0:ic2/wiring/blockTransformerEV
 block:id=%blockElectric,data=7,stdrot=true,face0-5=0:ic2/wiring/blockCESU
+
+# %blockChargepad:* (blockChargepad), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockChargepad
+block:id=%blockChargepad,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockChargepadBatBox
+block:id=%blockChargepad,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockChargepadCESU
+block:id=%blockChargepad,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockChargepadMFE
+block:id=%blockChargepad,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:ic2/wiring/blockChargepadMFSU
 
 # %blockMachine:* (blockMachine), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine
 block:id=%blockMachine,data=0,stdrot=true,face0-5=0:ic2/machine/blockMachine
@@ -356,7 +374,18 @@ block:id=%blockMachine2,data=10,stdrot=true,face0-5=0:ic2/machine/blockFluidBott
 block:id=%blockMachine2,data=11,stdrot=true,face0-5=0:ic2/machine/blockAdvMiner
 block:id=%blockMachine2,data=12,stdrot=true,face0-5=0:ic2/machine/blockLiquidHeatExchanger
 block:id=%blockMachine2,data=13,stdrot=true,face0-5=0:ic2/machine/blockFermenter
-block:id=%blockMachine2,data=14,stdrot=true,face0-5=0:ic2/machine/blockWaterHeater
+block:id=%blockMachine2,data=14,stdrot=true,face0-5=0:ic2/machine/blockFluidRegulator
+block:id=%blockMachine2,data=15,stdrot=true,face0-5=0:ic2/machine/blockCondenser
+
+# %blockMachine3:* (blockMachine3), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.machine.BlockMachine3
+block:id=%blockMachine3,data=0,stdrot=true,face0-5=0:ic2/machine/blockSteamGenerator
+block:id=%blockMachine3,data=1,stdrot=true,face0-5=0:ic2/machine/blockBlastFurnace
+block:id=%blockMachine3,data=2,stdrot=true,face0-5=0:ic2/machine/blockBlockCutter
+block:id=%blockMachine3,data=3,stdrot=true,face0-5=0:ic2/machine/blockSolarDestiller
+block:id=%blockMachine3,data=4,stdrot=true,face0-5=0:ic2/machine/blockFluidDistributor
+block:id=%blockMachine3,data=5,stdrot=true,face0-5=0:ic2/machine/blockSortingMachine
+block:id=%blockMachine3,data=6,stdrot=true,face0-5=0:ic2/machine/blockItemBuffer
+block:id=%blockMachine3,data=7,stdrot=true,face0-5=0:ic2/machine/blockCropHavester
 
 # %blockLuminatorDark:* (blockLuminatorDark), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
 block:id=%blockLuminatorDark,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLuminatorDark
@@ -387,10 +416,50 @@ block:id=%blockDynamite,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2
 # %blockDynamiteRemote:* (blockDynamiteRemote), render=(TORCH), opaque=false,cls=ic2.core.block.BlockDynamite
 block:id=%blockDynamiteRemote,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDynamiteRemote
 
-# %blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.block.BlockCrop
+# %blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.crop.BlockCrop
 block:id=%blockCrop,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
 block:id=%blockCrop,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick.upgraded
-block:id=%blockCrop,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
+block:id=%blockCrop,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.1
+block:id=%blockCrop,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.2
+block:id=%blockCrop,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.3
+block:id=%blockCrop,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.4
+block:id=%blockCrop,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.5
+block:id=%blockCrop,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.1
+block:id=%blockCrop,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.2
+block:id=%blockCrop,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.3
+block:id=%blockCrop,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.4
+block:id=%blockCrop,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.5
+block:id=%blockCrop,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
 
 # %blockBarrel:* (blockBarrel), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
 block:id=%blockBarrel,data=*,stdrot=true,face0-5=0:ic2/blockBarrel
+
+# %fluidUuMatter:* (fluidUuMatter), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidUuMatter,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/uumatter_still,face2-5=12000:ic2/fluids/uumatter_flow
+
+# %fluidConstructionFoam:* (fluidConstructionFoam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidConstructionFoam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/constructionfoam_still,face2-5=12000:ic2/fluids/constructionfoam_flow
+
+# %fluidCoolant:* (fluidCoolant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidCoolant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/coolant_still,face2-5=12000:ic2/fluids/coolant_flow
+
+# %fluidHotCoolant:* (fluidHotCoolant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidHotCoolant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/hotcoolant_still,face2-5=12000:ic2/fluids/hotcoolant_flow
+
+# %fluidPahoehoeLava:* (fluidPahoehoeLava), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidPahoehoeLava,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:ic2/fluids/pahoehoelava_still
+
+# %fluidBiomass:* (fluidBiomass), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidBiomass,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/biomass_still,face2-5=12000:ic2/fluids/biomass_flow
+
+# %fluidBiogas:* (fluidBiogas), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidBiogas,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:ic2/fluids/biogas_still
+
+# %fluidDistilledWater:* (fluidDistilledWater), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidDistilledWater,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/distilledwater_still,face2-5=12000:ic2/fluids/distilledwater_flow
+
+# %fluidSuperheatedSteam:* (fluidSuperheatedSteam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidSuperheatedSteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:ic2/fluids/superheatedsteam_still
+
+# %fluidSteam:* (fluidSteam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidSteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:ic2/fluids/steam_still

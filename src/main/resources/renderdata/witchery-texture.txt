@@ -1,4 +1,4 @@
-# witchery 0.20.4
+# witchery 0.20.6
 version:1.7
 modname:witchery
 

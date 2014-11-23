@@ -1,4 +1,4 @@
-# Botania r1.1-96
+# Botania r1.2-131
 version:1.7
 modname:Botania
 
@@ -77,7 +77,7 @@ patchblock:id=%solidVine,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX
 patchblock:id=%solidVine,patch0=VertX0In@180#0,patch1=VertX0In#0,patch2=VertX0In@90#0,data=14
 patchblock:id=%solidVine,patch0=VertX0In@270#0,patch1=VertX0In@90#0,patch2=VertX0In@180#0,patch3=VertX0In#0,data=15
 
-# %buriedPetals:* (buriedPetals), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockBuriedPetals
+# %buriedPetals:* (buriedPetals), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockBuriedPetals
 boxblock:id=%buriedPetals,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.10000000149011612,zmin=0.0,zmax=1.0,data=*
 
 # %miniIsland:* (miniIsland), render=vazkii.botania.client.render.block.RenderMiniIsland(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockMiniIsland
@@ -85,6 +85,9 @@ boxblock:id=%miniIsland,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.
 
 # %tinyPotato:* (tinyPotato), render=vazkii.botania.client.render.block.RenderTinyPotato(CUSTOM), opaque=false,cls=vazkii.botania.common.block.decor.BlockTinyPotato
 boxblock:id=%tinyPotato,xmin=0.375,xmax=0.625,ymin=0.0,ymax=0.375,zmin=0.375,zmax=0.625,data=*
+
+# %starfield:* (starfield), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockStarfield
+boxblock:id=%starfield,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.25,zmin=0.0,zmax=1.0,data=*
 
 # %livingwood0Stairs:* (livingwood0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockLivingwoodStairs
 customblock:id=%livingwood0Stairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*

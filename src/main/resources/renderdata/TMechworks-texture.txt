@@ -1,4 +1,4 @@
-# TMechworks 1.7.2-60.0ab3ef0
+# TMechworks 1.7.10-86.e500b88
 version:1.7
 modname:TMechworks
 

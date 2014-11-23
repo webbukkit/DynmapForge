@@ -1,4 +1,4 @@
-# AWWayofTime v1.0.1e
+# AWWayofTime v1.2.0a
 version:1.7
 modname:AWWayofTime
 

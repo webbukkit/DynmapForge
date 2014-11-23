@@ -1,4 +1,4 @@
-# BiblioWoodsNatura 1.2
+# BiblioWoodsNatura 1.4
 version:1.7
 modname:BiblioWoodsNatura
 
@@ -35,8 +35,8 @@ boxblock:id=%BiblioWoodshelf,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1
 # %BiblioWoodrack:* (BiblioWoodrack), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomToolrack
 boxblock:id=%BiblioWoodrack,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
-# %BiblioWoodcase:* (BiblioWoodcase), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomCase0
-boxblock:id=%BiblioWoodcase,xmin=0.05999999865889549,xmax=0.9399999976158142,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
+# %BiblioWoodcase0:* (BiblioWoodcase0), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomCase0
+boxblock:id=%BiblioWoodcase0,xmin=0.05999999865889549,xmax=0.9399999976158142,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
 
 # %BiblioWoodlabel:* (BiblioWoodlabel), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomLabel
 boxblock:id=%BiblioWoodlabel,xmin=0.9399999976158142,xmax=1.0,ymin=0.20000000298023224,ymax=0.4000000059604645,zmin=0.30000001192092896,zmax=0.699999988079071,data=*

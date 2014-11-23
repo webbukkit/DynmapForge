@@ -1,4 +1,4 @@
-# BiblioWoodsBoP 1.6
+# BiblioWoodsBoP 1.8
 version:1.7
 modname:BiblioWoodsBoP
 
@@ -47,3 +47,21 @@ block:id=%BiblioWoodFancySign,data=*,stdrot=true,transparency=TRANSPARENT,face0-
 
 # %BiblioWoodFancyWorkbench:* (BiblioWoodFancyWorkbench), render=(CUSTOM), opaque=false,cls=jds.bibliowood.bopwood.blocks.BlockCustomFancyWorkbench
 block:id=%BiblioWoodFancyWorkbench,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodClock:* (BiblioWoodClock), render=(CUSTOM), opaque=false,cls=jds.bibliowood.bopwood.blocks.BlockCustomClock
+block:id=%BiblioWoodClock,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT0:* (BiblioWoodPaintingT0), render=(CUSTOM), opaque=false,cls=jds.bibliowood.bopwood.blocks.BlockCustomPaintingFrameT0
+block:id=%BiblioWoodPaintingT0,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT1:* (BiblioWoodPaintingT1), render=(CUSTOM), opaque=false,cls=jds.bibliowood.bopwood.blocks.BlockCustomPaintingFrameT1
+block:id=%BiblioWoodPaintingT1,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT2:* (BiblioWoodPaintingT2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.bopwood.blocks.BlockCustomPaintingFrameT2
+block:id=%BiblioWoodPaintingT2,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT3:* (BiblioWoodPaintingT3), render=(CUSTOM), opaque=false,cls=jds.bibliowood.bopwood.blocks.BlockCustomPaintingFrameT3
+block:id=%BiblioWoodPaintingT3,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT4:* (BiblioWoodPaintingT4), render=(CUSTOM), opaque=false,cls=jds.bibliowood.bopwood.blocks.BlockCustomPaintingFrameT4
+block:id=%BiblioWoodPaintingT4,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce

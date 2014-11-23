@@ -1,0 +1,94 @@
+# ProjRed_Core 
+version:1.7
+modname:ProjRed|Core
+
+
+
+# Configuration file not found!
+
+
+texturepath:assets/projred_core/textures/blocks/
+texture:id=minecraft/cobblestone,filename=assets/minecraft/textures/blocks/cobblestone.png
+texture:id=projectred/compat/liqcondredmetal,filename=assets/projectred/textures/blocks/compat/liqcondredmetal.png
+texture:id=projectred/compat/liqcondredmetal_flow,filename=assets/projectred/textures/blocks/compat/liqcondredmetal_flow.png
+texture:id=projectred/compat/liqredstone,filename=assets/projectred/textures/blocks/compat/liqredstone.png
+texture:id=projectred/compat/liqredstone_flow,filename=assets/projectred/textures/blocks/compat/liqredstone_flow.png
+texture:id=projectred/lights/lampoff/0,filename=assets/projectred/textures/blocks/lights/lampoff/0.png
+texture:id=projectred/lights/lampoff/1,filename=assets/projectred/textures/blocks/lights/lampoff/1.png
+texture:id=projectred/lights/lampoff/10,filename=assets/projectred/textures/blocks/lights/lampoff/10.png
+texture:id=projectred/lights/lampoff/11,filename=assets/projectred/textures/blocks/lights/lampoff/11.png
+texture:id=projectred/lights/lampoff/12,filename=assets/projectred/textures/blocks/lights/lampoff/12.png
+texture:id=projectred/lights/lampoff/13,filename=assets/projectred/textures/blocks/lights/lampoff/13.png
+texture:id=projectred/lights/lampoff/14,filename=assets/projectred/textures/blocks/lights/lampoff/14.png
+texture:id=projectred/lights/lampoff/15,filename=assets/projectred/textures/blocks/lights/lampoff/15.png
+texture:id=projectred/lights/lampoff/2,filename=assets/projectred/textures/blocks/lights/lampoff/2.png
+texture:id=projectred/lights/lampoff/3,filename=assets/projectred/textures/blocks/lights/lampoff/3.png
+texture:id=projectred/lights/lampoff/4,filename=assets/projectred/textures/blocks/lights/lampoff/4.png
+texture:id=projectred/lights/lampoff/5,filename=assets/projectred/textures/blocks/lights/lampoff/5.png
+texture:id=projectred/lights/lampoff/6,filename=assets/projectred/textures/blocks/lights/lampoff/6.png
+texture:id=projectred/lights/lampoff/7,filename=assets/projectred/textures/blocks/lights/lampoff/7.png
+texture:id=projectred/lights/lampoff/8,filename=assets/projectred/textures/blocks/lights/lampoff/8.png
+texture:id=projectred/lights/lampoff/9,filename=assets/projectred/textures/blocks/lights/lampoff/9.png
+texture:id=projectred/ore/brickbasalt,filename=assets/projectred/textures/blocks/ore/brickbasalt.png
+texture:id=projectred/ore/brickmarble,filename=assets/projectred/textures/blocks/ore/brickmarble.png
+texture:id=projectred/ore/cobblebasalt,filename=assets/projectred/textures/blocks/ore/cobblebasalt.png
+texture:id=projectred/ore/oreperidot,filename=assets/projectred/textures/blocks/ore/oreperidot.png
+texture:id=projectred/ore/oreruby,filename=assets/projectred/textures/blocks/ore/oreruby.png
+texture:id=projectred/ore/oresapphire,filename=assets/projectred/textures/blocks/ore/oresapphire.png
+texture:id=projectred/ore/stonebasalt,filename=assets/projectred/textures/blocks/ore/stonebasalt.png
+texture:id=projectred/ore/stonemarble,filename=assets/projectred/textures/blocks/ore/stonemarble.png
+texture:id=projectred/ore/storageperidot,filename=assets/projectred/textures/blocks/ore/storageperidot.png
+texture:id=projectred/ore/storageruby,filename=assets/projectred/textures/blocks/ore/storageruby.png
+texture:id=projectred/ore/storagesapphire,filename=assets/projectred/textures/blocks/ore/storagesapphire.png
+
+
+
+# %projectred.exploration.ore:* (projectred.exploration.ore), render=(STANDARD), opaque=true,cls=mrtjp.projectred.exploration.BlockOre
+block:id=%projectred.exploration.ore,data=0,stdrot=true,face0-5=0:projectred/ore/oreruby
+block:id=%projectred.exploration.ore,data=1,stdrot=true,face0-5=0:projectred/ore/oresapphire
+block:id=%projectred.exploration.ore,data=2,stdrot=true,face0-5=0:projectred/ore/oreperidot
+
+# %projectred.exploration.stone:* (projectred.exploration.stone), render=(STANDARD), opaque=true,cls=mrtjp.projectred.exploration.BlockDecoratives
+block:id=%projectred.exploration.stone,data=0,stdrot=true,face0-5=0:projectred/ore/stonemarble
+block:id=%projectred.exploration.stone,data=1,stdrot=true,face0-5=0:projectred/ore/brickmarble
+block:id=%projectred.exploration.stone,data=2,stdrot=true,face0-5=0:projectred/ore/cobblebasalt
+block:id=%projectred.exploration.stone,data=3,stdrot=true,face0-5=0:projectred/ore/stonebasalt
+block:id=%projectred.exploration.stone,data=4,stdrot=true,face0-5=0:projectred/ore/brickbasalt
+block:id=%projectred.exploration.stone,data=5,stdrot=true,face0-5=0:projectred/ore/storageruby
+block:id=%projectred.exploration.stone,data=6,stdrot=true,face0-5=0:projectred/ore/storagesapphire
+block:id=%projectred.exploration.stone,data=7,stdrot=true,face0-5=0:projectred/ore/storageperidot
+
+# %projectred.exploration.stonewalls:* (projectred.exploration.stonewalls), render=(WALL), opaque=false,cls=mrtjp.projectred.exploration.BlockDecorativeWalls
+block:id=%projectred.exploration.stonewalls,data=0,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/stonemarble
+block:id=%projectred.exploration.stonewalls,data=1,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/brickmarble
+block:id=%projectred.exploration.stonewalls,data=2,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/cobblebasalt
+block:id=%projectred.exploration.stonewalls,data=3,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/stonebasalt
+block:id=%projectred.exploration.stonewalls,data=4,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/brickbasalt
+block:id=%projectred.exploration.stonewalls,data=5,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/storageruby
+block:id=%projectred.exploration.stonewalls,data=6,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/storagesapphire
+block:id=%projectred.exploration.stonewalls,data=7,stdrot=true,transparency=TRANSPARENT,patch0-2=0:projectred/ore/storageperidot
+block:id=%projectred.exploration.stonewalls,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/cobblestone
+
+# %projectred.compatibility.liqredstone:* (projectred.compatibility.liqredstone), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=mrtjp.projectred.compatibility.tconstruct.LiquidFiniteSubstance
+block:id=%projectred.compatibility.liqredstone,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:projectred/compat/liqredstone,face2-5=12000:projectred/compat/liqredstone_flow
+
+# %projectred.compatibility.liqcondredmetal:* (projectred.compatibility.liqcondredmetal), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=mrtjp.projectred.compatibility.tconstruct.LiquidFiniteSubstance
+block:id=%projectred.compatibility.liqcondredmetal,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:projectred/compat/liqcondredmetal,face2-5=12000:projectred/compat/liqcondredmetal_flow
+
+# %projectred.illumination.lamp:* (projectred.illumination.lamp), render=(STANDARD), opaque=true,cls=mrtjp.projectred.illumination.BlockLamp
+block:id=%projectred.illumination.lamp,data=0,stdrot=true,face0-5=0:projectred/lights/lampoff/0
+block:id=%projectred.illumination.lamp,data=1,stdrot=true,face0-5=0:projectred/lights/lampoff/1
+block:id=%projectred.illumination.lamp,data=2,stdrot=true,face0-5=0:projectred/lights/lampoff/2
+block:id=%projectred.illumination.lamp,data=3,stdrot=true,face0-5=0:projectred/lights/lampoff/3
+block:id=%projectred.illumination.lamp,data=4,stdrot=true,face0-5=0:projectred/lights/lampoff/4
+block:id=%projectred.illumination.lamp,data=5,stdrot=true,face0-5=0:projectred/lights/lampoff/5
+block:id=%projectred.illumination.lamp,data=6,stdrot=true,face0-5=0:projectred/lights/lampoff/6
+block:id=%projectred.illumination.lamp,data=7,stdrot=true,face0-5=0:projectred/lights/lampoff/7
+block:id=%projectred.illumination.lamp,data=8,stdrot=true,face0-5=0:projectred/lights/lampoff/8
+block:id=%projectred.illumination.lamp,data=9,stdrot=true,face0-5=0:projectred/lights/lampoff/9
+block:id=%projectred.illumination.lamp,data=10,stdrot=true,face0-5=0:projectred/lights/lampoff/10
+block:id=%projectred.illumination.lamp,data=11,stdrot=true,face0-5=0:projectred/lights/lampoff/11
+block:id=%projectred.illumination.lamp,data=12,stdrot=true,face0-5=0:projectred/lights/lampoff/12
+block:id=%projectred.illumination.lamp,data=13,stdrot=true,face0-5=0:projectred/lights/lampoff/13
+block:id=%projectred.illumination.lamp,data=14,stdrot=true,face0-5=0:projectred/lights/lampoff/14
+block:id=%projectred.illumination.lamp,data=15,stdrot=true,face0-5=0:projectred/lights/lampoff/15

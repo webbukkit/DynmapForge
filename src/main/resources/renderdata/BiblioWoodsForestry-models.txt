@@ -1,4 +1,4 @@
-# BiblioWoodsForestry 1.4
+# BiblioWoodsForestry 1.6
 version:1.7
 modname:BiblioWoodsForestry
 
@@ -32,11 +32,20 @@ boxblock:id=%BiblioWoodFstBookcase2,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0
 # %BiblioWoodFstpotshelf:* (BiblioWoodFstpotshelf), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomPotionShelf
 boxblock:id=%BiblioWoodFstpotshelf,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
+# %BiblioWoodFstpotshelf2:* (BiblioWoodFstpotshelf2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomPotionShelf2
+boxblock:id=%BiblioWoodFstpotshelf2,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
 # %BiblioWoodFstshelf:* (BiblioWoodFstshelf), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomShelf
 boxblock:id=%BiblioWoodFstshelf,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
+# %BiblioWoodFstshelf2:* (BiblioWoodFstshelf2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomShelf2
+boxblock:id=%BiblioWoodFstshelf2,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
 # %BiblioWoodFstrack:* (BiblioWoodFstrack), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomToolrack
 boxblock:id=%BiblioWoodFstrack,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %BiblioWoodFstrack2:* (BiblioWoodFstrack2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomToolrack2
+boxblock:id=%BiblioWoodFstrack2,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
 # %BiblioWoodFstcase0:* (BiblioWoodFstcase0), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomCase0
 boxblock:id=%BiblioWoodFstcase0,xmin=0.05999999865889549,xmax=0.9399999976158142,ymin=0.0,ymax=0.5,zmin=0.0,zmax=1.0,data=*
@@ -46,15 +55,6 @@ boxblock:id=%BiblioWoodFstcase1,xmin=0.05999999865889549,xmax=0.9399999976158142
 
 # %BiblioWoodFstlabel:* (BiblioWoodFstlabel), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomLabel
 boxblock:id=%BiblioWoodFstlabel,xmin=0.9399999976158142,xmax=1.0,ymin=0.20000000298023224,ymax=0.4000000059604645,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
-
-# %BiblioWoodFstpotshelf2:* (BiblioWoodFstpotshelf2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomPotionShelf2
-boxblock:id=%BiblioWoodFstpotshelf2,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
-
-# %BiblioWoodFstshelf2:* (BiblioWoodFstshelf2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomShelf2
-boxblock:id=%BiblioWoodFstshelf2,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
-
-# %BiblioWoodFstrack2:* (BiblioWoodFstrack2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomToolrack2
-boxblock:id=%BiblioWoodFstrack2,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
 # %BiblioWoodFstlabel2:* (BiblioWoodFstlabel2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.forestrywood.blocks.BlockCustomLabel2
 boxblock:id=%BiblioWoodFstlabel2,xmin=0.9399999976158142,xmax=1.0,ymin=0.20000000298023224,ymax=0.4000000059604645,zmin=0.30000001192092896,zmax=0.699999988079071,data=*

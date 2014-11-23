@@ -1,0 +1,69 @@
+# factorization 1.7.10-0.8.88.1
+version:1.7
+modname:factorization
+
+
+cfgfile:config/factorization.cfg
+
+
+texturepath:assets/factorization/textures/blocks/
+texture:id=factorization/ceramics/bisque,filename=assets/factorization/textures/blocks/ceramics/bisque.png
+texture:id=factorization/ceramics/dry,filename=assets/factorization/textures/blocks/ceramics/dry.png
+texture:id=factorization/charge/battery_bottom,filename=assets/factorization/textures/blocks/charge/battery_bottom.png
+texture:id=factorization/charge/battery_side,filename=assets/factorization/textures/blocks/charge/battery_side.png
+texture:id=factorization/charge/battery_top,filename=assets/factorization/textures/blocks/charge/battery_top.png
+texture:id=factorization/charge/wire,filename=assets/factorization/textures/blocks/charge/wire.png
+texture:id=factorization/craft/packager_bottom,filename=assets/factorization/textures/blocks/craft/packager_bottom.png
+texture:id=factorization/craft/packager_side,filename=assets/factorization/textures/blocks/craft/packager_side.png
+texture:id=factorization/craft/packager_top,filename=assets/factorization/textures/blocks/craft/packager_top.png
+texture:id=factorization/craft/stamper_bottom,filename=assets/factorization/textures/blocks/craft/stamper_bottom.png
+texture:id=factorization/craft/stamper_side,filename=assets/factorization/textures/blocks/craft/stamper_side.png
+texture:id=factorization/craft/stamper_top,filename=assets/factorization/textures/blocks/craft/stamper_top.png
+texture:id=factorization/default_icon,filename=assets/factorization/textures/blocks/default_icon.png
+texture:id=factorization/error,filename=assets/factorization/textures/blocks/error.png
+texture:id=factorization/machine/heater_spiral,filename=assets/factorization/textures/blocks/machine/heater_spiral.png
+texture:id=factorization/machine/slag_furnace_bottom,filename=assets/factorization/textures/blocks/machine/slag_furnace_bottom.png
+texture:id=factorization/machine/slag_furnace_face,filename=assets/factorization/textures/blocks/machine/slag_furnace_face.png
+texture:id=factorization/machine/slag_furnace_side,filename=assets/factorization/textures/blocks/machine/slag_furnace_side.png
+texture:id=factorization/machine/slag_furnace_top,filename=assets/factorization/textures/blocks/machine/slag_furnace_top.png
+texture:id=factorization/material/transparent,filename=assets/factorization/textures/blocks/material/transparent.png
+texture:id=factorization/resource/dark_iron_block,filename=assets/factorization/textures/blocks/resource/dark_iron_block.png
+texture:id=factorization/resource/galena_ore,filename=assets/factorization/textures/blocks/resource/galena_ore.png
+texture:id=factorization/resource/lead_block,filename=assets/factorization/textures/blocks/resource/lead_block.png
+texture:id=factorization/resource/ore_dark_iron,filename=assets/factorization/textures/blocks/resource/ore_dark_iron.png
+texture:id=factorization/resource/silver_block,filename=assets/factorization/textures/blocks/resource/silver_block.png
+texture:id=minecraft/bedrock,filename=assets/minecraft/textures/blocks/bedrock.png
+
+
+
+# %FzBlock:* (FzBlock), render=factorization.shared.FactorizationRender(CUSTOM), opaque=false,cls=factorization.shared.BlockFactorization
+block:id=%FzBlock,data=0,data=1,data=2,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=3,stdrot=true,face0=12000:factorization/craft/stamper_bottom,face1=12000:factorization/craft/stamper_top,face2-5=12000:factorization/craft/stamper_side
+block:id=%FzBlock,data=4,data=5,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=6,stdrot=true,face0-5=12000:factorization/resource/dark_iron_block
+block:id=%FzBlock,data=7,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=8,stdrot=true,face0=12000:factorization/craft/packager_bottom,face1=12000:factorization/craft/packager_top,face2-5=12000:factorization/craft/packager_side
+block:id=%FzBlock,data=9,data=10,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=11,stdrot=true,face0=12000:factorization/machine/slag_furnace_bottom,face1=12000:factorization/machine/slag_furnace_top,face2=12000:factorization/machine/slag_furnace_side,face3=12000:factorization/machine/slag_furnace_face,face4-5=12000:factorization/machine/slag_furnace_side
+block:id=%FzBlock,data=12,stdrot=true,face0=12000:factorization/charge/battery_bottom,face1=12000:factorization/charge/battery_top,face2-5=12000:factorization/charge/battery_side
+block:id=%FzBlock,data=13,stdrot=true,face0-5=12000:factorization/default_icon
+block:id=%FzBlock,data=14,stdrot=true,face0-5=12000:factorization/charge/wire
+block:id=%FzBlock,data=15,stdrot=true,face0-5=12000:factorization/machine/heater_spiral
+
+# %Lightair:* (Lightair), render=(CUSTOM), opaque=false,cls=factorization.wrath.BlockLightAir
+block:id=%Lightair,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:factorization/material/transparent
+
+# %ResourceBlock:* (ResourceBlock), render=(STANDARD), opaque=true,cls=factorization.common.BlockResource
+block:id=%ResourceBlock,data=0,stdrot=true,face0-5=0:factorization/resource/galena_ore
+block:id=%ResourceBlock,data=1,stdrot=true,face0-5=0:factorization/resource/silver_block
+block:id=%ResourceBlock,data=2,stdrot=true,face0-5=0:factorization/resource/lead_block
+block:id=%ResourceBlock,data=3,stdrot=true,face0-5=0:factorization/resource/dark_iron_block
+block:id=%ResourceBlock,data=5,stdrot=true,face0-5=0:factorization/ceramics/dry
+block:id=%ResourceBlock,data=6,stdrot=true,face0-5=0:factorization/ceramics/bisque
+block:id=%ResourceBlock,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:factorization/error
+
+# %DarkIronOre:* (DarkIronOre), render=(STANDARD), opaque=true,cls=factorization.darkiron.BlockDarkIronOre
+block:id=%DarkIronOre,data=*,stdrot=true,face0-5=0:factorization/resource/ore_dark_iron
+
+# %FracturedBedrock:* (FracturedBedrock), render=(STANDARD), opaque=true,cls=factorization.common.Registry$1NotchBlock
+block:id=%FracturedBedrock,data=*,stdrot=true,face0-5=0:minecraft/bedrock

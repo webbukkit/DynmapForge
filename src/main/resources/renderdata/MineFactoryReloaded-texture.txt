@@ -1,4 +1,4 @@
-# MineFactoryReloaded 1.7.10R2.8.0RC2
+# MineFactoryReloaded 1.7.10R2.8.0RC3
 version:1.7
 modname:MineFactoryReloaded
 

@@ -1,4 +1,4 @@
-# Botania r1.1-96
+# Botania r1.2-131
 version:1.7
 modname:Botania
 
@@ -65,6 +65,7 @@ texture:id=botania/dreamwood2,filename=assets/botania/textures/blocks/dreamwood2
 texture:id=botania/dreamwood3,filename=assets/botania/textures/blocks/dreamwood3.png
 texture:id=botania/dreamwood4,filename=assets/botania/textures/blocks/dreamwood4.png
 texture:id=botania/dreamwood5,filename=assets/botania/textures/blocks/dreamwood5.png
+texture:id=botania/elfGlass0,filename=assets/botania/textures/blocks/elfGlass0.png
 texture:id=botania/enchanter,filename=assets/botania/textures/blocks/enchanter.png
 texture:id=botania/enderEyeBlock0,filename=assets/botania/textures/blocks/enderEyeBlock0.png
 texture:id=botania/enderEyeBlock1,filename=assets/botania/textures/blocks/enderEyeBlock1.png
@@ -136,10 +137,14 @@ texture:id=botania/prismarine1,filename=assets/botania/textures/blocks/prismarin
 texture:id=botania/prismarine2,filename=assets/botania/textures/blocks/prismarine2.png
 texture:id=botania/reedBlock0,filename=assets/botania/textures/blocks/reedBlock0.png
 texture:id=botania/reedBlock1,filename=assets/botania/textures/blocks/reedBlock1.png
+texture:id=botania/rfGenerator,filename=assets/botania/textures/blocks/rfGenerator.png
 texture:id=botania/runeAltar0,filename=assets/botania/textures/blocks/runeAltar0.png
 texture:id=botania/runeAltar1,filename=assets/botania/textures/blocks/runeAltar1.png
 texture:id=botania/runeAltar2,filename=assets/botania/textures/blocks/runeAltar2.png
 texture:id=botania/seaLamp,filename=assets/botania/textures/blocks/seaLamp.png
+texture:id=botania/starfield0,filename=assets/botania/textures/blocks/starfield0.png
+texture:id=botania/starfield1,filename=assets/botania/textures/blocks/starfield1.png
+texture:id=botania/starfield2,filename=assets/botania/textures/blocks/starfield2.png
 texture:id=botania/storage0,filename=assets/botania/textures/blocks/storage0.png
 texture:id=botania/storage1,filename=assets/botania/textures/blocks/storage1.png
 texture:id=botania/storage2,filename=assets/botania/textures/blocks/storage2.png
@@ -198,12 +203,8 @@ block:id=%livingwood,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,
 block:id=%specialFlower,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/flower16
 
 # %spreader:* (spreader), render=vazkii.botania.client.render.block.RenderSpreader(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockSpreader
-block:id=%spreader,data=0,stdrot=true,face0-5=0:botania/livingwood0
-block:id=%spreader,data=1,stdrot=true,face0-5=0:botania/livingwood1
-block:id=%spreader,data=2,stdrot=true,face0-5=0:botania/livingwood2
-block:id=%spreader,data=3,stdrot=true,face0-5=0:botania/livingwood3
-block:id=%spreader,data=4,stdrot=true,face0-5=0:botania/livingwood4
-block:id=%spreader,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/livingwood5
+block:id=%spreader,data=0,data=1,stdrot=true,face0-5=0:botania/livingwood0
+block:id=%spreader,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/dreamwood0
 
 # %pool:* (pool), render=vazkii.botania.client.render.block.RenderPool(CUSTOM), opaque=false,cls=vazkii.botania.common.block.BlockPool
 block:id=%pool,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/livingrock0
@@ -338,7 +339,7 @@ block:id=%bifrost,data=*,stdrot=true,face0-5=12000:botania/bifrost
 # %solidVine:* (solidVine), render=(VINE), opaque=false,cls=vazkii.botania.common.block.BlockSolidVines
 block:id=%solidVine,data=*,stdrot=true,transparency=TRANSPARENT,patch0=2000:minecraft/vine
 
-# %buriedPetals:* (buriedPetals), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockBuriedPetals
+# %buriedPetals:* (buriedPetals), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockBuriedPetals
 block:id=%buriedPetals,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:botania/buriedPetals
 
 # %prismarine:* (prismarine), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.decor.BlockPrismarine
@@ -387,6 +388,15 @@ block:id=%customBrick,data=15,stdrot=true,face0-5=0:botania/customBrick15
 # %enderEyeBlock:* (enderEyeBlock), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.BlockEnderEye
 block:id=%enderEyeBlock,data=0,stdrot=true,face0-5=0:botania/enderEyeBlock0
 block:id=%enderEyeBlock,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:botania/enderEyeBlock1
+
+# %starfield:* (starfield), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.decor.BlockStarfield
+block:id=%starfield,data=*,stdrot=true,transparency=TRANSPARENT,face0=0:botania/starfield0,face1=0:botania/starfield1,face2-5=0:botania/starfield2
+
+# %rfGenerator:* (rfGenerator), render=(STANDARD), opaque=true,cls=vazkii.botania.common.block.BlockRFGenerator
+block:id=%rfGenerator,data=*,stdrot=true,face0-5=0:botania/rfGenerator
+
+# %elfGlass:* (elfGlass), render=(STANDARD), opaque=false,cls=vazkii.botania.common.block.BlockElfGlass
+block:id=%elfGlass,data=*,stdrot=true,face0-5=12000:botania/elfGlass0
 
 # %livingwood0Stairs:* (livingwood0Stairs), render=(STAIRS), opaque=false,cls=vazkii.botania.common.block.decor.stairs.living.BlockLivingwoodStairs
 block:id=%livingwood0Stairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:botania/livingwood0

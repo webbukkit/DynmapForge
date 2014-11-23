@@ -1,4 +1,4 @@
-# appliedenergistics2 rv1-alpha-44
+# appliedenergistics2 rv1-stable-1
 version:1.7
 modname:appliedenergistics2
 

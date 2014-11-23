@@ -1,4 +1,4 @@
-# AWWayofTime v1.0.1e
+# AWWayofTime v1.2.0a
 version:1.7
 modname:AWWayofTime
 
@@ -12,6 +12,7 @@ texture:id=AlchemicalWizardry/AlchemicChemistrySet,filename=assets/alchemicalwiz
 texture:id=AlchemicalWizardry/AltarCapacityRune,filename=assets/alchemicalwizardry/textures/blocks/AltarCapacityRune.png
 texture:id=AlchemicalWizardry/ArcanePedestal,filename=assets/alchemicalwizardry/textures/blocks/ArcanePedestal.png
 texture:id=AlchemicalWizardry/ArcanePlinth,filename=assets/alchemicalwizardry/textures/blocks/ArcanePlinth.png
+texture:id=AlchemicalWizardry/BetterCapacityRune,filename=assets/alchemicalwizardry/textures/blocks/BetterCapacityRune.png
 texture:id=AlchemicalWizardry/BlankRune,filename=assets/alchemicalwizardry/textures/blocks/BlankRune.png
 texture:id=AlchemicalWizardry/BlockBloodLight,filename=assets/alchemicalwizardry/textures/blocks/BlockBloodLight.png
 texture:id=AlchemicalWizardry/BloodAltar_Bottom,filename=assets/alchemicalwizardry/textures/blocks/BloodAltar_Bottom.png
@@ -35,15 +36,22 @@ texture:id=AlchemicalWizardry/OrbCapacityRune,filename=assets/alchemicalwizardry
 texture:id=AlchemicalWizardry/RitualStone,filename=assets/alchemicalwizardry/textures/blocks/RitualStone.png
 texture:id=AlchemicalWizardry/RuneOfSacrifice,filename=assets/alchemicalwizardry/textures/blocks/RuneOfSacrifice.png
 texture:id=AlchemicalWizardry/RuneOfSelfSacrifice,filename=assets/alchemicalwizardry/textures/blocks/RuneOfSelfSacrifice.png
+texture:id=AlchemicalWizardry/SimpleTransCircle,filename=assets/alchemicalwizardry/textures/blocks/SimpleTransCircle.png
 texture:id=AlchemicalWizardry/SoulForge,filename=assets/alchemicalwizardry/textures/blocks/SoulForge.png
 texture:id=AlchemicalWizardry/SpectralBlock,filename=assets/alchemicalwizardry/textures/blocks/SpectralBlock.png
 texture:id=AlchemicalWizardry/SpeedRune,filename=assets/alchemicalwizardry/textures/blocks/SpeedRune.png
 texture:id=AlchemicalWizardry/Teleposer_Side,filename=assets/alchemicalwizardry/textures/blocks/Teleposer_Side.png
 texture:id=AlchemicalWizardry/Teleposer_Top,filename=assets/alchemicalwizardry/textures/blocks/Teleposer_Top.png
 texture:id=AlchemicalWizardry/WaterRitualStone,filename=assets/alchemicalwizardry/textures/blocks/WaterRitualStone.png
-texture:id=AlchemicalWizardry/fireEffectBlock_blank,filename=assets/alchemicalwizardry/textures/blocks/fireEffectBlock_blank.png
-texture:id=AlchemicalWizardry/fireEffectBlock_output,filename=assets/alchemicalwizardry/textures/blocks/fireEffectBlock_output.png
 texture:id=AlchemicalWizardry/lifeEssenceStill,filename=assets/alchemicalwizardry/textures/blocks/lifeEssenceStill.png
+texture:id=minecraft/MISSING_ICON_BLOCK_833_blockSpellParadigm,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_833_blockSpellParadigm.png
+texture:id=minecraft/MISSING_ICON_BLOCK_834_blockSpellEnhancement,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_834_blockSpellEnhancement.png
+texture:id=minecraft/MISSING_ICON_BLOCK_835_blockSpellModifier,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_835_blockSpellModifier.png
+texture:id=minecraft/MISSING_ICON_BLOCK_836_blockSpellEffect,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_836_blockSpellEffect.png
+texture:id=minecraft/MISSING_ICON_BLOCK_838_demonPortal,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_838_demonPortal.png
+texture:id=minecraft/MISSING_ICON_BLOCK_839_schematicSaver,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_839_schematicSaver.png
+texture:id=minecraft/MISSING_ICON_BLOCK_841_alchemicCalcinator,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_841_alchemicCalcinator.png
+texture:id=minecraft/MISSING_ICON_BLOCK_842_crystalBelljar,filename=assets/minecraft/textures/blocks/MISSING_ICON_BLOCK_842_crystalBelljar.png
 
 
 
@@ -55,26 +63,27 @@ block:id=%AlchemicalWizardrybloodRune,data=0,stdrot=true,face0-5=0:AlchemicalWiz
 block:id=%AlchemicalWizardrybloodRune,data=1,stdrot=true,face0-5=0:AlchemicalWizardry/AltarCapacityRune
 block:id=%AlchemicalWizardrybloodRune,data=2,stdrot=true,face0-5=0:AlchemicalWizardry/DislocationRune
 block:id=%AlchemicalWizardrybloodRune,data=3,stdrot=true,face0-5=0:AlchemicalWizardry/OrbCapacityRune
-block:id=%AlchemicalWizardrybloodRune,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/BlankRune
+block:id=%AlchemicalWizardrybloodRune,data=4,stdrot=true,face0-5=0:AlchemicalWizardry/BetterCapacityRune
+block:id=%AlchemicalWizardrybloodRune,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/BlankRune
 
 # %lifeEssence:* (lifeEssence), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.LifeEssenceBlock
 block:id=%lifeEssence,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:AlchemicalWizardry/lifeEssenceStill
 
 # %speedRune:* (speedRune), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.SpeedRune
 block:id=%speedRune,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/SpeedRune
-block:id=%speedRune,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/SpeedRune
+block:id=%speedRune,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/SpeedRune
 
 # %efficiencyRune:* (efficiencyRune), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.EfficiencyRune
 block:id=%efficiencyRune,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/EfficiencyRune
-block:id=%efficiencyRune,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/EfficiencyRune
+block:id=%efficiencyRune,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/EfficiencyRune
 
 # %runeOfSacrifice:* (runeOfSacrifice), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.RuneOfSacrifice
 block:id=%runeOfSacrifice,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSacrifice
-block:id=%runeOfSacrifice,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSacrifice
+block:id=%runeOfSacrifice,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSacrifice
 
 # %runeOfSelfSacrifice:* (runeOfSelfSacrifice), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.RuneOfSelfSacrifice
 block:id=%runeOfSelfSacrifice,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSelfSacrifice
-block:id=%runeOfSelfSacrifice,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSelfSacrifice
+block:id=%runeOfSelfSacrifice,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:AlchemicalWizardry/RuneOfSelfSacrifice
 
 # %ritualStone:* (ritualStone), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.RitualStone
 block:id=%ritualStone,data=0,stdrot=true,face0-5=0:AlchemicalWizardry/RitualStone
@@ -131,16 +140,31 @@ block:id=%bloodLight,data=*,stdrot=true,face0-5=0:AlchemicalWizardry/BlockBloodL
 block:id=%blockConduit,data=*,stdrot=true,face0=0:AlchemicalWizardry/BloodAltar_Bottom,face1=0:AlchemicalWizardry/BloodAltar_Top,face2-5=0:AlchemicalWizardry/BloodAltar_SideType2
 
 # %AlchemicalWizardrytile.blockSpellParadigm:* (AlchemicalWizardrytile.blockSpellParadigm), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpellParadigm
-block:id=%AlchemicalWizardrytile.blockSpellParadigm,data=*,stdrot=true,face0-3=0:AlchemicalWizardry/fireEffectBlock_blank,face4=0:AlchemicalWizardry/fireEffectBlock_output,face5=0:AlchemicalWizardry/fireEffectBlock_blank
+block:id=%AlchemicalWizardrytile.blockSpellParadigm,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_833_blockSpellParadigm
 
 # %AlchemicalWizardrytile.blockSpellEnhancement:* (AlchemicalWizardrytile.blockSpellEnhancement), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpellEnhancement
-block:id=%AlchemicalWizardrytile.blockSpellEnhancement,data=*,stdrot=true,face0-3=0:AlchemicalWizardry/fireEffectBlock_blank,face4=0:AlchemicalWizardry/fireEffectBlock_output,face5=0:AlchemicalWizardry/fireEffectBlock_blank
+block:id=%AlchemicalWizardrytile.blockSpellEnhancement,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_834_blockSpellEnhancement
 
 # %AlchemicalWizardrytile.blockSpellModifier:* (AlchemicalWizardrytile.blockSpellModifier), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpellModifier
-block:id=%AlchemicalWizardrytile.blockSpellModifier,data=*,stdrot=true,face0-3=0:AlchemicalWizardry/fireEffectBlock_blank,face4=0:AlchemicalWizardry/fireEffectBlock_output,face5=0:AlchemicalWizardry/fireEffectBlock_blank
+block:id=%AlchemicalWizardrytile.blockSpellModifier,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_835_blockSpellModifier
 
 # %AlchemicalWizardrytile.blockSpellEffect:* (AlchemicalWizardrytile.blockSpellEffect), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpellEffect
-block:id=%AlchemicalWizardrytile.blockSpellEffect,data=*,stdrot=true,face0-3=0:AlchemicalWizardry/fireEffectBlock_blank,face4=0:AlchemicalWizardry/fireEffectBlock_output,face5=0:AlchemicalWizardry/fireEffectBlock_blank
+block:id=%AlchemicalWizardrytile.blockSpellEffect,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_836_blockSpellEffect
 
 # %spectralContainer:* (spectralContainer), render=(STANDARD), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockSpectralContainer
 block:id=%spectralContainer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:AlchemicalWizardry/BlockBloodLight
+
+# %demonPortalMain:* (demonPortalMain), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.BlockDemonPortal
+block:id=%demonPortalMain,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_838_demonPortal
+
+# %blockSchemSaver:* (blockSchemSaver), render=(STANDARD), opaque=true,cls=WayofTime.alchemicalWizardry.common.block.BlockSchematicSaver
+block:id=%blockSchemSaver,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_839_schematicSaver
+
+# %blockReagentConduit:* (blockReagentConduit), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockReagentConduit
+block:id=%blockReagentConduit,data=*,stdrot=true,face0-5=0:AlchemicalWizardry/SimpleTransCircle
+
+# %blockAlchemicCalcinator:* (blockAlchemicCalcinator), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockAlchemicCalcinator
+block:id=%blockAlchemicCalcinator,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_841_alchemicCalcinator
+
+# %blockCrystalBelljar:* (blockCrystalBelljar), render=(CUSTOM), opaque=false,cls=WayofTime.alchemicalWizardry.common.block.BlockBelljar
+block:id=%blockCrystalBelljar,data=*,stdrot=true,face0-5=0:minecraft/MISSING_ICON_BLOCK_842_crystalBelljar

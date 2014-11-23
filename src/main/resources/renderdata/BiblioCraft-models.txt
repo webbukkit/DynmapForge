@@ -1,4 +1,4 @@
-# BiblioCraft 1.6.3
+# BiblioCraft 1.8.1
 version:1.7
 modname:BiblioCraft
 
@@ -21,6 +21,15 @@ patch:id=TorchTopSlope,Ox=0.0,Oy=0.825,Oz=-0.3625,Ux=1.0,Uy=0.825,Uz=-0.3625,Vx=
 patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy=1.0,Vz=0.0,visibility=top
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
+
+# %BiblioSwordPedestal:* (BiblioSwordPedestal), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockSwordPedestal
+boxblock:id=%BiblioSwordPedestal,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.23999999463558197,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
+
+# %BiblioFancySign:* (BiblioFancySign), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockFancySign
+boxblock:id=%BiblioFancySign,xmin=0.0,xmax=0.10000000149011612,ymin=0.20000000298023224,ymax=0.800000011920929,zmin=0.0,zmax=1.0,data=*
+
+# %BiblioBell:* (BiblioBell), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBell
+boxblock:id=%BiblioBell,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0,ymax=0.20000000298023224,zmin=0.4000000059604645,zmax=0.6000000238418579,data=*
 
 # %Bibliotheca:* (Bibliotheca), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBookcase
 boxblock:id=%Bibliotheca,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*

@@ -1,4 +1,4 @@
-# TMechworks 1.7.2-60.0ab3ef0
+# TMechworks 1.7.10-86.e500b88
 version:1.7
 modname:TMechworks
 
@@ -29,4 +29,4 @@ boxblock:id=%SignalTerminal,xmin=0.375,xmax=0.625,ymin=0.375,ymax=0.625,zmin=0.3
 
 # %MeshFilter:* (MeshFilter), render=tmechworks.client.block.FilterRender(CUSTOM), opaque=false,cls=tmechworks.blocks.FilterBlock
 boxblock:id=%MeshFilter,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.1875,zmin=0.0,zmax=1.0,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
-boxblock:id=%MeshFilter,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+boxblock:id=%MeshFilter,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=0.949999988079071,zmin=0.0,zmax=1.0,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

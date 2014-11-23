@@ -1,4 +1,4 @@
-# BiblioWoodsNatura 1.2
+# BiblioWoodsNatura 1.4
 version:1.7
 modname:BiblioWoodsNatura
 
@@ -24,8 +24,8 @@ block:id=%BiblioWoodshelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 # %BiblioWoodrack:* (BiblioWoodrack), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomToolrack
 block:id=%BiblioWoodrack,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
 
-# %BiblioWoodcase:* (BiblioWoodcase), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomCase0
-block:id=%BiblioWoodcase,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+# %BiblioWoodcase0:* (BiblioWoodcase0), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomCase0
+block:id=%BiblioWoodcase0,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
 
 # %BiblioWoodlabel:* (BiblioWoodlabel), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomLabel
 block:id=%BiblioWoodlabel,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
@@ -47,3 +47,21 @@ block:id=%BiblioWoodFancySign,data=*,stdrot=true,transparency=TRANSPARENT,face0-
 
 # %BiblioWoodFancyWorkbench:* (BiblioWoodFancyWorkbench), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomFancyWorkbench
 block:id=%BiblioWoodFancyWorkbench,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodClock:* (BiblioWoodClock), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomClock
+block:id=%BiblioWoodClock,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT0:* (BiblioWoodPaintingT0), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomPaintingFrameT0
+block:id=%BiblioWoodPaintingT0,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT1:* (BiblioWoodPaintingT1), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomPaintingFrameT1
+block:id=%BiblioWoodPaintingT1,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT2:* (BiblioWoodPaintingT2), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomPaintingFrameT2
+block:id=%BiblioWoodPaintingT2,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT3:* (BiblioWoodPaintingT3), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomPaintingFrameT3
+block:id=%BiblioWoodPaintingT3,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
+
+# %BiblioWoodPaintingT4:* (BiblioWoodPaintingT4), render=(CUSTOM), opaque=false,cls=jds.bibliowood.naturawood.blocks.BlockCustomPaintingFrameT4
+block:id=%BiblioWoodPaintingT4,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
