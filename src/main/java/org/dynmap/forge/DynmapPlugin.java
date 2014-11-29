@@ -51,6 +51,10 @@ import net.minecraft.world.WorldServer;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
+import net.minecraftforge.common.ForgeChunkManager;
+import net.minecraftforge.common.ForgeChunkManager.Ticket;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
@@ -103,9 +107,7 @@ public class DynmapPlugin
     private MapManager mapManager;
     private net.minecraft.server.MinecraftServer server;
     public static DynmapPlugin plugin;
-    /*TODO - need rest of forge
     private ChatHandler chathandler;
-    */
     private HashMap<String, Integer> sortWeights = new HashMap<String, Integer>(); 
     // Drop world load ticket after 30 seconds
     private long worldIdleTimeoutNS = 30 * 1000000000L;
@@ -220,7 +222,6 @@ public class DynmapPlugin
     }
     private ConcurrentLinkedQueue<ChatMessage> msgqueue = new ConcurrentLinkedQueue<ChatMessage>();
     
-    /**TODO - need rest of forge
     public class ChatHandler {
 		@SubscribeEvent
 		public void handleChat(ServerChatEvent event) {
@@ -233,9 +234,7 @@ public class DynmapPlugin
             }
 		}
     }
-    */
     
-    /**TODO - need rest of forge
     private static class WorldBusyRecord {
         long last_ts;
         Ticket ticket;
@@ -248,7 +247,7 @@ public class DynmapPlugin
     static void setBusy(World w, Ticket t) {
         if(w == null) return;
         if (!DynmapMod.useforcedchunks) return;
-        WorldBusyRecord wbr = busy_worlds.get(w.provider.dimensionId);
+        WorldBusyRecord wbr = busy_worlds.get(w.provider.getDimensionId());
         if(wbr == null) {   // Not busy, make ticket and keep spawn loaded
             Debug.debug("World " + w.getWorldInfo().getWorldName() + "/"+ w.provider.getDimensionName() + " is busy");
             wbr = new WorldBusyRecord();
@@ -257,10 +256,10 @@ public class DynmapPlugin
             else
                 wbr.ticket = ForgeChunkManager.requestTicket(DynmapMod.instance, w, ForgeChunkManager.Type.NORMAL);
             if(wbr.ticket != null) {
-                ChunkCoordinates cc = w.getSpawnPoint();
-                ChunkCoordIntPair ccip = new ChunkCoordIntPair(cc.posX >> 4, cc.posZ >> 4);
+                BlockPos cc = w.getSpawnPoint();
+                ChunkCoordIntPair ccip = new ChunkCoordIntPair(cc.getX() >> 4, cc.getZ() >> 4);
                 ForgeChunkManager.forceChunk(wbr.ticket, ccip);
-                busy_worlds.put(w.provider.dimensionId, wbr);  // Add to busy list
+                busy_worlds.put(w.provider.getDimensionId(), wbr);  // Add to busy list
             }
         }
         wbr.last_ts = System.nanoTime();
@@ -279,7 +278,6 @@ public class DynmapPlugin
             }
         }
     }
-    */
     
     public static class OurLog implements DynmapLogger {
         Logger log;
@@ -571,12 +569,10 @@ public class DynmapPlugin
                     break;
 
                 case PLAYER_CHAT:
-                    /*TODO - need rest of forge
                 	if (chathandler == null) {
                 		chathandler = new ChatHandler();
                 		MinecraftForge.EVENT_BUS.register(chathandler);
                 	}
-                	*/
                     break;
 
                 case BLOCK_BREAK:

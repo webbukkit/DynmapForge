@@ -17,7 +17,7 @@ buildscript {
     }
 }
 
-apply plugin: 'fml'
+apply plugin: 'forge'
 
 
 // define the properties file
