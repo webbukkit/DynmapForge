@@ -1234,14 +1234,20 @@ public class DynmapPlugin
     	BiomeGenBase[] list = getBiomeList();
     	
         for(int i = 0; i < list.length; i++) {
-            if (!BiomeMap.byBiomeID(i).isDefault()) continue;
             BiomeGenBase bb = list[i];
             if(bb != null) {
                 String id = bb.biomeName;
                 float tmp = bb.temperature, hum = bb.rainfall;
-                BiomeMap m = new BiomeMap(i, id, tmp, hum);
-                Log.verboseinfo("Add custom biome [" + m.toString() + "] (" + i + ")");
-                cnt++;
+                BiomeMap bmap = BiomeMap.byBiomeID(i);
+                if (bmap.isDefault()) {
+                    BiomeMap m = new BiomeMap(i, id, tmp, hum);
+                    Log.verboseinfo("Add custom biome [" + m.toString() + "] (" + i + ")");
+                    cnt++;
+                }
+                else {
+                    bmap.setTemperature(tmp);
+                    bmap.setRainfall(hum);
+                }
             }
         }
         if(cnt > 0)
