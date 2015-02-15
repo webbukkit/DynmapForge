@@ -125,6 +125,8 @@ components:
     spawnbedhidebydefault: true
     spawnbedminzoom: 0
     spawnbedformat: "%name%'s bed"
+    # (optional) Show world border (vanilla 1.8+)
+    showworldborder: true
     
   - class: org.dynmap.ClientComponent
     type: chat
@@ -423,17 +425,7 @@ url:
     #tiles: "tiles/"
     # markers base URL
     #markers: "tiles/"
-    
-# Spout support controls
-spout:
-    # If false, ignore spout even if detected
-    enabled: true
-    # If true, previously loaded textures will be assumed to still be valid (faster startup, but
-    # can result in stale textures if originals are updated - delete files in texturepacks/standard/spoout
-    # to clean cached textures and force reload on next startup)
-    use-existing-textures: true
-
-# Snapshot cache size, in chunks
+    # Snapshot cache size, in chunks
 snapshotcachesize: 500
 # Snapshot cache uses soft references (true), else weak references (false)
 soft-ref-cache: true

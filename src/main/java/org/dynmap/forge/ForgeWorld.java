@@ -10,11 +10,13 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.WorldProviderEnd;
 import net.minecraft.world.WorldProviderHell;
+import net.minecraft.world.border.WorldBorder;
 
 import org.dynmap.DynmapChunk;
 import org.dynmap.DynmapLocation;
 import org.dynmap.DynmapWorld;
 import org.dynmap.utils.MapChunkCache;
+import org.dynmap.utils.Polygon;
 
 public class ForgeWorld extends DynmapWorld
 {
@@ -236,5 +238,20 @@ public class ForgeWorld extends DynmapWorld
     public World getWorld()
     {
         return world;
+    }
+    @Override
+    public Polygon getWorldBorder() {
+        if (world != null) {
+            WorldBorder wb = world.getWorldBorder();
+            if ((wb != null) && (wb.getDiameter() < 5.9E7)) {
+                Polygon p = new Polygon();
+                p.addVertex(wb.minX(), wb.minZ());
+                p.addVertex(wb.minX(), wb.maxZ());
+                p.addVertex(wb.maxX(), wb.maxZ());
+                p.addVertex(wb.maxX(), wb.minZ());
+                return p;
+            }
+        }
+        return null;
     }
 }
