@@ -1133,10 +1133,16 @@ public class ForgeMapChunkCache extends MapChunkCache
                             for(Field ff : f) {
                                 if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
                                     chunkCoord = ff;
+                                    chunkCoord.setAccessible(true);
                                 }
                                 else if((nbtTag == null) && (ff.getType().equals(NBTTagCompound.class))) {
                                     nbtTag = ff;
+                                    nbtTag.setAccessible(true);
                                 }
+                            }
+                            if ((chunkCoord == null) || (nbtTag == null)) {
+                                Log.severe("Error getting chunkCoord and nbtTag for Cauldron");
+                                return null;
                             }
                         }
                         rslt = (NBTTagCompound)nbtTag.get(rec);
@@ -1151,10 +1157,16 @@ public class ForgeMapChunkCache extends MapChunkCache
                                 for(Field ff : f) {
                                     if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
                                         chunkCoord = ff;
+                                        chunkCoord.setAccessible(true);
                                     }
                                     else if((nbtTag == null) && (ff.getType().equals(NBTTagCompound.class))) {
                                         nbtTag = ff;
+                                        nbtTag.setAccessible(true);
                                     }
+                                }
+                                if ((chunkCoord == null) || (nbtTag == null)) {
+                                    Log.severe("Error getting chunkCoord and nbtTag for Forge");
+                                    return null;
                                 }
                             }
                             ChunkCoordIntPair occ = (ChunkCoordIntPair)chunkCoord.get(o);
@@ -1180,6 +1192,7 @@ public class ForgeMapChunkCache extends MapChunkCache
                 rslt = rslt.getCompoundTag("Level");
             return rslt;
         } catch (Exception exc) {
+            Log.severe(String.format("Error reading chunk: %s,%d,%d", dw.getName(), x, z), exc);
             return null;
         }
     }
