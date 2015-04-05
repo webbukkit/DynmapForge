@@ -1195,7 +1195,7 @@ public class ForgeMapChunkCache extends MapChunkCache
                 rslt = rslt.getCompoundTag("Level");
             return rslt;
         } catch (Exception exc) {
-            Log.severe("Chunk read exception", exc);
+            Log.severe(String.format("Error reading chunk: %s,%d,%d", dw.getName(), x, z), exc);
             return null;
         }
     }
