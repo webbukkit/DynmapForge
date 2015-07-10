@@ -1033,7 +1033,7 @@ public class DynmapPlugin
                     } catch (IllegalAccessException e) {
                     }
         	    }
-        		return player.getDisplayName().getUnformattedTextForChat();
+        		return player.getDisplayName().getUnformattedText();
         	}
         	else
         		return "[Server]";
