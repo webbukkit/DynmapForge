@@ -5,7 +5,7 @@ modname:BuildCraft|Core
 var:biomes/biomeOilOcean=0,biomes/biomeOilDesert=0
 
 cfgfile:config/buildcraft/main.conf
-
+cfgfile:config/buildcraft/main.cfg
 
 texturepath:assets/buildcraft_core/textures/blocks/
 texture:id=buildcraft/advworkbenchtable_bottom,filename=assets/buildcraft/textures/blocks/advworkbenchtable_bottom.png
