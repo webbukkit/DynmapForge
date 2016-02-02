@@ -5,10 +5,12 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Map;
 import java.util.Set;
 
 import net.minecraft.nbt.CompressedStreamTools;
@@ -56,15 +58,11 @@ public class ForgeMapChunkCache extends MapChunkCache
 {
     private static boolean init = false;
     private static Field unloadqueue = null;
-    private static Field unloadqueue_mcpc = null;
-    private static Method unloadqueue_mcpc_contains = null;
     private static Field currentchunkloader = null;
     private static Field updateEntityTick = null;
     /* AnvilChunkLoader fields */
-    private static Field chunksToRemove = null; // List
+    private static Field chunksToRemove = null; // Map
     private static Field pendingAnvilChunksCoordinates = null; // Set
-    private static Field pendingAnvilChunksMCPC; // LinkedHashMap
-    private static Field syncLockObject = null; // Object
     private static Method writechunktonbt = null; // writeChunkToNBT(Chunk c, World w, NBTTagCompound nbt)
 
     /* AnvilChunkLoaderPending fields */
@@ -91,7 +89,6 @@ public class ForgeMapChunkCache extends MapChunkCache
     private BiomeMap[][] biomemap;
     private boolean[][] isSectionNotEmpty; /* Indexed by snapshot index, then by section index */
     private Set<?> queue = null;
-    private Object queue_mcpc = null;
 
     private static final BlockStep unstep[] = { BlockStep.X_MINUS, BlockStep.Y_MINUS, BlockStep.Z_MINUS,
             BlockStep.X_PLUS, BlockStep.Y_PLUS, BlockStep.Z_PLUS
@@ -933,16 +930,6 @@ public class ForgeMapChunkCache extends MapChunkCache
     				//Log.info("Found unloadqueue - " + f[i].getName());
     				unloadqueue.setAccessible(true);
     			}
-                else if((unloadqueue_mcpc == null) && f[i].getType().getSimpleName().endsWith("LongHashSet")) {
-                    unloadqueue_mcpc = f[i];
-                    try {
-                        unloadqueue_mcpc_contains = f[i].getType().getDeclaredMethod("contains", new Class[] { int.class, int.class });
-                    } catch (SecurityException e) {
-                    } catch (NoSuchMethodException e) {
-                    }
-                    //Log.info("Found unloadqueue - " + f[i].getName());
-                    unloadqueue_mcpc.setAccessible(true);
-                }
     			else if((currentchunkloader == null) && f[i].getType().isAssignableFrom(IChunkLoader.class)) {
     				currentchunkloader = f[i];
     				//Log.info("Found currentchunkprovider - " + f[i].getName());
@@ -961,21 +948,13 @@ public class ForgeMapChunkCache extends MapChunkCache
 
     		f = AnvilChunkLoader.class.getDeclaredFields();
     		for(int i = 0; i < f.length; i++) {
-    		    if((chunksToRemove == null) && (f[i].getType().equals(List.class))) {
+    		    if((chunksToRemove == null) && (f[i].getType().equals(Map.class))) {
     		        chunksToRemove = f[i];
     		        chunksToRemove.setAccessible(true);
     		    }
     		    else if((pendingAnvilChunksCoordinates == null) && (f[i].getType().equals(Set.class))) {
     		        pendingAnvilChunksCoordinates = f[i];
     		        pendingAnvilChunksCoordinates.setAccessible(true);
-    		    }
-    		    else if((pendingAnvilChunksMCPC == null) && (f[i].getType().equals(java.util.LinkedHashMap.class))) {
-    		        pendingAnvilChunksMCPC = f[i];
-    		        pendingAnvilChunksMCPC.setAccessible(true);
-    		    }
-    		    else if((syncLockObject == null) && (f[i].getType().equals(Object.class))) {
-    		        syncLockObject = f[i];
-    		        syncLockObject.setAccessible(true);
     		    }
     		}
     		// Get writeChunkToNBT method
@@ -989,8 +968,7 @@ public class ForgeMapChunkCache extends MapChunkCache
     	        }
     	    }
     		
-            if (((unloadqueue == null) && ((unloadqueue_mcpc == null) || (unloadqueue_mcpc_contains == null))) || 
-                    (currentchunkloader == null) || (writechunktonbt == null))
+            if ((unloadqueue == null) || (currentchunkloader == null) || (writechunktonbt == null))
             {
     			Log.severe("ERROR: cannot find unload queue or chunk provider field - dynmap cannot load chunks");
     		}
@@ -1084,9 +1062,6 @@ public class ForgeMapChunkCache extends MapChunkCache
             {
                 queue = (Set<?>)unloadqueue.get(cps);
             }
-            else if ((unloadqueue_mcpc != null) && (cps != null)) {
-                queue_mcpc = unloadqueue_mcpc.get(cps);
-            }
         }
         catch (IllegalArgumentException iax)
         {
@@ -1101,8 +1076,7 @@ public class ForgeMapChunkCache extends MapChunkCache
     
     public NBTTagCompound readChunk(int x, int z) {
         if((cps == null) || (!(cps.chunkLoader instanceof AnvilChunkLoader)) ||
-                (((chunksToRemove == null) || (pendingAnvilChunksCoordinates == null)) && (pendingAnvilChunksMCPC == null)) ||
-                (syncLockObject == null)) {
+                (((chunksToRemove == null) || (pendingAnvilChunksCoordinates == null)))) {
             if (!didError) {
                 Log.severe("**** DYNMAP CANNOT READ CHUNKS (UNSUPPORTED CHUNK LOADER) ****");
                 didError = true;
@@ -1111,74 +1085,39 @@ public class ForgeMapChunkCache extends MapChunkCache
         }
         try {
             AnvilChunkLoader acl = (AnvilChunkLoader)cps.chunkLoader;
-            List<?> chunkstoremove = null;
+            Map<?,?> chunkstoremove = null;
             Set<?> pendingcoords = null;
-            LinkedHashMap<?,?> pendingsavesmcpc = null;
             
-            if (pendingAnvilChunksMCPC != null) {
-                pendingsavesmcpc = (LinkedHashMap<?,?>)pendingAnvilChunksMCPC.get(acl);
-            }
-            else {
-                chunkstoremove = (List<?>)chunksToRemove.get(acl);
-                pendingcoords = (Set<?>)pendingAnvilChunksCoordinates.get(acl);
-            }
-            Object synclock = syncLockObject.get(acl);
+            chunkstoremove = (Map<?,?>)chunksToRemove.get(acl);
+            pendingcoords = (Set<?>)pendingAnvilChunksCoordinates.get(acl);
 
             NBTTagCompound rslt = null;
             ChunkCoordIntPair coord = new ChunkCoordIntPair(x, z);
 
-            synchronized (synclock) {
-                if (pendingAnvilChunksMCPC != null) {
-                    Object rec = pendingsavesmcpc.get(coord);
-                    if(rec != null) {
-                        if (chunkCoord == null) {
-                            Field[] f = rec.getClass().getDeclaredFields();
-                            for(Field ff : f) {
-                                if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
-                                    chunkCoord = ff;
-                                    chunkCoord.setAccessible(true);
-                                }
-                                else if((nbtTag == null) && (ff.getType().equals(NBTTagCompound.class))) {
-                                    nbtTag = ff;
-                                    nbtTag.setAccessible(true);
-                                }
+            if (pendingcoords.contains(coord)) {
+                for (Object o : chunkstoremove.values()) {
+                    if (chunkCoord == null) {
+                        Field[] f = o.getClass().getDeclaredFields();
+                        for(Field ff : f) {
+                            if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
+                                chunkCoord = ff;
+                                chunkCoord.setAccessible(true);
                             }
-                            if ((chunkCoord == null) || (nbtTag == null)) {
-                                Log.severe("Error getting chunkCoord and nbtTag for Cauldron");
-                                return null;
+                            else if((nbtTag == null) && (ff.getType().equals(NBTTagCompound.class))) {
+                                nbtTag = ff;
+                                nbtTag.setAccessible(true);
                             }
                         }
-                        rslt = (NBTTagCompound)nbtTag.get(rec);
+                        if ((chunkCoord == null) || (nbtTag == null)) {
+                            Log.severe("Error getting chunkCoord and nbtTag for Forge");
+                            return null;
+                        }
                     }
-                }
-                else {
-                    if (pendingcoords.contains(coord)) {
-                        for (int i = 0; i < chunkstoremove.size(); i++) {
-                            Object o = chunkstoremove.get(i);
-                            if (chunkCoord == null) {
-                                Field[] f = o.getClass().getDeclaredFields();
-                                for(Field ff : f) {
-                                    if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
-                                        chunkCoord = ff;
-                                        chunkCoord.setAccessible(true);
-                                    }
-                                    else if((nbtTag == null) && (ff.getType().equals(NBTTagCompound.class))) {
-                                        nbtTag = ff;
-                                        nbtTag.setAccessible(true);
-                                    }
-                                }
-                                if ((chunkCoord == null) || (nbtTag == null)) {
-                                    Log.severe("Error getting chunkCoord and nbtTag for Forge");
-                                    return null;
-                                }
-                            }
-                            ChunkCoordIntPair occ = (ChunkCoordIntPair)chunkCoord.get(o);
+                    ChunkCoordIntPair occ = (ChunkCoordIntPair)chunkCoord.get(o);
 
-                            if (occ.equals(coord)) {
-                                rslt = (NBTTagCompound)nbtTag.get(o);
-                                break;
-                            }
-                        }
+                    if (occ.equals(coord)) {
+                        rslt = (NBTTagCompound)nbtTag.get(o);
+                        break;
                     }
                 }
             }
@@ -1234,11 +1173,11 @@ public class ForgeMapChunkCache extends MapChunkCache
                 for (int i = 0; i < tl.tagCount(); i++) {
                     switch (type) {
                         case 5:
-                            float fv = tl.getFloat(i);
+                            float fv = tl.getFloatAt(i);
                             vlist.add(fv);
                             break;
                         case 6:
-                            double dv = tl.getDouble(i);
+                            double dv = tl.getDoubleAt(i);
                             vlist.add(dv);
                             break;
                         case 8:
@@ -1250,7 +1189,7 @@ public class ForgeMapChunkCache extends MapChunkCache
                             vlist.add(getNBTValue(tc));
                             break;
                         case 11:
-                            int[] ia = tl.getIntArray(i);
+                            int[] ia = tl.getIntArrayAt(i);
                             vlist.add(ia);
                             break;
                     }
@@ -1331,15 +1270,6 @@ public class ForgeMapChunkCache extends MapChunkCache
         {
             long coord = ChunkCoordIntPair.chunkXZ2Int(chunk.x, chunk.z);
             isunloadpending = queue.contains(Long.valueOf(coord));
-        }
-        else if (queue_mcpc != null)
-        {
-            try {
-                isunloadpending = (Boolean)unloadqueue_mcpc_contains.invoke(queue_mcpc, chunk.x, chunk.z);
-            } catch (IllegalArgumentException e) {
-            } catch (IllegalAccessException e) {
-            } catch (InvocationTargetException e) {
-            }
         }
         return isunloadpending;
     }

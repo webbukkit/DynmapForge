@@ -13,12 +13,11 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
     }
 }
 
-apply plugin: 'forge'
-
+apply plugin: 'net.minecraftforge.gradle.forge'
 
 // define the properties file
 ext.configFile = file "build.properties"
@@ -32,14 +31,14 @@ configFile.withReader {
 version = "${config.Dynmap_version}${config.Dynmap_extversion}"
 group= "us.dynmap.forge" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Dynmap"
-targetCompatibility = '1.6'
-sourceCompatibility = '1.6'
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
 ext.buildNumber = System.getenv().BUILD_NUMBER ?: "Dev"
 
 minecraft {
     version = config.minecraft_version + "-" + config.forge_version
-    assetDir = "run/assets"
-
+	runDir = "run"
+	mappings = "stable_20"
 	replaceIn "Version.java"
     	replace "@VERSION@", config.Dynmap_version + config.Dynmap_extversion + '-' + project.ext.buildNumber
     	replace "@BUILD_NUMBER@", project.ext.buildNumber
@@ -66,7 +65,10 @@ processResources
         include 'mcmod.info'
                 
         // replace version and mcversion
-        expand 'version':config.Dynmap_version + config.Dynmap_extversion + '-' + project.ext.buildNumber, 'mcversion':config.minecraft_version
+        expand(
+        	version: config.Dynmap_version + config.Dynmap_extversion + '-' + project.ext.buildNumber,
+        	mcversion: config.minecraft_version
+    	)
     }
         
     // copy everything else, thats not the mcmod.info
@@ -78,7 +80,7 @@ processResources
 }
 
 jar {
-   classifier = "forge-1.8.0"
+   classifier = "forge-1.8.9"
    destinationDir = project.projectDir
    from { configurations.dynmap.collect { it.isDirectory() ? it : zipTree(it) } }
    manifest {

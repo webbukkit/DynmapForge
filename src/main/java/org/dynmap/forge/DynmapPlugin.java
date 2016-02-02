@@ -27,7 +27,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandHandler;
-import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandManager;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.Entity;
@@ -49,8 +48,6 @@ import net.minecraft.world.IWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.chunk.Chunk;
-import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.MinecraftForge;
@@ -751,9 +748,7 @@ public class DynmapPlugin
                 public Boolean call() throws Exception {
                     // Update busy state on world
                     ForgeWorld fw = (ForgeWorld)cc.getWorld();
-                    /*NOTYET - need rest of forge
                     setBusy(fw.getWorld());
-                    */
                     cc.getLoadedChunks();
                     return true;
                 }
@@ -1664,31 +1659,38 @@ public class DynmapPlugin
 	    public void playSoundToNearExcept(EntityPlayer entityplayer, String s, double d0, double d1, double d2, float f, float f1) {
         }
         @Override
-        public void func_180442_a(int p_180442_1_, boolean p_180442_2_,
-                double p_180442_3_, double p_180442_5_, double p_180442_7_,
-                double p_180442_9_, double p_180442_11_, double p_180442_13_,
-                int... p_180442_15_) {
-        }
-        @Override
         public void onEntityAdded(Entity entityIn) {
         }
         @Override
         public void onEntityRemoved(Entity entityIn) {
         }
         @Override
-        public void func_174961_a(String p_174961_1_, BlockPos p_174961_2_) {
-        }
-        @Override
-        public void func_180440_a(int p_180440_1_, BlockPos p_180440_2_,
-                int p_180440_3_) {
-        }
-        @Override
-        public void func_180439_a(EntityPlayer p_180439_1_, int p_180439_2_,
-                BlockPos p_180439_3_, int p_180439_4_) {
-        }
-        @Override
         public void sendBlockBreakProgress(int breakerId, BlockPos pos,
                 int progress) {
+        }
+        @Override
+        public void spawnParticle(int particleID, boolean ignoreRange,
+                double xCoord, double yCoord, double zCoord, double xOffset,
+                double yOffset, double zOffset, int... p_180442_15_) {
+            // TODO Auto-generated method stub
+            
+        }
+        @Override
+        public void playRecord(String recordName, BlockPos blockPosIn) {
+            // TODO Auto-generated method stub
+            
+        }
+        @Override
+        public void broadcastSound(int p_180440_1_, BlockPos p_180440_2_,
+                int p_180440_3_) {
+            // TODO Auto-generated method stub
+            
+        }
+        @Override
+        public void playAuxSFX(EntityPlayer player, int sfxType,
+                BlockPos blockPosIn, int p_180439_4_) {
+            // TODO Auto-generated method stub
+            
         }
     }
     
@@ -1979,11 +1981,6 @@ class DynmapCommandHandler extends CommandBase
     @Override
     public String getCommandUsage(ICommandSender icommandsender) {
         return "Run /" + cmd + " help for details on using command";
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return super.compareTo((ICommand) o);
     }
 }
 

@@ -192,7 +192,7 @@ public class ForgeWorld extends DynmapWorld
     public int getHighestBlockYAt(int x, int z)
     {
     	if(world != null) {
-            return world.getChunkFromChunkCoords(x >> 4, z >> 4).getHeight(x & 15, z & 15);
+            return world.getChunkFromChunkCoords(x >> 4, z >> 4).getHeightValue(x & 15, z & 15);
     	}
     	else
     		return -1;
