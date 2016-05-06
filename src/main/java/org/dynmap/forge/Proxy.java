@@ -1,5 +1,7 @@
 package org.dynmap.forge;
 
+import net.minecraft.server.MinecraftServer;
+
 /**
  * Server side proxy - methods for creating and cleaning up plugin
  */
@@ -8,10 +10,10 @@ public class Proxy
     public Proxy()
     {
     }
-	public DynmapPlugin startServer() {
+	public DynmapPlugin startServer(MinecraftServer srv) {
 	    DynmapPlugin plugin = DynmapPlugin.plugin; 
 	    if (plugin == null) {
-	        plugin = new DynmapPlugin();
+	        plugin = new DynmapPlugin(srv);
 	        plugin.onEnable();
 	    }
 		return plugin;

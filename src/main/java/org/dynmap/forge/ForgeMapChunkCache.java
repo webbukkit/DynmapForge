@@ -1612,7 +1612,7 @@ public class ForgeMapChunkCache extends MapChunkCache
         {
         	if(b[i] == null) continue;
         	
-            String bs = b[i].biomeName;
+            String bs = b[i].getBiomeName();
 
             for (int j = 0; j < bm.length; j++)
             {

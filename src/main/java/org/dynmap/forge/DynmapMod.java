@@ -46,7 +46,7 @@ public class DynmapMod
         @Override
         public void apiListenerAdded() {
             if(plugin == null) {
-                plugin = proxy.startServer();
+                plugin = proxy.startServer(server);
             }
         }
         @Override
@@ -101,30 +101,23 @@ public class DynmapMod
         }
     }
 
-    private boolean isMCPC;
-    
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        MinecraftServer ms = MinecraftServer.getServer();
-        isMCPC = (ms != null) && (ms.getServerModName().contains("mcpc"));
-        if (isMCPC) {
-            DynmapCommonAPIListener.register(new APICallback()); 
-        }
     }
 
+    private MinecraftServer server;
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
+        server = event.getServer();
     }
     
     @EventHandler
     public void serverStarted(FMLServerStartedEvent event)
     {
-        if (!isMCPC) {
-            DynmapCommonAPIListener.register(new APICallback()); 
-        }
+        DynmapCommonAPIListener.register(new APICallback()); 
         if(plugin == null)
-            plugin = proxy.startServer();
+            plugin = proxy.startServer(server);
         plugin.serverStarted();
     }
     @EventHandler

@@ -4,7 +4,8 @@ package org.dynmap.forge;
  */
 import java.util.List;
 
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.DimensionType;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
@@ -49,17 +50,17 @@ public class ForgeWorld extends DynmapWorld
             n = w.getWorldInfo().getWorldName();
         }
         else if (doSaveFolderMapping) { // New vanilla Forge mapping (consistent with MCPC+)
-            if (w.provider.getDimensionId() == 0) {
+            if (w.provider.getDimensionType() == DimensionType.OVERWORLD) {
                 n = w.getWorldInfo().getWorldName();
             }
             else {
-                n = "DIM" + w.provider.getDimensionId();
+                n = "DIM" + w.provider.getDimensionType().getId();
             }
         }
         else {  // Legacy mapping
             n = w.getWorldInfo().getWorldName();
             WorldProvider wp = w.provider;
-            switch(wp.getDimensionId()) {
+            switch(wp.getDimensionType().getId()) {
                 case 0:
                     break;
                 case -1:
@@ -69,7 +70,7 @@ public class ForgeWorld extends DynmapWorld
                     n += "_the_end";
                     break;
                 default:
-                    n += "_" + wp.getDimensionId();
+                    n += "_" + wp.getDimensionType().getId();
                     break;
             }
         }
@@ -80,7 +81,7 @@ public class ForgeWorld extends DynmapWorld
     {
         this(getWorldName(w), w.getHeight(), 64, w.provider instanceof WorldProviderHell,
         		w.provider instanceof WorldProviderEnd, 
-        		w.getWorldInfo().getWorldName() + "/" + w.provider.getDimensionName());
+        		w.getWorldInfo().getWorldName() + "/" + w.provider.getDimensionType().getName());
         setWorldLoaded(w);
     }
     public ForgeWorld(String name, int height, int sealevel, boolean nether, boolean the_end, String deftitle)
