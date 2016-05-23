@@ -54,7 +54,6 @@ import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ServerChatEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -1365,7 +1364,7 @@ public class DynmapPlugin
         
         /* Register tick handler */
         if(!tickregistered) {
-            FMLCommonHandler.instance().bus().register(fserver);
+            MinecraftForge.EVENT_BUS.register(fserver);
             tickregistered = true;
         }
 
@@ -1509,7 +1508,7 @@ public class DynmapPlugin
     {
     	if (playerTracker == null) {
     		playerTracker = new PlayerTracker();
-    		FMLCommonHandler.instance().bus().register(playerTracker);
+    		MinecraftForge.EVENT_BUS.register(playerTracker);
     	}
     }
 
