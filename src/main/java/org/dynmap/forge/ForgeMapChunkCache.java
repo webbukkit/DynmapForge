@@ -5,9 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
@@ -26,10 +24,10 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.nbt.NBTTagLong;
 import net.minecraft.nbt.NBTTagShort;
 import net.minecraft.nbt.NBTTagString;
-import net.minecraft.world.ChunkCoordIntPair;
+import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.chunk.storage.AnvilChunkLoader;
@@ -1092,14 +1090,14 @@ public class ForgeMapChunkCache extends MapChunkCache
             pendingcoords = (Set<?>)pendingAnvilChunksCoordinates.get(acl);
 
             NBTTagCompound rslt = null;
-            ChunkCoordIntPair coord = new ChunkCoordIntPair(x, z);
+            ChunkPos coord = new ChunkPos(x, z);
 
             if (pendingcoords.contains(coord)) {
                 for (Object o : chunkstoremove.values()) {
                     if (chunkCoord == null) {
                         Field[] f = o.getClass().getDeclaredFields();
                         for(Field ff : f) {
-                            if((chunkCoord == null) && (ff.getType().equals(ChunkCoordIntPair.class))) {
+                            if((chunkCoord == null) && (ff.getType().equals(ChunkPos.class))) {
                                 chunkCoord = ff;
                                 chunkCoord.setAccessible(true);
                             }
@@ -1113,7 +1111,7 @@ public class ForgeMapChunkCache extends MapChunkCache
                             return null;
                         }
                     }
-                    ChunkCoordIntPair occ = (ChunkCoordIntPair)chunkCoord.get(o);
+                    ChunkPos occ = (ChunkPos)chunkCoord.get(o);
 
                     if (occ.equals(coord)) {
                         rslt = (NBTTagCompound)nbtTag.get(o);
@@ -1268,7 +1266,7 @@ public class ForgeMapChunkCache extends MapChunkCache
         
         if (queue != null)
         {
-            long coord = ChunkCoordIntPair.chunkXZ2Int(chunk.x, chunk.z);
+            long coord = ChunkPos.chunkXZ2Int(chunk.x, chunk.z);
             isunloadpending = queue.contains(Long.valueOf(coord));
         }
         return isunloadpending;
@@ -1599,7 +1597,7 @@ public class ForgeMapChunkCache extends MapChunkCache
 
     static
     {
-        BiomeGenBase b[] = DynmapPlugin.getBiomeList();
+        Biome b[] = DynmapPlugin.getBiomeList();
         BiomeMap[] bm = BiomeMap.values();
         biome_to_bmap = new BiomeMap[256];
 
