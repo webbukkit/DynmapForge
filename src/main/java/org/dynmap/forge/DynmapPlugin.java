@@ -36,7 +36,6 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.network.NetHandlerPlayServer;
 import net.minecraft.network.NetworkManager;
-import net.minecraft.potion.Potion;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.management.UserListBans;
 import net.minecraft.server.management.UserListIPBans;
@@ -44,18 +43,17 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.IWorldEventListener;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.ForgeChunkManager;
 import net.minecraftforge.common.ForgeChunkManager.Ticket;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ServerChatEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -64,7 +62,6 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -94,6 +91,8 @@ import org.dynmap.permissions.PermissionsHandler;
 import org.dynmap.utils.DynmapLogger;
 import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.VisibilityLimit;
+
+import com.mojang.authlib.GameProfile;
 
 
 public class DynmapPlugin
@@ -157,13 +156,13 @@ public class DynmapPlugin
         return s;
     }
     
-    private static BiomeGenBase[] biomelist = null;
+    private static Biome[] biomelist = null;
     
-    public static final BiomeGenBase[] getBiomeList() {
+    public static final Biome[] getBiomeList() {
         if (biomelist == null) {
-            biomelist = new BiomeGenBase[256];
+            biomelist = new Biome[256];
             for (int i = 0; i < biomelist.length; i++) {
-                biomelist[i] = BiomeGenBase.getBiome(i);
+                biomelist[i] = Biome.getBiome(i);
             }
         }
         return biomelist;
@@ -259,7 +258,7 @@ public class DynmapPlugin
                 wbr.ticket = ForgeChunkManager.requestTicket(DynmapMod.instance, w, ForgeChunkManager.Type.NORMAL);
             if(wbr.ticket != null) {
                 BlockPos cc = w.getSpawnPoint();
-                ChunkCoordIntPair ccip = new ChunkCoordIntPair(cc.getX() >> 4, cc.getZ() >> 4);
+                ChunkPos ccip = new ChunkPos(cc.getX() >> 4, cc.getZ() >> 4);
                 ForgeChunkManager.forceChunk(wbr.ticket, ccip);
                 busy_worlds.put(w.provider.getDimension(), wbr);  // Add to busy list
             }
@@ -519,7 +518,7 @@ public class DynmapPlugin
         public boolean isPlayerBanned(String pid)
         {
             UserListBans bl = server.getPlayerList().getBannedPlayers();
-            return bl.isUsernameBanned(pid) != null;
+            return bl.isBanned(new GameProfile(null, pid));
         }
         
         @Override
@@ -683,7 +682,7 @@ public class DynmapPlugin
             if (scm == null) return Collections.emptySet();
             UserListBans bl = scm.getBannedPlayers();
             if (bl == null) return Collections.emptySet();
-            if(bl.isUsernameBanned(player) != null) {
+            if(bl.isBanned(new GameProfile(null, player))) {
                 return Collections.emptySet();
             }
             Set<String> rslt = hasOfflinePermissions(player, perms);
@@ -702,7 +701,7 @@ public class DynmapPlugin
             if (scm == null) return false;
             UserListBans bl = scm.getBannedPlayers();
             if (bl == null) return false;
-            if(bl.isUsernameBanned(player) != null) {
+            if(bl.isBanned(new GameProfile(null, player))) {
                 return false;
             }
             return hasOfflinePermission(player, perm);
@@ -919,7 +918,7 @@ public class DynmapPlugin
             for (int i = 0; i < 4096; i++) {
                 Block b = getBlockByID(i);
                 if (b == null) continue;
-                ResourceLocation ui = Block.blockRegistry.getNameForObject(b);
+                ResourceLocation ui = Block.REGISTRY.getNameForObject(b);
                 if (ui != null) {
                     map.put(i, ui.getResourceDomain() + ":" + ui.getResourcePath());
                 }
@@ -961,7 +960,7 @@ public class DynmapPlugin
                 if (b == null) continue;
                 ResourceLocation ui = null;
                 try {
-                    ui = Block.blockRegistry.getNameForObject(b);
+                    ui = Block.REGISTRY.getNameForObject(b);
                 } catch (Exception x) {
                     Log.warning("Exception caught reading unique ID for block " + i);
                 }
@@ -982,7 +981,7 @@ public class DynmapPlugin
                 if (itm == null) continue;
                 ResourceLocation ui = null;
                 try {
-                    ui = Item.itemRegistry.getNameForObject(itm);
+                    ui = Item.REGISTRY.getNameForObject(itm);
                 } catch (Exception x) {
                     Log.warning("Exception caught reading unique ID for item " + i);
                 }
@@ -1068,7 +1067,7 @@ public class DynmapPlugin
         public InetSocketAddress getAddress()
         {
             if((player != null) && (player instanceof EntityPlayerMP)) {
-            	NetHandlerPlayServer nsh = ((EntityPlayerMP)player).playerNetServerHandler;
+            	NetHandlerPlayServer nsh = ((EntityPlayerMP)player).connection;
             	if((nsh != null) && (getNetworkManager(nsh) != null)) {
             		SocketAddress sa = getNetworkManager(nsh).getRemoteAddress();
             		if(sa instanceof InetSocketAddress) {
@@ -1232,10 +1231,10 @@ public class DynmapPlugin
     	int cnt = 0;
         BiomeMap.loadWellKnownByVersion(mcver);
 
-    	BiomeGenBase[] list = getBiomeList();
+    	Biome[] list = getBiomeList();
     	
         for(int i = 0; i < list.length; i++) {
-            BiomeGenBase bb = list[i];
+            Biome bb = list[i];
             if(bb != null) {
                 String id = bb.getBiomeName();
                 float tmp = bb.getTemperature(), hum = bb.getRainfall();
@@ -1256,10 +1255,10 @@ public class DynmapPlugin
     }
 
     private String[] getBiomeNames() {
-        BiomeGenBase[] list = getBiomeList();
+        Biome[] list = getBiomeList();
         String[] lst = new String[list.length];
         for(int i = 0; i < list.length; i++) {
-            BiomeGenBase bb = list[i];
+            Biome bb = list[i];
             if (bb != null) {
                 lst[i] = bb.getBiomeName();
             }
@@ -1366,7 +1365,7 @@ public class DynmapPlugin
         
         /* Register tick handler */
         if(!tickregistered) {
-            FMLCommonHandler.instance().bus().register(fserver);
+            MinecraftForge.EVENT_BUS.register(fserver);
             tickregistered = true;
         }
 
@@ -1510,7 +1509,7 @@ public class DynmapPlugin
     {
     	if (playerTracker == null) {
     		playerTracker = new PlayerTracker();
-    		FMLCommonHandler.instance().bus().register(playerTracker);
+    		MinecraftForge.EVENT_BUS.register(playerTracker);
     	}
     }
 
@@ -1662,12 +1661,6 @@ public class DynmapPlugin
             
         }
         @Override
-        public void playAuxSFX(EntityPlayer player, int sfxType,
-                BlockPos blockPosIn, int p_180439_4_) {
-            // TODO Auto-generated method stub
-            
-        }
-        @Override
         public void notifyBlockUpdate(World worldIn, BlockPos pos,
                 IBlockState oldState, IBlockState newState, int flags) {
             if(sscache != null)
@@ -1689,6 +1682,11 @@ public class DynmapPlugin
         }
         @Override
         public void playRecord(SoundEvent soundIn, BlockPos pos) {
+            // TODO Auto-generated method stub
+            
+        }
+        @Override
+        public void playEvent(EntityPlayer arg0, int arg1, BlockPos arg2, int arg3) {
             // TODO Auto-generated method stub
             
         }
