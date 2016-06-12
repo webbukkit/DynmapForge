@@ -275,7 +275,8 @@ public class DynmapPlugin
             if(wbr.last_ts < ts) {
                 World w = wbr.ticket.world;
                 Debug.debug("World " + w.getWorldInfo().getWorldName() + "/" + wbr.ticket.world.provider.getDimensionType().getName() + " is idle");
-                ForgeChunkManager.releaseTicket(wbr.ticket);    // Release hold on world 
+                if (wbr.ticket != null)
+                    ForgeChunkManager.releaseTicket(wbr.ticket);    // Release hold on world 
                 itr.remove();
             }
         }
