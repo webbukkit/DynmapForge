@@ -1150,7 +1150,7 @@ public class DynmapPlugin
         public void sendMessage(String msg)
         {
             ITextComponent ichatcomponent = new TextComponentString(msg);
-            player.addChatComponentMessage(ichatcomponent);
+            player.addChatComponentMessage(ichatcomponent, true);
         }
         @Override
         public boolean isInvisible() {
@@ -1651,14 +1651,10 @@ public class DynmapPlugin
         public void spawnParticle(int particleID, boolean ignoreRange,
                 double xCoord, double yCoord, double zCoord, double xOffset,
                 double yOffset, double zOffset, int... p_180442_15_) {
-            // TODO Auto-generated method stub
-            
         }
         @Override
         public void broadcastSound(int p_180440_1_, BlockPos p_180440_2_,
                 int p_180440_3_) {
-            // TODO Auto-generated method stub
-            
         }
         @Override
         public void notifyBlockUpdate(World worldIn, BlockPos pos,
@@ -1677,18 +1673,18 @@ public class DynmapPlugin
         public void playSoundToAllNearExcept(EntityPlayer player,
                 SoundEvent soundIn, SoundCategory category, double x, double y,
                 double z, float volume, float pitch) {
-            // TODO Auto-generated method stub
-            
         }
         @Override
         public void playRecord(SoundEvent soundIn, BlockPos pos) {
-            // TODO Auto-generated method stub
-            
         }
         @Override
         public void playEvent(EntityPlayer arg0, int arg1, BlockPos arg2, int arg3) {
-            // TODO Auto-generated method stub
-            
+        }
+        @Override
+        public void func_190570_a(int p_190570_1_, boolean p_190570_2_,
+                boolean p_190570_3_, double p_190570_4_, double p_190570_6_,
+                double p_190570_8_, double p_190570_10_, double p_190570_12_,
+                double p_190570_14_, int... p_190570_16_) {
         }
     }
     
