@@ -27,11 +27,11 @@ import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import net.minecraftforge.fml.common.network.NetworkCheckHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
-@Mod(modid = "Dynmap", name = "Dynmap", version = Version.VER)
+@Mod(modid = "dynmap", name = "Dynmap", version = Version.VER)
 public class DynmapMod
 {
     // The instance of your mod that Forge uses.
-    @Instance("Dynmap")
+    @Instance("dynmap")
     public static DynmapMod instance;
 
     // Says where the client and server 'proxy' code is loaded.
