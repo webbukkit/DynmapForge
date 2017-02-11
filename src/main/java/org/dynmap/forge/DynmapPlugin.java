@@ -435,7 +435,7 @@ public class DynmapPlugin
         {
             if(server.getPlayerList() == null)
                 return new DynmapPlayer[0];
-            List<?> playlist = server.getPlayerList().getPlayerList();
+            List<?> playlist = server.getPlayerList().getPlayers();
             int pcnt = playlist.size();
             DynmapPlayer[] dplay = new DynmapPlayer[pcnt];
 
@@ -457,7 +457,7 @@ public class DynmapPlugin
         @Override
         public DynmapPlayer getPlayer(String name)
         {
-            List<?> players = server.getPlayerList().getPlayerList();
+            List<?> players = server.getPlayerList().getPlayers();
 
             for (Object o : players)
             {
@@ -630,7 +630,7 @@ public class DynmapPlugin
         public void broadcastMessage(String msg)
         {
             ITextComponent component = new TextComponentString(msg);
-            server.getPlayerList().sendChatMsg(component);
+            server.getPlayerList().sendMessage(component);
             Log.info(stripChatColor(msg));
         }
         @Override
@@ -1046,7 +1046,7 @@ public class DynmapPlugin
                 return null;
             }
 
-            return toLoc(player.worldObj, player.posX, player.posY, player.posZ);
+            return toLoc(player.world, player.posX, player.posY, player.posZ);
         }
         @Override
         public String getWorld()
@@ -1056,9 +1056,9 @@ public class DynmapPlugin
                 return null;
             }
 
-            if (player.worldObj != null)
+            if (player.world != null)
             {
-                return DynmapPlugin.this.getWorld(player.worldObj).getName();
+                return DynmapPlugin.this.getWorld(player.world).getName();
             }
 
             return null;
@@ -1150,7 +1150,7 @@ public class DynmapPlugin
         public void sendMessage(String msg)
         {
             ITextComponent ichatcomponent = new TextComponentString(msg);
-            player.addChatComponentMessage(ichatcomponent, true);
+            player.sendMessage(ichatcomponent);
         }
         @Override
         public boolean isInvisible() {
@@ -1207,7 +1207,7 @@ public class DynmapPlugin
         {
         	if(sender != null) {
                 ITextComponent ichatcomponent = new TextComponentString(msg);
-        	    sender.addChatMessage(ichatcomponent);
+        	    sender.sendMessage(ichatcomponent);
         	}
         }
 
@@ -1378,8 +1378,8 @@ public class DynmapPlugin
         loadWorlds();
         
         /* Initialized the currently loaded worlds */
-        if(server.worldServers != null) { 
-            for (WorldServer world : server.worldServers) {
+        if(server.worlds != null) { 
+            for (WorldServer world : server.worlds) {
                 ForgeWorld w = this.getWorld(world);
                 /*NOTYET - need rest of forge
                 if(DimensionManager.getWorld(world.provider.getDimensionId()) == null) { // If not loaded
@@ -1681,10 +1681,7 @@ public class DynmapPlugin
         public void playEvent(EntityPlayer arg0, int arg1, BlockPos arg2, int arg3) {
         }
         @Override
-        public void func_190570_a(int p_190570_1_, boolean p_190570_2_,
-                boolean p_190570_3_, double p_190570_4_, double p_190570_6_,
-                double p_190570_8_, double p_190570_10_, double p_190570_12_,
-                double p_190570_14_, int... p_190570_16_) {
+        public void spawnParticle(int arg0, boolean arg1, boolean arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, int... arg9) {
         }
     }
     
@@ -1959,20 +1956,19 @@ class DynmapCommandHandler extends CommandBase
     }
 
     @Override
-    public String getCommandName()
-    {
+    public void execute(MinecraftServer server, ICommandSender sender,
+            String[] args) throws CommandException {
+        plugin.onCommand(sender, cmd, args);
+    }
+
+    @Override
+    public String getName() {
         return cmd;
     }
 
     @Override
-    public String getCommandUsage(ICommandSender icommandsender) {
+    public String getUsage(ICommandSender arg0) {
         return "Run /" + cmd + " help for details on using command";
-    }
-
-    @Override
-    public void execute(MinecraftServer server, ICommandSender sender,
-            String[] args) throws CommandException {
-        plugin.onCommand(sender, cmd, args);
     }
 }
 
