@@ -1,4 +1,4 @@
-# NetherOres 1.7.10R2.3.0RC3
+# NetherOres 1.7.10R2.3.2B1
 version:1.7
 modname:NetherOres
 
@@ -79,5 +79,5 @@ block:id=%tile.netherores.ore.1,data=13,stdrot=true,face0-5=0:netherores/Salt
 block:id=%tile.netherores.ore.1,data=14,stdrot=true,face0-5=0:netherores/Saltpeter
 block:id=%tile.netherores.ore.1,data=15,stdrot=true,face0-5=0:netherores/Magnesium
 
-# 1523:* (tile.netherores.ore.1), render=(STANDARD), opaque=true,cls=powercrystals.netherores.world.BlockHellfish
-block:id=1523,data=*,stdrot=true,face0-5=0:minecraft/netherrack
+# %netherOresBlockHellfish:* (netherOresBlockHellfish), render=(STANDARD), opaque=true,cls=powercrystals.netherores.world.BlockHellfish
+block:id=%netherOresBlockHellfish,data=*,stdrot=true,face0-5=0:minecraft/netherrack

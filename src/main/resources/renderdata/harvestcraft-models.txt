@@ -1,4 +1,4 @@
-# harvestcraft 1.7.2d
+# harvestcraft 1.7.10j
 version:1.7
 modname:harvestcraft
 
@@ -61,8 +61,8 @@ patchblock:id=%textilegarden,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,
 # %tropicalgarden:* (tropicalgarden), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamNormalGarden
 patchblock:id=%tropicalgarden,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
-# %watergarden:* (watergarden), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamWaterGarden
-patchblock:id=%watergarden,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+# %watergarden:* (watergarden), render=(LILYPAD), opaque=false,cls=com.pam.harvestcraft.BlockPamWaterGarden
+patchblock:id=%watergarden,patch0=HorizY001ZTop,data=*
 
 # %pamApple:* (pamApple), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
 patchblock:id=%pamApple,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
@@ -265,6 +265,12 @@ patchblock:id=%pamWalnut,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data
 # %pamwalnutSapling:* (pamwalnutSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 patchblock:id=%pamwalnutSapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
+# %pamGooseberry:* (pamGooseberry), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+patchblock:id=%pamGooseberry,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %pamgooseberrySapling:* (pamgooseberrySapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
+patchblock:id=%pamgooseberrySapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
 # %pamblackberryCrop:* (pamblackberryCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
 patchblock:id=%pamblackberryCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
 
@@ -385,6 +391,9 @@ patchblock:id=%pambrusselsproutCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch
 # %pamcabbageCrop:* (pamcabbageCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
 patchblock:id=%pamcabbageCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
 
+# %pamspinachCrop:* (pamspinachCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
+patchblock:id=%pamspinachCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
 # %pamwhitemushroomCrop:* (pamwhitemushroomCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
 patchblock:id=%pamwhitemushroomCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
 
@@ -432,6 +441,15 @@ patchblock:id=%pamriceCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX02
 
 # %pamseaweedCrop:* (pamseaweedCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
 patchblock:id=%pamseaweedCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %pamcurryleafCrop:* (pamcurryleafCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
+patchblock:id=%pamcurryleafCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %pamsesameseedsCrop:* (pamsesameseedsCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
+patchblock:id=%pamsesameseedsCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %pamwaterchestnutCrop:* (pamwaterchestnutCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
+patchblock:id=%pamwaterchestnutCrop,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
 
 # %pamcandleDeco1:* (pamcandleDeco1), render=(TORCH), opaque=false,cls=com.pam.harvestcraft.BlockPamCandleDeco
 patchblock:id=%pamcandleDeco1,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=0
@@ -560,3 +578,90 @@ patchblock:id=%pamcandleDeco16,patch0=TorchSide1@180#0,patch1=TorchSide2@180#0,p
 patchblock:id=%pamcandleDeco16,patch0=TorchSide1@90#0,patch1=TorchSide2@90#0,patch2=TorchSide3@90#0,patch3=TorchSide4@90#0,patch4=TorchTopSlope#0,data=3
 patchblock:id=%pamcandleDeco16,patch0=TorchSide1@270#0,patch1=TorchSide2@270#0,patch2=TorchSide3@270#0,patch3=TorchSide4@270#0,patch4=TorchTopSlope@180#0,data=4
 patchblock:id=%pamcandleDeco16,patch0=VertX04375#0,patch1=VertX04375@90#0,patch2=VertX04375@180#0,patch3=VertX04375@270#0,patch4=TorchTop#0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pamcarrotCake:* (pamcarrotCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pamcarrotCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pamcarrotCake,xmin=0.28125,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pamcarrotCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pamcarrotCake,xmin=0.71875,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pamcarrotCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pamcarrotCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pamcheeseCake:* (pamcheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pamcheeseCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pamcheeseCake,xmin=0.23749999701976776,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pamcheeseCake,xmin=0.4124999940395355,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pamcheeseCake,xmin=0.5875000357627869,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pamcheeseCake,xmin=0.762499988079071,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pamcheeseCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%pamcheeseCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pamcherrycheeseCake:* (pamcherrycheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pamcherrycheeseCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pamcherrycheeseCake,xmin=0.2083333432674408,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pamcherrycheeseCake,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pamcherrycheeseCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pamcherrycheeseCake,xmin=0.6458333730697632,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pamcherrycheeseCake,xmin=0.7916666269302368,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%pamcherrycheeseCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%pamcherrycheeseCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pampineappleupsidedownCake:* (pampineappleupsidedownCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pampineappleupsidedownCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pampineappleupsidedownCake,xmin=0.23749999701976776,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pampineappleupsidedownCake,xmin=0.4124999940395355,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pampineappleupsidedownCake,xmin=0.5875000357627869,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pampineappleupsidedownCake,xmin=0.762499988079071,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pampineappleupsidedownCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%pampineappleupsidedownCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pamchocolatesprinkleCake:* (pamchocolatesprinkleCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pamchocolatesprinkleCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pamchocolatesprinkleCake,xmin=0.28125,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pamchocolatesprinkleCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pamchocolatesprinkleCake,xmin=0.71875,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pamchocolatesprinkleCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pamchocolatesprinkleCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pamredvelvetCake:* (pamredvelvetCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pamredvelvetCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pamredvelvetCake,xmin=0.28125,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pamredvelvetCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pamredvelvetCake,xmin=0.71875,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pamredvelvetCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pamredvelvetCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pamlamingtonCake:* (pamlamingtonCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pamlamingtonCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pamlamingtonCake,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pamlamingtonCake,xmin=0.6458333730697632,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pamlamingtonCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pamlamingtonCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pampavlovaCake:* (pampavlovaCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pampavlovaCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pampavlovaCake,xmin=0.23749999701976776,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pampavlovaCake,xmin=0.4124999940395355,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pampavlovaCake,xmin=0.5875000357627869,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pampavlovaCake,xmin=0.762499988079071,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pampavlovaCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%pampavlovaCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pamholidayCake:* (pamholidayCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pamholidayCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pamholidayCake,xmin=0.23749999701976776,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pamholidayCake,xmin=0.4124999940395355,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pamholidayCake,xmin=0.5875000357627869,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pamholidayCake,xmin=0.762499988079071,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pamholidayCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%pamholidayCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %pampumpkincheeseCake:* (pampumpkincheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+boxblock:id=%pampumpkincheeseCake,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%pampumpkincheeseCake,xmin=0.2083333432674408,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%pampumpkincheeseCake,xmin=0.3541666865348816,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=2
+boxblock:id=%pampumpkincheeseCake,xmin=0.5,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=3
+boxblock:id=%pampumpkincheeseCake,xmin=0.6458333730697632,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=4
+boxblock:id=%pampumpkincheeseCake,xmin=0.7916666269302368,xmax=0.9375,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=5
+boxblock:id=%pampumpkincheeseCake,xmin=0.9375,xmax=0.9376,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=6
+boxblock:id=%pampumpkincheeseCake,xmin=1.0,xmax=1.0,ymin=0.0,ymax=0.5,zmin=0.0625,zmax=0.9375,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15

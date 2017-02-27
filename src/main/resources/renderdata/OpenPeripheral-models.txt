@@ -1,4 +1,4 @@
-# OpenPeripheral 0.2.0
+# OpenPeripheral 0.5.1
 version:1.7
 modname:OpenPeripheral
 
@@ -22,11 +22,11 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
-# %glassesbridge:* (glassesbridge), render=openperipheral.addons.client.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.glasses.BlockGlassesBridge
+# %ticketmachine:* (ticketmachine), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.ticketmachine.BlockTicketMachine
 
-# %peripheralproxy:* (peripheralproxy), render=openperipheral.addons.client.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.peripheralproxy.BlockPeripheralProxy
+# %peripheralproxy:* (peripheralproxy), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.peripheralproxy.BlockPeripheralProxy
 
-# %pim:* (pim), render=openperipheral.addons.client.BlockRenderingHandler(CUSTOM), opaque=false,cls=openperipheral.addons.pim.BlockPIM
+# %glassesbridge:* (glassesbridge), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.glasses.BlockGlassesBridge
+
+# %pim:* (pim), render=openmods.renderer.BlockRenderingHandler(CUSTOM), opaque=false,cls=openperipheral.addons.pim.BlockPIM
 boxblock:id=%pim,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.30000001192092896,zmin=0.0,zmax=1.0,data=*
-
-# %ticketmachine:* (ticketmachine), render=openperipheral.addons.client.BlockRenderingHandler(CUSTOM), opaque=true,cls=openperipheral.addons.ticketmachine.BlockTicketMachine

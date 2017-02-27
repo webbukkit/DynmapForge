@@ -1,4 +1,4 @@
-# StevesFactoryManager A92
+# StevesFactoryManager A93
 version:1.7
 modname:StevesFactoryManager
 

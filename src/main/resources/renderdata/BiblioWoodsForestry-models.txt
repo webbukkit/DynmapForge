@@ -1,4 +1,4 @@
-# BiblioWoodsForestry 1.6
+# BiblioWoodsForestry 1.7
 version:1.7
 modname:BiblioWoodsForestry
 

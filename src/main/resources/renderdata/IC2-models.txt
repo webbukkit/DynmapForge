@@ -1,4 +1,4 @@
-# IC2 2.2.648-experimental
+# IC2 2.2.827-experimental
 version:1.7
 modname:IC2
 
@@ -241,3 +241,19 @@ boxblock:id=%fluidSteam,ymax=0.5,data=12
 boxblock:id=%fluidSteam,ymax=0.375,data=13
 boxblock:id=%fluidSteam,ymax=0.25,data=14
 boxblock:id=%fluidSteam,ymax=0.125,data=15
+
+# %fluidHotWater:* (fluidHotWater), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+boxblock:id=%fluidHotWater,ymax=0.875,data=1
+boxblock:id=%fluidHotWater,ymax=0.75,data=2
+boxblock:id=%fluidHotWater,ymax=0.625,data=3
+boxblock:id=%fluidHotWater,ymax=0.5,data=4
+boxblock:id=%fluidHotWater,ymax=0.375,data=5
+boxblock:id=%fluidHotWater,ymax=0.25,data=6
+boxblock:id=%fluidHotWater,ymax=0.125,data=7
+boxblock:id=%fluidHotWater,ymax=0.875,data=9
+boxblock:id=%fluidHotWater,ymax=0.75,data=10
+boxblock:id=%fluidHotWater,ymax=0.625,data=11
+boxblock:id=%fluidHotWater,ymax=0.5,data=12
+boxblock:id=%fluidHotWater,ymax=0.375,data=13
+boxblock:id=%fluidHotWater,ymax=0.25,data=14
+boxblock:id=%fluidHotWater,ymax=0.125,data=15

@@ -1,4 +1,4 @@
-# harvestcraft 1.7.2d
+# harvestcraft 1.7.10j
 version:1.7
 modname:harvestcraft
 
@@ -11,6 +11,7 @@ texture:id=harvestcraft/almondSapling,filename=assets/harvestcraft/textures/bloc
 texture:id=harvestcraft/almond_0,filename=assets/harvestcraft/textures/blocks/almond_0.png
 texture:id=harvestcraft/almond_1,filename=assets/harvestcraft/textures/blocks/almond_1.png
 texture:id=harvestcraft/almond_2,filename=assets/harvestcraft/textures/blocks/almond_2.png
+texture:id=harvestcraft/animaltrap,filename=assets/harvestcraft/textures/blocks/animaltrap.png
 texture:id=harvestcraft/apiaryside,filename=assets/harvestcraft/textures/blocks/apiaryside.png
 texture:id=harvestcraft/apiarytop,filename=assets/harvestcraft/textures/blocks/apiarytop.png
 texture:id=harvestcraft/appleSapling,filename=assets/harvestcraft/textures/blocks/appleSapling.png
@@ -133,10 +134,15 @@ texture:id=harvestcraft/chilipeppercrop_0,filename=assets/harvestcraft/textures/
 texture:id=harvestcraft/chilipeppercrop_1,filename=assets/harvestcraft/textures/blocks/chilipeppercrop_1.png
 texture:id=harvestcraft/chilipeppercrop_2,filename=assets/harvestcraft/textures/blocks/chilipeppercrop_2.png
 texture:id=harvestcraft/chilipeppercrop_3,filename=assets/harvestcraft/textures/blocks/chilipeppercrop_3.png
+texture:id=harvestcraft/churnfrontoff,filename=assets/harvestcraft/textures/blocks/churnfrontoff.png
+texture:id=harvestcraft/churnfronton,filename=assets/harvestcraft/textures/blocks/churnfronton.png
+texture:id=harvestcraft/churnside,filename=assets/harvestcraft/textures/blocks/churnside.png
+texture:id=harvestcraft/churntop,filename=assets/harvestcraft/textures/blocks/churntop.png
 texture:id=harvestcraft/cinnamonSapling,filename=assets/harvestcraft/textures/blocks/cinnamonSapling.png
 texture:id=harvestcraft/cinnamon_0,filename=assets/harvestcraft/textures/blocks/cinnamon_0.png
 texture:id=harvestcraft/cinnamon_1,filename=assets/harvestcraft/textures/blocks/cinnamon_1.png
 texture:id=harvestcraft/cinnamon_2,filename=assets/harvestcraft/textures/blocks/cinnamon_2.png
+texture:id=harvestcraft/cinnamon_top,filename=assets/harvestcraft/textures/blocks/cinnamon_top.png
 texture:id=harvestcraft/coconutSapling,filename=assets/harvestcraft/textures/blocks/coconutSapling.png
 texture:id=harvestcraft/coconut_0,filename=assets/harvestcraft/textures/blocks/coconut_0.png
 texture:id=harvestcraft/coconut_1,filename=assets/harvestcraft/textures/blocks/coconut_1.png
@@ -161,6 +167,10 @@ texture:id=harvestcraft/cucumbercrop_0,filename=assets/harvestcraft/textures/blo
 texture:id=harvestcraft/cucumbercrop_1,filename=assets/harvestcraft/textures/blocks/cucumbercrop_1.png
 texture:id=harvestcraft/cucumbercrop_2,filename=assets/harvestcraft/textures/blocks/cucumbercrop_2.png
 texture:id=harvestcraft/cucumbercrop_3,filename=assets/harvestcraft/textures/blocks/cucumbercrop_3.png
+texture:id=harvestcraft/curryleafcrop_0,filename=assets/harvestcraft/textures/blocks/curryleafcrop_0.png
+texture:id=harvestcraft/curryleafcrop_1,filename=assets/harvestcraft/textures/blocks/curryleafcrop_1.png
+texture:id=harvestcraft/curryleafcrop_2,filename=assets/harvestcraft/textures/blocks/curryleafcrop_2.png
+texture:id=harvestcraft/curryleafcrop_3,filename=assets/harvestcraft/textures/blocks/curryleafcrop_3.png
 texture:id=harvestcraft/cuttingboardsidebottom,filename=assets/harvestcraft/textures/blocks/cuttingboardsidebottom.png
 texture:id=harvestcraft/cuttingboardtop,filename=assets/harvestcraft/textures/blocks/cuttingboardtop.png
 texture:id=harvestcraft/dateSapling,filename=assets/harvestcraft/textures/blocks/dateSapling.png
@@ -184,6 +194,7 @@ texture:id=harvestcraft/figSapling,filename=assets/harvestcraft/textures/blocks/
 texture:id=harvestcraft/fig_0,filename=assets/harvestcraft/textures/blocks/fig_0.png
 texture:id=harvestcraft/fig_1,filename=assets/harvestcraft/textures/blocks/fig_1.png
 texture:id=harvestcraft/fig_2,filename=assets/harvestcraft/textures/blocks/fig_2.png
+texture:id=harvestcraft/fishtrap,filename=assets/harvestcraft/textures/blocks/fishtrap.png
 texture:id=harvestcraft/garliccrop_0,filename=assets/harvestcraft/textures/blocks/garliccrop_0.png
 texture:id=harvestcraft/garliccrop_1,filename=assets/harvestcraft/textures/blocks/garliccrop_1.png
 texture:id=harvestcraft/garliccrop_2,filename=assets/harvestcraft/textures/blocks/garliccrop_2.png
@@ -192,6 +203,10 @@ texture:id=harvestcraft/gingercrop_0,filename=assets/harvestcraft/textures/block
 texture:id=harvestcraft/gingercrop_1,filename=assets/harvestcraft/textures/blocks/gingercrop_1.png
 texture:id=harvestcraft/gingercrop_2,filename=assets/harvestcraft/textures/blocks/gingercrop_2.png
 texture:id=harvestcraft/gingercrop_3,filename=assets/harvestcraft/textures/blocks/gingercrop_3.png
+texture:id=harvestcraft/gooseberrySapling,filename=assets/harvestcraft/textures/blocks/gooseberrySapling.png
+texture:id=harvestcraft/gooseberry_0,filename=assets/harvestcraft/textures/blocks/gooseberry_0.png
+texture:id=harvestcraft/gooseberry_1,filename=assets/harvestcraft/textures/blocks/gooseberry_1.png
+texture:id=harvestcraft/gooseberry_2,filename=assets/harvestcraft/textures/blocks/gooseberry_2.png
 texture:id=harvestcraft/gourdgarden0,filename=assets/harvestcraft/textures/blocks/gourdgarden0.png
 texture:id=harvestcraft/grapecrop_0,filename=assets/harvestcraft/textures/blocks/grapecrop_0.png
 texture:id=harvestcraft/grapecrop_1,filename=assets/harvestcraft/textures/blocks/grapecrop_1.png
@@ -233,6 +248,10 @@ texture:id=harvestcraft/mapleSapling,filename=assets/harvestcraft/textures/block
 texture:id=harvestcraft/maple_0,filename=assets/harvestcraft/textures/blocks/maple_0.png
 texture:id=harvestcraft/maple_1,filename=assets/harvestcraft/textures/blocks/maple_1.png
 texture:id=harvestcraft/maple_2,filename=assets/harvestcraft/textures/blocks/maple_2.png
+texture:id=harvestcraft/maple_top,filename=assets/harvestcraft/textures/blocks/maple_top.png
+texture:id=harvestcraft/marketbottom,filename=assets/harvestcraft/textures/blocks/marketbottom.png
+texture:id=harvestcraft/marketside,filename=assets/harvestcraft/textures/blocks/marketside.png
+texture:id=harvestcraft/markettop,filename=assets/harvestcraft/textures/blocks/markettop.png
 texture:id=harvestcraft/mushroomgarden0,filename=assets/harvestcraft/textures/blocks/mushroomgarden0.png
 texture:id=harvestcraft/mustardseedscrop_0,filename=assets/harvestcraft/textures/blocks/mustardseedscrop_0.png
 texture:id=harvestcraft/mustardseedscrop_1,filename=assets/harvestcraft/textures/blocks/mustardseedscrop_1.png
@@ -262,6 +281,51 @@ texture:id=harvestcraft/orangeSapling,filename=assets/harvestcraft/textures/bloc
 texture:id=harvestcraft/orange_0,filename=assets/harvestcraft/textures/blocks/orange_0.png
 texture:id=harvestcraft/orange_1,filename=assets/harvestcraft/textures/blocks/orange_1.png
 texture:id=harvestcraft/orange_2,filename=assets/harvestcraft/textures/blocks/orange_2.png
+texture:id=harvestcraft/ovenfrontoff,filename=assets/harvestcraft/textures/blocks/ovenfrontoff.png
+texture:id=harvestcraft/ovenfronton,filename=assets/harvestcraft/textures/blocks/ovenfronton.png
+texture:id=harvestcraft/ovenside,filename=assets/harvestcraft/textures/blocks/ovenside.png
+texture:id=harvestcraft/oventop,filename=assets/harvestcraft/textures/blocks/oventop.png
+texture:id=harvestcraft/pamcarrotcake_bottom,filename=assets/harvestcraft/textures/blocks/pamcarrotcake_bottom.png
+texture:id=harvestcraft/pamcarrotcake_inner,filename=assets/harvestcraft/textures/blocks/pamcarrotcake_inner.png
+texture:id=harvestcraft/pamcarrotcake_side,filename=assets/harvestcraft/textures/blocks/pamcarrotcake_side.png
+texture:id=harvestcraft/pamcarrotcake_top,filename=assets/harvestcraft/textures/blocks/pamcarrotcake_top.png
+texture:id=harvestcraft/pamcheesecake_bottom,filename=assets/harvestcraft/textures/blocks/pamcheesecake_bottom.png
+texture:id=harvestcraft/pamcheesecake_inner,filename=assets/harvestcraft/textures/blocks/pamcheesecake_inner.png
+texture:id=harvestcraft/pamcheesecake_side,filename=assets/harvestcraft/textures/blocks/pamcheesecake_side.png
+texture:id=harvestcraft/pamcheesecake_top,filename=assets/harvestcraft/textures/blocks/pamcheesecake_top.png
+texture:id=harvestcraft/pamcherrycheesecake_bottom,filename=assets/harvestcraft/textures/blocks/pamcherrycheesecake_bottom.png
+texture:id=harvestcraft/pamcherrycheesecake_inner,filename=assets/harvestcraft/textures/blocks/pamcherrycheesecake_inner.png
+texture:id=harvestcraft/pamcherrycheesecake_side,filename=assets/harvestcraft/textures/blocks/pamcherrycheesecake_side.png
+texture:id=harvestcraft/pamcherrycheesecake_top,filename=assets/harvestcraft/textures/blocks/pamcherrycheesecake_top.png
+texture:id=harvestcraft/pamchocolatesprinklecake_bottom,filename=assets/harvestcraft/textures/blocks/pamchocolatesprinklecake_bottom.png
+texture:id=harvestcraft/pamchocolatesprinklecake_inner,filename=assets/harvestcraft/textures/blocks/pamchocolatesprinklecake_inner.png
+texture:id=harvestcraft/pamchocolatesprinklecake_side,filename=assets/harvestcraft/textures/blocks/pamchocolatesprinklecake_side.png
+texture:id=harvestcraft/pamchocolatesprinklecake_top,filename=assets/harvestcraft/textures/blocks/pamchocolatesprinklecake_top.png
+texture:id=harvestcraft/pamcompressedsaltBlock,filename=assets/harvestcraft/textures/blocks/pamcompressedsaltBlock.png
+texture:id=harvestcraft/pamholidaycake_bottom,filename=assets/harvestcraft/textures/blocks/pamholidaycake_bottom.png
+texture:id=harvestcraft/pamholidaycake_inner,filename=assets/harvestcraft/textures/blocks/pamholidaycake_inner.png
+texture:id=harvestcraft/pamholidaycake_side,filename=assets/harvestcraft/textures/blocks/pamholidaycake_side.png
+texture:id=harvestcraft/pamholidaycake_top,filename=assets/harvestcraft/textures/blocks/pamholidaycake_top.png
+texture:id=harvestcraft/pamlamingtoncake_bottom,filename=assets/harvestcraft/textures/blocks/pamlamingtoncake_bottom.png
+texture:id=harvestcraft/pamlamingtoncake_inner,filename=assets/harvestcraft/textures/blocks/pamlamingtoncake_inner.png
+texture:id=harvestcraft/pamlamingtoncake_side,filename=assets/harvestcraft/textures/blocks/pamlamingtoncake_side.png
+texture:id=harvestcraft/pamlamingtoncake_top,filename=assets/harvestcraft/textures/blocks/pamlamingtoncake_top.png
+texture:id=harvestcraft/pampavlovacake_bottom,filename=assets/harvestcraft/textures/blocks/pampavlovacake_bottom.png
+texture:id=harvestcraft/pampavlovacake_inner,filename=assets/harvestcraft/textures/blocks/pampavlovacake_inner.png
+texture:id=harvestcraft/pampavlovacake_side,filename=assets/harvestcraft/textures/blocks/pampavlovacake_side.png
+texture:id=harvestcraft/pampavlovacake_top,filename=assets/harvestcraft/textures/blocks/pampavlovacake_top.png
+texture:id=harvestcraft/pampineappleupsidedowncake_bottom,filename=assets/harvestcraft/textures/blocks/pampineappleupsidedowncake_bottom.png
+texture:id=harvestcraft/pampineappleupsidedowncake_inner,filename=assets/harvestcraft/textures/blocks/pampineappleupsidedowncake_inner.png
+texture:id=harvestcraft/pampineappleupsidedowncake_side,filename=assets/harvestcraft/textures/blocks/pampineappleupsidedowncake_side.png
+texture:id=harvestcraft/pampineappleupsidedowncake_top,filename=assets/harvestcraft/textures/blocks/pampineappleupsidedowncake_top.png
+texture:id=harvestcraft/pampumpkincheesecake_bottom,filename=assets/harvestcraft/textures/blocks/pampumpkincheesecake_bottom.png
+texture:id=harvestcraft/pampumpkincheesecake_inner,filename=assets/harvestcraft/textures/blocks/pampumpkincheesecake_inner.png
+texture:id=harvestcraft/pampumpkincheesecake_side,filename=assets/harvestcraft/textures/blocks/pampumpkincheesecake_side.png
+texture:id=harvestcraft/pampumpkincheesecake_top,filename=assets/harvestcraft/textures/blocks/pampumpkincheesecake_top.png
+texture:id=harvestcraft/pamredvelvetcake_bottom,filename=assets/harvestcraft/textures/blocks/pamredvelvetcake_bottom.png
+texture:id=harvestcraft/pamredvelvetcake_inner,filename=assets/harvestcraft/textures/blocks/pamredvelvetcake_inner.png
+texture:id=harvestcraft/pamredvelvetcake_side,filename=assets/harvestcraft/textures/blocks/pamredvelvetcake_side.png
+texture:id=harvestcraft/pamredvelvetcake_top,filename=assets/harvestcraft/textures/blocks/pamredvelvetcake_top.png
 texture:id=harvestcraft/papayaSapling,filename=assets/harvestcraft/textures/blocks/papayaSapling.png
 texture:id=harvestcraft/papaya_0,filename=assets/harvestcraft/textures/blocks/papaya_0.png
 texture:id=harvestcraft/papaya_1,filename=assets/harvestcraft/textures/blocks/papaya_1.png
@@ -270,6 +334,7 @@ texture:id=harvestcraft/paperbarkSapling,filename=assets/harvestcraft/textures/b
 texture:id=harvestcraft/paperbark_0,filename=assets/harvestcraft/textures/blocks/paperbark_0.png
 texture:id=harvestcraft/paperbark_1,filename=assets/harvestcraft/textures/blocks/paperbark_1.png
 texture:id=harvestcraft/paperbark_2,filename=assets/harvestcraft/textures/blocks/paperbark_2.png
+texture:id=harvestcraft/paperbark_top,filename=assets/harvestcraft/textures/blocks/paperbark_top.png
 texture:id=harvestcraft/parsnipcrop_0,filename=assets/harvestcraft/textures/blocks/parsnipcrop_0.png
 texture:id=harvestcraft/parsnipcrop_1,filename=assets/harvestcraft/textures/blocks/parsnipcrop_1.png
 texture:id=harvestcraft/parsnipcrop_2,filename=assets/harvestcraft/textures/blocks/parsnipcrop_2.png
@@ -323,6 +388,10 @@ texture:id=harvestcraft/pottop,filename=assets/harvestcraft/textures/blocks/pott
 texture:id=harvestcraft/presserfront,filename=assets/harvestcraft/textures/blocks/presserfront.png
 texture:id=harvestcraft/presserside,filename=assets/harvestcraft/textures/blocks/presserside.png
 texture:id=harvestcraft/pressertop,filename=assets/harvestcraft/textures/blocks/pressertop.png
+texture:id=harvestcraft/quernfrontoff,filename=assets/harvestcraft/textures/blocks/quernfrontoff.png
+texture:id=harvestcraft/quernfronton,filename=assets/harvestcraft/textures/blocks/quernfronton.png
+texture:id=harvestcraft/quernside,filename=assets/harvestcraft/textures/blocks/quernside.png
+texture:id=harvestcraft/querntop,filename=assets/harvestcraft/textures/blocks/querntop.png
 texture:id=harvestcraft/radishcrop_0,filename=assets/harvestcraft/textures/blocks/radishcrop_0.png
 texture:id=harvestcraft/radishcrop_1,filename=assets/harvestcraft/textures/blocks/radishcrop_1.png
 texture:id=harvestcraft/radishcrop_2,filename=assets/harvestcraft/textures/blocks/radishcrop_2.png
@@ -356,6 +425,10 @@ texture:id=harvestcraft/seaweedcrop_0,filename=assets/harvestcraft/textures/bloc
 texture:id=harvestcraft/seaweedcrop_1,filename=assets/harvestcraft/textures/blocks/seaweedcrop_1.png
 texture:id=harvestcraft/seaweedcrop_2,filename=assets/harvestcraft/textures/blocks/seaweedcrop_2.png
 texture:id=harvestcraft/seaweedcrop_3,filename=assets/harvestcraft/textures/blocks/seaweedcrop_3.png
+texture:id=harvestcraft/sesameseedscrop_0,filename=assets/harvestcraft/textures/blocks/sesameseedscrop_0.png
+texture:id=harvestcraft/sesameseedscrop_1,filename=assets/harvestcraft/textures/blocks/sesameseedscrop_1.png
+texture:id=harvestcraft/sesameseedscrop_2,filename=assets/harvestcraft/textures/blocks/sesameseedscrop_2.png
+texture:id=harvestcraft/sesameseedscrop_3,filename=assets/harvestcraft/textures/blocks/sesameseedscrop_3.png
 texture:id=harvestcraft/sinkbottom_0,filename=assets/harvestcraft/textures/blocks/sinkbottom_0.png
 texture:id=harvestcraft/sinkbottom_1,filename=assets/harvestcraft/textures/blocks/sinkbottom_1.png
 texture:id=harvestcraft/sinkbottom_2,filename=assets/harvestcraft/textures/blocks/sinkbottom_2.png
@@ -376,6 +449,10 @@ texture:id=harvestcraft/spiceleafcrop_0,filename=assets/harvestcraft/textures/bl
 texture:id=harvestcraft/spiceleafcrop_1,filename=assets/harvestcraft/textures/blocks/spiceleafcrop_1.png
 texture:id=harvestcraft/spiceleafcrop_2,filename=assets/harvestcraft/textures/blocks/spiceleafcrop_2.png
 texture:id=harvestcraft/spiceleafcrop_3,filename=assets/harvestcraft/textures/blocks/spiceleafcrop_3.png
+texture:id=harvestcraft/spinachcrop_0,filename=assets/harvestcraft/textures/blocks/spinachcrop_0.png
+texture:id=harvestcraft/spinachcrop_1,filename=assets/harvestcraft/textures/blocks/spinachcrop_1.png
+texture:id=harvestcraft/spinachcrop_2,filename=assets/harvestcraft/textures/blocks/spinachcrop_2.png
+texture:id=harvestcraft/spinachcrop_3,filename=assets/harvestcraft/textures/blocks/spinachcrop_3.png
 texture:id=harvestcraft/stalkgarden0,filename=assets/harvestcraft/textures/blocks/stalkgarden0.png
 texture:id=harvestcraft/starfruitSapling,filename=assets/harvestcraft/textures/blocks/starfruitSapling.png
 texture:id=harvestcraft/starfruit_0,filename=assets/harvestcraft/textures/blocks/starfruit_0.png
@@ -411,6 +488,10 @@ texture:id=harvestcraft/walnutSapling,filename=assets/harvestcraft/textures/bloc
 texture:id=harvestcraft/walnut_0,filename=assets/harvestcraft/textures/blocks/walnut_0.png
 texture:id=harvestcraft/walnut_1,filename=assets/harvestcraft/textures/blocks/walnut_1.png
 texture:id=harvestcraft/walnut_2,filename=assets/harvestcraft/textures/blocks/walnut_2.png
+texture:id=harvestcraft/waterchestnutcrop_0,filename=assets/harvestcraft/textures/blocks/waterchestnutcrop_0.png
+texture:id=harvestcraft/waterchestnutcrop_1,filename=assets/harvestcraft/textures/blocks/waterchestnutcrop_1.png
+texture:id=harvestcraft/waterchestnutcrop_2,filename=assets/harvestcraft/textures/blocks/waterchestnutcrop_2.png
+texture:id=harvestcraft/waterchestnutcrop_3,filename=assets/harvestcraft/textures/blocks/waterchestnutcrop_3.png
 texture:id=harvestcraft/watergarden0,filename=assets/harvestcraft/textures/blocks/watergarden0.png
 texture:id=harvestcraft/whitemushroomcrop_0,filename=assets/harvestcraft/textures/blocks/whitemushroomcrop_0.png
 texture:id=harvestcraft/whitemushroomcrop_1,filename=assets/harvestcraft/textures/blocks/whitemushroomcrop_1.png
@@ -456,6 +537,70 @@ block:id=%sink,data=3,stdrot=true,face0=0:harvestcraft/sinkbottom_3,face1=0:harv
 # %salt:* (salt), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamSalt
 block:id=%salt,data=*,stdrot=true,face0-5=0:harvestcraft/salt
 
+# %spamcompressedsaltBlockalt:* (spamcompressedsaltBlockalt), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamSalt
+block:id=%spamcompressedsaltBlockalt,data=*,stdrot=true,face0-5=0:harvestcraft/pamcompressedsaltBlock
+
+# %market:* (market), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamMarket
+block:id=%market,data=*,stdrot=true,face0=0:harvestcraft/marketbottom,face1=0:harvestcraft/markettop,face2-5=0:harvestcraft/marketside
+
+# %oven:* (oven), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamOven
+block:id=%oven,data=0,data=1,stdrot=true,face0-1=0:harvestcraft/oventop,face2-5=0:harvestcraft/ovenside
+block:id=%oven,data=2,stdrot=true,face0-1=0:harvestcraft/oventop,face2=0:harvestcraft/ovenfrontoff,face3-5=0:harvestcraft/ovenside
+block:id=%oven,data=3,stdrot=true,face0-1=0:harvestcraft/oventop,face2=0:harvestcraft/ovenside,face3=0:harvestcraft/ovenfrontoff,face4-5=0:harvestcraft/ovenside
+block:id=%oven,data=4,stdrot=true,face0-1=0:harvestcraft/oventop,face2-3=0:harvestcraft/ovenside,face4=0:harvestcraft/ovenfrontoff,face5=0:harvestcraft/ovenside
+block:id=%oven,data=5,stdrot=true,face0-1=0:harvestcraft/oventop,face2-4=0:harvestcraft/ovenside,face5=0:harvestcraft/ovenfrontoff
+block:id=%oven,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:harvestcraft/oventop,face2-5=0:harvestcraft/ovenside
+
+# %ovenon:* (ovenon), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamOven
+block:id=%ovenon,data=0,data=1,stdrot=true,face0-1=0:harvestcraft/oventop,face2-5=0:harvestcraft/ovenside
+block:id=%ovenon,data=2,stdrot=true,face0-1=0:harvestcraft/oventop,face2=0:harvestcraft/ovenfronton,face3-5=0:harvestcraft/ovenside
+block:id=%ovenon,data=3,stdrot=true,face0-1=0:harvestcraft/oventop,face2=0:harvestcraft/ovenside,face3=0:harvestcraft/ovenfronton,face4-5=0:harvestcraft/ovenside
+block:id=%ovenon,data=4,stdrot=true,face0-1=0:harvestcraft/oventop,face2-3=0:harvestcraft/ovenside,face4=0:harvestcraft/ovenfronton,face5=0:harvestcraft/ovenside
+block:id=%ovenon,data=5,stdrot=true,face0-1=0:harvestcraft/oventop,face2-4=0:harvestcraft/ovenside,face5=0:harvestcraft/ovenfronton
+block:id=%ovenon,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:harvestcraft/oventop,face2-5=0:harvestcraft/ovenside
+
+# %churn:* (churn), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamChurn
+block:id=%churn,data=0,stdrot=true,face0=0:harvestcraft/churntop,face1-5=0:harvestcraft/churnside
+block:id=%churn,data=1,stdrot=true,face0=0:harvestcraft/churnside,face1=0:harvestcraft/churntop,face2-5=0:harvestcraft/churnside
+block:id=%churn,data=2,stdrot=true,face0-1=0:harvestcraft/churnside,face2=0:harvestcraft/churnfrontoff,face3-5=0:harvestcraft/churnside
+block:id=%churn,data=3,stdrot=true,face0-2=0:harvestcraft/churnside,face3=0:harvestcraft/churnfrontoff,face4-5=0:harvestcraft/churnside
+block:id=%churn,data=4,stdrot=true,face0-3=0:harvestcraft/churnside,face4=0:harvestcraft/churnfrontoff,face5=0:harvestcraft/churnside
+block:id=%churn,data=5,stdrot=true,face0-4=0:harvestcraft/churnside,face5=0:harvestcraft/churnfrontoff
+block:id=%churn,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestcraft/churnside
+
+# %churnon:* (churnon), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamChurn
+block:id=%churnon,data=0,stdrot=true,face0=0:harvestcraft/churntop,face1-5=0:harvestcraft/churnside
+block:id=%churnon,data=1,stdrot=true,face0=0:harvestcraft/churnside,face1=0:harvestcraft/churntop,face2-5=0:harvestcraft/churnside
+block:id=%churnon,data=2,stdrot=true,face0-1=0:harvestcraft/churnside,face2=0:harvestcraft/churnfronton,face3-5=0:harvestcraft/churnside
+block:id=%churnon,data=3,stdrot=true,face0-2=0:harvestcraft/churnside,face3=0:harvestcraft/churnfronton,face4-5=0:harvestcraft/churnside
+block:id=%churnon,data=4,stdrot=true,face0-3=0:harvestcraft/churnside,face4=0:harvestcraft/churnfronton,face5=0:harvestcraft/churnside
+block:id=%churnon,data=5,stdrot=true,face0-4=0:harvestcraft/churnside,face5=0:harvestcraft/churnfronton
+block:id=%churnon,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestcraft/churnside
+
+# %quern:* (quern), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamQuern
+block:id=%quern,data=0,stdrot=true,face0=0:harvestcraft/querntop,face1-5=0:harvestcraft/quernside
+block:id=%quern,data=1,stdrot=true,face0=0:harvestcraft/quernside,face1=0:harvestcraft/querntop,face2-5=0:harvestcraft/quernside
+block:id=%quern,data=2,stdrot=true,face0-1=0:harvestcraft/quernside,face2=0:harvestcraft/quernfrontoff,face3-5=0:harvestcraft/quernside
+block:id=%quern,data=3,stdrot=true,face0-2=0:harvestcraft/quernside,face3=0:harvestcraft/quernfrontoff,face4-5=0:harvestcraft/quernside
+block:id=%quern,data=4,stdrot=true,face0-3=0:harvestcraft/quernside,face4=0:harvestcraft/quernfrontoff,face5=0:harvestcraft/quernside
+block:id=%quern,data=5,stdrot=true,face0-4=0:harvestcraft/quernside,face5=0:harvestcraft/quernfrontoff
+block:id=%quern,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestcraft/quernside
+
+# %quernon:* (quernon), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamQuern
+block:id=%quernon,data=0,stdrot=true,face0=0:harvestcraft/querntop,face1-5=0:harvestcraft/quernside
+block:id=%quernon,data=1,stdrot=true,face0=0:harvestcraft/quernside,face1=0:harvestcraft/querntop,face2-5=0:harvestcraft/quernside
+block:id=%quernon,data=2,stdrot=true,face0-1=0:harvestcraft/quernside,face2=0:harvestcraft/quernfronton,face3-5=0:harvestcraft/quernside
+block:id=%quernon,data=3,stdrot=true,face0-2=0:harvestcraft/quernside,face3=0:harvestcraft/quernfronton,face4-5=0:harvestcraft/quernside
+block:id=%quernon,data=4,stdrot=true,face0-3=0:harvestcraft/quernside,face4=0:harvestcraft/quernfronton,face5=0:harvestcraft/quernside
+block:id=%quernon,data=5,stdrot=true,face0-4=0:harvestcraft/quernside,face5=0:harvestcraft/quernfronton
+block:id=%quernon,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:harvestcraft/quernside
+
+# %fishtrap:* (fishtrap), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamFishTrap
+block:id=%fishtrap,data=*,stdrot=true,face0-5=0:harvestcraft/fishtrap
+
+# %animaltrap:* (animaltrap), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamAnimalTrap
+block:id=%animaltrap,data=*,stdrot=true,face0-5=0:harvestcraft/animaltrap
+
 # %berrygarden:* (berrygarden), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamNormalGarden
 block:id=%berrygarden,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/berrygarden0
 
@@ -489,7 +634,7 @@ block:id=%textilegarden,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:har
 # %tropicalgarden:* (tropicalgarden), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamNormalGarden
 block:id=%tropicalgarden,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/tropicalgarden0
 
-# %watergarden:* (watergarden), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamWaterGarden
+# %watergarden:* (watergarden), render=(LILYPAD), opaque=false,cls=com.pam.harvestcraft.BlockPamWaterGarden
 block:id=%watergarden,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/watergarden0
 
 # %pamApple:* (pamApple), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
@@ -660,23 +805,19 @@ block:id=%pamChestnut,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harv
 # %pamchestnutSapling:* (pamchestnutSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 block:id=%pamchestnutSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/chestnutSapling
 
-# %pamCinnamon:* (pamCinnamon), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamFruit
-block:id=%pamCinnamon,data=0,stdrot=true,face0-5=0:harvestcraft/cinnamon_0
-block:id=%pamCinnamon,data=1,stdrot=true,face0-5=0:harvestcraft/cinnamon_1
-block:id=%pamCinnamon,data=2,stdrot=true,face0-5=0:harvestcraft/cinnamon_2
-block:id=%pamCinnamon,data=3,stdrot=true,face0-5=0:harvestcraft/cinnamon_0
-block:id=%pamCinnamon,data=4,stdrot=true,face0-5=0:harvestcraft/cinnamon_1
-block:id=%pamCinnamon,data=5,stdrot=true,face0-5=0:harvestcraft/cinnamon_2
-block:id=%pamCinnamon,data=6,stdrot=true,face0-5=0:harvestcraft/cinnamon_0
-block:id=%pamCinnamon,data=7,stdrot=true,face0-5=0:harvestcraft/cinnamon_1
-block:id=%pamCinnamon,data=8,stdrot=true,face0-5=0:harvestcraft/cinnamon_2
-block:id=%pamCinnamon,data=9,stdrot=true,face0-5=0:harvestcraft/cinnamon_0
-block:id=%pamCinnamon,data=10,stdrot=true,face0-5=0:harvestcraft/cinnamon_1
-block:id=%pamCinnamon,data=11,stdrot=true,face0-5=0:harvestcraft/cinnamon_2
-block:id=%pamCinnamon,data=12,stdrot=true,face0-5=0:harvestcraft/cinnamon_0
-block:id=%pamCinnamon,data=13,stdrot=true,face0-5=0:harvestcraft/cinnamon_1
-block:id=%pamCinnamon,data=14,stdrot=true,face0-5=0:harvestcraft/cinnamon_2
-block:id=%pamCinnamon,data=15,stdrot=true,face0-5=0:harvestcraft/cinnamon_0
+# %pamCinnamon:* (pamCinnamon), render=(LOG), opaque=true,cls=com.pam.harvestcraft.BlockPamFruitingLog
+block:id=%pamCinnamon,data=0,data=1,stdrot=true,face0-1=0:harvestcraft/cinnamon_top,face2-5=0:harvestcraft/cinnamon_0
+block:id=%pamCinnamon,data=2,stdrot=true,face0-1=0:harvestcraft/cinnamon_top,face2-5=0:harvestcraft/cinnamon_1
+block:id=%pamCinnamon,data=3,stdrot=true,face0-1=0:harvestcraft/cinnamon_top,face2-5=0:harvestcraft/cinnamon_2
+block:id=%pamCinnamon,data=4,data=5,face0-1=0:harvestcraft/cinnamon_0,face2-3=4000:harvestcraft/cinnamon_0,face4-5=0:harvestcraft/cinnamon_top
+block:id=%pamCinnamon,data=6,face0-1=0:harvestcraft/cinnamon_1,face2-3=4000:harvestcraft/cinnamon_1,face4-5=0:harvestcraft/cinnamon_top
+block:id=%pamCinnamon,data=7,face0-1=0:harvestcraft/cinnamon_2,face2-3=4000:harvestcraft/cinnamon_2,face4-5=0:harvestcraft/cinnamon_top
+block:id=%pamCinnamon,data=8,data=9,face0-1=4000:harvestcraft/cinnamon_0,face2-3=0:harvestcraft/cinnamon_top,face4-5=4000:harvestcraft/cinnamon_0
+block:id=%pamCinnamon,data=10,face0-1=4000:harvestcraft/cinnamon_1,face2-3=0:harvestcraft/cinnamon_top,face4-5=4000:harvestcraft/cinnamon_1
+block:id=%pamCinnamon,data=11,face0-1=4000:harvestcraft/cinnamon_2,face2-3=0:harvestcraft/cinnamon_top,face4-5=4000:harvestcraft/cinnamon_2
+block:id=%pamCinnamon,data=12,data=13,stdrot=true,face0-5=0:harvestcraft/cinnamon_0
+block:id=%pamCinnamon,data=14,stdrot=true,face0-5=0:harvestcraft/cinnamon_1
+block:id=%pamCinnamon,data=15,stdrot=true,face0-5=0:harvestcraft/cinnamon_2
 
 # %pamcinnamonSapling:* (pamcinnamonSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 block:id=%pamcinnamonSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/cinnamonSapling
@@ -849,23 +990,19 @@ block:id=%pamLime,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestc
 # %pamlimeSapling:* (pamlimeSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 block:id=%pamlimeSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/limeSapling
 
-# %pamMaple:* (pamMaple), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamFruit
-block:id=%pamMaple,data=0,stdrot=true,face0-5=0:harvestcraft/maple_0
-block:id=%pamMaple,data=1,stdrot=true,face0-5=0:harvestcraft/maple_1
-block:id=%pamMaple,data=2,stdrot=true,face0-5=0:harvestcraft/maple_2
-block:id=%pamMaple,data=3,stdrot=true,face0-5=0:harvestcraft/maple_0
-block:id=%pamMaple,data=4,stdrot=true,face0-5=0:harvestcraft/maple_1
-block:id=%pamMaple,data=5,stdrot=true,face0-5=0:harvestcraft/maple_2
-block:id=%pamMaple,data=6,stdrot=true,face0-5=0:harvestcraft/maple_0
-block:id=%pamMaple,data=7,stdrot=true,face0-5=0:harvestcraft/maple_1
-block:id=%pamMaple,data=8,stdrot=true,face0-5=0:harvestcraft/maple_2
-block:id=%pamMaple,data=9,stdrot=true,face0-5=0:harvestcraft/maple_0
-block:id=%pamMaple,data=10,stdrot=true,face0-5=0:harvestcraft/maple_1
-block:id=%pamMaple,data=11,stdrot=true,face0-5=0:harvestcraft/maple_2
-block:id=%pamMaple,data=12,stdrot=true,face0-5=0:harvestcraft/maple_0
-block:id=%pamMaple,data=13,stdrot=true,face0-5=0:harvestcraft/maple_1
-block:id=%pamMaple,data=14,stdrot=true,face0-5=0:harvestcraft/maple_2
-block:id=%pamMaple,data=15,stdrot=true,face0-5=0:harvestcraft/maple_0
+# %pamMaple:* (pamMaple), render=(LOG), opaque=true,cls=com.pam.harvestcraft.BlockPamFruitingLog
+block:id=%pamMaple,data=0,data=1,stdrot=true,face0-1=0:harvestcraft/maple_top,face2-5=0:harvestcraft/maple_0
+block:id=%pamMaple,data=2,stdrot=true,face0-1=0:harvestcraft/maple_top,face2-5=0:harvestcraft/maple_1
+block:id=%pamMaple,data=3,stdrot=true,face0-1=0:harvestcraft/maple_top,face2-5=0:harvestcraft/maple_2
+block:id=%pamMaple,data=4,data=5,face0-1=0:harvestcraft/maple_0,face2-3=4000:harvestcraft/maple_0,face4-5=0:harvestcraft/maple_top
+block:id=%pamMaple,data=6,face0-1=0:harvestcraft/maple_1,face2-3=4000:harvestcraft/maple_1,face4-5=0:harvestcraft/maple_top
+block:id=%pamMaple,data=7,face0-1=0:harvestcraft/maple_2,face2-3=4000:harvestcraft/maple_2,face4-5=0:harvestcraft/maple_top
+block:id=%pamMaple,data=8,data=9,face0-1=4000:harvestcraft/maple_0,face2-3=0:harvestcraft/maple_top,face4-5=4000:harvestcraft/maple_0
+block:id=%pamMaple,data=10,face0-1=4000:harvestcraft/maple_1,face2-3=0:harvestcraft/maple_top,face4-5=4000:harvestcraft/maple_1
+block:id=%pamMaple,data=11,face0-1=4000:harvestcraft/maple_2,face2-3=0:harvestcraft/maple_top,face4-5=4000:harvestcraft/maple_2
+block:id=%pamMaple,data=12,data=13,stdrot=true,face0-5=0:harvestcraft/maple_0
+block:id=%pamMaple,data=14,stdrot=true,face0-5=0:harvestcraft/maple_1
+block:id=%pamMaple,data=15,stdrot=true,face0-5=0:harvestcraft/maple_2
 
 # %pammapleSapling:* (pammapleSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 block:id=%pammapleSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/mapleSapling
@@ -975,23 +1112,19 @@ block:id=%pamPapaya,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harves
 # %pampapayaSapling:* (pampapayaSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 block:id=%pampapayaSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/papayaSapling
 
-# %pamPaperbark:* (pamPaperbark), render=(STANDARD), opaque=true,cls=com.pam.harvestcraft.BlockPamFruit
-block:id=%pamPaperbark,data=0,stdrot=true,face0-5=0:harvestcraft/paperbark_0
-block:id=%pamPaperbark,data=1,stdrot=true,face0-5=0:harvestcraft/paperbark_1
-block:id=%pamPaperbark,data=2,stdrot=true,face0-5=0:harvestcraft/paperbark_2
-block:id=%pamPaperbark,data=3,stdrot=true,face0-5=0:harvestcraft/paperbark_0
-block:id=%pamPaperbark,data=4,stdrot=true,face0-5=0:harvestcraft/paperbark_1
-block:id=%pamPaperbark,data=5,stdrot=true,face0-5=0:harvestcraft/paperbark_2
-block:id=%pamPaperbark,data=6,stdrot=true,face0-5=0:harvestcraft/paperbark_0
-block:id=%pamPaperbark,data=7,stdrot=true,face0-5=0:harvestcraft/paperbark_1
-block:id=%pamPaperbark,data=8,stdrot=true,face0-5=0:harvestcraft/paperbark_2
-block:id=%pamPaperbark,data=9,stdrot=true,face0-5=0:harvestcraft/paperbark_0
-block:id=%pamPaperbark,data=10,stdrot=true,face0-5=0:harvestcraft/paperbark_1
-block:id=%pamPaperbark,data=11,stdrot=true,face0-5=0:harvestcraft/paperbark_2
-block:id=%pamPaperbark,data=12,stdrot=true,face0-5=0:harvestcraft/paperbark_0
-block:id=%pamPaperbark,data=13,stdrot=true,face0-5=0:harvestcraft/paperbark_1
-block:id=%pamPaperbark,data=14,stdrot=true,face0-5=0:harvestcraft/paperbark_2
-block:id=%pamPaperbark,data=15,stdrot=true,face0-5=0:harvestcraft/paperbark_0
+# %pamPaperbark:* (pamPaperbark), render=(LOG), opaque=true,cls=com.pam.harvestcraft.BlockPamFruitingLog
+block:id=%pamPaperbark,data=0,data=1,stdrot=true,face0-1=0:harvestcraft/paperbark_top,face2-5=0:harvestcraft/paperbark_0
+block:id=%pamPaperbark,data=2,stdrot=true,face0-1=0:harvestcraft/paperbark_top,face2-5=0:harvestcraft/paperbark_1
+block:id=%pamPaperbark,data=3,stdrot=true,face0-1=0:harvestcraft/paperbark_top,face2-5=0:harvestcraft/paperbark_2
+block:id=%pamPaperbark,data=4,data=5,face0-1=0:harvestcraft/paperbark_0,face2-3=4000:harvestcraft/paperbark_0,face4-5=0:harvestcraft/paperbark_top
+block:id=%pamPaperbark,data=6,face0-1=0:harvestcraft/paperbark_1,face2-3=4000:harvestcraft/paperbark_1,face4-5=0:harvestcraft/paperbark_top
+block:id=%pamPaperbark,data=7,face0-1=0:harvestcraft/paperbark_2,face2-3=4000:harvestcraft/paperbark_2,face4-5=0:harvestcraft/paperbark_top
+block:id=%pamPaperbark,data=8,data=9,face0-1=4000:harvestcraft/paperbark_0,face2-3=0:harvestcraft/paperbark_top,face4-5=4000:harvestcraft/paperbark_0
+block:id=%pamPaperbark,data=10,face0-1=4000:harvestcraft/paperbark_1,face2-3=0:harvestcraft/paperbark_top,face4-5=4000:harvestcraft/paperbark_1
+block:id=%pamPaperbark,data=11,face0-1=4000:harvestcraft/paperbark_2,face2-3=0:harvestcraft/paperbark_top,face4-5=4000:harvestcraft/paperbark_2
+block:id=%pamPaperbark,data=12,data=13,stdrot=true,face0-5=0:harvestcraft/paperbark_0
+block:id=%pamPaperbark,data=14,stdrot=true,face0-5=0:harvestcraft/paperbark_1
+block:id=%pamPaperbark,data=15,stdrot=true,face0-5=0:harvestcraft/paperbark_2
 
 # %pampaperbarkSapling:* (pampaperbarkSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 block:id=%pampaperbarkSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/paperbarkSapling
@@ -1226,6 +1359,27 @@ block:id=%pamWalnut,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harves
 
 # %pamwalnutSapling:* (pamwalnutSapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
 block:id=%pamwalnutSapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/walnutSapling
+
+# %pamGooseberry:* (pamGooseberry), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamFruit
+block:id=%pamGooseberry,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_0
+block:id=%pamGooseberry,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_1
+block:id=%pamGooseberry,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_2
+block:id=%pamGooseberry,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_0
+block:id=%pamGooseberry,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_1
+block:id=%pamGooseberry,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_2
+block:id=%pamGooseberry,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_0
+block:id=%pamGooseberry,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_1
+block:id=%pamGooseberry,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_2
+block:id=%pamGooseberry,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_0
+block:id=%pamGooseberry,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_1
+block:id=%pamGooseberry,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_2
+block:id=%pamGooseberry,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_0
+block:id=%pamGooseberry,data=13,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_1
+block:id=%pamGooseberry,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_2
+block:id=%pamGooseberry,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberry_0
+
+# %pamgooseberrySapling:* (pamgooseberrySapling), render=(CROSSEDSQUARES), opaque=false,cls=com.pam.harvestcraft.BlockPamSapling
+block:id=%pamgooseberrySapling,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/gooseberrySapling
 
 # %pamblackberryCrop:* (pamblackberryCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
 block:id=%pamblackberryCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/blackberrycrop_0
@@ -1467,6 +1621,12 @@ block:id=%pamcabbageCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patc
 block:id=%pamcabbageCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/cabbagecrop_2
 block:id=%pamcabbageCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/cabbagecrop_3
 
+# %pamspinachCrop:* (pamspinachCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
+block:id=%pamspinachCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/spinachcrop_0
+block:id=%pamspinachCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/spinachcrop_1
+block:id=%pamspinachCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/spinachcrop_2
+block:id=%pamspinachCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/spinachcrop_3
+
 # %pamwhitemushroomCrop:* (pamwhitemushroomCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
 block:id=%pamwhitemushroomCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/whitemushroomcrop_0
 block:id=%pamwhitemushroomCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/whitemushroomcrop_1
@@ -1563,6 +1723,24 @@ block:id=%pamseaweedCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patc
 block:id=%pamseaweedCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/seaweedcrop_2
 block:id=%pamseaweedCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/seaweedcrop_3
 
+# %pamcurryleafCrop:* (pamcurryleafCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
+block:id=%pamcurryleafCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/curryleafcrop_0
+block:id=%pamcurryleafCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/curryleafcrop_1
+block:id=%pamcurryleafCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/curryleafcrop_2
+block:id=%pamcurryleafCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/curryleafcrop_3
+
+# %pamsesameseedsCrop:* (pamsesameseedsCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
+block:id=%pamsesameseedsCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/sesameseedscrop_0
+block:id=%pamsesameseedsCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/sesameseedscrop_1
+block:id=%pamsesameseedsCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/sesameseedscrop_2
+block:id=%pamsesameseedsCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/sesameseedscrop_3
+
+# %pamwaterchestnutCrop:* (pamwaterchestnutCrop), render=(CROPS), opaque=false,cls=com.pam.harvestcraft.BlockPamCrop
+block:id=%pamwaterchestnutCrop,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/waterchestnutcrop_0
+block:id=%pamwaterchestnutCrop,data=2,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/waterchestnutcrop_1
+block:id=%pamwaterchestnutCrop,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/waterchestnutcrop_2
+block:id=%pamwaterchestnutCrop,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/waterchestnutcrop_3
+
 # %pamcandleDeco1:* (pamcandleDeco1), render=(TORCH), opaque=false,cls=com.pam.harvestcraft.BlockPamCandleDeco
 block:id=%pamcandleDeco1,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/candle_0
 
@@ -1610,3 +1788,43 @@ block:id=%pamcandleDeco15,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:h
 
 # %pamcandleDeco16:* (pamcandleDeco16), render=(TORCH), opaque=false,cls=com.pam.harvestcraft.BlockPamCandleDeco
 block:id=%pamcandleDeco16,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:harvestcraft/candle_15
+
+# %pamcarrotCake:* (pamcarrotCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pamcarrotCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcarrotcake_bottom,face1=0:harvestcraft/pamcarrotcake_top,face2-5=0:harvestcraft/pamcarrotcake_side
+block:id=%pamcarrotCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcarrotcake_bottom,face1=0:harvestcraft/pamcarrotcake_top,face2-3=0:harvestcraft/pamcarrotcake_side,face4=0:harvestcraft/pamcarrotcake_inner,face5=0:harvestcraft/pamcarrotcake_side
+
+# %pamcheeseCake:* (pamcheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pamcheeseCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcheesecake_bottom,face1=0:harvestcraft/pamcheesecake_top,face2-5=0:harvestcraft/pamcheesecake_side
+block:id=%pamcheeseCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcheesecake_bottom,face1=0:harvestcraft/pamcheesecake_top,face2-3=0:harvestcraft/pamcheesecake_side,face4=0:harvestcraft/pamcheesecake_inner,face5=0:harvestcraft/pamcheesecake_side
+
+# %pamcherrycheeseCake:* (pamcherrycheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pamcherrycheeseCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcherrycheesecake_bottom,face1=0:harvestcraft/pamcherrycheesecake_top,face2-5=0:harvestcraft/pamcherrycheesecake_side
+block:id=%pamcherrycheeseCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamcherrycheesecake_bottom,face1=0:harvestcraft/pamcherrycheesecake_top,face2-3=0:harvestcraft/pamcherrycheesecake_side,face4=0:harvestcraft/pamcherrycheesecake_inner,face5=0:harvestcraft/pamcherrycheesecake_side
+
+# %pampineappleupsidedownCake:* (pampineappleupsidedownCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pampineappleupsidedownCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampineappleupsidedowncake_bottom,face1=0:harvestcraft/pampineappleupsidedowncake_top,face2-5=0:harvestcraft/pampineappleupsidedowncake_side
+block:id=%pampineappleupsidedownCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampineappleupsidedowncake_bottom,face1=0:harvestcraft/pampineappleupsidedowncake_top,face2-3=0:harvestcraft/pampineappleupsidedowncake_side,face4=0:harvestcraft/pampineappleupsidedowncake_inner,face5=0:harvestcraft/pampineappleupsidedowncake_side
+
+# %pamchocolatesprinkleCake:* (pamchocolatesprinkleCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pamchocolatesprinkleCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamchocolatesprinklecake_bottom,face1=0:harvestcraft/pamchocolatesprinklecake_top,face2-5=0:harvestcraft/pamchocolatesprinklecake_side
+block:id=%pamchocolatesprinkleCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamchocolatesprinklecake_bottom,face1=0:harvestcraft/pamchocolatesprinklecake_top,face2-3=0:harvestcraft/pamchocolatesprinklecake_side,face4=0:harvestcraft/pamchocolatesprinklecake_inner,face5=0:harvestcraft/pamchocolatesprinklecake_side
+
+# %pamredvelvetCake:* (pamredvelvetCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pamredvelvetCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamredvelvetcake_bottom,face1=0:harvestcraft/pamredvelvetcake_top,face2-5=0:harvestcraft/pamredvelvetcake_side
+block:id=%pamredvelvetCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamredvelvetcake_bottom,face1=0:harvestcraft/pamredvelvetcake_top,face2-3=0:harvestcraft/pamredvelvetcake_side,face4=0:harvestcraft/pamredvelvetcake_inner,face5=0:harvestcraft/pamredvelvetcake_side
+
+# %pamlamingtonCake:* (pamlamingtonCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pamlamingtonCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamlamingtoncake_bottom,face1=0:harvestcraft/pamlamingtoncake_top,face2-5=0:harvestcraft/pamlamingtoncake_side
+block:id=%pamlamingtonCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamlamingtoncake_bottom,face1=0:harvestcraft/pamlamingtoncake_top,face2-3=0:harvestcraft/pamlamingtoncake_side,face4=0:harvestcraft/pamlamingtoncake_inner,face5=0:harvestcraft/pamlamingtoncake_side
+
+# %pampavlovaCake:* (pampavlovaCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pampavlovaCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampavlovacake_bottom,face1=0:harvestcraft/pampavlovacake_top,face2-5=0:harvestcraft/pampavlovacake_side
+block:id=%pampavlovaCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampavlovacake_bottom,face1=0:harvestcraft/pampavlovacake_top,face2-3=0:harvestcraft/pampavlovacake_side,face4=0:harvestcraft/pampavlovacake_inner,face5=0:harvestcraft/pampavlovacake_side
+
+# %pamholidayCake:* (pamholidayCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pamholidayCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamholidaycake_bottom,face1=0:harvestcraft/pamholidaycake_top,face2-5=0:harvestcraft/pamholidaycake_side
+block:id=%pamholidayCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pamholidaycake_bottom,face1=0:harvestcraft/pamholidaycake_top,face2-3=0:harvestcraft/pamholidaycake_side,face4=0:harvestcraft/pamholidaycake_inner,face5=0:harvestcraft/pamholidaycake_side
+
+# %pampumpkincheeseCake:* (pampumpkincheeseCake), render=(STANDARD), opaque=false,cls=com.pam.harvestcraft.BlockPamCake
+block:id=%pampumpkincheeseCake,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampumpkincheesecake_bottom,face1=0:harvestcraft/pampumpkincheesecake_top,face2-5=0:harvestcraft/pampumpkincheesecake_side
+block:id=%pampumpkincheeseCake,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:harvestcraft/pampumpkincheesecake_bottom,face1=0:harvestcraft/pampumpkincheesecake_top,face2-3=0:harvestcraft/pampumpkincheesecake_side,face4=0:harvestcraft/pampumpkincheesecake_inner,face5=0:harvestcraft/pampumpkincheesecake_side
