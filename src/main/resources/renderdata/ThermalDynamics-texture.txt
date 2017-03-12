@@ -8,22 +8,21 @@ modname:ThermalDynamics
 
 
 texturepath:assets/thermaldynamics/textures/blocks/
-texture:id=thermaldynamics/Duct_copper,filename=assets/thermaldynamics/textures/blocks/Duct_copper.png
-texture:id=thermaldynamics/Duct_copper_trans,filename=assets/thermaldynamics/textures/blocks/Duct_copper_trans.png
-texture:id=thermaldynamics/Duct_electrum_trans,filename=assets/thermaldynamics/textures/blocks/Duct_electrum_trans.png
-texture:id=thermaldynamics/Duct_enderium,filename=assets/thermaldynamics/textures/blocks/Duct_enderium.png
-texture:id=thermaldynamics/Duct_enderium_trans,filename=assets/thermaldynamics/textures/blocks/Duct_enderium_trans.png
-texture:id=thermaldynamics/Duct_fluxElectrum,filename=assets/thermaldynamics/textures/blocks/Duct_fluxElectrum.png
-texture:id=thermaldynamics/Duct_fluxElectrum_trans,filename=assets/thermaldynamics/textures/blocks/Duct_fluxElectrum_trans.png
-texture:id=thermaldynamics/Duct_invar,filename=assets/thermaldynamics/textures/blocks/Duct_invar.png
-texture:id=thermaldynamics/Duct_invar_trans,filename=assets/thermaldynamics/textures/blocks/Duct_invar_trans.png
-texture:id=thermaldynamics/Duct_lead_trans,filename=assets/thermaldynamics/textures/blocks/Duct_lead_trans.png
-texture:id=thermaldynamics/Duct_lumium,filename=assets/thermaldynamics/textures/blocks/Duct_lumium.png
-texture:id=thermaldynamics/Duct_support,filename=assets/thermaldynamics/textures/blocks/Duct_support.png
-texture:id=thermaldynamics/Duct_tin,filename=assets/thermaldynamics/textures/blocks/Duct_tin.png
-texture:id=thermaldynamics/Duct_tin_1,filename=assets/thermaldynamics/textures/blocks/Duct_tin_1.png
-texture:id=thermaldynamics/Duct_tin_2,filename=assets/thermaldynamics/textures/blocks/Duct_tin_2.png
-texture:id=thermaldynamics/Duct_tin_trans,filename=assets/thermaldynamics/textures/blocks/Duct_tin_trans.png
+texture:id=thermaldynamics/Duct_copper,filename=assets/thermaldynamics/textures/blocks/duct/base/copper.png
+texture:id=thermaldynamics/Duct_copper_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/copper_trans.png
+texture:id=thermaldynamics/Duct_electrum_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/electrum_trans.png
+texture:id=thermaldynamics/Duct_enderium,filename=assets/thermaldynamics/textures/blocks/duct/base/enderium.png
+texture:id=thermaldynamics/Duct_enderium_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/enderium_trans.png
+texture:id=thermaldynamics/Duct_fluxElectrum,filename=assets/thermaldynamics/textures/blocks/duct/base/fluxElectrum.png
+texture:id=thermaldynamics/Duct_invar,filename=assets/thermaldynamics/textures/blocks/duct/base/invar.png
+texture:id=thermaldynamics/Duct_invar_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/invar_trans.png
+texture:id=thermaldynamics/Duct_lead_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/lead_trans.png
+texture:id=thermaldynamics/Duct_lumium,filename=assets/thermaldynamics/textures/blocks/duct/base/lumium.png
+texture:id=thermaldynamics/Duct_support,filename=assets/thermaldynamics/textures/blocks/duct/base/support.png
+texture:id=thermaldynamics/Duct_tin,filename=assets/thermaldynamics/textures/blocks/duct/base/tin.png
+texture:id=thermaldynamics/Duct_tin_1,filename=assets/thermaldynamics/textures/blocks/duct/base/tin_1.png
+texture:id=thermaldynamics/Duct_tin_2,filename=assets/thermaldynamics/textures/blocks/duct/base/tin_2.png
+texture:id=thermaldynamics/Duct_tin_trans,filename=assets/thermaldynamics/textures/blocks/duct/base/tin_trans.png
 
 
 
@@ -40,7 +39,6 @@ block:id=%ThermalDynamics_16,data=0,stdrot=true,face0-5=12000:thermaldynamics/Du
 block:id=%ThermalDynamics_16,data=1,stdrot=true,face0-5=12000:thermaldynamics/Duct_copper
 block:id=%ThermalDynamics_16,data=2,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar_trans
 block:id=%ThermalDynamics_16,data=3,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar
-block:id=%ThermalDynamics_16,data=4,stdrot=true,face0-5=12000:thermaldynamics/Duct_fluxElectrum_trans
 block:id=%ThermalDynamics_16,data=5,stdrot=true,face0-5=12000:thermaldynamics/Duct_fluxElectrum
 block:id=%ThermalDynamics_16,data=6,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar_trans
 block:id=%ThermalDynamics_16,data=7,stdrot=true,face0-5=12000:thermaldynamics/Duct_invar

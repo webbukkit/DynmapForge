@@ -7,14 +7,14 @@ cfgfile:config/denseores.cfg
 
 
 texturepath:assets/denseores/textures/blocks/
-texture:id=denseores/minecraft/coal_ore,filename=assets/denseores/textures/blocks/minecraft/coal_ore.png
-texture:id=denseores/minecraft/diamond_ore,filename=assets/denseores/textures/blocks/minecraft/diamond_ore.png
-texture:id=denseores/minecraft/emerald_ore,filename=assets/denseores/textures/blocks/minecraft/emerald_ore.png
-texture:id=denseores/minecraft/gold_ore,filename=assets/denseores/textures/blocks/minecraft/gold_ore.png
-texture:id=denseores/minecraft/iron_ore,filename=assets/denseores/textures/blocks/minecraft/iron_ore.png
-texture:id=denseores/minecraft/lapis_ore,filename=assets/denseores/textures/blocks/minecraft/lapis_ore.png
-texture:id=denseores/minecraft/quartz_ore,filename=assets/denseores/textures/blocks/minecraft/quartz_ore.png
-texture:id=denseores/minecraft/redstone_ore,filename=assets/denseores/textures/blocks/minecraft/redstone_ore.png
+texture:id=denseores/minecraft/coal_ore,filename=assets/minecraft/textures/blocks/coal_ore.png
+texture:id=denseores/minecraft/diamond_ore,filename=assets/minecraft/textures/blocks/diamond_ore.png
+texture:id=denseores/minecraft/emerald_ore,filename=assets/minecraft/textures/blocks/emerald_ore.png
+texture:id=denseores/minecraft/gold_ore,filename=assets/minecraft/textures/blocks/gold_ore.png
+texture:id=denseores/minecraft/iron_ore,filename=assets/minecraft/textures/blocks/iron_ore.png
+texture:id=denseores/minecraft/lapis_ore,filename=assets/minecraft/textures/blocks/lapis_ore.png
+texture:id=denseores/minecraft/quartz_ore,filename=assets/minecraft/textures/blocks/quartz_ore.png
+texture:id=denseores/minecraft/redstone_ore,filename=assets/minecraft/textures/blocks/redstone_ore.png
 
 
 

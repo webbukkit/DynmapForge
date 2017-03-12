@@ -16,8 +16,7 @@ texture:id=computronics/camera_front,filename=assets/computronics/textures/block
 texture:id=computronics/chatbox_side,filename=assets/computronics/textures/blocks/chatbox_side.png
 texture:id=computronics/cipher_front,filename=assets/computronics/textures/blocks/cipher_front.png
 texture:id=computronics/digital_controller_box,filename=assets/computronics/textures/blocks/digital_controller_box.png
-texture:id=computronics/digital_detector.0,filename=assets/computronics/textures/blocks/digital_detector.0.png
-texture:id=computronics/digital_detector.1,filename=assets/computronics/textures/blocks/digital_detector.1.png
+texture:id=computronics/digital_detector,filename=assets/computronics/textures/blocks/digital_detector.png
 texture:id=computronics/digital_receiver_box,filename=assets/computronics/textures/blocks/digital_receiver_box.png
 texture:id=computronics/lamp_layer_0,filename=assets/computronics/textures/blocks/lamp_layer_0.png
 texture:id=computronics/locorelay_top,filename=assets/computronics/textures/blocks/locorelay_top.png
@@ -31,8 +30,7 @@ texture:id=computronics/radar_side,filename=assets/computronics/textures/blocks/
 texture:id=computronics/speaker_front,filename=assets/computronics/textures/blocks/speaker_front.png
 texture:id=computronics/tape_drive_front,filename=assets/computronics/textures/blocks/tape_drive_front.png
 texture:id=computronics/ticket_machine_front,filename=assets/computronics/textures/blocks/ticket_machine_front.png
-texture:id=railcraft/signal.box.0,filename=assets/railcraft/textures/blocks/signal.box.0.png
-texture:id=railcraft/signal.box.2,filename=assets/railcraft/textures/blocks/signal.box.2.png
+texture:id=railcraft/signal.box,filename=assets/railcraft/textures/blocks/signal.box.png
 
 
 
