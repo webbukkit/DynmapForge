@@ -1,4 +1,4 @@
-# witchery 0.20.6
+# witchery 0.24.1
 version:1.7
 modname:witchery
 
@@ -7,13 +7,24 @@ cfgfile:config/witchery.cfg
 
 
 texturepath:assets/witchery/textures/blocks/
+texture:id=minecraft/cactus_bottom,filename=assets/minecraft/textures/blocks/cactus_bottom.png
+texture:id=minecraft/cactus_side,filename=assets/minecraft/textures/blocks/cactus_side.png
+texture:id=minecraft/cactus_top,filename=assets/minecraft/textures/blocks/cactus_top.png
+texture:id=minecraft/coal_block,filename=assets/minecraft/textures/blocks/coal_block.png
 texture:id=minecraft/deadbush,filename=assets/minecraft/textures/blocks/deadbush.png
+texture:id=minecraft/dirt,filename=assets/minecraft/textures/blocks/dirt.png
+texture:id=minecraft/dirt_podzol_side,filename=assets/minecraft/textures/blocks/dirt_podzol_side.png
+texture:id=minecraft/dirt_podzol_top,filename=assets/minecraft/textures/blocks/dirt_podzol_top.png
 texture:id=minecraft/door_wood_lower,filename=assets/minecraft/textures/blocks/door_wood_lower.png
 texture:id=minecraft/door_wood_upper,filename=assets/minecraft/textures/blocks/door_wood_upper.png
 texture:id=minecraft/flower_dandelion,filename=assets/minecraft/textures/blocks/flower_dandelion.png
 texture:id=minecraft/flower_rose,filename=assets/minecraft/textures/blocks/flower_rose.png
+texture:id=minecraft/gold_block,filename=assets/minecraft/textures/blocks/gold_block.png
+texture:id=minecraft/grass_side,filename=assets/minecraft/textures/blocks/grass_side.png
+texture:id=minecraft/grass_top,filename=assets/minecraft/textures/blocks/grass_top.png
 texture:id=minecraft/ice,filename=assets/minecraft/textures/blocks/ice.png
 texture:id=minecraft/iron_block,filename=assets/minecraft/textures/blocks/iron_block.png
+texture:id=minecraft/lever,filename=assets/minecraft/textures/blocks/lever.png
 texture:id=minecraft/log_acacia,filename=assets/minecraft/textures/blocks/log_acacia.png
 texture:id=minecraft/log_acacia_top,filename=assets/minecraft/textures/blocks/log_acacia_top.png
 texture:id=minecraft/log_big_oak,filename=assets/minecraft/textures/blocks/log_big_oak.png
@@ -29,9 +40,12 @@ texture:id=minecraft/log_spruce_top,filename=assets/minecraft/textures/blocks/lo
 texture:id=minecraft/mycelium_top,filename=assets/minecraft/textures/blocks/mycelium_top.png
 texture:id=minecraft/planks_oak,filename=assets/minecraft/textures/blocks/planks_oak.png
 texture:id=minecraft/portal,filename=assets/minecraft/textures/blocks/portal.png
+texture:id=minecraft/snow,filename=assets/minecraft/textures/blocks/snow.png
 texture:id=minecraft/soul_sand,filename=assets/minecraft/textures/blocks/soul_sand.png
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
+texture:id=minecraft/vine,filename=assets/minecraft/textures/blocks/vine.png
 texture:id=minecraft/waterlily,filename=assets/minecraft/textures/blocks/waterlily.png
+texture:id=minecraft/web,filename=assets/minecraft/textures/blocks/web.png
 texture:id=witchery/altar,filename=assets/witchery/textures/blocks/altar.png
 texture:id=witchery/altar_joined,filename=assets/witchery/textures/blocks/altar_joined.png
 texture:id=witchery/altar_joined_top,filename=assets/witchery/textures/blocks/altar_joined_top.png
@@ -47,12 +61,17 @@ texture:id=witchery/belladonna_stage_1,filename=assets/witchery/textures/blocks/
 texture:id=witchery/belladonna_stage_2,filename=assets/witchery/textures/blocks/belladonna_stage_2.png
 texture:id=witchery/belladonna_stage_3,filename=assets/witchery/textures/blocks/belladonna_stage_3.png
 texture:id=witchery/belladonna_stage_4,filename=assets/witchery/textures/blocks/belladonna_stage_4.png
+texture:id=witchery/bloodedwool,filename=assets/witchery/textures/blocks/bloodedwool.png
 texture:id=witchery/bloodrose,filename=assets/witchery/textures/blocks/bloodrose.png
 texture:id=witchery/bloodrose_full,filename=assets/witchery/textures/blocks/bloodrose_full.png
 texture:id=witchery/bramble_ender,filename=assets/witchery/textures/blocks/bramble_ender.png
 texture:id=witchery/bramble_wild,filename=assets/witchery/textures/blocks/bramble_wild.png
 texture:id=witchery/brazier,filename=assets/witchery/textures/blocks/brazier.png
+texture:id=witchery/brew_flow,filename=assets/witchery/textures/blocks/brew_flow.png
+texture:id=witchery/brew_still,filename=assets/witchery/textures/blocks/brew_still.png
+texture:id=witchery/brewgas,filename=assets/witchery/textures/blocks/brewgas.png
 texture:id=witchery/candelabra,filename=assets/witchery/textures/blocks/candelabra.png
+texture:id=witchery/cauldron,filename=assets/witchery/textures/blocks/cauldron.png
 texture:id=witchery/chalice,filename=assets/witchery/textures/blocks/chalice.png
 texture:id=witchery/circleglyph1.1,filename=assets/witchery/textures/blocks/circleglyph1.1.png
 texture:id=witchery/circleglyph1.10,filename=assets/witchery/textures/blocks/circleglyph1.10.png
@@ -96,7 +115,12 @@ texture:id=witchery/critterSnare_magmacube,filename=assets/witchery/textures/blo
 texture:id=witchery/critterSnare_silverfish,filename=assets/witchery/textures/blocks/critterSnare_silverfish.png
 texture:id=witchery/critterSnare_slime,filename=assets/witchery/textures/blocks/critterSnare_slime.png
 texture:id=witchery/crystalball,filename=assets/witchery/textures/blocks/crystalball.png
+texture:id=witchery/daylightcollector,filename=assets/witchery/textures/blocks/daylightcollector.png
+texture:id=witchery/daylightcollector1,filename=assets/witchery/textures/blocks/daylightcollector1.png
+texture:id=witchery/daylightcollector2,filename=assets/witchery/textures/blocks/daylightcollector2.png
 texture:id=witchery/demonHeart,filename=assets/witchery/textures/blocks/demonHeart.png
+texture:id=witchery/disease_flow,filename=assets/witchery/textures/blocks/disease_flow.png
+texture:id=witchery/disease_still,filename=assets/witchery/textures/blocks/disease_still.png
 texture:id=witchery/distillery,filename=assets/witchery/textures/blocks/distillery.png
 texture:id=witchery/door_rowan_lower,filename=assets/witchery/textures/blocks/door_rowan_lower.png
 texture:id=witchery/door_rowan_upper,filename=assets/witchery/textures/blocks/door_rowan_upper.png
@@ -106,10 +130,19 @@ texture:id=witchery/flowspirit_flow,filename=assets/witchery/textures/blocks/flo
 texture:id=witchery/flowspirit_still,filename=assets/witchery/textures/blocks/flowspirit_still.png
 texture:id=witchery/force,filename=assets/witchery/textures/blocks/force.png
 texture:id=witchery/fumefunnel,filename=assets/witchery/textures/blocks/fumefunnel.png
+texture:id=witchery/garlic_stage_0,filename=assets/witchery/textures/blocks/garlic_stage_0.png
+texture:id=witchery/garlic_stage_1,filename=assets/witchery/textures/blocks/garlic_stage_1.png
+texture:id=witchery/garlic_stage_2,filename=assets/witchery/textures/blocks/garlic_stage_2.png
+texture:id=witchery/garlic_stage_3,filename=assets/witchery/textures/blocks/garlic_stage_3.png
+texture:id=witchery/garlic_stage_4,filename=assets/witchery/textures/blocks/garlic_stage_4.png
+texture:id=witchery/garlic_stage_5,filename=assets/witchery/textures/blocks/garlic_stage_5.png
+texture:id=witchery/garlicgarlanditem,filename=assets/witchery/textures/blocks/garlicgarlanditem.png
 texture:id=witchery/glintWeed,filename=assets/witchery/textures/blocks/glintWeed.png
 texture:id=witchery/glowGlobe,filename=assets/witchery/textures/blocks/glowGlobe.png
 texture:id=witchery/grassper,filename=assets/witchery/textures/blocks/grassper.png
 texture:id=witchery/heartGlyph,filename=assets/witchery/textures/blocks/heartGlyph.png
+texture:id=witchery/icedoor_lower,filename=assets/witchery/textures/blocks/icedoor_lower.png
+texture:id=witchery/icedoor_upper,filename=assets/witchery/textures/blocks/icedoor_upper.png
 texture:id=witchery/kettle,filename=assets/witchery/textures/blocks/kettle.png
 texture:id=witchery/leaves_alder,filename=assets/witchery/textures/blocks/leaves_alder.png
 texture:id=witchery/leaves_hawthorn,filename=assets/witchery/textures/blocks/leaves_hawthorn.png
@@ -138,6 +171,38 @@ texture:id=witchery/sapling_alder,filename=assets/witchery/textures/blocks/sapli
 texture:id=witchery/sapling_hawthorn,filename=assets/witchery/textures/blocks/sapling_hawthorn.png
 texture:id=witchery/sapling_rowan,filename=assets/witchery/textures/blocks/sapling_rowan.png
 texture:id=witchery/scarecrow,filename=assets/witchery/textures/blocks/scarecrow.png
+texture:id=witchery/shadedglass_black,filename=assets/witchery/textures/blocks/shadedglass_black.png
+texture:id=witchery/shadedglass_blue,filename=assets/witchery/textures/blocks/shadedglass_blue.png
+texture:id=witchery/shadedglass_brown,filename=assets/witchery/textures/blocks/shadedglass_brown.png
+texture:id=witchery/shadedglass_cyan,filename=assets/witchery/textures/blocks/shadedglass_cyan.png
+texture:id=witchery/shadedglass_gray,filename=assets/witchery/textures/blocks/shadedglass_gray.png
+texture:id=witchery/shadedglass_green,filename=assets/witchery/textures/blocks/shadedglass_green.png
+texture:id=witchery/shadedglass_light_blue,filename=assets/witchery/textures/blocks/shadedglass_light_blue.png
+texture:id=witchery/shadedglass_lime,filename=assets/witchery/textures/blocks/shadedglass_lime.png
+texture:id=witchery/shadedglass_magenta,filename=assets/witchery/textures/blocks/shadedglass_magenta.png
+texture:id=witchery/shadedglass_orange,filename=assets/witchery/textures/blocks/shadedglass_orange.png
+texture:id=witchery/shadedglass_pink,filename=assets/witchery/textures/blocks/shadedglass_pink.png
+texture:id=witchery/shadedglass_purple,filename=assets/witchery/textures/blocks/shadedglass_purple.png
+texture:id=witchery/shadedglass_red,filename=assets/witchery/textures/blocks/shadedglass_red.png
+texture:id=witchery/shadedglass_silver,filename=assets/witchery/textures/blocks/shadedglass_silver.png
+texture:id=witchery/shadedglass_white,filename=assets/witchery/textures/blocks/shadedglass_white.png
+texture:id=witchery/shadedglass_yellow,filename=assets/witchery/textures/blocks/shadedglass_yellow.png
+texture:id=witchery/shadedglassoff_black,filename=assets/witchery/textures/blocks/shadedglassoff_black.png
+texture:id=witchery/shadedglassoff_blue,filename=assets/witchery/textures/blocks/shadedglassoff_blue.png
+texture:id=witchery/shadedglassoff_brown,filename=assets/witchery/textures/blocks/shadedglassoff_brown.png
+texture:id=witchery/shadedglassoff_cyan,filename=assets/witchery/textures/blocks/shadedglassoff_cyan.png
+texture:id=witchery/shadedglassoff_gray,filename=assets/witchery/textures/blocks/shadedglassoff_gray.png
+texture:id=witchery/shadedglassoff_green,filename=assets/witchery/textures/blocks/shadedglassoff_green.png
+texture:id=witchery/shadedglassoff_light_blue,filename=assets/witchery/textures/blocks/shadedglassoff_light_blue.png
+texture:id=witchery/shadedglassoff_lime,filename=assets/witchery/textures/blocks/shadedglassoff_lime.png
+texture:id=witchery/shadedglassoff_magenta,filename=assets/witchery/textures/blocks/shadedglassoff_magenta.png
+texture:id=witchery/shadedglassoff_orange,filename=assets/witchery/textures/blocks/shadedglassoff_orange.png
+texture:id=witchery/shadedglassoff_pink,filename=assets/witchery/textures/blocks/shadedglassoff_pink.png
+texture:id=witchery/shadedglassoff_purple,filename=assets/witchery/textures/blocks/shadedglassoff_purple.png
+texture:id=witchery/shadedglassoff_red,filename=assets/witchery/textures/blocks/shadedglassoff_red.png
+texture:id=witchery/shadedglassoff_silver,filename=assets/witchery/textures/blocks/shadedglassoff_silver.png
+texture:id=witchery/shadedglassoff_white,filename=assets/witchery/textures/blocks/shadedglassoff_white.png
+texture:id=witchery/shadedglassoff_yellow,filename=assets/witchery/textures/blocks/shadedglassoff_yellow.png
 texture:id=witchery/snowbell_stage_0,filename=assets/witchery/textures/blocks/snowbell_stage_0.png
 texture:id=witchery/snowbell_stage_1,filename=assets/witchery/textures/blocks/snowbell_stage_1.png
 texture:id=witchery/snowbell_stage_2,filename=assets/witchery/textures/blocks/snowbell_stage_2.png
@@ -156,6 +221,14 @@ texture:id=witchery/wicker_block_plain_side,filename=assets/witchery/textures/bl
 texture:id=witchery/wicker_block_plain_top,filename=assets/witchery/textures/blocks/wicker_block_plain_top.png
 texture:id=witchery/witchesOven,filename=assets/witchery/textures/blocks/witchesOven.png
 texture:id=witchery/witchsladder,filename=assets/witchery/textures/blocks/witchsladder.png
+texture:id=witchery/wolfsbane_stage_0,filename=assets/witchery/textures/blocks/wolfsbane_stage_0.png
+texture:id=witchery/wolfsbane_stage_1,filename=assets/witchery/textures/blocks/wolfsbane_stage_1.png
+texture:id=witchery/wolfsbane_stage_2,filename=assets/witchery/textures/blocks/wolfsbane_stage_2.png
+texture:id=witchery/wolfsbane_stage_3,filename=assets/witchery/textures/blocks/wolfsbane_stage_3.png
+texture:id=witchery/wolfsbane_stage_4,filename=assets/witchery/textures/blocks/wolfsbane_stage_4.png
+texture:id=witchery/wolfsbane_stage_5,filename=assets/witchery/textures/blocks/wolfsbane_stage_5.png
+texture:id=witchery/wolfsbane_stage_6,filename=assets/witchery/textures/blocks/wolfsbane_stage_6.png
+texture:id=witchery/wolfsbane_stage_7,filename=assets/witchery/textures/blocks/wolfsbane_stage_7.png
 texture:id=witchery/wormwood_stage_0,filename=assets/witchery/textures/blocks/wormwood_stage_0.png
 texture:id=witchery/wormwood_stage_1,filename=assets/witchery/textures/blocks/wormwood_stage_1.png
 texture:id=witchery/wormwood_stage_2,filename=assets/witchery/textures/blocks/wormwood_stage_2.png
@@ -205,6 +278,24 @@ block:id=%mindrake,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery
 block:id=%mindrake,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/mindrake_stage_2
 block:id=%mindrake,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/mindrake_stage_3
 block:id=%mindrake,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/mindrake_stage_4
+
+# %wolfsbane:* (wolfsbane), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchCrop
+block:id=%wolfsbane,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/wolfsbane_stage_0
+block:id=%wolfsbane,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/wolfsbane_stage_1
+block:id=%wolfsbane,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/wolfsbane_stage_2
+block:id=%wolfsbane,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/wolfsbane_stage_3
+block:id=%wolfsbane,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/wolfsbane_stage_4
+block:id=%wolfsbane,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/wolfsbane_stage_5
+block:id=%wolfsbane,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/wolfsbane_stage_6
+block:id=%wolfsbane,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/wolfsbane_stage_7
+
+# %garlicplant:* (garlicplant), render=(CROPS), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchCrop
+block:id=%garlicplant,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/garlic_stage_0
+block:id=%garlicplant,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/garlic_stage_1
+block:id=%garlicplant,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/garlic_stage_2
+block:id=%garlicplant,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/garlic_stage_3
+block:id=%garlicplant,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/garlic_stage_4
+block:id=%garlicplant,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/garlic_stage_5
 
 # %witchsapling:* (witchsapling), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchSapling
 block:id=%witchsapling,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/sapling_rowan
@@ -303,8 +394,24 @@ block:id=%bloodrose,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data
 # %somniancotton:* (somniancotton), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockCotton
 block:id=%somniancotton,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/somnianCotton
 
+# %web:* (web), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchWeb
+block:id=%web,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/web
+
+# %vine:* (vine), render=com.emoniph.witchery.brewing.RenderWitchVine(CUSTOM), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchVine
+block:id=%vine,data=0,data=1,stdrot=true,face0-5=2000:minecraft/vine
+block:id=%vine,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=2000:minecraft/vine
+
+# %cactus:* (cactus), render=(CACTUS), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchCactus
+block:id=%cactus,data=*,stdrot=true,transparency=SEMITRANSPARENT,patch0-3=0:minecraft/cactus_side,patch4=0:minecraft/cactus_top,patch5=0:minecraft/cactus_bottom
+
+# %lilypad:* (lilypad), render=(LILYPAD), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchLilyPad
+block:id=%lilypad,data=*,stdrot=true,transparency=TRANSPARENT,patch0=15000:minecraft/waterlily
+
 # %demonheart:* (demonheart), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDemonHeart
 block:id=%demonheart,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/demonHeart
+
+# %wolfhead:* (wolfhead), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockWolfHead
+block:id=%wolfhead,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/soul_sand
 
 # %witchwood:* (witchwood), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockWitchWood
 block:id=%witchwood,data=0,stdrot=true,face0-5=0:witchery/planks_rowan
@@ -359,13 +466,13 @@ block:id=%alluringskull,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:mi
 
 # %wickerbundle:* (wickerbundle), render=(LOG), opaque=true,cls=com.emoniph.witchery.blocks.BlockWickerBundle
 block:id=%wickerbundle,data=0,stdrot=true,face0-1=0:witchery/wicker_block_plain_top,face2-5=0:witchery/wicker_block_plain_side
-block:id=%wickerbundle,data=1,stdrot=true,face0-1=0:witchery/wicker_block_bloodied_top,face2-5=0:witchery/wicker_block_bloodied_side
+block:id=%wickerbundle,data=1,data=2,data=3,stdrot=true,face0-1=0:witchery/wicker_block_bloodied_top,face2-5=0:witchery/wicker_block_bloodied_side
 block:id=%wickerbundle,data=4,face0-1=0:witchery/wicker_block_plain_side,face2-3=4000:witchery/wicker_block_plain_side,face4-5=0:witchery/wicker_block_plain_top
-block:id=%wickerbundle,data=5,face0-1=0:witchery/wicker_block_bloodied_side,face2-3=4000:witchery/wicker_block_bloodied_side,face4-5=0:witchery/wicker_block_bloodied_top
+block:id=%wickerbundle,data=5,data=6,data=7,face0-1=0:witchery/wicker_block_bloodied_side,face2-3=4000:witchery/wicker_block_bloodied_side,face4-5=0:witchery/wicker_block_bloodied_top
 block:id=%wickerbundle,data=8,face0-1=4000:witchery/wicker_block_plain_side,face2-3=0:witchery/wicker_block_plain_top,face4-5=4000:witchery/wicker_block_plain_side
-block:id=%wickerbundle,data=9,face0-1=4000:witchery/wicker_block_bloodied_side,face2-3=0:witchery/wicker_block_bloodied_top,face4-5=4000:witchery/wicker_block_bloodied_side
+block:id=%wickerbundle,data=9,data=10,data=11,face0-1=4000:witchery/wicker_block_bloodied_side,face2-3=0:witchery/wicker_block_bloodied_top,face4-5=4000:witchery/wicker_block_bloodied_side
 block:id=%wickerbundle,data=12,stdrot=true,face0-5=0:witchery/wicker_block_plain_side
-block:id=%wickerbundle,data=13,stdrot=true,face0-5=0:witchery/wicker_block_bloodied_side
+block:id=%wickerbundle,data=13,data=14,data=15,stdrot=true,face0-5=0:witchery/wicker_block_bloodied_side
 
 # %glowglobe:* (glowglobe), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockGlowGlobe
 block:id=%glowglobe,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/glowGlobe
@@ -385,11 +492,105 @@ block:id=%stockade,data=7,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecra
 block:id=%stockade,data=8,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/log_big_oak_top,face2-5=0:minecraft/log_big_oak
 block:id=%stockade,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-1=0:minecraft/log_oak_top,face2-5=0:minecraft/log_oak
 
+# %icestockade:* (icestockade), render=com.emoniph.witchery.client.renderer.RenderStockade(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockStockade
+block:id=%icestockade,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/ice
+
 # %perpetualice:* (perpetualice), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIce
 block:id=%perpetualice,data=*,stdrot=true,face0-5=12000:minecraft/ice
 
+# %icedoor:* (icedoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceDoor
+block:id=%icedoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/icedoor_upper,patch1=0:witchery/icedoor_lower
+
+# %icestairs:* (icestairs), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpertualIceStairs
+block:id=%icestairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/ice
+
+# %iceslab:* (iceslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
+block:id=%iceslab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/ice
+
+# %icedoubleslab:* (icedoubleslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
+block:id=%icedoubleslab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/ice
+
+# %icefence:* (icefence), render=(FENCE), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceFence
+block:id=%icefence,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/ice
+
+# %icefencegate:* (icefencegate), render=(FENCEGATE), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceGate
+block:id=%icefencegate,data=*,stdrot=true,transparency=TRANSPARENT,patch0-2=0:minecraft/ice
+
+# %icepressureplate:* (icepressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
+block:id=%icepressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/ice
+
+# %snowpressureplate:* (snowpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
+block:id=%snowpressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/snow
+
+# %snowstairs:* (snowstairs), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowStairs
+block:id=%snowstairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/snow
+
+# %snowslab:* (snowslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowSlab
+block:id=%snowslab,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:minecraft/snow
+
+# %snowdoubleslab:* (snowdoubleslab), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockSnowSlab
+block:id=%snowdoubleslab,data=*,stdrot=true,face0-5=0:minecraft/snow
+
 # %infinityegg:* (infinityegg), render=(DRAGONEGG), opaque=false,cls=com.emoniph.witchery.blocks.BlockInfinityEgg
 block:id=%infinityegg,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/dragon_egg
+
+# %slurp:* (slurp), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.brewing.BlockSlurp
+block:id=%slurp,data=*,stdrot=true,face0-5=0:witchery/barrier
+
+# %pitdirt:* (pitdirt), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPitDirt
+block:id=%pitdirt,data=0,data=1,stdrot=true,face0-5=0:minecraft/dirt
+block:id=%pitdirt,data=2,stdrot=true,face0=0:minecraft/dirt,face1=0:minecraft/dirt_podzol_top,face2-5=0:minecraft/dirt_podzol_side
+block:id=%pitdirt,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:minecraft/dirt
+
+# %pitgrass:* (pitgrass), render=com.emoniph.witchery.client.renderer.RenderPitGrass(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockPitGrass
+block:id=%pitgrass,data=*,stdrot=true,colorMult=FF7CBD6B,face0=17000:minecraft/dirt,face1=17000:minecraft/grass_top,face2-5=17000:minecraft/grass_side
+
+# %garlicgarland:* (garlicgarland), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockGarlicGarland
+block:id=%garlicgarland,data=0,data=1,stdrot=true,face0-5=0:witchery/garlicgarlanditem
+block:id=%garlicgarland,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/garlicgarlanditem
+block:id=%garlicgarland,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:witchery/garlicgarlanditem
+
+# %bloodedwool:* (bloodedwool), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockBloodedWool
+block:id=%bloodedwool,data=*,stdrot=true,face0-5=0:witchery/bloodedwool
+
+# %shadedglass:* (shadedglass), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockShadedGlass
+block:id=%shadedglass,data=0,stdrot=true,face0-5=12000:witchery/shadedglassoff_white
+block:id=%shadedglass,data=1,stdrot=true,face0-5=12000:witchery/shadedglassoff_orange
+block:id=%shadedglass,data=2,stdrot=true,face0-5=12000:witchery/shadedglassoff_magenta
+block:id=%shadedglass,data=3,stdrot=true,face0-5=12000:witchery/shadedglassoff_light_blue
+block:id=%shadedglass,data=4,stdrot=true,face0-5=12000:witchery/shadedglassoff_yellow
+block:id=%shadedglass,data=5,stdrot=true,face0-5=12000:witchery/shadedglassoff_lime
+block:id=%shadedglass,data=6,stdrot=true,face0-5=12000:witchery/shadedglassoff_pink
+block:id=%shadedglass,data=7,stdrot=true,face0-5=12000:witchery/shadedglassoff_gray
+block:id=%shadedglass,data=8,stdrot=true,face0-5=12000:witchery/shadedglassoff_silver
+block:id=%shadedglass,data=9,stdrot=true,face0-5=12000:witchery/shadedglassoff_cyan
+block:id=%shadedglass,data=10,stdrot=true,face0-5=12000:witchery/shadedglassoff_purple
+block:id=%shadedglass,data=11,stdrot=true,face0-5=12000:witchery/shadedglassoff_blue
+block:id=%shadedglass,data=12,stdrot=true,face0-5=12000:witchery/shadedglassoff_brown
+block:id=%shadedglass,data=13,stdrot=true,face0-5=12000:witchery/shadedglassoff_green
+block:id=%shadedglass,data=14,stdrot=true,face0-5=12000:witchery/shadedglassoff_red
+block:id=%shadedglass,data=15,stdrot=true,face0-5=12000:witchery/shadedglassoff_black
+
+# %shadedglass_active:* (shadedglass_active), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockShadedGlass
+block:id=%shadedglass_active,data=0,stdrot=true,face0-5=12000:witchery/shadedglass_white
+block:id=%shadedglass_active,data=1,stdrot=true,face0-5=12000:witchery/shadedglass_orange
+block:id=%shadedglass_active,data=2,stdrot=true,face0-5=12000:witchery/shadedglass_magenta
+block:id=%shadedglass_active,data=3,stdrot=true,face0-5=12000:witchery/shadedglass_light_blue
+block:id=%shadedglass_active,data=4,stdrot=true,face0-5=12000:witchery/shadedglass_yellow
+block:id=%shadedglass_active,data=5,stdrot=true,face0-5=12000:witchery/shadedglass_lime
+block:id=%shadedglass_active,data=6,stdrot=true,face0-5=12000:witchery/shadedglass_pink
+block:id=%shadedglass_active,data=7,stdrot=true,face0-5=12000:witchery/shadedglass_gray
+block:id=%shadedglass_active,data=8,stdrot=true,face0-5=12000:witchery/shadedglass_silver
+block:id=%shadedglass_active,data=9,stdrot=true,face0-5=12000:witchery/shadedglass_cyan
+block:id=%shadedglass_active,data=10,stdrot=true,face0-5=12000:witchery/shadedglass_purple
+block:id=%shadedglass_active,data=11,stdrot=true,face0-5=12000:witchery/shadedglass_blue
+block:id=%shadedglass_active,data=12,stdrot=true,face0-5=12000:witchery/shadedglass_brown
+block:id=%shadedglass_active,data=13,stdrot=true,face0-5=12000:witchery/shadedglass_green
+block:id=%shadedglass_active,data=14,stdrot=true,face0-5=12000:witchery/shadedglass_red
+block:id=%shadedglass_active,data=15,stdrot=true,face0-5=12000:witchery/shadedglass_black
+
+# %mirrorwall:* (mirrorwall), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.blocks.BlockMirrorWall
+block:id=%mirrorwall,data=*,stdrot=true,colorMult=CCDDFF,face0-1=17000:witchery/brew_still,face2-5=17000:witchery/brew_flow
 
 # %refillingchest:* (refillingchest), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockRefillingChest
 block:id=%refillingchest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
@@ -472,6 +673,41 @@ block:id=%decursedirected,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:
 # %statueofworship:* (statueofworship), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueOfWorship
 block:id=%statueofworship,data=*,stdrot=true,face0-5=0:minecraft/stone
 
+# %cauldron:* (cauldron), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockCauldron
+block:id=%cauldron,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/cauldron
+
+# %wolfaltar:* (wolfaltar), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueWerewolf
+block:id=%wolfaltar,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %silvervat:* (silvervat), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSilverVat
+block:id=%silvervat,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %beartrap:* (beartrap), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockBeartrap
+block:id=%beartrap,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+
+# %wolftrap:* (wolftrap), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockBeartrap
+block:id=%wolftrap,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/iron_block
+
+# %wallgen:* (wallgen), render=(STANDARD), opaque=true,cls=com.emoniph.witchery.worldgen.WorldHandlerVillageDistrict$Wall$BlockVillageWallGen
+block:id=%wallgen,data=*,stdrot=true,face0-5=0:minecraft/iron_block
+
+# %coffinblock:* (coffinblock), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockCoffin
+block:id=%coffinblock,data=*,stdrot=true,face0-5=0:minecraft/coal_block
+
+# %daylightcollector:* (daylightcollector), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockDaylightCollector
+block:id=%daylightcollector,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/daylightcollector
+block:id=%daylightcollector,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/daylightcollector1
+block:id=%daylightcollector,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:witchery/daylightcollector2
+
+# %bloodcrucible:* (bloodcrucible), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBloodCrucible
+block:id=%bloodcrucible,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %mirrorblock:* (mirrorblock), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockMirror
+block:id=%mirrorblock,data=*,stdrot=true,face0-5=0:minecraft/gold_block
+
+# %mirrorblock2:* (mirrorblock2), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockMirror
+block:id=%mirrorblock2,data=*,stdrot=true,face0-5=0:minecraft/gold_block
+
 # %circle:* (circle), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircle
 block:id=%circle,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:witchery/heartGlyph
 
@@ -522,3 +758,38 @@ block:id=%spiritflowing,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=
 
 # %hollowtears:* (hollowtears), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.emoniph.witchery.blocks.BlockFlowingSpirit
 block:id=%hollowtears,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:witchery/tears_still,face2-5=12000:witchery/tears_flow
+
+# %disease:* (disease), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.emoniph.witchery.blocks.BlockDisease
+block:id=%disease,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:witchery/disease_still,face2-5=12000:witchery/disease_flow
+
+# %brew:* (brew), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.emoniph.witchery.brewing.BlockBrew
+block:id=%brew,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:witchery/brew_still,face2-5=12000:witchery/brew_flow
+
+# %brewgas:* (brewgas), render=com.emoniph.witchery.brewing.RenderBrewGas(CUSTOM), opaque=false,cls=com.emoniph.witchery.brewing.BlockBrewGas
+block:id=%brewgas,data=*,stdrot=true,colorMult=33AA33,face0-5=17000:witchery/brewgas
+
+# %brewliquid:* (brewliquid), render=com.emoniph.witchery.brewing.RenderBrewLiquid(CUSTOM), opaque=false,cls=com.emoniph.witchery.brewing.BlockBrewLiquidEffect
+block:id=%brewliquid,data=*,stdrot=true,face0-1=12000:witchery/brew_still,face2-5=12000:witchery/brew_flow
+
+# %clever:* (clever), render=(LEVER), opaque=false,cls=com.emoniph.witchery.brewing.BlockLeverBase
+block:id=%clever,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/lever
+
+# %cwoodendoor:* (cwoodendoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.brewing.BlockDoorBase
+block:id=%cwoodendoor,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:minecraft/door_wood_upper,patch1=0:minecraft/door_wood_lower
+
+# %cwoodpressureplate:* (cwoodpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+block:id=%cwoodpressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %cstonepressureplate:* (cstonepressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+block:id=%cstonepressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone
+
+# %csnowpressureplate:* (csnowpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+block:id=%csnowpressureplate,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/snow
+
+# %cbuttonwood:* (cbuttonwood), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$1
+block:id=%cbuttonwood,data=0,stdrot=true,face0-5=0:minecraft/planks_oak
+block:id=%cbuttonwood,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_oak
+
+# %cbuttonstone:* (cbuttonstone), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$2
+block:id=%cbuttonstone,data=0,stdrot=true,face0-5=0:minecraft/stone
+block:id=%cbuttonstone,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/stone

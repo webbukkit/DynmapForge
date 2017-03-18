@@ -1,4 +1,4 @@
-# BiblioWoodsBoP 1.8
+# BiblioWoodsBoP 1.9
 version:1.7
 modname:BiblioWoodsBoP
 

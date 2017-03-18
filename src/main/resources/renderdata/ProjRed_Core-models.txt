@@ -57,3 +57,7 @@ boxblock:id=%projectred.compatibility.liqcondredmetal,ymax=0.5,data=12
 boxblock:id=%projectred.compatibility.liqcondredmetal,ymax=0.375,data=13
 boxblock:id=%projectred.compatibility.liqcondredmetal,ymax=0.25,data=14
 boxblock:id=%projectred.compatibility.liqcondredmetal,ymax=0.125,data=15
+
+# %projectred.expansion.machine1:* (projectred.expansion.machine1), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=true,cls=mrtjp.projectred.expansion.BlockMachine
+
+# %projectred.expansion.machine2:* (projectred.expansion.machine2), render=mrtjp.core.block.TileRenderRegistry$(CUSTOM), opaque=true,cls=mrtjp.projectred.expansion.BlockMachine

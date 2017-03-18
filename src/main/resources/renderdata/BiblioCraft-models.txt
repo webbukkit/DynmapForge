@@ -1,4 +1,4 @@
-# BiblioCraft 1.8.1
+# BiblioCraft 1.11.5
 version:1.7
 modname:BiblioCraft
 
@@ -22,6 +22,12 @@ patch:id=VertX00625,Ox=0.0625,Oy=0.0,Oz=0.0,Ux=0.0625,Uy=0.0,Uz=1.0,Vx=0.0625,Vy
 patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
 
 
+# %tile.BiblioFramedChest:* (tile.BiblioFramedChest), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockFramedChest
+boxblock:id=%tile.BiblioFramedChest,xmin=0.05400000140070915,xmax=0.9459999799728394,ymin=0.0,ymax=0.8659999966621399,zmin=0.05400000140070915,zmax=0.9459999799728394,data=*
+
+# %BiblioPaneler:* (BiblioPaneler), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockFurniturePaneler
+boxblock:id=%BiblioPaneler,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.6299999952316284,zmin=0.0,zmax=1.0,data=*
+
 # %BiblioSwordPedestal:* (BiblioSwordPedestal), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockSwordPedestal
 boxblock:id=%BiblioSwordPedestal,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.23999999463558197,zmin=0.10000000149011612,zmax=0.8999999761581421,data=*
 
@@ -33,6 +39,9 @@ boxblock:id=%BiblioBell,xmin=0.4000000059604645,xmax=0.6000000238418579,ymin=0.0
 
 # %Bibliotheca:* (Bibliotheca), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBookcase
 boxblock:id=%Bibliotheca,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %BookcaseFilled:* (BookcaseFilled), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBookcaseCreative
+boxblock:id=%BookcaseFilled,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
 # %BiblioPotionShelf:* (BiblioPotionShelf), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPotionShelf
 boxblock:id=%BiblioPotionShelf,xmin=0.5,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*

@@ -1,4 +1,4 @@
-# witchery 0.20.6
+# witchery 0.24.1
 version:1.7
 modname:witchery
 
@@ -39,6 +39,12 @@ patchblock:id=%wormwood,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=
 
 # %mindrake:* (mindrake), render=(CROPS), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchCrop
 patchblock:id=%mindrake,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
+
+# %wolfsbane:* (wolfsbane), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchCrop
+patchblock:id=%wolfsbane,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %garlicplant:* (garlicplant), render=(CROPS), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchCrop
+patchblock:id=%garlicplant,patch0=VertX075#0,patch1=VertX075@90#0,patch2=VertX025#0,patch3=VertX025@90#0,data=*
 
 # %witchsapling:* (witchsapling), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchSapling
 patchblock:id=%witchsapling,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
@@ -90,8 +96,36 @@ patchblock:id=%bloodrose,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data
 # %somniancotton:* (somniancotton), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockCotton
 patchblock:id=%somniancotton,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
 
+# %web:* (web), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchWeb
+patchblock:id=%web,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %vine:* (vine), render=com.emoniph.witchery.brewing.RenderWitchVine(CUSTOM), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchVine
+boxblock:id=%vine,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.875,zmax=1.0,data=2
+boxblock:id=%vine,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%vine,xmin=0.875,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=4
+boxblock:id=%vine,xmin=0.0,xmax=0.125,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %cactus:* (cactus), render=(CACTUS), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchCactus
+patchblock:id=%cactus,patch0=VertX00625,patch1=VertX00625@90,patch2=VertX00625@180,patch3=VertX00625@270,patch4=HorizY100ZTop,patch5=HorizY100ZTop@180/0/0,data=*
+
+# %lilypad:* (lilypad), render=(LILYPAD), opaque=false,cls=com.emoniph.witchery.brewing.BlockWitchLilyPad
+patchblock:id=%lilypad,patch0=HorizY001ZTop,data=*
+
 # %demonheart:* (demonheart), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockDemonHeart
 boxblock:id=%demonheart,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.800000011920929,zmin=0.25,zmax=0.75,data=*
+
+# %wolfhead:* (wolfhead), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockWolfHead
+boxblock:id=%wolfhead,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=0,data=1
+boxblock:id=%wolfhead,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.5,zmax=1.0,data=2
+boxblock:id=%wolfhead,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.0,zmax=0.5,data=3
+boxblock:id=%wolfhead,xmin=0.5,xmax=1.0,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=4
+boxblock:id=%wolfhead,xmin=0.0,xmax=0.5,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=5
+boxblock:id=%wolfhead,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=6,data=7,data=8,data=9
+boxblock:id=%wolfhead,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.5,zmax=1.0,data=10
+boxblock:id=%wolfhead,xmin=0.25,xmax=0.75,ymin=0.25,ymax=0.75,zmin=0.0,zmax=0.5,data=11
+boxblock:id=%wolfhead,xmin=0.5,xmax=1.0,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=12
+boxblock:id=%wolfhead,xmin=0.0,xmax=0.5,ymin=0.25,ymax=0.75,zmin=0.25,zmax=0.75,data=13
+boxblock:id=%wolfhead,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.5,zmin=0.25,zmax=0.75,data=14,data=15
 
 # %stairswoodrowan:* (stairswoodrowan), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockWitchWoodStairs
 customblock:id=%stairswoodrowan,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
@@ -144,7 +178,54 @@ boxblock:id=%statuegoddess,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.1000000014
 # %stockade:* (stockade), render=com.emoniph.witchery.client.renderer.RenderStockade(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockStockade
 boxblock:id=%stockade,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.8999999761581421,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
 
+# %icestockade:* (icestockade), render=com.emoniph.witchery.client.renderer.RenderStockade(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockStockade
+boxblock:id=%icestockade,xmin=0.30000001192092896,xmax=0.699999988079071,ymin=0.0,ymax=0.8999999761581421,zmin=0.30000001192092896,zmax=0.699999988079071,data=*
+
+# %icedoor:* (icedoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceDoor
+customblock:id=%icedoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %icestairs:* (icestairs), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpertualIceStairs
+customblock:id=%icestairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %iceslab:* (iceslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
+boxblock:id=%iceslab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%iceslab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %icedoubleslab:* (icedoubleslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceSlab
+boxblock:id=%icedoubleslab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%icedoubleslab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %icefence:* (icefence), render=(FENCE), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceFence
+customblock:id=%icefence,class=org.dynmap.hdmap.renderer.FenceWallBlockRenderer,type=fence,link0=107,data=*
+
+# %icefencegate:* (icefencegate), render=(FENCEGATE), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIceGate
+customblock:id=%icefencegate,class=org.dynmap.hdmap.renderer.FenceGateBlockRenderer,type=fence,link0=107,data=*
+
+# %icepressureplate:* (icepressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
+boxblock:id=%icepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%icepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%icepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %snowpressureplate:* (snowpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockPerpetualIcePressurePlate
+boxblock:id=%snowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%snowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%snowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %snowstairs:* (snowstairs), render=(STAIRS), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowStairs
+customblock:id=%snowstairs,class=org.dynmap.hdmap.renderer.StairBlockRenderer,data=*
+
+# %snowslab:* (snowslab), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSnowSlab
+boxblock:id=%snowslab,ymax=0.5,data=0,data=1,data=2,data=3,data=4,data=5,data=6,data=7
+boxblock:id=%snowslab,ymin=0.5,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
 # %infinityegg:* (infinityegg), render=(DRAGONEGG), opaque=false,cls=com.emoniph.witchery.blocks.BlockInfinityEgg
+
+# %garlicgarland:* (garlicgarland), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockGarlicGarland
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%garlicgarland,xmin=0.10000000149011612,xmax=0.8999999761581421,ymin=0.800000011920929,ymax=1.0,zmin=1.0,zmax=1.0,data=2
+boxblock:id=%garlicgarland,xmin=0.10000002384185791,xmax=0.8999999761581421,ymin=0.800000011920929,ymax=1.0,zmin=0.0,zmax=0.15000000596046448,data=3
+boxblock:id=%garlicgarland,xmin=1.0,xmax=1.0,ymin=0.800000011920929,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=4
+boxblock:id=%garlicgarland,xmin=0.0,xmax=0.15000000596046448,ymin=1.0,ymax=1.0,zmin=0.10000000149011612,zmax=0.8999999761581421,data=5
 
 # %refillingchest:* (refillingchest), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockRefillingChest
 boxblock:id=%refillingchest,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.875,zmin=0.0625,zmax=0.9375,data=*
@@ -189,6 +270,28 @@ boxblock:id=%decurseteleport,xmin=0.15000000596046448,xmax=0.8500000238418579,ym
 # %decursedirected:* (decursedirected), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockAreaMarker
 boxblock:id=%decursedirected,xmin=0.15000000596046448,xmax=0.8500000238418579,ymin=0.0,ymax=0.5,zmin=0.15000000596046448,zmax=0.8500000238418579,data=*
 
+# %cauldron:* (cauldron), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockCauldron
+boxblock:id=%cauldron,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8500000238418579,zmin=0.0,zmax=1.0,data=*
+
+# %wolfaltar:* (wolfaltar), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockStatueWerewolf
+# FIXME: Box constraints truncated to 0.0<=val<=1.0
+boxblock:id=%wolfaltar,xmin=0.0,xmax=1.0,ymin=0.0,ymax=1.0,zmin=0.0,zmax=1.0,data=*
+
+# %silvervat:* (silvervat), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockSilverVat
+boxblock:id=%silvervat,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.6399999856948853,zmin=0.0,zmax=1.0,data=*
+
+# %beartrap:* (beartrap), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockBeartrap
+boxblock:id=%beartrap,xmin=0.19999998807907104,xmax=0.800000011920929,ymin=0.009999999776482582,ymax=0.10000000149011612,zmin=0.19999998807907104,zmax=0.800000011920929,data=*
+
+# %wolftrap:* (wolftrap), render=(CUSTOM), opaque=false,cls=com.emoniph.witchery.blocks.BlockBeartrap
+boxblock:id=%wolftrap,xmin=0.19999998807907104,xmax=0.800000011920929,ymin=0.009999999776482582,ymax=0.10000000149011612,zmin=0.19999998807907104,zmax=0.800000011920929,data=*
+
+# %daylightcollector:* (daylightcollector), render=(CROSSEDSQUARES), opaque=false,cls=com.emoniph.witchery.blocks.BlockDaylightCollector
+patchblock:id=%daylightcollector,patch0=VertX1Z0ToX0Z1#0,patch1=VertX1Z0ToX0Z1@90#0,data=*
+
+# %bloodcrucible:* (bloodcrucible), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockBloodCrucible
+boxblock:id=%bloodcrucible,xmin=0.25,xmax=0.75,ymin=0.0,ymax=0.3100000023841858,zmin=0.25,zmax=0.75,data=*
+
 # %circle:* (circle), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.blocks.BlockCircle
 boxblock:id=%circle,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.015625,zmin=0.0,zmax=1.0,data=*
 
@@ -232,3 +335,75 @@ boxblock:id=%hollowtears,ymax=0.5,data=12
 boxblock:id=%hollowtears,ymax=0.375,data=13
 boxblock:id=%hollowtears,ymax=0.25,data=14
 boxblock:id=%hollowtears,ymax=0.125,data=15
+
+# %disease:* (disease), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.emoniph.witchery.blocks.BlockDisease
+boxblock:id=%disease,ymax=0.875,data=1
+boxblock:id=%disease,ymax=0.75,data=2
+boxblock:id=%disease,ymax=0.625,data=3
+boxblock:id=%disease,ymax=0.5,data=4
+boxblock:id=%disease,ymax=0.375,data=5
+boxblock:id=%disease,ymax=0.25,data=6
+boxblock:id=%disease,ymax=0.125,data=7
+boxblock:id=%disease,ymax=0.875,data=9
+boxblock:id=%disease,ymax=0.75,data=10
+boxblock:id=%disease,ymax=0.625,data=11
+boxblock:id=%disease,ymax=0.5,data=12
+boxblock:id=%disease,ymax=0.375,data=13
+boxblock:id=%disease,ymax=0.25,data=14
+boxblock:id=%disease,ymax=0.125,data=15
+
+# %brew:* (brew), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=com.emoniph.witchery.brewing.BlockBrew
+boxblock:id=%brew,ymax=0.875,data=1
+boxblock:id=%brew,ymax=0.75,data=2
+boxblock:id=%brew,ymax=0.625,data=3
+boxblock:id=%brew,ymax=0.5,data=4
+boxblock:id=%brew,ymax=0.375,data=5
+boxblock:id=%brew,ymax=0.25,data=6
+boxblock:id=%brew,ymax=0.125,data=7
+boxblock:id=%brew,ymax=0.875,data=9
+boxblock:id=%brew,ymax=0.75,data=10
+boxblock:id=%brew,ymax=0.625,data=11
+boxblock:id=%brew,ymax=0.5,data=12
+boxblock:id=%brew,ymax=0.375,data=13
+boxblock:id=%brew,ymax=0.25,data=14
+boxblock:id=%brew,ymax=0.125,data=15
+
+# %clever:* (clever), render=(LEVER), opaque=false,cls=com.emoniph.witchery.brewing.BlockLeverBase
+
+# %cwoodendoor:* (cwoodendoor), render=(DOOR), opaque=false,cls=com.emoniph.witchery.brewing.BlockDoorBase
+customblock:id=%cwoodendoor,class=org.dynmap.hdmap.renderer.DoorRenderer,data=*
+
+# %cwoodpressureplate:* (cwoodpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+boxblock:id=%cwoodpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%cwoodpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%cwoodpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %cstonepressureplate:* (cstonepressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+boxblock:id=%cstonepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%cstonepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%cstonepressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %csnowpressureplate:* (csnowpressureplate), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.brewing.BlockPressurePlateBase
+boxblock:id=%csnowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
+boxblock:id=%csnowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.03125,zmin=0.0625,zmax=0.9375,data=1
+boxblock:id=%csnowpressureplate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
+
+# %cbuttonwood:* (cbuttonwood), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$1
+boxblock:id=%cbuttonwood,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%cbuttonwood,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%cbuttonwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%cbuttonwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%cbuttonwood,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%cbuttonwood,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%cbuttonwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%cbuttonwood,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15
+
+# %cbuttonstone:* (cbuttonstone), render=(STANDARD), opaque=false,cls=com.emoniph.witchery.WitcheryBlocks$2
+boxblock:id=%cbuttonstone,xmin=0.0,xmax=0.125,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=1
+boxblock:id=%cbuttonstone,xmin=0.875,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=2
+boxblock:id=%cbuttonstone,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.125,data=3
+boxblock:id=%cbuttonstone,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.875,zmax=1.0,data=4,data=5,data=6,data=7,data=8
+boxblock:id=%cbuttonstone,xmin=0.0,xmax=0.0625,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=9
+boxblock:id=%cbuttonstone,xmin=0.9375,xmax=1.0,ymin=0.375,ymax=0.625,zmin=0.3125,zmax=0.6875,data=10
+boxblock:id=%cbuttonstone,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.0,zmax=0.0625,data=11
+boxblock:id=%cbuttonstone,xmin=0.3125,xmax=0.6875,ymin=0.375,ymax=0.625,zmin=0.9375,zmax=1.0,data=12,data=13,data=14,data=15

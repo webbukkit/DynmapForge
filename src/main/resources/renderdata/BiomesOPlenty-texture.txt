@@ -2,15 +2,15 @@
 version:1.7
 modname:BiomesOPlenty
 
-var:biome_ids/Jade_Cliffs_ID=0,biome_ids/Moor_ID=0,biome_ids/Snowy_Coniferous_Forest_ID=0,biome_ids/Volcano_ID=0,biome_ids/Thicket_ID=0,biome_ids/Outback_ID=0,biome_ids/Autumn_Hills_ID=0,biome_ids/Meadow_ID=0,biome_ids/Oasis_ID=0,biome_ids/Birch_Forest_ID=0
-var:biome_ids/Lush_River_ID=0,biome_ids/Bamboo_Forest_ID=0,biome_ids/Grove_ID=0,biome_ids/Scrubland_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Garden_ID=0,biome_ids/Coniferous_Forest_ID=0,biome_ids/Canyon_Ravine_ID=0,biome_ids/Woodland_ID=0,biome_ids/Alps_Forest_ID=0
-var:biome_ids/Arctic_ID=0,biome_ids/Polar_Chasm_ID=0,biome_ids/Steppe_ID=0,biome_ids/Visceral_Heap_ID=0,biome_ids/Badlands_ID=0,biome_ids/Spruce_Woods_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Dunes_ID=0,biome_ids/Bog_ID=0,biome_ids/Glacier_ID=0
-var:biome_ids/Dead_Swamp_ID=0,biome_ids/Mountain_ID=0,biome_ids/Mangrove_ID=0,biome_ids/Grassland_ID=0,biome_ids/Maple_Woods_ID=0,biome_ids/Highland_ID=0,biome_ids/Mystic_Grove_ID=0,biome_ids/Fungi_Forest_ID=0,biome_ids/Dead_Forest_ID=0,biome_ids/Tropical_Rainforest_ID=0
-var:biome_ids/Frost_Forest_ID=0,biome_ids/Boneyard_ID=0,biome_ids/Lush_Desert_ID=0,biome_ids/Prairie_ID=0,biome_ids/Phantasmagoric_Inferno_ID=0,biome_ids/Redwood_Forest_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Wasteland_ID=0,biome_ids/Canyon_ID=0,biome_ids/Undergarden_ID=0
-var:biome_ids/Cherry_Blossom_Grove_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Flower_Field_ID=0,biome_ids/Shield_ID=0,biome_ids/Deciduous_Forest_ID=0,biome_ids/Ominous_Woods_ID=0,biome_ids/Fen_ID=0,biome_ids/Kelp_Forest_ID=0,biome_ids/Wetland_ID=0,biome_ids/Boreal_Forest_ID=0
-var:biome_ids/Tropics_ID=0,biome_ids/Dry_River_ID=0,biome_ids/Dead_Forest_(Snow)_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Chaparral_ID=0,biome_ids/Lush_Swamp_ID=0,biome_ids/Origin_Valley_ID=0,biome_ids/Meadow_Forest_ID=0,biome_ids/Heathland_ID=0,biome_ids/Deadlands_ID=0
-var:biome_ids/Marsh_ID=0,biome_ids/Seasonal_Forest_ID=0,biome_ids/Tundra_ID=0,biome_ids/Brushland_ID=0,biome_ids/Rainforest_ID=0,biome_ids/Coral_Reef_ID=0,biome_ids/Oceanic_Abyss_(Ocean)_ID=0,biome_ids/Alps_ID=0,biome_ids/Spectral_Garden_ID=0,biome_ids/Temperate_Rainforest_ID=0
-var:biome_ids/Bayou_ID=0,biome_ids/Crag_ID=0,biome_ids/Quagmire_ID=0,biome_ids/Corrupted_Sands_ID=0,biome_ids/Orchard_ID=0
+var:biome_ids/Rainforest_ID=0,biome_ids/Shield_ID=0,biome_ids/Eucalyptus_Forest_ID=0,biome_ids/Garden_ID=0,biome_ids/Jade_Cliffs_ID=0,biome_ids/Tundra_ID=0,biome_ids/Deciduous_Forest_ID=0,biome_ids/Alps_Forest_ID=0,biome_ids/Spruce_Woods_ID=0,biome_ids/Seasonal_Forest_ID=0
+var:biome_ids/Fen_ID=0,biome_ids/Temperate_Rainforest_ID=0,biome_ids/Quagmire_ID=0,biome_ids/Outback_ID=0,biome_ids/Scrubland_ID=0,biome_ids/Ominous_Woods_ID=0,biome_ids/Wetland_ID=0,biome_ids/Meadow_Forest_ID=0,biome_ids/Bamboo_Forest_ID=0,biome_ids/Polar_Chasm_ID=0
+var:biome_ids/Redwood_Forest_ID=0,biome_ids/Bayou_ID=0,biome_ids/Visceral_Heap_ID=0,biome_ids/Grove_ID=0,biome_ids/Lush_Desert_ID=0,biome_ids/Tropical_Rainforest_ID=0,biome_ids/Fungi_Forest_ID=0,biome_ids/Meadow_ID=0,biome_ids/Alps_ID=0,biome_ids/Spectral_Garden_ID=0
+var:biome_ids/Lush_Swamp_ID=0,biome_ids/Woodland_ID=0,biome_ids/Wasteland_ID=0,biome_ids/Grassland_ID=0,biome_ids/Boneyard_ID=0,biome_ids/Mangrove_ID=0,biome_ids/Moor_ID=0,biome_ids/Marsh_ID=0,biome_ids/Orchard_ID=0,biome_ids/Prairie_ID=0
+var:biome_ids/Tropics_ID=0,biome_ids/Phantasmagoric_Inferno_ID=0,biome_ids/Dry_River_ID=0,biome_ids/Shrubland_ID=0,biome_ids/Sludgepit_ID=0,biome_ids/Coral_Reef_ID=0,biome_ids/Thicket_ID=0,biome_ids/Corrupted_Sands_ID=0,biome_ids/Arctic_ID=0,biome_ids/Brushland_ID=0
+var:biome_ids/Seasonal_Forest_Clearing_ID=0,biome_ids/Coniferous_Forest_ID=0,biome_ids/Heathland_ID=0,biome_ids/Chaparral_ID=0,biome_ids/Land_of_Lakes_ID=0,biome_ids/Canyon_Ravine_ID=0,biome_ids/Xeric_Shrubland_ID=0,biome_ids/Origin_Valley_ID=0,biome_ids/Canyon_ID=0,biome_ids/Lush_River_ID=0
+var:biome_ids/Volcano_ID=0,biome_ids/Boreal_Forest_ID=0,biome_ids/Lavender_Fields_ID=0,biome_ids/Snowy_Coniferous_Forest_ID=0,biome_ids/Sacred_Springs_ID=0,biome_ids/Dense_Forest_ID=0,biome_ids/Silkglades_ID=0,biome_ids/Maple_Woods_ID=0,biome_ids/Crag_ID=0,biome_ids/Kelp_Forest_ID=0
+var:biome_ids/Land_of_Lakes_Marsh_ID=0,biome_ids/Undergarden_ID=0,biome_ids/Steppe_ID=0,biome_ids/Flower_Field_ID=0,biome_ids/Glacier_ID=0,biome_ids/Mountain_ID=0,biome_ids/Dead_Swamp_ID=0,biome_ids/Mystic_Grove_ID=0,biome_ids/Oasis_ID=0,biome_ids/Bog_ID=0
+var:biome_ids/Highland_ID=0,biome_ids/Cherry_Blossom_Grove_ID=0,biome_ids/Frost_Forest_ID=0,biome_ids/Dead_Forest_ID=0
 
 cfgfile:config/biomesoplenty/ids.cfg
 
@@ -22,12 +22,12 @@ texture:id=biomesoplenty/amberore,filename=assets/biomesoplenty/textures/blocks/
 texture:id=biomesoplenty/amethystblock,filename=assets/biomesoplenty/textures/blocks/amethystblock.png
 texture:id=biomesoplenty/amethystore,filename=assets/biomesoplenty/textures/blocks/amethystore.png
 texture:id=biomesoplenty/anemone,filename=assets/biomesoplenty/textures/blocks/anemone.png
+texture:id=biomesoplenty/apple_block,filename=assets/biomesoplenty/textures/blocks/apple_block.png
 texture:id=biomesoplenty/ashblock,filename=assets/biomesoplenty/textures/blocks/ashblock.png
 texture:id=biomesoplenty/ashstone,filename=assets/biomesoplenty/textures/blocks/ashstone.png
 texture:id=biomesoplenty/bamboo,filename=assets/biomesoplenty/textures/blocks/bamboo.png
 texture:id=biomesoplenty/bamboothatching,filename=assets/biomesoplenty/textures/blocks/bamboothatching.png
 texture:id=biomesoplenty/bambootop,filename=assets/biomesoplenty/textures/blocks/bambootop.png
-texture:id=biomesoplenty/barley,filename=assets/biomesoplenty/textures/blocks/barley.png
 texture:id=biomesoplenty/berrybush,filename=assets/biomesoplenty/textures/blocks/berrybush.png
 texture:id=biomesoplenty/bigflowerred,filename=assets/biomesoplenty/textures/blocks/bigflowerred.png
 texture:id=biomesoplenty/bigflowerstem_heart,filename=assets/biomesoplenty/textures/blocks/bigflowerstem_heart.png
@@ -74,6 +74,9 @@ texture:id=biomesoplenty/dunegrass,filename=assets/biomesoplenty/textures/blocks
 texture:id=biomesoplenty/enderlotus,filename=assets/biomesoplenty/textures/blocks/enderlotus.png
 texture:id=biomesoplenty/eyebulbbottom,filename=assets/biomesoplenty/textures/blocks/eyebulbbottom.png
 texture:id=biomesoplenty/eyebulbtop,filename=assets/biomesoplenty/textures/blocks/eyebulbtop.png
+texture:id=biomesoplenty/farmland_dry_loamy,filename=assets/biomesoplenty/textures/blocks/farmland_dry_loamy.png
+texture:id=biomesoplenty/farmland_dry_sandy,filename=assets/biomesoplenty/textures/blocks/farmland_dry_sandy.png
+texture:id=biomesoplenty/farmland_wet_loamy,filename=assets/biomesoplenty/textures/blocks/farmland_wet_loamy.png
 texture:id=biomesoplenty/flatmushroom,filename=assets/biomesoplenty/textures/blocks/flatmushroom.png
 texture:id=biomesoplenty/flaxbottom,filename=assets/biomesoplenty/textures/blocks/flaxbottom.png
 texture:id=biomesoplenty/flaxtop,filename=assets/biomesoplenty/textures/blocks/flaxtop.png
@@ -117,6 +120,7 @@ texture:id=biomesoplenty/leaves_dark_fancy,filename=assets/biomesoplenty/texture
 texture:id=biomesoplenty/leaves_dead_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_dead_fancy.png
 texture:id=biomesoplenty/leaves_ethereal_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_ethereal_fancy.png
 texture:id=biomesoplenty/leaves_fir_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_fir_fancy.png
+texture:id=biomesoplenty/leaves_flowering_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_flowering_fancy.png
 texture:id=biomesoplenty/leaves_hellbark_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_hellbark_fancy.png
 texture:id=biomesoplenty/leaves_jacaranda_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_jacaranda_fancy.png
 texture:id=biomesoplenty/leaves_magic_fancy,filename=assets/biomesoplenty/textures/blocks/leaves_magic_fancy.png
@@ -179,6 +183,7 @@ texture:id=biomesoplenty/longgrass3,filename=assets/biomesoplenty/textures/block
 texture:id=biomesoplenty/malachiteblock,filename=assets/biomesoplenty/textures/blocks/malachiteblock.png
 texture:id=biomesoplenty/malachiteore,filename=assets/biomesoplenty/textures/blocks/malachiteore.png
 texture:id=biomesoplenty/mediumgrass,filename=assets/biomesoplenty/textures/blocks/mediumgrass.png
+texture:id=biomesoplenty/mediumlily,filename=assets/biomesoplenty/textures/blocks/mediumlily.png
 texture:id=biomesoplenty/minersdelight,filename=assets/biomesoplenty/textures/blocks/minersdelight.png
 texture:id=biomesoplenty/moss,filename=assets/biomesoplenty/textures/blocks/moss.png
 texture:id=biomesoplenty/mud,filename=assets/biomesoplenty/textures/blocks/mud.png
@@ -190,8 +195,12 @@ texture:id=biomesoplenty/origingrass3,filename=assets/biomesoplenty/textures/blo
 texture:id=biomesoplenty/overgrownnetherrack1,filename=assets/biomesoplenty/textures/blocks/overgrownnetherrack1.png
 texture:id=biomesoplenty/overgrownnetherrack2,filename=assets/biomesoplenty/textures/blocks/overgrownnetherrack2.png
 texture:id=biomesoplenty/overgrownnetherrack3,filename=assets/biomesoplenty/textures/blocks/overgrownnetherrack3.png
+texture:id=biomesoplenty/peach_block,filename=assets/biomesoplenty/textures/blocks/peach_block.png
+texture:id=biomesoplenty/pear_block,filename=assets/biomesoplenty/textures/blocks/pear_block.png
 texture:id=biomesoplenty/peridotblock,filename=assets/biomesoplenty/textures/blocks/peridotblock.png
 texture:id=biomesoplenty/peridotore,filename=assets/biomesoplenty/textures/blocks/peridotore.png
+texture:id=biomesoplenty/persimmon_block,filename=assets/biomesoplenty/textures/blocks/persimmon_block.png
+texture:id=biomesoplenty/pinecone_block,filename=assets/biomesoplenty/textures/blocks/pinecone_block.png
 texture:id=biomesoplenty/pinkcoral,filename=assets/biomesoplenty/textures/blocks/pinkcoral.png
 texture:id=biomesoplenty/plank_cherry,filename=assets/biomesoplenty/textures/blocks/plank_cherry.png
 texture:id=biomesoplenty/plank_dark,filename=assets/biomesoplenty/textures/blocks/plank_dark.png
@@ -222,6 +231,7 @@ texture:id=biomesoplenty/sapling_dark,filename=assets/biomesoplenty/textures/blo
 texture:id=biomesoplenty/sapling_dead,filename=assets/biomesoplenty/textures/blocks/sapling_dead.png
 texture:id=biomesoplenty/sapling_ethereal,filename=assets/biomesoplenty/textures/blocks/sapling_ethereal.png
 texture:id=biomesoplenty/sapling_fir,filename=assets/biomesoplenty/textures/blocks/sapling_fir.png
+texture:id=biomesoplenty/sapling_flowering,filename=assets/biomesoplenty/textures/blocks/sapling_flowering.png
 texture:id=biomesoplenty/sapling_hellbark,filename=assets/biomesoplenty/textures/blocks/sapling_hellbark.png
 texture:id=biomesoplenty/sapling_jacaranda,filename=assets/biomesoplenty/textures/blocks/sapling_jacaranda.png
 texture:id=biomesoplenty/sapling_magic,filename=assets/biomesoplenty/textures/blocks/sapling_magic.png
@@ -248,6 +258,7 @@ texture:id=biomesoplenty/shortgrass,filename=assets/biomesoplenty/textures/block
 texture:id=biomesoplenty/shrub,filename=assets/biomesoplenty/textures/blocks/shrub.png
 texture:id=biomesoplenty/siltstone,filename=assets/biomesoplenty/textures/blocks/siltstone.png
 texture:id=biomesoplenty/siltstonesmooth,filename=assets/biomesoplenty/textures/blocks/siltstonesmooth.png
+texture:id=biomesoplenty/smalllily,filename=assets/biomesoplenty/textures/blocks/smalllily.png
 texture:id=biomesoplenty/smolderinggrass_bottom,filename=assets/biomesoplenty/textures/blocks/smolderinggrass_bottom.png
 texture:id=biomesoplenty/smolderinggrass_side,filename=assets/biomesoplenty/textures/blocks/smolderinggrass_side.png
 texture:id=biomesoplenty/smolderinggrass_top,filename=assets/biomesoplenty/textures/blocks/smolderinggrass_top.png
@@ -262,6 +273,7 @@ texture:id=biomesoplenty/swampflower,filename=assets/biomesoplenty/textures/bloc
 texture:id=biomesoplenty/tanzaniteblock,filename=assets/biomesoplenty/textures/blocks/tanzaniteblock.png
 texture:id=biomesoplenty/tanzaniteore,filename=assets/biomesoplenty/textures/blocks/tanzaniteore.png
 texture:id=biomesoplenty/thorn,filename=assets/biomesoplenty/textures/blocks/thorn.png
+texture:id=biomesoplenty/tinylily,filename=assets/biomesoplenty/textures/blocks/tinylily.png
 texture:id=biomesoplenty/toadstool,filename=assets/biomesoplenty/textures/blocks/toadstool.png
 texture:id=biomesoplenty/topazblock,filename=assets/biomesoplenty/textures/blocks/topazblock.png
 texture:id=biomesoplenty/topazore,filename=assets/biomesoplenty/textures/blocks/topazore.png
@@ -274,69 +286,48 @@ texture:id=biomesoplenty/violet,filename=assets/biomesoplenty/textures/blocks/vi
 texture:id=biomesoplenty/wheatgrass,filename=assets/biomesoplenty/textures/blocks/wheatgrass.png
 texture:id=biomesoplenty/wildcarrot,filename=assets/biomesoplenty/textures/blocks/wildcarrot.png
 texture:id=biomesoplenty/wildflower,filename=assets/biomesoplenty/textures/blocks/wildflower.png
+texture:id=biomesoplenty/wildrice,filename=assets/biomesoplenty/textures/blocks/wildrice.png
 texture:id=biomesoplenty/willow,filename=assets/biomesoplenty/textures/blocks/willow.png
 texture:id=biomesoplenty/wisteria,filename=assets/biomesoplenty/textures/blocks/wisteria.png
 texture:id=biomesoplenty/witherwart,filename=assets/biomesoplenty/textures/blocks/witherwart.png
 texture:id=minecraft/grass_top,filename=assets/minecraft/textures/blocks/grass_top.png
 
-# biome_ids/Polar_Chasm_ID
-biome:id=biome_ids/Polar_Chasm_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Spectral_Garden_ID
-biome:id=biome_ids/Spectral_Garden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Alps_Forest_ID
-biome:id=biome_ids/Alps_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Alps_ID
 biome:id=biome_ids/Alps_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Arctic_ID
 biome:id=biome_ids/Arctic_ID,grassColorMult=1AA8A4E,foliageColorMult=1B5A353,waterColorMult=FFFFFF
-# biome_ids/Autumn_Hills_ID
-biome:id=biome_ids/Autumn_Hills_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Badlands_ID
-biome:id=biome_ids/Badlands_ID,grassColorMult=18AB689,foliageColorMult=16DA36B,waterColorMult=FFFFFF
 # biome_ids/Bamboo_Forest_ID
 biome:id=biome_ids/Bamboo_Forest_ID,grassColorMult=1A3E053,foliageColorMult=1A3E053,waterColorMult=FFFFFF
 # biome_ids/Bayou_ID
 biome:id=biome_ids/Bayou_ID,grassColorMult=18BAF6B,foliageColorMult=1B0E088,waterColorMult=FFD932
-# biome_ids/Birch_Forest_ID
-biome:id=biome_ids/Birch_Forest_ID,grassColorMult=14C763C,foliageColorMult=16A7039,waterColorMult=E0FFAE
 # biome_ids/Bog_ID
 biome:id=biome_ids/Bog_ID,grassColorMult=1D8935F,foliageColorMult=1DAE579,waterColorMult=FFFFFF
-# biome_ids/Boneyard_ID
-biome:id=biome_ids/Boneyard_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Boreal_Forest_ID
 biome:id=biome_ids/Boreal_Forest_ID,grassColorMult=19FB771,foliageColorMult=1C9CE65,waterColorMult=FFFFFF
 # biome_ids/Brushland_ID
 biome:id=biome_ids/Brushland_ID,grassColorMult=1C9C17F,foliageColorMult=1B2C67F,waterColorMult=FFFFFF
 # biome_ids/Canyon_ID
 biome:id=biome_ids/Canyon_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
-# biome_ids/Canyon_Ravine_ID
-biome:id=biome_ids/Canyon_Ravine_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
 # biome_ids/Chaparral_ID
-biome:id=biome_ids/Chaparral_ID,grassColorMult=1C0D85D,foliageColorMult=177AB2F,waterColorMult=FFFFFF
+biome:id=biome_ids/Chaparral_ID,grassColorMult=1C0D85D,foliageColorMult=163AE2A,waterColorMult=FFFFFF
 # biome_ids/Cherry_Blossom_Grove_ID
 biome:id=biome_ids/Cherry_Blossom_Grove_ID,grassColorMult=1A3FFAA,foliageColorMult=1A3FFAA,waterColorMult=FFFFFF
 # biome_ids/Coniferous_Forest_ID
 biome:id=biome_ids/Coniferous_Forest_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
-# biome_ids/Coral_Reef_ID
-biome:id=biome_ids/Coral_Reef_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
-# biome_ids/Corrupted_Sands_ID
-biome:id=biome_ids/Corrupted_Sands_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Snowy_Coniferous_Forest_ID
+biome:id=biome_ids/Snowy_Coniferous_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Crag_ID
 biome:id=biome_ids/Crag_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=0E6A35
-# biome_ids/Dead_Forest_(Snow)_ID
-biome:id=biome_ids/Dead_Forest_(Snow)_ID,grassColorMult=188BB66,foliageColorMult=16BA940,waterColorMult=FFFFFF
 # biome_ids/Dead_Forest_ID
 biome:id=biome_ids/Dead_Forest_ID,grassColorMult=1BCA165,foliageColorMult=1BCA165,waterColorMult=FFFFFF
 # biome_ids/Dead_Swamp_ID
 biome:id=biome_ids/Dead_Swamp_ID,grassColorMult=166704C,foliageColorMult=166704C,waterColorMult=A2AD51
-# biome_ids/Deadlands_ID
-biome:id=biome_ids/Deadlands_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Deciduous_Forest_ID
 biome:id=biome_ids/Deciduous_Forest_ID,grassColorMult=1AD8E41,foliageColorMult=1AFA248,waterColorMult=FFFFFF
-# biome_ids/Dry_River_ID
-biome:id=biome_ids/Dry_River_ID,grassColorMult=182C245,foliageColorMult=164B216,waterColorMult=FFFFFF
-# biome_ids/Dunes_ID
-biome:id=biome_ids/Dunes_ID,grassColorMult=186B783,foliageColorMult=168A464,waterColorMult=FFFFFF
+# biome_ids/Dense_Forest_ID
+biome:id=biome_ids/Dense_Forest_ID,grassColorMult=17DD671,foliageColorMult=198EF56,waterColorMult=FFFFFF
+# biome_ids/Eucalyptus_Forest_ID
+biome:id=biome_ids/Eucalyptus_Forest_ID,grassColorMult=184D168,foliageColorMult=167CE52,waterColorMult=FFFFFF
 # biome_ids/Fen_ID
 biome:id=biome_ids/Fen_ID,grassColorMult=1BAC481,foliageColorMult=1CEB979,waterColorMult=FFFFFF
 # biome_ids/Flower_Field_ID
@@ -344,11 +335,9 @@ biome:id=biome_ids/Flower_Field_ID,grassColorMult=170C441,foliageColorMult=170C4
 # biome_ids/Frost_Forest_ID
 biome:id=biome_ids/Frost_Forest_ID,grassColorMult=1ABD6BC,foliageColorMult=1ABD6BC,waterColorMult=FFFFFF
 # biome_ids/Fungi_Forest_ID
-biome:id=biome_ids/Fungi_Forest_ID,grassColorMult=1F0F970,foliageColorMult=1A9FB6A,waterColorMult=00FF2E
+biome:id=biome_ids/Fungi_Forest_ID,grassColorMult=157ED64,foliageColorMult=157ED64,waterColorMult=00FF2E
 # biome_ids/Garden_ID
 biome:id=biome_ids/Garden_ID,grassColorMult=174D374,foliageColorMult=166E266,waterColorMult=FFFFFF
-# biome_ids/Glacier_ID
-biome:id=biome_ids/Glacier_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
 # biome_ids/Grassland_ID
 biome:id=biome_ids/Grassland_ID,grassColorMult=17FDB7D,foliageColorMult=17FDB7D,waterColorMult=FFFFFF
 # biome_ids/Grove_ID
@@ -356,27 +345,21 @@ biome:id=biome_ids/Grove_ID,grassColorMult=1609E58,foliageColorMult=175B569,wate
 # biome_ids/Heathland_ID
 biome:id=biome_ids/Heathland_ID,grassColorMult=1CEC577,foliageColorMult=1AEC681,waterColorMult=FFFFFF
 # biome_ids/Highland_ID
-biome:id=biome_ids/Highland_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
+biome:id=biome_ids/Highland_ID,grassColorMult=183BB6D,foliageColorMult=163A948,waterColorMult=FFFFFF
 # biome_ids/Jade_Cliffs_ID
 biome:id=biome_ids/Jade_Cliffs_ID,grassColorMult=17CA568,foliageColorMult=18ACC6A,waterColorMult=FFFFFF
-# biome_ids/Kelp_Forest_ID
-biome:id=biome_ids/Kelp_Forest_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Land_of_Lakes_ID
+biome:id=biome_ids/Land_of_Lakes_ID,grassColorMult=1CCC46C,foliageColorMult=1A3BC62,waterColorMult=FFFFFF
 # biome_ids/Lavender_Fields_ID
 biome:id=biome_ids/Lavender_Fields_ID,grassColorMult=1A1C36D,foliageColorMult=1A1C36D,waterColorMult=FFFFFF
 # biome_ids/Lush_Desert_ID
-biome:id=biome_ids/Lush_Desert_ID,grassColorMult=19ABE4B,foliageColorMult=182AC1E,waterColorMult=FFFFFF
-# biome_ids/Lush_River_ID
-biome:id=biome_ids/Lush_River_ID,grassColorMult=183BD65,foliageColorMult=165AB3E,waterColorMult=FFFFFF
+biome:id=biome_ids/Lush_Desert_ID,grassColorMult=182C245,foliageColorMult=164B216,waterColorMult=FFFFFF
 # biome_ids/Lush_Swamp_ID
 biome:id=biome_ids/Lush_Swamp_ID,grassColorMult=16DC257,foliageColorMult=148B22C,waterColorMult=FFFFFF
-# biome_ids/Mangrove_ID
-biome:id=biome_ids/Mangrove_ID,grassColorMult=16AC44E,foliageColorMult=145B421,waterColorMult=FFFFFF
 # biome_ids/Maple_Woods_ID
 biome:id=biome_ids/Maple_Woods_ID,grassColorMult=186B688,foliageColorMult=167A369,waterColorMult=FFFFFF
 # biome_ids/Marsh_ID
 biome:id=biome_ids/Marsh_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
-# biome_ids/Meadow_Forest_ID
-biome:id=biome_ids/Meadow_Forest_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
 # biome_ids/Meadow_ID
 biome:id=biome_ids/Meadow_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
 # biome_ids/Moor_ID
@@ -385,10 +368,6 @@ biome:id=biome_ids/Moor_ID,grassColorMult=1619365,foliageColorMult=1619365,water
 biome:id=biome_ids/Mountain_ID,grassColorMult=19CB774,foliageColorMult=183A352,waterColorMult=FFFFFF
 # biome_ids/Mystic_Grove_ID
 biome:id=biome_ids/Mystic_Grove_ID,grassColorMult=169CFDB,foliageColorMult=170E099,waterColorMult=FF107A
-# biome_ids/Oasis_ID
-biome:id=biome_ids/Oasis_ID,grassColorMult=173C447,foliageColorMult=150B41A,waterColorMult=FFFFFF
-# biome_ids/Oceanic_Abyss_(Ocean)_ID
-biome:id=biome_ids/Oceanic_Abyss_(Ocean)_ID,grassColorMult=18EB971,foliageColorMult=171A74D,waterColorMult=FFFFFF
 # biome_ids/Ominous_Woods_ID
 biome:id=biome_ids/Ominous_Woods_ID,grassColorMult=13F4151,foliageColorMult=13F4151,waterColorMult=1E1B26
 # biome_ids/Orchard_ID
@@ -397,58 +376,90 @@ biome:id=biome_ids/Orchard_ID,grassColorMult=1D5FF6D,foliageColorMult=1D5FF6D,wa
 biome:id=biome_ids/Origin_Valley_ID,grassColorMult=1A2FF5F,foliageColorMult=13AFF00,waterColorMult=FFFFFF
 # biome_ids/Outback_ID
 biome:id=biome_ids/Outback_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
-# biome_ids/Phantasmagoric_Inferno_ID
-biome:id=biome_ids/Phantasmagoric_Inferno_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 # biome_ids/Prairie_ID
 biome:id=biome_ids/Prairie_ID,grassColorMult=1C8E580,foliageColorMult=1ADE07B,waterColorMult=FFFFFF
-# biome_ids/Quagmire_ID
-biome:id=biome_ids/Quagmire_ID,grassColorMult=19E8B69,foliageColorMult=19E8B69,waterColorMult=CC5100
 # biome_ids/Rainforest_ID
 biome:id=biome_ids/Rainforest_ID,grassColorMult=11AD86C,foliageColorMult=114E26F,waterColorMult=FFFFFF
 # biome_ids/Redwood_Forest_ID
-biome:id=biome_ids/Redwood_Forest_ID,grassColorMult=191BD59,foliageColorMult=177AB2F,waterColorMult=FFFFFF
+biome:id=biome_ids/Redwood_Forest_ID,grassColorMult=17FBF5C,foliageColorMult=160AE33,waterColorMult=FFFFFF
 # biome_ids/Sacred_Springs_ID
 biome:id=biome_ids/Sacred_Springs_ID,grassColorMult=100995B,foliageColorMult=100995B,waterColorMult=FFFFFF
-# biome_ids/Scrubland_ID
-biome:id=biome_ids/Scrubland_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
 # biome_ids/Seasonal_Forest_ID
 biome:id=biome_ids/Seasonal_Forest_ID,grassColorMult=1BEC44C,foliageColorMult=1B3C442,waterColorMult=FFFFFF
 # biome_ids/Shield_ID
 biome:id=biome_ids/Shield_ID,grassColorMult=1647F38,foliageColorMult=1789643,waterColorMult=FFFFFF
 # biome_ids/Shrubland_ID
 biome:id=biome_ids/Shrubland_ID,grassColorMult=1A4B76E,foliageColorMult=18CA44A,waterColorMult=FFFFFF
-# biome_ids/Silkglades_ID
-biome:id=biome_ids/Silkglades_ID,grassColorMult=1CCC9AD,foliageColorMult=1D7DBB6,waterColorMult=FFFF77
 # biome_ids/Sludgepit_ID
 biome:id=biome_ids/Sludgepit_ID,grassColorMult=1746429,foliageColorMult=1919134,waterColorMult=AF9200
-# biome_ids/Snowy_Coniferous_Forest_ID
-biome:id=biome_ids/Snowy_Coniferous_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
-# biome_ids/Spruce_Woods_ID
-biome:id=biome_ids/Spruce_Woods_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
 # biome_ids/Steppe_ID
-biome:id=biome_ids/Steppe_ID,grassColorMult=1B28F6B,foliageColorMult=1B28F6B,waterColorMult=FFFFFF
+biome:id=biome_ids/Steppe_ID,grassColorMult=1C49E7D,foliageColorMult=1C49E7D,waterColorMult=FFFFFF
 # biome_ids/Temperate_Rainforest_ID
 biome:id=biome_ids/Temperate_Rainforest_ID,grassColorMult=1B6D367,foliageColorMult=1BBDD63,waterColorMult=FFFFFF
 # biome_ids/Thicket_ID
 biome:id=biome_ids/Thicket_ID,grassColorMult=1A89A77,foliageColorMult=1A5A16D,waterColorMult=FFFFFF
 # biome_ids/Tropical_Rainforest_ID
 biome:id=biome_ids/Tropical_Rainforest_ID,grassColorMult=1C3E041,foliageColorMult=1A5E041,waterColorMult=5DFF00
-# biome_ids/Tropics_ID
-biome:id=biome_ids/Tropics_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
 # biome_ids/Tundra_ID
 biome:id=biome_ids/Tundra_ID,grassColorMult=1AD8456,foliageColorMult=1BF664E,waterColorMult=FFFFFF
-# biome_ids/Undergarden_ID
-biome:id=biome_ids/Undergarden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Visceral_Heap_ID
-biome:id=biome_ids/Visceral_Heap_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
-# biome_ids/Volcano_ID
-biome:id=biome_ids/Volcano_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
 # biome_ids/Wasteland_ID
 biome:id=biome_ids/Wasteland_ID,grassColorMult=19DA078,foliageColorMult=1999E55,waterColorMult=E5FF00
 # biome_ids/Wetland_ID
 biome:id=biome_ids/Wetland_ID,grassColorMult=15A935F,foliageColorMult=14F9657,waterColorMult=636084
 # biome_ids/Woodland_ID
-biome:id=biome_ids/Woodland_ID,grassColorMult=1A6BB4E,foliageColorMult=191A922,waterColorMult=FFFFFF
+biome:id=biome_ids/Woodland_ID,grassColorMult=1A3B74C,foliageColorMult=18EA621,waterColorMult=FFFFFF
+# biome_ids/Xeric_Shrubland_ID
+biome:id=biome_ids/Xeric_Shrubland_ID,grassColorMult=1E2CDA5,foliageColorMult=1E2CDA5,waterColorMult=FFFFFF
+# biome_ids/Coral_Reef_ID
+biome:id=biome_ids/Coral_Reef_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Kelp_Forest_ID
+biome:id=biome_ids/Kelp_Forest_ID,grassColorMult=17FBC6D,foliageColorMult=160AA48,waterColorMult=FFFFFF
+# biome_ids/Tropics_ID
+biome:id=biome_ids/Tropics_ID,grassColorMult=147CD33,foliageColorMult=11ABF00,waterColorMult=FFFFFF
+# biome_ids/Volcano_ID
+biome:id=biome_ids/Volcano_ID,grassColorMult=1B9B953,foliageColorMult=1A7A529,waterColorMult=FFFFFF
+# biome_ids/Mangrove_ID
+biome:id=biome_ids/Mangrove_ID,grassColorMult=16AC44E,foliageColorMult=145B421,waterColorMult=FFFFFF
+# biome_ids/Alps_Forest_ID
+biome:id=biome_ids/Alps_Forest_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Canyon_Ravine_ID
+biome:id=biome_ids/Canyon_Ravine_ID,grassColorMult=1A9BA64,foliageColorMult=1A9BA64,waterColorMult=FFFFFF
+# biome_ids/Glacier_ID
+biome:id=biome_ids/Glacier_ID,grassColorMult=180B497,foliageColorMult=160A17B,waterColorMult=FFFFFF
+# biome_ids/Land_of_Lakes_Marsh_ID
+biome:id=biome_ids/Land_of_Lakes_Marsh_ID,grassColorMult=1CCC46C,foliageColorMult=1A3BC62,waterColorMult=FFFFFF
+# biome_ids/Meadow_Forest_ID
+biome:id=biome_ids/Meadow_Forest_ID,grassColorMult=163B26D,foliageColorMult=163B26D,waterColorMult=FFFFFF
+# biome_ids/Oasis_ID
+biome:id=biome_ids/Oasis_ID,grassColorMult=19ABE4B,foliageColorMult=182AC1E,waterColorMult=FFFFFF
+# biome_ids/Quagmire_ID
+biome:id=biome_ids/Quagmire_ID,grassColorMult=19E8B69,foliageColorMult=19E8B69,waterColorMult=CC5100
+# biome_ids/Scrubland_ID
+biome:id=biome_ids/Scrubland_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Seasonal_Forest_Clearing_ID
+biome:id=biome_ids/Seasonal_Forest_Clearing_ID,grassColorMult=1BEC44C,foliageColorMult=1B3C442,waterColorMult=FFFFFF
+# biome_ids/Silkglades_ID
+biome:id=biome_ids/Silkglades_ID,grassColorMult=1CCC9AD,foliageColorMult=1D7DBB6,waterColorMult=FFFF77
+# biome_ids/Spruce_Woods_ID
+biome:id=biome_ids/Spruce_Woods_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
+# biome_ids/Corrupted_Sands_ID
+biome:id=biome_ids/Corrupted_Sands_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Phantasmagoric_Inferno_ID
+biome:id=biome_ids/Phantasmagoric_Inferno_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Boneyard_ID
+biome:id=biome_ids/Boneyard_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Visceral_Heap_ID
+biome:id=biome_ids/Visceral_Heap_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Undergarden_ID
+biome:id=biome_ids/Undergarden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Polar_Chasm_ID
+biome:id=biome_ids/Polar_Chasm_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Spectral_Garden_ID
+biome:id=biome_ids/Spectral_Garden_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
+# biome_ids/Lush_River_ID
+biome:id=biome_ids/Lush_River_ID,grassColorMult=179C05A,foliageColorMult=159AE30,waterColorMult=FFFFFF
+# biome_ids/Dry_River_ID
+biome:id=biome_ids/Dry_River_ID,grassColorMult=1BFB755,foliageColorMult=1AEA42A,waterColorMult=FFFFFF
 
 
 # %mud:* (mud), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockMud
@@ -481,7 +492,7 @@ block:id=%plants,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesopl
 block:id=%plants,data=3,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/dunegrass
 block:id=%plants,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/spectralfern
 block:id=%plants,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/thorn
-block:id=%plants,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/barley
+block:id=%plants,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/wildrice
 block:id=%plants,data=7,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/cattail
 block:id=%plants,data=8,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/rivercane
 block:id=%plants,data=9,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/cattailtop
@@ -551,6 +562,12 @@ block:id=%flowerVine,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:biomes
 # %wisteria:* (wisteria), render=(VINE), opaque=false,cls=biomesoplenty.common.blocks.BlockWisteria
 block:id=%wisteria,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/wisteria
 
+# %lilyBop:* (lilyBop), render=biomesoplenty.client.render.blocks.FoliageRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPLilypad
+block:id=%lilyBop,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/mediumlily
+block:id=%lilyBop,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/smalllily
+block:id=%lilyBop,data=2,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/tinylily
+block:id=%lilyBop,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/mediumlily
+
 # %foliage:* (foliage), render=biomesoplenty.client.render.blocks.FoliageRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPFoliage
 block:id=%foliage,data=0,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:biomesoplenty/duckweed
 block:id=%foliage,data=1,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:biomesoplenty/shortgrass
@@ -568,6 +585,14 @@ block:id=%foliage,data=12,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6
 block:id=%foliage,data=13,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:biomesoplenty/cloverpatch
 block:id=%foliage,data=14,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:biomesoplenty/leafpile
 block:id=%foliage,data=15,stdrot=true,transparency=TRANSPARENT,colorMult=FF7CBD6B,face0-5=17000:biomesoplenty/deadleafpile
+
+# %fruitBop:* (fruitBop), render=(CROSSEDSQUARES), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPFruit
+block:id=%fruitBop,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/apple_block
+block:id=%fruitBop,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/persimmon_block
+block:id=%fruitBop,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/peach_block
+block:id=%fruitBop,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/pear_block
+block:id=%fruitBop,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/pinecone_block
+block:id=%fruitBop,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/apple_block
 
 # %turnip:* (turnip), render=(CROPS), opaque=false,cls=biomesoplenty.common.blocks.BlockTurnip
 block:id=%turnip,data=0,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/turnip_stage_0
@@ -656,7 +681,7 @@ block:id=%bopGrass,data=1,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=
 block:id=%newBopGrass,data=0,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_loamy_side
 block:id=%newBopGrass,data=1,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_sandy,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_sandy_side
 block:id=%newBopGrass,data=2,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_silty,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_silty_side
-block:id=%newBopGrass,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=17000:minecraft/grass_top
+block:id=%newBopGrass,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,colorMult=FF7CBD6B,face0=17000:biomesoplenty/dirt_loamy,face1=17000:minecraft/grass_top,face2-5=17000:biomesoplenty/grass_loamy_side
 
 # %newBopDirt:* (newBopDirt), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPNewDirt
 block:id=%newBopDirt,data=0,stdrot=true,face0-5=0:biomesoplenty/dirt_loamy
@@ -666,6 +691,12 @@ block:id=%newBopDirt,data=3,stdrot=true,face0-5=0:biomesoplenty/coarse_dirt_sand
 block:id=%newBopDirt,data=4,stdrot=true,face0-5=0:biomesoplenty/dirt_silty
 block:id=%newBopDirt,data=5,stdrot=true,face0-5=0:biomesoplenty/coarse_dirt_silty
 block:id=%newBopDirt,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/dirt_loamy
+
+# %newBopFarmland:* (newBopFarmland), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPNewFarmland
+block:id=%newBopFarmland,data=0,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_loamy,face1=0:biomesoplenty/farmland_dry_loamy,face2-5=0:biomesoplenty/dirt_loamy
+block:id=%newBopFarmland,data=1,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_loamy,face1=0:biomesoplenty/farmland_wet_loamy,face2-5=0:biomesoplenty/dirt_loamy
+block:id=%newBopFarmland,data=2,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_sandy,face1=0:biomesoplenty/farmland_dry_sandy,face2-5=0:biomesoplenty/dirt_sandy
+block:id=%newBopFarmland,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,face0=0:biomesoplenty/dirt_loamy,face1=0:biomesoplenty/farmland_dry_loamy,face2-5=0:biomesoplenty/dirt_loamy
 
 # %logs1:* (logs1), render=(LOG), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPLog
 block:id=%logs1,data=0,stdrot=true,face0-1=0:biomesoplenty/log_sacredoak_heart,face2-5=0:biomesoplenty/log_sacredoak_side
@@ -838,7 +869,8 @@ block:id=%colorizedSaplings,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0
 block:id=%colorizedSaplings,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_willow
 block:id=%colorizedSaplings,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_pine
 block:id=%colorizedSaplings,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_mahogany
-block:id=%colorizedSaplings,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_sacredoak
+block:id=%colorizedSaplings,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_flowering
+block:id=%colorizedSaplings,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:biomesoplenty/sapling_sacredoak
 
 # %hardSand:* (hardSand), render=(STANDARD), opaque=true,cls=biomesoplenty.common.blocks.BlockBOPGeneric
 block:id=%hardSand,data=*,stdrot=true,face0-5=0:biomesoplenty/hardsand
@@ -887,7 +919,8 @@ block:id=%honeyBlock,data=*,stdrot=true,face0-5=12000:biomesoplenty/honeyblock
 block:id=%bones,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_small
 block:id=%bones,data=1,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_medium
 block:id=%bones,data=2,stdrot=true,face0-5=0:biomesoplenty/bones_large
-block:id=%bones,data=3,data=4,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_small
+block:id=%bones,data=3,data=4,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_small
+block:id=%bones,data=5,data=6,stdrot=true,transparency=TRANSPARENT,face0-5=0:biomesoplenty/bones_medium
 block:id=%bones,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:biomesoplenty/bones_small
 
 # %grave:* (grave), render=biomesoplenty.client.render.blocks.GraveRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockGrave
@@ -1030,7 +1063,7 @@ block:id=%mahoganyStairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5
 # %mudBricksStairs:* (mudBricksStairs), render=(STAIRS), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPStairs
 block:id=%mudBricksStairs,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=0:biomesoplenty/mudbrick
 
-# %colorizedLeaves1:* (colorizedLeaves1), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPColorizedLeaves
+# %colorizedLeaves1:* (colorizedLeaves1), render=biomesoplenty.client.render.blocks.ColorizedLeavesRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPColorizedLeaves
 block:id=%colorizedLeaves1,data=0,stdrot=true,face0-5=2000:biomesoplenty/leaves_sacredoak_fancy
 block:id=%colorizedLeaves1,data=1,stdrot=true,face0-5=2000:biomesoplenty/leaves_mangrove_fancy
 block:id=%colorizedLeaves1,data=2,stdrot=true,face0-5=2000:biomesoplenty/leaves_palm_fancy
@@ -1048,23 +1081,23 @@ block:id=%colorizedLeaves1,data=13,stdrot=true,face0-5=2000:biomesoplenty/leaves
 block:id=%colorizedLeaves1,data=14,stdrot=true,face0-5=2000:biomesoplenty/leaves_palm_fancy
 block:id=%colorizedLeaves1,data=15,stdrot=true,face0-5=2000:biomesoplenty/leaves_redwood_fancy
 
-# %colorizedLeaves2:* (colorizedLeaves2), render=(STANDARD), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPColorizedLeaves
+# %colorizedLeaves2:* (colorizedLeaves2), render=biomesoplenty.client.render.blocks.ColorizedLeavesRenderer(CUSTOM), opaque=false,cls=biomesoplenty.common.blocks.BlockBOPColorizedLeaves
 block:id=%colorizedLeaves2,data=0,stdrot=true,face0-5=2000:biomesoplenty/leaves_willow_fancy
 block:id=%colorizedLeaves2,data=1,stdrot=true,face0-5=2000:biomesoplenty/leaves_pine_fancy
 block:id=%colorizedLeaves2,data=2,stdrot=true,face0-5=2000:biomesoplenty/leaves_mahogany_fancy
-block:id=%colorizedLeaves2,data=3,stdrot=true,face0-5=2000:biomesoplenty/leaves_sacredoak_fancy
+block:id=%colorizedLeaves2,data=3,stdrot=true,face0-5=2000:biomesoplenty/leaves_flowering_fancy
 block:id=%colorizedLeaves2,data=4,stdrot=true,face0-5=2000:biomesoplenty/leaves_willow_fancy
 block:id=%colorizedLeaves2,data=5,stdrot=true,face0-5=2000:biomesoplenty/leaves_pine_fancy
 block:id=%colorizedLeaves2,data=6,stdrot=true,face0-5=2000:biomesoplenty/leaves_mahogany_fancy
-block:id=%colorizedLeaves2,data=7,stdrot=true,face0-5=2000:biomesoplenty/leaves_sacredoak_fancy
+block:id=%colorizedLeaves2,data=7,stdrot=true,face0-5=2000:biomesoplenty/leaves_flowering_fancy
 block:id=%colorizedLeaves2,data=8,stdrot=true,face0-5=2000:biomesoplenty/leaves_willow_fancy
 block:id=%colorizedLeaves2,data=9,stdrot=true,face0-5=2000:biomesoplenty/leaves_pine_fancy
 block:id=%colorizedLeaves2,data=10,stdrot=true,face0-5=2000:biomesoplenty/leaves_mahogany_fancy
-block:id=%colorizedLeaves2,data=11,stdrot=true,face0-5=2000:biomesoplenty/leaves_sacredoak_fancy
+block:id=%colorizedLeaves2,data=11,stdrot=true,face0-5=2000:biomesoplenty/leaves_flowering_fancy
 block:id=%colorizedLeaves2,data=12,stdrot=true,face0-5=2000:biomesoplenty/leaves_willow_fancy
 block:id=%colorizedLeaves2,data=13,stdrot=true,face0-5=2000:biomesoplenty/leaves_pine_fancy
 block:id=%colorizedLeaves2,data=14,stdrot=true,face0-5=2000:biomesoplenty/leaves_mahogany_fancy
-block:id=%colorizedLeaves2,data=15,stdrot=true,face0-5=2000:biomesoplenty/leaves_sacredoak_fancy
+block:id=%colorizedLeaves2,data=15,stdrot=true,face0-5=2000:biomesoplenty/leaves_flowering_fancy
 
 # %poison:* (poison), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=biomesoplenty.common.fluids.blocks.BlockPoisonFluid
 block:id=%poison,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:biomesoplenty/liquid_poison_still,face2-5=12000:biomesoplenty/liquid_poison_flowing

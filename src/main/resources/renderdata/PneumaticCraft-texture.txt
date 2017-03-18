@@ -1,4 +1,4 @@
-# PneumaticCraft 1.2.14-29
+# PneumaticCraft 1.12.7-150
 version:1.7
 modname:PneumaticCraft
 
@@ -16,6 +16,18 @@ texture:id=pneumaticcraft/AphorismTile,filename=assets/pneumaticcraft/textures/b
 texture:id=pneumaticcraft/BlockPressureTube,filename=assets/pneumaticcraft/textures/blocks/BlockPressureTube.png
 texture:id=pneumaticcraft/CompressedIronBlock,filename=assets/pneumaticcraft/textures/blocks/CompressedIronBlock.png
 texture:id=pneumaticcraft/ElevatorCaller,filename=assets/pneumaticcraft/textures/blocks/ElevatorCaller.png
+texture:id=pneumaticcraft/diesel_flow,filename=assets/pneumaticcraft/textures/blocks/diesel_flow.png
+texture:id=pneumaticcraft/diesel_still,filename=assets/pneumaticcraft/textures/blocks/diesel_still.png
+texture:id=pneumaticcraft/fuel_flow,filename=assets/pneumaticcraft/textures/blocks/fuel_flow.png
+texture:id=pneumaticcraft/fuel_still,filename=assets/pneumaticcraft/textures/blocks/fuel_still.png
+texture:id=pneumaticcraft/kerosene_flow,filename=assets/pneumaticcraft/textures/blocks/kerosene_flow.png
+texture:id=pneumaticcraft/kerosene_still,filename=assets/pneumaticcraft/textures/blocks/kerosene_still.png
+texture:id=pneumaticcraft/lpg_flow,filename=assets/pneumaticcraft/textures/blocks/lpg_flow.png
+texture:id=pneumaticcraft/lpg_still,filename=assets/pneumaticcraft/textures/blocks/lpg_still.png
+texture:id=pneumaticcraft/lubricant_flow,filename=assets/pneumaticcraft/textures/blocks/lubricant_flow.png
+texture:id=pneumaticcraft/lubricant_still,filename=assets/pneumaticcraft/textures/blocks/lubricant_still.png
+texture:id=pneumaticcraft/oil_flow,filename=assets/pneumaticcraft/textures/blocks/oil_flow.png
+texture:id=pneumaticcraft/oil_still,filename=assets/pneumaticcraft/textures/blocks/oil_still.png
 texture:id=pneumaticcraft/plants/burstPlant0,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant0.png
 texture:id=pneumaticcraft/plants/burstPlant1,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant1.png
 texture:id=pneumaticcraft/plants/burstPlant2,filename=assets/pneumaticcraft/textures/blocks/plants/burstPlant2.png
@@ -114,18 +126,48 @@ texture:id=pneumaticcraft/plants/squidPlant3,filename=assets/pneumaticcraft/text
 texture:id=pneumaticcraft/plants/squidPlant4,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant4.png
 texture:id=pneumaticcraft/plants/squidPlant5,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant5.png
 texture:id=pneumaticcraft/plants/squidPlant6,filename=assets/pneumaticcraft/textures/blocks/plants/squidPlant6.png
+texture:id=pneumaticcraft/plastic_flow,filename=assets/pneumaticcraft/textures/blocks/plastic_flow.png
+texture:id=pneumaticcraft/plastic_still,filename=assets/pneumaticcraft/textures/blocks/plastic_still.png
 texture:id=pneumaticcraft/pressureChamber/pressureChamberWall,filename=assets/pneumaticcraft/textures/blocks/pressureChamber/pressureChamberWall.png
 texture:id=pneumaticcraft/pressureChamber/valve,filename=assets/pneumaticcraft/textures/blocks/pressureChamber/valve.png
 texture:id=pneumaticcraft/pressureChamber/valve_side,filename=assets/pneumaticcraft/textures/blocks/pressureChamber/valve_side.png
 texture:id=pneumaticcraft/pressureChamber/windows/window_1,filename=assets/pneumaticcraft/textures/blocks/pressureChamber/windows/window_1.png
+texture:id=pneumaticcraft/programmableController,filename=assets/pneumaticcraft/textures/blocks/programmableController.png
 
 
+
+# %plasticBlock:* (plasticBlock), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%plasticBlock,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/plastic_still,face2-5=12000:pneumaticcraft/plastic_flow
+
+# %etchingAcid:* (etchingAcid), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidEtchingAcid
+block:id=%etchingAcid,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
+
+# %lpg:* (lpg), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%lpg,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/lpg_still,face2-5=12000:pneumaticcraft/lpg_flow
+
+# %fuel:* (fuel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%fuel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/fuel_still,face2-5=12000:pneumaticcraft/fuel_flow
+
+# %kerosene:* (kerosene), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%kerosene,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/kerosene_still,face2-5=12000:pneumaticcraft/kerosene_flow
+
+# %diesel:* (diesel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%diesel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/diesel_still,face2-5=12000:pneumaticcraft/diesel_flow
+
+# %oil:* (oil), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%oil,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/oil_still,face2-5=12000:pneumaticcraft/oil_flow
+
+# %lubricant:* (lubricant), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidPneumaticCraft
+block:id=%lubricant,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:pneumaticcraft/lubricant_still,face2-5=12000:pneumaticcraft/lubricant_flow
 
 # %pressureTube:* (pressureTube), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPressureTube
 block:id=%pressureTube,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
 # %airCompressor:* (airCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAirCompressor
 block:id=%airCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %advancedAirCompressor:* (advancedAirCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAdvancedAirCompressor
+block:id=%advancedAirCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
 # %airCannon:* (airCannon), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAirCannon
 block:id=%airCannon,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
@@ -375,13 +417,13 @@ block:id=%chopperPlant,data=12,stdrot=true,transparency=TRANSPARENT,patch0=0:pne
 block:id=%chopperPlant,data=13,data=14,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant6
 block:id=%chopperPlant,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:pneumaticcraft/plants/chopperPlant1
 
-# %chargingStation:* (chargingStation), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockChargingStation
-block:id=%chargingStation,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+# %chargingStation:* (chargingStation), render=pneumaticCraft.client.render.block.RenderChargingStationPad(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockChargingStation
+block:id=%chargingStation,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
 # %elevatorBase:* (elevatorBase), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockElevatorBase
 block:id=%elevatorBase,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
-# %elevatorFrame:* (elevatorFrame), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockElevatorFrame
+# %elevatorFrame:* (elevatorFrame), render=pneumaticCraft.client.render.block.RenderElevatorFrame(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockElevatorFrame
 block:id=%elevatorFrame,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
 # %pressureChamberInterface:* (pressureChamberInterface), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPressureChamberInterface
@@ -391,7 +433,7 @@ block:id=%pressureChamberInterface,data=6,data=7,data=8,data=9,data=10,data=11,d
 # %vacuumPump:* (vacuumPump), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockVacuumPump
 block:id=%vacuumPump,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
 
-# %pneumaticDoorBase:* (pneumaticDoorBase), render=pneumaticCraft.client.render.block.RenderPneumaticDoorCamo(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPneumaticDoorBase
+# %pneumaticDoorBase:* (pneumaticDoorBase), render=(STANDARD), opaque=false,cls=pneumaticCraft.common.block.BlockPneumaticDoorBase
 block:id=%pneumaticDoorBase,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
 # %pneumaticDoor:* (pneumaticDoor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPneumaticDoor
@@ -415,14 +457,11 @@ block:id=%assemblyController,data=*,stdrot=true,transparency=TRANSPARENT,face0-5
 # %advancedPressureTube:* (advancedPressureTube), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPressureTube
 block:id=%advancedPressureTube,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
-# %compressedIronBlock:* (compressedIronBlock), render=(STANDARD), opaque=true,cls=pneumaticCraft.common.block.Blockss$HelperBlock
+# %compressedIronBlock:* (compressedIronBlock), render=(STANDARD), opaque=true,cls=pneumaticCraft.common.block.BlockCompressedIron
 block:id=%compressedIronBlock,data=*,stdrot=true,face0-5=0:pneumaticcraft/CompressedIronBlock
 
 # %uvLightBox:* (uvLightBox), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockUVLightBox
 block:id=%uvLightBox,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
-
-# %etchingAcid:* (etchingAcid), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=pneumaticCraft.common.block.BlockFluidEtchingAcid
-block:id=%etchingAcid,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:minecraft/water_still,face2-5=12000:minecraft/water_flow
 
 # %securityStation:* (securityStation), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockSecurityStation
 block:id=%securityStation,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
@@ -443,6 +482,9 @@ block:id=%aphorismTile,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=
 # %omnidirectionalHopper:* (omnidirectionalHopper), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockOmnidirectionalHopper
 block:id=%omnidirectionalHopper,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
+# %liquidHopper:* (liquidHopper), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockLiquidHopper
+block:id=%liquidHopper,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
 # %elevatorCaller:* (elevatorCaller), render=(STANDARD), opaque=false,cls=pneumaticCraft.common.block.BlockElevatorCaller
 block:id=%elevatorCaller,data=*,stdrot=true,face0-5=0:pneumaticcraft/ElevatorCaller
 
@@ -452,14 +494,48 @@ block:id=%programmer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneum
 # %creativeCompressor:* (creativeCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockCreativeCompressor
 block:id=%creativeCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
+# %plasticMixer:* (plasticMixer), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockPlasticMixer
+block:id=%plasticMixer,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %liquidCompressor:* (liquidCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockLiquidCompressor
+block:id=%liquidCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %advancedLiquidCompressor:* (advancedLiquidCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockAdvancedLiquidCompressor
+block:id=%advancedLiquidCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %heatSink:* (heatSink), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockHeatSink
+block:id=%heatSink,data=0,data=1,data=2,data=3,data=4,data=5,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+block:id=%heatSink,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %vortexTube:* (vortexTube), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockVortexTube
+block:id=%vortexTube,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %programmableController:* (programmableController), render=(STANDARD), opaque=true,cls=pneumaticCraft.common.block.BlockProgrammableController
+block:id=%programmableController,data=*,stdrot=true,face0-5=0:pneumaticcraft/programmableController
+
+# %gasLift:* (gasLift), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockGasLift
+block:id=%gasLift,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %refinery:* (refinery), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockRefinery
+block:id=%refinery,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %thermopneumaticProcessingPlant:* (thermopneumaticProcessingPlant), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockThermopneumaticProcessingPlant
+block:id=%thermopneumaticProcessingPlant,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %keroseneLamp:* (keroseneLamp), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockKeroseneLamp
+block:id=%keroseneLamp,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
+# %sentryTurret:* (sentryTurret), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.block.BlockSentryTurret
+block:id=%sentryTurret,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:pneumaticcraft/BlockPressureTube
+
 # %droneInterface:* (droneInterface), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.computercraft.BlockDroneInterface
 block:id=%droneInterface,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
-# %pneumaticEngine:* (pneumaticEngine), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.buildcraft.BlockPneumaticEngine
-block:id=%pneumaticEngine,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+# %pneumaticDynamo:* (pneumaticDynamo), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.cofh.BlockPneumaticDynamo
+block:id=%pneumaticDynamo,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
-# %kineticCompressor:* (kineticCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.buildcraft.BlockKineticCompressor
-block:id=%kineticCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
+# %fluxCompressor:* (fluxCompressor), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.cofh.BlockFluxCompressor
+block:id=%fluxCompressor,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube
 
 # %pneumaticGenerator:* (pneumaticGenerator), render=pneumaticCraft.client.render.tileentity.RenderModelBase(CUSTOM), opaque=false,cls=pneumaticCraft.common.thirdparty.ic2.BlockPneumaticGenerator
 block:id=%pneumaticGenerator,data=*,stdrot=true,face0-5=0:pneumaticcraft/BlockPressureTube

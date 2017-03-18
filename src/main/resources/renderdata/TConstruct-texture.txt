@@ -1,4 +1,4 @@
-# TConstruct 1.7.10-1.7.1.build771
+# TConstruct 1.7.10-1.8.8.build991
 version:1.7
 modname:TConstruct
 
@@ -39,13 +39,17 @@ texture:id=tinker/Landmine,filename=assets/tinker/textures/blocks/Landmine.png
 texture:id=tinker/blockcast_bottom,filename=assets/tinker/textures/blocks/blockcast_bottom.png
 texture:id=tinker/blockcast_side,filename=assets/tinker/textures/blocks/blockcast_side.png
 texture:id=tinker/blockcast_top,filename=assets/tinker/textures/blocks/blockcast_top.png
+texture:id=tinker/bricks/brick_alumite,filename=assets/tinker/textures/blocks/bricks/brick_alumite.png
+texture:id=tinker/bricks/brick_ardite,filename=assets/tinker/textures/blocks/bricks/brick_ardite.png
 texture:id=tinker/bricks/brick_blueslime,filename=assets/tinker/textures/blocks/bricks/brick_blueslime.png
 texture:id=tinker/bricks/brick_bone,filename=assets/tinker/textures/blocks/bricks/brick_bone.png
+texture:id=tinker/bricks/brick_cobalt,filename=assets/tinker/textures/blocks/bricks/brick_cobalt.png
 texture:id=tinker/bricks/brick_diamond,filename=assets/tinker/textures/blocks/bricks/brick_diamond.png
 texture:id=tinker/bricks/brick_endstone,filename=assets/tinker/textures/blocks/bricks/brick_endstone.png
 texture:id=tinker/bricks/brick_gold,filename=assets/tinker/textures/blocks/bricks/brick_gold.png
 texture:id=tinker/bricks/brick_iron,filename=assets/tinker/textures/blocks/bricks/brick_iron.png
 texture:id=tinker/bricks/brick_lapis,filename=assets/tinker/textures/blocks/bricks/brick_lapis.png
+texture:id=tinker/bricks/brick_manyullyn,filename=assets/tinker/textures/blocks/bricks/brick_manyullyn.png
 texture:id=tinker/bricks/brick_netherrack,filename=assets/tinker/textures/blocks/bricks/brick_netherrack.png
 texture:id=tinker/bricks/brick_obsidian,filename=assets/tinker/textures/blocks/bricks/brick_obsidian.png
 texture:id=tinker/bricks/brick_obsidian_ingot,filename=assets/tinker/textures/blocks/bricks/brick_obsidian_ingot.png
@@ -53,13 +57,17 @@ texture:id=tinker/bricks/brick_redstone,filename=assets/tinker/textures/blocks/b
 texture:id=tinker/bricks/brick_sandstone,filename=assets/tinker/textures/blocks/bricks/brick_sandstone.png
 texture:id=tinker/bricks/brick_slime,filename=assets/tinker/textures/blocks/bricks/brick_slime.png
 texture:id=tinker/bricks/brick_stone_refined,filename=assets/tinker/textures/blocks/bricks/brick_stone_refined.png
+texture:id=tinker/bricks/fancybrick_alumite,filename=assets/tinker/textures/blocks/bricks/fancybrick_alumite.png
+texture:id=tinker/bricks/fancybrick_ardite,filename=assets/tinker/textures/blocks/bricks/fancybrick_ardite.png
 texture:id=tinker/bricks/fancybrick_blueslime,filename=assets/tinker/textures/blocks/bricks/fancybrick_blueslime.png
 texture:id=tinker/bricks/fancybrick_bone,filename=assets/tinker/textures/blocks/bricks/fancybrick_bone.png
+texture:id=tinker/bricks/fancybrick_cobalt,filename=assets/tinker/textures/blocks/bricks/fancybrick_cobalt.png
 texture:id=tinker/bricks/fancybrick_diamond,filename=assets/tinker/textures/blocks/bricks/fancybrick_diamond.png
 texture:id=tinker/bricks/fancybrick_endstone,filename=assets/tinker/textures/blocks/bricks/fancybrick_endstone.png
 texture:id=tinker/bricks/fancybrick_gold,filename=assets/tinker/textures/blocks/bricks/fancybrick_gold.png
 texture:id=tinker/bricks/fancybrick_iron,filename=assets/tinker/textures/blocks/bricks/fancybrick_iron.png
 texture:id=tinker/bricks/fancybrick_lapis,filename=assets/tinker/textures/blocks/bricks/fancybrick_lapis.png
+texture:id=tinker/bricks/fancybrick_manyullyn,filename=assets/tinker/textures/blocks/bricks/fancybrick_manyullyn.png
 texture:id=tinker/bricks/fancybrick_netherrack,filename=assets/tinker/textures/blocks/bricks/fancybrick_netherrack.png
 texture:id=tinker/bricks/fancybrick_obsidian,filename=assets/tinker/textures/blocks/bricks/fancybrick_obsidian.png
 texture:id=tinker/bricks/fancybrick_obsidian_ingot,filename=assets/tinker/textures/blocks/bricks/fancybrick_obsidian_ingot.png
@@ -175,6 +183,8 @@ texture:id=tinker/liquid_electrum,filename=assets/tinker/textures/blocks/liquid_
 texture:id=tinker/liquid_electrum_flow,filename=assets/tinker/textures/blocks/liquid_electrum_flow.png
 texture:id=tinker/liquid_ender,filename=assets/tinker/textures/blocks/liquid_ender.png
 texture:id=tinker/liquid_ender_flow,filename=assets/tinker/textures/blocks/liquid_ender_flow.png
+texture:id=tinker/liquid_enderium,filename=assets/tinker/textures/blocks/liquid_enderium.png
+texture:id=tinker/liquid_enderium_flow,filename=assets/tinker/textures/blocks/liquid_enderium_flow.png
 texture:id=tinker/liquid_ferrous,filename=assets/tinker/textures/blocks/liquid_ferrous.png
 texture:id=tinker/liquid_ferrous_flow,filename=assets/tinker/textures/blocks/liquid_ferrous_flow.png
 texture:id=tinker/liquid_glass,filename=assets/tinker/textures/blocks/liquid_glass.png
@@ -189,13 +199,19 @@ texture:id=tinker/liquid_iron,filename=assets/tinker/textures/blocks/liquid_iron
 texture:id=tinker/liquid_iron_flow,filename=assets/tinker/textures/blocks/liquid_iron_flow.png
 texture:id=tinker/liquid_lead,filename=assets/tinker/textures/blocks/liquid_lead.png
 texture:id=tinker/liquid_lead_flow,filename=assets/tinker/textures/blocks/liquid_lead_flow.png
+texture:id=tinker/liquid_lumium,filename=assets/tinker/textures/blocks/liquid_lumium.png
+texture:id=tinker/liquid_lumium_flow,filename=assets/tinker/textures/blocks/liquid_lumium_flow.png
 texture:id=tinker/liquid_manyullyn,filename=assets/tinker/textures/blocks/liquid_manyullyn.png
 texture:id=tinker/liquid_manyullyn_flow,filename=assets/tinker/textures/blocks/liquid_manyullyn_flow.png
+texture:id=tinker/liquid_mithril,filename=assets/tinker/textures/blocks/liquid_mithril.png
+texture:id=tinker/liquid_mithril_flow,filename=assets/tinker/textures/blocks/liquid_mithril_flow.png
 texture:id=tinker/liquid_obsidian,filename=assets/tinker/textures/blocks/liquid_obsidian.png
 texture:id=tinker/liquid_obsidian_flow,filename=assets/tinker/textures/blocks/liquid_obsidian_flow.png
 texture:id=tinker/liquid_pigiron,filename=assets/tinker/textures/blocks/liquid_pigiron.png
 texture:id=tinker/liquid_shiny,filename=assets/tinker/textures/blocks/liquid_shiny.png
 texture:id=tinker/liquid_shiny_flow,filename=assets/tinker/textures/blocks/liquid_shiny_flow.png
+texture:id=tinker/liquid_signalum,filename=assets/tinker/textures/blocks/liquid_signalum.png
+texture:id=tinker/liquid_signalum_flow,filename=assets/tinker/textures/blocks/liquid_signalum_flow.png
 texture:id=tinker/liquid_silver,filename=assets/tinker/textures/blocks/liquid_silver.png
 texture:id=tinker/liquid_silver_flow,filename=assets/tinker/textures/blocks/liquid_silver_flow.png
 texture:id=tinker/liquid_steel,filename=assets/tinker/textures/blocks/liquid_steel.png
@@ -418,7 +434,7 @@ block:id=%slime.grass,data=1,stdrot=true,face0=0:minecraft/dirt,face1=0:tinker/s
 block:id=%slime.grass,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0=0:tinker/slimedirt_blue,face1=0:tinker/slimegrass_green_top,face2-5=0:tinker/slimegrass_green_blue_side
 
 # %slime.grass.tall:* (slime.grass.tall), render=(CROSSEDSQUARES), opaque=false,cls=tconstruct.blocks.slime.SlimeTallGrass
-block:id=%slime.grass.tall,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:tinker/slimegrass_blue_tall
+block:id=%slime.grass.tall,data=*,stdrot=true,transparency=TRANSPARENT,patch0=0:tinker/slimegrass_blue_tall
 
 # %slime.leaves:* (slime.leaves), render=(STANDARD), opaque=false,cls=tconstruct.blocks.slime.SlimeLeaves
 block:id=%slime.leaves,data=*,stdrot=true,face0-5=0:tinker/slimeleaves_blue_fancy
@@ -477,6 +493,17 @@ block:id=%decoration.multibrickfancy,data=12,stdrot=true,face0-5=0:tinker/bricks
 block:id=%decoration.multibrickfancy,data=13,stdrot=true,face0-5=0:tinker/bricks/fancybrick_obsidian_ingot
 block:id=%decoration.multibrickfancy,data=14,stdrot=true,face0-5=0:tinker/bricks/fancybrick_stone
 block:id=%decoration.multibrickfancy,data=15,stdrot=true,face0-5=0:tinker/bricks/road_stone
+
+# %decoration.multibrickmetal:* (decoration.multibrickmetal), render=(STANDARD), opaque=true,cls=tconstruct.tools.blocks.MultiBrickMetal
+block:id=%decoration.multibrickmetal,data=0,stdrot=true,face0-5=0:tinker/bricks/brick_alumite
+block:id=%decoration.multibrickmetal,data=1,stdrot=true,face0-5=0:tinker/bricks/brick_ardite
+block:id=%decoration.multibrickmetal,data=2,stdrot=true,face0-5=0:tinker/bricks/brick_cobalt
+block:id=%decoration.multibrickmetal,data=3,stdrot=true,face0-5=0:tinker/bricks/brick_manyullyn
+block:id=%decoration.multibrickmetal,data=4,stdrot=true,face0-5=0:tinker/bricks/fancybrick_alumite
+block:id=%decoration.multibrickmetal,data=5,stdrot=true,face0-5=0:tinker/bricks/fancybrick_ardite
+block:id=%decoration.multibrickmetal,data=6,stdrot=true,face0-5=0:tinker/bricks/fancybrick_cobalt
+block:id=%decoration.multibrickmetal,data=7,stdrot=true,face0-5=0:tinker/bricks/fancybrick_manyullyn
+block:id=%decoration.multibrickmetal,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:tinker/bricks/brick_alumite
 
 # %ore.berries.one:* (ore.berries.one), render=tconstruct.world.model.OreberryRender(CUSTOM), opaque=false,cls=tconstruct.world.blocks.OreberryBush
 block:id=%ore.berries.one,data=0,stdrot=true,transparency=TRANSPARENT,face0-5=0:tinker/crops/berry_iron_fancy
@@ -660,9 +687,6 @@ block:id=%molten.stone,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=1
 # %molten.emerald:* (molten.emerald), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
 block:id=%molten.emerald,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_villager,face2-5=12000:tinker/liquid_villager_flow
 
-# %liquid.blood:* (liquid.blood), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.BloodBlock
-block:id=%liquid.blood,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_cow,face2-5=12000:tinker/liquid_cow_flow
-
 # %fluid.molten.nickel:* (fluid.molten.nickel), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
 block:id=%fluid.molten.nickel,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_ferrous,face2-5=12000:tinker/liquid_ferrous_flow
 
@@ -683,6 +707,21 @@ block:id=%fluid.molten.electrum,data=*,stdrot=true,transparency=SEMITRANSPARENT,
 
 # %fluid.ender:* (fluid.ender), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
 block:id=%fluid.ender,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_ender,face2-5=12000:tinker/liquid_ender_flow
+
+# %fluid.molten.lumium:* (fluid.molten.lumium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
+block:id=%fluid.molten.lumium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_lumium,face2-5=12000:tinker/liquid_lumium_flow
+
+# %fluid.molten.signalum:* (fluid.molten.signalum), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
+block:id=%fluid.molten.signalum,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_signalum,face2-5=12000:tinker/liquid_signalum_flow
+
+# %fluid.molten.mithril:* (fluid.molten.mithril), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
+block:id=%fluid.molten.mithril,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_mithril,face2-5=12000:tinker/liquid_mithril_flow
+
+# %fluid.molten.enderium:* (fluid.molten.enderium), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.TConstructFluid
+block:id=%fluid.molten.enderium,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_enderium,face2-5=12000:tinker/liquid_enderium_flow
+
+# %liquid.blood:* (liquid.blood), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.BloodBlock
+block:id=%liquid.blood,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_cow,face2-5=12000:tinker/liquid_cow_flow
 
 # %liquid.glue:* (liquid.glue), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=tconstruct.smeltery.blocks.GlueFluid
 block:id=%liquid.glue,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:tinker/liquid_glue,face2-5=12000:tinker/liquid_glue_flow

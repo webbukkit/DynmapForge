@@ -1,4 +1,4 @@
-# IC2NuclearControl 2.0.5b-Unicorn
+# IC2NuclearControl 2.4.2a
 version:1.7
 modname:IC2NuclearControl
 
@@ -7,6 +7,9 @@ cfgfile:config/IC2NuclearControl.cfg
 
 
 texturepath:assets/ic2nuclearcontrol/textures/blocks/
+texture:id=nuclearcontrol/BRBlock/RFReactorPart,filename=assets/nuclearcontrol/textures/blocks/BRBlock/RFReactorPart.png
+texture:id=nuclearcontrol/BRBlock/blockReactorPart,filename=assets/nuclearcontrol/textures/blocks/BRBlock/blockReactorPart.png
+texture:id=nuclearcontrol/aeMonitor/monitorSide,filename=assets/nuclearcontrol/textures/blocks/aeMonitor/monitorSide.png
 texture:id=nuclearcontrol/averageCounter/input,filename=assets/nuclearcontrol/textures/blocks/averageCounter/input.png
 texture:id=nuclearcontrol/averageCounter/output,filename=assets/nuclearcontrol/textures/blocks/averageCounter/output.png
 texture:id=nuclearcontrol/energyCounter/input,filename=assets/nuclearcontrol/textures/blocks/energyCounter/input.png
@@ -27,6 +30,8 @@ texture:id=nuclearcontrol/infoPanel/panelSide,filename=assets/nuclearcontrol/tex
 texture:id=nuclearcontrol/light/lamp0,filename=assets/nuclearcontrol/textures/blocks/light/lamp0.png
 texture:id=nuclearcontrol/light/lamp1,filename=assets/nuclearcontrol/textures/blocks/light/lamp1.png
 texture:id=nuclearcontrol/light/lamp2,filename=assets/nuclearcontrol/textures/blocks/light/lamp2.png
+texture:id=nuclearcontrol/light/lamp3,filename=assets/nuclearcontrol/textures/blocks/light/lamp3.png
+texture:id=nuclearcontrol/light/lamp4,filename=assets/nuclearcontrol/textures/blocks/light/lamp4.png
 texture:id=nuclearcontrol/rangeTrigger/back,filename=assets/nuclearcontrol/textures/blocks/rangeTrigger/back.png
 texture:id=nuclearcontrol/rangeTrigger/faceGray,filename=assets/nuclearcontrol/textures/blocks/rangeTrigger/faceGray.png
 texture:id=nuclearcontrol/rangeTrigger/side,filename=assets/nuclearcontrol/textures/blocks/rangeTrigger/side.png
@@ -56,3 +61,12 @@ block:id=%blockNuclearControlMain,data=10,stdrot=true,face0=0:nuclearcontrol/inf
 block:id=%blockNuclearControlLight,data=0,stdrot=true,face0-5=0:nuclearcontrol/light/lamp0
 block:id=%blockNuclearControlLight,data=1,stdrot=true,face0-5=0:nuclearcontrol/light/lamp1
 block:id=%blockNuclearControlLight,data=2,stdrot=true,face0-5=0:nuclearcontrol/light/lamp2
+block:id=%blockNuclearControlLight,data=3,stdrot=true,face0-5=0:nuclearcontrol/light/lamp3
+block:id=%blockNuclearControlLight,data=4,stdrot=true,face0-5=0:nuclearcontrol/light/lamp4
+
+# %NC-BRinfoFetch:* (NC-BRinfoFetch), render=(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.crossmod.bigreactors.BlockActiveReactorInfoFetch
+block:id=%NC-BRinfoFetch,data=0,data=1,stdrot=true,face0-1=0:nuclearcontrol/BRBlock/blockReactorPart,face2-5=0:nuclearcontrol/BRBlock/RFReactorPart
+block:id=%NC-BRinfoFetch,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-5=0:nuclearcontrol/BRBlock/blockReactorPart
+
+# %networkLink:* (networkLink), render=(STANDARD), opaque=true,cls=shedar.mods.ic2.nuclearcontrol.crossmod.appeng.BlockNetworkLink
+block:id=%networkLink,data=*,stdrot=true,face0-5=0:nuclearcontrol/aeMonitor/monitorSide

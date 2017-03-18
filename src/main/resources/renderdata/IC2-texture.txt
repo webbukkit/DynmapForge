@@ -1,4 +1,4 @@
-# IC2 2.2.648-experimental
+# IC2 2.2.827-experimental
 version:1.7
 modname:IC2
 
@@ -58,18 +58,18 @@ texture:id=ic2/cf/blockWall.purple,filename=assets/ic2/textures/blocks/cf/blockW
 texture:id=ic2/cf/blockWall.red,filename=assets/ic2/textures/blocks/cf/blockWall.red.png
 texture:id=ic2/cf/blockWall.white,filename=assets/ic2/textures/blocks/cf/blockWall.white.png
 texture:id=ic2/cf/blockWall.yellow,filename=assets/ic2/textures/blocks/cf/blockWall.yellow.png
-texture:id=ic2/crop/blockCrop.Infested.1,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.1.png
-texture:id=ic2/crop/blockCrop.Infested.2,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.2.png
-texture:id=ic2/crop/blockCrop.Infested.3,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.3.png
-texture:id=ic2/crop/blockCrop.Infested.4,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.4.png
-texture:id=ic2/crop/blockCrop.Infested.5,filename=assets/ic2/textures/blocks/crop/blockCrop.Infested.5.png
-texture:id=ic2/crop/blockCrop.Weed.1,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.1.png
-texture:id=ic2/crop/blockCrop.Weed.2,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.2.png
-texture:id=ic2/crop/blockCrop.Weed.3,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.3.png
-texture:id=ic2/crop/blockCrop.Weed.4,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.4.png
-texture:id=ic2/crop/blockCrop.Weed.5,filename=assets/ic2/textures/blocks/crop/blockCrop.Weed.5.png
-texture:id=ic2/crop/blockCrop.stick,filename=assets/ic2/textures/blocks/crop/blockCrop.stick.png
-texture:id=ic2/crop/blockCrop.stick.upgraded,filename=assets/ic2/textures/blocks/crop/blockCrop.stick.upgraded.png
+texture:id=ic2/crop/infested.1,filename=assets/ic2/textures/blocks/crop/infested.1.png
+texture:id=ic2/crop/infested.2,filename=assets/ic2/textures/blocks/crop/infested.2.png
+texture:id=ic2/crop/infested.3,filename=assets/ic2/textures/blocks/crop/infested.3.png
+texture:id=ic2/crop/infested.4,filename=assets/ic2/textures/blocks/crop/infested.4.png
+texture:id=ic2/crop/infested.5,filename=assets/ic2/textures/blocks/crop/infested.5.png
+texture:id=ic2/crop/stick,filename=assets/ic2/textures/blocks/crop/stick.png
+texture:id=ic2/crop/stick.upgraded,filename=assets/ic2/textures/blocks/crop/stick.upgraded.png
+texture:id=ic2/crop/weed.1,filename=assets/ic2/textures/blocks/crop/weed.1.png
+texture:id=ic2/crop/weed.2,filename=assets/ic2/textures/blocks/crop/weed.2.png
+texture:id=ic2/crop/weed.3,filename=assets/ic2/textures/blocks/crop/weed.3.png
+texture:id=ic2/crop/weed.4,filename=assets/ic2/textures/blocks/crop/weed.4.png
+texture:id=ic2/crop/weed.5,filename=assets/ic2/textures/blocks/crop/weed.5.png
 texture:id=ic2/fluids/biogas_still,filename=assets/ic2/textures/blocks/fluids/biogas_still.png
 texture:id=ic2/fluids/biomass_flow,filename=assets/ic2/textures/blocks/fluids/biomass_flow.png
 texture:id=ic2/fluids/biomass_still,filename=assets/ic2/textures/blocks/fluids/biomass_still.png
@@ -81,6 +81,8 @@ texture:id=ic2/fluids/distilledwater_flow,filename=assets/ic2/textures/blocks/fl
 texture:id=ic2/fluids/distilledwater_still,filename=assets/ic2/textures/blocks/fluids/distilledwater_still.png
 texture:id=ic2/fluids/hotcoolant_flow,filename=assets/ic2/textures/blocks/fluids/hotcoolant_flow.png
 texture:id=ic2/fluids/hotcoolant_still,filename=assets/ic2/textures/blocks/fluids/hotcoolant_still.png
+texture:id=ic2/fluids/hotwater_flow,filename=assets/ic2/textures/blocks/fluids/hotwater_flow.png
+texture:id=ic2/fluids/hotwater_still,filename=assets/ic2/textures/blocks/fluids/hotwater_still.png
 texture:id=ic2/fluids/pahoehoelava_still,filename=assets/ic2/textures/blocks/fluids/pahoehoelava_still.png
 texture:id=ic2/fluids/steam_still,filename=assets/ic2/textures/blocks/fluids/steam_still.png
 texture:id=ic2/fluids/superheatedsteam_still,filename=assets/ic2/textures/blocks/fluids/superheatedsteam_still.png
@@ -100,7 +102,11 @@ texture:id=ic2/heatgenerator/blockElectricHeatGenerator,filename=assets/ic2/text
 texture:id=ic2/heatgenerator/blockFluidHeatGenerator,filename=assets/ic2/textures/blocks/heatgenerator/blockFluidHeatGenerator.png
 texture:id=ic2/heatgenerator/blockRTHeatGenerator,filename=assets/ic2/textures/blocks/heatgenerator/blockRTHeatGenerator.png
 texture:id=ic2/heatgenerator/blockSolidHeatGenerator,filename=assets/ic2/textures/blocks/heatgenerator/blockSolidHeatGenerator.png
+texture:id=ic2/kineticgenerator/blockElectricKineticGenerator,filename=assets/ic2/textures/blocks/kineticgenerator/blockElectricKineticGenerator.png
+texture:id=ic2/kineticgenerator/blockManualKineticGenerator,filename=assets/ic2/textures/blocks/kineticgenerator/blockManualKineticGenerator.png
 texture:id=ic2/kineticgenerator/blockSteamKineticGenerator,filename=assets/ic2/textures/blocks/kineticgenerator/blockSteamKineticGenerator.png
+texture:id=ic2/kineticgenerator/blockStirlingKineticGenerator,filename=assets/ic2/textures/blocks/kineticgenerator/blockStirlingKineticGenerator.png
+texture:id=ic2/kineticgenerator/blockWaterKineticGenerator,filename=assets/ic2/textures/blocks/kineticgenerator/blockWaterKineticGenerator.png
 texture:id=ic2/kineticgenerator/blockWindKineticGenerator,filename=assets/ic2/textures/blocks/kineticgenerator/blockWindKineticGenerator.png
 texture:id=ic2/machine/blockAdvMachine,filename=assets/ic2/textures/blocks/machine/blockAdvMachine.png
 texture:id=ic2/machine/blockAdvMiner,filename=assets/ic2/textures/blocks/machine/blockAdvMiner.png
@@ -122,6 +128,7 @@ texture:id=ic2/machine/blockFluidRegulator,filename=assets/ic2/textures/blocks/m
 texture:id=ic2/machine/blockInduction,filename=assets/ic2/textures/blocks/machine/blockInduction.png
 texture:id=ic2/machine/blockIronFurnace,filename=assets/ic2/textures/blocks/machine/blockIronFurnace.png
 texture:id=ic2/machine/blockItemBuffer,filename=assets/ic2/textures/blocks/machine/blockItemBuffer.png
+texture:id=ic2/machine/blockLathe,filename=assets/ic2/textures/blocks/machine/blockLathe.png
 texture:id=ic2/machine/blockLiquidHeatExchanger,filename=assets/ic2/textures/blocks/machine/blockLiquidHeatExchanger.png
 texture:id=ic2/machine/blockMacerator,filename=assets/ic2/textures/blocks/machine/blockMacerator.png
 texture:id=ic2/machine/blockMachine,filename=assets/ic2/textures/blocks/machine/blockMachine.png
@@ -291,6 +298,10 @@ block:id=%blockCable,data=13,stdrot=true,face0-5=0:ic2/wiring/cable/blockTinCabl
 # %blockKineticGenerator:* (blockKineticGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.kineticgenerator.block.BlockKineticGenerator
 block:id=%blockKineticGenerator,data=0,stdrot=true,face0-5=0:ic2/kineticgenerator/blockWindKineticGenerator
 block:id=%blockKineticGenerator,data=1,stdrot=true,face0-5=0:ic2/kineticgenerator/blockSteamKineticGenerator
+block:id=%blockKineticGenerator,data=2,stdrot=true,face0-5=0:ic2/kineticgenerator/blockElectricKineticGenerator
+block:id=%blockKineticGenerator,data=3,stdrot=true,face0-5=0:ic2/kineticgenerator/blockManualKineticGenerator
+block:id=%blockKineticGenerator,data=4,stdrot=true,face0-5=0:ic2/kineticgenerator/blockWaterKineticGenerator
+block:id=%blockKineticGenerator,data=5,stdrot=true,face0-5=0:ic2/kineticgenerator/blockStirlingKineticGenerator
 
 # %blockHeatGenerator:* (blockHeatGenerator), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.heatgenerator.block.BlockHeatGenerator
 block:id=%blockHeatGenerator,data=0,stdrot=true,face0-5=0:ic2/heatgenerator/blockSolidHeatGenerator
@@ -386,6 +397,7 @@ block:id=%blockMachine3,data=4,stdrot=true,face0-5=0:ic2/machine/blockFluidDistr
 block:id=%blockMachine3,data=5,stdrot=true,face0-5=0:ic2/machine/blockSortingMachine
 block:id=%blockMachine3,data=6,stdrot=true,face0-5=0:ic2/machine/blockItemBuffer
 block:id=%blockMachine3,data=7,stdrot=true,face0-5=0:ic2/machine/blockCropHavester
+block:id=%blockMachine3,data=8,stdrot=true,face0-5=0:ic2/machine/blockLathe
 
 # %blockLuminatorDark:* (blockLuminatorDark), render=ic2.core.block.wiring.RenderBlockLuminator(CUSTOM), opaque=false,cls=ic2.core.block.wiring.BlockLuminator
 block:id=%blockLuminatorDark,data=*,stdrot=true,face0-5=0:ic2/wiring/blockLuminatorDark
@@ -417,19 +429,19 @@ block:id=%blockDynamite,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2
 block:id=%blockDynamiteRemote,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/blockDynamiteRemote
 
 # %blockCrop:* (blockCrop), render=ic2.core.block.RenderBlockCrop(CROPS), opaque=false,cls=ic2.core.crop.BlockCrop
-block:id=%blockCrop,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
-block:id=%blockCrop,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick.upgraded
-block:id=%blockCrop,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.1
-block:id=%blockCrop,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.2
-block:id=%blockCrop,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.3
-block:id=%blockCrop,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.4
-block:id=%blockCrop,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Weed.5
-block:id=%blockCrop,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.1
-block:id=%blockCrop,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.2
-block:id=%blockCrop,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.3
-block:id=%blockCrop,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.4
-block:id=%blockCrop,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.Infested.5
-block:id=%blockCrop,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/blockCrop.stick
+block:id=%blockCrop,data=0,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/stick
+block:id=%blockCrop,data=1,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/stick.upgraded
+block:id=%blockCrop,data=2,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/weed.1
+block:id=%blockCrop,data=3,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/weed.2
+block:id=%blockCrop,data=4,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/weed.3
+block:id=%blockCrop,data=5,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/weed.4
+block:id=%blockCrop,data=6,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/weed.5
+block:id=%blockCrop,data=7,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/infested.1
+block:id=%blockCrop,data=8,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/infested.2
+block:id=%blockCrop,data=9,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/infested.3
+block:id=%blockCrop,data=10,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/infested.4
+block:id=%blockCrop,data=11,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/infested.5
+block:id=%blockCrop,data=12,data=13,data=14,data=15,stdrot=true,transparency=TRANSPARENT,patch0=0:ic2/crop/stick
 
 # %blockBarrel:* (blockBarrel), render=ic2.core.block.RenderBlockDefault(CUSTOM), opaque=true,cls=ic2.core.block.BlockBarrel
 block:id=%blockBarrel,data=*,stdrot=true,face0-5=0:ic2/blockBarrel
@@ -463,3 +475,6 @@ block:id=%fluidSuperheatedSteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,
 
 # %fluidSteam:* (fluidSteam), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
 block:id=%fluidSteam,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-5=12000:ic2/fluids/steam_still
+
+# %fluidHotWater:* (fluidHotWater), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=ic2.core.block.BlockIC2Fluid
+block:id=%fluidHotWater,data=*,stdrot=true,transparency=SEMITRANSPARENT,face0-1=12000:ic2/fluids/hotwater_still,face2-5=12000:ic2/fluids/hotwater_flow

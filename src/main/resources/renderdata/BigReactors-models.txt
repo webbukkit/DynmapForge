@@ -1,4 +1,4 @@
-# BigReactors 0.4.0rc10
+# BigReactors 0.4.3A
 version:1.7
 modname:BigReactors
 

@@ -1,4 +1,4 @@
-# EnderIO 1.7.10-2.1.7.254
+# EnderIO 1.7.10-2.3.0.429_beta
 version:1.7
 modname:EnderIO
 
@@ -25,7 +25,7 @@ patch:id=HorizY100ZTop,Ox=0.0,Oy=1.0,Oz=0.0,Ux=1.0,Uy=1.0,Uz=0.0,Vx=0.0,Vy=1.0,V
 
 # %blockStirlingGenerator:* (blockStirlingGenerator), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.generator.stirling.BlockStirlingGenerator
 
-# %blockSolarPanel:* (blockSolarPanel), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.solar.BlockSolarPanel
+# %blockSolarPanel:* (blockSolarPanel), render=crazypants.enderio.machine.solar.SolarPanelRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.solar.BlockSolarPanel
 boxblock:id=%blockSolarPanel,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.15000000596046448,zmin=0.0,zmax=1.0,data=*
 
 # %blockSagMill:* (blockSagMill), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.crusher.BlockCrusher
@@ -74,10 +74,27 @@ boxblock:id=%blockPaintedCarpet,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.0625,zmin=0.0,
 
 # %blockPowerMonitor:* (blockPowerMonitor), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.monitor.BlockPowerMonitor
 
-# %blockFarmStation:* (blockFarmStation), render=crazypants.enderio.machine.farm.FarmingStationRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.farm.BlockFarmStation
-boxblock:id=%blockFarmStation,xmin=0.0,xmax=1.0,ymin=0.0,ymax=0.8500000238418579,zmin=0.0,zmax=1.0,data=*
+# %blockBuffer:* (blockBuffer), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.buffer.BlockBuffer
+
+# %blockInventoryPanel:* (blockInventoryPanel), render=(STANDARD), opaque=false,cls=crazypants.enderio.machine.invpanel.BlockInventoryPanel
+boxblock:id=%blockInventoryPanel,xmin=0.0,xmax=1.0,ymin=0.8125,ymax=1.0,zmin=0.0,zmax=1.0,data=*
 
 # %blockSliceAndSplice:* (blockSliceAndSplice), render=crazypants.enderio.machine.AbstractMachineRenderer(CUSTOM), opaque=true,cls=crazypants.enderio.machine.slicensplice.BlockSliceAndSplice
+
+# %blockAttractor:* (blockAttractor), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.attractor.BlockAttractor
+boxblock:id=%blockAttractor,xmin=0.10999999940395355,xmax=0.9100000262260437,ymin=0.0,ymax=0.47999998927116394,zmin=0.10999999940395355,zmax=0.9100000262260437,data=*
+
+# %blockSpawnGuard:* (blockSpawnGuard), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.aversion.BlockAversionObelisk
+boxblock:id=%blockSpawnGuard,xmin=0.10999999940395355,xmax=0.9100000262260437,ymin=0.0,ymax=0.47999998927116394,zmin=0.10999999940395355,zmax=0.9100000262260437,data=*
+
+# %blockExperienceObelisk:* (blockExperienceObelisk), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.xp.BlockExperienceObelisk
+boxblock:id=%blockExperienceObelisk,xmin=0.10999999940395355,xmax=0.9100000262260437,ymin=0.0,ymax=0.47999998927116394,zmin=0.10999999940395355,zmax=0.9100000262260437,data=*
+
+# %blockWeatherObelisk:* (blockWeatherObelisk), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.weather.BlockWeatherObelisk
+boxblock:id=%blockWeatherObelisk,xmin=0.10999999940395355,xmax=0.9100000262260437,ymin=0.0,ymax=0.47999998927116394,zmin=0.10999999940395355,zmax=0.9100000262260437,data=*
+
+# %blockInhibitorObelisk:* (blockInhibitorObelisk), render=crazypants.enderio.machine.obelisk.ObeliskRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.obelisk.inhibitor.BlockInhibitorObelisk
+boxblock:id=%blockInhibitorObelisk,xmin=0.10999999940395355,xmax=0.9100000262260437,ymin=0.0,ymax=0.47999998927116394,zmin=0.10999999940395355,zmax=0.9100000262260437,data=*
 
 # %blockDarkSteelPressurePlate:* (blockDarkSteelPressurePlate), render=(STANDARD), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelPressurePlate
 boxblock:id=%blockDarkSteelPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=0
@@ -85,6 +102,12 @@ boxblock:id=%blockDarkSteelPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0
 boxblock:id=%blockDarkSteelPressurePlate,xmin=0.0625,xmax=0.9375,ymin=0.0,ymax=0.0625,zmin=0.0625,zmax=0.9375,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15
 
 # %blockDarkSteelAnvil:* (blockDarkSteelAnvil), render=(ANVIL), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelAnvil
+
+# %blockDarkSteelLadder:* (blockDarkSteelLadder), render=(LADDER), opaque=false,cls=crazypants.enderio.block.BlockDarkSteelLadder
+patchblock:id=%blockDarkSteelLadder,patch0=VertX0In@270,data=2
+patchblock:id=%blockDarkSteelLadder,patch0=VertX0In@90,data=3
+patchblock:id=%blockDarkSteelLadder,patch0=VertX0In@180,data=4
+patchblock:id=%blockDarkSteelLadder,patch0=VertX0In,data=5
 
 # %blockElectricLight:* (blockElectricLight), render=crazypants.enderio.machine.light.ElectricLightRenderer(CUSTOM), opaque=false,cls=crazypants.enderio.machine.light.BlockElectricLight
 boxblock:id=%blockElectricLight,xmin=0.3499999940395355,xmax=0.6499999761581421,ymin=0.0,ymax=0.05000000074505806,zmin=0.3499999940395355,zmax=0.6499999761581421,data=*
@@ -173,6 +196,54 @@ boxblock:id=%blockFire_water,ymax=0.5,data=12
 boxblock:id=%blockFire_water,ymax=0.375,data=13
 boxblock:id=%blockFire_water,ymax=0.25,data=14
 boxblock:id=%blockFire_water,ymax=0.125,data=15
+
+# %blockLiquid_sunshine:* (blockLiquid_sunshine), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+boxblock:id=%blockLiquid_sunshine,ymax=0.875,data=1
+boxblock:id=%blockLiquid_sunshine,ymax=0.75,data=2
+boxblock:id=%blockLiquid_sunshine,ymax=0.625,data=3
+boxblock:id=%blockLiquid_sunshine,ymax=0.5,data=4
+boxblock:id=%blockLiquid_sunshine,ymax=0.375,data=5
+boxblock:id=%blockLiquid_sunshine,ymax=0.25,data=6
+boxblock:id=%blockLiquid_sunshine,ymax=0.125,data=7
+boxblock:id=%blockLiquid_sunshine,ymax=0.875,data=9
+boxblock:id=%blockLiquid_sunshine,ymax=0.75,data=10
+boxblock:id=%blockLiquid_sunshine,ymax=0.625,data=11
+boxblock:id=%blockLiquid_sunshine,ymax=0.5,data=12
+boxblock:id=%blockLiquid_sunshine,ymax=0.375,data=13
+boxblock:id=%blockLiquid_sunshine,ymax=0.25,data=14
+boxblock:id=%blockLiquid_sunshine,ymax=0.125,data=15
+
+# %blockCloud_seed:* (blockCloud_seed), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+boxblock:id=%blockCloud_seed,ymax=0.875,data=1
+boxblock:id=%blockCloud_seed,ymax=0.75,data=2
+boxblock:id=%blockCloud_seed,ymax=0.625,data=3
+boxblock:id=%blockCloud_seed,ymax=0.5,data=4
+boxblock:id=%blockCloud_seed,ymax=0.375,data=5
+boxblock:id=%blockCloud_seed,ymax=0.25,data=6
+boxblock:id=%blockCloud_seed,ymax=0.125,data=7
+boxblock:id=%blockCloud_seed,ymax=0.875,data=9
+boxblock:id=%blockCloud_seed,ymax=0.75,data=10
+boxblock:id=%blockCloud_seed,ymax=0.625,data=11
+boxblock:id=%blockCloud_seed,ymax=0.5,data=12
+boxblock:id=%blockCloud_seed,ymax=0.375,data=13
+boxblock:id=%blockCloud_seed,ymax=0.25,data=14
+boxblock:id=%blockCloud_seed,ymax=0.125,data=15
+
+# %blockCloud_seed_concentrated:* (blockCloud_seed_concentrated), render=net.minecraftforge.fluids.RenderBlockFluid(FLUIDS), opaque=false,cls=crazypants.enderio.fluid.BlockFluidEio
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.875,data=1
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.75,data=2
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.625,data=3
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.5,data=4
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.375,data=5
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.25,data=6
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.125,data=7
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.875,data=9
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.75,data=10
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.625,data=11
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.5,data=12
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.375,data=13
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.25,data=14
+boxblock:id=%blockCloud_seed_concentrated,ymax=0.125,data=15
 
 # %blockDarkIronBars:* (blockDarkIronBars), render=(PANE), opaque=false,cls=crazypants.enderio.material.BlockDarkIronBars
 customblock:id=%blockDarkIronBars,class=org.dynmap.hdmap.renderer.PaneRenderer,data=*

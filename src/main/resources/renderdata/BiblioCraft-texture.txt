@@ -1,4 +1,4 @@
-# BiblioCraft 1.8.1
+# BiblioCraft 1.11.5
 version:1.7
 modname:BiblioCraft
 
@@ -16,6 +16,15 @@ texture:id=minecraft/planks_spruce,filename=assets/minecraft/textures/blocks/pla
 texture:id=minecraft/stone,filename=assets/minecraft/textures/blocks/stone.png
 
 
+
+# %tile.BiblioFramedChest:* (tile.BiblioFramedChest), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockFramedChest
+block:id=%tile.BiblioFramedChest,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioPaneler:* (BiblioPaneler), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockFurniturePaneler
+block:id=%BiblioPaneler,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BiblioClipboard:* (BiblioClipboard), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockClipboard
+block:id=%BiblioClipboard,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
 
 # %BiblioTypewriter:* (BiblioTypewriter), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockTypewriter
 block:id=%BiblioTypewriter,data=*,stdrot=true,face0-5=0:minecraft/planks_spruce
@@ -55,6 +64,9 @@ block:id=%BiblioBell,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minec
 
 # %Bibliotheca:* (Bibliotheca), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBookcase
 block:id=%Bibliotheca,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
+
+# %BookcaseFilled:* (BookcaseFilled), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockBookcaseCreative
+block:id=%BookcaseFilled,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce
 
 # %BiblioPotionShelf:* (BiblioPotionShelf), render=(CUSTOM), opaque=false,cls=jds.bibliocraft.blocks.BlockPotionShelf
 block:id=%BiblioPotionShelf,data=*,stdrot=true,transparency=TRANSPARENT,face0-5=0:minecraft/planks_spruce

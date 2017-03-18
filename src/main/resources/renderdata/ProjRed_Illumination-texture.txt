@@ -8,22 +8,22 @@ cfgfile:config/ProjectRed.cfg
 
 
 texturepath:assets/projred_illumination/textures/blocks/
-texture:id=projectred/lights/lampoff/0,filename=assets/projectred/textures/blocks/lights/lampoff/0.png
-texture:id=projectred/lights/lampoff/1,filename=assets/projectred/textures/blocks/lights/lampoff/1.png
-texture:id=projectred/lights/lampoff/10,filename=assets/projectred/textures/blocks/lights/lampoff/10.png
-texture:id=projectred/lights/lampoff/11,filename=assets/projectred/textures/blocks/lights/lampoff/11.png
-texture:id=projectred/lights/lampoff/12,filename=assets/projectred/textures/blocks/lights/lampoff/12.png
-texture:id=projectred/lights/lampoff/13,filename=assets/projectred/textures/blocks/lights/lampoff/13.png
-texture:id=projectred/lights/lampoff/14,filename=assets/projectred/textures/blocks/lights/lampoff/14.png
-texture:id=projectred/lights/lampoff/15,filename=assets/projectred/textures/blocks/lights/lampoff/15.png
-texture:id=projectred/lights/lampoff/2,filename=assets/projectred/textures/blocks/lights/lampoff/2.png
-texture:id=projectred/lights/lampoff/3,filename=assets/projectred/textures/blocks/lights/lampoff/3.png
-texture:id=projectred/lights/lampoff/4,filename=assets/projectred/textures/blocks/lights/lampoff/4.png
-texture:id=projectred/lights/lampoff/5,filename=assets/projectred/textures/blocks/lights/lampoff/5.png
-texture:id=projectred/lights/lampoff/6,filename=assets/projectred/textures/blocks/lights/lampoff/6.png
-texture:id=projectred/lights/lampoff/7,filename=assets/projectred/textures/blocks/lights/lampoff/7.png
-texture:id=projectred/lights/lampoff/8,filename=assets/projectred/textures/blocks/lights/lampoff/8.png
-texture:id=projectred/lights/lampoff/9,filename=assets/projectred/textures/blocks/lights/lampoff/9.png
+texture:id=projectred/lights/lampoff/0,filename=assets/projectred/textures/blocks/lighting/lampoff/0.png
+texture:id=projectred/lights/lampoff/1,filename=assets/projectred/textures/blocks/lighting/lampoff/1.png
+texture:id=projectred/lights/lampoff/10,filename=assets/projectred/textures/blocks/lighting/lampoff/10.png
+texture:id=projectred/lights/lampoff/11,filename=assets/projectred/textures/blocks/lighting/lampoff/11.png
+texture:id=projectred/lights/lampoff/12,filename=assets/projectred/textures/blocks/lighting/lampoff/12.png
+texture:id=projectred/lights/lampoff/13,filename=assets/projectred/textures/blocks/lighting/lampoff/13.png
+texture:id=projectred/lights/lampoff/14,filename=assets/projectred/textures/blocks/lighting/lampoff/14.png
+texture:id=projectred/lights/lampoff/15,filename=assets/projectred/textures/blocks/lighting/lampoff/15.png
+texture:id=projectred/lights/lampoff/2,filename=assets/projectred/textures/blocks/lighting/lampoff/2.png
+texture:id=projectred/lights/lampoff/3,filename=assets/projectred/textures/blocks/lighting/lampoff/3.png
+texture:id=projectred/lights/lampoff/4,filename=assets/projectred/textures/blocks/lighting/lampoff/4.png
+texture:id=projectred/lights/lampoff/5,filename=assets/projectred/textures/blocks/lighting/lampoff/5.png
+texture:id=projectred/lights/lampoff/6,filename=assets/projectred/textures/blocks/lighting/lampoff/6.png
+texture:id=projectred/lights/lampoff/7,filename=assets/projectred/textures/blocks/lighting/lampoff/7.png
+texture:id=projectred/lights/lampoff/8,filename=assets/projectred/textures/blocks/lighting/lampoff/8.png
+texture:id=projectred/lights/lampoff/9,filename=assets/projectred/textures/blocks/lighting/lampoff/9.png
 
 
 

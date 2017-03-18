@@ -1,4 +1,4 @@
-# ComputerCraft 1.65
+# ComputerCraft 1.75
 version:1.7
 modname:ComputerCraft
 
@@ -12,6 +12,9 @@ texture:id=computercraft/advMonitor15,filename=assets/computercraft/textures/blo
 texture:id=computercraft/advMonitor32,filename=assets/computercraft/textures/blocks/advMonitor32.png
 texture:id=computercraft/cableCore,filename=assets/computercraft/textures/blocks/cableCore.png
 texture:id=computercraft/cableSide,filename=assets/computercraft/textures/blocks/cableSide.png
+texture:id=computercraft/commandComputerFrontBlink,filename=assets/computercraft/textures/blocks/commandComputerFrontBlink.png
+texture:id=computercraft/commandComputerSide,filename=assets/computercraft/textures/blocks/commandComputerSide.png
+texture:id=computercraft/commandComputerTop,filename=assets/computercraft/textures/blocks/commandComputerTop.png
 texture:id=computercraft/computerFrontBlink,filename=assets/computercraft/textures/blocks/computerFrontBlink.png
 texture:id=computercraft/computerSide,filename=assets/computercraft/textures/blocks/computerSide.png
 texture:id=computercraft/computerTop,filename=assets/computercraft/textures/blocks/computerTop.png
@@ -48,6 +51,9 @@ block:id=%CC-Peripheral,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=
 block:id=%CC-Cable,data=0,stdrot=true,face0-1=0:computercraft/cableSide,face2-3=0:computercraft/cableCore,face4-5=0:computercraft/cableSide
 block:id=%CC-Cable,data=1,stdrot=true,face0-1=0:computercraft/wiredModemFace,face2=0:computercraft/wiredModemSide,face3-4=0:computercraft/wiredModemFace,face5=0:computercraft/wiredModemSide
 block:id=%CC-Cable,data=2,data=3,data=4,data=5,data=6,data=7,data=8,data=9,data=10,data=11,data=12,data=13,data=14,data=15,stdrot=true,face0-1=0:computercraft/cableSide,face2-3=0:computercraft/cableCore,face4-5=0:computercraft/cableSide
+
+# %command_computer:* (command_computer), render=dan200.computercraft.client.proxy.ComputerCraftProxyClient$ComputerBlockRenderingHandler(CUSTOM), opaque=false,cls=dan200.computercraft.shared.computer.blocks.BlockCommandComputer
+block:id=%command_computer,data=*,stdrot=true,face0-1=0:computercraft/commandComputerTop,face2=0:computercraft/commandComputerSide,face3=0:computercraft/commandComputerFrontBlink,face4-5=0:computercraft/commandComputerSide
 
 # %CC-Turtle:* (CC-Turtle), render=dan200.computercraft.client.proxy.CCTurtleProxyClient$TurtleRenderer(CUSTOM), opaque=false,cls=dan200.computercraft.shared.turtle.blocks.BlockTurtle
 block:id=%CC-Turtle,data=*,stdrot=true,face0-5=0:computercraft/turtle
