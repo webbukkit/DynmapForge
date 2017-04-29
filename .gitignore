@@ -10,7 +10,5 @@ Dynmap-*.jar
 /run
 .DS_Store
 .project
-/DynmapForge-1.8.9_Client.launch
-/DynmapForge-1.8.9_Server.launch
-/DynmapForge-1.9.0_Client.launch
-/DynmapForge-1.9.0_Server.launch
+/*_Client.launch
+/*_Server.launch
