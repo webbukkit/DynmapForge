@@ -11,6 +11,7 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
+
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
@@ -46,6 +47,10 @@ minecraft {
 
 repositories {
     mavenLocal()
+    maven {
+        name = "dynmap"
+        url = "http://repo.mikeprimm.com/"
+    }
 }
 
 configurations {
