@@ -1236,7 +1236,7 @@ public class DynmapPlugin
         for(int i = 0; i < list.length; i++) {
             Biome bb = list[i];
             if(bb != null) {
-                String id = bb.getBiomeName();
+                String id = bb.biomeName;
                 float tmp = bb.getTemperature(), hum = bb.getRainfall();
                 BiomeMap bmap = BiomeMap.byBiomeID(i);
                 if (bmap.isDefault()) {
