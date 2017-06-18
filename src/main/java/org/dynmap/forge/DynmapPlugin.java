@@ -1260,7 +1260,7 @@ public class DynmapPlugin
         for(int i = 0; i < list.length; i++) {
             Biome bb = list[i];
             if (bb != null) {
-                lst[i] = bb.getBiomeName();
+                lst[i] = bb.biomeName;
             }
         }
         return lst;
