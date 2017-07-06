@@ -1265,20 +1265,6 @@ public class DynmapPlugin
         }
         return lst;
     }
-    
-    private String[] getBlockNames() {
-        String[] lst = new String[4096];
-        for(int i = 0; i < lst.length; i++) {
-            Block b = getBlockByID(i);
-            if(b != null) {
-                lst[i] = getBlockUnlocalizedName(b);
-                if(lst[i].startsWith("tile.")) {
-                    lst[i] = lst[i].substring(5);
-                }
-            }
-        }
-        return lst;
-    }
 
     private int[] getBlockMaterialMap() {
         int[] map = new int[4096];
@@ -1339,7 +1325,6 @@ public class DynmapPlugin
         ForgeMapChunkCache.init();
         core.setTriggerDefault(TRIGGER_DEFAULTS);
         core.setBiomeNames(getBiomeNames());
-        core.setBlockNames(getBlockNames());
         core.setBlockMaterialMap(getBlockMaterialMap());
 
         if(!core.initConfiguration(null))
