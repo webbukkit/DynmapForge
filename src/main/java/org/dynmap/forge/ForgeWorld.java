@@ -79,7 +79,7 @@ public class ForgeWorld extends DynmapWorld
 
     public ForgeWorld(World w)
     {
-        this(getWorldName(w), w.getHeight(), 64, w.provider instanceof WorldProviderHell,
+        this(getWorldName(w), w.getHeight(), w.getSeaLevel(), w.provider instanceof WorldProviderHell,
         		w.provider instanceof WorldProviderEnd, 
         		w.getWorldInfo().getWorldName() + "/" + w.provider.getDimensionType().getName());
         setWorldLoaded(w);
