@@ -173,6 +173,7 @@ public class ForgeWorld extends DynmapWorld
     /* Set world to loaded */
     public void setWorldLoaded(World w) {
     	world = w;
+    	this.sealevel = w.getSeaLevel();   // Read actual current sealevel from world
     	// Update lighting table
     	float[] lt = w.provider.getLightBrightnessTable();
     	for (int i = 0; i < 16; i++) {
