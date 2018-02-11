@@ -97,7 +97,7 @@ import com.mojang.authlib.GameProfile;
 
 
 public class DynmapPlugin
-{
+{ 
     private DynmapCore core;
     private PermissionProvider permissions;
     private boolean core_enabled;
@@ -939,7 +939,7 @@ public class DynmapPlugin
         public InputStream openResource(String modid, String rname) {
             if (modid != null) {
                 ModContainer mc = Loader.instance().getIndexedModList().get(modid);
-                Object mod = mc.getMod();
+                Object mod = (mc != null) ? mc.getMod() : null;
                 if (mod != null) {
                     InputStream is = mod.getClass().getClassLoader().getResourceAsStream(rname);
                     if (is != null) {
