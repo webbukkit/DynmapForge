@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.PriorityQueue;
 import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -64,6 +65,8 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import org.apache.commons.codec.Charsets;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.dynmap.ConfigurationNode;
@@ -93,8 +96,12 @@ import org.dynmap.utils.DynmapLogger;
 import org.dynmap.utils.MapChunkCache;
 import org.dynmap.utils.VisibilityLimit;
 
+import com.google.common.collect.Iterables;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParseException;
 import com.mojang.authlib.GameProfile;
-
+import com.mojang.authlib.properties.Property;
 
 public class DynmapPlugin
 { 
@@ -1002,16 +1009,57 @@ public class DynmapPlugin
         }
 
     }
+    private static final Gson gson = new GsonBuilder().create();
+
+    public class TexturesPayload {
+        public long timestamp;
+        public String profileId;
+        public String profileName;
+        public boolean isPublic;
+        public Map<String, ProfileTexture> textures;
+
+    }
+    public class ProfileTexture {
+        public String url;
+    }
+    
     /**
      * Player access abstraction class
      */
     public class ForgePlayer extends ForgeCommandSender implements DynmapPlayer
     {
         private EntityPlayer player;
+        private final String skinurl;
+        private final UUID uuid;
+
 
         public ForgePlayer(EntityPlayer p)
         {
             player = p;
+            String url = null;
+        	if (player != null) {
+        		uuid = player.getUniqueID();
+        		GameProfile prof = player.getGameProfile();
+        		if (prof != null) {
+        	        Property textureProperty = Iterables.getFirst(prof.getProperties().get("textures"), null);
+
+        	        if (textureProperty != null) {
+        	        	TexturesPayload result = null;
+        	        	try {
+        	        		String json = new String(Base64.decodeBase64(textureProperty.getValue()), Charsets.UTF_8);
+        	        		result = gson.fromJson(json, TexturesPayload.class);
+        	        	} catch (JsonParseException e) {
+        	        	}
+        	        	if ((result != null) && (result.textures != null) && (result.textures.containsKey("SKIN"))) {
+        	        		url = result.textures.get("SKIN").url;
+        	        	}
+        			}
+        		}
+        	}
+        	else {
+        		uuid = null;
+        	}
+        	skinurl = url;
         }
         @Override
         public boolean isConnected()
@@ -1125,12 +1173,6 @@ public class DynmapPlugin
         @Override
         public DynmapLocation getBedSpawnLocation()
         {
-            /*
-            Location loc = offplayer.getBedSpawnLocation();
-            if(loc != null) {
-                return toLoc(loc);
-            }
-            */
             return null;
         }
         @Override
@@ -1189,6 +1231,14 @@ public class DynmapPlugin
             if(player != null)
                 return hasPermNode(player, node);
             return false;
+        }
+        @Override
+        public String getSkinURL() {
+        	return skinurl;
+        }
+        @Override
+        public UUID getUUID() {
+        	return uuid;
         }
     }
     /* Handler for generic console command sender */
