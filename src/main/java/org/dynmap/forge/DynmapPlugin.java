@@ -12,6 +12,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.UUID;
@@ -891,11 +892,19 @@ public class DynmapPlugin
 		}
 		@Override
 		public String getModVersion(String name) {
-	          ModContainer mod = Loader.instance().getIndexedModList().get(name);
-	          if (mod == null) return null;
-	          return mod.getVersion();
+		    Map<String, ModContainer> list = Loader.instance().getIndexedModList();
+		    ModContainer mod = list.get(name);    // Try case sensitive lookup
+		    if (mod == null) {
+		        for (Entry<String, ModContainer> ent : list.entrySet()) {
+		            if (ent.getKey().equalsIgnoreCase(name)) {
+		                mod = ent.getValue();
+		                break;
+		            }
+		        }
+		    }
+		    if (mod == null) return null;
+		    return mod.getVersion();
 		}
-
         @Override
         public double getServerTPS() {
             return tps;
